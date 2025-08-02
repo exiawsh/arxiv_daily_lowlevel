@@ -54,9 +54,9 @@ def main(target_date: date):
         logging.info(f"抓取到 {len(raw_papers)} 篇原始论文。")
 
         # --- 2. 过滤论文、论文打分 --- #
-        logging.info("步骤 2: 使用 AI 过滤论文并打分 (主题: image/video/multimodal generation)...")
+        logging.info("步骤 2: 使用 AI 过滤论文并打分 (主题: low-level/vision)...")
         # 注意：filter_papers_by_topic 依赖 OPENROUTER_API_KEY 环境变量
-        filtered_papers = filter_papers_by_topic(raw_papers, topic="Personalized VLM, Distributed VLM, VLM, Federated Learning, Vision Language Model")
+        filtered_papers = filter_papers_by_topic(raw_papers, topic="image restoration, image super-resolution, image generation")
         filtered_papers = rate_papers(filtered_papers)
         # 将filtered_papers按照overall_priority_score降序排序
         filtered_papers.sort(key=lambda x: x.get('overall_priority_score', 0), reverse=True)
