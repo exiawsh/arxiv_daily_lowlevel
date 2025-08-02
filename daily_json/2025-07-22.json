@@ -1,0 +1,158 @@
+[
+    {
+        "title": "TokensGen: Harnessing Condensed Tokens for Long Video Generation",
+        "summary": "Generating consistent long videos is a complex challenge: while\ndiffusion-based generative models generate visually impressive short clips,\nextending them to longer durations often leads to memory bottlenecks and\nlong-term inconsistency. In this paper, we propose TokensGen, a novel two-stage\nframework that leverages condensed tokens to address these issues. Our method\ndecomposes long video generation into three core tasks: (1) inner-clip semantic\ncontrol, (2) long-term consistency control, and (3) inter-clip smooth\ntransition. First, we train To2V (Token-to-Video), a short video diffusion\nmodel guided by text and video tokens, with a Video Tokenizer that condenses\nshort clips into semantically rich tokens. Second, we introduce T2To\n(Text-to-Token), a video token diffusion transformer that generates all tokens\nat once, ensuring global consistency across clips. Finally, during inference,\nan adaptive FIFO-Diffusion strategy seamlessly connects adjacent clips,\nreducing boundary artifacts and enhancing smooth transitions. Experimental\nresults demonstrate that our approach significantly enhances long-term temporal\nand content coherence without incurring prohibitive computational overhead. By\nleveraging condensed tokens and pre-trained short video models, our method\nprovides a scalable, modular solution for long video generation, opening new\npossibilities for storytelling, cinematic production, and immersive\nsimulations. Please see our project page at\nhttps://vicky0522.github.io/tokensgen-webpage/ .",
+        "url": "http://arxiv.org/abs/2507.15728v1",
+        "published_date": "2025-07-21T15:37:33+00:00",
+        "updated_date": "2025-07-21T15:37:33+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wenqi Ouyang",
+            "Zeqi Xiao",
+            "Danni Yang",
+            "Yifan Zhou",
+            "Shuai Yang",
+            "Lei Yang",
+            "Jianlou Si",
+            "Xingang Pan"
+        ],
+        "tldr": "The paper introduces TokensGen, a two-stage framework using condensed tokens for generating consistent long videos by decomposing the process into semantic control, consistency control, and smooth transitions. It claims improved long-term coherence and scalability.",
+        "tldr_zh": "该论文介绍了 TokensGen，一种使用压缩tokens生成一致长视频的两阶段框架，它将该过程分解为语义控制、一致性控制和平滑过渡。它声称提高了长期一致性和可扩展性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MedSR-Impact: Transformer-Based Super-Resolution for Lung CT Segmentation, Radiomics, Classification, and Prognosis",
+        "summary": "High-resolution volumetric computed tomography (CT) is essential for accurate\ndiagnosis and treatment planning in thoracic diseases; however, it is limited\nby radiation dose and hardware costs. We present the Transformer Volumetric\nSuper-Resolution Network (\\textbf{TVSRN-V2}), a transformer-based\nsuper-resolution (SR) framework designed for practical deployment in clinical\nlung CT analysis. Built from scalable components, including Through-Plane\nAttention Blocks (TAB) and Swin Transformer V2 -- our model effectively\nreconstructs fine anatomical details in low-dose CT volumes and integrates\nseamlessly with downstream analysis pipelines. We evaluate its effectiveness on\nthree critical lung cancer tasks -- lobe segmentation, radiomics, and prognosis\n-- across multiple clinical cohorts. To enhance robustness across variable\nacquisition protocols, we introduce pseudo-low-resolution augmentation,\nsimulating scanner diversity without requiring private data. TVSRN-V2\ndemonstrates a significant improvement in segmentation accuracy (+4\\% Dice),\nhigher radiomic feature reproducibility, and enhanced predictive performance\n(+0.06 C-index and AUC). These results indicate that SR-driven recovery of\nstructural detail significantly enhances clinical decision support, positioning\nTVSRN-V2 as a well-engineered, clinically viable system for dose-efficient\nimaging and quantitative analysis in real-world CT workflows.",
+        "url": "http://arxiv.org/abs/2507.15340v1",
+        "published_date": "2025-07-21T07:53:49+00:00",
+        "updated_date": "2025-07-21T07:53:49+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Marc Boubnovski Martell",
+            "Kristofer Linton-Reid",
+            "Mitchell Chen",
+            "Sumeet Hindocha",
+            "Benjamin Hunter",
+            "Marco A. Calzado",
+            "Richard Lee",
+            "Joram M. Posma",
+            "Eric O. Aboagye"
+        ],
+        "tldr": "The paper introduces a Transformer-based super-resolution network (TVSRN-V2) for lung CT scans, demonstrating improved performance in segmentation, radiomics, and prognosis tasks, suggesting its clinical viability.",
+        "tldr_zh": "本文介绍了一种基于Transformer的肺部CT扫描超分辨率网络(TVSRN-V2)，在分割、放射组学和预后任务中表现出改进的性能，表明其临床可行性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "A Practical Investigation of Spatially-Controlled Image Generation with Transformers",
+        "summary": "Enabling image generation models to be spatially controlled is an important\narea of research, empowering users to better generate images according to their\nown fine-grained specifications via e.g. edge maps, poses. Although this task\nhas seen impressive improvements in recent times, a focus on rapidly producing\nstronger models has come at the cost of detailed and fair scientific\ncomparison. Differing training data, model architectures and generation\nparadigms make it difficult to disentangle the factors contributing to\nperformance. Meanwhile, the motivations and nuances of certain approaches\nbecome lost in the literature. In this work, we aim to provide clear takeaways\nacross generation paradigms for practitioners wishing to develop\ntransformer-based systems for spatially-controlled generation, clarifying the\nliterature and addressing knowledge gaps. We perform controlled experiments on\nImageNet across diffusion-based/flow-based and autoregressive (AR) models.\nFirst, we establish control token prefilling as a simple, general and\nperformant baseline approach for transformers. We then investigate previously\nunderexplored sampling time enhancements, showing that extending\nclassifier-free guidance to control, as well as softmax truncation, have a\nstrong impact on control-generation consistency. Finally, we re-clarify the\nmotivation of adapter-based approaches, demonstrating that they mitigate\n\"forgetting\" and maintain generation quality when trained on limited downstream\ndata, but underperform full training in terms of generation-control\nconsistency. Code will be released upon publication.",
+        "url": "http://arxiv.org/abs/2507.15724v1",
+        "published_date": "2025-07-21T15:33:49+00:00",
+        "updated_date": "2025-07-21T15:33:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Guoxuan Xia",
+            "Harleen Hanspal",
+            "Petru-Daniel Tudosiu",
+            "Shifeng Zhang",
+            "Sarah Parisot"
+        ],
+        "tldr": "This paper provides a practical investigation of spatially-controlled image generation with transformers, focusing on disentangling factors contributing to performance across different generation paradigms and clarifying the literature for practitioners.",
+        "tldr_zh": "本文对基于Transformer的空间控制图像生成进行了实践研究，重点是区分不同生成范式对性能的贡献因素，并为从业者澄清文献。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "CylinderPlane: Nested Cylinder Representation for 3D-aware Image Generation",
+        "summary": "While the proposal of the Tri-plane representation has advanced the\ndevelopment of the 3D-aware image generative models, problems rooted in its\ninherent structure, such as multi-face artifacts caused by sharing the same\nfeatures in symmetric regions, limit its ability to generate 360$^\\circ$ view\nimages. In this paper, we propose CylinderPlane, a novel implicit\nrepresentation based on Cylindrical Coordinate System, to eliminate the feature\nambiguity issue and ensure multi-view consistency in 360$^\\circ$. Different\nfrom the inevitable feature entanglement in Cartesian coordinate-based\nTri-plane representation, the cylindrical coordinate system explicitly\nseparates features at different angles, allowing our cylindrical representation\npossible to achieve high-quality, artifacts-free 360$^\\circ$ image synthesis.\nWe further introduce the nested cylinder representation that composites\nmultiple cylinders at different scales, thereby enabling the model more\nadaptable to complex geometry and varying resolutions. The combination of\ncylinders with different resolutions can effectively capture more critical\nlocations and multi-scale features, greatly facilitates fine detail learning\nand robustness to different resolutions. Moreover, our representation is\nagnostic to implicit rendering methods and can be easily integrated into any\nneural rendering pipeline. Extensive experiments on both synthetic dataset and\nunstructured in-the-wild images demonstrate that our proposed representation\nachieves superior performance over previous methods.",
+        "url": "http://arxiv.org/abs/2507.15606v1",
+        "published_date": "2025-07-21T13:28:59+00:00",
+        "updated_date": "2025-07-21T13:28:59+00:00",
+        "categories": [
+            "cs.CV",
+            "68T45",
+            "I.4.5"
+        ],
+        "authors": [
+            "Ru Jia",
+            "Xiaozhuang Ma",
+            "Jianji Wang",
+            "Nanning Zheng"
+        ],
+        "tldr": "The paper introduces CylinderPlane, a novel 3D representation based on cylindrical coordinates for 360-degree image generation, addressing feature ambiguity issues in Tri-plane representations and improving image quality.",
+        "tldr_zh": "该论文提出了一种新的基于柱坐标系的3D表示方法CylinderPlane，用于360度图像生成，解决了Tri-plane表示中的特征模糊问题，并提高了图像质量。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "RoadFusion: Latent Diffusion Model for Pavement Defect Detection",
+        "summary": "Pavement defect detection faces critical challenges including limited\nannotated data, domain shift between training and deployment environments, and\nhigh variability in defect appearances across different road conditions. We\npropose RoadFusion, a framework that addresses these limitations through\nsynthetic anomaly generation with dual-path feature adaptation. A latent\ndiffusion model synthesizes diverse, realistic defects using text prompts and\nspatial masks, enabling effective training under data scarcity. Two separate\nfeature adaptors specialize representations for normal and anomalous inputs,\nimproving robustness to domain shift and defect variability. A lightweight\ndiscriminator learns to distinguish fine-grained defect patterns at the patch\nlevel. Evaluated on six benchmark datasets, RoadFusion achieves consistently\nstrong performance across both classification and localization tasks, setting\nnew state-of-the-art in multiple metrics relevant to real-world road\ninspection.",
+        "url": "http://arxiv.org/abs/2507.15346v1",
+        "published_date": "2025-07-21T08:01:08+00:00",
+        "updated_date": "2025-07-21T08:01:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Muhammad Aqeel",
+            "Kidus Dagnaw Bellete",
+            "Francesco Setti"
+        ],
+        "tldr": "RoadFusion employs a latent diffusion model for synthetic pavement defect generation, combined with dual-path feature adaptation and a lightweight discriminator to improve pavement defect detection, achieving state-of-the-art results on multiple datasets.",
+        "tldr_zh": "RoadFusion 采用潜在扩散模型生成合成路面缺陷，结合双路径特征自适应和轻量级判别器，以提高路面缺陷检测性能，并在多个数据集上实现了最先进的结果。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Aesthetics is Cheap, Show me the Text: An Empirical Evaluation of State-of-the-Art Generative Models for OCR",
+        "summary": "Text image is a unique and crucial information medium that integrates visual\naesthetics and linguistic semantics in modern e-society. Due to their subtlety\nand complexity, the generation of text images represents a challenging and\nevolving frontier in the image generation field. The recent surge of\nspecialized image generators (\\emph{e.g.}, Flux-series) and unified generative\nmodels (\\emph{e.g.}, GPT-4o), which demonstrate exceptional fidelity, raises a\nnatural question: can they master the intricacies of text image generation and\nediting? Motivated by this, we assess current state-of-the-art generative\nmodels' capabilities in terms of text image generation and editing. We\nincorporate various typical optical character recognition (OCR) tasks into our\nevaluation and broaden the concept of text-based generation tasks into OCR\ngenerative tasks. We select 33 representative tasks and categorize them into\nfive categories: document, handwritten text, scene text, artistic text, and\ncomplex \\& layout-rich text. For comprehensive evaluation, we examine six\nmodels across both closed-source and open-source domains, using tailored,\nhigh-quality image inputs and prompts. Through this evaluation, we draw crucial\nobservations and identify the weaknesses of current generative models for OCR\ntasks. We argue that photorealistic text image generation and editing should be\ninternalized as foundational skills into general-domain generative models,\nrather than being delegated to specialized solutions, and we hope this\nempirical analysis can provide valuable insights for the community to achieve\nthis goal. This evaluation is online and will be continuously updated at our\nGitHub repository.",
+        "url": "http://arxiv.org/abs/2507.15085v1",
+        "published_date": "2025-07-20T18:43:09+00:00",
+        "updated_date": "2025-07-20T18:43:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Peirong Zhang",
+            "Haowei Xu",
+            "Jiaxin Zhang",
+            "Guitao Xu",
+            "Xuhan Zheng",
+            "Zhenhua Yang",
+            "Junle Liu",
+            "Yuyi Zhang",
+            "Lianwen Jin"
+        ],
+        "tldr": "The paper evaluates the performance of state-of-the-art generative models, including both closed-source and open-source, on various OCR tasks, highlighting their weaknesses and advocating for text image generation capabilities to be integrated into general-domain models.",
+        "tldr_zh": "该论文评估了最先进的生成模型（包括闭源和开源模型）在各种 OCR 任务上的性能，强调了它们的弱点，并倡导将文本图像生成能力集成到通用模型中。",
+        "relevance_score": 7,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

@@ -1,0 +1,243 @@
+[
+    {
+        "title": "DynFaceRestore: Balancing Fidelity and Quality in Diffusion-Guided Blind Face Restoration with Dynamic Blur-Level Mapping and Guidance",
+        "summary": "Blind Face Restoration aims to recover high-fidelity, detail-rich facial\nimages from unknown degraded inputs, presenting significant challenges in\npreserving both identity and detail. Pre-trained diffusion models have been\nincreasingly used as image priors to generate fine details. Still, existing\nmethods often use fixed diffusion sampling timesteps and a global guidance\nscale, assuming uniform degradation. This limitation and potentially imperfect\ndegradation kernel estimation frequently lead to under- or over-diffusion,\nresulting in an imbalance between fidelity and quality. We propose\nDynFaceRestore, a novel blind face restoration approach that learns to map any\nblindly degraded input to Gaussian blurry images. By leveraging these blurry\nimages and their respective Gaussian kernels, we dynamically select the\nstarting timesteps for each blurry image and apply closed-form guidance during\nthe diffusion sampling process to maintain fidelity. Additionally, we introduce\na dynamic guidance scaling adjuster that modulates the guidance strength across\nlocal regions, enhancing detail generation in complex areas while preserving\nstructural fidelity in contours. This strategy effectively balances the\ntrade-off between fidelity and quality. DynFaceRestore achieves\nstate-of-the-art performance in both quantitative and qualitative evaluations,\ndemonstrating robustness and effectiveness in blind face restoration.",
+        "url": "http://arxiv.org/abs/2507.13797v1",
+        "published_date": "2025-07-18T10:16:08+00:00",
+        "updated_date": "2025-07-18T10:16:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Huu-Phu Do",
+            "Yu-Wei Chen",
+            "Yi-Cheng Liao",
+            "Chi-Wei Hsiao",
+            "Han-Yang Wang",
+            "Wei-Chen Chiu",
+            "Ching-Chun Huang"
+        ],
+        "tldr": "DynFaceRestore dynamically adjusts diffusion sampling based on learned blur levels and kernels to balance fidelity and quality in blind face restoration, achieving state-of-the-art results.",
+        "tldr_zh": "DynFaceRestore通过学习模糊程度和核，动态调整扩散采样，以平衡盲脸修复中的保真度和质量，并取得最先进的结果。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Blind Super Resolution with Reference Images and Implicit Degradation Representation",
+        "summary": "Previous studies in blind super-resolution (BSR) have primarily concentrated\non estimating degradation kernels directly from low-resolution (LR) inputs to\nenhance super-resolution. However, these degradation kernels, which model the\ntransition from a high-resolution (HR) image to its LR version, should account\nfor not only the degradation process but also the downscaling factor. Applying\nthe same degradation kernel across varying super-resolution scales may be\nimpractical. Our research acknowledges degradation kernels and scaling factors\nas pivotal elements for the BSR task and introduces a novel strategy that\nutilizes HR images as references to establish scale-aware degradation kernels.\nBy employing content-irrelevant HR reference images alongside the target LR\nimage, our model adaptively discerns the degradation process. It is then\napplied to generate additional LR-HR pairs through down-sampling the HR\nreference images, which are keys to improving the SR performance. Our\nreference-based training procedure is applicable to proficiently trained blind\nSR models and zero-shot blind SR methods, consistently outperforming previous\nmethods in both scenarios. This dual consideration of blur kernels and scaling\nfactors, coupled with the use of a reference image, contributes to the\neffectiveness of our approach in blind super-resolution tasks.",
+        "url": "http://arxiv.org/abs/2507.13915v1",
+        "published_date": "2025-07-18T13:45:04+00:00",
+        "updated_date": "2025-07-18T13:45:04+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Huu-Phu Do",
+            "Po-Chih Hu",
+            "Hao-Chien Hsueh",
+            "Che-Kai Liu",
+            "Vu-Hoang Tran",
+            "Ching-Chun Huang"
+        ],
+        "tldr": "This paper introduces a novel blind super-resolution (BSR) approach using content-irrelevant HR reference images to learn scale-aware degradation kernels, improving performance in both proficiently trained and zero-shot BSR scenarios.",
+        "tldr_zh": "该论文提出了一种新的盲超分辨率（BSR）方法，利用内容无关的高分辨率参考图像来学习尺度感知的退化核，从而提高了在熟练训练和零样本BSR场景中的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Localized FNO for Spatiotemporal Hemodynamic Upsampling in Aneurysm MRI",
+        "summary": "Hemodynamic analysis is essential for predicting aneurysm rupture and guiding\ntreatment. While magnetic resonance flow imaging enables time-resolved\nvolumetric blood velocity measurements, its low spatiotemporal resolution and\nsignal-to-noise ratio limit its diagnostic utility. To address this, we propose\nthe Localized Fourier Neural Operator (LoFNO), a novel 3D architecture that\nenhances both spatial and temporal resolution with the ability to predict wall\nshear stress (WSS) directly from clinical imaging data. LoFNO integrates\nLaplacian eigenvectors as geometric priors for improved structural awareness on\nirregular, unseen geometries and employs an Enhanced Deep Super-Resolution\nNetwork (EDSR) layer for robust upsampling. By combining geometric priors with\nneural operator frameworks, LoFNO de-noises and spatiotemporally upsamples flow\ndata, achieving superior velocity and WSS predictions compared to interpolation\nand alternative deep learning methods, enabling more precise cerebrovascular\ndiagnostics.",
+        "url": "http://arxiv.org/abs/2507.13789v1",
+        "published_date": "2025-07-18T10:00:38+00:00",
+        "updated_date": "2025-07-18T10:00:38+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "physics.comp-ph"
+        ],
+        "authors": [
+            "Kyriakos Flouris",
+            "Moritz Halter",
+            "Yolanne Y. R. Lee",
+            "Samuel Castonguay",
+            "Luuk Jacobs",
+            "Pietro Dirix",
+            "Jonathan Nestmann",
+            "Sebastian Kozerke",
+            "Ender Konukoglu"
+        ],
+        "tldr": "The paper introduces Localized Fourier Neural Operator (LoFNO) for spatiotemporal upsampling of aneurysm MRI data, improving velocity and wall shear stress prediction using geometric priors and an EDSR layer.",
+        "tldr_zh": "该论文介绍了一种用于动脉瘤 MRI 数据时空上采样的局部傅里叶神经算子 (LoFNO)，它利用几何先验和一个 EDSR 层来提高速度和壁剪切应力的预测。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Converting T1-weighted MRI from 3T to 7T quality using deep learning",
+        "summary": "Ultra-high resolution 7 tesla (7T) magnetic resonance imaging (MRI) provides\ndetailed anatomical views, offering better signal-to-noise ratio, resolution\nand tissue contrast than 3T MRI, though at the cost of accessibility. We\npresent an advanced deep learning model for synthesizing 7T brain MRI from 3T\nbrain MRI. Paired 7T and 3T T1-weighted images were acquired from 172\nparticipants (124 cognitively unimpaired, 48 impaired) from the Swedish\nBioFINDER-2 study. To synthesize 7T MRI from 3T images, we trained two models:\na specialized U-Net, and a U-Net integrated with a generative adversarial\nnetwork (GAN U-Net). Our models outperformed two additional state-of-the-art\n3T-to-7T models in image-based evaluation metrics. Four blinded MRI\nprofessionals judged our synthetic 7T images as comparable in detail to real 7T\nimages, and superior in subjective visual quality to 7T images, apparently due\nto the reduction of artifacts. Importantly, automated segmentations of the\namygdalae of synthetic GAN U-Net 7T images were more similar to manually\nsegmented amygdalae (n=20), than automated segmentations from the 3T images\nthat were used to synthesize the 7T images. Finally, synthetic 7T images showed\nsimilar performance to real 3T images in downstream prediction of cognitive\nstatus using MRI derivatives (n=3,168). In all, we show that synthetic\nT1-weighted brain images approaching 7T quality can be generated from 3T\nimages, which may improve image quality and segmentation, without compromising\nperformance in downstream tasks. Future directions, possible clinical use\ncases, and limitations are discussed.",
+        "url": "http://arxiv.org/abs/2507.13782v1",
+        "published_date": "2025-07-18T09:54:59+00:00",
+        "updated_date": "2025-07-18T09:54:59+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Malo Gicquel",
+            "Ruoyi Zhao",
+            "Anika Wuestefeld",
+            "Nicola Spotorno",
+            "Olof Strandberg",
+            "Kalle Åström",
+            "Yu Xiao",
+            "Laura EM Wisse",
+            "Danielle van Westen",
+            "Rik Ossenkoppele",
+            "Niklas Mattsson-Carlgren",
+            "David Berron",
+            "Oskar Hansson",
+            "Gabrielle Flood",
+            "Jacob Vogel"
+        ],
+        "tldr": "This paper presents a deep learning approach using U-Nets and GAN U-Nets to synthesize high-quality 7T MRI images from more accessible 3T MRI, demonstrating improved image quality, segmentation, and comparable performance in downstream cognitive status prediction.",
+        "tldr_zh": "本文提出了一种使用U-Net和GAN U-Net的深度学习方法，用于从更容易获得的3T MRI合成高质量的7T MRI图像，证明了图像质量，分割的改善，并在下游认知状态预测中表现出可比较的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Global Modeling Matters: A Fast, Lightweight and Effective Baseline for Efficient Image Restoration",
+        "summary": "Natural image quality is often degraded by adverse weather conditions,\nsignificantly impairing the performance of downstream tasks. Image restoration\nhas emerged as a core solution to this challenge and has been widely discussed\nin the literature. Although recent transformer-based approaches have made\nremarkable progress in image restoration, their increasing system complexity\nposes significant challenges for real-time processing, particularly in\nreal-world deployment scenarios. To this end, most existing methods attempt to\nsimplify the self-attention mechanism, such as by channel self-attention or\nstate space model. However, these methods primarily focus on network\narchitecture while neglecting the inherent characteristics of image restoration\nitself. In this context, we explore a pyramid Wavelet-Fourier iterative\npipeline to demonstrate the potential of Wavelet-Fourier processing for image\nrestoration. Inspired by the above findings, we propose a novel and efficient\nrestoration baseline, named Pyramid Wavelet-Fourier Network (PW-FNet).\nSpecifically, PW-FNet features two key design principles: 1) at the inter-block\nlevel, integrates a pyramid wavelet-based multi-input multi-output structure to\nachieve multi-scale and multi-frequency bands decomposition; and 2) at the\nintra-block level, incorporates Fourier transforms as an efficient alternative\nto self-attention mechanisms, effectively reducing computational complexity\nwhile preserving global modeling capability. Extensive experiments on tasks\nsuch as image deraining, raindrop removal, image super-resolution, motion\ndeblurring, image dehazing, image desnowing and underwater/low-light\nenhancement demonstrate that PW-FNet not only surpasses state-of-the-art\nmethods in restoration quality but also achieves superior efficiency, with\nsignificantly reduced parameter size, computational cost and inference time.",
+        "url": "http://arxiv.org/abs/2507.13663v1",
+        "published_date": "2025-07-18T05:15:04+00:00",
+        "updated_date": "2025-07-18T05:15:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xingyu Jiang",
+            "Ning Gao",
+            "Hongkun Dou",
+            "Xiuhui Zhang",
+            "Xiaoqing Zhong",
+            "Yue Deng",
+            "Hongjue Li"
+        ],
+        "tldr": "This paper introduces PW-FNet, a novel and efficient image restoration baseline that leverages a pyramid Wavelet-Fourier iterative pipeline to achieve state-of-the-art restoration quality with significantly reduced computational cost compared to transformer-based methods.",
+        "tldr_zh": "本文介绍了一种新颖高效的图像恢复基线 PW-FNet，它利用金字塔小波-傅里叶迭代流水线，以显着降低的计算成本实现了最先进的恢复质量，优于基于 Transformer 的方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Efficient Burst Super-Resolution with One-step Diffusion",
+        "summary": "While burst Low-Resolution (LR) images are useful for improving their Super\nResolution (SR) image compared to a single LR image, prior burst SR methods are\ntrained in a deterministic manner, which produces a blurry SR image. Since such\nblurry images are perceptually degraded, we aim to reconstruct sharp and\nhigh-fidelity SR images by a diffusion model. Our method improves the\nefficiency of the diffusion model with a stochastic sampler with a high-order\nODE as well as one-step diffusion using knowledge distillation. Our\nexperimental results demonstrate that our method can reduce the runtime to 1.6\n% of its baseline while maintaining the SR quality measured based on image\ndistortion and perceptual quality.",
+        "url": "http://arxiv.org/abs/2507.13607v1",
+        "published_date": "2025-07-18T02:21:29+00:00",
+        "updated_date": "2025-07-18T02:21:29+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kento Kawai",
+            "Takeru Oba",
+            "Kyotaro Tokoro",
+            "Kazutoshi Akita",
+            "Norimichi Ukita"
+        ],
+        "tldr": "This paper introduces an efficient burst super-resolution method using a diffusion model with a stochastic sampler and one-step diffusion via knowledge distillation, achieving significant speedup while maintaining SR quality.",
+        "tldr_zh": "本文提出了一种高效的突发超分辨率方法，该方法使用扩散模型，结合随机采样器和通过知识蒸馏实现的单步扩散，在保持超分辨率质量的同时，显著提高了速度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning Deblurring Texture Prior from Unpaired Data with Diffusion Model",
+        "summary": "Since acquiring large amounts of realistic blurry-sharp image pairs is\ndifficult and expensive, learning blind image deblurring from unpaired data is\na more practical and promising solution. Unfortunately, dominant approaches\nrely heavily on adversarial learning to bridge the gap from blurry domains to\nsharp domains, ignoring the complex and unpredictable nature of real-world blur\npatterns. In this paper, we propose a novel diffusion model (DM)-based\nframework, dubbed \\ours, for image deblurring by learning spatially varying\ntexture prior from unpaired data. In particular, \\ours performs DM to generate\nthe prior knowledge that aids in recovering the textures of blurry images. To\nimplement this, we propose a Texture Prior Encoder (TPE) that introduces a\nmemory mechanism to represent the image textures and provides supervision for\nDM training. To fully exploit the generated texture priors, we present the\nTexture Transfer Transformer layer (TTformer), in which a novel\nFilter-Modulated Multi-head Self-Attention (FM-MSA) efficiently removes\nspatially varying blurring through adaptive filtering. Furthermore, we\nimplement a wavelet-based adversarial loss to preserve high-frequency texture\ndetails. Extensive evaluations show that \\ours provides a promising\nunsupervised deblurring solution and outperforms SOTA methods in widely-used\nbenchmarks.",
+        "url": "http://arxiv.org/abs/2507.13599v1",
+        "published_date": "2025-07-18T01:50:31+00:00",
+        "updated_date": "2025-07-18T01:50:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chengxu Liu",
+            "Lu Qi",
+            "Jinshan Pan",
+            "Xueming Qian",
+            "Ming-Hsuan Yang"
+        ],
+        "tldr": "This paper proposes a diffusion model-based framework for unsupervised image deblurring, using a texture prior encoder and a texture transfer transformer layer to recover textures from unpaired blurry images.",
+        "tldr_zh": "本文提出了一种基于扩散模型的无监督图像去模糊框架，使用纹理先验编码器和纹理转移Transformer层从非配对模糊图像中恢复纹理。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CSD-VAR: Content-Style Decomposition in Visual Autoregressive Models",
+        "summary": "Disentangling content and style from a single image, known as content-style\ndecomposition (CSD), enables recontextualization of extracted content and\nstylization of extracted styles, offering greater creative flexibility in\nvisual synthesis. While recent personalization methods have explored the\ndecomposition of explicit content style, they remain tailored for diffusion\nmodels. Meanwhile, Visual Autoregressive Modeling (VAR) has emerged as a\npromising alternative with a next-scale prediction paradigm, achieving\nperformance comparable to that of diffusion models. In this paper, we explore\nVAR as a generative framework for CSD, leveraging its scale-wise generation\nprocess for improved disentanglement. To this end, we propose CSD-VAR, a novel\nmethod that introduces three key innovations: (1) a scale-aware alternating\noptimization strategy that aligns content and style representation with their\nrespective scales to enhance separation, (2) an SVD-based rectification method\nto mitigate content leakage into style representations, and (3) an Augmented\nKey-Value (K-V) memory enhancing content identity preservation. To benchmark\nthis task, we introduce CSD-100, a dataset specifically designed for\ncontent-style decomposition, featuring diverse subjects rendered in various\nartistic styles. Experiments demonstrate that CSD-VAR outperforms prior\napproaches, achieving superior content preservation and stylization fidelity.",
+        "url": "http://arxiv.org/abs/2507.13984v1",
+        "published_date": "2025-07-18T14:45:48+00:00",
+        "updated_date": "2025-07-18T14:45:48+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Quang-Binh Nguyen",
+            "Minh Luu",
+            "Quang Nguyen",
+            "Anh Tran",
+            "Khoi Nguyen"
+        ],
+        "tldr": "The paper introduces CSD-VAR, a novel Visual Autoregressive Model for content-style decomposition, featuring scale-aware optimization, SVD rectification, and augmented key-value memory, outperforming existing methods on a newly created dataset, CSD-100.",
+        "tldr_zh": "该论文介绍了一种新的用于内容-风格分解的视觉自回归模型CSD-VAR，它具有尺度感知优化、SVD校正和增强的键值存储器，并在新创建的数据集CSD-100上优于现有方法。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "PoemTale Diffusion: Minimising Information Loss in Poem to Image Generation with Multi-Stage Prompt Refinement",
+        "summary": "Recent advancements in text-to-image diffusion models have achieved\nremarkable success in generating realistic and diverse visual content. A\ncritical factor in this process is the model's ability to accurately interpret\ntextual prompts. However, these models often struggle with creative\nexpressions, particularly those involving complex, abstract, or highly\ndescriptive language. In this work, we introduce a novel training-free approach\ntailored to improve image generation for a unique form of creative language:\npoetic verse, which frequently features layered, abstract, and dual meanings.\nOur proposed PoemTale Diffusion approach aims to minimise the information that\nis lost during poetic text-to-image conversion by integrating a multi stage\nprompt refinement loop into Language Models to enhance the interpretability of\npoetic texts. To support this, we adapt existing state-of-the-art diffusion\nmodels by modifying their self-attention mechanisms with a consistent\nself-attention technique to generate multiple consistent images, which are then\ncollectively used to convey the poem's meaning. Moreover, to encourage research\nin the field of poetry, we introduce the P4I (PoemForImage) dataset, consisting\nof 1111 poems sourced from multiple online and offline resources. We engaged a\npanel of poetry experts for qualitative assessments. The results from both\nhuman and quantitative evaluations validate the efficacy of our method and\ncontribute a novel perspective to poem-to-image generation with enhanced\ninformation capture in the generated images.",
+        "url": "http://arxiv.org/abs/2507.13708v2",
+        "published_date": "2025-07-18T07:33:08+00:00",
+        "updated_date": "2025-07-23T13:00:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sofia Jamil",
+            "Bollampalli Areen Reddy",
+            "Raghvendra Kumar",
+            "Sriparna Saha",
+            "Koustava Goswami",
+            "K. J. Joseph"
+        ],
+        "tldr": "The paper introduces PoemTale Diffusion, a training-free approach using multi-stage prompt refinement and modified self-attention in diffusion models to improve image generation from poetry, along with a new dataset, P4I, for poem-to-image research.",
+        "tldr_zh": "该论文介绍了 PoemTale Diffusion，一种无需训练的方法，通过多阶段提示细化和扩散模型中改进的自注意力机制来改进从诗歌生成图像，并提出了一个新的数据集 P4I，用于诗歌到图像的研究。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

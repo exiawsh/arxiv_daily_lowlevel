@@ -1,0 +1,276 @@
+[
+    {
+        "title": "Diffusion Models for Solving Inverse Problems via Posterior Sampling with Piecewise Guidance",
+        "summary": "Diffusion models are powerful tools for sampling from high-dimensional\ndistributions by progressively transforming pure noise into structured data\nthrough a denoising process. When equipped with a guidance mechanism, these\nmodels can also generate samples from conditional distributions. In this paper,\na novel diffusion-based framework is introduced for solving inverse problems\nusing a piecewise guidance scheme. The guidance term is defined as a piecewise\nfunction of the diffusion timestep, facilitating the use of different\napproximations during high-noise and low-noise phases. This design is shown to\neffectively balance computational efficiency with the accuracy of the guidance\nterm. Unlike task-specific approaches that require retraining for each problem,\nthe proposed method is problem-agnostic and readily adaptable to a variety of\ninverse problems. Additionally, it explicitly incorporates measurement noise\ninto the reconstruction process. The effectiveness of the proposed framework is\ndemonstrated through extensive experiments on image restoration tasks,\nspecifically image inpainting and super-resolution. Using a class conditional\ndiffusion model for recovery, compared to the \\pgdm baseline, the proposed\nframework achieves a reduction in inference time of \\(25\\%\\) for inpainting\nwith both random and center masks, and \\(23\\%\\) and \\(24\\%\\) for \\(4\\times\\)\nand \\(8\\times\\) super-resolution tasks, respectively, while incurring only\nnegligible loss in PSNR and SSIM.",
+        "url": "http://arxiv.org/abs/2507.18654v1",
+        "published_date": "2025-07-22T19:35:14+00:00",
+        "updated_date": "2025-07-22T19:35:14+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Saeed Mohseni-Sehdeh",
+            "Walid Saad",
+            "Kei Sakaguchi",
+            "Tao Yu"
+        ],
+        "tldr": "This paper introduces a problem-agnostic diffusion model framework for solving inverse problems like image restoration and super-resolution using a piecewise guidance scheme, achieving faster inference times with minimal loss in quality compared to a baseline.",
+        "tldr_zh": "本文提出了一种通用的扩散模型框架，通过分段指导方案解决图像恢复和超分辨率等逆问题，与基线相比，在质量损失极小的情况下实现了更快的推理速度。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Lumina-mGPT 2.0: Stand-Alone AutoRegressive Image Modeling",
+        "summary": "We present Lumina-mGPT 2.0, a stand-alone, decoder-only autoregressive model\nthat revisits and revitalizes the autoregressive paradigm for high-quality\nimage generation and beyond. Unlike existing approaches that rely on pretrained\ncomponents or hybrid architectures, Lumina-mGPT 2.0 is trained entirely from\nscratch, enabling unrestricted architectural design and licensing freedom. It\nachieves generation quality on par with state-of-the-art diffusion models such\nas DALL-E 3 and SANA, while preserving the inherent flexibility and\ncompositionality of autoregressive modeling. Our unified tokenization scheme\nallows the model to seamlessly handle a wide spectrum of tasks-including\nsubject-driven generation, image editing, controllable synthesis, and dense\nprediction-within a single generative framework. To further boost usability, we\nincorporate efficient decoding strategies like inference-time scaling and\nspeculative Jacobi sampling to improve quality and speed, respectively.\nExtensive evaluations on standard text-to-image benchmarks (e.g., GenEval, DPG)\ndemonstrate that Lumina-mGPT 2.0 not only matches but in some cases surpasses\ndiffusion-based models. Moreover, we confirm its multi-task capabilities on the\nGraph200K benchmark, with the native Lumina-mGPT 2.0 performing exceptionally\nwell. These results position Lumina-mGPT 2.0 as a strong, flexible foundation\nmodel for unified multimodal generation. We have released our training details,\ncode, and models at https://github.com/Alpha-VLLM/Lumina-mGPT-2.0.",
+        "url": "http://arxiv.org/abs/2507.17801v1",
+        "published_date": "2025-07-23T17:42:13+00:00",
+        "updated_date": "2025-07-23T17:42:13+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yi Xin",
+            "Juncheng Yan",
+            "Qi Qin",
+            "Zhen Li",
+            "Dongyang Liu",
+            "Shicheng Li",
+            "Victor Shea-Jay Huang",
+            "Yupeng Zhou",
+            "Renrui Zhang",
+            "Le Zhuo",
+            "Tiancheng Han",
+            "Xiaoqing Sun",
+            "Siqi Luo",
+            "Mengmeng Wang",
+            "Bin Fu",
+            "Yuewen Cao",
+            "Hongsheng Li",
+            "Guangtao Zhai",
+            "Xiaohong Liu",
+            "Yu Qiao",
+            "Peng Gao"
+        ],
+        "tldr": "Lumina-mGPT 2.0 is a novel stand-alone autoregressive model for high-quality image generation, achieving state-of-the-art performance comparable to diffusion models while offering greater flexibility and multi-task capabilities.",
+        "tldr_zh": "Lumina-mGPT 2.0是一个新型的独立自回归模型，用于高质量图像生成，在提供更大灵活性和多任务能力的同时，实现了与扩散模型相当的顶尖性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Improving Multislice Electron Ptychography with a Generative Prior",
+        "summary": "Multislice electron ptychography (MEP) is an inverse imaging technique that\ncomputationally reconstructs the highest-resolution images of atomic crystal\nstructures from diffraction patterns. Available algorithms often solve this\ninverse problem iteratively but are both time consuming and produce suboptimal\nsolutions due to their ill-posed nature. We develop MEP-Diffusion, a diffusion\nmodel trained on a large database of crystal structures specifically for MEP to\naugment existing iterative solvers. MEP-Diffusion is easily integrated as a\ngenerative prior into existing reconstruction methods via Diffusion Posterior\nSampling (DPS). We find that this hybrid approach greatly enhances the quality\nof the reconstructed 3D volumes, achieving a 90.50% improvement in SSIM over\nexisting methods.",
+        "url": "http://arxiv.org/abs/2507.17800v2",
+        "published_date": "2025-07-23T16:35:25+00:00",
+        "updated_date": "2025-07-25T03:14:07+00:00",
+        "categories": [
+            "eess.IV",
+            "cond-mat.mtrl-sci",
+            "cs.CV",
+            "physics.optics"
+        ],
+        "authors": [
+            "Christian K. Belardi",
+            "Chia-Hao Lee",
+            "Yingheng Wang",
+            "Justin Lovelace",
+            "Kilian Q. Weinberger",
+            "David A. Muller",
+            "Carla P. Gomes"
+        ],
+        "tldr": "The paper introduces MEP-Diffusion, a diffusion model generative prior for multislice electron ptychography (MEP) that improves the quality of reconstructed 3D volumes of crystal structures by integrating into existing iterative solvers via Diffusion Posterior Sampling (DPS). The method achieves a 90.50% improvement in SSIM over existing methods.",
+        "tldr_zh": "该论文介绍了一种用于多层电子衍射成像 (MEP) 的扩散模型生成先验 MEP-Diffusion，通过扩散后验采样 (DPS) 集成到现有迭代求解器中，从而提高晶体结构重建 3D 体积的质量。该方法在 SSIM 方面比现有方法提高了 90.50%。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DFDNet: Dynamic Frequency-Guided De-Flare Network",
+        "summary": "Strong light sources in nighttime photography frequently produce flares in\nimages, significantly degrading visual quality and impacting the performance of\ndownstream tasks. While some progress has been made, existing methods continue\nto struggle with removing large-scale flare artifacts and repairing structural\ndamage in regions near the light source. We observe that these challenging\nflare artifacts exhibit more significant discrepancies from the reference\nimages in the frequency domain compared to the spatial domain. Therefore, this\npaper presents a novel dynamic frequency-guided deflare network (DFDNet) that\ndecouples content information from flare artifacts in the frequency domain,\neffectively removing large-scale flare artifacts. Specifically, DFDNet consists\nmainly of a global dynamic frequency-domain guidance (GDFG) module and a local\ndetail guidance module (LDGM). The GDFG module guides the network to perceive\nthe frequency characteristics of flare artifacts by dynamically optimizing\nglobal frequency domain features, effectively separating flare information from\ncontent information. Additionally, we design an LDGM via a contrastive learning\nstrategy that aligns the local features of the light source with the reference\nimage, reduces local detail damage from flare removal, and improves\nfine-grained image restoration. The experimental results demonstrate that the\nproposed method outperforms existing state-of-the-art methods in terms of\nperformance. The code is available at\n\\href{https://github.com/AXNing/DFDNet}{https://github.com/AXNing/DFDNet}.",
+        "url": "http://arxiv.org/abs/2507.17489v1",
+        "published_date": "2025-07-23T13:14:59+00:00",
+        "updated_date": "2025-07-23T13:14:59+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Minglong Xue",
+            "Aoxiang Ning",
+            "Shivakumara Palaiahnakote",
+            "Mingliang Zhou"
+        ],
+        "tldr": "DFDNet, a novel dynamic frequency-guided deflare network, is proposed to remove flare artifacts in nighttime images by decoupling content information from flare artifacts in the frequency domain using a global dynamic frequency-domain guidance module and a local detail guidance module.",
+        "tldr_zh": "该论文提出了DFDNet，一种新的动态频率引导的去光晕网络，通过在全球动态频域引导模块和局部细节引导模块的帮助下，在频域中将内容信息与光晕伪影分离，从而去除夜间图像中的光晕伪影。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "EndoGen: Conditional Autoregressive Endoscopic Video Generation",
+        "summary": "Endoscopic video generation is crucial for advancing medical imaging and\nenhancing diagnostic capabilities. However, prior efforts in this field have\neither focused on static images, lacking the dynamic context required for\npractical applications, or have relied on unconditional generation that fails\nto provide meaningful references for clinicians. Therefore, in this paper, we\npropose the first conditional endoscopic video generation framework, namely\nEndoGen. Specifically, we build an autoregressive model with a tailored\nSpatiotemporal Grid-Frame Patterning (SGP) strategy. It reformulates the\nlearning of generating multiple frames as a grid-based image generation\npattern, which effectively capitalizes the inherent global dependency modeling\ncapabilities of autoregressive architectures. Furthermore, we propose a\nSemantic-Aware Token Masking (SAT) mechanism, which enhances the model's\nability to produce rich and diverse content by selectively focusing on\nsemantically meaningful regions during the generation process. Through\nextensive experiments, we demonstrate the effectiveness of our framework in\ngenerating high-quality, conditionally guided endoscopic content, and improves\nthe performance of downstream task of polyp segmentation. Code released at\nhttps://www.github.com/CUHK-AIM-Group/EndoGen.",
+        "url": "http://arxiv.org/abs/2507.17388v1",
+        "published_date": "2025-07-23T10:32:20+00:00",
+        "updated_date": "2025-07-23T10:32:20+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Xinyu Liu",
+            "Hengyu Liu",
+            "Cheng Wang",
+            "Tianming Liu",
+            "Yixuan Yuan"
+        ],
+        "tldr": "The paper introduces EndoGen, a conditional autoregressive framework for generating endoscopic videos using a spatiotemporal grid-frame patterning strategy and semantic-aware token masking, demonstrating improved performance in polyp segmentation.",
+        "tldr_zh": "该论文介绍了EndoGen，一个条件自回归框架，用于生成内窥镜视频，采用时空网格帧模式策略和语义感知令牌掩蔽，展示了在息肉分割方面的性能提升。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Vec2Face+ for Face Dataset Generation",
+        "summary": "When synthesizing identities as face recognition training data, it is\ngenerally believed that large inter-class separability and intra-class\nattribute variation are essential for synthesizing a quality dataset. % This\nbelief is generally correct, and this is what we aim for. However, when\nincreasing intra-class variation, existing methods overlook the necessity of\nmaintaining intra-class identity consistency. % To address this and generate\nhigh-quality face training data, we propose Vec2Face+, a generative model that\ncreates images directly from image features and allows for continuous and easy\ncontrol of face identities and attributes. Using Vec2Face+, we obtain datasets\nwith proper inter-class separability and intra-class variation and identity\nconsistency using three strategies: 1) we sample vectors sufficiently different\nfrom others to generate well-separated identities; 2) we propose an AttrOP\nalgorithm for increasing general attribute variations; 3) we propose LoRA-based\npose control for generating images with profile head poses, which is more\nefficient and identity-preserving than AttrOP. % Our system generates VFace10K,\na synthetic face dataset with 10K identities, which allows an FR model to\nachieve state-of-the-art accuracy on seven real-world test sets. Scaling the\nsize to 4M and 12M images, the corresponding VFace100K and VFace300K datasets\nyield higher accuracy than the real-world training dataset, CASIA-WebFace, on\nfive real-world test sets. This is the first time a synthetic dataset beats the\nCASIA-WebFace in average accuracy. In addition, we find that only 1 out of 11\nsynthetic datasets outperforms random guessing (\\emph{i.e., 50\\%}) in twin\nverification and that models trained with synthetic identities are more biased\nthan those trained with real identities. Both are important aspects for future\ninvestigation. Code is available at https://github.com/HaiyuWu/Vec2Face_plus",
+        "url": "http://arxiv.org/abs/2507.17192v2",
+        "published_date": "2025-07-23T04:34:56+00:00",
+        "updated_date": "2025-07-28T00:57:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haiyu Wu",
+            "Jaskirat Singh",
+            "Sicong Tian",
+            "Liang Zheng",
+            "Kevin W. Bowyer"
+        ],
+        "tldr": "The paper introduces Vec2Face+, a generative model for creating high-quality face datasets with controlled identity and attribute variations. They demonstrate their synthetic datasets outperform CASIA-WebFace on real-world test sets.",
+        "tldr_zh": "该论文介绍了 Vec2Face+，一种用于创建高质量人脸数据集的生成模型，可以控制身份和属性的变化。他们证明了他们的合成数据集在真实世界的测试集上优于 CASIA-WebFace。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SADA: Stability-guided Adaptive Diffusion Acceleration",
+        "summary": "Diffusion models have achieved remarkable success in generative tasks but\nsuffer from high computational costs due to their iterative sampling process\nand quadratic attention costs. Existing training-free acceleration strategies\nthat reduce per-step computation cost, while effectively reducing sampling\ntime, demonstrate low faithfulness compared to the original baseline. We\nhypothesize that this fidelity gap arises because (a) different prompts\ncorrespond to varying denoising trajectory, and (b) such methods do not\nconsider the underlying ODE formulation and its numerical solution. In this\npaper, we propose Stability-guided Adaptive Diffusion Acceleration (SADA), a\nnovel paradigm that unifies step-wise and token-wise sparsity decisions via a\nsingle stability criterion to accelerate sampling of ODE-based generative\nmodels (Diffusion and Flow-matching). For (a), SADA adaptively allocates\nsparsity based on the sampling trajectory. For (b), SADA introduces principled\napproximation schemes that leverage the precise gradient information from the\nnumerical ODE solver. Comprehensive evaluations on SD-2, SDXL, and Flux using\nboth EDM and DPM++ solvers reveal consistent $\\ge 1.8\\times$ speedups with\nminimal fidelity degradation (LPIPS $\\leq 0.10$ and FID $\\leq 4.5$) compared to\nunmodified baselines, significantly outperforming prior methods. Moreover, SADA\nadapts seamlessly to other pipelines and modalities: It accelerates ControlNet\nwithout any modifications and speeds up MusicLDM by $1.8\\times$ with $\\sim\n0.01$ spectrogram LPIPS.",
+        "url": "http://arxiv.org/abs/2507.17135v1",
+        "published_date": "2025-07-23T02:15:45+00:00",
+        "updated_date": "2025-07-23T02:15:45+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Ting Jiang",
+            "Yixiao Wang",
+            "Hancheng Ye",
+            "Zishan Shao",
+            "Jingwei Sun",
+            "Jingyang Zhang",
+            "Zekai Chen",
+            "Jianyi Zhang",
+            "Yiran Chen",
+            "Hai Li"
+        ],
+        "tldr": "This paper introduces SADA, a novel method for accelerating diffusion model sampling by adaptively allocating sparsity based on trajectory and leveraging gradient information from ODE solvers, achieving significant speedups with minimal fidelity loss.",
+        "tldr_zh": "本文介绍了一种名为SADA的新方法，通过基于轨迹自适应地分配稀疏性并利用ODE求解器的梯度信息来加速扩散模型采样，从而在保证最小保真度损失的情况下实现显著加速。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Attention (as Discrete-Time Markov) Chains",
+        "summary": "We introduce a new interpretation of the attention matrix as a discrete-time\nMarkov chain. Our interpretation sheds light on common operations involving\nattention scores such as selection, summation, and averaging in a unified\nframework. It further extends them by considering indirect attention,\npropagated through the Markov chain, as opposed to previous studies that only\nmodel immediate effects. Our main observation is that tokens corresponding to\nsemantically similar regions form a set of metastable states, where the\nattention clusters, while noisy attention scores tend to disperse. Metastable\nstates and their prevalence can be easily computed through simple matrix\nmultiplication and eigenanalysis, respectively. Using these lightweight tools,\nwe demonstrate state-of-the-art zero-shot segmentation. Lastly, we define\nTokenRank -- the steady state vector of the Markov chain, which measures global\ntoken importance. We demonstrate that using it brings improvements in\nunconditional image generation. We believe our framework offers a fresh view of\nhow tokens are being attended in modern visual transformers.",
+        "url": "http://arxiv.org/abs/2507.17657v1",
+        "published_date": "2025-07-23T16:20:47+00:00",
+        "updated_date": "2025-07-23T16:20:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yotam Erel",
+            "Olaf Dünkel",
+            "Rishabh Dabral",
+            "Vladislav Golyanik",
+            "Christian Theobalt",
+            "Amit H. Bermano"
+        ],
+        "tldr": "This paper interprets attention mechanisms as discrete-time Markov chains, enabling novel analyses like identifying metastable states for zero-shot segmentation and TokenRank for improved image generation.",
+        "tldr_zh": "本文将注意力机制解释为离散时间马尔可夫链，从而实现了诸如识别零样本分割的亚稳态和用于改进图像生成的 TokenRank 等新颖分析。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "PolarAnything: Diffusion-based Polarimetric Image Synthesis",
+        "summary": "Polarization images facilitate image enhancement and 3D reconstruction tasks,\nbut the limited accessibility of polarization cameras hinders their broader\napplication. This gap drives the need for synthesizing photorealistic\npolarization images. The existing polarization simulator Mitsuba relies on a\nparametric polarization image formation model and requires extensive 3D assets\ncovering shape and PBR materials, preventing it from generating large-scale\nphotorealistic images. To address this problem, we propose PolarAnything,\ncapable of synthesizing polarization images from a single RGB input with both\nphotorealism and physical accuracy, eliminating the dependency on 3D asset\ncollections. Drawing inspiration from the zero-shot performance of pretrained\ndiffusion models, we introduce a diffusion-based generative framework with an\neffective representation strategy that preserves the fidelity of polarization\nproperties. Experiments show that our model generates high-quality polarization\nimages and supports downstream tasks like shape from polarization.",
+        "url": "http://arxiv.org/abs/2507.17268v2",
+        "published_date": "2025-07-23T07:09:10+00:00",
+        "updated_date": "2025-07-24T04:33:14+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kailong Zhang",
+            "Youwei Lyu",
+            "Heng Guo",
+            "Si Li",
+            "Zhanyu Ma",
+            "Boxin Shi"
+        ],
+        "tldr": "The paper introduces PolarAnything, a diffusion-based method for synthesizing photorealistic polarization images from single RGB images, addressing the limitations of existing methods that rely on extensive 3D assets.",
+        "tldr_zh": "该论文介绍了PolarAnything，一种基于扩散模型的方法，用于从单张RGB图像合成逼真的偏振图像，解决了现有方法依赖于大量3D资产的局限性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Bringing Balance to Hand Shape Classification: Mitigating Data Imbalance Through Generative Models",
+        "summary": "Most sign language handshape datasets are severely limited and unbalanced,\nposing significant challenges to effective model training. In this paper, we\nexplore the effectiveness of augmenting the training data of a handshape\nclassifier by generating synthetic data. We use an EfficientNet classifier\ntrained on the RWTH German sign language handshape dataset, which is small and\nheavily unbalanced, applying different strategies to combine generated and real\nimages. We compare two Generative Adversarial Networks (GAN) architectures for\ndata generation: ReACGAN, which uses label information to condition the data\ngeneration process through an auxiliary classifier, and SPADE, which utilizes\nspatially-adaptive normalization to condition the generation on pose\ninformation. ReACGAN allows for the generation of realistic images that align\nwith specific handshape labels, while SPADE focuses on generating images with\naccurate spatial handshape configurations. Our proposed techniques improve the\ncurrent state-of-the-art accuracy on the RWTH dataset by 5%, addressing the\nlimitations of small and unbalanced datasets. Additionally, our method\ndemonstrates the capability to generalize across different sign language\ndatasets by leveraging pose-based generation trained on the extensive HaGRID\ndataset. We achieve comparable performance to single-source trained classifiers\nwithout the need for retraining the generator.",
+        "url": "http://arxiv.org/abs/2507.17008v1",
+        "published_date": "2025-07-22T20:41:29+00:00",
+        "updated_date": "2025-07-22T20:41:29+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Gaston Gustavo Rios",
+            "Pedro Dal Bianco",
+            "Franco Ronchetti",
+            "Facundo Quiroga",
+            "Oscar Stanchi",
+            "Santiago Ponte Ahón",
+            "Waldo Hasperué"
+        ],
+        "tldr": "The paper addresses the data imbalance issue in handshape classification for sign language by using GANs (ReACGAN and SPADE) to generate synthetic data and improve the accuracy of a classifier, achieving a 5% improvement on the RWTH dataset and demonstrating generalizability to other datasets.",
+        "tldr_zh": "该论文通过使用GAN（ReACGAN和SPADE）生成合成数据，解决了手语手势分类中的数据不平衡问题，提高了分类器的准确率，在RWTH数据集上实现了5%的改进，并展示了对其他数据集的通用性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

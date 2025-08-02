@@ -1,0 +1,171 @@
+[
+    {
+        "title": "HarmonPaint: Harmonized Training-Free Diffusion Inpainting",
+        "summary": "Existing inpainting methods often require extensive retraining or fine-tuning\nto integrate new content seamlessly, yet they struggle to maintain coherence in\nboth structure and style between inpainted regions and the surrounding\nbackground. Motivated by these limitations, we introduce HarmonPaint, a\ntraining-free inpainting framework that seamlessly integrates with the\nattention mechanisms of diffusion models to achieve high-quality, harmonized\nimage inpainting without any form of training. By leveraging masking strategies\nwithin self-attention, HarmonPaint ensures structural fidelity without model\nretraining or fine-tuning. Additionally, we exploit intrinsic diffusion model\nproperties to transfer style information from unmasked to masked regions,\nachieving a harmonious integration of styles. Extensive experiments demonstrate\nthe effectiveness of HarmonPaint across diverse scenes and styles, validating\nits versatility and performance.",
+        "url": "http://arxiv.org/abs/2507.16732v1",
+        "published_date": "2025-07-22T16:14:35+00:00",
+        "updated_date": "2025-07-22T16:14:35+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ying Li",
+            "Xinzhe Li",
+            "Yong Du",
+            "Yangyang Xu",
+            "Junyu Dong",
+            "Shengfeng He"
+        ],
+        "tldr": "HarmonPaint is a training-free diffusion inpainting framework that uses attention mechanisms and masking strategies to achieve high-quality, harmonized image inpainting without retraining or fine-tuning.",
+        "tldr_zh": "HarmonPaint是一个无需训练的扩散模型图像修复框架，它利用注意力机制和掩码策略，在无需重新训练或微调的情况下，实现高质量、协调的图像修复。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Pyramid Hierarchical Masked Diffusion Model for Imaging Synthesis",
+        "summary": "Medical image synthesis plays a crucial role in clinical workflows,\naddressing the common issue of missing imaging modalities due to factors such\nas extended scan times, scan corruption, artifacts, patient motion, and\nintolerance to contrast agents. The paper presents a novel image synthesis\nnetwork, the Pyramid Hierarchical Masked Diffusion Model (PHMDiff), which\nemploys a multi-scale hierarchical approach for more detailed control over\nsynthesizing high-quality images across different resolutions and layers.\nSpecifically, this model utilizes randomly multi-scale high-proportion masks to\nspeed up diffusion model training, and balances detail fidelity and overall\nstructure. The integration of a Transformer-based Diffusion model process\nincorporates cross-granularity regularization, modeling the mutual information\nconsistency across each granularity's latent spaces, thereby enhancing\npixel-level perceptual accuracy. Comprehensive experiments on two challenging\ndatasets demonstrate that PHMDiff achieves superior performance in both the\nPeak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index Measure\n(SSIM), highlighting its capability to produce high-quality synthesized images\nwith excellent structural integrity. Ablation studies further confirm the\ncontributions of each component. Furthermore, the PHMDiff model, a multi-scale\nimage synthesis framework across and within medical imaging modalities, shows\nsignificant advantages over other methods. The source code is available at\nhttps://github.com/xiaojiao929/PHMDiff",
+        "url": "http://arxiv.org/abs/2507.16579v1",
+        "published_date": "2025-07-22T13:30:54+00:00",
+        "updated_date": "2025-07-22T13:30:54+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaojiao Xiao",
+            "Qinmin Vivian Hu",
+            "Guanghui Wang"
+        ],
+        "tldr": "The paper introduces PHMDiff, a novel multi-scale hierarchical masked diffusion model for medical image synthesis, demonstrating superior performance on PSNR and SSIM.",
+        "tldr_zh": "该论文介绍了一种新颖的多尺度分层掩码扩散模型PHMDiff，用于医学图像合成，并在PSNR和SSIM方面表现出卓越的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "EarthCrafter: Scalable 3D Earth Generation via Dual-Sparse Latent Diffusion",
+        "summary": "Despite the remarkable developments achieved by recent 3D generation works,\nscaling these methods to geographic extents, such as modeling thousands of\nsquare kilometers of Earth's surface, remains an open challenge. We address\nthis through a dual innovation in data infrastructure and model architecture.\nFirst, we introduce Aerial-Earth3D, the largest 3D aerial dataset to date,\nconsisting of 50k curated scenes (each measuring 600m x 600m) captured across\nthe U.S. mainland, comprising 45M multi-view Google Earth frames. Each scene\nprovides pose-annotated multi-view images, depth maps, normals, semantic\nsegmentation, and camera poses, with explicit quality control to ensure terrain\ndiversity. Building on this foundation, we propose EarthCrafter, a tailored\nframework for large-scale 3D Earth generation via sparse-decoupled latent\ndiffusion. Our architecture separates structural and textural generation: 1)\nDual sparse 3D-VAEs compress high-resolution geometric voxels and textural 2D\nGaussian Splats (2DGS) into compact latent spaces, largely alleviating the\ncostly computation suffering from vast geographic scales while preserving\ncritical information. 2) We propose condition-aware flow matching models\ntrained on mixed inputs (semantics, images, or neither) to flexibly model\nlatent geometry and texture features independently. Extensive experiments\ndemonstrate that EarthCrafter performs substantially better in extremely\nlarge-scale generation. The framework further supports versatile applications,\nfrom semantic-guided urban layout generation to unconditional terrain\nsynthesis, while maintaining geographic plausibility through our rich data\npriors from Aerial-Earth3D. Our project page is available at\nhttps://whiteinblue.github.io/earthcrafter/",
+        "url": "http://arxiv.org/abs/2507.16535v2",
+        "published_date": "2025-07-22T12:46:48+00:00",
+        "updated_date": "2025-07-23T01:59:09+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Shang Liu",
+            "Chenjie Cao",
+            "Chaohui Yu",
+            "Wen Qian",
+            "Jing Wang",
+            "Fan Wang"
+        ],
+        "tldr": "The paper introduces EarthCrafter, a framework for generating large-scale 3D Earth models using a novel dual-sparse latent diffusion approach and a large-scale aerial dataset (Aerial-Earth3D). It achieves scalable and plausible 3D Earth generation with flexible conditioning.",
+        "tldr_zh": "该论文介绍了EarthCrafter，一个利用双重稀疏潜在扩散方法和大规模航拍数据集(Aerial-Earth3D)生成大规模3D地球模型的框架。它实现了可扩展且逼真的3D地球生成，并具有灵活的条件控制。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "STAR: A Benchmark for Astronomical Star Fields Super-Resolution",
+        "summary": "Super-resolution (SR) advances astronomical imaging by enabling\ncost-effective high-resolution capture, crucial for detecting faraway celestial\nobjects and precise structural analysis. However, existing datasets for\nastronomical SR (ASR) exhibit three critical limitations: flux inconsistency,\nobject-crop setting, and insufficient data diversity, significantly impeding\nASR development. We propose STAR, a large-scale astronomical SR dataset\ncontaining 54,738 flux-consistent star field image pairs covering wide\ncelestial regions. These pairs combine Hubble Space Telescope high-resolution\nobservations with physically faithful low-resolution counterparts generated\nthrough a flux-preserving data generation pipeline, enabling systematic\ndevelopment of field-level ASR models. To further empower the ASR community,\nSTAR provides a novel Flux Error (FE) to evaluate SR models in physical view.\nLeveraging this benchmark, we propose a Flux-Invariant Super Resolution (FISR)\nmodel that could accurately infer the flux-consistent high-resolution images\nfrom input photometry, suppressing several SR state-of-the-art methods by\n24.84% on a novel designed flux consistency metric, showing the priority of our\nmethod for astrophysics. Extensive experiments demonstrate the effectiveness of\nour proposed method and the value of our dataset. Code and models are available\nat https://github.com/GuoCheng12/STAR.",
+        "url": "http://arxiv.org/abs/2507.16385v1",
+        "published_date": "2025-07-22T09:28:28+00:00",
+        "updated_date": "2025-07-22T09:28:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kuo-Cheng Wu",
+            "Guohang Zhuang",
+            "Jinyang Huang",
+            "Xiang Zhang",
+            "Wanli Ouyang",
+            "Yan Lu"
+        ],
+        "tldr": "The paper introduces STAR, a large-scale, flux-consistent astronomical super-resolution dataset, along with a novel Flux Error metric and a Flux-Invariant Super Resolution (FISR) model, demonstrating significant improvements over existing methods.",
+        "tldr_zh": "该论文介绍了STAR，一个大规模、通量一致的天文超分辨率数据集，以及一个新的通量误差指标和一个通量不变超分辨率（FISR）模型，表明其相比现有方法有显著改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LSSGen: Leveraging Latent Space Scaling in Flow and Diffusion for Efficient Text to Image Generation",
+        "summary": "Flow matching and diffusion models have shown impressive results in\ntext-to-image generation, producing photorealistic images through an iterative\ndenoising process. A common strategy to speed up synthesis is to perform early\ndenoising at lower resolutions. However, traditional methods that downscale and\nupscale in pixel space often introduce artifacts and distortions. These issues\narise when the upscaled images are re-encoded into the latent space, leading to\ndegraded final image quality. To address this, we propose {\\bf Latent Space\nScaling Generation (LSSGen)}, a framework that performs resolution scaling\ndirectly in the latent space using a lightweight latent upsampler. Without\naltering the Transformer or U-Net architecture, LSSGen improves both efficiency\nand visual quality while supporting flexible multi-resolution generation. Our\ncomprehensive evaluation covering text-image alignment and perceptual quality\nshows that LSSGen significantly outperforms conventional scaling approaches.\nWhen generating $1024^2$ images at similar speeds, it achieves up to 246\\%\nTOPIQ score improvement.",
+        "url": "http://arxiv.org/abs/2507.16154v1",
+        "published_date": "2025-07-22T02:05:21+00:00",
+        "updated_date": "2025-07-22T02:05:21+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Jyun-Ze Tang",
+            "Chih-Fan Hsu",
+            "Jeng-Lin Li",
+            "Ming-Ching Chang",
+            "Wei-Chao Chen"
+        ],
+        "tldr": "The paper introduces LSSGen, a method that performs resolution scaling in the latent space for text-to-image generation, improving both efficiency and image quality compared to pixel space scaling methods.",
+        "tldr_zh": "该论文介绍了LSSGen，一种在文本到图像生成中在潜在空间执行分辨率缩放的方法，与像素空间缩放方法相比，提高了效率和图像质量。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Scale Your Instructions: Enhance the Instruction-Following Fidelity of Unified Image Generation Model by Self-Adaptive Attention Scaling",
+        "summary": "Recent advancements in unified image generation models, such as OmniGen, have\nenabled the handling of diverse image generation and editing tasks within a\nsingle framework, accepting multimodal, interleaved texts and images in free\nform. This unified architecture eliminates the need for text encoders, greatly\nreducing model complexity and standardizing various image generation and\nediting tasks, making it more user-friendly. However, we found that it suffers\nfrom text instruction neglect, especially when the text instruction contains\nmultiple sub-instructions. To explore this issue, we performed a perturbation\nanalysis on the input to identify critical steps and layers. By examining the\ncross-attention maps of these key steps, we observed significant conflicts\nbetween neglected sub-instructions and the activations of the input image. In\nresponse, we propose Self-Adaptive Attention Scaling (SaaS), a method that\nleverages the consistency of cross-attention between adjacent timesteps to\ndynamically scale the attention activation for each sub-instruction. Our SaaS\nenhances instruction-following fidelity without requiring additional training\nor test-time optimization. Experimental results on instruction-based image\nediting and visual conditional image generation validate the effectiveness of\nour SaaS, showing superior instruction-following fidelity over existing\nmethods. The code is available https://github.com/zhouchao-ops/SaaS.",
+        "url": "http://arxiv.org/abs/2507.16240v1",
+        "published_date": "2025-07-22T05:25:38+00:00",
+        "updated_date": "2025-07-22T05:25:38+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chao Zhou",
+            "Tianyi Wei",
+            "Nenghai Yu"
+        ],
+        "tldr": "The paper introduces Self-Adaptive Attention Scaling (SaaS) to improve instruction-following fidelity in unified image generation models by dynamically scaling attention activations based on cross-attention consistency between timesteps, without requiring additional training.",
+        "tldr_zh": "该论文提出了自适应注意力缩放（SaaS）方法，通过基于时间步之间交叉注意力一致性动态缩放注意力激活，来提高统一图像生成模型中指令遵循的保真度，且无需额外的训练。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Improving Personalized Image Generation through Social Context Feedback",
+        "summary": "Personalized image generation, where reference images of one or more subjects\nare used to generate their image according to a scene description, has gathered\nsignificant interest in the community. However, such generated images suffer\nfrom three major limitations -- complex activities, such as $<$man, pushing,\nmotorcycle$>$ are not generated properly with incorrect human poses, reference\nhuman identities are not preserved, and generated human gaze patterns are\nunnatural/inconsistent with the scene description. In this work, we propose to\novercome these shortcomings through feedback-based fine-tuning of existing\npersonalized generation methods, wherein, state-of-art detectors of pose,\nhuman-object-interaction, human facial recognition and human gaze-point\nestimation are used to refine the diffusion model. We also propose\ntimestep-based inculcation of different feedback modules, depending upon\nwhether the signal is low-level (such as human pose), or high-level (such as\ngaze point). The images generated in this manner show an improvement in the\ngenerated interactions, facial identities and image quality over three\nbenchmark datasets.",
+        "url": "http://arxiv.org/abs/2507.16095v1",
+        "published_date": "2025-07-21T22:36:30+00:00",
+        "updated_date": "2025-07-21T22:36:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Parul Gupta",
+            "Abhinav Dhall",
+            "Thanh-Toan Do"
+        ],
+        "tldr": "The paper introduces a feedback-based fine-tuning method for personalized image generation, utilizing pose, human-object-interaction, facial recognition, and gaze estimation to improve interaction, identity preservation, and overall image quality.",
+        "tldr_zh": "本文提出了一种基于反馈的个性化图像生成微调方法，利用姿势、人-物交互、面部识别和视线估计来提高交互性、身份保持和整体图像质量。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

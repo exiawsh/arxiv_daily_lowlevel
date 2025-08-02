@@ -1,0 +1,348 @@
+[
+    {
+        "title": "PixNerd: Pixel Neural Field Diffusion",
+        "summary": "The current success of diffusion transformers heavily depends on the\ncompressed latent space shaped by the pre-trained variational autoencoder(VAE).\nHowever, this two-stage training paradigm inevitably introduces accumulated\nerrors and decoding artifacts. To address the aforementioned problems,\nresearchers return to pixel space at the cost of complicated cascade pipelines\nand increased token complexity. In contrast to their efforts, we propose to\nmodel the patch-wise decoding with neural field and present a single-scale,\nsingle-stage, efficient, end-to-end solution, coined as pixel neural field\ndiffusion~(PixelNerd). Thanks to the efficient neural field representation in\nPixNerd, we directly achieved 2.15 FID on ImageNet $256\\times256$ and 2.84 FID\non ImageNet $512\\times512$ without any complex cascade pipeline or VAE. We also\nextend our PixNerd framework to text-to-image applications. Our PixNerd-XXL/16\nachieved a competitive 0.73 overall score on the GenEval benchmark and 80.9\noverall score on the DPG benchmark.",
+        "url": "http://arxiv.org/abs/2507.23268v1",
+        "published_date": "2025-07-31T06:07:20+00:00",
+        "updated_date": "2025-07-31T06:07:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuai Wang",
+            "Ziteng Gao",
+            "Chenhui Zhu",
+            "Weilin Huang",
+            "Limin Wang"
+        ],
+        "tldr": "The paper proposes PixelNerd, a single-stage diffusion model using neural fields for efficient and high-quality image generation directly in pixel space, achieving state-of-the-art FID scores on ImageNet without VAEs or complex pipelines.",
+        "tldr_zh": "该论文提出了PixelNerd，一种使用神经场的单阶段扩散模型，用于在像素空间中直接进行高效、高质量的图像生成，并在ImageNet上实现了最先进的FID分数，无需VAE或复杂的流程。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "UniLDiff: Unlocking the Power of Diffusion Priors for All-in-One Image Restoration",
+        "summary": "All-in-One Image Restoration (AiOIR) has emerged as a promising yet\nchallenging research direction. To address its core challenges, we propose a\nnovel unified image restoration framework based on latent diffusion models\n(LDMs). Our approach structurally integrates low-quality visual priors into the\ndiffusion process, unlocking the powerful generative capacity of diffusion\nmodels for diverse degradations. Specifically, we design a Degradation-Aware\nFeature Fusion (DAFF) module to enable adaptive handling of diverse degradation\ntypes. Furthermore, to mitigate detail loss caused by the high compression and\niterative sampling of LDMs, we design a Detail-Aware Expert Module (DAEM) in\nthe decoder to enhance texture and fine-structure recovery. Extensive\nexperiments across multi-task and mixed degradation settings demonstrate that\nour method consistently achieves state-of-the-art performance, highlighting the\npractical potential of diffusion priors for unified image restoration. Our code\nwill be released.",
+        "url": "http://arxiv.org/abs/2507.23685v1",
+        "published_date": "2025-07-31T16:02:00+00:00",
+        "updated_date": "2025-07-31T16:02:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zihan Cheng",
+            "Liangtai Zhou",
+            "Dian Chen",
+            "Ni Tang",
+            "Xiaotong Luo",
+            "Yanyun Qu"
+        ],
+        "tldr": "The paper proposes a unified image restoration framework (UniLDiff) based on latent diffusion models, incorporating degradation-aware feature fusion and detail-aware expert modules to achieve state-of-the-art performance in all-in-one image restoration tasks.",
+        "tldr_zh": "该论文提出了一种基于潜在扩散模型的统一图像修复框架（UniLDiff），结合了退化感知特征融合和细节感知专家模块，在一体化图像修复任务中实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Adaptively Distilled ControlNet: Accelerated Training and Superior Sampling for Medical Image Synthesis",
+        "summary": "Medical image annotation is constrained by privacy concerns and\nlabor-intensive labeling, significantly limiting the performance and\ngeneralization of segmentation models. While mask-controllable diffusion models\nexcel in synthesis, they struggle with precise lesion-mask alignment. We\npropose \\textbf{Adaptively Distilled ControlNet}, a task-agnostic framework\nthat accelerates training and optimization through dual-model distillation.\nSpecifically, during training, a teacher model, conditioned on mask-image\npairs, regularizes a mask-only student model via predicted noise alignment in\nparameter space, further enhanced by adaptive regularization based on\nlesion-background ratios. During sampling, only the student model is used,\nenabling privacy-preserving medical image generation. Comprehensive evaluations\non two distinct medical datasets demonstrate state-of-the-art performance:\nTransUNet improves mDice/mIoU by 2.4%/4.2% on KiTS19, while SANet achieves\n2.6%/3.5% gains on Polyps, highlighting its effectiveness and superiority. Code\nis available at GitHub.",
+        "url": "http://arxiv.org/abs/2507.23652v1",
+        "published_date": "2025-07-31T15:32:06+00:00",
+        "updated_date": "2025-07-31T15:32:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kunpeng Qiu",
+            "Zhiying Zhou",
+            "Yongxin Guo"
+        ],
+        "tldr": "The paper introduces Adaptively Distilled ControlNet, a dual-model distillation framework for accelerated and improved mask-conditioned medical image synthesis, achieving state-of-the-art performance on lesion-mask alignment while preserving privacy.",
+        "tldr_zh": "该论文介绍了自适应蒸馏ControlNet，一种双模型蒸馏框架，用于加速和改进掩码条件下的医学图像合成，在病灶掩码对齐方面实现了最先进的性能，同时保护了隐私。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DivControl: Knowledge Diversion for Controllable Image Generation",
+        "summary": "Diffusion models have advanced from text-to-image (T2I) to image-to-image\n(I2I) generation by incorporating structured inputs such as depth maps,\nenabling fine-grained spatial control. However, existing methods either train\nseparate models for each condition or rely on unified architectures with\nentangled representations, resulting in poor generalization and high adaptation\ncosts for novel conditions. To this end, we propose DivControl, a decomposable\npretraining framework for unified controllable generation and efficient\nadaptation. DivControl factorizes ControlNet via SVD into basic\ncomponents-pairs of singular vectors-which are disentangled into\ncondition-agnostic learngenes and condition-specific tailors through knowledge\ndiversion during multi-condition training. Knowledge diversion is implemented\nvia a dynamic gate that performs soft routing over tailors based on the\nsemantics of condition instructions, enabling zero-shot generalization and\nparameter-efficient adaptation to novel conditions. To further improve\ncondition fidelity and training efficiency, we introduce a representation\nalignment loss that aligns condition embeddings with early diffusion features.\nExtensive experiments demonstrate that DivControl achieves state-of-the-art\ncontrollability with 36.4$\\times$ less training cost, while simultaneously\nimproving average performance on basic conditions. It also delivers strong\nzero-shot and few-shot performance on unseen conditions, demonstrating superior\nscalability, modularity, and transferability.",
+        "url": "http://arxiv.org/abs/2507.23620v1",
+        "published_date": "2025-07-31T15:00:15+00:00",
+        "updated_date": "2025-07-31T15:00:15+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Yucheng Xie",
+            "Fu Feng",
+            "Ruixiao Shi",
+            "Jing Wang",
+            "Yong Rui",
+            "Xin Geng"
+        ],
+        "tldr": "DivControl is a decomposable pretraining framework for controllable image generation that uses knowledge diversion to achieve state-of-the-art controllability with less training cost and strong zero-shot/few-shot performance on unseen conditions.",
+        "tldr_zh": "DivControl是一个可分解的预训练框架，用于可控图像生成，它使用知识转移以更少的训练成本实现最先进的可控性，并在未见过的条件下具有强大的零样本/少样本性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UniLiP: Adapting CLIP for Unified Multimodal Understanding, Generation and Editing",
+        "summary": "In this paper, we propose UniLIP, which extends CLIP to reconstruction,\ngeneration and editing, thereby building a unified tokenizer upon its\nexceptional comprehension capabilities. Previous CLIP-based unified methods\noften require additional diffusion decoders or quantization to support\nreconstruction and generation tasks, leading to inconsistent reconstruction or\ndegradation of original comprehension performance.In contrast, we introduce a\ntwo-stage training scheme and a self-distillation strategy that progressively\nintegrates reconstruction capabilities into CLIP, allowing it to maintain\noriginal comprehension performance while achieving effective image\nreconstruction. Furthermore, we propose a dual-condition architecture to\nconnect the MLLM and diffusion transformer, using both learnable queries and\nthe last layer multimodal hidden states as joint conditions. This method not\nonly enables the utilization of the MLLM's strong reasoning capabilities in\ngeneration tasks, but also maximizes the exploitation of the rich information\nin UniLIP features during editing tasks. In text-to-image generation tasks,\nUniLIP obtains scores of 0.87 and 0.53 on GenEval and WISE benchmark\nrespectively, surpassing all previous unified models of similar scale. In image\nediting, UniLIP also achieves a score of 3.62 on the ImgEdit Benchmark,\nsurpassing recent state-of-the-art models such as BAGEL and UniWorld-V1. UniLIP\neffectively expand the application scope of CLIP, enabling continuous CLIP\nfeatures to not only serve as the optimal choice for understanding tasks but\nalso achieve highly competitive performance in generation and editing tasks.",
+        "url": "http://arxiv.org/abs/2507.23278v1",
+        "published_date": "2025-07-31T06:35:03+00:00",
+        "updated_date": "2025-07-31T06:35:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hao Tang",
+            "Chenwei Xie",
+            "Xiaoyi Bao",
+            "Tingyu Weng",
+            "Pandeng Li",
+            "Yun Zheng",
+            "Liwei Wang"
+        ],
+        "tldr": "UniLIP extends CLIP to a unified multimodal model for understanding, generation, and editing via a novel two-stage training scheme and dual-condition architecture, achieving state-of-the-art performance in text-to-image generation and image editing.",
+        "tldr_zh": "UniLIP通过一种新颖的两阶段训练方案和双条件架构，将CLIP扩展为用于理解、生成和编辑的统一多模态模型，在文本到图像生成和图像编辑方面取得了最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Single Image Rain Streak Removal Using Harris Corner Loss and R-CBAM Network",
+        "summary": "The problem of single-image rain streak removal goes beyond simple noise\nsuppression, requiring the simultaneous preservation of fine structural details\nand overall visual quality. In this study, we propose a novel image restoration\nnetwork that effectively constrains the restoration process by introducing a\nCorner Loss, which prevents the loss of object boundaries and detailed texture\ninformation during restoration. Furthermore, we propose a Residual\nConvolutional Block Attention Module (R-CBAM) Block into the encoder and\ndecoder to dynamically adjust the importance of features in both spatial and\nchannel dimensions, enabling the network to focus more effectively on regions\nheavily affected by rain streaks. Quantitative evaluations conducted on the\nRain100L and Rain100H datasets demonstrate that the proposed method\nsignificantly outperforms previous approaches, achieving a PSNR of 33.29 dB on\nRain100L and 26.16 dB on Rain100H.",
+        "url": "http://arxiv.org/abs/2507.23185v1",
+        "published_date": "2025-07-31T01:42:12+00:00",
+        "updated_date": "2025-07-31T01:42:12+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Jongwook Si",
+            "Sungyoung Kim"
+        ],
+        "tldr": "This paper introduces a rain streak removal method using a novel Corner Loss and a Residual Convolutional Block Attention Module (R-CBAM) within a network, demonstrating improved PSNR on standard datasets.",
+        "tldr_zh": "该论文提出了一种使用新型角点损失和残差卷积块注意力模块（R-CBAM）的网络进行雨纹去除的方法，并在标准数据集上展示了改进的PSNR。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FuseTen: A Generative Model for Daily 10 m Land Surface Temperature Estimation from Spatio-Temporal Satellite Observations",
+        "summary": "Urban heatwaves, droughts, and land degradation are pressing and growing\nchallenges in the context of climate change. A valuable approach to studying\nthem requires accurate spatio-temporal information on land surface conditions.\nOne of the most important variables for assessing and understanding these\nphenomena is Land Surface Temperature (LST), which is derived from satellites\nand provides essential information about the thermal state of the Earth's\nsurface. However, satellite platforms inherently face a trade-off between\nspatial and temporal resolutions. To bridge this gap, we propose FuseTen, a\nnovel generative framework that produces daily LST observations at a fine 10 m\nspatial resolution by fusing spatio-temporal observations derived from\nSentinel-2, Landsat 8, and Terra MODIS. FuseTen employs a generative\narchitecture trained using an averaging-based supervision strategy grounded in\nphysical principles. It incorporates attention and normalization modules within\nthe fusion process and uses a PatchGAN discriminator to enforce realism.\nExperiments across multiple dates show that FuseTen outperforms linear\nbaselines, with an average 32.06% improvement in quantitative metrics and\n31.42% in visual fidelity. To the best of our knowledge, this is the first\nnon-linear method to generate daily LST estimates at such fine spatial\nresolution.",
+        "url": "http://arxiv.org/abs/2507.23154v1",
+        "published_date": "2025-07-30T23:04:16+00:00",
+        "updated_date": "2025-07-30T23:04:16+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Sofiane Bouaziz",
+            "Adel Hafiane",
+            "Raphael Canals",
+            "Rachid Nedjai"
+        ],
+        "tldr": "The paper introduces FuseTen, a novel generative model that fuses spatio-temporal satellite data from Sentinel-2, Landsat 8, and Terra MODIS to generate daily 10m resolution Land Surface Temperature (LST) estimates, outperforming linear baselines significantly.",
+        "tldr_zh": "该论文介绍了FuseTen，一种新型生成模型，它融合了来自Sentinel-2、Landsat 8和Terra MODIS的时空卫星数据，以生成每日10米分辨率的陆地表面温度（LST）估计，性能显著优于线性基线。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Recovering Diagnostic Value: Super-Resolution-Aided Echocardiographic Classification in Resource-Constrained Imaging",
+        "summary": "Automated cardiac interpretation in resource-constrained settings (RCS) is\noften hindered by poor-quality echocardiographic imaging, limiting the\neffectiveness of downstream diagnostic models. While super-resolution (SR)\ntechniques have shown promise in enhancing magnetic resonance imaging (MRI) and\ncomputed tomography (CT) scans, their application to echocardiography-a widely\naccessible but noise-prone modality-remains underexplored. In this work, we\ninvestigate the potential of deep learning-based SR to improve classification\naccuracy on low-quality 2D echocardiograms. Using the publicly available CAMUS\ndataset, we stratify samples by image quality and evaluate two clinically\nrelevant tasks of varying complexity: a relatively simple Two-Chamber vs.\nFour-Chamber (2CH vs. 4CH) view classification and a more complex End-Diastole\nvs. End-Systole (ED vs. ES) phase classification. We apply two widely used SR\nmodels-Super-Resolution Generative Adversarial Network (SRGAN) and\nSuper-Resolution Residual Network (SRResNet), to enhance poor-quality images\nand observe significant gains in performance metric-particularly with SRResNet,\nwhich also offers computational efficiency. Our findings demonstrate that SR\ncan effectively recover diagnostic value in degraded echo scans, making it a\nviable tool for AI-assisted care in RCS, achieving more with less.",
+        "url": "http://arxiv.org/abs/2507.23027v1",
+        "published_date": "2025-07-30T18:45:31+00:00",
+        "updated_date": "2025-07-30T18:45:31+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Krishan Agyakari Raja Babu",
+            "Om Prabhu",
+            "Annu",
+            "Mohanasankar Sivaprakasam"
+        ],
+        "tldr": "The paper explores using super-resolution techniques (SRGAN and SRResNet) to enhance low-quality echocardiograms, showing improved classification accuracy for cardiac phases and views, especially in resource-constrained settings.",
+        "tldr_zh": "该论文探讨了使用超分辨率技术（SRGAN和SRResNet）来增强低质量超声心动图，结果表明提高了心脏相位和视图的分类准确率，尤其是在资源受限的环境中。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "I2V-GS: Infrastructure-to-Vehicle View Transformation with Gaussian Splatting for Autonomous Driving Data Generation",
+        "summary": "Vast and high-quality data are essential for end-to-end autonomous driving\nsystems. However, current driving data is mainly collected by vehicles, which\nis expensive and inefficient. A potential solution lies in synthesizing data\nfrom real-world images. Recent advancements in 3D reconstruction demonstrate\nphotorealistic novel view synthesis, highlighting the potential of generating\ndriving data from images captured on the road. This paper introduces a novel\nmethod, I2V-GS, to transfer the Infrastructure view To the Vehicle view with\nGaussian Splatting. Reconstruction from sparse infrastructure viewpoints and\nrendering under large view transformations is a challenging problem. We adopt\nthe adaptive depth warp to generate dense training views. To further expand the\nrange of views, we employ a cascade strategy to inpaint warped images, which\nalso ensures inpainting content is consistent across views. To further ensure\nthe reliability of the diffusion model, we utilize the cross-view information\nto perform a confidenceguided optimization. Moreover, we introduce RoadSight, a\nmulti-modality, multi-view dataset from real scenarios in infrastructure views.\nTo our knowledge, I2V-GS is the first framework to generate autonomous driving\ndatasets with infrastructure-vehicle view transformation. Experimental results\ndemonstrate that I2V-GS significantly improves synthesis quality under vehicle\nview, outperforming StreetGaussian in NTA-Iou, NTL-Iou, and FID by 45.7%,\n34.2%, and 14.9%, respectively.",
+        "url": "http://arxiv.org/abs/2507.23683v1",
+        "published_date": "2025-07-31T15:59:16+00:00",
+        "updated_date": "2025-07-31T15:59:16+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jialei Chen",
+            "Wuhao Xu",
+            "Sipeng He",
+            "Baoru Huang",
+            "Dongchun Ren"
+        ],
+        "tldr": "The paper introduces I2V-GS, a novel method using Gaussian Splatting to synthesize autonomous driving data by transforming infrastructure views to vehicle views, and presents the RoadSight dataset. It achieves significant improvements in synthesis quality compared to existing methods.",
+        "tldr_zh": "该论文介绍了I2V-GS，一种利用高斯溅射将基础设施视角转换为车辆视角来合成自动驾驶数据的新方法，并提出了RoadSight数据集。与现有方法相比，该方法在合成质量上取得了显著提升。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "UniEmo: Unifying Emotional Understanding and Generation with Learnable Expert Queries",
+        "summary": "Emotional understanding and generation are often treated as separate tasks,\nyet they are inherently complementary and can mutually enhance each other. In\nthis paper, we propose the UniEmo, a unified framework that seamlessly\nintegrates these two tasks. The key challenge lies in the abstract nature of\nemotions, necessitating the extraction of visual representations beneficial for\nboth tasks. To address this, we propose a hierarchical emotional understanding\nchain with learnable expert queries that progressively extracts multi-scale\nemotional features, thereby serving as a foundational step for unification.\nSimultaneously, we fuse these expert queries and emotional representations to\nguide the diffusion model in generating emotion-evoking images. To enhance the\ndiversity and fidelity of the generated emotional images, we further introduce\nthe emotional correlation coefficient and emotional condition loss into the\nfusion process. This step facilitates fusion and alignment for emotional\ngeneration guided by the understanding. In turn, we demonstrate that joint\ntraining allows the generation component to provide implicit feedback to the\nunderstanding part. Furthermore, we propose a novel data filtering algorithm to\nselect high-quality and diverse emotional images generated by the well-trained\nmodel, which explicitly feedback into the understanding part. Together, these\ngeneration-driven dual feedback processes enhance the model's understanding\ncapacity. Extensive experiments show that UniEmo significantly outperforms\nstate-of-the-art methods in both emotional understanding and generation tasks.\nThe code for the proposed method is available at\nhttps://github.com/JiuTian-VL/UniEmo.",
+        "url": "http://arxiv.org/abs/2507.23372v1",
+        "published_date": "2025-07-31T09:39:27+00:00",
+        "updated_date": "2025-07-31T09:39:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yijie Zhu",
+            "Lingsen Zhang",
+            "Zitong Yu",
+            "Rui Shao",
+            "Tao Tan",
+            "Liqiang Nie"
+        ],
+        "tldr": "UniEmo is a unified framework for emotional understanding and image generation using learnable expert queries and a diffusion model, with dual feedback processes to enhance understanding capacity and improve generation diversity/fidelity.",
+        "tldr_zh": "UniEmo是一个统一的情感理解和图像生成框架，它使用可学习的专家查询和扩散模型，通过双重反馈过程来增强理解能力并提高生成的多样性和保真度。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Towards High-Resolution Alignment and Super-Resolution of Multi-Sensor Satellite Imagery",
+        "summary": "High-resolution satellite imagery is essential for geospatial analysis, yet\ndifferences in spatial resolution across satellite sensors present challenges\nfor data fusion and downstream applications. Super-resolution techniques can\nhelp bridge this gap, but existing methods rely on artificially downscaled\nimages rather than real sensor data and are not well suited for heterogeneous\nsatellite sensors with differing spectral, temporal characteristics. In this\nwork, we develop a preliminary framework to align and Harmonized Landsat\nSentinel 30m(HLS 30) imagery using Harmonized Landsat Sentinel 10m(HLS10) as a\nreference from the HLS dataset. Our approach aims to bridge the resolution gap\nbetween these sensors and improve the quality of super-resolved Landsat\nimagery. Quantitative and qualitative evaluations demonstrate the effectiveness\nof our method, showing its potential for enhancing satellite-based sensing\napplications. This study provides insights into the feasibility of\nheterogeneous satellite image super-resolution and highlights key\nconsiderations for future advancements in the field.",
+        "url": "http://arxiv.org/abs/2507.23150v1",
+        "published_date": "2025-07-30T22:55:01+00:00",
+        "updated_date": "2025-07-30T22:55:01+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Philip Wootaek Shin",
+            "Vishal Gaur",
+            "Rahul Ramachandran",
+            "Manil Maskey",
+            "Jack Sampson",
+            "Vijaykrishnan Narayanan",
+            "Sujit Roy"
+        ],
+        "tldr": "This paper presents a preliminary framework to align and super-resolve Landsat imagery using Sentinel imagery as a reference, aiming to improve the resolution gap between these sensors.",
+        "tldr_zh": "本文提出了一个初步的框架，旨在使用 Sentinel 影像作为参考，对 Landsat 影像进行对齐和超分辨率处理，从而缩小这些传感器之间的分辨率差距。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "X-NeMo: Expressive Neural Motion Reenactment via Disentangled Latent Attention",
+        "summary": "We propose X-NeMo, a novel zero-shot diffusion-based portrait animation\npipeline that animates a static portrait using facial movements from a driving\nvideo of a different individual. Our work first identifies the root causes of\nthe key issues in prior approaches, such as identity leakage and difficulty in\ncapturing subtle and extreme expressions. To address these challenges, we\nintroduce a fully end-to-end training framework that distills a 1D\nidentity-agnostic latent motion descriptor from driving image, effectively\ncontrolling motion through cross-attention during image generation. Our\nimplicit motion descriptor captures expressive facial motion in fine detail,\nlearned end-to-end from a diverse video dataset without reliance on pretrained\nmotion detectors. We further enhance expressiveness and disentangle motion\nlatents from identity cues by supervising their learning with a dual GAN\ndecoder, alongside spatial and color augmentations. By embedding the driving\nmotion into a 1D latent vector and controlling motion via cross-attention\nrather than additive spatial guidance, our design eliminates the transmission\nof spatial-aligned structural clues from the driving condition to the diffusion\nbackbone, substantially mitigating identity leakage. Extensive experiments\ndemonstrate that X-NeMo surpasses state-of-the-art baselines, producing highly\nexpressive animations with superior identity resemblance. Our code and models\nare available for research.",
+        "url": "http://arxiv.org/abs/2507.23143v1",
+        "published_date": "2025-07-30T22:46:52+00:00",
+        "updated_date": "2025-07-30T22:46:52+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaochen Zhao",
+            "Hongyi Xu",
+            "Guoxian Song",
+            "You Xie",
+            "Chenxu Zhang",
+            "Xiu Li",
+            "Linjie Luo",
+            "Jinli Suo",
+            "Yebin Liu"
+        ],
+        "tldr": "The paper introduces X-NeMo, a zero-shot diffusion-based portrait animation pipeline that uses a disentangled latent motion descriptor and cross-attention to generate expressive animations from a driving video, significantly reducing identity leakage.",
+        "tldr_zh": "该论文介绍了X-NeMo，一个基于扩散模型的零样本人像动画生成流程，它使用解耦的潜在运动描述符和交叉注意力，从驱动视频生成富有表现力的动画，并显著减少身份泄露。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "LesionGen: A Concept-Guided Diffusion Model for Dermatology Image Synthesis",
+        "summary": "Deep learning models for skin disease classification require large, diverse,\nand well-annotated datasets. However, such resources are often limited due to\nprivacy concerns, high annotation costs, and insufficient demographic\nrepresentation. While text-to-image diffusion probabilistic models (T2I-DPMs)\noffer promise for medical data synthesis, their use in dermatology remains\nunderexplored, largely due to the scarcity of rich textual descriptions in\nexisting skin image datasets. In this work, we introduce LesionGen, a\nclinically informed T2I-DPM framework for dermatology image synthesis. Unlike\nprior methods that rely on simplistic disease labels, LesionGen is trained on\nstructured, concept-rich dermatological captions derived from expert\nannotations and pseudo-generated, concept-guided reports. By fine-tuning a\npretrained diffusion model on these high-quality image-caption pairs, we enable\nthe generation of realistic and diverse skin lesion images conditioned on\nmeaningful dermatological descriptions. Our results demonstrate that models\ntrained solely on our synthetic dataset achieve classification accuracy\ncomparable to those trained on real images, with notable gains in worst-case\nsubgroup performance. Code and data are available here.",
+        "url": "http://arxiv.org/abs/2507.23001v1",
+        "published_date": "2025-07-30T18:07:34+00:00",
+        "updated_date": "2025-07-30T18:07:34+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jamil Fayyad",
+            "Nourhan Bayasi",
+            "Ziyang Yu",
+            "Homayoun Najjaran"
+        ],
+        "tldr": "The paper introduces LesionGen, a concept-guided diffusion model for generating synthetic dermatology images conditioned on expert-derived captions, demonstrating comparable classification accuracy to models trained on real images.",
+        "tldr_zh": "该论文介绍了LesionGen，一种概念引导的扩散模型，用于生成基于专家标注的合成皮肤病图像，其分类准确率与在真实图像上训练的模型相当。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "MoGA: 3D Generative Avatar Prior for Monocular Gaussian Avatar Reconstruction",
+        "summary": "We present MoGA, a novel method to reconstruct high-fidelity 3D Gaussian\navatars from a single-view image. The main challenge lies in inferring unseen\nappearance and geometric details while ensuring 3D consistency and realism.\nMost previous methods rely on 2D diffusion models to synthesize unseen views;\nhowever, these generated views are sparse and inconsistent, resulting in\nunrealistic 3D artifacts and blurred appearance. To address these limitations,\nwe leverage a generative avatar model, that can generate diverse 3D avatars by\nsampling deformed Gaussians from a learned prior distribution. Due to the\nlimited amount of 3D training data such a 3D model alone cannot capture all\nimage details of unseen identities. Consequently, we integrate it as a prior,\nensuring 3D consistency by projecting input images into its latent space and\nenforcing additional 3D appearance and geometric constraints. Our novel\napproach formulates Gaussian avatar creation as a model inversion process by\nfitting the generative avatar to synthetic views from 2D diffusion models. The\ngenerative avatar provides a meaningful initialization for model fitting,\nenforces 3D regularization, and helps in refining pose estimation. Experiments\nshow that our method surpasses state-of-the-art techniques and generalizes well\nto real-world scenarios. Our Gaussian avatars are also inherently animatable",
+        "url": "http://arxiv.org/abs/2507.23597v1",
+        "published_date": "2025-07-31T14:36:24+00:00",
+        "updated_date": "2025-07-31T14:36:24+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zijian Dong",
+            "Longteng Duan",
+            "Jie Song",
+            "Michael J. Black",
+            "Andreas Geiger"
+        ],
+        "tldr": "The paper introduces MoGA, a method for reconstructing high-fidelity 3D Gaussian avatars from single-view images by leveraging a generative avatar model as a prior and fitting it to synthetic views from 2D diffusion models, outperforming existing methods.",
+        "tldr_zh": "该论文介绍了MoGA，一种从单视图图像重建高保真3D高斯头像的方法，通过利用生成式头像模型作为先验，并将其拟合到来自2D扩散模型的合成视图，从而优于现有方法。",
+        "relevance_score": 4,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 6
+    }
+]

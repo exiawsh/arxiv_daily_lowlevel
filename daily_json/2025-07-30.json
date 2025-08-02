@@ -1,0 +1,250 @@
+[
+    {
+        "title": "X-Omni: Reinforcement Learning Makes Discrete Autoregressive Image Generative Models Great Again",
+        "summary": "Numerous efforts have been made to extend the ``next token prediction''\nparadigm to visual contents, aiming to create a unified approach for both image\ngeneration and understanding. Nevertheless, attempts to generate images through\nautoregressive modeling with discrete tokens have been plagued by issues such\nas low visual fidelity, distorted outputs, and failure to adhere to complex\ninstructions when rendering intricate details. These shortcomings are likely\nattributed to cumulative errors during autoregressive inference or information\nloss incurred during the discretization process. Probably due to this\nchallenge, recent research has increasingly shifted toward jointly training\nimage generation with diffusion objectives and language generation with\nautoregressive objectives, moving away from unified modeling approaches. In\nthis work, we demonstrate that reinforcement learning can effectively mitigate\nartifacts and largely enhance the generation quality of a discrete\nautoregressive modeling method, thereby enabling seamless integration of image\nand language generation. Our framework comprises a semantic image tokenizer, a\nunified autoregressive model for both language and images, and an offline\ndiffusion decoder for image generation, termed X-Omni. X-Omni achieves\nstate-of-the-art performance in image generation tasks using a 7B language\nmodel, producing images with high aesthetic quality while exhibiting strong\ncapabilities in following instructions and rendering long texts.",
+        "url": "http://arxiv.org/abs/2507.22058v1",
+        "published_date": "2025-07-29T17:59:04+00:00",
+        "updated_date": "2025-07-29T17:59:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zigang Geng",
+            "Yibing Wang",
+            "Yeyao Ma",
+            "Chen Li",
+            "Yongming Rao",
+            "Shuyang Gu",
+            "Zhao Zhong",
+            "Qinglin Lu",
+            "Han Hu",
+            "Xiaosong Zhang",
+            "Linus",
+            "Di Wang",
+            "Jie Jiang"
+        ],
+        "tldr": "This paper proposes X-Omni, a reinforcement learning-enhanced discrete autoregressive image generation framework that achieves state-of-the-art performance, bridging the gap between image and language generation with improved visual fidelity and instruction following.",
+        "tldr_zh": "该论文提出了X-Omni，一个使用强化学习增强的离散自回归图像生成框架，实现了最先进的性能，弥合了图像和语言生成之间的差距，并提高了视觉保真度和指令遵循能力。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "APT: Improving Diffusion Models for High Resolution Image Generation with Adaptive Path Tracing",
+        "summary": "Latent Diffusion Models (LDMs) are generally trained at fixed resolutions,\nlimiting their capability when scaling up to high-resolution images. While\ntraining-based approaches address this limitation by training on\nhigh-resolution datasets, they require large amounts of data and considerable\ncomputational resources, making them less practical. Consequently,\ntraining-free methods, particularly patch-based approaches, have become a\npopular alternative. These methods divide an image into patches and fuse the\ndenoising paths of each patch, showing strong performance on high-resolution\ngeneration. However, we observe two critical issues for patch-based approaches,\nwhich we call ``patch-level distribution shift\" and ``increased patch\nmonotonicity.\" To address these issues, we propose Adaptive Path Tracing (APT),\na framework that combines Statistical Matching to ensure patch distributions\nremain consistent in upsampled latents and Scale-aware Scheduling to deal with\nthe patch monotonicity. As a result, APT produces clearer and more refined\ndetails in high-resolution images. In addition, APT enables a shortcut\ndenoising process, resulting in faster sampling with minimal quality\ndegradation. Our experimental results confirm that APT produces more detailed\noutputs with improved inference speed, providing a practical approach to\nhigh-resolution image generation.",
+        "url": "http://arxiv.org/abs/2507.21690v1",
+        "published_date": "2025-07-29T11:13:03+00:00",
+        "updated_date": "2025-07-29T11:13:03+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Sangmin Han",
+            "Jinho Jeong",
+            "Jinwoo Kim",
+            "Seon Joo Kim"
+        ],
+        "tldr": "The paper introduces Adaptive Path Tracing (APT), a training-free framework to improve high-resolution image generation in Latent Diffusion Models by addressing patch-level distribution shift and increased patch monotonicity, resulting in faster sampling and improved details.",
+        "tldr_zh": "该论文介绍了自适应路径追踪 (APT)，这是一个无需训练的框架，通过解决块级分布偏移和增加的块单调性来改进潜在扩散模型中的高分辨率图像生成，从而实现更快的采样和改进的细节。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GuidPaint: Class-Guided Image Inpainting with Diffusion Models",
+        "summary": "In recent years, diffusion models have been widely adopted for image\ninpainting tasks due to their powerful generative capabilities, achieving\nimpressive results. Existing multimodal inpainting methods based on diffusion\nmodels often require architectural modifications and retraining, resulting in\nhigh computational cost. In contrast, context-aware diffusion inpainting\nmethods leverage the model's inherent priors to adjust intermediate denoising\nsteps, enabling high-quality inpainting without additional training and\nsignificantly reducing computation. However, these methods lack fine-grained\ncontrol over the masked regions, often leading to semantically inconsistent or\nvisually implausible content. To address this issue, we propose GuidPaint, a\ntraining-free, class-guided image inpainting framework. By incorporating\nclassifier guidance into the denoising process, GuidPaint enables precise\ncontrol over intermediate generations within the masked areas, ensuring both\nsemantic consistency and visual realism. Furthermore, it integrates stochastic\nand deterministic sampling, allowing users to select preferred intermediate\nresults and deterministically refine them. Experimental results demonstrate\nthat GuidPaint achieves clear improvements over existing context-aware\ninpainting methods in both qualitative and quantitative evaluations.",
+        "url": "http://arxiv.org/abs/2507.21627v1",
+        "published_date": "2025-07-29T09:36:52+00:00",
+        "updated_date": "2025-07-29T09:36:52+00:00",
+        "categories": [
+            "cs.CV",
+            "I.4.4"
+        ],
+        "authors": [
+            "Qimin Wang",
+            "Xinda Liu",
+            "Guohua Geng"
+        ],
+        "tldr": "GuidPaint introduces a training-free, class-guided diffusion inpainting framework that provides fine-grained control over masked regions, improving semantic consistency and visual realism compared to existing context-aware methods.",
+        "tldr_zh": "GuidPaint 提出了一种无需训练的、类别引导的扩散图像修复框架，该框架能够对掩盖区域进行细粒度控制，与现有的上下文感知方法相比，提高了语义一致性和视觉真实感。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Enhancing and Accelerating Brain MRI through Deep Learning Reconstruction Using Prior Subject-Specific Imaging",
+        "summary": "Magnetic resonance imaging (MRI) is a crucial medical imaging modality.\nHowever, long acquisition times remain a significant challenge, leading to\nincreased costs, and reduced patient comfort. Recent studies have shown the\npotential of using deep learning models that incorporate information from prior\nsubject-specific MRI scans to improve reconstruction quality of present scans.\nIntegrating this prior information requires registration of the previous scan\nto the current image reconstruction, which can be time-consuming. We propose a\nnovel deep-learning-based MRI reconstruction framework which consists of an\ninitial reconstruction network, a deep registration model, and a\ntransformer-based enhancement network. We validated our method on a\nlongitudinal dataset of T1-weighted MRI scans with 2,808 images from 18\nsubjects at four acceleration factors (R5, R10, R15, R20). Quantitative metrics\nconfirmed our approach's superiority over existing methods (p < 0.05, Wilcoxon\nsigned-rank test). Furthermore, we analyzed the impact of our MRI\nreconstruction method on the downstream task of brain segmentation and observed\nimproved accuracy and volumetric agreement with reference segmentations. Our\napproach also achieved a substantial reduction in total reconstruction time\ncompared to methods that use traditional registration algorithms, making it\nmore suitable for real-time clinical applications. The code associated with\nthis work is publicly available at\nhttps://github.com/amirshamaei/longitudinal-mri-deep-recon.",
+        "url": "http://arxiv.org/abs/2507.21349v1",
+        "published_date": "2025-07-28T21:39:36+00:00",
+        "updated_date": "2025-07-28T21:39:36+00:00",
+        "categories": [
+            "cs.CV",
+            "physics.med-ph"
+        ],
+        "authors": [
+            "Amirmohammad Shamaei",
+            "Alexander Stebner",
+            "Salome",
+            "Bosshart",
+            "Johanna Ospel",
+            "Gouri Ginde",
+            "Mariana Bento",
+            "Roberto Souza"
+        ],
+        "tldr": "This paper introduces a novel deep learning framework for accelerating brain MRI reconstruction by incorporating prior subject-specific scans, achieving improved reconstruction quality and reduced reconstruction time compared to existing methods.",
+        "tldr_zh": "本文介绍了一种新颖的深度学习框架，通过整合先前的特定个体MRI扫描来加速脑部MRI重建，与现有方法相比，实现了更高的重建质量并减少了重建时间。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MixGRPO: Unlocking Flow-based GRPO Efficiency with Mixed ODE-SDE",
+        "summary": "Although GRPO substantially enhances flow matching models in human preference\nalignment of image generation, methods such as FlowGRPO still exhibit\ninefficiency due to the necessity of sampling and optimizing over all denoising\nsteps specified by the Markov Decision Process (MDP). In this paper, we propose\n$\\textbf{MixGRPO}$, a novel framework that leverages the flexibility of mixed\nsampling strategies through the integration of stochastic differential\nequations (SDE) and ordinary differential equations (ODE). This streamlines the\noptimization process within the MDP to improve efficiency and boost\nperformance. Specifically, MixGRPO introduces a sliding window mechanism, using\nSDE sampling and GRPO-guided optimization only within the window, while\napplying ODE sampling outside. This design confines sampling randomness to the\ntime-steps within the window, thereby reducing the optimization overhead, and\nallowing for more focused gradient updates to accelerate convergence.\nAdditionally, as time-steps beyond the sliding window are not involved in\noptimization, higher-order solvers are supported for sampling. So we present a\nfaster variant, termed $\\textbf{MixGRPO-Flash}$, which further improves\ntraining efficiency while achieving comparable performance. MixGRPO exhibits\nsubstantial gains across multiple dimensions of human preference alignment,\noutperforming DanceGRPO in both effectiveness and efficiency, with nearly 50%\nlower training time. Notably, MixGRPO-Flash further reduces training time by\n71%. Codes and models are available at\n$\\href{https://github.com/Tencent-Hunyuan/MixGRPO}{MixGRPO}$.",
+        "url": "http://arxiv.org/abs/2507.21802v1",
+        "published_date": "2025-07-29T13:40:09+00:00",
+        "updated_date": "2025-07-29T13:40:09+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Junzhe Li",
+            "Yutao Cui",
+            "Tao Huang",
+            "Yinping Ma",
+            "Chun Fan",
+            "Miles Yang",
+            "Zhao Zhong"
+        ],
+        "tldr": "The paper introduces MixGRPO, a novel framework that combines SDE and ODE sampling with a sliding window mechanism to improve the efficiency of GRPO-based human preference alignment for image generation, achieving significant speedups compared to existing methods.",
+        "tldr_zh": "该论文介绍了一种名为MixGRPO的新框架，它结合了SDE和ODE采样以及滑动窗口机制，从而提高了基于GRPO的图像生成人工偏好对齐的效率，与现有方法相比，实现了显著的加速。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Locally Controlled Face Aging with Latent Diffusion Models",
+        "summary": "We present a novel approach to face aging that addresses the limitations of\ncurrent methods which treat aging as a global, homogeneous process. Existing\ntechniques using GANs and diffusion models often condition generation on a\nreference image and target age, neglecting that facial regions age\nheterogeneously due to both intrinsic chronological factors and extrinsic\nelements like sun exposure. Our method leverages latent diffusion models to\nselectively age specific facial regions using local aging signs. This approach\nprovides significantly finer-grained control over the generation process,\nenabling more realistic and personalized aging. We employ a latent diffusion\nrefiner to seamlessly blend these locally aged regions, ensuring a globally\nconsistent and natural-looking synthesis. Experimental results demonstrate that\nour method effectively achieves three key criteria for successful face aging:\nrobust identity preservation, high-fidelity and realistic imagery, and a\nnatural, controllable aging progression.",
+        "url": "http://arxiv.org/abs/2507.21600v1",
+        "published_date": "2025-07-29T09:01:26+00:00",
+        "updated_date": "2025-07-29T09:01:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Lais Isabelle Alves dos Santos",
+            "Julien Despois",
+            "Thibaut Chauffier",
+            "Sileye O. Ba",
+            "Giovanni Palma"
+        ],
+        "tldr": "This paper introduces a novel face aging method using latent diffusion models to selectively age specific facial regions, offering finer-grained control and more realistic results compared to existing global aging techniques.",
+        "tldr_zh": "本文提出了一种新颖的面部老化方法，该方法使用潜在扩散模型来选择性地使特定面部区域老化，与现有的全局老化技术相比，提供更精细的控制和更逼真的效果。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Top2Pano: Learning to Generate Indoor Panoramas from Top-Down View",
+        "summary": "Generating immersive 360{\\deg} indoor panoramas from 2D top-down views has\napplications in virtual reality, interior design, real estate, and robotics.\nThis task is challenging due to the lack of explicit 3D structure and the need\nfor geometric consistency and photorealism. We propose Top2Pano, an end-to-end\nmodel for synthesizing realistic indoor panoramas from top-down views. Our\nmethod estimates volumetric occupancy to infer 3D structures, then uses\nvolumetric rendering to generate coarse color and depth panoramas. These guide\na diffusion-based refinement stage using ControlNet, enhancing realism and\nstructural fidelity. Evaluations on two datasets show Top2Pano outperforms\nbaselines, effectively reconstructing geometry, occlusions, and spatial\narrangements. It also generalizes well, producing high-quality panoramas from\nschematic floorplans. Our results highlight Top2Pano's potential in bridging\ntop-down views with immersive indoor synthesis.",
+        "url": "http://arxiv.org/abs/2507.21371v1",
+        "published_date": "2025-07-28T22:32:41+00:00",
+        "updated_date": "2025-07-28T22:32:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zitong Zhang",
+            "Suranjan Gautam",
+            "Rui Yu"
+        ],
+        "tldr": "The paper introduces Top2Pano, an end-to-end model for generating realistic 360° indoor panoramas from top-down views, using volumetric occupancy estimation, volumetric rendering, and diffusion-based refinement. It shows improvements over baselines in terms of geometry, occlusions, and generalization.",
+        "tldr_zh": "该论文介绍了Top2Pano，一个端到端模型，用于从俯视图生成逼真的360°室内全景图，采用了体积占用估计、体积渲染和基于扩散的精细化处理。 实验表明，该方法在几何结构、遮挡和泛化能力方面均优于现有方法。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "HDR Environment Map Estimation with Latent Diffusion Models",
+        "summary": "We advance the field of HDR environment map estimation from a single-view\nimage by establishing a novel approach leveraging the Latent Diffusion Model\n(LDM) to produce high-quality environment maps that can plausibly light\nmirror-reflective surfaces. A common issue when using the ERP representation,\nthe format used by the vast majority of approaches, is distortions at the poles\nand a seam at the sides of the environment map. We remove the border seam\nartefact by proposing an ERP convolutional padding in the latent autoencoder.\nAdditionally, we investigate whether adapting the diffusion network\narchitecture to the ERP format can improve the quality and accuracy of the\nestimated environment map by proposing a panoramically-adapted Diffusion\nTransformer architecture. Our proposed PanoDiT network reduces ERP distortions\nand artefacts, but at the cost of image quality and plausibility. We evaluate\nwith standard benchmarks to demonstrate that our models estimate high-quality\nenvironment maps that perform competitively with state-of-the-art approaches in\nboth image quality and lighting accuracy.",
+        "url": "http://arxiv.org/abs/2507.21261v1",
+        "published_date": "2025-07-28T18:30:09+00:00",
+        "updated_date": "2025-07-28T18:30:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jack Hilliard",
+            "Adrian Hilton",
+            "Jean-Yves Guillemaut"
+        ],
+        "tldr": "This paper proposes a Latent Diffusion Model (LDM) approach for HDR environment map estimation from a single-view image, addressing ERP representation artifacts using a novel ERP convolutional padding and a panoramically-adapted Diffusion Transformer architecture.",
+        "tldr_zh": "本文提出了一种基于潜在扩散模型（LDM）的HDR环境贴图单视图图像估计方法，通过一种新的ERP卷积填充和全景自适应扩散Transformer架构来解决ERP表示伪影。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Chain-of-Cooking:Cooking Process Visualization via Bidirectional Chain-of-Thought Guidance",
+        "summary": "Cooking process visualization is a promising task in the intersection of\nimage generation and food analysis, which aims to generate an image for each\ncooking step of a recipe. However, most existing works focus on generating\nimages of finished foods based on the given recipes, and face two challenges to\nvisualize the cooking process. First, the appearance of ingredients changes\nvariously across cooking steps, it is difficult to generate the correct\nappearances of foods that match the textual description, leading to semantic\ninconsistency. Second, the current step might depend on the operations of\nprevious step, it is crucial to maintain the contextual coherence of images in\nsequential order. In this work, we present a cooking process visualization\nmodel, called Chain-of-Cooking. Specifically, to generate correct appearances\nof ingredients, we present a Dynamic Patch Selection Module to retrieve\npreviously generated image patches as references, which are most related to\ncurrent textual contents. Furthermore, to enhance the coherence and keep the\nrational order of generated images, we propose a Semantic Evolution Module and\na Bidirectional Chain-of-Thought (CoT) Guidance. To better utilize the\nsemantics of previous texts, the Semantic Evolution Module establishes the\nsemantical association between latent prompts and current cooking step, and\nmerges it with the latent features. Then the CoT Guidance updates the merged\nfeatures to guide the current cooking step remain coherent with the previous\nstep. Moreover, we construct a dataset named CookViz, consisting of\nintermediate image-text pairs for the cooking process. Quantitative and\nqualitative experiments show that our method outperforms existing methods in\ngenerating coherent and semantic consistent cooking process.",
+        "url": "http://arxiv.org/abs/2507.21529v1",
+        "published_date": "2025-07-29T06:34:59+00:00",
+        "updated_date": "2025-07-29T06:34:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mengling Xu",
+            "Ming Tao",
+            "Bing-Kun Bao"
+        ],
+        "tldr": "The paper introduces Chain-of-Cooking, a model for cooking process visualization that addresses semantic inconsistency and contextual coherence challenges by using dynamic patch selection and bidirectional chain-of-thought guidance. They also construct a new dataset named CookViz.",
+        "tldr_zh": "该论文介绍了Chain-of-Cooking，一个用于烹饪过程可视化的模型，通过动态补丁选择和双向思维链引导来解决语义不一致和上下文连贯性的挑战。他们还构建了一个名为CookViz的新数据集。",
+        "relevance_score": 6,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 6
+    },
+    {
+        "title": "See Different, Think Better: Visual Variations Mitigating Hallucinations in LVLMs",
+        "summary": "Large Vision-Language Models (LVLMs) have demonstrated remarkable\ncapabilities in visual understanding and multimodal reasoning. However, LVLMs\nfrequently exhibit hallucination phenomena, manifesting as the generated\ntextual responses that demonstrate inconsistencies with the provided visual\ncontent. Existing hallucination mitigation methods are predominantly\ntext-centric, the challenges of visual-semantic alignment significantly limit\ntheir effectiveness, especially when confronted with fine-grained visual\nunderstanding scenarios. To this end, this paper presents ViHallu, a\nVision-Centric Hallucination mitigation framework that enhances visual-semantic\nalignment through Visual Variation Image Generation and Visual Instruction\nConstruction. ViHallu introduces visual variation images with controllable\nvisual alterations while maintaining the overall image structure. These images,\ncombined with carefully constructed visual instructions, enable LVLMs to better\nunderstand fine-grained visual content through fine-tuning, allowing models to\nmore precisely capture the correspondence between visual content and text,\nthereby enhancing visual-semantic alignment. Extensive experiments on multiple\nbenchmarks show that ViHallu effectively enhances models' fine-grained visual\nunderstanding while significantly reducing hallucination tendencies.\nFurthermore, we release ViHallu-Instruction, a visual instruction dataset\nspecifically designed for hallucination mitigation and visual-semantic\nalignment. Code is available at https://github.com/oliviadzy/ViHallu.",
+        "url": "http://arxiv.org/abs/2507.22003v2",
+        "published_date": "2025-07-29T16:53:27+00:00",
+        "updated_date": "2025-07-30T04:41:52+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziyun Dai",
+            "Xiaoqiang Li",
+            "Shaohua Zhang",
+            "Yuanchen Wu",
+            "Jide Li"
+        ],
+        "tldr": "This paper introduces ViHallu, a vision-centric framework using visual variation image generation and visual instruction construction to mitigate hallucinations in Large Vision-Language Models (LVLMs) by improving visual-semantic alignment.",
+        "tldr_zh": "本文介绍了一种名为ViHallu的视觉中心框架，该框架通过视觉变异图像生成和视觉指令构建来缓解大型视觉语言模型（LVLM）中的幻觉问题，从而改善视觉-语义对齐。",
+        "relevance_score": 2,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 6,
+        "overall_priority_score": 4
+    }
+]

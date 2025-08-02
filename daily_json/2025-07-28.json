@@ -1,0 +1,97 @@
+[
+    {
+        "title": "Fine-structure Preserved Real-world Image Super-resolution via Transfer VAE Training",
+        "summary": "Impressive results on real-world image super-resolution (Real-ISR) have been\nachieved by employing pre-trained stable diffusion (SD) models. However, one\ncritical issue of such methods lies in their poor reconstruction of image fine\nstructures, such as small characters and textures, due to the aggressive\nresolution reduction of the VAE (eg., 8$\\times$ downsampling) in the SD model.\nOne solution is to employ a VAE with a lower downsampling rate for diffusion;\nhowever, adapting its latent features with the pre-trained UNet while\nmitigating the increased computational cost poses new challenges. To address\nthese issues, we propose a Transfer VAE Training (TVT) strategy to transfer the\n8$\\times$ downsampled VAE into a 4$\\times$ one while adapting to the\npre-trained UNet. Specifically, we first train a 4$\\times$ decoder based on the\noutput features of the original VAE encoder, then train a 4$\\times$ encoder\nwhile keeping the newly trained decoder fixed. Such a TVT strategy aligns the\nnew encoder-decoder pair with the original VAE latent space while enhancing\nimage fine details. Additionally, we introduce a compact VAE and\ncompute-efficient UNet by optimizing their network architectures, reducing the\ncomputational cost while capturing high-resolution fine-scale features.\nExperimental results demonstrate that our TVT method significantly improves\nfine-structure preservation, which is often compromised by other SD-based\nmethods, while requiring fewer FLOPs than state-of-the-art one-step diffusion\nmodels. The official code can be found at https://github.com/Joyies/TVT.",
+        "url": "http://arxiv.org/abs/2507.20291v1",
+        "published_date": "2025-07-27T14:11:29+00:00",
+        "updated_date": "2025-07-27T14:11:29+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qiaosi Yi",
+            "Shuai Li",
+            "Rongyuan Wu",
+            "Lingchen Sun",
+            "Yuhui Wu",
+            "Lei Zhang"
+        ],
+        "tldr": "This paper proposes a Transfer VAE Training (TVT) strategy to improve fine-structure preservation in real-world image super-resolution using pre-trained stable diffusion models, addressing the issue of aggressive downsampling in standard VAEs. They achieve this while also reducing computational cost through compact VAE and UNet architectures.",
+        "tldr_zh": "该论文提出了一种迁移VAE训练（TVT）策略，旨在提高真实世界图像超分辨率中精细结构的保留，利用预训练的稳定扩散模型，解决标准VAE中过度下采样的问题。同时，通过紧凑的VAE和UNet架构降低了计算成本。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AnimeColor: Reference-based Animation Colorization with Diffusion Transformers",
+        "summary": "Animation colorization plays a vital role in animation production, yet\nexisting methods struggle to achieve color accuracy and temporal consistency.\nTo address these challenges, we propose \\textbf{AnimeColor}, a novel\nreference-based animation colorization framework leveraging Diffusion\nTransformers (DiT). Our approach integrates sketch sequences into a DiT-based\nvideo diffusion model, enabling sketch-controlled animation generation. We\nintroduce two key components: a High-level Color Extractor (HCE) to capture\nsemantic color information and a Low-level Color Guider (LCG) to extract\nfine-grained color details from reference images. These components work\nsynergistically to guide the video diffusion process. Additionally, we employ a\nmulti-stage training strategy to maximize the utilization of reference image\ncolor information. Extensive experiments demonstrate that AnimeColor\noutperforms existing methods in color accuracy, sketch alignment, temporal\nconsistency, and visual quality. Our framework not only advances the state of\nthe art in animation colorization but also provides a practical solution for\nindustrial applications. The code will be made publicly available at\n\\href{https://github.com/IamCreateAI/AnimeColor}{https://github.com/IamCreateAI/AnimeColor}.",
+        "url": "http://arxiv.org/abs/2507.20158v1",
+        "published_date": "2025-07-27T07:25:08+00:00",
+        "updated_date": "2025-07-27T07:25:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuhong Zhang",
+            "Liyao Wang",
+            "Han Wang",
+            "Danni Wu",
+            "Zuzeng Lin",
+            "Feng Wang",
+            "Li Song"
+        ],
+        "tldr": "AnimeColor is a novel reference-based animation colorization framework using Diffusion Transformers (DiT) with a High-level Color Extractor and a Low-level Color Guider to achieve better color accuracy and temporal consistency. It claims state-of-the-art results and practical industrial applications.",
+        "tldr_zh": "AnimeColor是一个新颖的基于参考的动画着色框架，它使用扩散变换器（DiT），并结合高级颜色提取器和低级颜色引导器，以实现更好的颜色准确性和时间一致性。该方法声称实现了最先进的结果和实际的工业应用。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Local Prompt Adaptation for Style-Consistent Multi-Object Generation in Diffusion Models",
+        "summary": "Diffusion models have become a powerful backbone for text-to-image\ngeneration, enabling users to synthesize high-quality visuals from natural\nlanguage prompts. However, they often struggle with complex prompts involving\nmultiple objects and global or local style specifications. In such cases, the\ngenerated scenes tend to lack style uniformity and spatial coherence, limiting\ntheir utility in creative and controllable content generation. In this paper,\nwe propose a simple, training-free architectural method called Local Prompt\nAdaptation (LPA). Our method decomposes the prompt into content and style\ntokens, and injects them selectively into the U-Net's attention layers at\ndifferent stages. By conditioning object tokens early and style tokens later in\nthe generation process, LPA enhances both layout control and stylistic\nconsistency. We evaluate our method on a custom benchmark of 50 style-rich\nprompts across five categories and compare against strong baselines including\nComposer, MultiDiffusion, Attend-and-Excite, LoRA, and SDXL. Our approach\noutperforms prior work on both CLIP score and style consistency metrics,\noffering a new direction for controllable, expressive diffusion-based\ngeneration.",
+        "url": "http://arxiv.org/abs/2507.20094v1",
+        "published_date": "2025-07-27T01:32:13+00:00",
+        "updated_date": "2025-07-27T01:32:13+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.MA"
+        ],
+        "authors": [
+            "Ankit Sanjyal"
+        ],
+        "tldr": "This paper introduces Local Prompt Adaptation (LPA), a training-free method for improving style consistency and layout control in multi-object image generation with diffusion models by selectively injecting content and style tokens into different U-Net layers.",
+        "tldr_zh": "该论文介绍了局部提示适配（LPA），一种无需训练的方法，通过将内容和风格标记选择性地注入到不同的U-Net层中，从而提高扩散模型在多对象图像生成中的风格一致性和布局控制。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "KB-DMGen: Knowledge-Based Global Guidance and Dynamic Pose Masking for Human Image Generation",
+        "summary": "Recent methods using diffusion models have made significant progress in human\nimage generation with various control signals such as pose priors. In portrait\ngeneration, both the accuracy of human pose and the overall visual quality are\ncrucial for realistic synthesis. Most existing methods focus on controlling the\naccuracy of generated poses, but ignore the quality assurance of the entire\nimage. In order to ensure the global image quality and pose accuracy, we\npropose Knowledge-Based Global Guidance and Dynamic pose Masking for human\nimage Generation (KB-DMGen). The Knowledge Base (KB) is designed not only to\nenhance pose accuracy but also to leverage image feature information to\nmaintain overall image quality. Dynamic Masking (DM) dynamically adjusts the\nimportance of pose-related regions. Experiments demonstrate the effectiveness\nof our model, achieving new state-of-the-art results in terms of AP and CAP on\nthe HumanArt dataset. The code will be made publicly available.",
+        "url": "http://arxiv.org/abs/2507.20083v1",
+        "published_date": "2025-07-26T23:48:55+00:00",
+        "updated_date": "2025-07-26T23:48:55+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shibang Liu",
+            "Xuemei Xie",
+            "Guangming Shi"
+        ],
+        "tldr": "The paper introduces KB-DMGen, a diffusion model approach for human image generation that uses a knowledge base and dynamic masking to improve both pose accuracy and overall image quality, achieving state-of-the-art results on the HumanArt dataset.",
+        "tldr_zh": "该论文介绍了 KB-DMGen，一种用于人体图像生成的扩散模型方法，它使用知识库和动态掩码来提高姿势准确性和整体图像质量，并在 HumanArt 数据集上实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]

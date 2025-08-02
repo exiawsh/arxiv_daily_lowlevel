@@ -1,0 +1,339 @@
+[
+    {
+        "title": "Adversarial Distribution Matching for Diffusion Distillation Towards Efficient Image and Video Synthesis",
+        "summary": "Distribution Matching Distillation (DMD) is a promising score distillation\ntechnique that compresses pre-trained teacher diffusion models into efficient\none-step or multi-step student generators. Nevertheless, its reliance on the\nreverse Kullback-Leibler (KL) divergence minimization potentially induces mode\ncollapse (or mode-seeking) in certain applications. To circumvent this inherent\ndrawback, we propose Adversarial Distribution Matching (ADM), a novel framework\nthat leverages diffusion-based discriminators to align the latent predictions\nbetween real and fake score estimators for score distillation in an adversarial\nmanner. In the context of extremely challenging one-step distillation, we\nfurther improve the pre-trained generator by adversarial distillation with\nhybrid discriminators in both latent and pixel spaces. Different from the mean\nsquared error used in DMD2 pre-training, our method incorporates the\ndistributional loss on ODE pairs collected from the teacher model, and thus\nproviding a better initialization for score distillation fine-tuning in the\nnext stage. By combining the adversarial distillation pre-training with ADM\nfine-tuning into a unified pipeline termed DMDX, our proposed method achieves\nsuperior one-step performance on SDXL compared to DMD2 while consuming less GPU\ntime. Additional experiments that apply multi-step ADM distillation on\nSD3-Medium, SD3.5-Large, and CogVideoX set a new benchmark towards efficient\nimage and video synthesis.",
+        "url": "http://arxiv.org/abs/2507.18569v1",
+        "published_date": "2025-07-24T16:45:05+00:00",
+        "updated_date": "2025-07-24T16:45:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yanzuo Lu",
+            "Yuxi Ren",
+            "Xin Xia",
+            "Shanchuan Lin",
+            "Xing Wang",
+            "Xuefeng Xiao",
+            "Andy J. Ma",
+            "Xiaohua Xie",
+            "Jian-Huang Lai"
+        ],
+        "tldr": "The paper introduces Adversarial Distribution Matching (ADM), a novel approach to distill diffusion models for efficient image and video synthesis, addressing mode collapse issues in existing Distribution Matching Distillation (DMD) methods.",
+        "tldr_zh": "本文介绍了一种新的对抗分布匹配（ADM）方法，用于蒸馏扩散模型以实现高效的图像和视频合成，解决了现有分布匹配蒸馏（DMD）方法中存在的模式崩溃问题。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TTS-VAR: A Test-Time Scaling Framework for Visual Auto-Regressive Generation",
+        "summary": "Scaling visual generation models is essential for real-world content\ncreation, yet requires substantial training and computational expenses.\nAlternatively, test-time scaling has garnered growing attention due to resource\nefficiency and promising performance. In this work, we present TTS-VAR, the\nfirst general test-time scaling framework for visual auto-regressive (VAR)\nmodels, modeling the generation process as a path searching problem. To\ndynamically balance computational efficiency with exploration capacity, we\nfirst introduce an adaptive descending batch size schedule throughout the\ncausal generation process. Besides, inspired by VAR's hierarchical\ncoarse-to-fine multi-scale generation, our framework integrates two key\ncomponents: (i) At coarse scales, we observe that generated tokens are hard for\nevaluation, possibly leading to erroneous acceptance of inferior samples or\nrejection of superior samples. Noticing that the coarse scales contain\nsufficient structural information, we propose clustering-based diversity\nsearch. It preserves structural variety through semantic feature clustering,\nenabling later selection on samples with higher potential. (ii) In fine scales,\nresampling-based potential selection prioritizes promising candidates using\npotential scores, which are defined as reward functions incorporating\nmulti-scale generation history. Experiments on the powerful VAR model Infinity\nshow a notable 8.7% GenEval score improvement (from 0.69 to 0.75). Key insights\nreveal that early-stage structural features effectively influence final\nquality, and resampling efficacy varies across generation scales. Code is\navailable at https://github.com/ali-vilab/TTS-VAR.",
+        "url": "http://arxiv.org/abs/2507.18537v1",
+        "published_date": "2025-07-24T16:04:55+00:00",
+        "updated_date": "2025-07-24T16:04:55+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhekai Chen",
+            "Ruihang Chu",
+            "Yukang Chen",
+            "Shiwei Zhang",
+            "Yujie Wei",
+            "Yingya Zhang",
+            "Xihui Liu"
+        ],
+        "tldr": "The paper introduces TTS-VAR, a test-time scaling framework for visual auto-regressive models that dynamically adjusts batch sizes and uses clustering and resampling techniques to improve generation quality and efficiency, demonstrating a significant GenEval score improvement on the Infinity model.",
+        "tldr_zh": "该论文提出了TTS-VAR，一个用于视觉自回归模型的测试时缩放框架，它动态调整批量大小并使用聚类和重采样技术来提高生成质量和效率，在Infinity模型上展示了显著的GenEval分数提升。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Elucidating the Design Space of Arbitrary-Noise-Based Diffusion Models",
+        "summary": "EDM elucidates the unified design space of diffusion models, yet its fixed\nnoise patterns restricted to pure Gaussian noise, limit advancements in image\nrestoration. Our study indicates that forcibly injecting Gaussian noise\ncorrupts the degraded images, overextends the image transformation distance,\nand increases restoration complexity. To address this problem, our proposed EDA\nElucidates the Design space of Arbitrary-noise-based diffusion models.\nTheoretically, EDA expands the freedom of noise pattern while preserving the\noriginal module flexibility of EDM, with rigorous proof that increased noise\ncomplexity incurs no additional computational overhead during restoration. EDA\nis validated on three typical tasks: MRI bias field correction (global smooth\nnoise), CT metal artifact reduction (global sharp noise), and natural image\nshadow removal (local boundary-aware noise). With only 5 sampling steps, EDA\noutperforms most task-specific methods and achieves state-of-the-art\nperformance in bias field correction and shadow removal.",
+        "url": "http://arxiv.org/abs/2507.18534v1",
+        "published_date": "2025-07-24T16:01:34+00:00",
+        "updated_date": "2025-07-24T16:01:34+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Xingyu Qiu",
+            "Mengying Yang",
+            "Xinghua Ma",
+            "Dong Liang",
+            "Yuzhen Li",
+            "Fanding Li",
+            "Gongning Luo",
+            "Wei Wang",
+            "Kuanquan Wang",
+            "Shuo Li"
+        ],
+        "tldr": "This paper introduces EDA, a diffusion model that extends EDM by allowing arbitrary noise patterns, validated on image restoration tasks like MRI bias field correction, CT metal artifact reduction, and shadow removal, achieving state-of-the-art results with few sampling steps.",
+        "tldr_zh": "该论文介绍了EDA，一种扩散模型，通过允许任意噪声模式扩展了EDM，并在图像恢复任务（如MRI偏置场校正、CT金属伪影减少和阴影去除）上进行了验证，以少量采样步骤实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MVG4D: Image Matrix-Based Multi-View and Motion Generation for 4D Content Creation from a Single Image",
+        "summary": "Advances in generative modeling have significantly enhanced digital content\ncreation, extending from 2D images to complex 3D and 4D scenes. Despite\nsubstantial progress, producing high-fidelity and temporally consistent dynamic\n4D content remains a challenge. In this paper, we propose MVG4D, a novel\nframework that generates dynamic 4D content from a single still image by\ncombining multi-view synthesis with 4D Gaussian Splatting (4D GS). At its core,\nMVG4D employs an image matrix module that synthesizes temporally coherent and\nspatially diverse multi-view images, providing rich supervisory signals for\ndownstream 3D and 4D reconstruction. These multi-view images are used to\noptimize a 3D Gaussian point cloud, which is further extended into the temporal\ndomain via a lightweight deformation network. Our method effectively enhances\ntemporal consistency, geometric fidelity, and visual realism, addressing key\nchallenges in motion discontinuity and background degradation that affect prior\n4D GS-based methods. Extensive experiments on the Objaverse dataset demonstrate\nthat MVG4D outperforms state-of-the-art baselines in CLIP-I, PSNR, FVD, and\ntime efficiency. Notably, it reduces flickering artifacts and sharpens\nstructural details across views and time, enabling more immersive AR/VR\nexperiences. MVG4D sets a new direction for efficient and controllable 4D\ngeneration from minimal inputs.",
+        "url": "http://arxiv.org/abs/2507.18371v2",
+        "published_date": "2025-07-24T12:48:14+00:00",
+        "updated_date": "2025-07-31T11:48:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "DongFu Yin",
+            "Xiaotian Chen",
+            "Fei Richard Yu",
+            "Xuanchen Li",
+            "Xinhao Zhang"
+        ],
+        "tldr": "MVG4D generates temporally consistent 4D content from a single image using multi-view synthesis and 4D Gaussian Splatting, outperforming existing methods in fidelity, temporal consistency, and efficiency.",
+        "tldr_zh": "MVG4D使用多视角合成和4D高斯溅射从单张图像生成时间上一致的4D内容，并在保真度、时间一致性和效率方面优于现有方法。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TeEFusion: Blending Text Embeddings to Distill Classifier-Free Guidance",
+        "summary": "Recent advances in text-to-image synthesis largely benefit from sophisticated\nsampling strategies and classifier-free guidance (CFG) to ensure high-quality\ngeneration. However, CFG's reliance on two forward passes, especially when\ncombined with intricate sampling algorithms, results in prohibitively high\ninference costs. To address this, we introduce TeEFusion (Text Embeddings\nFusion), a novel and efficient distillation method that directly incorporates\nthe guidance magnitude into the text embeddings and distills the teacher\nmodel's complex sampling strategy. By simply fusing conditional and\nunconditional text embeddings using linear operations, TeEFusion reconstructs\nthe desired guidance without adding extra parameters, simultaneously enabling\nthe student model to learn from the teacher's output produced via its\nsophisticated sampling approach. Extensive experiments on state-of-the-art\nmodels such as SD3 demonstrate that our method allows the student to closely\nmimic the teacher's performance with a far simpler and more efficient sampling\nstrategy. Consequently, the student model achieves inference speeds up to\n6$\\times$ faster than the teacher model, while maintaining image quality at\nlevels comparable to those obtained through the teacher's complex sampling\napproach. The code is publicly available at\nhttps://github.com/AIDC-AI/TeEFusion.",
+        "url": "http://arxiv.org/abs/2507.18192v2",
+        "published_date": "2025-07-24T08:45:40+00:00",
+        "updated_date": "2025-07-25T03:17:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Minghao Fu",
+            "Guo-Hua Wang",
+            "Xiaohao Chen",
+            "Qing-Guo Chen",
+            "Zhao Xu",
+            "Weihua Luo",
+            "Kaifu Zhang"
+        ],
+        "tldr": "The paper introduces TeEFusion, a method to distill classifier-free guidance into text embeddings for faster and more efficient text-to-image generation without sacrificing image quality, achieving up to 6x speedup compared to the teacher model.",
+        "tldr_zh": "该论文介绍了TeEFusion，一种将无分类器指导提炼到文本嵌入中的方法，用于更快更高效的文本到图像生成，且不损失图像质量，与教师模型相比，速度提升高达6倍。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Adapting Large VLMs with Iterative and Manual Instructions for Generative Low-light Enhancement",
+        "summary": "Most existing low-light image enhancement (LLIE) methods rely on pre-trained\nmodel priors, low-light inputs, or both, while neglecting the semantic guidance\navailable from normal-light images. This limitation hinders their effectiveness\nin complex lighting conditions. In this paper, we propose VLM-IMI, a novel\nframework that leverages large vision-language models (VLMs) with iterative and\nmanual instructions (IMIs) for LLIE. VLM-IMI incorporates textual descriptions\nof the desired normal-light content as enhancement cues, enabling semantically\ninformed restoration. To effectively integrate cross-modal priors, we introduce\nan instruction prior fusion module, which dynamically aligns and fuses image\nand text features, promoting the generation of detailed and semantically\ncoherent outputs. During inference, we adopt an iterative and manual\ninstruction strategy to refine textual instructions, progressively improving\nvisual quality. This refinement enhances structural fidelity, semantic\nalignment, and the recovery of fine details under extremely low-light\nconditions. Extensive experiments across diverse scenarios demonstrate that\nVLM-IMI outperforms state-of-the-art methods in both quantitative metrics and\nperceptual quality. The source code is available at\nhttps://github.com/sunxiaoran01/VLM-IMI.",
+        "url": "http://arxiv.org/abs/2507.18064v1",
+        "published_date": "2025-07-24T03:35:20+00:00",
+        "updated_date": "2025-07-24T03:35:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaoran Sun",
+            "Liyan Wang",
+            "Cong Wang",
+            "Yeying Jin",
+            "Kin-man Lam",
+            "Zhixun Su",
+            "Yang Yang",
+            "Jinshan Pan"
+        ],
+        "tldr": "The paper introduces VLM-IMI, a novel framework using large vision-language models with iterative and manual instructions for low-light image enhancement, achieving state-of-the-art results by incorporating semantic guidance from normal-light textual descriptions.",
+        "tldr_zh": "该论文介绍了一种名为VLM-IMI的新框架，该框架利用大型视觉语言模型通过迭代和手动指令来进行弱光图像增强，通过结合来自正常光照文本描述的语义指导，实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DiNAT-IR: Exploring Dilated Neighborhood Attention for High-Quality Image Restoration",
+        "summary": "Transformers, with their self-attention mechanisms for modeling long-range\ndependencies, have become a dominant paradigm in image restoration tasks.\nHowever, the high computational cost of self-attention limits scalability to\nhigh-resolution images, making efficiency-quality trade-offs a key research\nfocus. To address this, Restormer employs channel-wise self-attention, which\ncomputes attention across channels instead of spatial dimensions. While\neffective, this approach may overlook localized artifacts that are crucial for\nhigh-quality image restoration. To bridge this gap, we explore Dilated\nNeighborhood Attention (DiNA) as a promising alternative, inspired by its\nsuccess in high-level vision tasks. DiNA balances global context and local\nprecision by integrating sliding-window attention with mixed dilation factors,\neffectively expanding the receptive field without excessive overhead. However,\nour preliminary experiments indicate that directly applying this global-local\ndesign to the classic deblurring task hinders accurate visual restoration,\nprimarily due to the constrained global context understanding within local\nattention. To address this, we introduce a channel-aware module that\ncomplements local attention, effectively integrating global context without\nsacrificing pixel-level precision. The proposed DiNAT-IR, a Transformer-based\narchitecture specifically designed for image restoration, achieves competitive\nresults across multiple benchmarks, offering a high-quality solution for\ndiverse low-level computer vision problems.",
+        "url": "http://arxiv.org/abs/2507.17892v1",
+        "published_date": "2025-07-23T19:41:49+00:00",
+        "updated_date": "2025-07-23T19:41:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hanzhou Liu",
+            "Binghan Li",
+            "Chengkai Liu",
+            "Mi Lu"
+        ],
+        "tldr": "The paper introduces DiNAT-IR, a Transformer-based architecture leveraging Dilated Neighborhood Attention and a channel-aware module for high-quality image restoration, addressing limitations of existing self-attention methods.",
+        "tldr_zh": "该论文介绍了DiNAT-IR，一种基于Transformer的架构，它利用扩张邻域注意力(Dilated Neighborhood Attention)和通道感知模块来实现高质量的图像修复，解决了现有自注意力方法的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Detail++: Training-Free Detail Enhancer for Text-to-Image Diffusion Models",
+        "summary": "Recent advances in text-to-image (T2I) generation have led to impressive\nvisual results. However, these models still face significant challenges when\nhandling complex prompt, particularly those involving multiple subjects with\ndistinct attributes. Inspired by the human drawing process, which first\noutlines the composition and then incrementally adds details, we propose\nDetail++, a training-free framework that introduces a novel Progressive Detail\nInjection (PDI) strategy to address this limitation. Specifically, we decompose\na complex prompt into a sequence of simplified sub-prompts, guiding the\ngeneration process in stages. This staged generation leverages the inherent\nlayout-controlling capacity of self-attention to first ensure global\ncomposition, followed by precise refinement. To achieve accurate binding\nbetween attributes and corresponding subjects, we exploit cross-attention\nmechanisms and further introduce a Centroid Alignment Loss at test time to\nreduce binding noise and enhance attribute consistency. Extensive experiments\non T2I-CompBench and a newly constructed style composition benchmark\ndemonstrate that Detail++ significantly outperforms existing methods,\nparticularly in scenarios involving multiple objects and complex stylistic\nconditions.",
+        "url": "http://arxiv.org/abs/2507.17853v1",
+        "published_date": "2025-07-23T18:20:46+00:00",
+        "updated_date": "2025-07-23T18:20:46+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Lifeng Chen",
+            "Jiner Wang",
+            "Zihao Pan",
+            "Beier Zhu",
+            "Xiaofeng Yang",
+            "Chi Zhang"
+        ],
+        "tldr": "Detail++ is a training-free framework for text-to-image diffusion models that improves detail generation, especially for complex prompts with multiple subjects and attributes, using a progressive detail injection strategy.",
+        "tldr_zh": "Detail++是一个用于文本到图像扩散模型的免训练框架，通过渐进式细节注入策略改进了细节生成，尤其适用于具有多个主题和属性的复杂提示。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Captain Cinema: Towards Short Movie Generation",
+        "summary": "We present Captain Cinema, a generation framework for short movie generation.\nGiven a detailed textual description of a movie storyline, our approach firstly\ngenerates a sequence of keyframes that outline the entire narrative, which\nensures long-range coherence in both the storyline and visual appearance (e.g.,\nscenes and characters). We refer to this step as top-down keyframe planning.\nThese keyframes then serve as conditioning signals for a video synthesis model,\nwhich supports long context learning, to produce the spatio-temporal dynamics\nbetween them. This step is referred to as bottom-up video synthesis. To support\nstable and efficient generation of multi-scene long narrative cinematic works,\nwe introduce an interleaved training strategy for Multimodal Diffusion\nTransformers (MM-DiT), specifically adapted for long-context video data. Our\nmodel is trained on a specially curated cinematic dataset consisting of\ninterleaved data pairs. Our experiments demonstrate that Captain Cinema\nperforms favorably in the automated creation of visually coherent and narrative\nconsistent short movies in high quality and efficiency. Project page:\nhttps://thecinema.ai",
+        "url": "http://arxiv.org/abs/2507.18634v1",
+        "published_date": "2025-07-24T17:59:56+00:00",
+        "updated_date": "2025-07-24T17:59:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Junfei Xiao",
+            "Ceyuan Yang",
+            "Lvmin Zhang",
+            "Shengqu Cai",
+            "Yang Zhao",
+            "Yuwei Guo",
+            "Gordon Wetzstein",
+            "Maneesh Agrawala",
+            "Alan Yuille",
+            "Lu Jiang"
+        ],
+        "tldr": "Captain Cinema proposes a framework for generating short movies from textual descriptions using a top-down keyframe planning and bottom-up video synthesis approach, trained with an interleaved strategy for multimodal diffusion transformers.",
+        "tldr_zh": "Captain Cinema 提出了一个从文本描述生成短电影的框架，它使用自顶向下的关键帧规划和自底向上的视频合成方法，并采用多模态扩散Transformer的交错训练策略。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Facial Demorphing from a Single Morph Using a Latent Conditional GAN",
+        "summary": "A morph is created by combining two (or more) face images from two (or more)\nidentities to create a composite image that is highly similar to all\nconstituent identities, allowing the forged morph to be biometrically\nassociated with more than one individual. Morph Attack Detection (MAD) can be\nused to detect a morph, but does not reveal the constituent images. Demorphing\n- the process of deducing the constituent images - is thus vital to provide\nadditional evidence about a morph. Existing demorphing methods suffer from the\nmorph replication problem, where the outputs tend to look very similar to the\nmorph itself, or assume that train and test morphs are generated using the same\nmorph technique. The proposed method overcomes these issues. The method\ndecomposes a morph in latent space allowing it to demorph images created from\nunseen morph techniques and face styles. We train our method on morphs created\nfrom synthetic faces and test on morphs created from real faces using different\nmorph techniques. Our method outperforms existing methods by a considerable\nmargin and produces high fidelity demorphed face images.",
+        "url": "http://arxiv.org/abs/2507.18566v2",
+        "published_date": "2025-07-24T16:41:47+00:00",
+        "updated_date": "2025-07-28T06:43:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Nitish Shukla",
+            "Arun Ross"
+        ],
+        "tldr": "This paper proposes a latent conditional GAN for facial demorphing that overcomes limitations of existing methods, such as morph replication and reliance on specific morphing techniques, achieving improved performance on real-world morphs.",
+        "tldr_zh": "本文提出了一种用于人脸去形变的潜在条件GAN，克服了现有方法的局限性，如形变复制和依赖特定的形变技术，在真实世界的形变人脸上实现了改进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "U-Net Based Healthy 3D Brain Tissue Inpainting",
+        "summary": "This paper introduces a novel approach to synthesize healthy 3D brain tissue\nfrom masked input images, specifically focusing on the task of 'ASNR-MICCAI\nBraTS Local Synthesis of Tissue via Inpainting'. Our proposed method employs a\nU-Net-based architecture, which is designed to effectively reconstruct the\nmissing or corrupted regions of brain MRI scans. To enhance our model's\ngeneralization capabilities and robustness, we implement a comprehensive data\naugmentation strategy that involves randomly masking healthy images during\ntraining. Our model is trained on the BraTS-Local-Inpainting dataset and\ndemonstrates the exceptional performance in recovering healthy brain tissue.\nThe evaluation metrics employed, including Structural Similarity Index (SSIM),\nPeak Signal-to-Noise Ratio (PSNR), and Mean Squared Error (MSE), consistently\nyields impressive results. On the BraTS-Local-Inpainting validation set, our\nmodel achieved an SSIM score of 0.841, a PSNR score of 23.257, and an MSE score\nof 0.007. Notably, these evaluation metrics exhibit relatively low standard\ndeviations, i.e., 0.103 for SSIM score, 4.213 for PSNR score and 0.007 for MSE\nscore, which indicates that our model's reliability and consistency across\nvarious input scenarios. Our method also secured first place in the challenge.",
+        "url": "http://arxiv.org/abs/2507.18126v1",
+        "published_date": "2025-07-24T06:26:46+00:00",
+        "updated_date": "2025-07-24T06:26:46+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Juexin Zhang",
+            "Ying Weng",
+            "Ke Chen"
+        ],
+        "tldr": "The paper presents a U-Net based approach for inpainting healthy 3D brain tissue in MRI scans, achieving high SSIM, PSNR, and low MSE scores on the BraTS-Local-Inpainting dataset and winning a challenge.",
+        "tldr_zh": "该论文提出了一种基于U-Net的方法，用于修复MRI扫描中健康的3D脑组织，在BraTS-Local-Inpainting数据集上实现了较高的SSIM、PSNR和较低的MSE分数，并赢得了一项挑战。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Parameter-Efficient Fine-Tuning of 3D DDPM for MRI Image Generation Using Tensor Networks",
+        "summary": "We address the challenge of parameter-efficient fine-tuning (PEFT) for\nthree-dimensional (3D) U-Net-based denoising diffusion probabilistic models\n(DDPMs) in magnetic resonance imaging (MRI) image generation. Despite its\npractical significance, research on parameter-efficient representations of 3D\nconvolution operations remains limited. To bridge this gap, we propose Tensor\nVolumetric Operator (TenVOO), a novel PEFT method specifically designed for\nfine-tuning DDPMs with 3D convolutional backbones. Leveraging tensor network\nmodeling, TenVOO represents 3D convolution kernels with lower-dimensional\ntensors, effectively capturing complex spatial dependencies during fine-tuning\nwith few parameters. We evaluate TenVOO on three downstream brain MRI\ndatasets-ADNI, PPMI, and BraTS2021-by fine-tuning a DDPM pretrained on 59,830\nT1-weighted brain MRI scans from the UK Biobank. Our results demonstrate that\nTenVOO achieves state-of-the-art performance in multi-scale structural\nsimilarity index measure (MS-SSIM), outperforming existing approaches in\ncapturing spatial dependencies while requiring only 0.3% of the trainable\nparameters of the original model. Our code is available at:\nhttps://github.com/xiaovhua/tenvoo",
+        "url": "http://arxiv.org/abs/2507.18112v1",
+        "published_date": "2025-07-24T05:51:51+00:00",
+        "updated_date": "2025-07-24T05:51:51+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Binghua Li",
+            "Ziqing Chang",
+            "Tong Liang",
+            "Chao Li",
+            "Toshihisa Tanaka",
+            "Shigeki Aoki",
+            "Qibin Zhao",
+            "Zhe Sun"
+        ],
+        "tldr": "The paper introduces TenVOO, a parameter-efficient fine-tuning method using tensor networks for 3D DDPMs in MRI image generation, achieving state-of-the-art MS-SSIM with only 0.3% of the original model's parameters.",
+        "tldr_zh": "该论文介绍了一种名为TenVOO的参数高效微调方法，该方法利用张量网络对MRI图像生成中的3D DDPM进行微调，仅使用原始模型0.3%的参数即可达到最先进的MS-SSIM。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Gen-AI Police Sketches with Stable Diffusion",
+        "summary": "This project investigates the use of multimodal AI-driven approaches to\nautomate and enhance suspect sketching. Three pipelines were developed and\nevaluated: (1) baseline image-to-image Stable Diffusion model, (2) same model\nintegrated with a pre-trained CLIP model for text-image alignment, and (3)\nnovel approach incorporating LoRA fine-tuning of the CLIP model, applied to\nself-attention and cross-attention layers, and integrated with Stable\nDiffusion. An ablation study confirmed that fine-tuning both self- and\ncross-attention layers yielded the best alignment between text descriptions and\nsketches. Performance testing revealed that Model 1 achieved the highest\nstructural similarity (SSIM) of 0.72 and a peak signal-to-noise ratio (PSNR) of\n25 dB, outperforming Model 2 and Model 3. Iterative refinement enhanced\nperceptual similarity (LPIPS), with Model 3 showing improvement over Model 2\nbut still trailing Model 1. Qualitatively, sketches generated by Model 1\ndemonstrated the clearest facial features, highlighting its robustness as a\nbaseline despite its simplicity.",
+        "url": "http://arxiv.org/abs/2507.18667v1",
+        "published_date": "2025-07-24T04:41:58+00:00",
+        "updated_date": "2025-07-24T04:41:58+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Nicholas Fidalgo",
+            "Aaron Contreras",
+            "Katherine Harvey",
+            "Johnny Ni"
+        ],
+        "tldr": "The paper explores using Stable Diffusion and CLIP models, with LoRA fine-tuning, to generate police sketches from text descriptions, finding the simplest Stable Diffusion model achieved the best structural similarity and clearest features.",
+        "tldr_zh": "该论文探索了使用 Stable Diffusion 和 CLIP 模型以及 LoRA 微调，从文本描述生成警方素描的方法。研究发现，最简单的 Stable Diffusion 模型实现了最佳的结构相似性和最清晰的面部特征。",
+        "relevance_score": 7,
+        "novelty_claim_score": 6,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 6
+    }
+]
