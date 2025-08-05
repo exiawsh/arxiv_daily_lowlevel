@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - July 24, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - August 05, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>July 24, 2025</p>
+            <p>August 05, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,33 +215,39 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Diffusion Models for Solving Inverse Problems via Posterior Sampling with Piecewise Guidance</h2>
+            <h2 class="paper-title">Devil is in the Detail: Towards Injecting Fine Details of Image Prompt in Image Generation via Conflict-free Guidance and Stratified Attention</h2>
             
-            <p class="paper-summary">Diffusion models are powerful tools for sampling from high-dimensional
-distributions by progressively transforming pure noise into structured data
-through a denoising process. When equipped with a guidance mechanism, these
-models can also generate samples from conditional distributions. In this paper,
-a novel diffusion-based framework is introduced for solving inverse problems
-using a piecewise guidance scheme. The guidance term is defined as a piecewise
-function of the diffusion timestep, facilitating the use of different
-approximations during high-noise and low-noise phases. This design is shown to
-effectively balance computational efficiency with the accuracy of the guidance
-term. Unlike task-specific approaches that require retraining for each problem,
-the proposed method is problem-agnostic and readily adaptable to a variety of
-inverse problems. Additionally, it explicitly incorporates measurement noise
-into the reconstruction process. The effectiveness of the proposed framework is
-demonstrated through extensive experiments on image restoration tasks,
-specifically image inpainting and super-resolution. Using a class conditional
-diffusion model for recovery, compared to the \pgdm baseline, the proposed
-framework achieves a reduction in inference time of \(25\%\) for inpainting
-with both random and center masks, and \(23\%\) and \(24\%\) for \(4\times\)
-and \(8\times\) super-resolution tasks, respectively, while incurring only
-negligible loss in PSNR and SSIM.</p>
+            <p class="paper-summary">While large-scale text-to-image diffusion models enable the generation of
+high-quality, diverse images from text prompts, these prompts struggle to
+capture intricate details, such as textures, preventing the user intent from
+being reflected. This limitation has led to efforts to generate images
+conditioned on user-provided images, referred to as image prompts. Recent work
+modifies the self-attention mechanism to impose image conditions in generated
+images by replacing or concatenating the keys and values from the image prompt.
+This enables the self-attention layer to work like a cross-attention layer,
+generally used to incorporate text prompts. In this paper, we identify two
+common issues in existing methods of modifying self-attention to generate
+images that reflect the details of image prompts. First, existing approaches
+neglect the importance of image prompts in classifier-free guidance.
+Specifically, current methods use image prompts as both desired and undesired
+conditions in classifier-free guidance, causing conflicting signals. To resolve
+this, we propose conflict-free guidance by using image prompts only as desired
+conditions, ensuring that the generated image faithfully reflects the image
+prompt. In addition, we observe that the two most common self-attention
+modifications involve a trade-off between the realism of the generated image
+and alignment with the image prompt. Specifically, selecting more keys and
+values from the image prompt improves alignment, while selecting more from the
+generated image enhances realism. To balance both, we propose an new
+self-attention modification method, Stratified Attention to jointly use keys
+and values from both images rather than selecting between them. Through
+extensive experiments across three image generation tasks, we show that the
+proposed method outperforms existing image-prompting models in faithfully
+reflecting the image prompt.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a problem-agnostic diffusion model framework for solving inverse problems like image restoration and super-resolution using a piecewise guidance scheme, achieving faster inference times with minimal loss in quality compared to a baseline.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces two improvements to image-prompted image generation: conflict-free guidance in classifier-free settings and stratified attention to balance realism and prompt alignment, outperforming existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种通用的扩散模型框架，通过分段指导方案解决图像恢复和超分辨率等逆问题，与基线相比，在质量损失极小的情况下实现了更快的推理速度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了图像提示图像生成方面的两项改进：无分类器指导中的无冲突指导以及平衡真实感和提示对齐的分层注意力，性能优于现有方法。</p>
             
 
             
@@ -251,8 +257,8 @@ negligible loss in PSNR and SSIM.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -312,11 +318,11 @@ negligible loss in PSNR and SSIM.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.18654v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.02004v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Saeed Mohseni-Sehdeh, Walid Saad, Kei Sakaguchi, Tao Yu</p>
+            <p class="paper-authors">Authors: Kyungmin Jo, Jooyeol Yun, Jaegul Choo</p>
             
         </motion.div>
         
@@ -328,33 +334,37 @@ negligible loss in PSNR and SSIM.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Lumina-mGPT 2.0: Stand-Alone AutoRegressive Image Modeling</h2>
+            <h2 class="paper-title">From Pixels to Pathology: Restoration Diffusion for Diagnostic-Consistent Virtual IHC</h2>
             
-            <p class="paper-summary">We present Lumina-mGPT 2.0, a stand-alone, decoder-only autoregressive model
-that revisits and revitalizes the autoregressive paradigm for high-quality
-image generation and beyond. Unlike existing approaches that rely on pretrained
-components or hybrid architectures, Lumina-mGPT 2.0 is trained entirely from
-scratch, enabling unrestricted architectural design and licensing freedom. It
-achieves generation quality on par with state-of-the-art diffusion models such
-as DALL-E 3 and SANA, while preserving the inherent flexibility and
-compositionality of autoregressive modeling. Our unified tokenization scheme
-allows the model to seamlessly handle a wide spectrum of tasks-including
-subject-driven generation, image editing, controllable synthesis, and dense
-prediction-within a single generative framework. To further boost usability, we
-incorporate efficient decoding strategies like inference-time scaling and
-speculative Jacobi sampling to improve quality and speed, respectively.
-Extensive evaluations on standard text-to-image benchmarks (e.g., GenEval, DPG)
-demonstrate that Lumina-mGPT 2.0 not only matches but in some cases surpasses
-diffusion-based models. Moreover, we confirm its multi-task capabilities on the
-Graph200K benchmark, with the native Lumina-mGPT 2.0 performing exceptionally
-well. These results position Lumina-mGPT 2.0 as a strong, flexible foundation
-model for unified multimodal generation. We have released our training details,
-code, and models at https://github.com/Alpha-VLLM/Lumina-mGPT-2.0.</p>
+            <p class="paper-summary">Hematoxylin and eosin (H&E) staining is the clinical standard for assessing
+tissue morphology, but it lacks molecular-level diagnostic information. In
+contrast, immunohistochemistry (IHC) provides crucial insights into biomarker
+expression, such as HER2 status for breast cancer grading, but remains costly
+and time-consuming, limiting its use in time-sensitive clinical workflows. To
+address this gap, virtual staining from H&E to IHC has emerged as a promising
+alternative, yet faces two core challenges: (1) Lack of fair evaluation of
+synthetic images against misaligned IHC ground truths, and (2) preserving
+structural integrity and biological variability during translation. To this
+end, we present an end-to-end framework encompassing both generation and
+evaluation in this work. We introduce Star-Diff, a structure-aware staining
+restoration diffusion model that reformulates virtual staining as an image
+restoration task. By combining residual and noise-based generation pathways,
+Star-Diff maintains tissue structure while modeling realistic biomarker
+variability. To evaluate the diagnostic consistency of the generated IHC
+patches, we propose the Semantic Fidelity Score (SFS), a
+clinical-grading-task-driven metric that quantifies class-wise semantic
+degradation based on biomarker classification accuracy. Unlike pixel-level
+metrics such as SSIM and PSNR, SFS remains robust under spatial misalignment
+and classifier uncertainty. Experiments on the BCI dataset demonstrate that
+Star-Diff achieves state-of-the-art (SOTA) performance in both visual fidelity
+and diagnostic relevance. With rapid inference and strong clinical alignment,it
+presents a practical solution for applications such as intraoperative virtual
+IHC synthesis.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: Lumina-mGPT 2.0 is a novel stand-alone autoregressive model for high-quality image generation, achieving state-of-the-art performance comparable to diffusion models while offering greater flexibility and multi-task capabilities.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Star-Diff, a structure-aware diffusion model for generating IHC images from H&E stains, along with a new evaluation metric (SFS) that focuses on diagnostic consistency.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: Lumina-mGPT 2.0是一个新型的独立自回归模型，用于高质量图像生成，在提供更大灵活性和多任务能力的同时，实现了与扩散模型相当的顶尖性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了Star-Diff，一种结构感知的扩散模型，用于从H&E染色生成IHC图像，并提出了一种新的评估指标(SFS)，专注于诊断一致性。</p>
             
 
             
@@ -364,8 +374,8 @@ code, and models at https://github.com/Alpha-VLLM/Lumina-mGPT-2.0.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -425,11 +435,11 @@ code, and models at https://github.com/Alpha-VLLM/Lumina-mGPT-2.0.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.17801v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.02528v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yi Xin, Juncheng Yan, Qi Qin, Zhen Li, Dongyang Liu, Shicheng Li, Victor Shea-Jay Huang, Yupeng Zhou, Renrui Zhang, Le Zhuo, Tiancheng Han, Xiaoqing Sun, Siqi Luo, Mengmeng Wang, Bin Fu, Yuewen Cao, Hongsheng Li, Guangtao Zhai, Xiaohong Liu, Yu Qiao, Peng Gao</p>
+            <p class="paper-authors">Authors: Jingsong Liu, Xiaofeng Deng, Han Li, Azar Kazemi, Christian Grashei, Gesa Wilkens, Xin You, Tanja Groll, Nassir Navab, Carolin Mogler, Peter J. Schüffler</p>
             
         </motion.div>
         
@@ -441,24 +451,35 @@ code, and models at https://github.com/Alpha-VLLM/Lumina-mGPT-2.0.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Improving Multislice Electron Ptychography with a Generative Prior</h2>
+            <h2 class="paper-title">Qwen-Image Technical Report</h2>
             
-            <p class="paper-summary">Multislice electron ptychography (MEP) is an inverse imaging technique that
-computationally reconstructs the highest-resolution images of atomic crystal
-structures from diffraction patterns. Available algorithms often solve this
-inverse problem iteratively but are both time consuming and produce suboptimal
-solutions due to their ill-posed nature. We develop MEP-Diffusion, a diffusion
-model trained on a large database of crystal structures specifically for MEP to
-augment existing iterative solvers. MEP-Diffusion is easily integrated as a
-generative prior into existing reconstruction methods via Diffusion Posterior
-Sampling (DPS). We find that this hybrid approach greatly enhances the quality
-of the reconstructed 3D volumes, achieving a 90.50% improvement in SSIM over
-existing methods.</p>
+            <p class="paper-summary">We present Qwen-Image, an image generation foundation model in the Qwen
+series that achieves significant advances in complex text rendering and precise
+image editing. To address the challenges of complex text rendering, we design a
+comprehensive data pipeline that includes large-scale data collection,
+filtering, annotation, synthesis, and balancing. Moreover, we adopt a
+progressive training strategy that starts with non-text-to-text rendering,
+evolves from simple to complex textual inputs, and gradually scales up to
+paragraph-level descriptions. This curriculum learning approach substantially
+enhances the model's native text rendering capabilities. As a result,
+Qwen-Image not only performs exceptionally well in alphabetic languages such as
+English, but also achieves remarkable progress on more challenging logographic
+languages like Chinese. To enhance image editing consistency, we introduce an
+improved multi-task training paradigm that incorporates not only traditional
+text-to-image (T2I) and text-image-to-image (TI2I) tasks but also
+image-to-image (I2I) reconstruction, effectively aligning the latent
+representations between Qwen2.5-VL and MMDiT. Furthermore, we separately feed
+the original image into Qwen2.5-VL and the VAE encoder to obtain semantic and
+reconstructive representations, respectively. This dual-encoding mechanism
+enables the editing module to strike a balance between preserving semantic
+consistency and maintaining visual fidelity. Qwen-Image achieves
+state-of-the-art performance, demonstrating its strong capabilities in both
+image generation and editing across multiple benchmarks.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MEP-Diffusion, a diffusion model generative prior for multislice electron ptychography (MEP) that improves the quality of reconstructed 3D volumes of crystal structures by integrating into existing iterative solvers via Diffusion Posterior Sampling (DPS). The method achieves a 90.50% improvement in SSIM over existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: Qwen-Image is a new image generation model focusing on complex text rendering (including logographic languages like Chinese) and precise image editing, achieving state-of-the-art results through a comprehensive data pipeline and multi-task training.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种用于多层电子衍射成像 (MEP) 的扩散模型生成先验 MEP-Diffusion，通过扩散后验采样 (DPS) 集成到现有迭代求解器中，从而提高晶体结构重建 3D 体积的质量。该方法在 SSIM 方面比现有方法提高了 90.50%。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: Qwen-Image 是一种新的图像生成模型，专注于复杂文本渲染（包括中文等表意文字）和精确的图像编辑，通过全面的数据管道和多任务训练实现最先进的结果。</p>
             
 
             
@@ -492,8 +513,8 @@ existing methods.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -529,11 +550,11 @@ existing methods.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.17800v2" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.02324v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Christian K. Belardi, Chia-Hao Lee, Yingheng Wang, Justin Lovelace, Kilian Q. Weinberger, David A. Muller, Carla P. Gomes</p>
+            <p class="paper-authors">Authors: Chenfei Wu, Jiahao Li, Jingren Zhou, Junyang Lin, Kaiyuan Gao, Kun Yan, Sheng-ming Yin, Shuai Bai, Xiao Xu, Yilei Chen, Yuxiang Chen, Zecheng Tang, Zekai Zhang, Zhengyi Wang, An Yang, Bowen Yu, Chen Cheng, Dayiheng Liu, Deqing Li, Hang Zhang, Hao Meng, Hu Wei, Jingyuan Ni, Kai Chen, Kuan Cao, Liang Peng, Lin Qu, Minggang Wu, Peng Wang, Shuting Yu, Tingkun Wen, Wensen Feng, Xiaoxiao Xu, Yi Wang, Yichang Zhang, Yongqiang Zhu, Yujia Wu, Yuxuan Cai, Zenan Liu</p>
             
         </motion.div>
         
@@ -545,34 +566,33 @@ existing methods.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DFDNet: Dynamic Frequency-Guided De-Flare Network</h2>
+            <h2 class="paper-title">AttriCtrl: Fine-Grained Control of Aesthetic Attribute Intensity in Diffusion Models</h2>
             
-            <p class="paper-summary">Strong light sources in nighttime photography frequently produce flares in
-images, significantly degrading visual quality and impacting the performance of
-downstream tasks. While some progress has been made, existing methods continue
-to struggle with removing large-scale flare artifacts and repairing structural
-damage in regions near the light source. We observe that these challenging
-flare artifacts exhibit more significant discrepancies from the reference
-images in the frequency domain compared to the spatial domain. Therefore, this
-paper presents a novel dynamic frequency-guided deflare network (DFDNet) that
-decouples content information from flare artifacts in the frequency domain,
-effectively removing large-scale flare artifacts. Specifically, DFDNet consists
-mainly of a global dynamic frequency-domain guidance (GDFG) module and a local
-detail guidance module (LDGM). The GDFG module guides the network to perceive
-the frequency characteristics of flare artifacts by dynamically optimizing
-global frequency domain features, effectively separating flare information from
-content information. Additionally, we design an LDGM via a contrastive learning
-strategy that aligns the local features of the light source with the reference
-image, reduces local detail damage from flare removal, and improves
-fine-grained image restoration. The experimental results demonstrate that the
-proposed method outperforms existing state-of-the-art methods in terms of
-performance. The code is available at
-\href{https://github.com/AXNing/DFDNet}{https://github.com/AXNing/DFDNet}.</p>
+            <p class="paper-summary">Recent breakthroughs in text-to-image diffusion models have significantly
+enhanced both the visual fidelity and semantic controllability of generated
+images. However, fine-grained control over aesthetic attributes remains
+challenging, especially when users require continuous and intensity-specific
+adjustments. Existing approaches often rely on vague textual prompts, which are
+inherently ambiguous in expressing both the aesthetic semantics and the desired
+intensity, or depend on costly human preference data for alignment, limiting
+their scalability and practicality. To address these limitations, we propose
+AttriCtrl, a plug-and-play framework for precise and continuous control of
+aesthetic attributes. Specifically, we quantify abstract aesthetics by
+leveraging semantic similarity from pre-trained vision-language models, and
+employ a lightweight value encoder that maps scalar intensities in $[0,1]$ to
+learnable embeddings within diffusion-based generation. This design enables
+intuitive and customizable aesthetic manipulation, with minimal training
+overhead and seamless integration into existing generation pipelines. Extensive
+experiments demonstrate that AttriCtrl achieves accurate control over
+individual attributes as well as flexible multi-attribute composition.
+Moreover, it is fully compatible with popular open-source controllable
+generation frameworks, showcasing strong integration capability and practical
+utility across diverse generation scenarios.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: DFDNet, a novel dynamic frequency-guided deflare network, is proposed to remove flare artifacts in nighttime images by decoupling content information from flare artifacts in the frequency domain using a global dynamic frequency-domain guidance module and a local detail guidance module.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces AttriCtrl, a plug-and-play framework for fine-grained and continuous control of aesthetic attributes in text-to-image diffusion models using semantic similarity and a lightweight value encoder.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了DFDNet，一种新的动态频率引导的去光晕网络，通过在全球动态频域引导模块和局部细节引导模块的帮助下，在频域中将内容信息与光晕伪影分离，从而去除夜间图像中的光晕伪影。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了AttriCtrl，一个即插即用的框架，通过语义相似性和轻量级数值编码器，实现对文本到图像扩散模型中审美属性的细粒度和连续控制。</p>
             
 
             
@@ -590,8 +610,8 @@ performance. The code is available at
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -643,11 +663,11 @@ performance. The code is available at
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.17489v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.02151v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Minglong Xue, Aoxiang Ning, Shivakumara Palaiahnakote, Mingliang Zhou</p>
+            <p class="paper-authors">Authors: Die Chen, Zhongjie Duan, Zhiwen Li, Cen Chen, Daoyuan Chen, Yaliang Li, Yinda Chen</p>
             
         </motion.div>
         
@@ -659,31 +679,34 @@ performance. The code is available at
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">EndoGen: Conditional Autoregressive Endoscopic Video Generation</h2>
+            <h2 class="paper-title">AutoLoRA: Automatic LoRA Retrieval and Fine-Grained Gated Fusion for Text-to-Image Generation</h2>
             
-            <p class="paper-summary">Endoscopic video generation is crucial for advancing medical imaging and
-enhancing diagnostic capabilities. However, prior efforts in this field have
-either focused on static images, lacking the dynamic context required for
-practical applications, or have relied on unconditional generation that fails
-to provide meaningful references for clinicians. Therefore, in this paper, we
-propose the first conditional endoscopic video generation framework, namely
-EndoGen. Specifically, we build an autoregressive model with a tailored
-Spatiotemporal Grid-Frame Patterning (SGP) strategy. It reformulates the
-learning of generating multiple frames as a grid-based image generation
-pattern, which effectively capitalizes the inherent global dependency modeling
-capabilities of autoregressive architectures. Furthermore, we propose a
-Semantic-Aware Token Masking (SAT) mechanism, which enhances the model's
-ability to produce rich and diverse content by selectively focusing on
-semantically meaningful regions during the generation process. Through
-extensive experiments, we demonstrate the effectiveness of our framework in
-generating high-quality, conditionally guided endoscopic content, and improves
-the performance of downstream task of polyp segmentation. Code released at
-https://www.github.com/CUHK-AIM-Group/EndoGen.</p>
+            <p class="paper-summary">Despite recent advances in photorealistic image generation through
+large-scale models like FLUX and Stable Diffusion v3, the practical deployment
+of these architectures remains constrained by their inherent intractability to
+parameter fine-tuning. While low-rank adaptation (LoRA) have demonstrated
+efficacy in enabling model customization with minimal parameter overhead, the
+effective utilization of distributed open-source LoRA modules faces three
+critical challenges: sparse metadata annotation, the requirement for zero-shot
+adaptation capabilities, and suboptimal fusion strategies for multi-LoRA fusion
+strategies. To address these limitations, we introduce a novel framework that
+enables semantic-driven LoRA retrieval and dynamic aggregation through two key
+components: (1) weight encoding-base LoRA retriever that establishes a shared
+semantic space between LoRA parameter matrices and text prompts, eliminating
+dependence on original training data, and (2) fine-grained gated fusion
+mechanism that computes context-specific fusion weights across network layers
+and diffusion timesteps to optimally integrate multiple LoRA modules during
+generation. Our approach achieves significant improvement in image generation
+perfermance, thereby facilitating scalable and data-efficient enhancement of
+foundational models. This work establishes a critical bridge between the
+fragmented landscape of community-developed LoRAs and practical deployment
+requirements, enabling collaborative model evolution through standardized
+adapter integration.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces EndoGen, a conditional autoregressive framework for generating endoscopic videos using a spatiotemporal grid-frame patterning strategy and semantic-aware token masking, demonstrating improved performance in polyp segmentation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel framework for automatically retrieving and fusing LoRA modules for text-to-image generation, addressing challenges in utilizing open-source LoRAs through semantic retrieval and fine-grained gated fusion.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了EndoGen，一个条件自回归框架，用于生成内窥镜视频，采用时空网格帧模式策略和语义感知令牌掩蔽，展示了在息肉分割方面的性能提升。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新的框架，用于自动检索和融合LoRA模块，以用于文本到图像的生成，通过语义检索和细粒度的门控融合，解决了利用开源LoRA模块的挑战。</p>
             
 
             
@@ -693,8 +716,8 @@ https://www.github.com/CUHK-AIM-Group/EndoGen.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -709,8 +732,8 @@ https://www.github.com/CUHK-AIM-Group/EndoGen.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -754,11 +777,11 @@ https://www.github.com/CUHK-AIM-Group/EndoGen.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.17388v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.02107v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xinyu Liu, Hengyu Liu, Cheng Wang, Tianming Liu, Yixuan Yuan</p>
+            <p class="paper-authors">Authors: Zhiwen Li, Zhongjie Duan, Die Chen, Cen Chen, Daoyuan Chen, Yaliang Li, Yingda Chen</p>
             
         </motion.div>
         
@@ -770,38 +793,38 @@ https://www.github.com/CUHK-AIM-Group/EndoGen.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Vec2Face+ for Face Dataset Generation</h2>
+            <h2 class="paper-title">QuaDreamer: Controllable Panoramic Video Generation for Quadruped Robots</h2>
             
-            <p class="paper-summary">When synthesizing identities as face recognition training data, it is
-generally believed that large inter-class separability and intra-class
-attribute variation are essential for synthesizing a quality dataset. % This
-belief is generally correct, and this is what we aim for. However, when
-increasing intra-class variation, existing methods overlook the necessity of
-maintaining intra-class identity consistency. % To address this and generate
-high-quality face training data, we propose Vec2Face+, a generative model that
-creates images directly from image features and allows for continuous and easy
-control of face identities and attributes. Using Vec2Face+, we obtain datasets
-with proper inter-class separability and intra-class variation and identity
-consistency using three strategies: 1) we sample vectors sufficiently different
-from others to generate well-separated identities; 2) we propose an AttrOP
-algorithm for increasing general attribute variations; 3) we propose LoRA-based
-pose control for generating images with profile head poses, which is more
-efficient and identity-preserving than AttrOP. % Our system generates VFace10K,
-a synthetic face dataset with 10K identities, which allows an FR model to
-achieve state-of-the-art accuracy on seven real-world test sets. Scaling the
-size to 4M and 12M images, the corresponding VFace100K and VFace300K datasets
-yield higher accuracy than the real-world training dataset, CASIA-WebFace, on
-five real-world test sets. This is the first time a synthetic dataset beats the
-CASIA-WebFace in average accuracy. In addition, we find that only 1 out of 11
-synthetic datasets outperforms random guessing (\emph{i.e., 50\%}) in twin
-verification and that models trained with synthetic identities are more biased
-than those trained with real identities. Both are important aspects for future
-investigation. Code is available at https://github.com/HaiyuWu/Vec2Face_plus</p>
+            <p class="paper-summary">Panoramic cameras, capturing comprehensive 360-degree environmental data, are
+suitable for quadruped robots in surrounding perception and interaction with
+complex environments. However, the scarcity of high-quality panoramic training
+data-caused by inherent kinematic constraints and complex sensor calibration
+challenges-fundamentally limits the development of robust perception systems
+tailored to these embodied platforms. To address this issue, we propose
+QuaDreamer-the first panoramic data generation engine specifically designed for
+quadruped robots. QuaDreamer focuses on mimicking the motion paradigm of
+quadruped robots to generate highly controllable, realistic panoramic videos,
+providing a data source for downstream tasks. Specifically, to effectively
+capture the unique vertical vibration characteristics exhibited during
+quadruped locomotion, we introduce Vertical Jitter Encoding (VJE). VJE extracts
+controllable vertical signals through frequency-domain feature filtering and
+provides high-quality prompts. To facilitate high-quality panoramic video
+generation under jitter signal control, we propose a Scene-Object Controller
+(SOC) that effectively manages object motion and boosts background jitter
+control through the attention mechanism. To address panoramic distortions in
+wide-FoV video generation, we propose the Panoramic Enhancer (PE)-a dual-stream
+architecture that synergizes frequency-texture refinement for local detail
+enhancement with spatial-structure correction for global geometric consistency.
+We further demonstrate that the generated video sequences can serve as training
+data for the quadruped robot's panoramic visual perception model, enhancing the
+performance of multi-object tracking in 360-degree scenes. The source code and
+model weights will be publicly available at
+https://github.com/losehu/QuaDreamer.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Vec2Face+, a generative model for creating high-quality face datasets with controlled identity and attribute variations. They demonstrate their synthetic datasets outperform CASIA-WebFace on real-world test sets.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces QuaDreamer, a panoramic video generation engine designed for quadruped robots, addressing the scarcity of training data by generating controllable, realistic panoramic videos with specific modules for vertical jitter, scene-object control, and panoramic enhancement. It shows performance gain on downstream tasks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 Vec2Face+，一种用于创建高质量人脸数据集的生成模型，可以控制身份和属性的变化。他们证明了他们的合成数据集在真实世界的测试集上优于 CASIA-WebFace。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了QuaDreamer，一个专为四足机器人设计的全景视频生成引擎。它通过生成可控的、逼真的全景视频来解决训练数据稀缺的问题，并具有用于垂直抖动、场景对象控制和全景增强的特定模块。实验结果表明在下游任务上的性能有所提升。</p>
             
 
             
@@ -835,8 +858,8 @@ investigation. Code is available at https://github.com/HaiyuWu/Vec2Face_plus</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -861,22 +884,22 @@ investigation. Code is available at https://github.com/HaiyuWu/Vec2Face_plus</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.17192v2" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.02512v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Haiyu Wu, Jaskirat Singh, Sicong Tian, Liang Zheng, Kevin W. Bowyer</p>
+            <p class="paper-authors">Authors: Sheng Wu, Fei Teng, Hao Shi, Qi Jiang, Kai Luo, Kaiwei Wang, Kailun Yang</p>
             
         </motion.div>
         
@@ -888,34 +911,37 @@ investigation. Code is available at https://github.com/HaiyuWu/Vec2Face_plus</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SADA: Stability-guided Adaptive Diffusion Acceleration</h2>
+            <h2 class="paper-title">Forecasting When to Forecast: Accelerating Diffusion Models with Confidence-Gated Taylor</h2>
             
-            <p class="paper-summary">Diffusion models have achieved remarkable success in generative tasks but
-suffer from high computational costs due to their iterative sampling process
-and quadratic attention costs. Existing training-free acceleration strategies
-that reduce per-step computation cost, while effectively reducing sampling
-time, demonstrate low faithfulness compared to the original baseline. We
-hypothesize that this fidelity gap arises because (a) different prompts
-correspond to varying denoising trajectory, and (b) such methods do not
-consider the underlying ODE formulation and its numerical solution. In this
-paper, we propose Stability-guided Adaptive Diffusion Acceleration (SADA), a
-novel paradigm that unifies step-wise and token-wise sparsity decisions via a
-single stability criterion to accelerate sampling of ODE-based generative
-models (Diffusion and Flow-matching). For (a), SADA adaptively allocates
-sparsity based on the sampling trajectory. For (b), SADA introduces principled
-approximation schemes that leverage the precise gradient information from the
-numerical ODE solver. Comprehensive evaluations on SD-2, SDXL, and Flux using
-both EDM and DPM++ solvers reveal consistent $\ge 1.8\times$ speedups with
-minimal fidelity degradation (LPIPS $\leq 0.10$ and FID $\leq 4.5$) compared to
-unmodified baselines, significantly outperforming prior methods. Moreover, SADA
-adapts seamlessly to other pipelines and modalities: It accelerates ControlNet
-without any modifications and speeds up MusicLDM by $1.8\times$ with $\sim
-0.01$ spectrogram LPIPS.</p>
+            <p class="paper-summary">Diffusion Transformers (DiTs) have demonstrated remarkable performance in
+visual generation tasks. However, their low inference speed limits their
+deployment in low-resource applications. Recent training-free approaches
+exploit the redundancy of features across timesteps by caching and reusing past
+representations to accelerate inference. Building on this idea, TaylorSeer
+instead uses cached features to predict future ones via Taylor expansion.
+However, its module-level prediction across all transformer blocks (e.g.,
+attention or feedforward modules) requires storing fine-grained intermediate
+features, leading to notable memory and computation overhead. Moreover, it
+adopts a fixed caching schedule without considering the varying accuracy of
+predictions across timesteps, which can lead to degraded outputs when
+prediction fails. To address these limitations, we propose a novel approach to
+better leverage Taylor-based acceleration. First, we shift the Taylor
+prediction target from the module level to the last block level, significantly
+reducing the number of cached features. Furthermore, observing strong
+sequential dependencies among Transformer blocks, we propose to use the error
+between the Taylor-estimated and actual outputs of the first block as an
+indicator of prediction reliability. If the error is small, we trust the Taylor
+prediction for the last block; otherwise, we fall back to full computation,
+thereby enabling a dynamic caching mechanism. Empirical results show that our
+method achieves a better balance between speed and quality, achieving a 3.17x
+acceleration on FLUX, 2.36x on DiT, and 4.14x on Wan Video with negligible
+quality drop. The Project Page is
+\href{https://cg-taylor-acce.github.io/CG-Taylor/}{here.}</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces SADA, a novel method for accelerating diffusion model sampling by adaptively allocating sparsity based on trajectory and leveraging gradient information from ODE solvers, achieving significant speedups with minimal fidelity loss.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a confidence-gated Taylor expansion method to accelerate diffusion transformer inference by selectively applying Taylor prediction based on the predicted reliability, reducing memory overhead and improving the speed-quality trade-off.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为SADA的新方法，通过基于轨迹自适应地分配稀疏性并利用ODE求解器的梯度信息来加速扩散模型采样，从而在保证最小保真度损失的情况下实现显著加速。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种基于置信度门控的泰勒展开方法，通过根据预测可靠性选择性地应用泰勒预测，来加速扩散Transformer的推理，从而减少内存开销并提高速度-质量的平衡。</p>
             
 
             
@@ -925,13 +951,21 @@ without any modifications and speeds up MusicLDM by $1.8\times$ with $\sim
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
+                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
@@ -939,18 +973,10 @@ without any modifications and speeds up MusicLDM by $1.8\times$ with $\sim
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -975,22 +1001,22 @@ without any modifications and speeds up MusicLDM by $1.8\times$ with $\sim
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.17135v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.02240v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ting Jiang, Yixiao Wang, Hancheng Ye, Zishan Shao, Jingwei Sun, Jingyang Zhang, Zekai Chen, Jianyi Zhang, Yiran Chen, Hai Li</p>
+            <p class="paper-authors">Authors: Xiaoliu Guan, Lielin Jiang, Hanqi Chen, Xu Zhang, Jiaxing Yan, Guanzhong Wang, Yi Liu, Zetao Zhang, Yu Wu</p>
             
         </motion.div>
         
@@ -1002,28 +1028,33 @@ without any modifications and speeds up MusicLDM by $1.8\times$ with $\sim
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Attention (as Discrete-Time Markov) Chains</h2>
+            <h2 class="paper-title">After the Party: Navigating the Mapping From Color to Ambient Lighting</h2>
             
-            <p class="paper-summary">We introduce a new interpretation of the attention matrix as a discrete-time
-Markov chain. Our interpretation sheds light on common operations involving
-attention scores such as selection, summation, and averaging in a unified
-framework. It further extends them by considering indirect attention,
-propagated through the Markov chain, as opposed to previous studies that only
-model immediate effects. Our main observation is that tokens corresponding to
-semantically similar regions form a set of metastable states, where the
-attention clusters, while noisy attention scores tend to disperse. Metastable
-states and their prevalence can be easily computed through simple matrix
-multiplication and eigenanalysis, respectively. Using these lightweight tools,
-we demonstrate state-of-the-art zero-shot segmentation. Lastly, we define
-TokenRank -- the steady state vector of the Markov chain, which measures global
-token importance. We demonstrate that using it brings improvements in
-unconditional image generation. We believe our framework offers a fresh view of
-how tokens are being attended in modern visual transformers.</p>
+            <p class="paper-summary">Illumination in practical scenarios is inherently complex, involving colored
+light sources, occlusions, and diverse material interactions that produce
+intricate reflectance and shading effects. However, existing methods often
+oversimplify this challenge by assuming a single light source or uniform,
+white-balanced lighting, leaving many of these complexities unaddressed.In this
+paper, we introduce CL3AN, the first large-scale, high-resolution dataset of
+its kind designed to facilitate the restoration of images captured under
+multiple Colored Light sources to their Ambient-Normalized counterparts.
+Through benchmarking, we find that leading approaches often produce artifacts,
+such as illumination inconsistencies, texture leakage, and color distortion,
+primarily due to their limited ability to precisely disentangle illumination
+from reflectance. Motivated by this insight, we achieve such a desired
+decomposition through a novel learning framework that leverages explicit
+chromaticity and luminance components guidance, drawing inspiration from the
+principles of the Retinex model. Extensive evaluations on existing benchmarks
+and our dataset demonstrate the effectiveness of our approach, showcasing
+enhanced robustness under non-homogeneous color lighting and material-specific
+reflectance variations, all while maintaining a highly competitive
+computational cost. The benchmark, codes, and models are available at
+www.github.com/fvasluianu97/RLN2.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper interprets attention mechanisms as discrete-time Markov chains, enabling novel analyses like identifying metastable states for zero-shot segmentation and TokenRank for improved image generation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces CL3AN, a new large-scale dataset for restoring images captured under colored light sources to ambient-normalized counterparts, and proposes a novel learning framework for improved illumination-reflectance disentanglement.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文将注意力机制解释为离散时间马尔可夫链，从而实现了诸如识别零样本分割的亚稳态和用于改进图像生成的 TokenRank 等新颖分析。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了CL3AN，一个用于将彩色光源下拍摄的图像恢复到环境归一化对应物的大规模新数据集，并提出了一种用于改进光照-反射解耦的新学习框架。</p>
             
 
             
@@ -1094,11 +1125,11 @@ how tokens are being attended in modern visual transformers.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.17657v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.02168v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yotam Erel, Olaf Dünkel, Rishabh Dabral, Vladislav Golyanik, Christian Theobalt, Amit H. Bermano</p>
+            <p class="paper-authors">Authors: Florin-Alexandru Vasluianu, Tim Seizinger, Zongwei Wu, Radu Timofte</p>
             
         </motion.div>
         
@@ -1110,27 +1141,32 @@ how tokens are being attended in modern visual transformers.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">PolarAnything: Diffusion-based Polarimetric Image Synthesis</h2>
+            <h2 class="paper-title">DreamPainter: Image Background Inpainting for E-commerce Scenarios</h2>
             
-            <p class="paper-summary">Polarization images facilitate image enhancement and 3D reconstruction tasks,
-but the limited accessibility of polarization cameras hinders their broader
-application. This gap drives the need for synthesizing photorealistic
-polarization images. The existing polarization simulator Mitsuba relies on a
-parametric polarization image formation model and requires extensive 3D assets
-covering shape and PBR materials, preventing it from generating large-scale
-photorealistic images. To address this problem, we propose PolarAnything,
-capable of synthesizing polarization images from a single RGB input with both
-photorealism and physical accuracy, eliminating the dependency on 3D asset
-collections. Drawing inspiration from the zero-shot performance of pretrained
-diffusion models, we introduce a diffusion-based generative framework with an
-effective representation strategy that preserves the fidelity of polarization
-properties. Experiments show that our model generates high-quality polarization
-images and supports downstream tasks like shape from polarization.</p>
+            <p class="paper-summary">Although diffusion-based image genenation has been widely explored and
+applied, background generation tasks in e-commerce scenarios still face
+significant challenges. The first challenge is to ensure that the generated
+products are consistent with the given product inputs while maintaining a
+reasonable spatial arrangement, harmonious shadows, and reflections between
+foreground products and backgrounds. Existing inpainting methods fail to
+address this due to the lack of domain-specific data. The second challenge
+involves the limitation of relying solely on text prompts for image control, as
+effective integrating visual information to achieve precise control in
+inpainting tasks remains underexplored. To address these challenges, we
+introduce DreamEcom-400K, a high-quality e-commerce dataset containing accurate
+product instance masks, background reference images, text prompts, and
+aesthetically pleasing product images. Based on this dataset, we propose
+DreamPainter, a novel framework that not only utilizes text prompts for control
+but also flexibly incorporates reference image information as an additional
+control signal. Extensive experiments demonstrate that our approach
+significantly outperforms state-of-the-art methods, maintaining high product
+consistency while effectively integrating both text prompt and reference image
+information.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces PolarAnything, a diffusion-based method for synthesizing photorealistic polarization images from single RGB images, addressing the limitations of existing methods that rely on extensive 3D assets.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DreamPainter, a diffusion-based image inpainting framework for e-commerce scenarios, along with a new dataset DreamEcom-400K, addressing challenges in product consistency and incorporating visual information for precise control.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了PolarAnything，一种基于扩散模型的方法，用于从单张RGB图像合成逼真的偏振图像，解决了现有方法依赖于大量3D资产的局限性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DreamPainter，一个用于电子商务场景的基于扩散的图像修复框架，以及一个新的数据集DreamEcom-400K，解决了产品一致性以及结合视觉信息以实现精确控制的挑战。</p>
             
 
             
@@ -1201,11 +1237,11 @@ images and supports downstream tasks like shape from polarization.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.17268v2" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.02155v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Kailong Zhang, Youwei Lyu, Heng Guo, Si Li, Zhanyu Ma, Boxin Shi</p>
+            <p class="paper-authors">Authors: Sijie Zhao, Jing Cheng, Yaoyao Wu, Hao Xu, Shaohui Jiao</p>
             
         </motion.div>
         
@@ -1217,32 +1253,31 @@ images and supports downstream tasks like shape from polarization.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Bringing Balance to Hand Shape Classification: Mitigating Data Imbalance Through Generative Models</h2>
+            <h2 class="paper-title">DeflareMamba: Hierarchical Vision Mamba for Contextually Consistent Lens Flare Removal</h2>
             
-            <p class="paper-summary">Most sign language handshape datasets are severely limited and unbalanced,
-posing significant challenges to effective model training. In this paper, we
-explore the effectiveness of augmenting the training data of a handshape
-classifier by generating synthetic data. We use an EfficientNet classifier
-trained on the RWTH German sign language handshape dataset, which is small and
-heavily unbalanced, applying different strategies to combine generated and real
-images. We compare two Generative Adversarial Networks (GAN) architectures for
-data generation: ReACGAN, which uses label information to condition the data
-generation process through an auxiliary classifier, and SPADE, which utilizes
-spatially-adaptive normalization to condition the generation on pose
-information. ReACGAN allows for the generation of realistic images that align
-with specific handshape labels, while SPADE focuses on generating images with
-accurate spatial handshape configurations. Our proposed techniques improve the
-current state-of-the-art accuracy on the RWTH dataset by 5%, addressing the
-limitations of small and unbalanced datasets. Additionally, our method
-demonstrates the capability to generalize across different sign language
-datasets by leveraging pose-based generation trained on the extensive HaGRID
-dataset. We achieve comparable performance to single-source trained classifiers
-without the need for retraining the generator.</p>
+            <p class="paper-summary">Lens flare removal remains an information confusion challenge in the
+underlying image background and the optical flares, due to the complex optical
+interactions between light sources and camera lens. While recent solutions have
+shown promise in decoupling the flare corruption from image, they often fail to
+maintain contextual consistency, leading to incomplete and inconsistent flare
+removal. To eliminate this limitation, we propose DeflareMamba, which leverages
+the efficient sequence modeling capabilities of state space models while
+maintains the ability to capture local-global dependencies. Particularly, we
+design a hierarchical framework that establishes long-range pixel correlations
+through varied stride sampling patterns, and utilize local-enhanced state space
+models that simultaneously preserves local details. To the best of our
+knowledge, this is the first work that introduces state space models to the
+flare removal task. Extensive experiments demonstrate that our method
+effectively removes various types of flare artifacts, including scattering and
+reflective flares, while maintaining the natural appearance of non-flare
+regions. Further downstream applications demonstrate the capacity of our method
+to improve visual object recognition and cross-modal semantic understanding.
+Code is available at https://github.com/BNU-ERC-ITEA/DeflareMamba.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper addresses the data imbalance issue in handshape classification for sign language by using GANs (ReACGAN and SPADE) to generate synthetic data and improve the accuracy of a classifier, achieving a 5% improvement on the RWTH dataset and demonstrating generalizability to other datasets.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DeflareMamba, a hierarchical vision Mamba architecture for lens flare removal that leverages state space models to maintain contextual consistency and capture local-global dependencies, outperforming existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文通过使用GAN（ReACGAN和SPADE）生成合成数据，解决了手语手势分类中的数据不平衡问题，提高了分类器的准确率，在RWTH数据集上实现了5%的改进，并展示了对其他数据集的通用性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DeflareMamba，一种用于镜头光晕去除的分层视觉Mamba架构，利用状态空间模型来保持上下文一致性并捕获局部-全局依赖关系，优于现有方法。</p>
             
 
             
@@ -1260,8 +1295,8 @@ without the need for retraining the generator.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1313,18 +1348,134 @@ without the need for retraining the generator.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.17008v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.02113v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Gaston Gustavo Rios, Pedro Dal Bianco, Franco Ronchetti, Facundo Quiroga, Oscar Stanchi, Santiago Ponte Ahón, Waldo Hasperué</p>
+            <p class="paper-authors">Authors: Yihang Huang, Yuanfei Huang, Junhui Lin, Hua Huang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.5, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">An Event-based Fast Intensity Reconstruction Scheme for UAV Real-time Perception</h2>
+            
+            <p class="paper-summary">Event cameras offer significant advantages, including a wide dynamic range,
+high temporal resolution, and immunity to motion blur, making them highly
+promising for addressing challenging visual conditions. Extracting and
+utilizing effective information from asynchronous event streams is essential
+for the onboard implementation of event cameras. In this paper, we propose a
+streamlined event-based intensity reconstruction scheme, event-based single
+integration (ESI), to address such implementation challenges. This method
+guarantees the portability of conventional frame-based vision methods to
+event-based scenarios and maintains the intrinsic advantages of event cameras.
+The ESI approach reconstructs intensity images by performing a single
+integration of the event streams combined with an enhanced decay algorithm.
+Such a method enables real-time intensity reconstruction at a high frame rate,
+typically 100 FPS. Furthermore, the relatively low computation load of ESI fits
+onboard implementation suitably, such as in UAV-based visual tracking
+scenarios. Extensive experiments have been conducted to evaluate the
+performance comparison of ESI and state-of-the-art algorithms. Compared to
+state-of-the-art algorithms, ESI demonstrates remarkable runtime efficiency
+improvements, superior reconstruction quality, and a high frame rate. As a
+result, ESI enhances UAV onboard perception significantly under visual
+adversary surroundings. In-flight tests, ESI demonstrates effective performance
+for UAV onboard visual tracking under extremely low illumination
+conditions(2-10lux), whereas other comparative algorithms fail due to
+insufficient frame rate, poor image quality, or limited real-time performance.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents ESI, a fast, event-based intensity reconstruction scheme suitable for real-time UAV perception, demonstrating improved runtime, reconstruction quality, and frame rate compared to state-of-the-art methods, especially in low-light conditions.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种快速的基于事件的强度重建方案ESI，适用于无人机的实时感知。与现有技术相比，该方案在运行时、重建质量和帧率方面都有所提高，尤其是在低光照条件下。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(3/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(4/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.02238v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Xin Dong, Yiwei Zhang, Yangjie Cui, Jinwu Xiang, Daochun Li, Zhan Tu</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-05 03:02:48 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-05 03:09:14 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

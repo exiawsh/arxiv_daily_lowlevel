@@ -1,0 +1,320 @@
+[
+    {
+        "title": "Devil is in the Detail: Towards Injecting Fine Details of Image Prompt in Image Generation via Conflict-free Guidance and Stratified Attention",
+        "summary": "While large-scale text-to-image diffusion models enable the generation of\nhigh-quality, diverse images from text prompts, these prompts struggle to\ncapture intricate details, such as textures, preventing the user intent from\nbeing reflected. This limitation has led to efforts to generate images\nconditioned on user-provided images, referred to as image prompts. Recent work\nmodifies the self-attention mechanism to impose image conditions in generated\nimages by replacing or concatenating the keys and values from the image prompt.\nThis enables the self-attention layer to work like a cross-attention layer,\ngenerally used to incorporate text prompts. In this paper, we identify two\ncommon issues in existing methods of modifying self-attention to generate\nimages that reflect the details of image prompts. First, existing approaches\nneglect the importance of image prompts in classifier-free guidance.\nSpecifically, current methods use image prompts as both desired and undesired\nconditions in classifier-free guidance, causing conflicting signals. To resolve\nthis, we propose conflict-free guidance by using image prompts only as desired\nconditions, ensuring that the generated image faithfully reflects the image\nprompt. In addition, we observe that the two most common self-attention\nmodifications involve a trade-off between the realism of the generated image\nand alignment with the image prompt. Specifically, selecting more keys and\nvalues from the image prompt improves alignment, while selecting more from the\ngenerated image enhances realism. To balance both, we propose an new\nself-attention modification method, Stratified Attention to jointly use keys\nand values from both images rather than selecting between them. Through\nextensive experiments across three image generation tasks, we show that the\nproposed method outperforms existing image-prompting models in faithfully\nreflecting the image prompt.",
+        "url": "http://arxiv.org/abs/2508.02004v1",
+        "published_date": "2025-08-04T02:48:06+00:00",
+        "updated_date": "2025-08-04T02:48:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kyungmin Jo",
+            "Jooyeol Yun",
+            "Jaegul Choo"
+        ],
+        "tldr": "This paper introduces two improvements to image-prompted image generation: conflict-free guidance in classifier-free settings and stratified attention to balance realism and prompt alignment, outperforming existing methods.",
+        "tldr_zh": "本文提出了图像提示图像生成方面的两项改进：无分类器指导中的无冲突指导以及平衡真实感和提示对齐的分层注意力，性能优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "From Pixels to Pathology: Restoration Diffusion for Diagnostic-Consistent Virtual IHC",
+        "summary": "Hematoxylin and eosin (H&E) staining is the clinical standard for assessing\ntissue morphology, but it lacks molecular-level diagnostic information. In\ncontrast, immunohistochemistry (IHC) provides crucial insights into biomarker\nexpression, such as HER2 status for breast cancer grading, but remains costly\nand time-consuming, limiting its use in time-sensitive clinical workflows. To\naddress this gap, virtual staining from H&E to IHC has emerged as a promising\nalternative, yet faces two core challenges: (1) Lack of fair evaluation of\nsynthetic images against misaligned IHC ground truths, and (2) preserving\nstructural integrity and biological variability during translation. To this\nend, we present an end-to-end framework encompassing both generation and\nevaluation in this work. We introduce Star-Diff, a structure-aware staining\nrestoration diffusion model that reformulates virtual staining as an image\nrestoration task. By combining residual and noise-based generation pathways,\nStar-Diff maintains tissue structure while modeling realistic biomarker\nvariability. To evaluate the diagnostic consistency of the generated IHC\npatches, we propose the Semantic Fidelity Score (SFS), a\nclinical-grading-task-driven metric that quantifies class-wise semantic\ndegradation based on biomarker classification accuracy. Unlike pixel-level\nmetrics such as SSIM and PSNR, SFS remains robust under spatial misalignment\nand classifier uncertainty. Experiments on the BCI dataset demonstrate that\nStar-Diff achieves state-of-the-art (SOTA) performance in both visual fidelity\nand diagnostic relevance. With rapid inference and strong clinical alignment,it\npresents a practical solution for applications such as intraoperative virtual\nIHC synthesis.",
+        "url": "http://arxiv.org/abs/2508.02528v1",
+        "published_date": "2025-08-04T15:36:58+00:00",
+        "updated_date": "2025-08-04T15:36:58+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jingsong Liu",
+            "Xiaofeng Deng",
+            "Han Li",
+            "Azar Kazemi",
+            "Christian Grashei",
+            "Gesa Wilkens",
+            "Xin You",
+            "Tanja Groll",
+            "Nassir Navab",
+            "Carolin Mogler",
+            "Peter J. Schüffler"
+        ],
+        "tldr": "The paper introduces Star-Diff, a structure-aware diffusion model for generating IHC images from H&E stains, along with a new evaluation metric (SFS) that focuses on diagnostic consistency.",
+        "tldr_zh": "该论文介绍了Star-Diff，一种结构感知的扩散模型，用于从H&E染色生成IHC图像，并提出了一种新的评估指标(SFS)，专注于诊断一致性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Qwen-Image Technical Report",
+        "summary": "We present Qwen-Image, an image generation foundation model in the Qwen\nseries that achieves significant advances in complex text rendering and precise\nimage editing. To address the challenges of complex text rendering, we design a\ncomprehensive data pipeline that includes large-scale data collection,\nfiltering, annotation, synthesis, and balancing. Moreover, we adopt a\nprogressive training strategy that starts with non-text-to-text rendering,\nevolves from simple to complex textual inputs, and gradually scales up to\nparagraph-level descriptions. This curriculum learning approach substantially\nenhances the model's native text rendering capabilities. As a result,\nQwen-Image not only performs exceptionally well in alphabetic languages such as\nEnglish, but also achieves remarkable progress on more challenging logographic\nlanguages like Chinese. To enhance image editing consistency, we introduce an\nimproved multi-task training paradigm that incorporates not only traditional\ntext-to-image (T2I) and text-image-to-image (TI2I) tasks but also\nimage-to-image (I2I) reconstruction, effectively aligning the latent\nrepresentations between Qwen2.5-VL and MMDiT. Furthermore, we separately feed\nthe original image into Qwen2.5-VL and the VAE encoder to obtain semantic and\nreconstructive representations, respectively. This dual-encoding mechanism\nenables the editing module to strike a balance between preserving semantic\nconsistency and maintaining visual fidelity. Qwen-Image achieves\nstate-of-the-art performance, demonstrating its strong capabilities in both\nimage generation and editing across multiple benchmarks.",
+        "url": "http://arxiv.org/abs/2508.02324v1",
+        "published_date": "2025-08-04T11:49:20+00:00",
+        "updated_date": "2025-08-04T11:49:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chenfei Wu",
+            "Jiahao Li",
+            "Jingren Zhou",
+            "Junyang Lin",
+            "Kaiyuan Gao",
+            "Kun Yan",
+            "Sheng-ming Yin",
+            "Shuai Bai",
+            "Xiao Xu",
+            "Yilei Chen",
+            "Yuxiang Chen",
+            "Zecheng Tang",
+            "Zekai Zhang",
+            "Zhengyi Wang",
+            "An Yang",
+            "Bowen Yu",
+            "Chen Cheng",
+            "Dayiheng Liu",
+            "Deqing Li",
+            "Hang Zhang",
+            "Hao Meng",
+            "Hu Wei",
+            "Jingyuan Ni",
+            "Kai Chen",
+            "Kuan Cao",
+            "Liang Peng",
+            "Lin Qu",
+            "Minggang Wu",
+            "Peng Wang",
+            "Shuting Yu",
+            "Tingkun Wen",
+            "Wensen Feng",
+            "Xiaoxiao Xu",
+            "Yi Wang",
+            "Yichang Zhang",
+            "Yongqiang Zhu",
+            "Yujia Wu",
+            "Yuxuan Cai",
+            "Zenan Liu"
+        ],
+        "tldr": "Qwen-Image is a new image generation model focusing on complex text rendering (including logographic languages like Chinese) and precise image editing, achieving state-of-the-art results through a comprehensive data pipeline and multi-task training.",
+        "tldr_zh": "Qwen-Image 是一种新的图像生成模型，专注于复杂文本渲染（包括中文等表意文字）和精确的图像编辑，通过全面的数据管道和多任务训练实现最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AttriCtrl: Fine-Grained Control of Aesthetic Attribute Intensity in Diffusion Models",
+        "summary": "Recent breakthroughs in text-to-image diffusion models have significantly\nenhanced both the visual fidelity and semantic controllability of generated\nimages. However, fine-grained control over aesthetic attributes remains\nchallenging, especially when users require continuous and intensity-specific\nadjustments. Existing approaches often rely on vague textual prompts, which are\ninherently ambiguous in expressing both the aesthetic semantics and the desired\nintensity, or depend on costly human preference data for alignment, limiting\ntheir scalability and practicality. To address these limitations, we propose\nAttriCtrl, a plug-and-play framework for precise and continuous control of\naesthetic attributes. Specifically, we quantify abstract aesthetics by\nleveraging semantic similarity from pre-trained vision-language models, and\nemploy a lightweight value encoder that maps scalar intensities in $[0,1]$ to\nlearnable embeddings within diffusion-based generation. This design enables\nintuitive and customizable aesthetic manipulation, with minimal training\noverhead and seamless integration into existing generation pipelines. Extensive\nexperiments demonstrate that AttriCtrl achieves accurate control over\nindividual attributes as well as flexible multi-attribute composition.\nMoreover, it is fully compatible with popular open-source controllable\ngeneration frameworks, showcasing strong integration capability and practical\nutility across diverse generation scenarios.",
+        "url": "http://arxiv.org/abs/2508.02151v1",
+        "published_date": "2025-08-04T07:49:40+00:00",
+        "updated_date": "2025-08-04T07:49:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Die Chen",
+            "Zhongjie Duan",
+            "Zhiwen Li",
+            "Cen Chen",
+            "Daoyuan Chen",
+            "Yaliang Li",
+            "Yinda Chen"
+        ],
+        "tldr": "The paper introduces AttriCtrl, a plug-and-play framework for fine-grained and continuous control of aesthetic attributes in text-to-image diffusion models using semantic similarity and a lightweight value encoder.",
+        "tldr_zh": "该论文介绍了AttriCtrl，一个即插即用的框架，通过语义相似性和轻量级数值编码器，实现对文本到图像扩散模型中审美属性的细粒度和连续控制。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AutoLoRA: Automatic LoRA Retrieval and Fine-Grained Gated Fusion for Text-to-Image Generation",
+        "summary": "Despite recent advances in photorealistic image generation through\nlarge-scale models like FLUX and Stable Diffusion v3, the practical deployment\nof these architectures remains constrained by their inherent intractability to\nparameter fine-tuning. While low-rank adaptation (LoRA) have demonstrated\nefficacy in enabling model customization with minimal parameter overhead, the\neffective utilization of distributed open-source LoRA modules faces three\ncritical challenges: sparse metadata annotation, the requirement for zero-shot\nadaptation capabilities, and suboptimal fusion strategies for multi-LoRA fusion\nstrategies. To address these limitations, we introduce a novel framework that\nenables semantic-driven LoRA retrieval and dynamic aggregation through two key\ncomponents: (1) weight encoding-base LoRA retriever that establishes a shared\nsemantic space between LoRA parameter matrices and text prompts, eliminating\ndependence on original training data, and (2) fine-grained gated fusion\nmechanism that computes context-specific fusion weights across network layers\nand diffusion timesteps to optimally integrate multiple LoRA modules during\ngeneration. Our approach achieves significant improvement in image generation\nperfermance, thereby facilitating scalable and data-efficient enhancement of\nfoundational models. This work establishes a critical bridge between the\nfragmented landscape of community-developed LoRAs and practical deployment\nrequirements, enabling collaborative model evolution through standardized\nadapter integration.",
+        "url": "http://arxiv.org/abs/2508.02107v1",
+        "published_date": "2025-08-04T06:36:00+00:00",
+        "updated_date": "2025-08-04T06:36:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhiwen Li",
+            "Zhongjie Duan",
+            "Die Chen",
+            "Cen Chen",
+            "Daoyuan Chen",
+            "Yaliang Li",
+            "Yingda Chen"
+        ],
+        "tldr": "This paper introduces a novel framework for automatically retrieving and fusing LoRA modules for text-to-image generation, addressing challenges in utilizing open-source LoRAs through semantic retrieval and fine-grained gated fusion.",
+        "tldr_zh": "本文提出了一种新的框架，用于自动检索和融合LoRA模块，以用于文本到图像的生成，通过语义检索和细粒度的门控融合，解决了利用开源LoRA模块的挑战。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "QuaDreamer: Controllable Panoramic Video Generation for Quadruped Robots",
+        "summary": "Panoramic cameras, capturing comprehensive 360-degree environmental data, are\nsuitable for quadruped robots in surrounding perception and interaction with\ncomplex environments. However, the scarcity of high-quality panoramic training\ndata-caused by inherent kinematic constraints and complex sensor calibration\nchallenges-fundamentally limits the development of robust perception systems\ntailored to these embodied platforms. To address this issue, we propose\nQuaDreamer-the first panoramic data generation engine specifically designed for\nquadruped robots. QuaDreamer focuses on mimicking the motion paradigm of\nquadruped robots to generate highly controllable, realistic panoramic videos,\nproviding a data source for downstream tasks. Specifically, to effectively\ncapture the unique vertical vibration characteristics exhibited during\nquadruped locomotion, we introduce Vertical Jitter Encoding (VJE). VJE extracts\ncontrollable vertical signals through frequency-domain feature filtering and\nprovides high-quality prompts. To facilitate high-quality panoramic video\ngeneration under jitter signal control, we propose a Scene-Object Controller\n(SOC) that effectively manages object motion and boosts background jitter\ncontrol through the attention mechanism. To address panoramic distortions in\nwide-FoV video generation, we propose the Panoramic Enhancer (PE)-a dual-stream\narchitecture that synergizes frequency-texture refinement for local detail\nenhancement with spatial-structure correction for global geometric consistency.\nWe further demonstrate that the generated video sequences can serve as training\ndata for the quadruped robot's panoramic visual perception model, enhancing the\nperformance of multi-object tracking in 360-degree scenes. The source code and\nmodel weights will be publicly available at\nhttps://github.com/losehu/QuaDreamer.",
+        "url": "http://arxiv.org/abs/2508.02512v1",
+        "published_date": "2025-08-04T15:18:01+00:00",
+        "updated_date": "2025-08-04T15:18:01+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Sheng Wu",
+            "Fei Teng",
+            "Hao Shi",
+            "Qi Jiang",
+            "Kai Luo",
+            "Kaiwei Wang",
+            "Kailun Yang"
+        ],
+        "tldr": "The paper introduces QuaDreamer, a panoramic video generation engine designed for quadruped robots, addressing the scarcity of training data by generating controllable, realistic panoramic videos with specific modules for vertical jitter, scene-object control, and panoramic enhancement. It shows performance gain on downstream tasks.",
+        "tldr_zh": "该论文介绍了QuaDreamer，一个专为四足机器人设计的全景视频生成引擎。它通过生成可控的、逼真的全景视频来解决训练数据稀缺的问题，并具有用于垂直抖动、场景对象控制和全景增强的特定模块。实验结果表明在下游任务上的性能有所提升。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Forecasting When to Forecast: Accelerating Diffusion Models with Confidence-Gated Taylor",
+        "summary": "Diffusion Transformers (DiTs) have demonstrated remarkable performance in\nvisual generation tasks. However, their low inference speed limits their\ndeployment in low-resource applications. Recent training-free approaches\nexploit the redundancy of features across timesteps by caching and reusing past\nrepresentations to accelerate inference. Building on this idea, TaylorSeer\ninstead uses cached features to predict future ones via Taylor expansion.\nHowever, its module-level prediction across all transformer blocks (e.g.,\nattention or feedforward modules) requires storing fine-grained intermediate\nfeatures, leading to notable memory and computation overhead. Moreover, it\nadopts a fixed caching schedule without considering the varying accuracy of\npredictions across timesteps, which can lead to degraded outputs when\nprediction fails. To address these limitations, we propose a novel approach to\nbetter leverage Taylor-based acceleration. First, we shift the Taylor\nprediction target from the module level to the last block level, significantly\nreducing the number of cached features. Furthermore, observing strong\nsequential dependencies among Transformer blocks, we propose to use the error\nbetween the Taylor-estimated and actual outputs of the first block as an\nindicator of prediction reliability. If the error is small, we trust the Taylor\nprediction for the last block; otherwise, we fall back to full computation,\nthereby enabling a dynamic caching mechanism. Empirical results show that our\nmethod achieves a better balance between speed and quality, achieving a 3.17x\nacceleration on FLUX, 2.36x on DiT, and 4.14x on Wan Video with negligible\nquality drop. The Project Page is\n\\href{https://cg-taylor-acce.github.io/CG-Taylor/}{here.}",
+        "url": "http://arxiv.org/abs/2508.02240v1",
+        "published_date": "2025-08-04T09:39:31+00:00",
+        "updated_date": "2025-08-04T09:39:31+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Xiaoliu Guan",
+            "Lielin Jiang",
+            "Hanqi Chen",
+            "Xu Zhang",
+            "Jiaxing Yan",
+            "Guanzhong Wang",
+            "Yi Liu",
+            "Zetao Zhang",
+            "Yu Wu"
+        ],
+        "tldr": "This paper introduces a confidence-gated Taylor expansion method to accelerate diffusion transformer inference by selectively applying Taylor prediction based on the predicted reliability, reducing memory overhead and improving the speed-quality trade-off.",
+        "tldr_zh": "本文提出了一种基于置信度门控的泰勒展开方法，通过根据预测可靠性选择性地应用泰勒预测，来加速扩散Transformer的推理，从而减少内存开销并提高速度-质量的平衡。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "After the Party: Navigating the Mapping From Color to Ambient Lighting",
+        "summary": "Illumination in practical scenarios is inherently complex, involving colored\nlight sources, occlusions, and diverse material interactions that produce\nintricate reflectance and shading effects. However, existing methods often\noversimplify this challenge by assuming a single light source or uniform,\nwhite-balanced lighting, leaving many of these complexities unaddressed.In this\npaper, we introduce CL3AN, the first large-scale, high-resolution dataset of\nits kind designed to facilitate the restoration of images captured under\nmultiple Colored Light sources to their Ambient-Normalized counterparts.\nThrough benchmarking, we find that leading approaches often produce artifacts,\nsuch as illumination inconsistencies, texture leakage, and color distortion,\nprimarily due to their limited ability to precisely disentangle illumination\nfrom reflectance. Motivated by this insight, we achieve such a desired\ndecomposition through a novel learning framework that leverages explicit\nchromaticity and luminance components guidance, drawing inspiration from the\nprinciples of the Retinex model. Extensive evaluations on existing benchmarks\nand our dataset demonstrate the effectiveness of our approach, showcasing\nenhanced robustness under non-homogeneous color lighting and material-specific\nreflectance variations, all while maintaining a highly competitive\ncomputational cost. The benchmark, codes, and models are available at\nwww.github.com/fvasluianu97/RLN2.",
+        "url": "http://arxiv.org/abs/2508.02168v1",
+        "published_date": "2025-08-04T08:07:03+00:00",
+        "updated_date": "2025-08-04T08:07:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Florin-Alexandru Vasluianu",
+            "Tim Seizinger",
+            "Zongwei Wu",
+            "Radu Timofte"
+        ],
+        "tldr": "This paper introduces CL3AN, a new large-scale dataset for restoring images captured under colored light sources to ambient-normalized counterparts, and proposes a novel learning framework for improved illumination-reflectance disentanglement.",
+        "tldr_zh": "本文介绍了CL3AN，一个用于将彩色光源下拍摄的图像恢复到环境归一化对应物的大规模新数据集，并提出了一种用于改进光照-反射解耦的新学习框架。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "DreamPainter: Image Background Inpainting for E-commerce Scenarios",
+        "summary": "Although diffusion-based image genenation has been widely explored and\napplied, background generation tasks in e-commerce scenarios still face\nsignificant challenges. The first challenge is to ensure that the generated\nproducts are consistent with the given product inputs while maintaining a\nreasonable spatial arrangement, harmonious shadows, and reflections between\nforeground products and backgrounds. Existing inpainting methods fail to\naddress this due to the lack of domain-specific data. The second challenge\ninvolves the limitation of relying solely on text prompts for image control, as\neffective integrating visual information to achieve precise control in\ninpainting tasks remains underexplored. To address these challenges, we\nintroduce DreamEcom-400K, a high-quality e-commerce dataset containing accurate\nproduct instance masks, background reference images, text prompts, and\naesthetically pleasing product images. Based on this dataset, we propose\nDreamPainter, a novel framework that not only utilizes text prompts for control\nbut also flexibly incorporates reference image information as an additional\ncontrol signal. Extensive experiments demonstrate that our approach\nsignificantly outperforms state-of-the-art methods, maintaining high product\nconsistency while effectively integrating both text prompt and reference image\ninformation.",
+        "url": "http://arxiv.org/abs/2508.02155v1",
+        "published_date": "2025-08-04T07:54:37+00:00",
+        "updated_date": "2025-08-04T07:54:37+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Sijie Zhao",
+            "Jing Cheng",
+            "Yaoyao Wu",
+            "Hao Xu",
+            "Shaohui Jiao"
+        ],
+        "tldr": "The paper introduces DreamPainter, a diffusion-based image inpainting framework for e-commerce scenarios, along with a new dataset DreamEcom-400K, addressing challenges in product consistency and incorporating visual information for precise control.",
+        "tldr_zh": "该论文介绍了DreamPainter，一个用于电子商务场景的基于扩散的图像修复框架，以及一个新的数据集DreamEcom-400K，解决了产品一致性以及结合视觉信息以实现精确控制的挑战。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "DeflareMamba: Hierarchical Vision Mamba for Contextually Consistent Lens Flare Removal",
+        "summary": "Lens flare removal remains an information confusion challenge in the\nunderlying image background and the optical flares, due to the complex optical\ninteractions between light sources and camera lens. While recent solutions have\nshown promise in decoupling the flare corruption from image, they often fail to\nmaintain contextual consistency, leading to incomplete and inconsistent flare\nremoval. To eliminate this limitation, we propose DeflareMamba, which leverages\nthe efficient sequence modeling capabilities of state space models while\nmaintains the ability to capture local-global dependencies. Particularly, we\ndesign a hierarchical framework that establishes long-range pixel correlations\nthrough varied stride sampling patterns, and utilize local-enhanced state space\nmodels that simultaneously preserves local details. To the best of our\nknowledge, this is the first work that introduces state space models to the\nflare removal task. Extensive experiments demonstrate that our method\neffectively removes various types of flare artifacts, including scattering and\nreflective flares, while maintaining the natural appearance of non-flare\nregions. Further downstream applications demonstrate the capacity of our method\nto improve visual object recognition and cross-modal semantic understanding.\nCode is available at https://github.com/BNU-ERC-ITEA/DeflareMamba.",
+        "url": "http://arxiv.org/abs/2508.02113v1",
+        "published_date": "2025-08-04T06:49:48+00:00",
+        "updated_date": "2025-08-04T06:49:48+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Yihang Huang",
+            "Yuanfei Huang",
+            "Junhui Lin",
+            "Hua Huang"
+        ],
+        "tldr": "The paper introduces DeflareMamba, a hierarchical vision Mamba architecture for lens flare removal that leverages state space models to maintain contextual consistency and capture local-global dependencies, outperforming existing methods.",
+        "tldr_zh": "该论文介绍了DeflareMamba，一种用于镜头光晕去除的分层视觉Mamba架构，利用状态空间模型来保持上下文一致性并捕获局部-全局依赖关系，优于现有方法。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "An Event-based Fast Intensity Reconstruction Scheme for UAV Real-time Perception",
+        "summary": "Event cameras offer significant advantages, including a wide dynamic range,\nhigh temporal resolution, and immunity to motion blur, making them highly\npromising for addressing challenging visual conditions. Extracting and\nutilizing effective information from asynchronous event streams is essential\nfor the onboard implementation of event cameras. In this paper, we propose a\nstreamlined event-based intensity reconstruction scheme, event-based single\nintegration (ESI), to address such implementation challenges. This method\nguarantees the portability of conventional frame-based vision methods to\nevent-based scenarios and maintains the intrinsic advantages of event cameras.\nThe ESI approach reconstructs intensity images by performing a single\nintegration of the event streams combined with an enhanced decay algorithm.\nSuch a method enables real-time intensity reconstruction at a high frame rate,\ntypically 100 FPS. Furthermore, the relatively low computation load of ESI fits\nonboard implementation suitably, such as in UAV-based visual tracking\nscenarios. Extensive experiments have been conducted to evaluate the\nperformance comparison of ESI and state-of-the-art algorithms. Compared to\nstate-of-the-art algorithms, ESI demonstrates remarkable runtime efficiency\nimprovements, superior reconstruction quality, and a high frame rate. As a\nresult, ESI enhances UAV onboard perception significantly under visual\nadversary surroundings. In-flight tests, ESI demonstrates effective performance\nfor UAV onboard visual tracking under extremely low illumination\nconditions(2-10lux), whereas other comparative algorithms fail due to\ninsufficient frame rate, poor image quality, or limited real-time performance.",
+        "url": "http://arxiv.org/abs/2508.02238v1",
+        "published_date": "2025-08-04T09:37:00+00:00",
+        "updated_date": "2025-08-04T09:37:00+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Xin Dong",
+            "Yiwei Zhang",
+            "Yangjie Cui",
+            "Jinwu Xiang",
+            "Daochun Li",
+            "Zhan Tu"
+        ],
+        "tldr": "This paper presents ESI, a fast, event-based intensity reconstruction scheme suitable for real-time UAV perception, demonstrating improved runtime, reconstruction quality, and frame rate compared to state-of-the-art methods, especially in low-light conditions.",
+        "tldr_zh": "本文提出了一种快速的基于事件的强度重建方案ESI，适用于无人机的实时感知。与现有技术相比，该方案在运行时、重建质量和帧率方面都有所提高，尤其是在低光照条件下。",
+        "relevance_score": 3,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 4
+    }
+]
