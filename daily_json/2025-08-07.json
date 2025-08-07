@@ -1,0 +1,248 @@
+[
+    {
+        "title": "Super Resolved Imaging with Adaptive Optics",
+        "summary": "Astronomical telescopes suffer from a tradeoff between field of view (FoV)\nand image resolution: increasing the FoV leads to an optical field that is\nunder-sampled by the science camera. This work presents a novel computational\nimaging approach to overcome this tradeoff by leveraging the existing adaptive\noptics (AO) systems in modern ground-based telescopes. Our key idea is to use\nthe AO system's deformable mirror to apply a series of learned, precisely\ncontrolled distortions to the optical wavefront, producing a sequence of images\nthat exhibit distinct, high-frequency, sub-pixel shifts. These images can then\nbe jointly upsampled to yield the final super-resolved image. Crucially, we\nshow this can be done while simultaneously maintaining the core AO\noperation--correcting for the unknown and rapidly changing wavefront\ndistortions caused by Earth's atmosphere. To achieve this, we incorporate\nend-to-end optimization of both the induced mirror distortions and the\nupsampling algorithm, such that telescope-specific optics and temporal\nstatistics of atmospheric wavefront distortions are accounted for. Our\nexperimental results with a hardware prototype, as well as simulations,\ndemonstrate significant SNR improvements of up to 12 dB over non-AO\nsuper-resolution baselines, using only existing telescope optics and no\nhardware modifications. Moreover, by using a precise bench-top replica of a\ncomplete telescope and AO system, we show that our methodology can be readily\ntransferred to an operational telescope. Project webpage:\nhttps://www.cs.toronto.edu/~robin/aosr/",
+        "url": "http://arxiv.org/abs/2508.04648v1",
+        "published_date": "2025-08-06T17:15:48+00:00",
+        "updated_date": "2025-08-06T17:15:48+00:00",
+        "categories": [
+            "astro-ph.IM",
+            "cs.CV"
+        ],
+        "authors": [
+            "Robin Swanson",
+            "Esther Y. H. Lin",
+            "Masen Lamb",
+            "Suresh Sivanandam",
+            "Kiriakos N. Kutulakos"
+        ],
+        "tldr": "This paper introduces a novel computational imaging approach that leverages adaptive optics (AO) systems to achieve super-resolution imaging in telescopes by applying learned distortions to the optical wavefront, resulting in significant SNR improvements without hardware modifications.",
+        "tldr_zh": "本文介绍了一种新颖的计算成像方法，该方法利用自适应光学（AO）系统，通过对光波前应用学习到的畸变来实现望远镜的超分辨率成像，从而在不进行硬件修改的情况下显著提高信噪比。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "QuantVSR: Low-Bit Post-Training Quantization for Real-World Video Super-Resolution",
+        "summary": "Diffusion models have shown superior performance in real-world video\nsuper-resolution (VSR). However, the slow processing speeds and heavy resource\nconsumption of diffusion models hinder their practical application and\ndeployment. Quantization offers a potential solution for compressing the VSR\nmodel. Nevertheless, quantizing VSR models is challenging due to their temporal\ncharacteristics and high fidelity requirements. To address these issues, we\npropose QuantVSR, a low-bit quantization model for real-world VSR. We propose a\nspatio-temporal complexity aware (STCA) mechanism, where we first utilize the\ncalibration dataset to measure both spatial and temporal complexities for each\nlayer. Based on these statistics, we allocate layer-specific ranks to the\nlow-rank full-precision (FP) auxiliary branch. Subsequently, we jointly refine\nthe FP and low-bit branches to achieve simultaneous optimization. In addition,\nwe propose a learnable bias alignment (LBA) module to reduce the biased\nquantization errors. Extensive experiments on synthetic and real-world datasets\ndemonstrate that our method obtains comparable performance with the FP model\nand significantly outperforms recent leading low-bit quantization methods. Code\nis available at: https://github.com/bowenchai/QuantVSR.",
+        "url": "http://arxiv.org/abs/2508.04485v1",
+        "published_date": "2025-08-06T14:35:59+00:00",
+        "updated_date": "2025-08-06T14:35:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bowen Chai",
+            "Zheng Chen",
+            "Libo Zhu",
+            "Wenbo Li",
+            "Yong Guo",
+            "Yulun Zhang"
+        ],
+        "tldr": "The paper introduces QuantVSR, a low-bit post-training quantization method for real-world video super-resolution that addresses the challenges of quantizing VSR models with spatio-temporal complexity awareness and learnable bias alignment, achieving comparable performance to full-precision models.",
+        "tldr_zh": "本文介绍了 QuantVSR，一种用于真实世界视频超分辨率的低比特后训练量化方法，它通过时空复杂度感知和可学习的偏差对齐来解决量化 VSR 模型的挑战，并实现了与全精度模型相当的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Audio-Assisted Face Video Restoration with Temporal and Identity Complementary Learning",
+        "summary": "Face videos accompanied by audio have become integral to our daily lives,\nwhile they often suffer from complex degradations. Most face video restoration\nmethods neglect the intrinsic correlations between the visual and audio\nfeatures, especially in mouth regions. A few audio-aided face video restoration\nmethods have been proposed, but they only focus on compression artifact\nremoval. In this paper, we propose a General Audio-assisted face Video\nrestoration Network (GAVN) to address various types of streaming video\ndistortions via identity and temporal complementary learning. Specifically,\nGAVN first captures inter-frame temporal features in the low-resolution space\nto restore frames coarsely and save computational cost. Then, GAVN extracts\nintra-frame identity features in the high-resolution space with the assistance\nof audio signals and face landmarks to restore more facial details. Finally,\nthe reconstruction module integrates temporal features and identity features to\ngenerate high-quality face videos. Experimental results demonstrate that GAVN\noutperforms the existing state-of-the-art methods on face video compression\nartifact removal, deblurring, and super-resolution. Codes will be released upon\npublication.",
+        "url": "http://arxiv.org/abs/2508.04161v1",
+        "published_date": "2025-08-06T07:38:27+00:00",
+        "updated_date": "2025-08-06T07:38:27+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.MM"
+        ],
+        "authors": [
+            "Yuqin Cao",
+            "Yixuan Gao",
+            "Wei Sun",
+            "Xiaohong Liu",
+            "Yulun Zhang",
+            "Xiongkuo Min"
+        ],
+        "tldr": "The paper introduces a General Audio-assisted face Video restoration Network (GAVN) that leverages audio signals and face landmarks to restore degraded face videos, outperforming state-of-the-art methods in compression artifact removal, deblurring, and super-resolution.",
+        "tldr_zh": "该论文介绍了一种通用音频辅助人脸视频修复网络（GAVN），该网络利用音频信号和人脸地标来修复退化的人脸视频，并在压缩伪影去除、去模糊和超分辨率方面优于最先进的方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Bridging Diffusion Models and 3D Representations: A 3D Consistent Super-Resolution Framework",
+        "summary": "We propose 3D Super Resolution (3DSR), a novel 3D Gaussian-splatting-based\nsuper-resolution framework that leverages off-the-shelf diffusion-based 2D\nsuper-resolution models. 3DSR encourages 3D consistency across views via the\nuse of an explicit 3D Gaussian-splatting-based scene representation. This makes\nthe proposed 3DSR different from prior work, such as image upsampling or the\nuse of video super-resolution, which either don't consider 3D consistency or\naim to incorporate 3D consistency implicitly. Notably, our method enhances\nvisual quality without additional fine-tuning, ensuring spatial coherence\nwithin the reconstructed scene. We evaluate 3DSR on MipNeRF360 and LLFF data,\ndemonstrating that it produces high-resolution results that are visually\ncompelling, while maintaining structural consistency in 3D reconstructions.\nCode will be released.",
+        "url": "http://arxiv.org/abs/2508.04090v1",
+        "published_date": "2025-08-06T05:12:02+00:00",
+        "updated_date": "2025-08-06T05:12:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yi-Ting Chen",
+            "Ting-Hsuan Liao",
+            "Pengsheng Guo",
+            "Alexander Schwing",
+            "Jia-Bin Huang"
+        ],
+        "tldr": "The paper introduces 3DSR, a novel 3D super-resolution framework based on Gaussian splatting that leverages 2D diffusion models and explicitly enforces 3D consistency without fine-tuning.",
+        "tldr_zh": "该论文介绍了3DSR，一种基于高斯溅射的新型3D超分辨率框架，它利用2D扩散模型并显式地强制执行3D一致性，而无需进行微调。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Uni-DocDiff: A Unified Document Restoration Model Based on Diffusion",
+        "summary": "Removing various degradations from damaged documents greatly benefits\ndigitization, downstream document analysis, and readability. Previous methods\noften treat each restoration task independently with dedicated models, leading\nto a cumbersome and highly complex document processing system. Although recent\nstudies attempt to unify multiple tasks, they often suffer from limited\nscalability due to handcrafted prompts and heavy preprocessing, and fail to\nfully exploit inter-task synergy within a shared architecture. To address the\naforementioned challenges, we propose Uni-DocDiff, a Unified and highly\nscalable Document restoration model based on Diffusion. Uni-DocDiff develops a\nlearnable task prompt design, ensuring exceptional scalability across diverse\ntasks. To further enhance its multi-task capabilities and address potential\ntask interference, we devise a novel \\textbf{Prior \\textbf{P}ool}, a simple yet\ncomprehensive mechanism that combines both local high-frequency features and\nglobal low-frequency features. Additionally, we design the \\textbf{Prior\n\\textbf{F}usion \\textbf{M}odule (PFM)}, which enables the model to adaptively\nselect the most relevant prior information for each specific task. Extensive\nexperiments show that the versatile Uni-DocDiff achieves performance comparable\nor even superior performance compared with task-specific expert models, and\nsimultaneously holds the task scalability for seamless adaptation to new tasks.",
+        "url": "http://arxiv.org/abs/2508.04055v1",
+        "published_date": "2025-08-06T03:30:39+00:00",
+        "updated_date": "2025-08-06T03:30:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Fangmin Zhao",
+            "Weichao Zeng",
+            "Zhenhang Li",
+            "Dongbao Yang",
+            "Binbin Li",
+            "Xiaojun Bi",
+            "Yu Zhou"
+        ],
+        "tldr": "The paper introduces Uni-DocDiff, a unified diffusion-based model for document restoration that handles multiple tasks with a single architecture using learnable prompts and a prior fusion mechanism, achieving comparable or superior results to task-specific models with improved scalability.",
+        "tldr_zh": "本文介绍了一种名为Uni-DocDiff的统一的基于扩散的文档修复模型，该模型使用单一架构处理多个任务，利用可学习的提示和先验融合机制，在提升可扩展性的同时，实现了与特定任务模型相当甚至更优的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SPJFNet: Self-Mining Prior-Guided Joint Frequency Enhancement for Ultra-Efficient Dark Image Restoration",
+        "summary": "Current dark image restoration methods suffer from severe efficiency\nbottlenecks, primarily stemming from: (1) computational burden and error\ncorrection costs associated with reliance on external priors (manual or\ncross-modal); (2) redundant operations in complex multi-stage enhancement\npipelines; and (3) indiscriminate processing across frequency components in\nfrequency-domain methods, leading to excessive global computational demands. To\naddress these challenges, we propose an Efficient Self-Mining Prior-Guided\nJoint Frequency Enhancement Network (SPJFNet). Specifically, we first introduce\na Self-Mining Guidance Module (SMGM) that generates lightweight endogenous\nguidance directly from the network, eliminating dependence on external priors\nand thereby bypassing error correction overhead while improving inference\nspeed. Second, through meticulous analysis of different frequency domain\ncharacteristics, we reconstruct and compress multi-level operation chains into\na single efficient operation via lossless wavelet decomposition and joint\nFourier-based advantageous frequency enhancement, significantly reducing\nparameters. Building upon this foundation, we propose a Dual-Frequency Guidance\nFramework (DFGF) that strategically deploys specialized high/low frequency\nbranches (wavelet-domain high-frequency enhancement and Fourier-domain\nlow-frequency restoration), decoupling frequency processing to substantially\nreduce computational complexity. Rigorous evaluation across multiple benchmarks\ndemonstrates that SPJFNet not only surpasses state-of-the-art performance but\nalso achieves significant efficiency improvements, substantially reducing model\ncomplexity and computational overhead. Code is available at\nhttps://github.com/bywlzts/SPJFNet.",
+        "url": "http://arxiv.org/abs/2508.04041v1",
+        "published_date": "2025-08-06T03:06:29+00:00",
+        "updated_date": "2025-08-06T03:06:29+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tongshun Zhang",
+            "Pingling Liu",
+            "Zijian Zhang",
+            "Qiuzhan Zhou"
+        ],
+        "tldr": "SPJFNet addresses efficiency bottlenecks in dark image restoration by introducing a self-mining prior and frequency-aware processing, achieving state-of-the-art performance with reduced computational cost.",
+        "tldr_zh": "SPJFNet通过引入自挖掘先验和频率感知处理来解决暗图像恢复中的效率瓶颈，以更低的计算成本实现最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "One Model For All: Partial Diffusion for Unified Try-On and Try-Off in Any Pose",
+        "summary": "Recent diffusion-based approaches have made significant advances in\nimage-based virtual try-on, enabling more realistic and end-to-end garment\nsynthesis. However, most existing methods remain constrained by their reliance\non exhibition garments and segmentation masks, as well as their limited ability\nto handle flexible pose variations. These limitations reduce their practicality\nin real-world scenarios-for instance, users cannot easily transfer garments\nworn by one person onto another, and the generated try-on results are typically\nrestricted to the same pose as the reference image. In this paper, we introduce\n\\textbf{OMFA} (\\emph{One Model For All}), a unified diffusion framework for\nboth virtual try-on and try-off that operates without the need for exhibition\ngarments and supports arbitrary poses. For example, OMFA enables removing\ngarments from a source person (try-off) and transferring them onto a target\nperson (try-on), while also allowing the generated target to appear in novel\nposes-even without access to multi-pose images of that person. OMFA is built\nupon a novel \\emph{partial diffusion} strategy that selectively applies noise\nand denoising to individual components of the joint input-such as the garment,\nthe person image, or the face-enabling dynamic subtask control and efficient\nbidirectional garment-person transformation. The framework is entirely\nmask-free and requires only a single portrait and a target pose as input,\nmaking it well-suited for real-world applications. Additionally, by leveraging\nSMPL-X-based pose conditioning, OMFA supports multi-view and arbitrary-pose\ntry-on from just one image. Extensive experiments demonstrate that OMFA\nachieves state-of-the-art results on both try-on and try-off tasks, providing a\npractical and generalizable solution for virtual garment synthesis. The project\npage is here: https://onemodelforall.github.io/.",
+        "url": "http://arxiv.org/abs/2508.04559v1",
+        "published_date": "2025-08-06T15:46:01+00:00",
+        "updated_date": "2025-08-06T15:46:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jinxi Liu",
+            "Zijian He",
+            "Guangrun Wang",
+            "Guanbin Li",
+            "Liang Lin"
+        ],
+        "tldr": "The paper introduces OMFA, a novel diffusion-based framework for virtual try-on and try-off that operates without exhibition garments, segmentation masks and pose restrictions by using a partial diffusion strategy and SMPL-X pose conditioning.",
+        "tldr_zh": "该论文介绍了一种名为OMFA的新型扩散框架，用于虚拟试穿和试脱，它无需展示服装、分割蒙版和姿势限制，通过使用部分扩散策略和SMPL-X姿势调节实现。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "4DVD: Cascaded Dense-view Video Diffusion Model for High-quality 4D Content Generation",
+        "summary": "Given the high complexity of directly generating high-dimensional data such\nas 4D, we present 4DVD, a cascaded video diffusion model that generates 4D\ncontent in a decoupled manner. Unlike previous multi-view video methods that\ndirectly model 3D space and temporal features simultaneously with stacked cross\nview/temporal attention modules, 4DVD decouples this into two subtasks: coarse\nmulti-view layout generation and structure-aware conditional generation, and\neffectively unifies them. Specifically, given a monocular video, 4DVD first\npredicts the dense view content of its layout with superior cross-view and\ntemporal consistency. Based on the produced layout priors, a structure-aware\nspatio-temporal generation branch is developed, combining these coarse\nstructural priors with the exquisite appearance content of input monocular\nvideo to generate final high-quality dense-view videos. Benefit from this,\nexplicit 4D representation~(such as 4D Gaussian) can be optimized accurately,\nenabling wider practical application. To train 4DVD, we collect a dynamic 3D\nobject dataset, called D-Objaverse, from the Objaverse benchmark and render 16\nvideos with 21 frames for each object. Extensive experiments demonstrate our\nstate-of-the-art performance on both novel view synthesis and 4D generation.\nOur project page is https://4dvd.github.io/",
+        "url": "http://arxiv.org/abs/2508.04467v1",
+        "published_date": "2025-08-06T14:08:36+00:00",
+        "updated_date": "2025-08-06T14:08:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuzhou Yang",
+            "Xiaodong Cun",
+            "Xiaoyu Li",
+            "Yaowei Li",
+            "Jian Zhang"
+        ],
+        "tldr": "The paper introduces 4DVD, a cascaded video diffusion model for generating high-quality 4D content from monocular videos by decoupling the process into coarse multi-view layout generation and structure-aware conditional generation.",
+        "tldr_zh": "该论文介绍了一种名为4DVD的级联视频扩散模型，用于从单目视频生成高质量的4D内容，其方法是将过程解耦为粗略的多视图布局生成和结构感知条件生成。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Deeper Inside Deep ViT",
+        "summary": "There have been attempts to create large-scale structures in vision models\nsimilar to LLM, such as ViT-22B. While this research has provided numerous\nanalyses and insights, our understanding of its practical utility remains\nincomplete. Therefore, we examine how this model structure reacts and train in\na local environment. We also highlight the instability in training and make\nsome model modifications to stabilize it. The ViT-22B model, trained from\nscratch, overall outperformed ViT in terms of performance under the same\nparameter size. Additionally, we venture into the task of image generation,\nwhich has not been attempted in ViT-22B. We propose an image generation\narchitecture using ViT and investigate which between ViT and ViT-22B is a more\nsuitable structure for image generation.",
+        "url": "http://arxiv.org/abs/2508.04181v1",
+        "published_date": "2025-08-06T08:08:04+00:00",
+        "updated_date": "2025-08-06T08:08:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sungrae Hong"
+        ],
+        "tldr": "This paper explores the training dynamics and modifications of ViT-22B, comparing its performance to standard ViT and investigating its suitability for image generation.",
+        "tldr_zh": "本文研究了 ViT-22B 的训练动态和修改，将其性能与标准 ViT 进行了比较，并探讨了其在图像生成方面的适用性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "$\\text{S}^2$Q-VDiT: Accurate Quantized Video Diffusion Transformer with Salient Data and Sparse Token Distillation",
+        "summary": "Diffusion transformers have emerged as the mainstream paradigm for video\ngeneration models. However, the use of up to billions of parameters incurs\nsignificant computational costs. Quantization offers a promising solution by\nreducing memory usage and accelerating inference. Nonetheless, we observe that\nthe joint modeling of spatial and temporal information in video diffusion\nmodels (V-DMs) leads to extremely long token sequences, which introduces high\ncalibration variance and learning challenges. To address these issues, we\npropose \\textbf{$\\text{S}^2$Q-VDiT}, a post-training quantization framework for\nV-DMs that leverages \\textbf{S}alient data and \\textbf{S}parse token\ndistillation. During the calibration phase, we identify that quantization\nperformance is highly sensitive to the choice of calibration data. To mitigate\nthis, we introduce \\textit{Hessian-aware Salient Data Selection}, which\nconstructs high-quality calibration datasets by considering both diffusion and\nquantization characteristics unique to V-DMs. To tackle the learning\nchallenges, we further analyze the sparse attention patterns inherent in V-DMs.\nBased on this observation, we propose \\textit{Attention-guided Sparse Token\nDistillation}, which exploits token-wise attention distributions to emphasize\ntokens that are more influential to the model's output. Under W4A6\nquantization, $\\text{S}^2$Q-VDiT achieves lossless performance while delivering\n$3.9\\times$ model compression and $1.3\\times$ inference acceleration. Code will\nbe available at\n\\href{https://github.com/wlfeng0509/s2q-vdit}{https://github.com/wlfeng0509/s2q-vdit}.",
+        "url": "http://arxiv.org/abs/2508.04016v1",
+        "published_date": "2025-08-06T02:12:29+00:00",
+        "updated_date": "2025-08-06T02:12:29+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Weilun Feng",
+            "Haotong Qin",
+            "Chuanguang Yang",
+            "Xiangqi Li",
+            "Han Yang",
+            "Yuqi Li",
+            "Zhulin An",
+            "Libo Huang",
+            "Michele Magno",
+            "Yongjun Xu"
+        ],
+        "tldr": "The paper introduces $\\text{S}^2$Q-VDiT, a post-training quantization framework for Video Diffusion Transformers that utilizes salient data selection and sparse token distillation to achieve lossless performance with significant compression and acceleration.",
+        "tldr_zh": "该论文介绍了$\\text{S}^2$Q-VDiT，一个用于视频扩散Transformer的后训练量化框架，它利用显著数据选择和稀疏token蒸馏来实现无损性能，并显著压缩模型和加速推理。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
