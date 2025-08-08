@@ -1,0 +1,177 @@
+[
+    {
+        "title": "FaceAnonyMixer: Cancelable Faces via Identity Consistent Latent Space Mixing",
+        "summary": "Advancements in face recognition (FR) technologies have amplified privacy\nconcerns, necessitating methods that protect identity while maintaining\nrecognition utility. Existing face anonymization methods typically focus on\nobscuring identity but fail to meet the requirements of biometric template\nprotection, including revocability, unlinkability, and irreversibility. We\npropose FaceAnonyMixer, a cancelable face generation framework that leverages\nthe latent space of a pre-trained generative model to synthesize\nprivacy-preserving face images. The core idea of FaceAnonyMixer is to\nirreversibly mix the latent code of a real face image with a synthetic code\nderived from a revocable key. The mixed latent code is further refined through\na carefully designed multi-objective loss to satisfy all cancelable biometric\nrequirements. FaceAnonyMixer is capable of generating high-quality cancelable\nfaces that can be directly matched using existing FR systems without requiring\nany modifications. Extensive experiments on benchmark datasets demonstrate that\nFaceAnonyMixer delivers superior recognition accuracy while providing\nsignificantly stronger privacy protection, achieving over an 11% gain on\ncommercial API compared to recent cancelable biometric methods. Code is\navailable at: https://github.com/talha-alam/faceanonymixer.",
+        "url": "http://arxiv.org/abs/2508.05636v1",
+        "published_date": "2025-08-07T17:59:59+00:00",
+        "updated_date": "2025-08-07T17:59:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mohammed Talha Alam",
+            "Fahad Shamshad",
+            "Fakhri Karray",
+            "Karthik Nandakumar"
+        ],
+        "tldr": "The paper introduces FaceAnonyMixer, a method for generating privacy-preserving face images by mixing latent codes in a generative model, achieving high recognition accuracy and strong privacy protection suitable for cancelable biometrics.",
+        "tldr_zh": "该论文介绍了FaceAnonyMixer，一种通过混合生成模型中的潜在代码来生成具有隐私保护的面部图像的方法，实现了高识别准确率和强大的隐私保护，适用于可撤销的生物识别技术。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "WeTok: Powerful Discrete Tokenization for High-Fidelity Visual Reconstruction",
+        "summary": "Visual tokenizer is a critical component for vision generation. However, the\nexisting tokenizers often face unsatisfactory trade-off between compression\nratios and reconstruction fidelity. To fill this gap, we introduce a powerful\nand concise WeTok tokenizer, which surpasses the previous leading tokenizers\nvia two core innovations. (1) Group-wise lookup-free Quantization (GQ). We\npartition the latent features into groups, and perform lookup-free quantization\nfor each group. As a result, GQ can efficiently overcome memory and computation\nlimitations of prior tokenizers, while achieving a reconstruction breakthrough\nwith more scalable codebooks. (2) Generative Decoding (GD). Different from\nprior tokenizers, we introduce a generative decoder with a prior of extra noise\nvariable. In this case, GD can probabilistically model the distribution of\nvisual data conditioned on discrete tokens, allowing WeTok to reconstruct\nvisual details, especially at high compression ratios. Extensive experiments on\nmainstream benchmarks show superior performance of our WeTok. On the ImageNet\n50k validation set, WeTok achieves a record-low zero-shot rFID (WeTok: 0.12 vs.\nFLUX-VAE: 0.18 vs. SD-VAE 3.5: 0.19). Furthermore, our highest compression\nmodel achieves a zero-shot rFID of 3.49 with a compression ratio of 768,\noutperforming Cosmos (384) 4.57 which has only 50% compression rate of ours.\nCode and models are available: https://github.com/zhuangshaobin/WeTok.",
+        "url": "http://arxiv.org/abs/2508.05599v1",
+        "published_date": "2025-08-07T17:41:26+00:00",
+        "updated_date": "2025-08-07T17:41:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shaobin Zhuang",
+            "Yiwei Guo",
+            "Canmiao Fu",
+            "Zhipeng Huang",
+            "Zeyue Tian",
+            "Ying Zhang",
+            "Chen Li",
+            "Yali Wang"
+        ],
+        "tldr": "The paper introduces WeTok, a novel visual tokenizer utilizing group-wise lookup-free quantization and generative decoding, achieving state-of-the-art reconstruction fidelity at high compression ratios.",
+        "tldr_zh": "该论文介绍了一种新的视觉标记器WeTok，它利用分组查找式量化和生成解码，在高压缩比下实现了最先进的重建保真度。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ArbiViewGen: Controllable Arbitrary Viewpoint Camera Data Generation for Autonomous Driving via Stable Diffusion Models",
+        "summary": "Arbitrary viewpoint image generation holds significant potential for\nautonomous driving, yet remains a challenging task due to the lack of\nground-truth data for extrapolated views, which hampers the training of\nhigh-fidelity generative models. In this work, we propose Arbiviewgen, a novel\ndiffusion-based framework for the generation of controllable camera images from\narbitrary points of view. To address the absence of ground-truth data in unseen\nviews, we introduce two key components: Feature-Aware Adaptive View Stitching\n(FAVS) and Cross-View Consistency Self-Supervised Learning (CVC-SSL). FAVS\nemploys a hierarchical matching strategy that first establishes coarse\ngeometric correspondences using camera poses, then performs fine-grained\nalignment through improved feature matching algorithms, and identifies\nhigh-confidence matching regions via clustering analysis. Building upon this,\nCVC-SSL adopts a self-supervised training paradigm where the model reconstructs\nthe original camera views from the synthesized stitched images using a\ndiffusion model, enforcing cross-view consistency without requiring supervision\nfrom extrapolated data. Our framework requires only multi-camera images and\ntheir associated poses for training, eliminating the need for additional\nsensors or depth maps. To our knowledge, Arbiviewgen is the first method\ncapable of controllable arbitrary view camera image generation in multiple\nvehicle configurations.",
+        "url": "http://arxiv.org/abs/2508.05236v1",
+        "published_date": "2025-08-07T10:24:47+00:00",
+        "updated_date": "2025-08-07T10:24:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yatong Lan",
+            "Jingfeng Chen",
+            "Yiru Wang",
+            "Lei He"
+        ],
+        "tldr": "The paper introduces ArbiViewGen, a novel diffusion-based framework for generating controllable camera images from arbitrary viewpoints for autonomous driving, using feature-aware view stitching and cross-view consistency self-supervised learning without needing ground-truth data of extrapolated views.",
+        "tldr_zh": "该论文介绍了ArbiViewGen，一个新颖的基于扩散模型的框架，用于为自动驾驶生成来自任意视点的可控相机图像。它使用特征感知的视图拼接和跨视图一致性自监督学习，无需外推视图的真实数据。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Rotation Equivariant Arbitrary-scale Image Super-Resolution",
+        "summary": "The arbitrary-scale image super-resolution (ASISR), a recent popular topic in\ncomputer vision, aims to achieve arbitrary-scale high-resolution recoveries\nfrom a low-resolution input image. This task is realized by representing the\nimage as a continuous implicit function through two fundamental modules, a\ndeep-network-based encoder and an implicit neural representation (INR) module.\nDespite achieving notable progress, a crucial challenge of such a highly\nill-posed setting is that many common geometric patterns, such as repetitive\ntextures, edges, or shapes, are seriously warped and deformed in the\nlow-resolution images, naturally leading to unexpected artifacts appearing in\ntheir high-resolution recoveries. Embedding rotation equivariance into the\nASISR network is thus necessary, as it has been widely demonstrated that this\nenhancement enables the recovery to faithfully maintain the original\norientations and structural integrity of geometric patterns underlying the\ninput image. Motivated by this, we make efforts to construct a rotation\nequivariant ASISR method in this study. Specifically, we elaborately redesign\nthe basic architectures of INR and encoder modules, incorporating intrinsic\nrotation equivariance capabilities beyond those of conventional ASISR networks.\nThrough such amelioration, the ASISR network can, for the first time, be\nimplemented with end-to-end rotational equivariance maintained from input to\noutput. We also provide a solid theoretical analysis to evaluate its intrinsic\nequivariance error, demonstrating its inherent nature of embedding such an\nequivariance structure. The superiority of the proposed method is substantiated\nby experiments conducted on both simulated and real datasets. We also validate\nthat the proposed framework can be readily integrated into current ASISR\nmethods in a plug \\& play manner to further enhance their performance.",
+        "url": "http://arxiv.org/abs/2508.05160v1",
+        "published_date": "2025-08-07T08:51:03+00:00",
+        "updated_date": "2025-08-07T08:51:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qi Xie",
+            "Jiahong Fu",
+            "Zongben Xu",
+            "Deyu Meng"
+        ],
+        "tldr": "This paper proposes a rotation equivariant arbitrary-scale image super-resolution (ASISR) method by redesigning the encoder and implicit neural representation (INR) modules to incorporate rotational equivariance, showing improved performance and theoretical guarantees.",
+        "tldr_zh": "本文提出了一种旋转等变任意尺度图像超分辨率（ASISR）方法，通过重新设计编码器和隐式神经表示（INR）模块，以包含旋转等变性，并展示了改进的性能和理论保证。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RetinexDual: Retinex-based Dual Nature Approach for Generalized Ultra-High-Definition Image Restoration",
+        "summary": "Advancements in image sensing have elevated the importance of\nUltra-High-Definition Image Restoration (UHD IR). Traditional methods, such as\nextreme downsampling or transformation from the spatial to the frequency\ndomain, encounter significant drawbacks: downsampling induces irreversible\ninformation loss in UHD images, while our frequency analysis reveals that pure\nfrequency-domain approaches are ineffective for spatially confined image\nartifacts, primarily due to the loss of degradation locality. To overcome these\nlimitations, we present RetinexDual, a novel Retinex theory-based framework\ndesigned for generalized UHD IR tasks. RetinexDual leverages two complementary\nsub-networks: the Scale-Attentive maMBA (SAMBA) and the Frequency Illumination\nAdaptor (FIA). SAMBA, responsible for correcting the reflectance component,\nutilizes a coarse-to-fine mechanism to overcome the causal modeling of mamba,\nwhich effectively reduces artifacts and restores intricate details. On the\nother hand, FIA ensures precise correction of color and illumination\ndistortions by operating in the frequency domain and leveraging the global\ncontext provided by it. Evaluating RetinexDual on four UHD IR tasks, namely\nderaining, deblurring, dehazing, and Low-Light Image Enhancement (LLIE), shows\nthat it outperforms recent methods qualitatively and quantitatively. Ablation\nstudies demonstrate the importance of employing distinct designs for each\nbranch in RetinexDual, as well as the effectiveness of its various components.",
+        "url": "http://arxiv.org/abs/2508.04797v1",
+        "published_date": "2025-08-06T18:15:05+00:00",
+        "updated_date": "2025-08-06T18:15:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mohab Kishawy",
+            "Ali Abdellatif Hussein",
+            "Jun Chen"
+        ],
+        "tldr": "The paper introduces RetinexDual, a Retinex theory-based framework with two sub-networks (SAMBA and FIA) for generalized UHD image restoration, outperforming existing methods in deraining, deblurring, dehazing, and LLIE tasks.",
+        "tldr_zh": "该论文提出RetinexDual，一个基于Retinex理论的框架，包含两个子网络(SAMBA和FIA)，用于通用UHD图像修复，并在去雨、去模糊、去雾和低光图像增强任务中优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Uni-cot: Towards Unified Chain-of-Thought Reasoning Across Text and Vision",
+        "summary": "Chain-of-Thought (CoT) reasoning has been widely adopted to enhance Large\nLanguage Models (LLMs) by decomposing complex tasks into simpler, sequential\nsubtasks. However, extending CoT to vision-language reasoning tasks remains\nchallenging, as it often requires interpreting transitions of visual states to\nsupport reasoning. Existing methods often struggle with this due to limited\ncapacity of modeling visual state transitions or incoherent visual trajectories\ncaused by fragmented architectures.\n  To overcome these limitations, we propose Uni-CoT, a Unified Chain-of-Thought\nframework that enables coherent and grounded multimodal reasoning within a\nsingle unified model. The key idea is to leverage a model capable of both image\nunderstanding and generation to reason over visual content and model evolving\nvisual states. However, empowering a unified model to achieve that is\nnon-trivial, given the high computational cost and the burden of training. To\naddress this, Uni-CoT introduces a novel two-level reasoning paradigm: A\nMacro-Level CoT for high-level task planning and A Micro-Level CoT for subtask\nexecution. This design significantly reduces the computational overhead.\nFurthermore, we introduce a structured training paradigm that combines\ninterleaved image-text supervision for macro-level CoT with multi-task\nobjectives for micro-level CoT. Together, these innovations allow Uni-CoT to\nperform scalable and coherent multi-modal reasoning. Furthermore, thanks to our\ndesign, all experiments can be efficiently completed using only 8 A100 GPUs\nwith 80GB VRAM each. Experimental results on reasoning-driven image generation\nbenchmark (WISE) and editing benchmarks (RISE and KRIS) indicates that Uni-CoT\ndemonstrates SOTA performance and strong generalization, establishing Uni-CoT\nas a promising solution for multi-modal reasoning. Project Page and Code:\nhttps://sais-fuxi.github.io/projects/uni-cot/",
+        "url": "http://arxiv.org/abs/2508.05606v1",
+        "published_date": "2025-08-07T17:45:17+00:00",
+        "updated_date": "2025-08-07T17:45:17+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.CL"
+        ],
+        "authors": [
+            "Luozheng Qin",
+            "Jia Gong",
+            "Yuqing Sun",
+            "Tianjiao Li",
+            "Mengping Yang",
+            "Xiaomeng Yang",
+            "Chao Qu",
+            "Zhiyu Tan",
+            "Hao Li"
+        ],
+        "tldr": "The paper introduces Uni-CoT, a unified framework for coherent multimodal reasoning by leveraging a model capable of both image understanding and generation, and introduces a two-level reasoning paradigm (Macro- and Micro-level CoT) combined with a structured training paradigm to achieve SOTA performance on reasoning-driven image generation and editing benchmarks.",
+        "tldr_zh": "本文介绍了一种统一的 Uni-CoT 框架，通过利用能够进行图像理解和生成的模型来实现连贯的多模态推理，并引入了一种两级推理范式（宏观和微观 CoT），结合结构化训练范式，在推理驱动的图像生成和编辑基准测试中实现了 SOTA 性能。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "UNCAGE: Contrastive Attention Guidance for Masked Generative Transformers in Text-to-Image Generation",
+        "summary": "Text-to-image (T2I) generation has been actively studied using Diffusion\nModels and Autoregressive Models. Recently, Masked Generative Transformers have\ngained attention as an alternative to Autoregressive Models to overcome the\ninherent limitations of causal attention and autoregressive decoding through\nbidirectional attention and parallel decoding, enabling efficient and\nhigh-quality image generation. However, compositional T2I generation remains\nchallenging, as even state-of-the-art Diffusion Models often fail to accurately\nbind attributes and achieve proper text-image alignment. While Diffusion Models\nhave been extensively studied for this issue, Masked Generative Transformers\nexhibit similar limitations but have not been explored in this context. To\naddress this, we propose Unmasking with Contrastive Attention Guidance\n(UNCAGE), a novel training-free method that improves compositional fidelity by\nleveraging attention maps to prioritize the unmasking of tokens that clearly\nrepresent individual objects. UNCAGE consistently improves performance in both\nquantitative and qualitative evaluations across multiple benchmarks and\nmetrics, with negligible inference overhead. Our code is available at\nhttps://github.com/furiosa-ai/uncage.",
+        "url": "http://arxiv.org/abs/2508.05399v1",
+        "published_date": "2025-08-07T13:51:17+00:00",
+        "updated_date": "2025-08-07T13:51:17+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Wonjun Kang",
+            "Byeongkeun Ahn",
+            "Minjae Lee",
+            "Kevin Galim",
+            "Seunghyuk Oh",
+            "Hyung Il Koo",
+            "Nam Ik Cho"
+        ],
+        "tldr": "This paper introduces UNCAGE, a training-free method for Masked Generative Transformers that improves compositional fidelity in text-to-image generation by using attention maps to guide token unmasking. It shows improvements across multiple benchmarks with minimal overhead.",
+        "tldr_zh": "本文介绍了一种名为UNCAGE的无需训练的方法，用于Masked Generative Transformers，通过使用注意力图引导token的解掩码，从而提高文本到图像生成中的组合保真度。该方法在多个基准测试中显示出改进，且开销极小。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
