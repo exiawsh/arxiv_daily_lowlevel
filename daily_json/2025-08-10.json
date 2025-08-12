@@ -1,0 +1,133 @@
+[
+    {
+        "title": "HiMat: DiT-based Ultra-High Resolution SVBRDF Generation",
+        "summary": "Creating highly detailed SVBRDFs is essential for 3D content creation. The\nrise of high-resolution text-to-image generative models, based on diffusion\ntransformers (DiT), suggests an opportunity to finetune them for this task.\nHowever, retargeting the models to produce multiple aligned SVBRDF maps instead\nof just RGB images, while achieving high efficiency and ensuring consistency\nacross different maps, remains a challenge. In this paper, we introduce HiMat:\na memory- and computation-efficient diffusion-based framework capable of\ngenerating native 4K-resolution SVBRDFs. A key challenge we address is\nmaintaining consistency across different maps in a lightweight manner, without\nrelying on training new VAEs or significantly altering the DiT backbone (which\nwould damage its prior capabilities). To tackle this, we introduce the\nCrossStitch module, a lightweight convolutional module that captures inter-map\ndependencies through localized operations. Its weights are initialized such\nthat the DiT backbone operation is unchanged before finetuning starts. HiMat\nenables generation with strong structural coherence and high-frequency details.\nResults with a large set of text prompts demonstrate the effectiveness of our\napproach for 4K SVBRDF generation. Further experiments suggest generalization\nto tasks such as intrinsic decomposition.",
+        "url": "http://arxiv.org/abs/2508.07011v1",
+        "published_date": "2025-08-09T15:16:58+00:00",
+        "updated_date": "2025-08-09T15:16:58+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.GR"
+        ],
+        "authors": [
+            "Zixiong Wang",
+            "Jian Yang",
+            "Yiwei Hu",
+            "Milos Hasan",
+            "Beibei Wang"
+        ],
+        "tldr": "The paper introduces HiMat, a diffusion transformer-based framework for generating high-resolution (4K) SVBRDFs with inter-map consistency maintained through a lightweight CrossStitch module.",
+        "tldr_zh": "本文介绍了一种基于扩散Transformer的框架HiMat，用于生成高分辨率（4K）SVBRDF，并通过轻量级的CrossStitch模块保持图间一致性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AR-GRPO: Training Autoregressive Image Generation Models via Reinforcement Learning",
+        "summary": "Inspired by the success of reinforcement learning (RL) in refining large\nlanguage models (LLMs), we propose AR-GRPO, an approach to integrate online RL\ntraining into autoregressive (AR) image generation models. We adapt the Group\nRelative Policy Optimization (GRPO) algorithm to refine the vanilla\nautoregressive models' outputs by carefully designed reward functions that\nevaluate generated images across multiple quality dimensions, including\nperceptual quality, realism, and semantic fidelity. We conduct comprehensive\nexperiments on both class-conditional (i.e., class-to-image) and\ntext-conditional (i.e., text-to-image) image generation tasks, demonstrating\nthat our RL-enhanced framework significantly improves both the image quality\nand human preference of generated images compared to the standard AR baselines.\nOur results show consistent improvements across various evaluation metrics,\nestablishing the viability of RL-based optimization for AR image generation and\nopening new avenues for controllable and high-quality image synthesis. The\nsource codes and models are available at:\nhttps://github.com/Kwai-Klear/AR-GRPO.",
+        "url": "http://arxiv.org/abs/2508.06924v1",
+        "published_date": "2025-08-09T10:37:26+00:00",
+        "updated_date": "2025-08-09T10:37:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shihao Yuan",
+            "Yahui Liu",
+            "Yang Yue",
+            "Jingyuan Zhang",
+            "Wangmeng Zuo",
+            "Qi Wang",
+            "Fuzheng Zhang",
+            "Guorui Zhou"
+        ],
+        "tldr": "This paper introduces AR-GRPO, a reinforcement learning-based approach to refine autoregressive image generation models, demonstrating improved image quality and human preference in class-conditional and text-conditional image generation tasks.",
+        "tldr_zh": "该论文介绍了 AR-GRPO，一种基于强化学习的方法来改进自回归图像生成模型，并在类别条件和文本条件图像生成任务中展示了改进的图像质量和人类偏好。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MultiRef: Controllable Image Generation with Multiple Visual References",
+        "summary": "Visual designers naturally draw inspiration from multiple visual references,\ncombining diverse elements and aesthetic principles to create artwork. However,\ncurrent image generative frameworks predominantly rely on single-source inputs\n-- either text prompts or individual reference images. In this paper, we focus\non the task of controllable image generation using multiple visual references.\nWe introduce MultiRef-bench, a rigorous evaluation framework comprising 990\nsynthetic and 1,000 real-world samples that require incorporating visual\ncontent from multiple reference images. The synthetic samples are synthetically\ngenerated through our data engine RefBlend, with 10 reference types and 33\nreference combinations. Based on RefBlend, we further construct a dataset\nMultiRef containing 38k high-quality images to facilitate further research. Our\nexperiments across three interleaved image-text models (i.e., OmniGen, ACE, and\nShow-o) and six agentic frameworks (e.g., ChatDiT and LLM + SD) reveal that\neven state-of-the-art systems struggle with multi-reference conditioning, with\nthe best model OmniGen achieving only 66.6% in synthetic samples and 79.0% in\nreal-world cases on average compared to the golden answer. These findings\nprovide valuable directions for developing more flexible and human-like\ncreative tools that can effectively integrate multiple sources of visual\ninspiration. The dataset is publicly available at: https://multiref.github.io/.",
+        "url": "http://arxiv.org/abs/2508.06905v1",
+        "published_date": "2025-08-09T09:36:21+00:00",
+        "updated_date": "2025-08-09T09:36:21+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ruoxi Chen",
+            "Dongping Chen",
+            "Siyuan Wu",
+            "Sinan Wang",
+            "Shiyun Lang",
+            "Petr Sushko",
+            "Gaoyang Jiang",
+            "Yao Wan",
+            "Ranjay Krishna"
+        ],
+        "tldr": "The paper introduces MultiRef-bench, a new benchmark and dataset for controllable image generation using multiple visual references, highlighting the limitations of current state-of-the-art models in this task.",
+        "tldr_zh": "该论文介绍了一个名为 MultiRef-bench 的新基准和数据集，用于使用多个视觉参考进行可控图像生成，并强调了当前最先进模型在此任务中的局限性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Spatio-Temporal Conditional Diffusion Models for Forecasting Future Multiple Sclerosis Lesion Masks Conditioned on Treatments",
+        "summary": "Image-based personalized medicine has the potential to transform healthcare,\nparticularly for diseases that exhibit heterogeneous progression such as\nMultiple Sclerosis (MS). In this work, we introduce the first treatment-aware\nspatio-temporal diffusion model that is able to generate future masks\ndemonstrating lesion evolution in MS. Our voxel-space approach incorporates\nmulti-modal patient data, including MRI and treatment information, to forecast\nnew and enlarging T2 (NET2) lesion masks at a future time point. Extensive\nexperiments on a multi-centre dataset of 2131 patient 3D MRIs from randomized\nclinical trials for relapsing-remitting MS demonstrate that our generative\nmodel is able to accurately predict NET2 lesion masks for patients across six\ndifferent treatments. Moreover, we demonstrate our model has the potential for\nreal-world clinical applications through downstream tasks such as future lesion\ncount and location estimation, binary lesion activity classification, and\ngenerating counterfactual future NET2 masks for several treatments with\ndifferent efficacies. This work highlights the potential of causal, image-based\ngenerative models as powerful tools for advancing data-driven prognostics in\nMS.",
+        "url": "http://arxiv.org/abs/2508.07006v1",
+        "published_date": "2025-08-09T14:56:25+00:00",
+        "updated_date": "2025-08-09T14:56:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Gian Mario Favero",
+            "Ge Ya Luo",
+            "Nima Fathi",
+            "Justin Szeto",
+            "Douglas L. Arnold",
+            "Brennan Nichyporuk",
+            "Chris Pal",
+            "Tal Arbel"
+        ],
+        "tldr": "This paper introduces a novel spatio-temporal conditional diffusion model for forecasting future Multiple Sclerosis lesion masks based on MRI and treatment information, demonstrating potential for personalized medicine.",
+        "tldr_zh": "本文介绍了一种新的时空条件扩散模型，用于基于 MRI 和治疗信息预测未来的多发性硬化症病灶掩模，展示了个性化医疗的潜力。",
+        "relevance_score": 4,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 6
+    },
+    {
+        "title": "TerraMAE: Learning Spatial-Spectral Representations from Hyperspectral Earth Observation Data via Adaptive Masked Autoencoders",
+        "summary": "Hyperspectral satellite imagery offers sub-30 m views of Earth in hundreds of\ncontiguous spectral bands, enabling fine-grained mapping of soils, crops, and\nland cover. While self-supervised Masked Autoencoders excel on RGB and low-band\nmultispectral data, they struggle to exploit the intricate spatial-spectral\ncorrelations in 200+ band hyperspectral images. We introduce TerraMAE, a novel\nHSI encoding framework specifically designed to learn highly representative\nspatial-spectral embeddings for diverse geospatial analyses. TerraMAE features\nan adaptive channel grouping strategy, based on statistical reflectance\nproperties to capture spectral similarities, and an enhanced reconstruction\nloss function that incorporates spatial and spectral quality metrics. We\ndemonstrate TerraMAE's effectiveness through superior spatial-spectral\ninformation preservation in high-fidelity image reconstruction. Furthermore, we\nvalidate its practical utility and the quality of its learned representations\nthrough strong performance on three key downstream geospatial tasks: crop\nidentification, land cover classification, and soil texture prediction.",
+        "url": "http://arxiv.org/abs/2508.07020v1",
+        "published_date": "2025-08-09T15:32:22+00:00",
+        "updated_date": "2025-08-09T15:32:22+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Tanjim Bin Faruk",
+            "Abdul Matin",
+            "Shrideep Pallickara",
+            "Sangmi Lee Pallickara"
+        ],
+        "tldr": "TerraMAE is a novel masked autoencoder architecture for hyperspectral imagery that uses adaptive channel grouping and an enhanced reconstruction loss to improve spatial-spectral representation learning, demonstrating strong performance on downstream geospatial tasks.",
+        "tldr_zh": "TerraMAE 是一种新的用于高光谱图像的掩码自动编码器架构，它使用自适应通道分组和增强的重建损失来改进空间-光谱表征学习，并在下游地理空间任务中表现出强大的性能。",
+        "relevance_score": 3,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 5
+    }
+]

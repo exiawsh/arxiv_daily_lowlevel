@@ -1,0 +1,299 @@
+[
+    {
+        "title": "OMGSR: You Only Need One Mid-timestep Guidance for Real-World Image Super-Resolution",
+        "summary": "Denoising Diffusion Probabilistic Models (DDPM) and Flow Matching (FM)\ngenerative models show promising potential for one-step Real-World Image\nSuper-Resolution (Real-ISR). Recent one-step Real-ISR models typically inject a\nLow-Quality (LQ) image latent distribution at the initial timestep. However, a\nfundamental gap exists between the LQ image latent distribution and the\nGaussian noisy latent distribution, limiting the effective utilization of\ngenerative priors. We observe that the noisy latent distribution at DDPM/FM\nmid-timesteps aligns more closely with the LQ image latent distribution. Based\non this insight, we present One Mid-timestep Guidance Real-ISR (OMGSR), a\nuniversal framework applicable to DDPM/FM-based generative models. OMGSR\ninjects the LQ image latent distribution at a pre-computed mid-timestep,\nincorporating the proposed Latent Distribution Refinement loss to alleviate the\nlatent distribution gap. We also design the Overlap-Chunked LPIPS/GAN loss to\neliminate checkerboard artifacts in image generation. Within this framework, we\ninstantiate OMGSR for DDPM/FM-based generative models with two variants:\nOMGSR-S (SD-Turbo) and OMGSR-F (FLUX.1-dev). Experimental results demonstrate\nthat OMGSR-S/F achieves balanced/excellent performance across quantitative and\nqualitative metrics at 512-resolution. Notably, OMGSR-F establishes\noverwhelming dominance in all reference metrics. We further train a\n1k-resolution OMGSR-F to match the default resolution of FLUX.1-dev, which\nyields excellent results, especially in the details of the image generation. We\nalso generate 2k-resolution images by the 1k-resolution OMGSR-F using our\ntwo-stage Tiled VAE & Diffusion.",
+        "url": "http://arxiv.org/abs/2508.08227v1",
+        "published_date": "2025-08-11T17:44:59+00:00",
+        "updated_date": "2025-08-11T17:44:59+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zhiqiang Wu",
+            "Zhaomang Sun",
+            "Tong Zhou",
+            "Bingtao Fu",
+            "Ji Cong",
+            "Yitong Dong",
+            "Huaqi Zhang",
+            "Xuan Tang",
+            "Mingsong Chen",
+            "Xian Wei"
+        ],
+        "tldr": "The paper introduces OMGSR, a novel framework for real-world image super-resolution that leverages the alignment between LQ image latent distributions and DDPM/FM mid-timesteps, achieving state-of-the-art results at various resolutions by injecting LQ latents at a pre-computed mid-timestep with refinement losses.",
+        "tldr_zh": "该论文介绍了一种名为OMGSR的新型真实世界图像超分辨率框架。该框架利用了低质量图像潜在分布与DDPM/FM中间时间步的对齐关系，通过在预先计算的中间时间步注入低质量潜在变量并使用改进损失，从而在各种分辨率下实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CD-TVD: Contrastive Diffusion for 3D Super-Resolution with Scarce High-Resolution Time-Varying Data",
+        "summary": "Large-scale scientific simulations require significant resources to generate\nhigh-resolution time-varying data (TVD). While super-resolution is an efficient\npost-processing strategy to reduce costs, existing methods rely on a large\namount of HR training data, limiting their applicability to diverse simulation\nscenarios. To address this constraint, we proposed CD-TVD, a novel framework\nthat combines contrastive learning and an improved diffusion-based\nsuper-resolution model to achieve accurate 3D super-resolution from limited\ntime-step high-resolution data. During pre-training on historical simulation\ndata, the contrastive encoder and diffusion superresolution modules learn\ndegradation patterns and detailed features of high-resolution and\nlow-resolution samples. In the training phase, the improved diffusion model\nwith a local attention mechanism is fine-tuned using only one newly generated\nhigh-resolution timestep, leveraging the degradation knowledge learned by the\nencoder. This design minimizes the reliance on large-scale high-resolution\ndatasets while maintaining the capability to recover fine-grained details.\nExperimental results on fluid and atmospheric simulation datasets confirm that\nCD-TVD delivers accurate and resource-efficient 3D super-resolution, marking a\nsignificant advancement in data augmentation for large-scale scientific\nsimulations. The code is available at\nhttps://github.com/Xin-Gao-private/CD-TVD.",
+        "url": "http://arxiv.org/abs/2508.08173v1",
+        "published_date": "2025-08-11T16:51:28+00:00",
+        "updated_date": "2025-08-11T16:51:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chongke Bi",
+            "Xin Gao",
+            "Jiangkang Deng",
+            "Guan"
+        ],
+        "tldr": "The paper introduces CD-TVD, a contrastive diffusion-based super-resolution framework that requires only limited high-resolution time-varying data for 3D super-resolution in scientific simulations, achieving accurate results with reduced resource requirements.",
+        "tldr_zh": "该论文介绍了 CD-TVD，一种基于对比扩散的超分辨率框架，只需要有限的高分辨率时变数据即可在科学模拟中实现 3D 超分辨率，并在减少资源需求的同时获得准确的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Diffusing the Blind Spot: Uterine MRI Synthesis with Diffusion Models",
+        "summary": "Despite significant progress in generative modelling, existing diffusion\nmodels often struggle to produce anatomically precise female pelvic images,\nlimiting their application in gynaecological imaging, where data scarcity and\npatient privacy concerns are critical. To overcome these barriers, we introduce\na novel diffusion-based framework for uterine MRI synthesis, integrating both\nunconditional and conditioned Denoising Diffusion Probabilistic Models (DDPMs)\nand Latent Diffusion Models (LDMs) in 2D and 3D. Our approach generates\nanatomically coherent, high fidelity synthetic images that closely mimic real\nscans and provide valuable resources for training robust diagnostic models. We\nevaluate generative quality using advanced perceptual and distributional\nmetrics, benchmarking against standard reconstruction methods, and demonstrate\nsubstantial gains in diagnostic accuracy on a key classification task. A\nblinded expert evaluation further validates the clinical realism of our\nsynthetic images. We release our models with privacy safeguards and a\ncomprehensive synthetic uterine MRI dataset to support reproducible research\nand advance equitable AI in gynaecology.",
+        "url": "http://arxiv.org/abs/2508.07903v1",
+        "published_date": "2025-08-11T12:18:23+00:00",
+        "updated_date": "2025-08-11T12:18:23+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Johanna P. Müller",
+            "Anika Knupfer",
+            "Pedro Blöss",
+            "Edoardo Berardi Vittur",
+            "Bernhard Kainz",
+            "Jana Hutter"
+        ],
+        "tldr": "This paper introduces a novel diffusion-based framework for synthesizing realistic uterine MRI images to address data scarcity and privacy concerns in gynaecological imaging, demonstrating improved diagnostic accuracy with the generated data.",
+        "tldr_zh": "本文介绍了一种新颖的基于扩散的框架，用于合成逼真的子宫MRI图像，以解决妇科成像中数据稀缺和隐私问题，并展示了使用生成的数据提高的诊断准确性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "NeeCo: Image Synthesis of Novel Instrument States Based on Dynamic and Deformable 3D Gaussian Reconstruction",
+        "summary": "Computer vision-based technologies significantly enhance surgical automation\nby advancing tool tracking, detection, and localization. However, Current\ndata-driven approaches are data-voracious, requiring large, high-quality\nlabeled image datasets, which limits their application in surgical data\nscience. Our Work introduces a novel dynamic Gaussian Splatting technique to\naddress the data scarcity in surgical image datasets. We propose a dynamic\nGaussian model to represent dynamic surgical scenes, enabling the rendering of\nsurgical instruments from unseen viewpoints and deformations with real tissue\nbackgrounds. We utilize a dynamic training adjustment strategy to address\nchallenges posed by poorly calibrated camera poses from real-world scenarios.\nAdditionally, we propose a method based on dynamic Gaussians for automatically\ngenerating annotations for our synthetic data. For evaluation, we constructed a\nnew dataset featuring seven scenes with 14,000 frames of tool and camera motion\nand tool jaw articulation, with a background of an ex-vivo porcine model. Using\nthis dataset, we synthetically replicate the scene deformation from the ground\ntruth data, allowing direct comparisons of synthetic image quality.\nExperimental results illustrate that our method generates photo-realistic\nlabeled image datasets with the highest values in Peak-Signal-to-Noise Ratio\n(29.87). We further evaluate the performance of medical-specific neural\nnetworks trained on real and synthetic images using an unseen real-world image\ndataset. Our results show that the performance of models trained on synthetic\nimages generated by the proposed method outperforms those trained with\nstate-of-the-art standard data augmentation by 10%, leading to an overall\nimprovement in model performances by nearly 15%.",
+        "url": "http://arxiv.org/abs/2508.07897v1",
+        "published_date": "2025-08-11T12:13:05+00:00",
+        "updated_date": "2025-08-11T12:13:05+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "I.3.3"
+        ],
+        "authors": [
+            "Tianle Zeng",
+            "Junlei Hu",
+            "Gerardo Loza Galindo",
+            "Sharib Ali",
+            "Duygu Sarikaya",
+            "Pietro Valdastri",
+            "Dominic Jones"
+        ],
+        "tldr": "The paper introduces a novel dynamic Gaussian Splatting technique (NeeCo) for synthesizing surgical instrument images from novel viewpoints and deformations, addressing data scarcity in surgical data science and achieving superior performance compared to standard data augmentation.",
+        "tldr_zh": "该论文介绍了一种新的动态高斯溅射技术(NeeCo)，用于合成来自新视点和形变的 surgical instrument图像，解决了手术数据科学中的数据稀缺问题，并且比标准数据增强方法表现出更优越的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DiTVR: Zero-Shot Diffusion Transformer for Video Restoration",
+        "summary": "Video restoration aims to reconstruct high quality video sequences from low\nquality inputs, addressing tasks such as super resolution, denoising, and\ndeblurring. Traditional regression based methods often produce unrealistic\ndetails and require extensive paired datasets, while recent generative\ndiffusion models face challenges in ensuring temporal consistency. We introduce\nDiTVR, a zero shot video restoration framework that couples a diffusion\ntransformer with trajectory aware attention and a wavelet guided, flow\nconsistent sampler. Unlike prior 3D convolutional or frame wise diffusion\napproaches, our attention mechanism aligns tokens along optical flow\ntrajectories, with particular emphasis on vital layers that exhibit the highest\nsensitivity to temporal dynamics. A spatiotemporal neighbour cache dynamically\nselects relevant tokens based on motion correspondences across frames. The flow\nguided sampler injects data consistency only into low-frequency bands,\npreserving high frequency priors while accelerating convergence. DiTVR\nestablishes a new zero shot state of the art on video restoration benchmarks,\ndemonstrating superior temporal consistency and detail preservation while\nremaining robust to flow noise and occlusions.",
+        "url": "http://arxiv.org/abs/2508.07811v1",
+        "published_date": "2025-08-11T09:54:45+00:00",
+        "updated_date": "2025-08-11T09:54:45+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sicheng Gao",
+            "Nancy Mehta",
+            "Zongwei Wu",
+            "Radu Timofte"
+        ],
+        "tldr": "This paper introduces DiTVR, a zero-shot video restoration framework using a diffusion transformer with trajectory-aware attention and a flow-consistent sampler, achieving state-of-the-art results with improved temporal consistency and detail preservation.",
+        "tldr_zh": "该论文介绍了DiTVR，一个零样本视频修复框架，它使用带有轨迹感知注意力机制和流一致采样器的扩散Transformer，实现了最先进的结果，并提高了时间一致性和细节保留。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Comparison Reveals Commonality: Customized Image Generation through Contrastive Inversion",
+        "summary": "The recent demand for customized image generation raises a need for\ntechniques that effectively extract the common concept from small sets of\nimages. Existing methods typically rely on additional guidance, such as text\nprompts or spatial masks, to capture the common target concept. Unfortunately,\nrelying on manually provided guidance can lead to incomplete separation of\nauxiliary features, which degrades generation quality.In this paper, we propose\nContrastive Inversion, a novel approach that identifies the common concept by\ncomparing the input images without relying on additional information. We train\nthe target token along with the image-wise auxiliary text tokens via\ncontrastive learning, which extracts the well-disentangled true semantics of\nthe target. Then we apply disentangled cross-attention fine-tuning to improve\nconcept fidelity without overfitting. Experimental results and analysis\ndemonstrate that our method achieves a balanced, high-level performance in both\nconcept representation and editing, outperforming existing techniques.",
+        "url": "http://arxiv.org/abs/2508.07755v1",
+        "published_date": "2025-08-11T08:36:29+00:00",
+        "updated_date": "2025-08-11T08:36:29+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Minseo Kim",
+            "Minchan Kwon",
+            "Dongyeun Lee",
+            "Yunho Jeon",
+            "Junmo Kim"
+        ],
+        "tldr": "The paper introduces Contrastive Inversion, a novel method for customized image generation that extracts common concepts from images without manual guidance by using contrastive learning to disentangle semantics and improve concept fidelity.",
+        "tldr_zh": "该论文介绍了对比反演（Contrastive Inversion），一种用于定制图像生成的新方法，它通过对比学习来解耦语义并提高概念保真度，从而在没有手动指导的情况下从图像中提取共同概念。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Grouped Speculative Decoding for Autoregressive Image Generation",
+        "summary": "Recently, autoregressive (AR) image models have demonstrated remarkable\ngenerative capabilities, positioning themselves as a compelling alternative to\ndiffusion models. However, their sequential nature leads to long inference\ntimes, limiting their practical scalability. In this work, we introduce Grouped\nSpeculative Decoding (GSD), a novel, training-free acceleration method for AR\nimage models. While recent studies have explored Speculative Decoding (SD) as a\nmeans to speed up AR image generation, existing approaches either provide only\nmodest acceleration or require additional training. Our in-depth analysis\nreveals a fundamental difference between language and image tokens: image\ntokens exhibit inherent redundancy and diversity, meaning multiple tokens can\nconvey valid semantics. However, traditional SD methods are designed to accept\nonly a single most-likely token, which fails to leverage this difference,\nleading to excessive false-negative rejections. To address this, we propose a\nnew SD strategy that evaluates clusters of visually valid tokens rather than\nrelying on a single target token. Additionally, we observe that static\nclustering based on embedding distance is ineffective, which motivates our\ndynamic GSD approach. Extensive experiments show that GSD accelerates AR image\nmodels by an average of 3.7x while preserving image quality-all without\nrequiring any additional training. The source code is available at\nhttps://github.com/junhyukso/GSD",
+        "url": "http://arxiv.org/abs/2508.07747v1",
+        "published_date": "2025-08-11T08:27:57+00:00",
+        "updated_date": "2025-08-11T08:27:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Junhyuk So",
+            "Juncheol Shin",
+            "Hyunho Kook",
+            "Eunhyeok Park"
+        ],
+        "tldr": "This paper introduces Grouped Speculative Decoding (GSD), a training-free acceleration method for autoregressive image generation models that leverages the redundancy and diversity of image tokens to achieve a 3.7x speedup without sacrificing image quality.",
+        "tldr_zh": "本文介绍了一种名为分组推测解码（GSD）的免训练加速自回归图像生成模型的方法。该方法利用图像令牌的冗余性和多样性，在不牺牲图像质量的前提下，实现了3.7倍的加速。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LaRender: Training-Free Occlusion Control in Image Generation via Latent Rendering",
+        "summary": "We propose a novel training-free image generation algorithm that precisely\ncontrols the occlusion relationships between objects in an image. Existing\nimage generation methods typically rely on prompts to influence occlusion,\nwhich often lack precision. While layout-to-image methods provide control over\nobject locations, they fail to address occlusion relationships explicitly.\nGiven a pre-trained image diffusion model, our method leverages volume\nrendering principles to \"render\" the scene in latent space, guided by occlusion\nrelationships and the estimated transmittance of objects. This approach does\nnot require retraining or fine-tuning the image diffusion model, yet it enables\naccurate occlusion control due to its physics-grounded foundation. In extensive\nexperiments, our method significantly outperforms existing approaches in terms\nof occlusion accuracy. Furthermore, we demonstrate that by adjusting the\nopacities of objects or concepts during rendering, our method can achieve a\nvariety of effects, such as altering the transparency of objects, the density\nof mass (e.g., forests), the concentration of particles (e.g., rain, fog), the\nintensity of light, and the strength of lens effects, etc.",
+        "url": "http://arxiv.org/abs/2508.07647v1",
+        "published_date": "2025-08-11T05:57:59+00:00",
+        "updated_date": "2025-08-11T05:57:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaohang Zhan",
+            "Dingming Liu"
+        ],
+        "tldr": "The paper introduces LaRender, a training-free image generation method that leverages latent space volume rendering for precise occlusion control, outperforming existing prompt-based and layout-to-image approaches.",
+        "tldr_zh": "该论文介绍了LaRender，一种无需训练的图像生成方法，它利用潜在空间体渲染来实现精确的遮挡控制，优于现有的基于提示和布局到图像的方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Enhanced Generative Structure Prior for Chinese Text Image Super-resolution",
+        "summary": "Faithful text image super-resolution (SR) is challenging because each\ncharacter has a unique structure and usually exhibits diverse font styles and\nlayouts. While existing methods primarily focus on English text, less attention\nhas been paid to more complex scripts like Chinese. In this paper, we introduce\na high-quality text image SR framework designed to restore the precise strokes\nof low-resolution (LR) Chinese characters. Unlike methods that rely on\ncharacter recognition priors to regularize the SR task, we propose a novel\nstructure prior that offers structure-level guidance to enhance visual quality.\nOur framework incorporates this structure prior within a StyleGAN model,\nleveraging its generative capabilities for restoration. To maintain the\nintegrity of character structures while accommodating various font styles and\nlayouts, we implement a codebook-based mechanism that restricts the generative\nspace of StyleGAN. Each code in the codebook represents the structure of a\nspecific character, while the vector $w$ in StyleGAN controls the character's\nstyle, including typeface, orientation, and location. Through the collaborative\ninteraction between the codebook and style, we generate a high-resolution\nstructure prior that aligns with LR characters both spatially and structurally.\nExperiments demonstrate that this structure prior provides robust,\ncharacter-specific guidance, enabling the accurate restoration of clear strokes\nin degraded characters, even for real-world LR Chinese text with irregular\nlayouts. Our code and pre-trained models will be available at\nhttps://github.com/csxmli2016/MARCONetPlusPlus",
+        "url": "http://arxiv.org/abs/2508.07537v1",
+        "published_date": "2025-08-11T01:34:45+00:00",
+        "updated_date": "2025-08-11T01:34:45+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaoming Li",
+            "Wangmeng Zuo",
+            "Chen Change Loy"
+        ],
+        "tldr": "The paper introduces a novel structure prior within a StyleGAN framework for Chinese text image super-resolution, using a codebook-based mechanism to preserve character structure while allowing for style variations.",
+        "tldr_zh": "该论文提出了一种新的结构先验方法，在StyleGAN框架内用于中文文本图像超分辨率，使用基于码本的机制来保持字符结构，同时允许样式变化。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Sea-Undistort: A Dataset for Through-Water Image Restoration in High Resolution Airborne Bathymetric Mapping",
+        "summary": "Accurate image-based bathymetric mapping in shallow waters remains\nchallenging due to the complex optical distortions such as wave induced\npatterns, scattering and sunglint, introduced by the dynamic water surface, the\nwater column properties, and solar illumination. In this work, we introduce\nSea-Undistort, a comprehensive synthetic dataset of 1200 paired 512x512\nthrough-water scenes rendered in Blender. Each pair comprises a distortion-free\nand a distorted view, featuring realistic water effects such as sun glint,\nwaves, and scattering over diverse seabeds. Accompanied by per-image metadata\nsuch as camera parameters, sun position, and average depth, Sea-Undistort\nenables supervised training that is otherwise infeasible in real environments.\nWe use Sea-Undistort to benchmark two state-of-the-art image restoration\nmethods alongside an enhanced lightweight diffusion-based framework with an\nearly-fusion sun-glint mask. When applied to real aerial data, the enhanced\ndiffusion model delivers more complete Digital Surface Models (DSMs) of the\nseabed, especially in deeper areas, reduces bathymetric errors, suppresses\nglint and scattering, and crisply restores fine seabed details. Dataset,\nweights, and code are publicly available at\nhttps://www.magicbathy.eu/Sea-Undistort.html.",
+        "url": "http://arxiv.org/abs/2508.07760v1",
+        "published_date": "2025-08-11T08:43:29+00:00",
+        "updated_date": "2025-08-11T08:43:29+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV",
+            "cs.GR"
+        ],
+        "authors": [
+            "Maximilian Kromer",
+            "Panagiotis Agrafiotis",
+            "Begüm Demir"
+        ],
+        "tldr": "The paper introduces Sea-Undistort, a synthetic dataset for training and benchmarking through-water image restoration methods in high-resolution bathymetric mapping, and presents an enhanced diffusion model that performs well on real aerial data.",
+        "tldr_zh": "该论文介绍了一个名为Sea-Undistort的合成数据集，用于训练和评估高分辨率测深图中水下图像恢复方法，并提出了一个增强的扩散模型，该模型在真实航空数据上表现良好。",
+        "relevance_score": 7,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "LaVieID: Local Autoregressive Diffusion Transformers for Identity-Preserving Video Creation",
+        "summary": "In this paper, we present LaVieID, a novel \\underline{l}ocal\n\\underline{a}utoregressive \\underline{vi}d\\underline{e}o diffusion framework\ndesigned to tackle the challenging \\underline{id}entity-preserving\ntext-to-video task. The key idea of LaVieID is to mitigate the loss of identity\ninformation inherent in the stochastic global generation process of diffusion\ntransformers (DiTs) from both spatial and temporal perspectives. Specifically,\nunlike the global and unstructured modeling of facial latent states in existing\nDiTs, LaVieID introduces a local router to explicitly represent latent states\nby weighted combinations of fine-grained local facial structures. This\nalleviates undesirable feature interference and encourages DiTs to capture\ndistinctive facial characteristics. Furthermore, a temporal autoregressive\nmodule is integrated into LaVieID to refine denoised latent tokens before video\ndecoding. This module divides latent tokens temporally into chunks, exploiting\ntheir long-range temporal dependencies to predict biases for rectifying tokens,\nthereby significantly enhancing inter-frame identity consistency. Consequently,\nLaVieID can generate high-fidelity personalized videos and achieve\nstate-of-the-art performance. Our code and models are available at\nhttps://github.com/ssugarwh/LaVieID.",
+        "url": "http://arxiv.org/abs/2508.07603v1",
+        "published_date": "2025-08-11T04:13:32+00:00",
+        "updated_date": "2025-08-11T04:13:32+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wenhui Song",
+            "Hanhui Li",
+            "Jiehui Huang",
+            "Panwen Hu",
+            "Yuhao Cheng",
+            "Long Chen",
+            "Yiqiang Yan",
+            "Xiaodan Liang"
+        ],
+        "tldr": "LaVieID is a novel video diffusion framework that preserves identity in text-to-video generation by using a local router to represent facial features and a temporal autoregressive module for inter-frame consistency.",
+        "tldr_zh": "LaVieID是一个新颖的视频扩散框架，通过使用局部路由器表示面部特征和时间自回归模块来实现帧间一致性，从而在文本到视频生成中保持身份。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "SOFA: Deep Learning Framework for Simulating and Optimizing Atrial Fibrillation Ablation",
+        "summary": "Atrial fibrillation (AF) is a prevalent cardiac arrhythmia often treated with\ncatheter ablation procedures, but procedural outcomes are highly variable.\nEvaluating and improving ablation efficacy is challenging due to the complex\ninteraction between patient-specific tissue and procedural factors. This paper\nasks two questions: Can AF recurrence be predicted by simulating the effects of\nprocedural parameters? How should we ablate to reduce AF recurrence? We propose\nSOFA (Simulating and Optimizing Atrial Fibrillation Ablation), a novel\ndeep-learning framework that addresses these questions. SOFA first simulates\nthe outcome of an ablation strategy by generating a post-ablation image\ndepicting scar formation, conditioned on a patient's pre-ablation LGE-MRI and\nthe specific procedural parameters used (e.g., ablation locations, duration,\ntemperature, power, and force). During this simulation, it predicts AF\nrecurrence risk. Critically, SOFA then introduces an optimization scheme that\nrefines these procedural parameters to minimize the predicted risk. Our method\nleverages a multi-modal, multi-view generator that processes 2.5D\nrepresentations of the atrium. Quantitative evaluations show that SOFA\naccurately synthesizes post-ablation images and that our optimization scheme\nleads to a 22.18\\% reduction in the model-predicted recurrence risk. To the\nbest of our knowledge, SOFA is the first framework to integrate the simulation\nof procedural effects, recurrence prediction, and parameter optimization,\noffering a novel tool for personalizing AF ablation.",
+        "url": "http://arxiv.org/abs/2508.07621v1",
+        "published_date": "2025-08-11T05:01:54+00:00",
+        "updated_date": "2025-08-11T05:01:54+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yunsung Chung",
+            "Chanho Lim",
+            "Ghassan Bidaoui",
+            "Christian Massad",
+            "Nassir Marrouche",
+            "Jihun Hamm"
+        ],
+        "tldr": "This paper introduces SOFA, a deep learning framework that simulates atrial fibrillation ablation outcomes, predicts recurrence risk, and optimizes procedural parameters to minimize this risk, using a multi-modal generator based on patient-specific data.",
+        "tldr_zh": "本文介绍了一种名为SOFA的深度学习框架，该框架可以模拟心房颤动消融的结果，预测复发风险，并优化手术参数以最小化该风险，它使用了基于患者特定数据的多模态生成器。",
+        "relevance_score": 3,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 5
+    }
+]

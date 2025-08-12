@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 09, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - August 12, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 09, 2025</p>
+            <p>August 12, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,24 +215,36 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Multivariate Fields of Experts</h2>
+            <h2 class="paper-title">OMGSR: You Only Need One Mid-timestep Guidance for Real-World Image Super-Resolution</h2>
             
-            <p class="paper-summary">We introduce the multivariate fields of experts, a new framework for the
-learning of image priors. Our model generalizes existing fields of experts
-methods by incorporating multivariate potential functions constructed via
-Moreau envelopes of the $\ell_\infty$-norm. We demonstrate the effectiveness of
-our proposal across a range of inverse problems that include image denoising,
-deblurring, compressed-sensing magnetic-resonance imaging, and computed
-tomography. The proposed approach outperforms comparable univariate models and
-achieves performance close to that of deep-learning-based regularizers while
-being significantly faster, requiring fewer parameters, and being trained on
-substantially fewer data. In addition, our model retains a relatively high
-level of interpretability due to its structured design.</p>
+            <p class="paper-summary">Denoising Diffusion Probabilistic Models (DDPM) and Flow Matching (FM)
+generative models show promising potential for one-step Real-World Image
+Super-Resolution (Real-ISR). Recent one-step Real-ISR models typically inject a
+Low-Quality (LQ) image latent distribution at the initial timestep. However, a
+fundamental gap exists between the LQ image latent distribution and the
+Gaussian noisy latent distribution, limiting the effective utilization of
+generative priors. We observe that the noisy latent distribution at DDPM/FM
+mid-timesteps aligns more closely with the LQ image latent distribution. Based
+on this insight, we present One Mid-timestep Guidance Real-ISR (OMGSR), a
+universal framework applicable to DDPM/FM-based generative models. OMGSR
+injects the LQ image latent distribution at a pre-computed mid-timestep,
+incorporating the proposed Latent Distribution Refinement loss to alleviate the
+latent distribution gap. We also design the Overlap-Chunked LPIPS/GAN loss to
+eliminate checkerboard artifacts in image generation. Within this framework, we
+instantiate OMGSR for DDPM/FM-based generative models with two variants:
+OMGSR-S (SD-Turbo) and OMGSR-F (FLUX.1-dev). Experimental results demonstrate
+that OMGSR-S/F achieves balanced/excellent performance across quantitative and
+qualitative metrics at 512-resolution. Notably, OMGSR-F establishes
+overwhelming dominance in all reference metrics. We further train a
+1k-resolution OMGSR-F to match the default resolution of FLUX.1-dev, which
+yields excellent results, especially in the details of the image generation. We
+also generate 2k-resolution images by the 1k-resolution OMGSR-F using our
+two-stage Tiled VAE & Diffusion.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a new image prior learning framework called Multivariate Fields of Experts, which generalizes existing methods using multivariate potential functions and demonstrates effectiveness across various inverse problems, achieving performance close to deep learning with advantages in speed, parameters, and interpretability.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces OMGSR, a novel framework for real-world image super-resolution that leverages the alignment between LQ image latent distributions and DDPM/FM mid-timesteps, achieving state-of-the-art results at various resolutions by injecting LQ latents at a pre-computed mid-timestep with refinement losses.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新的图像先验学习框架，名为多元专家场，它通过使用多元势函数推广了现有方法，并在各种逆问题中展示了有效性，其性能接近深度学习，但在速度、参数和可解释性方面具有优势。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为OMGSR的新型真实世界图像超分辨率框架。该框架利用了低质量图像潜在分布与DDPM/FM中间时间步的对齐关系，通过在预先计算的中间时间步注入低质量潜在变量并使用改进损失，从而在各种分辨率下实现了最先进的结果。</p>
             
 
             
@@ -242,24 +254,24 @@ level of interpretability due to its structured design.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -303,11 +315,11 @@ level of interpretability due to its structured design.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.06490v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.08227v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Stanislas Ducotterd, Michael Unser</p>
+            <p class="paper-authors">Authors: Zhiqiang Wu, Zhaomang Sun, Tong Zhou, Bingtao Fu, Ji Cong, Yitong Dong, Huaqi Zhang, Xuan Tang, Mingsong Chen, Xian Wei</p>
             
         </motion.div>
         
@@ -319,31 +331,33 @@ level of interpretability due to its structured design.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">A Classification-Aware Super-Resolution Framework for Ship Targets in SAR Imagery</h2>
+            <h2 class="paper-title">CD-TVD: Contrastive Diffusion for 3D Super-Resolution with Scarce High-Resolution Time-Varying Data</h2>
             
-            <p class="paper-summary">High-resolution imagery plays a critical role in improving the performance of
-visual recognition tasks such as classification, detection, and segmentation.
-In many domains, including remote sensing and surveillance, low-resolution
-images can limit the accuracy of automated analysis. To address this,
-super-resolution (SR) techniques have been widely adopted to attempt to
-reconstruct high-resolution images from low-resolution inputs. Related
-traditional approaches focus solely on enhancing image quality based on
-pixel-level metrics, leaving the relationship between super-resolved image
-fidelity and downstream classification performance largely underexplored. This
-raises a key question: can integrating classification objectives directly into
-the super-resolution process further improve classification accuracy? In this
-paper, we try to respond to this question by investigating the relationship
-between super-resolution and classification through the deployment of a
-specialised algorithmic strategy. We propose a novel methodology that increases
-the resolution of synthetic aperture radar imagery by optimising loss functions
-that account for both image quality and classification performance. Our
-approach improves image quality, as measured by scientifically ascertained
-image quality indicators, while also enhancing classification accuracy.</p>
+            <p class="paper-summary">Large-scale scientific simulations require significant resources to generate
+high-resolution time-varying data (TVD). While super-resolution is an efficient
+post-processing strategy to reduce costs, existing methods rely on a large
+amount of HR training data, limiting their applicability to diverse simulation
+scenarios. To address this constraint, we proposed CD-TVD, a novel framework
+that combines contrastive learning and an improved diffusion-based
+super-resolution model to achieve accurate 3D super-resolution from limited
+time-step high-resolution data. During pre-training on historical simulation
+data, the contrastive encoder and diffusion superresolution modules learn
+degradation patterns and detailed features of high-resolution and
+low-resolution samples. In the training phase, the improved diffusion model
+with a local attention mechanism is fine-tuned using only one newly generated
+high-resolution timestep, leveraging the degradation knowledge learned by the
+encoder. This design minimizes the reliance on large-scale high-resolution
+datasets while maintaining the capability to recover fine-grained details.
+Experimental results on fluid and atmospheric simulation datasets confirm that
+CD-TVD delivers accurate and resource-efficient 3D super-resolution, marking a
+significant advancement in data augmentation for large-scale scientific
+simulations. The code is available at
+https://github.com/Xin-Gao-private/CD-TVD.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a novel super-resolution method for SAR imagery that incorporates classification objectives directly into the super-resolution process, aiming to improve both image quality and classification accuracy.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CD-TVD, a contrastive diffusion-based super-resolution framework that requires only limited high-resolution time-varying data for 3D super-resolution in scientific simulations, achieving accurate results with reduced resource requirements.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新的SAR图像超分辨率方法，该方法将分类目标直接融入超分辨率过程，旨在提高图像质量和分类精度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 CD-TVD，一种基于对比扩散的超分辨率框架，只需要有限的高分辨率时变数据即可在科学模拟中实现 3D 超分辨率，并在减少资源需求的同时获得准确的结果。</p>
             
 
             
@@ -361,16 +375,16 @@ image quality indicators, while also enhancing classification accuracy.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -414,11 +428,11 @@ image quality indicators, while also enhancing classification accuracy.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.06407v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.08173v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ch Muhammad Awais, Marco Reggiannini, Davide Moroni, Oktay Karakus</p>
+            <p class="paper-authors">Authors: Chongke Bi, Xin Gao, Jiangkang Deng, Guan</p>
             
         </motion.div>
         
@@ -430,36 +444,29 @@ image quality indicators, while also enhancing classification accuracy.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Can Diffusion Models Bridge the Domain Gap in Cardiac MR Imaging?</h2>
+            <h2 class="paper-title">Diffusing the Blind Spot: Uterine MRI Synthesis with Diffusion Models</h2>
             
-            <p class="paper-summary">Magnetic resonance (MR) imaging, including cardiac MR, is prone to domain
-shift due to variations in imaging devices and acquisition protocols. This
-challenge limits the deployment of trained AI models in real-world scenarios,
-where performance degrades on unseen domains. Traditional solutions involve
-increasing the size of the dataset through ad-hoc image augmentation or
-additional online training/transfer learning, which have several limitations.
-Synthetic data offers a promising alternative, but anatomical/structural
-consistency constraints limit the effectiveness of generative models in
-creating image-label pairs. To address this, we propose a diffusion model (DM)
-trained on a source domain that generates synthetic cardiac MR images that
-resemble a given reference. The synthetic data maintains spatial and structural
-fidelity, ensuring similarity to the source domain and compatibility with the
-segmentation mask. We assess the utility of our generative approach in
-multi-centre cardiac MR segmentation, using the 2D nnU-Net, 3D nnU-Net and
-vanilla U-Net segmentation networks. We explore domain generalisation, where,
-domain-invariant segmentation models are trained on synthetic source domain
-data, and domain adaptation, where, we shift target domain data towards the
-source domain using the DM. Both strategies significantly improved segmentation
-performance on data from an unseen target domain, in terms of surface-based
-metrics (Welch's t-test, p < 0.01), compared to training segmentation models on
-real data alone. The proposed method ameliorates the need for transfer learning
-or online training to address domain shift challenges in cardiac MR image
-analysis, especially useful in data-scarce settings.</p>
+            <p class="paper-summary">Despite significant progress in generative modelling, existing diffusion
+models often struggle to produce anatomically precise female pelvic images,
+limiting their application in gynaecological imaging, where data scarcity and
+patient privacy concerns are critical. To overcome these barriers, we introduce
+a novel diffusion-based framework for uterine MRI synthesis, integrating both
+unconditional and conditioned Denoising Diffusion Probabilistic Models (DDPMs)
+and Latent Diffusion Models (LDMs) in 2D and 3D. Our approach generates
+anatomically coherent, high fidelity synthetic images that closely mimic real
+scans and provide valuable resources for training robust diagnostic models. We
+evaluate generative quality using advanced perceptual and distributional
+metrics, benchmarking against standard reconstruction methods, and demonstrate
+substantial gains in diagnostic accuracy on a key classification task. A
+blinded expert evaluation further validates the clinical realism of our
+synthetic images. We release our models with privacy safeguards and a
+comprehensive synthetic uterine MRI dataset to support reproducible research
+and advance equitable AI in gynaecology.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes using a diffusion model to generate synthetic cardiac MR images to bridge the domain gap in multi-center cardiac MR segmentation, showing significant improvement in segmentation performance on unseen target domains compared to training on real data alone.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel diffusion-based framework for synthesizing realistic uterine MRI images to address data scarcity and privacy concerns in gynaecological imaging, demonstrating improved diagnostic accuracy with the generated data.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种使用扩散模型生成合成心脏磁共振图像的方法，以弥合多中心心脏磁共振分割中的领域差距。与仅在真实数据上训练相比，该方法在未见过的目标域上的分割性能有了显著提高。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种新颖的基于扩散的框架，用于合成逼真的子宫MRI图像，以解决妇科成像中数据稀缺和隐私问题，并展示了使用生成的数据提高的诊断准确性。</p>
             
 
             
@@ -530,11 +537,11 @@ analysis, especially useful in data-scarce settings.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.06327v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.07903v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xin Ci Wong, Duygu Sarikaya, Kieran Zucker, Marc De Kamps, Nishant Ravikumar</p>
+            <p class="paper-authors">Authors: Johanna P. Müller, Anika Knupfer, Pedro Blöss, Edoardo Berardi Vittur, Bernhard Kainz, Jana Hutter</p>
             
         </motion.div>
         
@@ -546,28 +553,37 @@ analysis, especially useful in data-scarce settings.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Towards Unified Image Deblurring using a Mixture-of-Experts Decoder</h2>
+            <h2 class="paper-title">NeeCo: Image Synthesis of Novel Instrument States Based on Dynamic and Deformable 3D Gaussian Reconstruction</h2>
             
-            <p class="paper-summary">Image deblurring, removing blurring artifacts from images, is a fundamental
-task in computational photography and low-level computer vision. Existing
-approaches focus on specialized solutions tailored to particular blur types,
-thus, these solutions lack generalization. This limitation in current methods
-implies requiring multiple models to cover several blur types, which is not
-practical in many real scenarios. In this paper, we introduce the first
-all-in-one deblurring method capable of efficiently restoring images affected
-by diverse blur degradations, including global motion, local motion, blur in
-low-light conditions, and defocus blur. We propose a mixture-of-experts (MoE)
-decoding module, which dynamically routes image features based on the
-recognized blur degradation, enabling precise and efficient restoration in an
-end-to-end manner. Our unified approach not only achieves performance
-comparable to dedicated task-specific models, but also demonstrates remarkable
-robustness and generalization capabilities on unseen blur degradation
-scenarios.</p>
+            <p class="paper-summary">Computer vision-based technologies significantly enhance surgical automation
+by advancing tool tracking, detection, and localization. However, Current
+data-driven approaches are data-voracious, requiring large, high-quality
+labeled image datasets, which limits their application in surgical data
+science. Our Work introduces a novel dynamic Gaussian Splatting technique to
+address the data scarcity in surgical image datasets. We propose a dynamic
+Gaussian model to represent dynamic surgical scenes, enabling the rendering of
+surgical instruments from unseen viewpoints and deformations with real tissue
+backgrounds. We utilize a dynamic training adjustment strategy to address
+challenges posed by poorly calibrated camera poses from real-world scenarios.
+Additionally, we propose a method based on dynamic Gaussians for automatically
+generating annotations for our synthetic data. For evaluation, we constructed a
+new dataset featuring seven scenes with 14,000 frames of tool and camera motion
+and tool jaw articulation, with a background of an ex-vivo porcine model. Using
+this dataset, we synthetically replicate the scene deformation from the ground
+truth data, allowing direct comparisons of synthetic image quality.
+Experimental results illustrate that our method generates photo-realistic
+labeled image datasets with the highest values in Peak-Signal-to-Noise Ratio
+(29.87). We further evaluate the performance of medical-specific neural
+networks trained on real and synthetic images using an unseen real-world image
+dataset. Our results show that the performance of models trained on synthetic
+images generated by the proposed method outperforms those trained with
+state-of-the-art standard data augmentation by 10%, leading to an overall
+improvement in model performances by nearly 15%.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a unified image deblurring method using a Mixture-of-Experts decoder, capable of handling diverse blur types with comparable performance to specialized models and improved generalization.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a novel dynamic Gaussian Splatting technique (NeeCo) for synthesizing surgical instrument images from novel viewpoints and deformations, addressing data scarcity in surgical data science and achieving superior performance compared to standard data augmentation.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种使用混合专家解码器的统一图像去模糊方法，该方法能够处理多种模糊类型，其性能与专用模型相当，并具有更好的泛化能力。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新的动态高斯溅射技术(NeeCo)，用于合成来自新视点和形变的 surgical instrument图像，解决了手术数据科学中的数据稀缺问题，并且比标准数据增强方法表现出更优越的性能。</p>
             
 
             
@@ -577,16 +593,16 @@ scenarios.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -638,11 +654,11 @@ scenarios.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.06228v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.07897v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Daniel Feijoo, Paula Garrido-Mellado, Jaesung Rim, Alvaro Garcia, Marcos V. Conde</p>
+            <p class="paper-authors">Authors: Tianle Zeng, Junlei Hu, Gerardo Loza Galindo, Sharib Ali, Duygu Sarikaya, Pietro Valdastri, Dominic Jones</p>
             
         </motion.div>
         
@@ -654,37 +670,30 @@ scenarios.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Clinically-guided Data Synthesis for Laryngeal Lesion Detection</h2>
+            <h2 class="paper-title">DiTVR: Zero-Shot Diffusion Transformer for Video Restoration</h2>
             
-            <p class="paper-summary">Although computer-aided diagnosis (CADx) and detection (CADe) systems have
-made significant progress in various medical domains, their application is
-still limited in specialized fields such as otorhinolaryngology. In the latter,
-current assessment methods heavily depend on operator expertise, and the high
-heterogeneity of lesions complicates diagnosis, with biopsy persisting as the
-gold standard despite its substantial costs and risks. A critical bottleneck
-for specialized endoscopic CADx/e systems is the lack of well-annotated
-datasets with sufficient variability for real-world generalization. This study
-introduces a novel approach that exploits a Latent Diffusion Model (LDM)
-coupled with a ControlNet adapter to generate laryngeal endoscopic
-image-annotation pairs, guided by clinical observations. The method addresses
-data scarcity by conditioning the diffusion process to produce realistic,
-high-quality, and clinically relevant image features that capture diverse
-anatomical conditions. The proposed approach can be leveraged to expand
-training datasets for CADx/e models, empowering the assessment process in
-laryngology. Indeed, during a downstream task of detection, the addition of
-only 10% synthetic data improved the detection rate of laryngeal lesions by 9%
-when the model was internally tested and 22.1% on out-of-domain external data.
-Additionally, the realism of the generated images was evaluated by asking 5
-expert otorhinolaryngologists with varying expertise to rate their confidence
-in distinguishing synthetic from real images. This work has the potential to
-accelerate the development of automated tools for laryngeal disease diagnosis,
-offering a solution to data scarcity and demonstrating the applicability of
-synthetic data in real-world scenarios.</p>
+            <p class="paper-summary">Video restoration aims to reconstruct high quality video sequences from low
+quality inputs, addressing tasks such as super resolution, denoising, and
+deblurring. Traditional regression based methods often produce unrealistic
+details and require extensive paired datasets, while recent generative
+diffusion models face challenges in ensuring temporal consistency. We introduce
+DiTVR, a zero shot video restoration framework that couples a diffusion
+transformer with trajectory aware attention and a wavelet guided, flow
+consistent sampler. Unlike prior 3D convolutional or frame wise diffusion
+approaches, our attention mechanism aligns tokens along optical flow
+trajectories, with particular emphasis on vital layers that exhibit the highest
+sensitivity to temporal dynamics. A spatiotemporal neighbour cache dynamically
+selects relevant tokens based on motion correspondences across frames. The flow
+guided sampler injects data consistency only into low-frequency bands,
+preserving high frequency priors while accelerating convergence. DiTVR
+establishes a new zero shot state of the art on video restoration benchmarks,
+demonstrating superior temporal consistency and detail preservation while
+remaining robust to flow noise and occlusions.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a clinically-guided Latent Diffusion Model (LDM) with a ControlNet adapter to generate synthetic laryngeal endoscopic images for training CADx/e systems, showing improved lesion detection rates and high realism as evaluated by expert otorhinolaryngologists.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces DiTVR, a zero-shot video restoration framework using a diffusion transformer with trajectory-aware attention and a flow-consistent sampler, achieving state-of-the-art results with improved temporal consistency and detail preservation.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种临床指导的潜在扩散模型 (LDM)，带有 ControlNet 适配器，用于生成合成的喉内窥镜图像，以训练 CADx/e 系统。结果表明，该方法提高了病灶检测率，并且经专家耳鼻喉科医生评估，具有很高的真实感。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DiTVR，一个零样本视频修复框架，它使用带有轨迹感知注意力机制和流一致采样器的扩散Transformer，实现了最先进的结果，并提高了时间一致性和细节保留。</p>
             
 
             
@@ -694,8 +703,8 @@ synthetic data in real-world scenarios.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -710,8 +719,8 @@ synthetic data in real-world scenarios.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -755,11 +764,11 @@ synthetic data in real-world scenarios.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.06182v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.07811v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Chiara Baldini, Kaisar Kushibar, Richard Osuala, Simone Balocco, Oliver Diaz, Karim Lekadir, Leonardo S. Mattos</p>
+            <p class="paper-authors">Authors: Sicheng Gao, Nancy Mehta, Zongwei Wu, Radu Timofte</p>
             
         </motion.div>
         
@@ -771,36 +780,27 @@ synthetic data in real-world scenarios.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Fewer Denoising Steps or Cheaper Per-Step Inference: Towards Compute-Optimal Diffusion Model Deployment</h2>
+            <h2 class="paper-title">Comparison Reveals Commonality: Customized Image Generation through Contrastive Inversion</h2>
             
-            <p class="paper-summary">Diffusion models have shown remarkable success across generative tasks, yet
-their high computational demands challenge deployment on resource-limited
-platforms. This paper investigates a critical question for compute-optimal
-diffusion model deployment: Under a post-training setting without fine-tuning,
-is it more effective to reduce the number of denoising steps or to use a
-cheaper per-step inference? Intuitively, reducing the number of denoising steps
-increases the variability of the distributions across steps, making the model
-more sensitive to compression. In contrast, keeping more denoising steps makes
-the differences smaller, preserving redundancy, and making post-training
-compression more feasible. To systematically examine this, we propose PostDiff,
-a training-free framework for accelerating pre-trained diffusion models by
-reducing redundancy at both the input level and module level in a post-training
-manner. At the input level, we propose a mixed-resolution denoising scheme
-based on the insight that reducing generation resolution in early denoising
-steps can enhance low-frequency components and improve final generation
-fidelity. At the module level, we employ a hybrid module caching strategy to
-reuse computations across denoising steps. Extensive experiments and ablation
-studies demonstrate that (1) PostDiff can significantly improve the
-fidelity-efficiency trade-off of state-of-the-art diffusion models, and (2) to
-boost efficiency while maintaining decent generation fidelity, reducing
-per-step inference cost is often more effective than reducing the number of
-denoising steps. Our code is available at
-https://github.com/GATECH-EIC/PostDiff.</p>
+            <p class="paper-summary">The recent demand for customized image generation raises a need for
+techniques that effectively extract the common concept from small sets of
+images. Existing methods typically rely on additional guidance, such as text
+prompts or spatial masks, to capture the common target concept. Unfortunately,
+relying on manually provided guidance can lead to incomplete separation of
+auxiliary features, which degrades generation quality.In this paper, we propose
+Contrastive Inversion, a novel approach that identifies the common concept by
+comparing the input images without relying on additional information. We train
+the target token along with the image-wise auxiliary text tokens via
+contrastive learning, which extracts the well-disentangled true semantics of
+the target. Then we apply disentangled cross-attention fine-tuning to improve
+concept fidelity without overfitting. Experimental results and analysis
+demonstrate that our method achieves a balanced, high-level performance in both
+concept representation and editing, outperforming existing techniques.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces PostDiff, a training-free framework for accelerating diffusion models by optimizing the trade-off between denoising steps and per-step inference cost. The method involves mixed-resolution denoising and hybrid module caching to improve efficiency while maintaining fidelity.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Contrastive Inversion, a novel method for customized image generation that extracts common concepts from images without manual guidance by using contrastive learning to disentangle semantics and improve concept fidelity.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了PostDiff，一个无需训练的框架，通过优化去噪步骤和每步推理成本之间的权衡来加速扩散模型。该方法涉及混合分辨率去噪和混合模块缓存，以提高效率并保持保真度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了对比反演（Contrastive Inversion），一种用于定制图像生成的新方法，它通过对比学习来解耦语义并提高概念保真度，从而在没有手动指导的情况下从图像中提取共同概念。</p>
             
 
             
@@ -810,24 +810,24 @@ https://github.com/GATECH-EIC/PostDiff.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -871,11 +871,11 @@ https://github.com/GATECH-EIC/PostDiff.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.06160v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.07755v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhenbang Du, Yonggan Fu, Lifu Wang, Jiayi Qian, Xiao Luo, Yingyan, Lin</p>
+            <p class="paper-authors">Authors: Minseo Kim, Minchan Kwon, Dongyeun Lee, Yunho Jeon, Junmo Kim</p>
             
         </motion.div>
         
@@ -887,28 +887,33 @@ https://github.com/GATECH-EIC/PostDiff.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Improving Diagnostic Accuracy for Oral Cancer with inpainting Synthesis Lesions Generated Using Diffusion Models</h2>
+            <h2 class="paper-title">Grouped Speculative Decoding for Autoregressive Image Generation</h2>
             
-            <p class="paper-summary">In oral cancer diagnostics, the limited availability of annotated datasets
-frequently constrains the performance of diagnostic models, particularly due to
-the variability and insufficiency of training data. To address these
-challenges, this study proposed a novel approach to enhance diagnostic accuracy
-by synthesizing realistic oral cancer lesions using an inpainting technique
-with a fine-tuned diffusion model. We compiled a comprehensive dataset from
-multiple sources, featuring a variety of oral cancer images. Our method
-generated synthetic lesions that exhibit a high degree of visual fidelity to
-actual lesions, thereby significantly enhancing the performance of diagnostic
-algorithms. The results show that our classification model achieved a
-diagnostic accuracy of 0.97 in differentiating between cancerous and
-non-cancerous tissues, while our detection model accurately identified lesion
-locations with 0.85 accuracy. This method validates the potential for synthetic
-image generation in medical diagnostics and paves the way for further research
-into extending these methods to other types of cancer diagnostics.</p>
+            <p class="paper-summary">Recently, autoregressive (AR) image models have demonstrated remarkable
+generative capabilities, positioning themselves as a compelling alternative to
+diffusion models. However, their sequential nature leads to long inference
+times, limiting their practical scalability. In this work, we introduce Grouped
+Speculative Decoding (GSD), a novel, training-free acceleration method for AR
+image models. While recent studies have explored Speculative Decoding (SD) as a
+means to speed up AR image generation, existing approaches either provide only
+modest acceleration or require additional training. Our in-depth analysis
+reveals a fundamental difference between language and image tokens: image
+tokens exhibit inherent redundancy and diversity, meaning multiple tokens can
+convey valid semantics. However, traditional SD methods are designed to accept
+only a single most-likely token, which fails to leverage this difference,
+leading to excessive false-negative rejections. To address this, we propose a
+new SD strategy that evaluates clusters of visually valid tokens rather than
+relying on a single target token. Additionally, we observe that static
+clustering based on embedding distance is ineffective, which motivates our
+dynamic GSD approach. Extensive experiments show that GSD accelerates AR image
+models by an average of 3.7x while preserving image quality-all without
+requiring any additional training. The source code is available at
+https://github.com/junhyukso/GSD</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a diffusion model-based inpainting technique to generate synthetic oral cancer lesions, improving the accuracy of diagnostic models for oral cancer detection and classification.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Grouped Speculative Decoding (GSD), a training-free acceleration method for autoregressive image generation models that leverages the redundancy and diversity of image tokens to achieve a 3.7x speedup without sacrificing image quality.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种基于扩散模型的图像修复技术，用于生成合成的口腔癌病灶，从而提高口腔癌检测和分类诊断模型的准确性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为分组推测解码（GSD）的免训练加速自回归图像生成模型的方法。该方法利用图像令牌的冗余性和多样性，在不牺牲图像质量的前提下，实现了3.7倍的加速。</p>
             
 
             
@@ -926,8 +931,8 @@ into extending these methods to other types of cancer diagnostics.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -942,8 +947,8 @@ into extending these methods to other types of cancer diagnostics.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -979,11 +984,11 @@ into extending these methods to other types of cancer diagnostics.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.06151v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.07747v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yong Oh Lee, JeeEun Kim, Jung Woo Lee</p>
+            <p class="paper-authors">Authors: Junhyuk So, Juncheol Shin, Hyunho Kook, Eunhyeok Park</p>
             
         </motion.div>
         
@@ -995,30 +1000,29 @@ into extending these methods to other types of cancer diagnostics.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SwiftVideo: A Unified Framework for Few-Step Video Generation through Trajectory-Distribution Alignment</h2>
+            <h2 class="paper-title">LaRender: Training-Free Occlusion Control in Image Generation via Latent Rendering</h2>
             
-            <p class="paper-summary">Diffusion-based or flow-based models have achieved significant progress in
-video synthesis but require multiple iterative sampling steps, which incurs
-substantial computational overhead. While many distillation methods that are
-solely based on trajectory-preserving or distribution-matching have been
-developed to accelerate video generation models, these approaches often suffer
-from performance breakdown or increased artifacts under few-step settings. To
-address these limitations, we propose \textbf{\emph{SwiftVideo}}, a unified and
-stable distillation framework that combines the advantages of
-trajectory-preserving and distribution-matching strategies. Our approach
-introduces continuous-time consistency distillation to ensure precise
-preservation of ODE trajectories. Subsequently, we propose a dual-perspective
-alignment that includes distribution alignment between synthetic and real data
-along with trajectory alignment across different inference steps. Our method
-maintains high-quality video generation while substantially reducing the number
-of inference steps. Quantitative evaluations on the OpenVid-1M benchmark
-demonstrate that our method significantly outperforms existing approaches in
-few-step video generation.</p>
+            <p class="paper-summary">We propose a novel training-free image generation algorithm that precisely
+controls the occlusion relationships between objects in an image. Existing
+image generation methods typically rely on prompts to influence occlusion,
+which often lack precision. While layout-to-image methods provide control over
+object locations, they fail to address occlusion relationships explicitly.
+Given a pre-trained image diffusion model, our method leverages volume
+rendering principles to "render" the scene in latent space, guided by occlusion
+relationships and the estimated transmittance of objects. This approach does
+not require retraining or fine-tuning the image diffusion model, yet it enables
+accurate occlusion control due to its physics-grounded foundation. In extensive
+experiments, our method significantly outperforms existing approaches in terms
+of occlusion accuracy. Furthermore, we demonstrate that by adjusting the
+opacities of objects or concepts during rendering, our method can achieve a
+variety of effects, such as altering the transparency of objects, the density
+of mass (e.g., forests), the concentration of particles (e.g., rain, fog), the
+intensity of light, and the strength of lens effects, etc.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: SwiftVideo is proposed as a unified distillation framework that combines trajectory-preserving and distribution-matching strategies for few-step video generation, achieving state-of-the-art results on OpenVid-1M.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces LaRender, a training-free image generation method that leverages latent space volume rendering for precise occlusion control, outperforming existing prompt-based and layout-to-image approaches.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: SwiftVideo 提出了一个统一的蒸馏框架，结合了轨迹保持和分布匹配策略，用于少步视频生成，在 OpenVid-1M 上取得了最先进的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了LaRender，一种无需训练的图像生成方法，它利用潜在空间体渲染来实现精确的遮挡控制，优于现有的基于提示和布局到图像的方法。</p>
             
 
             
@@ -1028,24 +1032,24 @@ few-step video generation.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
+                    <span class="rating-label">Novelty:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1089,11 +1093,11 @@ few-step video generation.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.06082v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.07647v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yanxiao Sun, Jiafu Wu, Yun Cao, Chengming Xu, Yabiao Wang, Weijian Cao, Donghao Luo, Chengjie Wang, Yanwei Fu</p>
+            <p class="paper-authors">Authors: Xiaohang Zhan, Dingming Liu</p>
             
         </motion.div>
         
@@ -1105,36 +1109,35 @@ few-step video generation.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Improved Sub-Visible Particle Classification in Flow Imaging Microscopy via Generative AI-Based Image Synthesis</h2>
+            <h2 class="paper-title">Enhanced Generative Structure Prior for Chinese Text Image Super-resolution</h2>
             
-            <p class="paper-summary">Sub-visible particle analysis using flow imaging microscopy combined with
-deep learning has proven effective in identifying particle types, enabling the
-distinction of harmless components such as silicone oil from protein particles.
-However, the scarcity of available data and severe imbalance between particle
-types within datasets remain substantial hurdles when applying multi-class
-classifiers to such problems, often forcing researchers to rely on less
-effective methods. The aforementioned issue is particularly challenging for
-particle types that appear unintentionally and in lower numbers, such as
-silicone oil and air bubbles, as opposed to protein particles, where obtaining
-large numbers of images through controlled settings is comparatively
-straightforward. In this work, we develop a state-of-the-art diffusion model to
-address data imbalance by generating high-fidelity images that can augment
-training datasets, enabling the effective training of multi-class deep neural
-networks. We validate this approach by demonstrating that the generated samples
-closely resemble real particle images in terms of visual quality and structure.
-To assess the effectiveness of using diffusion-generated images in training
-datasets, we conduct large-scale experiments on a validation dataset comprising
-500,000 protein particle images and demonstrate that this approach improves
-classification performance with no negligible downside. Finally, to promote
-open research and reproducibility, we publicly release both our diffusion
-models and the trained multi-class deep neural network classifiers, along with
-a straightforward interface for easy integration into future studies, at
-https://github.com/utkuozbulak/svp-generative-ai.</p>
+            <p class="paper-summary">Faithful text image super-resolution (SR) is challenging because each
+character has a unique structure and usually exhibits diverse font styles and
+layouts. While existing methods primarily focus on English text, less attention
+has been paid to more complex scripts like Chinese. In this paper, we introduce
+a high-quality text image SR framework designed to restore the precise strokes
+of low-resolution (LR) Chinese characters. Unlike methods that rely on
+character recognition priors to regularize the SR task, we propose a novel
+structure prior that offers structure-level guidance to enhance visual quality.
+Our framework incorporates this structure prior within a StyleGAN model,
+leveraging its generative capabilities for restoration. To maintain the
+integrity of character structures while accommodating various font styles and
+layouts, we implement a codebook-based mechanism that restricts the generative
+space of StyleGAN. Each code in the codebook represents the structure of a
+specific character, while the vector $w$ in StyleGAN controls the character's
+style, including typeface, orientation, and location. Through the collaborative
+interaction between the codebook and style, we generate a high-resolution
+structure prior that aligns with LR characters both spatially and structurally.
+Experiments demonstrate that this structure prior provides robust,
+character-specific guidance, enabling the accurate restoration of clear strokes
+in degraded characters, even for real-world LR Chinese text with irregular
+layouts. Our code and pre-trained models will be available at
+https://github.com/csxmli2016/MARCONetPlusPlus</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper addresses data imbalance in flow imaging microscopy for sub-visible particle classification by using a diffusion model to generate synthetic training data, improving the performance of multi-class classifiers. The models and code are publicly available.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a novel structure prior within a StyleGAN framework for Chinese text image super-resolution, using a codebook-based mechanism to preserve character structure while allowing for style variations.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文通过使用扩散模型生成合成训练数据，解决了流动成像显微镜中亚可见颗粒分类的数据不平衡问题，从而提高了多类分类器的性能。模型和代码已公开发布。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种新的结构先验方法，在StyleGAN框架内用于中文文本图像超分辨率，使用基于码本的机制来保持字符结构，同时允许样式变化。</p>
             
 
             
@@ -1144,16 +1147,16 @@ https://github.com/utkuozbulak/svp-generative-ai.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1205,11 +1208,11 @@ https://github.com/utkuozbulak/svp-generative-ai.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.06021v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.07537v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Utku Ozbulak, Michaela Cohrs, Hristo L. Svilenov, Joris Vankerschaver, Wesley De Neve</p>
+            <p class="paper-authors">Authors: Xiaoming Li, Wangmeng Zuo, Chen Change Loy</p>
             
         </motion.div>
         
@@ -1221,33 +1224,31 @@ https://github.com/utkuozbulak/svp-generative-ai.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Bifrost-1: Bridging Multimodal LLMs and Diffusion Models with Patch-level CLIP Latents</h2>
+            <h2 class="paper-title">Sea-Undistort: A Dataset for Through-Water Image Restoration in High Resolution Airborne Bathymetric Mapping</h2>
             
-            <p class="paper-summary">There is growing interest in integrating high-fidelity visual synthesis
-capabilities into large language models (LLMs) without compromising their
-strong reasoning capabilities. Existing methods that directly train LLMs or
-bridge LLMs and diffusion models usually suffer from costly training since the
-backbone LLMs have not seen image representations during pretraining. We
-present Bifrost-1, a unified framework that bridges pretrained multimodal LLMs
-(MLLMs) and diffusion models using patch-level CLIP image embeddings as latent
-variables, which are natively aligned with the MLLM's CLIP visual encoder.
-These patch-level image embeddings are integrated into the diffusion model with
-a lightweight adaptation of its ControlNet. To retain the original multimodal
-reasoning capabilities of MLLMs, we equip the MLLM with a visual generation
-branch initialized from the original MLLM parameters when predicting the
-patch-level image embeddings. By seamlessly integrating pretrained MLLMs and
-diffusion models with patch-level CLIP latents, our framework enables
-high-fidelity controllable image generation with significant training
-efficiency. Our experiments demonstrate that Bifrost-1 achieves comparable or
-better performance than previous methods in terms of visual fidelity and
-multimodal understanding, with substantially lower compute during training. We
-also provide comprehensive ablation studies showing the effectiveness of our
-design choices.</p>
+            <p class="paper-summary">Accurate image-based bathymetric mapping in shallow waters remains
+challenging due to the complex optical distortions such as wave induced
+patterns, scattering and sunglint, introduced by the dynamic water surface, the
+water column properties, and solar illumination. In this work, we introduce
+Sea-Undistort, a comprehensive synthetic dataset of 1200 paired 512x512
+through-water scenes rendered in Blender. Each pair comprises a distortion-free
+and a distorted view, featuring realistic water effects such as sun glint,
+waves, and scattering over diverse seabeds. Accompanied by per-image metadata
+such as camera parameters, sun position, and average depth, Sea-Undistort
+enables supervised training that is otherwise infeasible in real environments.
+We use Sea-Undistort to benchmark two state-of-the-art image restoration
+methods alongside an enhanced lightweight diffusion-based framework with an
+early-fusion sun-glint mask. When applied to real aerial data, the enhanced
+diffusion model delivers more complete Digital Surface Models (DSMs) of the
+seabed, especially in deeper areas, reduces bathymetric errors, suppresses
+glint and scattering, and crisply restores fine seabed details. Dataset,
+weights, and code are publicly available at
+https://www.magicbathy.eu/Sea-Undistort.html.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: Bifrost-1 bridges pre-trained multimodal LLMs and diffusion models using patch-level CLIP embeddings, achieving efficient high-fidelity controllable image generation while preserving LLM reasoning capabilities. It offers a computationally cheaper alternative to training LLMs on image data.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Sea-Undistort, a synthetic dataset for training and benchmarking through-water image restoration methods in high-resolution bathymetric mapping, and presents an enhanced diffusion model that performs well on real aerial data.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: Bifrost-1 使用 patch-level CLIP 嵌入连接预训练的多模态 LLM 和扩散模型，在保留 LLM 推理能力的同时，实现了高效的高保真可控图像生成。它为训练 LLM 处理图像数据提供了一种计算成本更低的替代方案。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一个名为Sea-Undistort的合成数据集，用于训练和评估高分辨率测深图中水下图像恢复方法，并提出了一个增强的扩散模型，该模型在真实航空数据上表现良好。</p>
             
 
             
@@ -1257,16 +1258,16 @@ design choices.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
                 </div>
                 
                 
@@ -1307,22 +1308,22 @@ design choices.</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.05954v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.07760v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Han Lin, Jaemin Cho, Amir Zadeh, Chuan Li, Mohit Bansal</p>
+            <p class="paper-authors">Authors: Maximilian Kromer, Panagiotis Agrafiotis, Begüm Demir</p>
             
         </motion.div>
         
@@ -1334,31 +1335,31 @@ design choices.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MAISI-v2: Accelerated 3D High-Resolution Medical Image Synthesis with Rectified Flow and Region-specific Contrastive Loss</h2>
+            <h2 class="paper-title">LaVieID: Local Autoregressive Diffusion Transformers for Identity-Preserving Video Creation</h2>
             
-            <p class="paper-summary">Medical image synthesis is an important topic for both clinical and research
-applications. Recently, diffusion models have become a leading approach in this
-area. Despite their strengths, many existing methods struggle with (1) limited
-generalizability that only work for specific body regions or voxel spacings,
-(2) slow inference, which is a common issue for diffusion models, and (3) weak
-alignment with input conditions, which is a critical issue for medical imaging.
-MAISI, a previously proposed framework, addresses generalizability issues but
-still suffers from slow inference and limited condition consistency. In this
-work, we present MAISI-v2, the first accelerated 3D medical image synthesis
-framework that integrates rectified flow to enable fast and high quality
-generation. To further enhance condition fidelity, we introduce a novel
-region-specific contrastive loss to enhance the sensitivity to region of
-interest. Our experiments show that MAISI-v2 can achieve SOTA image quality
-with $33 \times$ acceleration for latent diffusion model. We also conducted a
-downstream segmentation experiment to show that the synthetic images can be
-used for data augmentation. We release our code, training details, model
-weights, and a GUI demo to facilitate reproducibility and promote further
-development within the community.</p>
+            <p class="paper-summary">In this paper, we present LaVieID, a novel \underline{l}ocal
+\underline{a}utoregressive \underline{vi}d\underline{e}o diffusion framework
+designed to tackle the challenging \underline{id}entity-preserving
+text-to-video task. The key idea of LaVieID is to mitigate the loss of identity
+information inherent in the stochastic global generation process of diffusion
+transformers (DiTs) from both spatial and temporal perspectives. Specifically,
+unlike the global and unstructured modeling of facial latent states in existing
+DiTs, LaVieID introduces a local router to explicitly represent latent states
+by weighted combinations of fine-grained local facial structures. This
+alleviates undesirable feature interference and encourages DiTs to capture
+distinctive facial characteristics. Furthermore, a temporal autoregressive
+module is integrated into LaVieID to refine denoised latent tokens before video
+decoding. This module divides latent tokens temporally into chunks, exploiting
+their long-range temporal dependencies to predict biases for rectifying tokens,
+thereby significantly enhancing inter-frame identity consistency. Consequently,
+LaVieID can generate high-fidelity personalized videos and achieve
+state-of-the-art performance. Our code and models are available at
+https://github.com/ssugarwh/LaVieID.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: MAISI-v2 accelerates 3D medical image synthesis using rectified flow and region-specific contrastive loss, achieving significant speedups and improved condition fidelity compared to previous diffusion models.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: LaVieID is a novel video diffusion framework that preserves identity in text-to-video generation by using a local router to represent facial features and a temporal autoregressive module for inter-frame consistency.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: MAISI-v2 使用修正流和特定区域对比损失加速了 3D 医学图像合成，与之前的扩散模型相比，实现了显著的加速和改进的条件保真度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: LaVieID是一个新颖的视频扩散框架，通过使用局部路由器表示面部特征和时间自回归模块来实现帧间一致性，从而在文本到视频生成中保持身份。</p>
             
 
             
@@ -1368,8 +1369,8 @@ development within the community.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -1418,22 +1419,22 @@ development within the community.</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.05772v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.07603v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Can Zhao, Pengfei Guo, Dong Yang, Yucheng Tang, Yufan He, Benjamin Simon, Mason Belue, Stephanie Harmon, Baris Turkbey, Daguang Xu</p>
+            <p class="paper-authors">Authors: Wenhui Song, Hanhui Li, Jiehui Huang, Panwen Hu, Yuhao Cheng, Long Chen, Yiqiang Yan, Xiaodan Liang</p>
             
         </motion.div>
         
@@ -1445,38 +1446,34 @@ development within the community.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">WGAST: Weakly-Supervised Generative Network for Daily 10 m Land Surface Temperature Estimation via Spatio-Temporal Fusion</h2>
+            <h2 class="paper-title">SOFA: Deep Learning Framework for Simulating and Optimizing Atrial Fibrillation Ablation</h2>
             
-            <p class="paper-summary">Urbanization, climate change, and agricultural stress are increasing the
-demand for precise and timely environmental monitoring. Land Surface
-Temperature (LST) is a key variable in this context and is retrieved from
-remote sensing satellites. However, these systems face a trade-off between
-spatial and temporal resolution. While spatio-temporal fusion methods offer
-promising solutions, few have addressed the estimation of daily LST at 10 m
-resolution. In this study, we present WGAST, a Weakly-Supervised Generative
-Network for Daily 10 m LST Estimation via Spatio-Temporal Fusion of Terra
-MODIS, Landsat 8, and Sentinel-2. WGAST is the first end-to-end deep learning
-framework designed for this task. It adopts a conditional generative
-adversarial architecture, with a generator composed of four stages: feature
-extraction, fusion, LST reconstruction, and noise suppression. The first stage
-employs a set of encoders to extract multi-level latent representations from
-the inputs, which are then fused in the second stage using cosine similarity,
-normalization, and temporal attention mechanisms. The third stage decodes the
-fused features into high-resolution LST, followed by a Gaussian filter to
-suppress high-frequency noise. Training follows a weakly supervised strategy
-based on physical averaging principles and reinforced by a PatchGAN
-discriminator. Experiments demonstrate that WGAST outperforms existing methods
-in both quantitative and qualitative evaluations. Compared to the
-best-performing baseline, on average, WGAST reduces RMSE by 17.18% and improves
-SSIM by 11.00%. Furthermore, WGAST is robust to cloud-induced LST and
-effectively captures fine-scale thermal patterns, as validated against 33
-ground-based sensors. The code is available at
-https://github.com/Sofianebouaziz1/WGAST.git.</p>
+            <p class="paper-summary">Atrial fibrillation (AF) is a prevalent cardiac arrhythmia often treated with
+catheter ablation procedures, but procedural outcomes are highly variable.
+Evaluating and improving ablation efficacy is challenging due to the complex
+interaction between patient-specific tissue and procedural factors. This paper
+asks two questions: Can AF recurrence be predicted by simulating the effects of
+procedural parameters? How should we ablate to reduce AF recurrence? We propose
+SOFA (Simulating and Optimizing Atrial Fibrillation Ablation), a novel
+deep-learning framework that addresses these questions. SOFA first simulates
+the outcome of an ablation strategy by generating a post-ablation image
+depicting scar formation, conditioned on a patient's pre-ablation LGE-MRI and
+the specific procedural parameters used (e.g., ablation locations, duration,
+temperature, power, and force). During this simulation, it predicts AF
+recurrence risk. Critically, SOFA then introduces an optimization scheme that
+refines these procedural parameters to minimize the predicted risk. Our method
+leverages a multi-modal, multi-view generator that processes 2.5D
+representations of the atrium. Quantitative evaluations show that SOFA
+accurately synthesizes post-ablation images and that our optimization scheme
+leads to a 22.18\% reduction in the model-predicted recurrence risk. To the
+best of our knowledge, SOFA is the first framework to integrate the simulation
+of procedural effects, recurrence prediction, and parameter optimization,
+offering a novel tool for personalizing AF ablation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper presents WGAST, a weakly-supervised generative network that fuses Terra MODIS, Landsat 8, and Sentinel-2 data to estimate daily 10m Land Surface Temperature (LST), showing improved accuracy and robustness compared to existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces SOFA, a deep learning framework that simulates atrial fibrillation ablation outcomes, predicts recurrence risk, and optimizes procedural parameters to minimize this risk, using a multi-modal generator based on patient-specific data.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了WGAST，一个弱监督生成网络，融合Terra MODIS、Landsat 8和Sentinel-2数据，用于估计每日10米分辨率的地表温度(LST)，与现有方法相比，显示出更高的准确性和鲁棒性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为SOFA的深度学习框架，该框架可以模拟心房颤动消融的结果，预测复发风险，并优化手术参数以最小化该风险，它使用了基于患者特定数据的多模态生成器。</p>
             
 
             
@@ -1486,8 +1483,8 @@ https://github.com/Sofianebouaziz1/WGAST.git.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(3/10)</span>
                 </div>
                 
                 
@@ -1532,10 +1529,6 @@ https://github.com/Sofianebouaziz1/WGAST.git.</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
                         <i class="fas fa-star-half-alt"></i>
                     
                 
@@ -1543,130 +1536,26 @@ https://github.com/Sofianebouaziz1/WGAST.git.</p>
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.06485v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Sofiane Bouaziz, Adel Hafiane, Raphael Canals, Rachid Nedjai</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.6000000000000001, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">InstantEdit: Text-Guided Few-Step Image Editing with Piecewise Rectified Flow</h2>
-            
-            <p class="paper-summary">We propose a fast text-guided image editing method called InstantEdit based
-on the RectifiedFlow framework, which is structured as a few-step editing
-process that preserves critical content while following closely to textual
-instructions. Our approach leverages the straight sampling trajectories of
-RectifiedFlow by introducing a specialized inversion strategy called PerRFI. To
-maintain consistent while editable results for RectifiedFlow model, we further
-propose a novel regeneration method, Inversion Latent Injection, which
-effectively reuses latent information obtained during inversion to facilitate
-more coherent and detailed regeneration. Additionally, we propose a
-Disentangled Prompt Guidance technique to balance editability with detail
-preservation, and integrate a Canny-conditioned ControlNet to incorporate
-structural cues and suppress artifacts. Evaluation on the PIE image editing
-dataset demonstrates that InstantEdit is not only fast but also achieves better
-qualitative and quantitative results compared to state-of-the-art few-step
-editing methods.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: InstantEdit is a novel text-guided image editing method based on RectifiedFlow, offering fast, few-step editing with improved content preservation and editability via specialized inversion and regeneration techniques.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: InstantEdit 是一种新的基于 RectifiedFlow 的文本引导图像编辑方法，通过专门的反演和再生技术，提供快速、少步骤的编辑，并改善了内容保留和可编辑性。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(5/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.06033v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.07621v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yiming Gong, Zhen Zhu, Minjia Zhang</p>
+            <p class="paper-authors">Authors: Yunsung Chung, Chanho Lim, Ghassan Bidaoui, Christian Massad, Nassir Marrouche, Jihun Hamm</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-12 04:25:19 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-12 04:43:39 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
