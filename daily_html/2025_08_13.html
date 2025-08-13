@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 11, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - August 13, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 11, 2025</p>
+            <p>August 13, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,33 +215,31 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Unsupervised Real-World Super-Resolution via Rectified Flow Degradation Modelling</h2>
+            <h2 class="paper-title">Unlocking the Potential of Diffusion Priors in Blind Face Restoration</h2>
             
-            <p class="paper-summary">Unsupervised real-world super-resolution (SR) faces critical challenges due
-to the complex, unknown degradation distributions in practical scenarios.
-Existing methods struggle to generalize from synthetic low-resolution (LR) and
-high-resolution (HR) image pairs to real-world data due to a significant domain
-gap. In this paper, we propose an unsupervised real-world SR method based on
-rectified flow to effectively capture and model real-world degradation,
-synthesizing LR-HR training pairs with realistic degradation. Specifically,
-given unpaired LR and HR images, we propose a novel Rectified Flow Degradation
-Module (RFDM) that introduces degradation-transformed LR (DT-LR) images as
-intermediaries. By modeling the degradation trajectory in a continuous and
-invertible manner, RFDM better captures real-world degradation and enhances the
-realism of generated LR images. Additionally, we propose a Fourier Prior Guided
-Degradation Module (FGDM) that leverages structural information embedded in
-Fourier phase components to ensure more precise modeling of real-world
-degradation. Finally, the LR images are processed by both FGDM and RFDM,
-producing final synthetic LR images with real-world degradation. The synthetic
-LR images are paired with the given HR images to train the off-the-shelf SR
-networks. Extensive experiments on real-world datasets demonstrate that our
-method significantly enhances the performance of existing SR approaches in
-real-world scenarios.</p>
+            <p class="paper-summary">Although diffusion prior is rising as a powerful solution for blind face
+restoration (BFR), the inherent gap between the vanilla diffusion model and BFR
+settings hinders its seamless adaptation. The gap mainly stems from the
+discrepancy between 1) high-quality (HQ) and low-quality (LQ) images and 2)
+synthesized and real-world images. The vanilla diffusion model is trained on
+images with no or less degradations, whereas BFR handles moderately to severely
+degraded images. Additionally, LQ images used for training are synthesized by a
+naive degradation model with limited degradation patterns, which fails to
+simulate complex and unknown degradations in real-world scenarios. In this
+work, we use a unified network FLIPNET that switches between two modes to
+resolve specific gaps. In Restoration mode, the model gradually integrates
+BFR-oriented features and face embeddings from LQ images to achieve authentic
+and faithful face restoration. In Degradation mode, the model synthesizes
+real-world like degraded images based on the knowledge learned from real-world
+degradation datasets. Extensive evaluations on benchmark datasets show that our
+model 1) outperforms previous diffusion prior based BFR methods in terms of
+authenticity and fidelity, and 2) outperforms the naive degradation model in
+modeling the real-world degradations.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes an unsupervised real-world super-resolution method using rectified flow to model complex degradations and generate realistic LR-HR training pairs, significantly enhancing SR performance on real-world datasets.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper addresses the gap between vanilla diffusion models and blind face restoration by proposing a unified network, FLIPNET, that switches between restoration and degradation modes to handle real-world degraded images and improve authenticity and fidelity.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种基于修正流的无监督真实世界超分辨率方法，该方法利用修正流来建模复杂的降质，并生成逼真的LR-HR训练对，从而显著提高真实世界数据集上的超分辨率性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文通过提出一个统一的网络FLIPNET，解决了 vanilla 扩散模型和盲脸修复之间的差距。FLIPNET 在修复和降解模式之间切换，以处理真实世界的退化图像，并提高真实性和保真度。</p>
             
 
             
@@ -251,8 +249,8 @@ real-world scenarios.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -305,18 +303,18 @@ real-world scenarios.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.07214v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.08556v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Hongyang Zhou, Xiaobin Zhu, Liuling Chen, Junyi He, Jingyan Qin, Xu-Cheng Yin, Zhang xiaoxing</p>
+            <p class="paper-authors">Authors: Yunqi Miao, Zhiyu Qu, Mingqi Gao, Changrui Chen, Jifei Song, Jungong Han, Jiankang Deng</p>
             
         </motion.div>
         
@@ -328,32 +326,30 @@ real-world scenarios.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SODiff: Semantic-Oriented Diffusion Model for JPEG Compression Artifacts Removal</h2>
+            <h2 class="paper-title">SharpXR: Structure-Aware Denoising for Pediatric Chest X-Rays</h2>
             
-            <p class="paper-summary">JPEG, as a widely used image compression standard, often introduces severe
-visual artifacts when achieving high compression ratios. Although existing deep
-learning-based restoration methods have made considerable progress, they often
-struggle to recover complex texture details, resulting in over-smoothed
-outputs. To overcome these limitations, we propose SODiff, a novel and
-efficient semantic-oriented one-step diffusion model for JPEG artifacts
-removal. Our core idea is that effective restoration hinges on providing
-semantic-oriented guidance to the pre-trained diffusion model, thereby fully
-leveraging its powerful generative prior. To this end, SODiff incorporates a
-semantic-aligned image prompt extractor (SAIPE). SAIPE extracts rich features
-from low-quality (LQ) images and projects them into an embedding space
-semantically aligned with that of the text encoder. Simultaneously, it
-preserves crucial information for faithful reconstruction. Furthermore, we
-propose a quality factor-aware time predictor that implicitly learns the
-compression quality factor (QF) of the LQ image and adaptively selects the
-optimal denoising start timestep for the diffusion process. Extensive
-experimental results show that our SODiff outperforms recent leading methods in
-both visual quality and quantitative metrics. Code is available at:
-https://github.com/frakenation/SODiff</p>
+            <p class="paper-summary">Pediatric chest X-ray imaging is essential for early diagnosis, particularly
+in low-resource settings where advanced imaging modalities are often
+inaccessible. Low-dose protocols reduce radiation exposure in children but
+introduce substantial noise that can obscure critical anatomical details.
+Conventional denoising methods often degrade fine details, compromising
+diagnostic accuracy. In this paper, we present SharpXR, a structure-aware
+dual-decoder U-Net designed to denoise low-dose pediatric X-rays while
+preserving diagnostically relevant features. SharpXR combines a
+Laplacian-guided edge-preserving decoder with a learnable fusion module that
+adaptively balances noise suppression and structural detail retention. To
+address the scarcity of paired training data, we simulate realistic
+Poisson-Gaussian noise on the Pediatric Pneumonia Chest X-ray dataset. SharpXR
+outperforms state-of-the-art baselines across all evaluation metrics while
+maintaining computational efficiency suitable for resource-constrained
+settings. SharpXR-denoised images improved downstream pneumonia classification
+accuracy from 88.8% to 92.5%, underscoring its diagnostic value in low-resource
+pediatric care.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SODiff, a semantic-oriented diffusion model for JPEG artifact removal using a semantic-aligned image prompt extractor (SAIPE) and a quality factor-aware time predictor, claiming superior performance over existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SharpXR, a structure-aware U-Net for denoising low-dose pediatric chest X-rays, which improves downstream pneumonia classification accuracy, especially beneficial in low-resource environments.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种语义导向的扩散模型SODiff，用于去除JPEG伪影。该模型使用语义对齐的图像提示提取器 (SAIPE) 和质量因子感知的时间预测器，声称优于现有方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 SharpXR，一种结构感知的 U-Net，用于对低剂量儿科胸部 X 射线进行去噪，提高了下游肺炎分类的准确性，尤其是在资源匮乏的环境中具有优势。</p>
             
 
             
@@ -363,16 +359,16 @@ https://github.com/frakenation/SODiff</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -387,8 +383,8 @@ https://github.com/frakenation/SODiff</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -424,11 +420,11 @@ https://github.com/frakenation/SODiff</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.07346v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.08518v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Tingyu Yang, Jue Gong, Jinpei Guo, Wenbo Li, Yong Guo, Yulun Zhang</p>
+            <p class="paper-authors">Authors: Ilerioluwakiiye Abolade, Emmanuel Idoko, Solomon Odelola, Promise Omoigui, Adetola Adebanwo, Aondana Iorumbur, Udunna Anazodo, Alessandro Crimi, Raymond Confidence</p>
             
         </motion.div>
         
@@ -440,367 +436,25 @@ https://github.com/frakenation/SODiff</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">HaDM-ST: Histology-Assisted Differential Modeling for Spatial Transcriptomics Generation</h2>
+            <h2 class="paper-title">Per-Query Visual Concept Learning</h2>
             
-            <p class="paper-summary">Spatial transcriptomics (ST) reveals spatial heterogeneity of gene
-expression, yet its resolution is limited by current platforms. Recent methods
-enhance resolution via H&E-stained histology, but three major challenges
-persist: (1) isolating expression-relevant features from visually complex H&E
-images; (2) achieving spatially precise multimodal alignment in diffusion-based
-frameworks; and (3) modeling gene-specific variation across expression
-channels. We propose HaDM-ST (Histology-assisted Differential Modeling for ST
-Generation), a high-resolution ST generation framework conditioned on H&E
-images and low-resolution ST. HaDM-ST includes: (i) a semantic distillation
-network to extract predictive cues from H&E; (ii) a spatial alignment module
-enforcing pixel-wise correspondence with low-resolution ST; and (iii) a
-channel-aware adversarial learner for fine-grained gene-level modeling.
-Experiments on 200 genes across diverse tissues and species show HaDM-ST
-consistently outperforms prior methods, enhancing spatial fidelity and
-gene-level coherence in high-resolution ST predictions.</p>
+            <p class="paper-summary">Visual concept learning, also known as Text-to-image personalization, is the
+process of teaching new concepts to a pretrained model. This has numerous
+applications from product placement to entertainment and personalized design.
+Here we show that many existing methods can be substantially augmented by
+adding a personalization step that is (1) specific to the prompt and noise
+seed, and (2) using two loss terms based on the self- and cross- attention,
+capturing the identity of the personalized concept. Specifically, we leverage
+PDM features - previously designed to capture identity - and show how they can
+be used to improve personalized semantic similarity. We evaluate the benefit
+that our method gains on top of six different personalization methods, and
+several base text-to-image models (both UNet- and DiT-based). We find
+significant improvements even over previous per-query personalization methods.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces HaDM-ST, a histology-assisted framework to generate high-resolution spatial transcriptomics data from low-resolution ST and H&E images, addressing challenges in feature extraction, alignment, and gene-level modeling.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a per-query personalization method for text-to-image generation that improves semantic similarity by using self- and cross-attention based losses, and outperforms existing personalization methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了HaDM-ST，一个利用组织学信息辅助的框架，可以从低分辨率空间转录组学数据和H&E图像生成高分辨率空间转录组学数据，解决了特征提取、对齐和基因水平建模方面的挑战。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.07225v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Xuepeng Liu, Zheng Jiang, Pinan Zhu, Hanyu Liu, Chao Li</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Similarity Matters: A Novel Depth-guided Network for Image Restoration and A New Dataset</h2>
-            
-            <p class="paper-summary">Image restoration has seen substantial progress in recent years. However,
-existing methods often neglect depth information, which hurts similarity
-matching, results in attention distractions in shallow depth-of-field (DoF)
-scenarios, and excessive enhancement of background content in deep DoF
-settings. To overcome these limitations, we propose a novel Depth-Guided
-Network (DGN) for image restoration, together with a novel large-scale
-high-resolution dataset. Specifically, the network consists of two interactive
-branches: a depth estimation branch that provides structural guidance, and an
-image restoration branch that performs the core restoration task. In addition,
-the image restoration branch exploits intra-object similarity through
-progressive window-based self-attention and captures inter-object similarity
-via sparse non-local attention. Through joint training, depth features
-contribute to improved restoration quality, while the enhanced visual features
-from the restoration branch in turn help refine depth estimation. Notably, we
-also introduce a new dataset for training and evaluation, consisting of 9,205
-high-resolution images from 403 plant species, with diverse depth and texture
-variations. Extensive experiments show that our method achieves
-state-of-the-art performance on several standard benchmarks and generalizes
-well to unseen plant images, demonstrating its effectiveness and robustness.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel Depth-Guided Network (DGN) for image restoration that leverages depth information for improved similarity matching and addresses limitations of existing methods. They also introduce a new high-resolution plant image dataset.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新颖的深度引导网络（DGN），用于图像恢复，利用深度信息来改进相似性匹配，并解决了现有方法的局限性。 他们还引入了一个新的高分辨率植物图像数据集。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.07211v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Junyi He, Liuling Chen, Hongyang Zhou, Zhang xiaoxing, Xiaobin Zhu, Shengxiang Yu, Jingyan Qin, Xu-Cheng Yin</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">CMAMRNet: A Contextual Mask-Aware Network Enhancing Mural Restoration Through Comprehensive Mask Guidance</h2>
-            
-            <p class="paper-summary">Murals, as invaluable cultural artifacts, face continuous deterioration from
-environmental factors and human activities. Digital restoration of murals faces
-unique challenges due to their complex degradation patterns and the critical
-need to preserve artistic authenticity. Existing learning-based methods
-struggle with maintaining consistent mask guidance throughout their networks,
-leading to insufficient focus on damaged regions and compromised restoration
-quality. We propose CMAMRNet, a Contextual Mask-Aware Mural Restoration Network
-that addresses these limitations through comprehensive mask guidance and
-multi-scale feature extraction. Our framework introduces two key components:
-(1) the Mask-Aware Up/Down-Sampler (MAUDS), which ensures consistent mask
-sensitivity across resolution scales through dedicated channel-wise feature
-selection and mask-guided feature fusion; and (2) the Co-Feature Aggregator
-(CFA), operating at both the highest and lowest resolutions to extract
-complementary features for capturing fine textures and global structures in
-degraded regions. Experimental results on benchmark datasets demonstrate that
-CMAMRNet outperforms state-of-the-art methods, effectively preserving both
-structural integrity and artistic details in restored murals. The code is
-available
-at~\href{https://github.com/CXH-Research/CMAMRNet}{https://github.com/CXH-Research/CMAMRNet}.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CMAMRNet, a novel network for mural restoration that uses mask guidance and multi-scale feature extraction to address limitations in existing methods. It outperforms state-of-the-art approaches in preserving structural integrity and artistic details.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了CMAMRNet，一种用于壁画修复的新型网络，它使用掩码引导和多尺度特征提取来解决现有方法的局限性。 在保持结构完整性和艺术细节方面，它优于最先进的方法。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.07140v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yingtie Lei, Fanghai Yi, Yihang Dong, Weihuang Liu, Xiaofeng Zhang, Zimeng Li, Chi-Man Pun, Xuhang Chen</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Perceptual Evaluation of GANs and Diffusion Models for Generating X-rays</h2>
-            
-            <p class="paper-summary">Generative image models have achieved remarkable progress in both natural and
-medical imaging. In the medical context, these techniques offer a potential
-solution to data scarcity-especially for low-prevalence anomalies that impair
-the performance of AI-driven diagnostic and segmentation tools. However,
-questions remain regarding the fidelity and clinical utility of synthetic
-images, since poor generation quality can undermine model generalizability and
-trust. In this study, we evaluate the effectiveness of state-of-the-art
-generative models-Generative Adversarial Networks (GANs) and Diffusion Models
-(DMs)-for synthesizing chest X-rays conditioned on four abnormalities:
-Atelectasis (AT), Lung Opacity (LO), Pleural Effusion (PE), and Enlarged
-Cardiac Silhouette (ECS). Using a benchmark composed of real images from the
-MIMIC-CXR dataset and synthetic images from both GANs and DMs, we conducted a
-reader study with three radiologists of varied experience. Participants were
-asked to distinguish real from synthetic images and assess the consistency
-between visual features and the target abnormality. Our results show that while
-DMs generate more visually realistic images overall, GANs can report better
-accuracy for specific conditions, such as absence of ECS. We further identify
-visual cues radiologists use to detect synthetic images, offering insights into
-the perceptual gaps in current models. These findings underscore the
-complementary strengths of GANs and DMs and point to the need for further
-refinement to ensure generative models can reliably augment training datasets
-for AI diagnostic systems.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper evaluates the perceptual realism of GANs and Diffusion Models (DMs) in generating chest X-rays with specific abnormalities, finding that DMs produce more realistic images overall, while GANs may be more accurate for certain conditions. The study identifies perceptual gaps in these models to guide future development for reliable data augmentation.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文评估了GAN和扩散模型（DMs）在生成具有特定异常的胸部X光片时的感知真实性，发现DMs总体上生成更逼真的图像，而GAN在某些情况下可能更准确。该研究发现了这些模型中的感知差距，旨在指导未来的发展，以实现可靠的数据增强。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于文本到图像生成的逐查询个性化方法，该方法通过使用基于自注意力和交叉注意力的损失来提高语义相似性，并且优于现有的个性化方法。</p>
             
 
             
@@ -818,8 +472,8 @@ for AI diagnostic systems.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -871,18 +525,236 @@ for AI diagnostic systems.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.07128v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.09045v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Gregory Schuit, Denis Parra, Cecilia Besa</p>
+            <p class="paper-authors">Authors: Ori Malca, Dvir Samuel, Gal Chechik</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">SafeFix: Targeted Model Repair via Controlled Image Generation</h2>
+            
+            <p class="paper-summary">Deep learning models for visual recognition often exhibit systematic errors
+due to underrepresented semantic subpopulations. Although existing debugging
+frameworks can pinpoint these failures by identifying key failure attributes,
+repairing the model effectively remains difficult. Current solutions often rely
+on manually designed prompts to generate synthetic training images -- an
+approach prone to distribution shift and semantic errors. To overcome these
+challenges, we introduce a model repair module that builds on an interpretable
+failure attribution pipeline. Our approach uses a conditional text-to-image
+model to generate semantically faithful and targeted images for failure cases.
+To preserve the quality and relevance of the generated samples, we further
+employ a large vision-language model (LVLM) to filter the outputs, enforcing
+alignment with the original data distribution and maintaining semantic
+consistency. By retraining vision models with this rare-case-augmented
+synthetic dataset, we significantly reduce errors associated with rare cases.
+Our experiments demonstrate that this targeted repair strategy improves model
+robustness without introducing new bugs. Code is available at
+https://github.com/oxu2/SafeFix</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: SafeFix introduces a method for repairing deep learning models by generating targeted, semantically faithful images for rare failure cases using a conditional text-to-image model, filtered by an LVLM, to improve model robustness without introducing new errors.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: SafeFix 提出了一种修复深度学习模型的方法，通过使用条件文本到图像模型生成针对罕见失败案例的有针对性的、语义上忠实的图像，并由 LVLM 过滤，以提高模型的鲁棒性，而不会引入新的错误。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.08701v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Ouyang Xu, Baoming Zhang, Ruiyu Mao, Yunhui Guo</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">CObL: Toward Zero-Shot Ordinal Layering without User Prompting</h2>
+            
+            <p class="paper-summary">Vision benefits from grouping pixels into objects and understanding their
+spatial relationships, both laterally and in depth. We capture this with a
+scene representation comprising an occlusion-ordered stack of "object layers,"
+each containing an isolated and amodally-completed object. To infer this
+representation from an image, we introduce a diffusion-based architecture named
+Concurrent Object Layers (CObL). CObL generates a stack of object layers in
+parallel, using Stable Diffusion as a prior for natural objects and
+inference-time guidance to ensure the inferred layers composite back to the
+input image. We train CObL using a few thousand synthetically-generated images
+of multi-object tabletop scenes, and we find that it zero-shot generalizes to
+photographs of real-world tabletops with varying numbers of novel objects. In
+contrast to recent models for amodal object completion, CObL reconstructs
+multiple occluded objects without user prompting and without knowing the number
+of objects beforehand. Unlike previous models for unsupervised object-centric
+representation learning, CObL is not limited to the world it was trained in.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CObL, a diffusion-based architecture that infers a scene representation as an occlusion-ordered stack of object layers from an image, generalizing to real-world tabletop scenes without user prompting.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为CObL的基于扩散的架构，它可以从图像中推断出场景的表示，该表示为一个遮挡排序的物体层堆栈，并且可以推广到现实世界的桌面场景，无需用户提示。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.08498v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Aneel Damaraju, Dean Hazineh, Todd Zickler</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-13 02:47:14 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-13 02:50:07 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
