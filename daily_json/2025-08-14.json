@@ -1,0 +1,321 @@
+[
+    {
+        "title": "RASR: Retrieval-Augmented Super Resolution for Practical Reference-based Image Restoration",
+        "summary": "Reference-based Super Resolution (RefSR) improves upon Single Image Super\nResolution (SISR) by leveraging high-quality reference images to enhance\ntexture fidelity and visual realism. However, a critical limitation of existing\nRefSR approaches is their reliance on manually curated target-reference image\npairs, which severely constrains their practicality in real-world scenarios. To\novercome this, we introduce Retrieval-Augmented Super Resolution (RASR), a new\nand practical RefSR paradigm that automatically retrieves semantically relevant\nhigh-resolution images from a reference database given only a low-quality\ninput. This enables scalable and flexible RefSR in realistic use cases, such as\nenhancing mobile photos taken in environments like zoos or museums, where\ncategory-specific reference data (e.g., animals, artworks) can be readily\ncollected or pre-curated. To facilitate research in this direction, we\nconstruct RASR-Flickr30, the first benchmark dataset designed for RASR. Unlike\nprior datasets with fixed target-reference pairs, RASR-Flickr30 provides\nper-category reference databases to support open-world retrieval. We further\npropose RASRNet, a strong baseline that combines a semantic reference retriever\nwith a diffusion-based RefSR generator. It retrieves relevant references based\non semantic similarity and employs a diffusion-based generator enhanced with\nsemantic conditioning. Experiments on RASR-Flickr30 demonstrate that RASRNet\nconsistently improves over SISR baselines, achieving +0.38 dB PSNR and -0.0131\nLPIPS, while generating more realistic textures. These findings highlight\nretrieval augmentation as a promising direction to bridge the gap between\nacademic RefSR research and real-world applicability.",
+        "url": "http://arxiv.org/abs/2508.09449v1",
+        "published_date": "2025-08-13T03:05:20+00:00",
+        "updated_date": "2025-08-13T03:05:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiaqi Yan",
+            "Shuning Xu",
+            "Xiangyu Chen",
+            "Dell Zhang",
+            "Jie Tang",
+            "Gangshan Wu",
+            "Jie Liu"
+        ],
+        "tldr": "The paper introduces RASR, a retrieval-augmented super-resolution paradigm that automatically retrieves relevant reference images for practical image restoration, along with a new benchmark dataset and a strong baseline model.",
+        "tldr_zh": "该论文介绍了RASR，一种检索增强的超分辨率范例，可自动检索相关的参考图像以进行实际的图像恢复，同时还提供了一个新的基准数据集和一个强大的基线模型。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Noise Hypernetworks: Amortizing Test-Time Compute in Diffusion Models",
+        "summary": "The new paradigm of test-time scaling has yielded remarkable breakthroughs in\nLarge Language Models (LLMs) (e.g. reasoning models) and in generative vision\nmodels, allowing models to allocate additional computation during inference to\neffectively tackle increasingly complex problems. Despite the improvements of\nthis approach, an important limitation emerges: the substantial increase in\ncomputation time makes the process slow and impractical for many applications.\nGiven the success of this paradigm and its growing usage, we seek to preserve\nits benefits while eschewing the inference overhead. In this work we propose\none solution to the critical problem of integrating test-time scaling knowledge\ninto a model during post-training. Specifically, we replace reward guided\ntest-time noise optimization in diffusion models with a Noise Hypernetwork that\nmodulates initial input noise. We propose a theoretically grounded framework\nfor learning this reward-tilted distribution for distilled generators, through\na tractable noise-space objective that maintains fidelity to the base model\nwhile optimizing for desired characteristics. We show that our approach\nrecovers a substantial portion of the quality gains from explicit test-time\noptimization at a fraction of the computational cost. Code is available at\nhttps://github.com/ExplainableML/HyperNoise",
+        "url": "http://arxiv.org/abs/2508.09968v1",
+        "published_date": "2025-08-13T17:33:37+00:00",
+        "updated_date": "2025-08-13T17:33:37+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Luca Eyring",
+            "Shyamgopal Karthik",
+            "Alexey Dosovitskiy",
+            "Nataniel Ruiz",
+            "Zeynep Akata"
+        ],
+        "tldr": "The paper introduces Noise Hypernetworks to improve the efficiency of test-time scaling in diffusion models by learning to modulate input noise, achieving similar quality gains as explicit test-time optimization with reduced computational cost.",
+        "tldr_zh": "该论文介绍了噪声超网络，通过学习调制输入噪声来提高扩散模型中测试时缩放的效率，以较低的计算成本实现了与显式测试时优化相似的质量增益。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "T-CACE: A Time-Conditioned Autoregressive Contrast Enhancement Multi-Task Framework for Contrast-Free Liver MRI Synthesis, Segmentation, and Diagnosis",
+        "summary": "Magnetic resonance imaging (MRI) is a leading modality for the diagnosis of\nliver cancer, significantly improving the classification of the lesion and\npatient outcomes. However, traditional MRI faces challenges including risks\nfrom contrast agent (CA) administration, time-consuming manual assessment, and\nlimited annotated datasets. To address these limitations, we propose a\nTime-Conditioned Autoregressive Contrast Enhancement (T-CACE) framework for\nsynthesizing multi-phase contrast-enhanced MRI (CEMRI) directly from\nnon-contrast MRI (NCMRI). T-CACE introduces three core innovations: a\nconditional token encoding (CTE) mechanism that unifies anatomical priors and\ntemporal phase information into latent representations; and a dynamic\ntime-aware attention mask (DTAM) that adaptively modulates inter-phase\ninformation flow using a Gaussian-decayed attention mechanism, ensuring smooth\nand physiologically plausible transitions across phases. Furthermore, a\nconstraint for temporal classification consistency (TCC) aligns the lesion\nclassification output with the evolution of the physiological signal, further\nenhancing diagnostic reliability. Extensive experiments on two independent\nliver MRI datasets demonstrate that T-CACE outperforms state-of-the-art methods\nin image synthesis, segmentation, and lesion classification. This framework\noffers a clinically relevant and efficient alternative to traditional\ncontrast-enhanced imaging, improving safety, diagnostic efficiency, and\nreliability for the assessment of liver lesion. The implementation of T-CACE is\npublicly available at: https://github.com/xiaojiao929/T-CACE.",
+        "url": "http://arxiv.org/abs/2508.09919v1",
+        "published_date": "2025-08-13T16:14:14+00:00",
+        "updated_date": "2025-08-13T16:14:14+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaojiao Xiao",
+            "Jianfeng Zhao",
+            "Qinmin Vivian Hu",
+            "Guanghui Wang"
+        ],
+        "tldr": "The paper proposes a Time-Conditioned Autoregressive Contrast Enhancement (T-CACE) framework to synthesize contrast-enhanced MRI from non-contrast MRI, improving liver lesion diagnosis through image synthesis, segmentation, and lesion classification.",
+        "tldr_zh": "该论文提出了一个时间条件自回归对比度增强框架 (T-CACE)，用于从非对比度 MRI 合成对比度增强 MRI，通过图像合成、分割和病灶分类来改善肝脏病灶的诊断。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Reverse Convolution and Its Applications to Image Restoration",
+        "summary": "Convolution and transposed convolution are fundamental operators widely used\nin neural networks. However, transposed convolution (a.k.a. deconvolution) does\nnot serve as a true inverse of convolution due to inherent differences in their\nmathematical formulations. To date, no reverse convolution operator has been\nestablished as a standard component in neural architectures. In this paper, we\npropose a novel depthwise reverse convolution operator as an initial attempt to\neffectively reverse depthwise convolution by formulating and solving a\nregularized least-squares optimization problem. We thoroughly investigate its\nkernel initialization, padding strategies, and other critical aspects to ensure\nits effective implementation. Building upon this operator, we further construct\na reverse convolution block by combining it with layer normalization,\n1$\\times$1 convolution, and GELU activation, forming a Transformer-like\nstructure. The proposed operator and block can directly replace conventional\nconvolution and transposed convolution layers in existing architectures,\nleading to the development of ConverseNet. Corresponding to typical image\nrestoration models such as DnCNN, SRResNet and USRNet, we train three variants\nof ConverseNet for Gaussian denoising, super-resolution and deblurring,\nrespectively. Extensive experiments demonstrate the effectiveness of the\nproposed reverse convolution operator as a basic building module. We hope this\nwork could pave the way for developing new operators in deep model design and\napplications.",
+        "url": "http://arxiv.org/abs/2508.09824v1",
+        "published_date": "2025-08-13T13:56:01+00:00",
+        "updated_date": "2025-08-13T13:56:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xuhong Huang",
+            "Shiqi Liu",
+            "Kai Zhang",
+            "Ying Tai",
+            "Jian Yang",
+            "Hui Zeng",
+            "Lei Zhang"
+        ],
+        "tldr": "This paper introduces a novel depthwise reverse convolution operator and a corresponding ConverseNet architecture for image restoration tasks like denoising, super-resolution, and deblurring, demonstrating its effectiveness as a basic building module.",
+        "tldr_zh": "本文提出了一种新的深度可分离反卷积算子以及相应的ConverseNet架构，用于图像恢复任务，如去噪、超分辨率和去模糊，并证明了其作为基本构建模块的有效性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MUJICA: Reforming SISR Models for PBR Material Super-Resolution via Cross-Map Attention",
+        "summary": "Physically Based Rendering (PBR) materials are typically characterized by\nmultiple 2D texture maps such as basecolor, normal, metallic, and roughness\nwhich encode spatially-varying bi-directional reflectance distribution function\n(SVBRDF) parameters to model surface reflectance properties and microfacet\ninteractions. Upscaling SVBRDF material is valuable for modern 3D graphics\napplications. However, existing Single Image Super-Resolution (SISR) methods\nstruggle with cross-map inconsistency, inadequate modeling of modality-specific\nfeatures, and limited generalization due to data distribution shifts. In this\nwork, we propose Multi-modal Upscaling Joint Inference via Cross-map Attention\n(MUJICA), a flexible adapter that reforms pre-trained Swin-transformer-based\nSISR models for PBR material super-resolution. MUJICA is seamlessly attached\nafter the pre-trained and frozen SISR backbone. It leverages cross-map\nattention to fuse features while preserving remarkable reconstruction ability\nof the pre-trained SISR model. Applied to SISR models such as SwinIR, DRCT, and\nHMANet, MUJICA improves PSNR, SSIM, and LPIPS scores while preserving cross-map\nconsistency. Experiments demonstrate that MUJICA enables efficient training\neven with limited resources and delivers state-of-the-art performance on PBR\nmaterial datasets.",
+        "url": "http://arxiv.org/abs/2508.09802v1",
+        "published_date": "2025-08-13T13:34:39+00:00",
+        "updated_date": "2025-08-13T13:34:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xin Du",
+            "Maoyuan Xu",
+            "Zhi Ying"
+        ],
+        "tldr": "The paper introduces MUJICA, an adapter that enhances pre-trained SISR models with cross-map attention for PBR material super-resolution, achieving state-of-the-art performance and cross-map consistency.",
+        "tldr_zh": "该论文介绍了MUJICA，一个通过跨图注意力增强预训练SISR模型以实现PBR材质超分辨率的适配器，实现了最先进的性能和跨图一致性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GSFixer: Improving 3D Gaussian Splatting with Reference-Guided Video Diffusion Priors",
+        "summary": "Reconstructing 3D scenes using 3D Gaussian Splatting (3DGS) from sparse views\nis an ill-posed problem due to insufficient information, often resulting in\nnoticeable artifacts. While recent approaches have sought to leverage\ngenerative priors to complete information for under-constrained regions, they\nstruggle to generate content that remains consistent with input observations.\nTo address this challenge, we propose GSFixer, a novel framework designed to\nimprove the quality of 3DGS representations reconstructed from sparse inputs.\nThe core of our approach is the reference-guided video restoration model, built\nupon a DiT-based video diffusion model trained on paired artifact 3DGS renders\nand clean frames with additional reference-based conditions. Considering the\ninput sparse views as references, our model integrates both 2D semantic\nfeatures and 3D geometric features of reference views extracted from the visual\ngeometry foundation model, enhancing the semantic coherence and 3D consistency\nwhen fixing artifact novel views. Furthermore, considering the lack of suitable\nbenchmarks for 3DGS artifact restoration evaluation, we present DL3DV-Res which\ncontains artifact frames rendered using low-quality 3DGS. Extensive experiments\ndemonstrate our GSFixer outperforms current state-of-the-art methods in 3DGS\nartifact restoration and sparse-view 3D reconstruction. Project page:\nhttps://github.com/GVCLab/GSFixer.",
+        "url": "http://arxiv.org/abs/2508.09667v1",
+        "published_date": "2025-08-13T09:56:28+00:00",
+        "updated_date": "2025-08-13T09:56:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xingyilang Yin",
+            "Qi Zhang",
+            "Jiahao Chang",
+            "Ying Feng",
+            "Qingnan Fan",
+            "Xi Yang",
+            "Chi-Man Pun",
+            "Huaqi Zhang",
+            "Xiaodong Cun"
+        ],
+        "tldr": "GSFixer uses a reference-guided video diffusion model to improve 3D Gaussian Splatting reconstructions from sparse views by restoring artifacts and leveraging 2D/3D features from input views. They also introduce a new dataset for evaluating 3DGS artifact restoration.",
+        "tldr_zh": "GSFixer利用参考引导的视频扩散模型，通过修复伪影并利用输入视图的2D/3D特征，来改进从稀疏视图重建的3D高斯溅射效果。他们还引入了一个新的数据集来评估3DGS伪影修复。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Generation of Indian Sign Language Letters, Numbers, and Words",
+        "summary": "Sign language, which contains hand movements, facial expressions and bodily\ngestures, is a significant medium for communicating with hard-of-hearing\npeople. A well-trained sign language community communicates easily, but those\nwho don't know sign language face significant challenges. Recognition and\ngeneration are basic communication methods between hearing and hard-of-hearing\nindividuals. Despite progress in recognition, sign language generation still\nneeds to be explored. The Progressive Growing of Generative Adversarial Network\n(ProGAN) excels at producing high-quality images, while the Self-Attention\nGenerative Adversarial Network (SAGAN) generates feature-rich images at medium\nresolutions. Balancing resolution and detail is crucial for sign language image\ngeneration. We are developing a Generative Adversarial Network (GAN) variant\nthat combines both models to generate feature-rich, high-resolution, and\nclass-conditional sign language images. Our modified Attention-based model\ngenerates high-quality images of Indian Sign Language letters, numbers, and\nwords, outperforming the traditional ProGAN in Inception Score (IS) and\nFr\\'echet Inception Distance (FID), with improvements of 3.2 and 30.12,\nrespectively. Additionally, we are publishing a large dataset incorporating\nhigh-quality images of Indian Sign Language alphabets, numbers, and 129 words.",
+        "url": "http://arxiv.org/abs/2508.09522v1",
+        "published_date": "2025-08-13T06:10:20+00:00",
+        "updated_date": "2025-08-13T06:10:20+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Ajeet Kumar Yadav",
+            "Nishant Kumar",
+            "Rathna G N"
+        ],
+        "tldr": "This paper introduces a modified GAN model combining ProGAN and SAGAN for generating high-resolution, feature-rich Indian Sign Language images. They also release a new ISL dataset and report improved Inception Score and FID compared to ProGAN.",
+        "tldr_zh": "该论文提出了一种结合ProGAN和SAGAN的改进GAN模型，用于生成高分辨率、富含特征的印度手语图像。他们还发布了一个新的ISL数据集，并报告了比ProGAN更好的Inception Score和FID。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Lung-DDPM+: Efficient Thoracic CT Image Synthesis using Diffusion Probabilistic Model",
+        "summary": "Generative artificial intelligence (AI) has been playing an important role in\nvarious domains. Leveraging its high capability to generate high-fidelity and\ndiverse synthetic data, generative AI is widely applied in diagnostic tasks,\nsuch as lung cancer diagnosis using computed tomography (CT). However, existing\ngenerative models for lung cancer diagnosis suffer from low efficiency and\nanatomical imprecision, which limit their clinical applicability. To address\nthese drawbacks, we propose Lung-DDPM+, an improved version of our previous\nmodel, Lung-DDPM. This novel approach is a denoising diffusion probabilistic\nmodel (DDPM) guided by nodule semantic layouts and accelerated by a pulmonary\nDPM-solver, enabling the method to focus on lesion areas while achieving a\nbetter trade-off between sampling efficiency and quality. Evaluation results on\nthe public LIDC-IDRI dataset suggest that the proposed method achieves\n8$\\times$ fewer FLOPs (floating point operations per second), 6.8$\\times$ lower\nGPU memory consumption, and 14$\\times$ faster sampling compared to Lung-DDPM.\nMoreover, it maintains comparable sample quality to both Lung-DDPM and other\nstate-of-the-art (SOTA) generative models in two downstream segmentation tasks.\nWe also conducted a Visual Turing Test by an experienced radiologist, showing\nthe advanced quality and fidelity of synthetic samples generated by the\nproposed method. These experimental results demonstrate that Lung-DDPM+ can\neffectively generate high-quality thoracic CT images with lung nodules,\nhighlighting its potential for broader applications, such as general tumor\nsynthesis and lesion generation in medical imaging. The code and pretrained\nmodels are available at https://github.com/Manem-Lab/Lung-DDPM-PLUS.",
+        "url": "http://arxiv.org/abs/2508.09327v1",
+        "published_date": "2025-08-12T20:30:50+00:00",
+        "updated_date": "2025-08-12T20:30:50+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yifan Jiang",
+            "Ahmad Shariftabrizi",
+            "Venkata SK. Manem"
+        ],
+        "tldr": "Lung-DDPM+ improves upon Lung-DDPM for efficient and high-quality thoracic CT image synthesis with lung nodules using a DPM-solver and nodule semantic layouts, demonstrating significant speed and memory improvements while maintaining comparable image quality.",
+        "tldr_zh": "Lung-DDPM+ 改进了 Lung-DDPM，通过使用 DPM 求解器和结节语义布局，实现了高效、高质量的胸部 CT 图像合成，并在保持图像质量的同时，显著提高了速度并降低了内存消耗。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Enhancing Diffusion Face Generation with Contrastive Embeddings and SegFormer Guidance",
+        "summary": "We present a benchmark of diffusion models for human face generation on a\nsmall-scale CelebAMask-HQ dataset, evaluating both unconditional and\nconditional pipelines. Our study compares UNet and DiT architectures for\nunconditional generation and explores LoRA-based fine-tuning of pretrained\nStable Diffusion models as a separate experiment. Building on the\nmulti-conditioning approach of Giambi and Lisanti, which uses both attribute\nvectors and segmentation masks, our main contribution is the integration of an\nInfoNCE loss for attribute embedding and the adoption of a SegFormer-based\nsegmentation encoder. These enhancements improve the semantic alignment and\ncontrollability of attribute-guided synthesis. Our results highlight the\neffectiveness of contrastive embedding learning and advanced segmentation\nencoding for controlled face generation in limited data settings.",
+        "url": "http://arxiv.org/abs/2508.09847v1",
+        "published_date": "2025-08-13T14:27:47+00:00",
+        "updated_date": "2025-08-13T14:27:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dhruvraj Singh Rawat",
+            "Enggen Sherpa",
+            "Rishikesan Kirupanantha",
+            "Tin Hoang"
+        ],
+        "tldr": "This paper explores enhancements to diffusion models for face generation using contrastive embeddings and SegFormer guidance, improving semantic alignment and controllability in limited data scenarios.",
+        "tldr_zh": "该论文探索了使用对比嵌入和SegFormer指导来增强扩散模型在人脸生成方面的性能，从而在有限数据场景中改善语义对齐和可控性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 6,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "NegFaceDiff: The Power of Negative Context in Identity-Conditioned Diffusion for Synthetic Face Generation",
+        "summary": "The use of synthetic data as an alternative to authentic datasets in face\nrecognition (FR) development has gained significant attention, addressing\nprivacy, ethical, and practical concerns associated with collecting and using\nauthentic data. Recent state-of-the-art approaches have proposed\nidentity-conditioned diffusion models to generate identity-consistent face\nimages, facilitating their use in training FR models. However, these methods\noften lack explicit sampling mechanisms to enforce inter-class separability,\nleading to identity overlap in the generated data and, consequently, suboptimal\nFR performance. In this work, we introduce NegFaceDiff, a novel sampling method\nthat incorporates negative conditions into the identity-conditioned diffusion\nprocess. NegFaceDiff enhances identity separation by leveraging negative\nconditions that explicitly guide the model away from unwanted features while\npreserving intra-class consistency. Extensive experiments demonstrate that\nNegFaceDiff significantly improves the identity consistency and separability of\ndata generated by identity-conditioned diffusion models. Specifically, identity\nseparability, measured by the Fisher Discriminant Ratio (FDR), increases from\n2.427 to 5.687. These improvements are reflected in FR systems trained on the\nNegFaceDiff dataset, which outperform models trained on data generated without\nnegative conditions across multiple benchmarks.",
+        "url": "http://arxiv.org/abs/2508.09661v1",
+        "published_date": "2025-08-13T09:45:09+00:00",
+        "updated_date": "2025-08-13T09:45:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Eduarda Caldeira",
+            "Naser Damer",
+            "Fadi Boutros"
+        ],
+        "tldr": "The paper introduces NegFaceDiff, a novel sampling method for identity-conditioned diffusion models that incorporates negative conditions to improve identity separability in synthetic face generation, leading to better face recognition performance.",
+        "tldr_zh": "该论文介绍了NegFaceDiff，一种新颖的身份条件扩散模型的采样方法，该方法结合了负条件来提高合成面部生成中的身份可分离性，从而提高人脸识别性能。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Images Speak Louder Than Scores: Failure Mode Escape for Enhancing Generative Quality",
+        "summary": "Diffusion models have achieved remarkable progress in class-to-image\ngeneration. However, we observe that despite impressive FID scores,\nstate-of-the-art models often generate distorted or low-quality images,\nespecially in certain classes. This gap arises because FID evaluates global\ndistribution alignment, while ignoring the perceptual quality of individual\nsamples. We further examine the role of CFG, a common technique used to enhance\ngeneration quality. While effective in improving metrics and suppressing\noutliers, CFG can introduce distribution shift and visual artifacts due to its\nmisalignment with both training objectives and user expectations. In this work,\nwe propose FaME, a training-free and inference-efficient method for improving\nperceptual quality. FaME uses an image quality assessment model to identify\nlow-quality generations and stores their sampling trajectories. These failure\nmodes are then used as negative guidance to steer future sampling away from\npoor-quality regions. Experiments on ImageNet demonstrate that FaME brings\nconsistent improvements in visual quality without compromising FID. FaME also\nshows the potential to be extended to improve text-to-image generation.",
+        "url": "http://arxiv.org/abs/2508.09598v1",
+        "published_date": "2025-08-13T08:28:14+00:00",
+        "updated_date": "2025-08-13T08:28:14+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jie Shao",
+            "Ke Zhu",
+            "Minghao Fu",
+            "Guo-hua Wang",
+            "Jianxin Wu"
+        ],
+        "tldr": "This paper introduces FaME, a training-free method that leverages image quality assessment to improve the perceptual quality of generated images by steering sampling trajectories away from low-quality regions.",
+        "tldr_zh": "该论文介绍了一种名为FaME的无需训练的方法，该方法利用图像质量评估来提高生成图像的感知质量，通过引导采样轨迹远离低质量区域。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "WEC-DG: Multi-Exposure Wavelet Correction Method Guided by Degradation Description",
+        "summary": "Multi-exposure correction technology is essential for restoring images\naffected by insufficient or excessive lighting, enhancing the visual experience\nby improving brightness, contrast, and detail richness. However, current\nmulti-exposure correction methods often encounter challenges in addressing\nintra-class variability caused by diverse lighting conditions, shooting\nenvironments, and weather factors, particularly when processing images captured\nat a single exposure level. To enhance the adaptability of these models under\ncomplex imaging conditions, this paper proposes a Wavelet-based Exposure\nCorrection method with Degradation Guidance (WEC-DG). Specifically, we\nintroduce a degradation descriptor within the Exposure Consistency Alignment\nModule (ECAM) at both ends of the processing pipeline to ensure exposure\nconsistency and achieve final alignment. This mechanism effectively addresses\nmiscorrected exposure anomalies caused by existing methods' failure to\nrecognize 'blurred' exposure degradation. Additionally, we investigate the\nlight-detail decoupling properties of the wavelet transform to design the\nExposure Restoration and Detail Reconstruction Module (EDRM), which processes\nlow-frequency information related to exposure enhancement before utilizing\nhigh-frequency information as a prior guide for reconstructing spatial domain\ndetails. This serial processing strategy guarantees precise light correction\nand enhances detail recovery. Extensive experiments conducted on multiple\npublic datasets demonstrate that the proposed method outperforms existing\nalgorithms, achieving significant performance improvements and validating its\neffectiveness and practical applicability.",
+        "url": "http://arxiv.org/abs/2508.09565v1",
+        "published_date": "2025-08-13T07:31:44+00:00",
+        "updated_date": "2025-08-13T07:31:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ming Zhao",
+            "Pingping Liu",
+            "Tongshun Zhang",
+            "Zhe Zhang"
+        ],
+        "tldr": "This paper introduces WEC-DG, a wavelet-based multi-exposure correction method guided by a degradation descriptor to improve image restoration under complex lighting conditions, demonstrating superior performance on public datasets.",
+        "tldr_zh": "本文提出了一种基于小波的多重曝光校正方法WEC-DG，该方法通过退化描述符引导，以改善复杂光照条件下的图像恢复，并在公共数据集上展示了卓越的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "From Large Angles to Consistent Faces: Identity-Preserving Video Generation via Mixture of Facial Experts",
+        "summary": "Current video generation models struggle with identity preservation under\nlarge facial angles, primarily facing two challenges: the difficulty in\nexploring an effective mechanism to integrate identity features into DiT\nstructure, and the lack of targeted coverage of large facial angles in existing\nopen-source video datasets. To address these, we present two key innovations.\nFirst, we introduce a Mixture of Facial Experts (MoFE) that dynamically\ncombines complementary cues from three specialized experts, each designed to\ncapture distinct but mutually reinforcing aspects of facial attributes. The\nidentity expert captures cross-pose identity-sensitive features, the semantic\nexpert extracts high-level visual semantxics, and the detail expert preserves\npixel-level features (e.g., skin texture, color gradients). Furthermore, to\nmitigate dataset limitations, we have tailored a data processing pipeline\ncentered on two key aspects: Face Constraints and Identity Consistency. Face\nConstraints ensure facial angle diversity and a high proportion of facial\nregions, while Identity Consistency preserves coherent person-specific features\nacross temporal sequences, collectively addressing the scarcity of large facial\nangles and identity-stable training data in existing datasets. Leveraging this\npipeline, we have curated and refined a Large Face Angles (LFA) Dataset from\nexisting open-source human video datasets, comprising 460K video clips with\nannotated facial angles. Experimental results on the LFA benchmark demonstrate\nthat our method, empowered by the LFA dataset, significantly outperforms prior\nSOTA methods in face similarity, face FID, and CLIP semantic alignment. The\ncode and dataset will be made publicly available at\nhttps://github.com/rain152/LFA-Video-Generation.",
+        "url": "http://arxiv.org/abs/2508.09476v1",
+        "published_date": "2025-08-13T04:10:16+00:00",
+        "updated_date": "2025-08-13T04:10:16+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuji Wang",
+            "Moran Li",
+            "Xiaobin Hu",
+            "Ran Yi",
+            "Jiangning Zhang",
+            "Chengming Xu",
+            "Weijian Cao",
+            "Yabiao Wang",
+            "Chengjie Wang",
+            "Lizhuang Ma"
+        ],
+        "tldr": "This paper introduces a Mixture of Facial Experts (MoFE) and a Large Face Angles (LFA) dataset to improve identity preservation in video generation, especially under large facial angles, outperforming SOTA methods.",
+        "tldr_zh": "该论文提出了一种面部专家混合模型 (MoFE) 和一个大面部角度 (LFA) 数据集，旨在提高视频生成中身份的保持能力，特别是在大面部角度下，并且性能优于当前最优方法。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
