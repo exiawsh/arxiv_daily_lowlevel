@@ -1,0 +1,397 @@
+[
+    {
+        "title": "NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale",
+        "summary": "Prevailing autoregressive (AR) models for text-to-image generation either\nrely on heavy, computationally-intensive diffusion models to process continuous\nimage tokens, or employ vector quantization (VQ) to obtain discrete tokens with\nquantization loss. In this paper, we push the autoregressive paradigm forward\nwith NextStep-1, a 14B autoregressive model paired with a 157M flow matching\nhead, training on discrete text tokens and continuous image tokens with\nnext-token prediction objectives. NextStep-1 achieves state-of-the-art\nperformance for autoregressive models in text-to-image generation tasks,\nexhibiting strong capabilities in high-fidelity image synthesis. Furthermore,\nour method shows strong performance in image editing, highlighting the power\nand versatility of our unified approach. To facilitate open research, we will\nrelease our code and models to the community.",
+        "url": "http://arxiv.org/abs/2508.10711v1",
+        "published_date": "2025-08-14T14:54:22+00:00",
+        "updated_date": "2025-08-14T14:54:22+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "NextStep Team",
+            "Chunrui Han",
+            "Guopeng Li",
+            "Jingwei Wu",
+            "Quan Sun",
+            "Yan Cai",
+            "Yuang Peng",
+            "Zheng Ge",
+            "Deyu Zhou",
+            "Haomiao Tang",
+            "Hongyu Zhou",
+            "Kenkun Liu",
+            "Ailin Huang",
+            "Bin Wang",
+            "Changxin Miao",
+            "Deshan Sun",
+            "En Yu",
+            "Fukun Yin",
+            "Gang Yu",
+            "Hao Nie",
+            "Haoran Lv",
+            "Hanpeng Hu",
+            "Jia Wang",
+            "Jian Zhou",
+            "Jianjian Sun",
+            "Kaijun Tan",
+            "Kang An",
+            "Kangheng Lin",
+            "Liang Zhao",
+            "Mei Chen",
+            "Peng Xing",
+            "Rui Wang",
+            "Shiyu Liu",
+            "Shutao Xia",
+            "Tianhao You",
+            "Wei Ji",
+            "Xianfang Zeng",
+            "Xin Han",
+            "Xuelin Zhang",
+            "Yana Wei",
+            "Yanming Xu",
+            "Yimin Jiang",
+            "Yingming Wang",
+            "Yu Zhou",
+            "Yucheng Han",
+            "Ziyang Meng",
+            "Binxing Jiao",
+            "Daxin Jiang",
+            "Xiangyu Zhang",
+            "Yibo Zhu"
+        ],
+        "tldr": "NextStep-1 is a 14B autoregressive model using continuous image tokens with a flow matching head that achieves state-of-the-art text-to-image generation and image editing capabilities, with code and models to be released.",
+        "tldr_zh": "NextStep-1是一个140亿参数的自回归模型，它使用连续图像tokens和一个flow matching head，实现了最先进的文本到图像生成和图像编辑能力，代码和模型将被发布。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Object Fidelity Diffusion for Remote Sensing Image Generation",
+        "summary": "High-precision controllable remote sensing image generation is both\nmeaningful and challenging. Existing diffusion models often produce\nlow-fidelity images due to their inability to adequately capture morphological\ndetails, which may affect the robustness and reliability of object detection\nmodels. To enhance the accuracy and fidelity of generated objects in remote\nsensing, this paper proposes Object Fidelity Diffusion (OF-Diff), which\neffectively improves the fidelity of generated objects. Specifically, we are\nthe first to extract the prior shapes of objects based on the layout for\ndiffusion models in remote sensing. Then, we introduce a dual-branch diffusion\nmodel with diffusion consistency loss, which can generate high-fidelity remote\nsensing images without providing real images during the sampling phase.\nFurthermore, we introduce DDPO to fine-tune the diffusion process, making the\ngenerated remote sensing images more diverse and semantically consistent.\nComprehensive experiments demonstrate that OF-Diff outperforms state-of-the-art\nmethods in the remote sensing across key quality metrics. Notably, the\nperformance of several polymorphic and small object classes shows significant\nimprovement. For instance, the mAP increases by 8.3%, 7.7%, and 4.0% for\nairplanes, ships, and vehicles, respectively.",
+        "url": "http://arxiv.org/abs/2508.10801v1",
+        "published_date": "2025-08-14T16:24:11+00:00",
+        "updated_date": "2025-08-14T16:24:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziqi Ye",
+            "Shuran Ma",
+            "Jie Yang",
+            "Xiaoyi Yang",
+            "Ziyang Gong",
+            "Xue Yang",
+            "Haipeng Wang"
+        ],
+        "tldr": "The paper introduces Object Fidelity Diffusion (OF-Diff), a novel approach for generating high-fidelity remote sensing images by incorporating object shape priors and a dual-branch diffusion model with diffusion consistency loss, outperforming existing methods, particularly for polymorphic and small objects.",
+        "tldr_zh": "该论文介绍了对象保真度扩散 (OF-Diff)，一种通过结合对象形状先验和具有扩散一致性损失的双分支扩散模型来生成高保真遥感图像的新方法，该方法优于现有方法，尤其是在多态性和小型对象方面。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Ultra-High-Definition Reference-Based Landmark Image Super-Resolution with Generative Diffusion Prior",
+        "summary": "Reference-based Image Super-Resolution (RefSR) aims to restore a\nlow-resolution (LR) image by utilizing the semantic and texture information\nfrom an additional reference high-resolution (reference HR) image. Existing\ndiffusion-based RefSR methods are typically built upon ControlNet, which\nstruggles to effectively align the information between the LR image and the\nreference HR image. Moreover, current RefSR datasets suffer from limited\nresolution and poor image quality, resulting in the reference images lacking\nsufficient fine-grained details to support high-quality restoration. To\novercome the limitations above, we propose TriFlowSR, a novel framework that\nexplicitly achieves pattern matching between the LR image and the reference HR\nimage. Meanwhile, we introduce Landmark-4K, the first RefSR dataset for\nUltra-High-Definition (UHD) landmark scenarios. Considering the UHD scenarios\nwith real-world degradation, in TriFlowSR, we design a Reference Matching\nStrategy to effectively match the LR image with the reference HR image.\nExperimental results show that our approach can better utilize the semantic and\ntexture information of the reference HR image compared to previous methods. To\nthe best of our knowledge, we propose the first diffusion-based RefSR pipeline\nfor ultra-high definition landmark scenarios under real-world degradation. Our\ncode and model will be available at https://github.com/nkicsl/TriFlowSR.",
+        "url": "http://arxiv.org/abs/2508.10779v1",
+        "published_date": "2025-08-14T16:04:39+00:00",
+        "updated_date": "2025-08-14T16:04:39+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zhenning Shi",
+            "Zizheng Yan",
+            "Yuhang Yu",
+            "Clara Xue",
+            "Jingyu Zhuang",
+            "Qi Zhang",
+            "Jinwei Chen",
+            "Tao Li",
+            "Qingnan Fan"
+        ],
+        "tldr": "The paper introduces TriFlowSR, a novel diffusion-based reference image super-resolution framework for ultra-high-definition landmark images, along with a new Landmark-4K dataset, explicitly addressing pattern matching and real-world degradation.",
+        "tldr_zh": "该论文介绍了 TriFlowSR，一个用于超高清地标图像的基于扩散的参考图像超分辨率新框架，以及一个新的 Landmark-4K 数据集，明确地解决了模式匹配和真实世界的退化问题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Physics-Informed Joint Multi-TE Super-Resolution with Implicit Neural Representation for Robust Fetal T2 Mapping",
+        "summary": "T2 mapping in fetal brain MRI has the potential to improve characterization\nof the developing brain, especially at mid-field (0.55T), where T2 decay is\nslower. However, this is challenging as fetal MRI acquisition relies on\nmultiple motion-corrupted stacks of thick slices, requiring slice-to-volume\nreconstruction (SVR) to estimate a high-resolution (HR) 3D volume. Currently,\nT2 mapping involves repeated acquisitions of these stacks at each echo time\n(TE), leading to long scan times and high sensitivity to motion. We tackle this\nchallenge with a method that jointly reconstructs data across TEs, addressing\nsevere motion. Our approach combines implicit neural representations with a\nphysics-informed regularization that models T2 decay, enabling information\nsharing across TEs while preserving anatomical and quantitative T2 fidelity. We\ndemonstrate state-of-the-art performance on simulated fetal brain and in vivo\nadult datasets with fetal-like motion. We also present the first in vivo fetal\nT2 mapping results at 0.55T. Our study shows potential for reducing the number\nof stacks per TE in T2 mapping by leveraging anatomical redundancy.",
+        "url": "http://arxiv.org/abs/2508.10680v1",
+        "published_date": "2025-08-14T14:24:10+00:00",
+        "updated_date": "2025-08-14T14:24:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Busra Bulut",
+            "Maik Dannecker",
+            "Thomas Sanchez",
+            "Sara Neves Silva",
+            "Vladyslav Zalevskyi",
+            "Steven Jia",
+            "Jean-Baptiste Ledoux",
+            "Guillaume Auzias",
+            "François Rousseau",
+            "Jana Hutter",
+            "Daniel Rueckert",
+            "Meritxell Bach Cuadra"
+        ],
+        "tldr": "This paper introduces a physics-informed implicit neural representation method for joint multi-TE super-resolution in fetal brain MRI T2 mapping, demonstrating improved robustness to motion and reduced scan times.",
+        "tldr_zh": "本文提出了一种基于物理信息的隐式神经表示方法，用于胎儿脑部MRI T2 mapping中的多TE联合超分辨率重建，提高了对运动的鲁棒性并减少了扫描时间。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Increasing the Utility of Synthetic Images through Chamfer Guidance",
+        "summary": "Conditional image generative models hold considerable promise to produce\ninfinite amounts of synthetic training data. Yet, recent progress in generation\nquality has come at the expense of generation diversity, limiting the utility\nof these models as a source of synthetic training data. Although guidance-based\napproaches have been introduced to improve the utility of generated data by\nfocusing on quality or diversity, the (implicit or explicit) utility functions\noftentimes disregard the potential distribution shift between synthetic and\nreal data. In this work, we introduce Chamfer Guidance: a training-free\nguidance approach which leverages a handful of real exemplar images to\ncharacterize the quality and diversity of synthetic data. We show that by\nleveraging the proposed Chamfer Guidance, we can boost the diversity of the\ngenerations w.r.t. a dataset of real images while maintaining or improving the\ngeneration quality on ImageNet-1k and standard geo-diversity benchmarks. Our\napproach achieves state-of-the-art few-shot performance with as little as 2\nexemplar real images, obtaining 96.4\\% in terms of precision, and 86.4\\% in\nterms of distributional coverage, which increase to 97.5\\% and 92.7\\%,\nrespectively, when using 32 real images. We showcase the benefits of the\nChamfer Guidance generation by training downstream image classifiers on\nsynthetic data, achieving accuracy boost of up to 15\\% for in-distribution over\nthe baselines, and up to 16\\% in out-of-distribution. Furthermore, our approach\ndoes not require using the unconditional model, and thus obtains a 31\\%\nreduction in FLOPs w.r.t. classifier-free-guidance-based approaches at sampling\ntime.",
+        "url": "http://arxiv.org/abs/2508.10631v1",
+        "published_date": "2025-08-14T13:31:24+00:00",
+        "updated_date": "2025-08-14T13:31:24+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Nicola Dall'Asen",
+            "Xiaofeng Zhang",
+            "Reyhane Askari Hemmat",
+            "Melissa Hall",
+            "Jakob Verbeek",
+            "Adriana Romero-Soriano",
+            "Michal Drozdzal"
+        ],
+        "tldr": "The paper introduces Chamfer Guidance, a training-free method to improve the utility of synthetic images by leveraging a few real images to guide generation towards better quality and diversity, leading to significant improvements in downstream classification tasks.",
+        "tldr_zh": "该论文介绍了一种名为 Chamfer Guidance 的免训练方法，通过利用少量真实图像来指导生成过程，从而提高合成图像的效用，并显著改进下游分类任务的性能，旨在提高生成图像的质量和多样性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Fourier-Guided Attention Upsampling for Image Super-Resolution",
+        "summary": "We propose Frequency-Guided Attention (FGA), a lightweight upsampling module\nfor single image super-resolution. Conventional upsamplers, such as Sub-Pixel\nConvolution, are efficient but frequently fail to reconstruct high-frequency\ndetails and introduce aliasing artifacts. FGA addresses these issues by\nintegrating (1) a Fourier feature-based Multi-Layer Perceptron (MLP) for\npositional frequency encoding, (2) a cross-resolution Correlation Attention\nLayer for adaptive spatial alignment, and (3) a frequency-domain L1 loss for\nspectral fidelity supervision. Adding merely 0.3M parameters, FGA consistently\nenhances performance across five diverse super-resolution backbones in both\nlightweight and full-capacity scenarios. Experimental results demonstrate\naverage PSNR gains of 0.12~0.14 dB and improved frequency-domain consistency by\nup to 29%, particularly evident on texture-rich datasets. Visual and spectral\nevaluations confirm FGA's effectiveness in reducing aliasing and preserving\nfine details, establishing it as a practical, scalable alternative to\ntraditional upsampling methods.",
+        "url": "http://arxiv.org/abs/2508.10616v1",
+        "published_date": "2025-08-14T13:13:17+00:00",
+        "updated_date": "2025-08-14T13:13:17+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Daejune Choi",
+            "Youchan No",
+            "Jinhyung Lee",
+            "Duksu Kim"
+        ],
+        "tldr": "The paper introduces a Fourier-Guided Attention (FGA) upsampling module for single image super-resolution, which uses Fourier features, cross-resolution attention, and frequency-domain loss to improve detail reconstruction and reduce aliasing with minimal overhead.",
+        "tldr_zh": "本文提出了一种用于单图像超分辨率的傅里叶引导注意力(FGA)上采样模块。该模块利用傅里叶特征、跨分辨率注意力和频域损失，以最小的开销改善细节重建并减少混叠。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Trajectory-aware Shifted State Space Models for Online Video Super-Resolution",
+        "summary": "Online video super-resolution (VSR) is an important technique for many\nreal-world video processing applications, which aims to restore the current\nhigh-resolution video frame based on temporally previous frames. Most of the\nexisting online VSR methods solely employ one neighboring previous frame to\nachieve temporal alignment, which limits long-range temporal modeling of\nvideos. Recently, state space models (SSMs) have been proposed with linear\ncomputational complexity and a global receptive field, which significantly\nimprove computational efficiency and performance. In this context, this paper\npresents a novel online VSR method based on Trajectory-aware Shifted SSMs\n(TS-Mamba), leveraging both long-term trajectory modeling and low-complexity\nMamba to achieve efficient spatio-temporal information aggregation.\nSpecifically, TS-Mamba first constructs the trajectories within a video to\nselect the most similar tokens from the previous frames. Then, a\nTrajectory-aware Shifted Mamba Aggregation (TSMA) module consisting of proposed\nshifted SSMs blocks is employed to aggregate the selected tokens. The shifted\nSSMs blocks are designed based on Hilbert scannings and corresponding shift\noperations to compensate for scanning losses and strengthen the spatial\ncontinuity of Mamba. Additionally, we propose a trajectory-aware loss function\nto supervise the trajectory generation, ensuring the accuracy of token\nselection when training our model. Extensive experiments on three widely used\nVSR test datasets demonstrate that compared with six online VSR benchmark\nmodels, our TS-Mamba achieves state-of-the-art performance in most cases and\nover 22.7\\% complexity reduction (in MACs). The source code for TS-Mamba will\nbe available at https://github.com.",
+        "url": "http://arxiv.org/abs/2508.10453v1",
+        "published_date": "2025-08-14T08:42:15+00:00",
+        "updated_date": "2025-08-14T08:42:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qiang Zhu",
+            "Xiandong Meng",
+            "Yuxian Jiang",
+            "Fan Zhang",
+            "David Bull",
+            "Shuyuan Zhu",
+            "Bing Zeng"
+        ],
+        "tldr": "This paper introduces TS-Mamba, a novel online video super-resolution method using trajectory-aware shifted state space models, achieving state-of-the-art performance with reduced complexity.",
+        "tldr_zh": "本文介绍了一种新的在线视频超分辨率方法 TS-Mamba，它使用轨迹感知移位状态空间模型，以降低的复杂度实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Towards Spatially Consistent Image Generation: On Incorporating Intrinsic Scene Properties into Diffusion Models",
+        "summary": "Image generation models trained on large datasets can synthesize high-quality\nimages but often produce spatially inconsistent and distorted images due to\nlimited information about the underlying structures and spatial layouts. In\nthis work, we leverage intrinsic scene properties (e.g., depth, segmentation\nmaps) that provide rich information about the underlying scene, unlike prior\napproaches that solely rely on image-text pairs or use intrinsics as\nconditional inputs. Our approach aims to co-generate both images and their\ncorresponding intrinsics, enabling the model to implicitly capture the\nunderlying scene structure and generate more spatially consistent and realistic\nimages. Specifically, we first extract rich intrinsic scene properties from a\nlarge image dataset with pre-trained estimators, eliminating the need for\nadditional scene information or explicit 3D representations. We then aggregate\nvarious intrinsic scene properties into a single latent variable using an\nautoencoder. Building upon pre-trained large-scale Latent Diffusion Models\n(LDMs), our method simultaneously denoises the image and intrinsic domains by\ncarefully sharing mutual information so that the image and intrinsic reflect\neach other without degrading image quality. Experimental results demonstrate\nthat our method corrects spatial inconsistencies and produces a more natural\nlayout of scenes while maintaining the fidelity and textual alignment of the\nbase model (e.g., Stable Diffusion).",
+        "url": "http://arxiv.org/abs/2508.10382v1",
+        "published_date": "2025-08-14T06:26:36+00:00",
+        "updated_date": "2025-08-14T06:26:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hyundo Lee",
+            "Suhyung Choi",
+            "Byoung-Tak Zhang",
+            "Inwoo Hwang"
+        ],
+        "tldr": "This paper introduces a diffusion model that co-generates images and their intrinsic scene properties (e.g., depth, segmentation), leading to spatially consistent and realistic image generation.",
+        "tldr_zh": "本文介绍了一种扩散模型，该模型共同生成图像及其内在场景属性（例如，深度、分割），从而实现空间一致且逼真的图像生成。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Exploiting Discriminative Codebook Prior for Autoregressive Image Generation",
+        "summary": "Advanced discrete token-based autoregressive image generation systems first\ntokenize images into sequences of token indices with a codebook, and then model\nthese sequences in an autoregressive paradigm. While autoregressive generative\nmodels are trained only on index values, the prior encoded in the codebook,\nwhich contains rich token similarity information, is not exploited. Recent\nstudies have attempted to incorporate this prior by performing naive k-means\nclustering on the tokens, helping to facilitate the training of generative\nmodels with a reduced codebook. However, we reveal that k-means clustering\nperforms poorly in the codebook feature space due to inherent issues, including\ntoken space disparity and centroid distance inaccuracy. In this work, we\npropose the Discriminative Codebook Prior Extractor (DCPE) as an alternative to\nk-means clustering for more effectively mining and utilizing the token\nsimilarity information embedded in the codebook. DCPE replaces the commonly\nused centroid-based distance, which is found to be unsuitable and inaccurate\nfor the token feature space, with a more reasonable instance-based distance.\nUsing an agglomerative merging technique, it further addresses the token space\ndisparity issue by avoiding splitting high-density regions and aggregating\nlow-density ones. Extensive experiments demonstrate that DCPE is plug-and-play\nand integrates seamlessly with existing codebook prior-based paradigms. With\nthe discriminative prior extracted, DCPE accelerates the training of\nautoregressive models by 42% on LlamaGen-B and improves final FID and IS\nperformance.",
+        "url": "http://arxiv.org/abs/2508.10719v1",
+        "published_date": "2025-08-14T15:00:00+00:00",
+        "updated_date": "2025-08-14T15:00:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Longxiang Tang",
+            "Ruihang Chu",
+            "Xiang Wang",
+            "Yujin Han",
+            "Pingyu Wu",
+            "Chunming He",
+            "Yingya Zhang",
+            "Shiwei Zhang",
+            "Jiaya Jia"
+        ],
+        "tldr": "This paper introduces a novel method, Discriminative Codebook Prior Extractor (DCPE), to improve autoregressive image generation by more effectively utilizing the codebook prior, leading to faster training and better image quality.",
+        "tldr_zh": "本文提出了一种名为判别码本先验提取器（DCPE）的新方法，通过更有效地利用码本先验来改进自回归图像生成，从而加快训练速度并提高图像质量。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Novel View Synthesis using DDIM Inversion",
+        "summary": "Synthesizing novel views from a single input image is a challenging task. It\nrequires extrapolating the 3D structure of a scene while inferring details in\noccluded regions, and maintaining geometric consistency across viewpoints. Many\nexisting methods must fine-tune large diffusion backbones using multiple views\nor train a diffusion model from scratch, which is extremely expensive.\nAdditionally, they suffer from blurry reconstruction and poor generalization.\nThis gap presents the opportunity to explore an explicit lightweight view\ntranslation framework that can directly utilize the high-fidelity generative\ncapabilities of a pretrained diffusion model while reconstructing a scene from\na novel view. Given the DDIM-inverted latent of a single input image, we employ\na camera pose-conditioned translation U-Net, TUNet, to predict the inverted\nlatent corresponding to the desired target view. However, the image sampled\nusing the predicted latent may result in a blurry reconstruction. To this end,\nwe propose a novel fusion strategy that exploits the inherent noise correlation\nstructure observed in DDIM inversion. The proposed fusion strategy helps\npreserve the texture and fine-grained details. To synthesize the novel view, we\nuse the fused latent as the initial condition for DDIM sampling, leveraging the\ngenerative prior of the pretrained diffusion model. Extensive experiments on\nMVImgNet demonstrate that our method outperforms existing methods.",
+        "url": "http://arxiv.org/abs/2508.10688v1",
+        "published_date": "2025-08-14T14:32:52+00:00",
+        "updated_date": "2025-08-14T14:32:52+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sehajdeep SIngh",
+            "A V Subramanyam"
+        ],
+        "tldr": "This paper introduces a novel view synthesis method using DDIM inversion and a camera pose-conditioned translation U-Net, along with a fusion strategy to preserve texture details, outperforming existing methods on MVImgNet.",
+        "tldr_zh": "本文提出了一种新的视角合成方法，该方法使用DDIM反演和相机姿态条件转换U-Net，以及一种融合策略来保留纹理细节，并在MVImgNet上优于现有方法。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "EvTurb: Event Camera Guided Turbulence Removal",
+        "summary": "Atmospheric turbulence degrades image quality by introducing blur and\ngeometric tilt distortions, posing significant challenges to downstream\ncomputer vision tasks. Existing single-image and multi-frame methods struggle\nwith the highly ill-posed nature of this problem due to the compositional\ncomplexity of turbulence-induced distortions. To address this, we propose\nEvTurb, an event guided turbulence removal framework that leverages high-speed\nevent streams to decouple blur and tilt effects. EvTurb decouples blur and tilt\neffects by modeling event-based turbulence formation, specifically through a\nnovel two-step event-guided network: event integrals are first employed to\nreduce blur in the coarse outputs. This is followed by employing a variance\nmap, derived from raw event streams, to eliminate the tilt distortion for the\nrefined outputs. Additionally, we present TurbEvent, the first real-captured\ndataset featuring diverse turbulence scenarios. Experimental results\ndemonstrate that EvTurb surpasses state-of-the-art methods while maintaining\ncomputational efficiency.",
+        "url": "http://arxiv.org/abs/2508.10582v1",
+        "published_date": "2025-08-14T12:22:18+00:00",
+        "updated_date": "2025-08-14T12:22:18+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yixing Liu",
+            "Minggui Teng",
+            "Yifei Xia",
+            "Peiqi Duan",
+            "Boxin Shi"
+        ],
+        "tldr": "This paper introduces EvTurb, a novel event camera-guided framework for removing atmospheric turbulence from images by decoupling blur and tilt distortions, along with a new real-captured turbulence dataset, TurbEvent.",
+        "tldr_zh": "该论文介绍了EvTurb，一种新颖的事件相机引导框架，通过解耦模糊和倾斜失真来消除图像中的大气湍流，并提供了一个新的真实捕获的湍流数据集TurbEvent。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "AtomDiffuser: Time-Aware Degradation Modeling for Drift and Beam Damage in STEM Imaging",
+        "summary": "Scanning transmission electron microscopy (STEM) plays a critical role in\nmodern materials science, enabling direct imaging of atomic structures and\ntheir evolution under external interferences. However, interpreting\ntime-resolved STEM data remains challenging due to two entangled degradation\neffects: spatial drift caused by mechanical and thermal instabilities, and\nbeam-induced signal loss resulting from radiation damage. These factors distort\nboth geometry and intensity in complex, temporally correlated ways, making it\ndifficult for existing methods to explicitly separate their effects or model\nmaterial dynamics at atomic resolution. In this work, we present AtomDiffuser,\na time-aware degradation modeling framework that disentangles sample drift and\nradiometric attenuation by predicting an affine transformation and a spatially\nvarying decay map between any two STEM frames. Unlike traditional denoising or\nregistration pipelines, our method leverages degradation as a physically\nheuristic, temporally conditioned process, enabling interpretable structural\nevolutions across time. Trained on synthetic degradation processes,\nAtomDiffuser also generalizes well to real-world cryo-STEM data. It further\nsupports high-resolution degradation inference and drift alignment, offering\ntools for visualizing and quantifying degradation patterns that correlate with\nradiation-induced atomic instabilities.",
+        "url": "http://arxiv.org/abs/2508.10359v1",
+        "published_date": "2025-08-14T05:56:31+00:00",
+        "updated_date": "2025-08-14T05:56:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hao Wang",
+            "Hongkui Zheng",
+            "Kai He",
+            "Abolfazl Razi"
+        ],
+        "tldr": "The paper introduces AtomDiffuser, a time-aware degradation modeling framework that disentangles drift and beam damage in STEM imaging by predicting affine transformations and decay maps between frames, enabling interpretable structural evolutions.",
+        "tldr_zh": "该论文介绍了AtomDiffuser，一种时间感知的退化建模框架，通过预测帧之间的仿射变换和衰减图来解耦STEM成像中的漂移和光束损伤，从而实现可解释的结构演化。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "From Images to Perception: Emergence of Perceptual Properties by Reconstructing Images",
+        "summary": "A number of scientists suggested that human visual perception may emerge from\nimage statistics, shaping efficient neural representations in early vision. In\nthis work, a bio-inspired architecture that can accommodate several known facts\nin the retina-V1 cortex, the PerceptNet, has been end-to-end optimized for\ndifferent tasks related to image reconstruction: autoencoding, denoising,\ndeblurring, and sparsity regularization. Our results show that the encoder\nstage (V1-like layer) consistently exhibits the highest correlation with human\nperceptual judgments on image distortion despite not using perceptual\ninformation in the initialization or training. This alignment exhibits an\noptimum for moderate noise, blur and sparsity. These findings suggest that the\nvisual system may be tuned to remove those particular levels of distortion with\nthat level of sparsity and that biologically inspired models can learn\nperceptual metrics without human supervision.",
+        "url": "http://arxiv.org/abs/2508.10450v1",
+        "published_date": "2025-08-14T08:37:30+00:00",
+        "updated_date": "2025-08-14T08:37:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Pablo Hernández-Cámara",
+            "Jesus Malo",
+            "Valero Laparra"
+        ],
+        "tldr": "The paper proposes a bio-inspired architecture (PerceptNet) trained for image reconstruction tasks, showing that its V1-like layer correlates strongly with human perceptual judgments of image distortion without explicit perceptual training.",
+        "tldr_zh": "该论文提出了一个受生物学启发的架构(PerceptNet)，用于图像重建任务的训练，结果表明其V1类似层与人类对图像失真的感知判断高度相关，且无需显式的感知训练。",
+        "relevance_score": 7,
+        "novelty_claim_score": 6,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 6
+    },
+    {
+        "title": "Efficient Image Denoising Using Global and Local Circulant Representation",
+        "summary": "The advancement of imaging devices and countless image data generated\neveryday impose an increasingly high demand on efficient and effective image\ndenoising. In this paper, we present a computationally simple denoising\nalgorithm, termed Haar-tSVD, aiming to explore the nonlocal self-similarity\nprior and leverage the connection between principal component analysis (PCA)\nand the Haar transform under circulant representation. We show that global and\nlocal patch correlations can be effectively captured through a unified\ntensor-singular value decomposition (t-SVD) projection with the Haar transform.\nThis results in a one-step, highly parallelizable filtering method that\neliminates the need for learning local bases to represent image patches,\nstriking a balance between denoising speed and performance. Furthermore, we\nintroduce an adaptive noise estimation scheme based on a CNN estimator and\neigenvalue analysis to enhance the robustness and adaptability of the proposed\nmethod. Experiments on different real-world denoising tasks validate the\nefficiency and effectiveness of Haar-tSVD for noise removal and detail\npreservation. Datasets, code and results are publicly available at\nhttps://github.com/ZhaomingKong/Haar-tSVD.",
+        "url": "http://arxiv.org/abs/2508.10307v1",
+        "published_date": "2025-08-14T03:25:59+00:00",
+        "updated_date": "2025-08-14T03:25:59+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhaoming Kong",
+            "Jiahuan Zhang",
+            "Xiaowei Yang"
+        ],
+        "tldr": "This paper introduces Haar-tSVD, a computationally efficient image denoising algorithm using Haar transform and tensor-singular value decomposition for nonlocal self-similarity exploitation, achieving a balance between speed and performance with an adaptive noise estimation scheme.",
+        "tldr_zh": "本文介绍了一种名为Haar-tSVD的计算高效图像去噪算法，该算法利用Haar变换和张量奇异值分解来探索非局部自相似性，从而在速度和性能之间取得平衡，并采用自适应噪声估计方案。",
+        "relevance_score": 6,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 6
+    }
+]
