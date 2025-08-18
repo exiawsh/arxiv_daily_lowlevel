@@ -1,0 +1,148 @@
+[
+    {
+        "title": "LKFMixer: Exploring Large Kernel Feature For Efficient Image Super-Resolution",
+        "summary": "The success of self-attention (SA) in Transformer demonstrates the importance\nof non-local information to image super-resolution (SR), but the huge computing\npower required makes it difficult to implement lightweight models. To solve\nthis problem, we propose a pure convolutional neural network (CNN) model,\nLKFMixer, which utilizes large convolutional kernel to simulate the ability of\nself-attention to capture non-local features. Specifically, we increase the\nkernel size to 31 to obtain the larger receptive field as possible, and reduce\nthe parameters and computations by coordinate decomposition. Meanwhile, a\nspatial feature modulation block (SFMB) is designed to enhance the focus of\nfeature information on both spatial and channel dimension. In addition, by\nintroducing feature selection block (FSB), the model can adaptively adjust the\nweights between local features and non-local features. Extensive experiments\nshow that the proposed LKFMixer family outperform other state-of-the-art (SOTA)\nmethods in terms of SR performance and reconstruction quality. In particular,\ncompared with SwinIR-light on Manga109 dataset, LKFMixer-L achieves 0.6dB PSNR\nimprovement at $\\times$4 scale, while the inference speed is $\\times$5 times\nfaster. The code is available at https://github.com/Supereeeee/LKFMixer.",
+        "url": "http://arxiv.org/abs/2508.11391v1",
+        "published_date": "2025-08-15T10:50:38+00:00",
+        "updated_date": "2025-08-15T10:50:38+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yinggan Tang",
+            "Quanwei Hu"
+        ],
+        "tldr": "LKFMixer, a pure CNN model utilizing large kernel convolutions, achieves state-of-the-art image super-resolution performance with improved speed and PSNR compared to Transformer-based methods like SwinIR-light. The code is available.",
+        "tldr_zh": "LKFMixer是一个纯卷积神经网络模型，它利用大核卷积实现了最先进的图像超分辨率性能，与基于Transformer的方法（如SwinIR-light）相比，速度和PSNR均有所提高。代码已开源。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "SPG: Style-Prompting Guidance for Style-Specific Content Creation",
+        "summary": "Although recent text-to-image (T2I) diffusion models excel at aligning\ngenerated images with textual prompts, controlling the visual style of the\noutput remains a challenging task. In this work, we propose Style-Prompting\nGuidance (SPG), a novel sampling strategy for style-specific image generation.\nSPG constructs a style noise vector and leverages its directional deviation\nfrom unconditional noise to guide the diffusion process toward the target style\ndistribution. By integrating SPG with Classifier-Free Guidance (CFG), our\nmethod achieves both semantic fidelity and style consistency. SPG is simple,\nrobust, and compatible with controllable frameworks like ControlNet and\nIPAdapter, making it practical and widely applicable. Extensive experiments\ndemonstrate the effectiveness and generality of our approach compared to\nstate-of-the-art methods. Code is available at\nhttps://github.com/Rumbling281441/SPG.",
+        "url": "http://arxiv.org/abs/2508.11476v1",
+        "published_date": "2025-08-15T13:44:56+00:00",
+        "updated_date": "2025-08-15T13:44:56+00:00",
+        "categories": [
+            "cs.GR",
+            "cs.CV"
+        ],
+        "authors": [
+            "Qian Liang",
+            "Zichong Chen",
+            "Yang Zhou",
+            "Hui Huang"
+        ],
+        "tldr": "The paper introduces Style-Prompting Guidance (SPG), a novel sampling strategy for T2I diffusion models that improves style control while maintaining semantic fidelity. SPG is compatible with existing controllable frameworks and demonstrates state-of-the-art performance.",
+        "tldr_zh": "本文介绍了一种新的采样策略，即风格提示引导（SPG），用于文本到图像的扩散模型，该策略在保持语义保真度的同时，改进了风格控制。SPG 与现有的可控框架兼容，并展示了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RMFAT: Recurrent Multi-scale Feature Atmospheric Turbulence Mitigator",
+        "summary": "Atmospheric turbulence severely degrades video quality by introducing\ndistortions such as geometric warping, blur, and temporal flickering, posing\nsignificant challenges to both visual clarity and temporal consistency. Current\nstate-of-the-art methods are based on transformer and 3D architectures and\nrequire multi-frame input, but their large computational cost and memory usage\nlimit real-time deployment, especially in resource-constrained scenarios. In\nthis work, we propose RMFAT: Recurrent Multi-scale Feature Atmospheric\nTurbulence Mitigator, designed for efficient and temporally consistent video\nrestoration under AT conditions. RMFAT adopts a lightweight recurrent framework\nthat restores each frame using only two inputs at a time, significantly\nreducing temporal window size and computational burden. It further integrates\nmulti-scale feature encoding and decoding with temporal warping modules at both\nencoder and decoder stages to enhance spatial detail and temporal coherence.\nExtensive experiments on synthetic and real-world atmospheric turbulence\ndatasets demonstrate that RMFAT not only outperforms existing methods in terms\nof clarity restoration (with nearly a 9\\% improvement in SSIM) but also\nachieves significantly improved inference speed (more than a fourfold reduction\nin runtime), making it particularly suitable for real-time atmospheric\nturbulence suppression tasks.",
+        "url": "http://arxiv.org/abs/2508.11409v1",
+        "published_date": "2025-08-15T11:20:18+00:00",
+        "updated_date": "2025-08-15T11:20:18+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhiming Liu",
+            "Nantheera Anantrasirichai"
+        ],
+        "tldr": "The paper introduces RMFAT, a lightweight recurrent neural network for atmospheric turbulence mitigation in videos, achieving superior clarity and real-time performance compared to existing methods.",
+        "tldr_zh": "该论文介绍了RMFAT，一种轻量级的循环神经网络，用于缓解视频中的大气湍流，与现有方法相比，实现了卓越的清晰度和实时性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Efficient Image-to-Image Schrödinger Bridge for CT Field of View Extension",
+        "summary": "Computed tomography (CT) is a cornerstone imaging modality for non-invasive,\nhigh-resolution visualization of internal anatomical structures. However, when\nthe scanned object exceeds the scanner's field of view (FOV), projection data\nare truncated, resulting in incomplete reconstructions and pronounced artifacts\nnear FOV boundaries. Conventional reconstruction algorithms struggle to recover\naccurate anatomy from such data, limiting clinical reliability. Deep learning\napproaches have been explored for FOV extension, with diffusion generative\nmodels representing the latest advances in image synthesis. Yet, conventional\ndiffusion models are computationally demanding and slow at inference due to\ntheir iterative sampling process. To address these limitations, we propose an\nefficient CT FOV extension framework based on the image-to-image Schr\\\"odinger\nBridge (I$^2$SB) diffusion model. Unlike traditional diffusion models that\nsynthesize images from pure Gaussian noise, I$^2$SB learns a direct stochastic\nmapping between paired limited-FOV and extended-FOV images. This direct\ncorrespondence yields a more interpretable and traceable generative process,\nenhancing anatomical consistency and structural fidelity in reconstructions.\nI$^2$SB achieves superior quantitative performance, with root-mean-square error\n(RMSE) values of 49.8\\,HU on simulated noisy data and 152.0HU on real data,\noutperforming state-of-the-art diffusion models such as conditional denoising\ndiffusion probabilistic models (cDDPM) and patch-based diffusion methods.\nMoreover, its one-step inference enables reconstruction in just 0.19s per 2D\nslice, representing over a 700-fold speedup compared to cDDPM (135s) and\nsurpassing diffusionGAN (0.58s), the second fastest. This combination of\naccuracy and efficiency makes I$^2$SB highly suitable for real-time or clinical\ndeployment.",
+        "url": "http://arxiv.org/abs/2508.11211v1",
+        "published_date": "2025-08-15T04:41:05+00:00",
+        "updated_date": "2025-08-15T04:41:05+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhenhao Li",
+            "Long Yang",
+            "Xiaojie Yin",
+            "Haijun Yu",
+            "Jiazhou Wang",
+            "Hongbin Han",
+            "Weigang Hu",
+            "Yixing Huang"
+        ],
+        "tldr": "The paper introduces an efficient image-to-image Schrödinger Bridge (I²SB) for CT field of view (FOV) extension, achieving faster and more accurate reconstructions compared to existing diffusion models.",
+        "tldr_zh": "本文提出了一种高效的图像到图像Schrödinger Bridge (I²SB) 用于CT视野（FOV）扩展，与现有的扩散模型相比，实现了更快更精确的重建。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TimeMachine: Fine-Grained Facial Age Editing with Identity Preservation",
+        "summary": "With the advancement of generative models, facial image editing has made\nsignificant progress. However, achieving fine-grained age editing while\npreserving personal identity remains a challenging task.In this paper, we\npropose TimeMachine, a novel diffusion-based framework that achieves accurate\nage editing while keeping identity features unchanged. To enable fine-grained\nage editing, we inject high-precision age information into the multi-cross\nattention module, which explicitly separates age-related and identity-related\nfeatures. This design facilitates more accurate disentanglement of age\nattributes, thereby allowing precise and controllable manipulation of facial\naging.Furthermore, we propose an Age Classifier Guidance (ACG) module that\npredicts age directly in the latent space, instead of performing denoising\nimage reconstruction during training. By employing a lightweight module to\nincorporate age constraints, this design enhances age editing accuracy by\nmodest increasing training cost. Additionally, to address the lack of\nlarge-scale, high-quality facial age datasets, we construct a HFFA dataset\n(High-quality Fine-grained Facial-Age dataset) which contains one million\nhigh-resolution images labeled with identity and facial attributes.\nExperimental results demonstrate that TimeMachine achieves state-of-the-art\nperformance in fine-grained age editing while preserving identity consistency.",
+        "url": "http://arxiv.org/abs/2508.11284v1",
+        "published_date": "2025-08-15T07:46:37+00:00",
+        "updated_date": "2025-08-15T07:46:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yilin Mi",
+            "Qixin Yan",
+            "Zheng-Peng Duan",
+            "Chunle Guo",
+            "Hubery Yin",
+            "Hao Liu",
+            "Chen Li",
+            "Chongyi Li"
+        ],
+        "tldr": "The paper introduces TimeMachine, a diffusion-based framework for fine-grained facial age editing with identity preservation, utilizing a novel multi-cross attention module and an Age Classifier Guidance module, along with a newly constructed large-scale facial age dataset (HFFA).",
+        "tldr_zh": "该论文介绍了TimeMachine，一个基于扩散模型的面部精细年龄编辑框架，能够保持身份信息不变。它利用了一个新颖的多交叉注意力模块和年龄分类器指导模块，并构建了一个新的大规模面部年龄数据集(HFFA)。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Guiding WaveMamba with Frequency Maps for Image Debanding",
+        "summary": "Compression at low bitrates in modern codecs often introduces banding\nartifacts, especially in smooth regions such as skies. These artifacts degrade\nvisual quality and are common in user-generated content due to repeated\ntranscoding. We propose a banding restoration method that employs the Wavelet\nState Space Model and a frequency masking map to preserve high-frequency\ndetails. Furthermore, we provide a benchmark of open-source banding restoration\nmethods and evaluate their performance on two public banding image datasets.\nExperimentation on the available datasets suggests that the proposed\npost-processing approach effectively suppresses banding compared to the\nstate-of-the-art method (a DBI value of 0.082 on BAND-2k) while preserving\nimage textures. Visual inspections of the results confirm this. Code and\nsupplementary material are available at:\nhttps://github.com/xinyiW915/Debanding-PCS2025.",
+        "url": "http://arxiv.org/abs/2508.11331v1",
+        "published_date": "2025-08-15T09:03:40+00:00",
+        "updated_date": "2025-08-15T09:03:40+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Xinyi Wang",
+            "Smaranda Tasmoc",
+            "Nantheera Anantrasirichai",
+            "Angeliki Katsenou"
+        ],
+        "tldr": "This paper proposes a Wavelet State Space Model-based image debanding method guided by frequency masking maps, achieving state-of-the-art results on public datasets.",
+        "tldr_zh": "该论文提出了一种基于小波状态空间模型的图像去条带方法，该方法由频率掩蔽图引导，并在公共数据集上取得了最先进的结果。",
+        "relevance_score": 6,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 6,
+        "overall_priority_score": 6
+    }
+]

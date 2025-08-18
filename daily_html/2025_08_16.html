@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 13, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - August 16, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 13, 2025</p>
+            <p>August 16, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,31 +215,30 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Unlocking the Potential of Diffusion Priors in Blind Face Restoration</h2>
+            <h2 class="paper-title">LKFMixer: Exploring Large Kernel Feature For Efficient Image Super-Resolution</h2>
             
-            <p class="paper-summary">Although diffusion prior is rising as a powerful solution for blind face
-restoration (BFR), the inherent gap between the vanilla diffusion model and BFR
-settings hinders its seamless adaptation. The gap mainly stems from the
-discrepancy between 1) high-quality (HQ) and low-quality (LQ) images and 2)
-synthesized and real-world images. The vanilla diffusion model is trained on
-images with no or less degradations, whereas BFR handles moderately to severely
-degraded images. Additionally, LQ images used for training are synthesized by a
-naive degradation model with limited degradation patterns, which fails to
-simulate complex and unknown degradations in real-world scenarios. In this
-work, we use a unified network FLIPNET that switches between two modes to
-resolve specific gaps. In Restoration mode, the model gradually integrates
-BFR-oriented features and face embeddings from LQ images to achieve authentic
-and faithful face restoration. In Degradation mode, the model synthesizes
-real-world like degraded images based on the knowledge learned from real-world
-degradation datasets. Extensive evaluations on benchmark datasets show that our
-model 1) outperforms previous diffusion prior based BFR methods in terms of
-authenticity and fidelity, and 2) outperforms the naive degradation model in
-modeling the real-world degradations.</p>
+            <p class="paper-summary">The success of self-attention (SA) in Transformer demonstrates the importance
+of non-local information to image super-resolution (SR), but the huge computing
+power required makes it difficult to implement lightweight models. To solve
+this problem, we propose a pure convolutional neural network (CNN) model,
+LKFMixer, which utilizes large convolutional kernel to simulate the ability of
+self-attention to capture non-local features. Specifically, we increase the
+kernel size to 31 to obtain the larger receptive field as possible, and reduce
+the parameters and computations by coordinate decomposition. Meanwhile, a
+spatial feature modulation block (SFMB) is designed to enhance the focus of
+feature information on both spatial and channel dimension. In addition, by
+introducing feature selection block (FSB), the model can adaptively adjust the
+weights between local features and non-local features. Extensive experiments
+show that the proposed LKFMixer family outperform other state-of-the-art (SOTA)
+methods in terms of SR performance and reconstruction quality. In particular,
+compared with SwinIR-light on Manga109 dataset, LKFMixer-L achieves 0.6dB PSNR
+improvement at $\times$4 scale, while the inference speed is $\times$5 times
+faster. The code is available at https://github.com/Supereeeee/LKFMixer.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper addresses the gap between vanilla diffusion models and blind face restoration by proposing a unified network, FLIPNET, that switches between restoration and degradation modes to handle real-world degraded images and improve authenticity and fidelity.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: LKFMixer, a pure CNN model utilizing large kernel convolutions, achieves state-of-the-art image super-resolution performance with improved speed and PSNR compared to Transformer-based methods like SwinIR-light. The code is available.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文通过提出一个统一的网络FLIPNET，解决了 vanilla 扩散模型和盲脸修复之间的差距。FLIPNET 在修复和降解模式之间切换，以处理真实世界的退化图像，并提高真实性和保真度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: LKFMixer是一个纯卷积神经网络模型，它利用大核卷积实现了最先进的图像超分辨率性能，与基于Transformer的方法（如SwinIR-light）相比，速度和PSNR均有所提高。代码已开源。</p>
             
 
             
@@ -249,8 +248,8 @@ modeling the real-world degradations.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
                 </div>
                 
                 
@@ -303,18 +302,18 @@ modeling the real-world degradations.</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.08556v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11391v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yunqi Miao, Zhiyu Qu, Mingqi Gao, Changrui Chen, Jifei Song, Jungong Han, Jiankang Deng</p>
+            <p class="paper-authors">Authors: Yinggan Tang, Quanwei Hu</p>
             
         </motion.div>
         
@@ -326,30 +325,26 @@ modeling the real-world degradations.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SharpXR: Structure-Aware Denoising for Pediatric Chest X-Rays</h2>
+            <h2 class="paper-title">SPG: Style-Prompting Guidance for Style-Specific Content Creation</h2>
             
-            <p class="paper-summary">Pediatric chest X-ray imaging is essential for early diagnosis, particularly
-in low-resource settings where advanced imaging modalities are often
-inaccessible. Low-dose protocols reduce radiation exposure in children but
-introduce substantial noise that can obscure critical anatomical details.
-Conventional denoising methods often degrade fine details, compromising
-diagnostic accuracy. In this paper, we present SharpXR, a structure-aware
-dual-decoder U-Net designed to denoise low-dose pediatric X-rays while
-preserving diagnostically relevant features. SharpXR combines a
-Laplacian-guided edge-preserving decoder with a learnable fusion module that
-adaptively balances noise suppression and structural detail retention. To
-address the scarcity of paired training data, we simulate realistic
-Poisson-Gaussian noise on the Pediatric Pneumonia Chest X-ray dataset. SharpXR
-outperforms state-of-the-art baselines across all evaluation metrics while
-maintaining computational efficiency suitable for resource-constrained
-settings. SharpXR-denoised images improved downstream pneumonia classification
-accuracy from 88.8% to 92.5%, underscoring its diagnostic value in low-resource
-pediatric care.</p>
+            <p class="paper-summary">Although recent text-to-image (T2I) diffusion models excel at aligning
+generated images with textual prompts, controlling the visual style of the
+output remains a challenging task. In this work, we propose Style-Prompting
+Guidance (SPG), a novel sampling strategy for style-specific image generation.
+SPG constructs a style noise vector and leverages its directional deviation
+from unconditional noise to guide the diffusion process toward the target style
+distribution. By integrating SPG with Classifier-Free Guidance (CFG), our
+method achieves both semantic fidelity and style consistency. SPG is simple,
+robust, and compatible with controllable frameworks like ControlNet and
+IPAdapter, making it practical and widely applicable. Extensive experiments
+demonstrate the effectiveness and generality of our approach compared to
+state-of-the-art methods. Code is available at
+https://github.com/Rumbling281441/SPG.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SharpXR, a structure-aware U-Net for denoising low-dose pediatric chest X-rays, which improves downstream pneumonia classification accuracy, especially beneficial in low-resource environments.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Style-Prompting Guidance (SPG), a novel sampling strategy for T2I diffusion models that improves style control while maintaining semantic fidelity. SPG is compatible with existing controllable frameworks and demonstrates state-of-the-art performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 SharpXR，一种结构感知的 U-Net，用于对低剂量儿科胸部 X 射线进行去噪，提高了下游肺炎分类的准确性，尤其是在资源匮乏的环境中具有优势。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种新的采样策略，即风格提示引导（SPG），用于文本到图像的扩散模型，该策略在保持语义保真度的同时，改进了风格控制。SPG 与现有的可控框架兼容，并展示了最先进的性能。</p>
             
 
             
@@ -359,8 +354,8 @@ pediatric care.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -383,8 +378,8 @@ pediatric care.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -420,11 +415,11 @@ pediatric care.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.08518v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11476v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ilerioluwakiiye Abolade, Emmanuel Idoko, Solomon Odelola, Promise Omoigui, Adetola Adebanwo, Aondana Iorumbur, Udunna Anazodo, Alessandro Crimi, Raymond Confidence</p>
+            <p class="paper-authors">Authors: Qian Liang, Zichong Chen, Yang Zhou, Hui Huang</p>
             
         </motion.div>
         
@@ -436,25 +431,32 @@ pediatric care.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Per-Query Visual Concept Learning</h2>
+            <h2 class="paper-title">RMFAT: Recurrent Multi-scale Feature Atmospheric Turbulence Mitigator</h2>
             
-            <p class="paper-summary">Visual concept learning, also known as Text-to-image personalization, is the
-process of teaching new concepts to a pretrained model. This has numerous
-applications from product placement to entertainment and personalized design.
-Here we show that many existing methods can be substantially augmented by
-adding a personalization step that is (1) specific to the prompt and noise
-seed, and (2) using two loss terms based on the self- and cross- attention,
-capturing the identity of the personalized concept. Specifically, we leverage
-PDM features - previously designed to capture identity - and show how they can
-be used to improve personalized semantic similarity. We evaluate the benefit
-that our method gains on top of six different personalization methods, and
-several base text-to-image models (both UNet- and DiT-based). We find
-significant improvements even over previous per-query personalization methods.</p>
+            <p class="paper-summary">Atmospheric turbulence severely degrades video quality by introducing
+distortions such as geometric warping, blur, and temporal flickering, posing
+significant challenges to both visual clarity and temporal consistency. Current
+state-of-the-art methods are based on transformer and 3D architectures and
+require multi-frame input, but their large computational cost and memory usage
+limit real-time deployment, especially in resource-constrained scenarios. In
+this work, we propose RMFAT: Recurrent Multi-scale Feature Atmospheric
+Turbulence Mitigator, designed for efficient and temporally consistent video
+restoration under AT conditions. RMFAT adopts a lightweight recurrent framework
+that restores each frame using only two inputs at a time, significantly
+reducing temporal window size and computational burden. It further integrates
+multi-scale feature encoding and decoding with temporal warping modules at both
+encoder and decoder stages to enhance spatial detail and temporal coherence.
+Extensive experiments on synthetic and real-world atmospheric turbulence
+datasets demonstrate that RMFAT not only outperforms existing methods in terms
+of clarity restoration (with nearly a 9\% improvement in SSIM) but also
+achieves significantly improved inference speed (more than a fourfold reduction
+in runtime), making it particularly suitable for real-time atmospheric
+turbulence suppression tasks.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a per-query personalization method for text-to-image generation that improves semantic similarity by using self- and cross-attention based losses, and outperforms existing personalization methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces RMFAT, a lightweight recurrent neural network for atmospheric turbulence mitigation in videos, achieving superior clarity and real-time performance compared to existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于文本到图像生成的逐查询个性化方法，该方法通过使用基于自注意力和交叉注意力的损失来提高语义相似性，并且优于现有的个性化方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了RMFAT，一种轻量级的循环神经网络，用于缓解视频中的大气湍流，与现有方法相比，实现了卓越的清晰度和实时性能。</p>
             
 
             
@@ -466,6 +468,236 @@ significant improvements even over previous per-query personalization methods.</
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.11409v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Zhiming Liu, Nantheera Anantrasirichai</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Efficient Image-to-Image Schrödinger Bridge for CT Field of View Extension</h2>
+            
+            <p class="paper-summary">Computed tomography (CT) is a cornerstone imaging modality for non-invasive,
+high-resolution visualization of internal anatomical structures. However, when
+the scanned object exceeds the scanner's field of view (FOV), projection data
+are truncated, resulting in incomplete reconstructions and pronounced artifacts
+near FOV boundaries. Conventional reconstruction algorithms struggle to recover
+accurate anatomy from such data, limiting clinical reliability. Deep learning
+approaches have been explored for FOV extension, with diffusion generative
+models representing the latest advances in image synthesis. Yet, conventional
+diffusion models are computationally demanding and slow at inference due to
+their iterative sampling process. To address these limitations, we propose an
+efficient CT FOV extension framework based on the image-to-image Schr\"odinger
+Bridge (I$^2$SB) diffusion model. Unlike traditional diffusion models that
+synthesize images from pure Gaussian noise, I$^2$SB learns a direct stochastic
+mapping between paired limited-FOV and extended-FOV images. This direct
+correspondence yields a more interpretable and traceable generative process,
+enhancing anatomical consistency and structural fidelity in reconstructions.
+I$^2$SB achieves superior quantitative performance, with root-mean-square error
+(RMSE) values of 49.8\,HU on simulated noisy data and 152.0HU on real data,
+outperforming state-of-the-art diffusion models such as conditional denoising
+diffusion probabilistic models (cDDPM) and patch-based diffusion methods.
+Moreover, its one-step inference enables reconstruction in just 0.19s per 2D
+slice, representing over a 700-fold speedup compared to cDDPM (135s) and
+surpassing diffusionGAN (0.58s), the second fastest. This combination of
+accuracy and efficiency makes I$^2$SB highly suitable for real-time or clinical
+deployment.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces an efficient image-to-image Schrödinger Bridge (I²SB) for CT field of view (FOV) extension, achieving faster and more accurate reconstructions compared to existing diffusion models.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种高效的图像到图像Schrödinger Bridge (I²SB) 用于CT视野（FOV）扩展，与现有的扩散模型相比，实现了更快更精确的重建。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.11211v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Zhenhao Li, Long Yang, Xiaojie Yin, Haijun Yu, Jiazhou Wang, Hongbin Han, Weigang Hu, Yixing Huang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">TimeMachine: Fine-Grained Facial Age Editing with Identity Preservation</h2>
+            
+            <p class="paper-summary">With the advancement of generative models, facial image editing has made
+significant progress. However, achieving fine-grained age editing while
+preserving personal identity remains a challenging task.In this paper, we
+propose TimeMachine, a novel diffusion-based framework that achieves accurate
+age editing while keeping identity features unchanged. To enable fine-grained
+age editing, we inject high-precision age information into the multi-cross
+attention module, which explicitly separates age-related and identity-related
+features. This design facilitates more accurate disentanglement of age
+attributes, thereby allowing precise and controllable manipulation of facial
+aging.Furthermore, we propose an Age Classifier Guidance (ACG) module that
+predicts age directly in the latent space, instead of performing denoising
+image reconstruction during training. By employing a lightweight module to
+incorporate age constraints, this design enhances age editing accuracy by
+modest increasing training cost. Additionally, to address the lack of
+large-scale, high-quality facial age datasets, we construct a HFFA dataset
+(High-quality Fine-grained Facial-Age dataset) which contains one million
+high-resolution images labeled with identity and facial attributes.
+Experimental results demonstrate that TimeMachine achieves state-of-the-art
+performance in fine-grained age editing while preserving identity consistency.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces TimeMachine, a diffusion-based framework for fine-grained facial age editing with identity preservation, utilizing a novel multi-cross attention module and an Age Classifier Guidance module, along with a newly constructed large-scale facial age dataset (HFFA).</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了TimeMachine，一个基于扩散模型的面部精细年龄编辑框架，能够保持身份信息不变。它利用了一个新颖的多交叉注意力模块和年龄分类器指导模块，并构建了一个新的大规模面部年龄数据集(HFFA)。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
                 </div>
                 
                 
@@ -525,11 +757,11 @@ significant improvements even over previous per-query personalization methods.</
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.09045v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11284v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ori Malca, Dvir Samuel, Gal Chechik</p>
+            <p class="paper-authors">Authors: Yilin Mi, Qixin Yan, Zheng-Peng Duan, Chunle Guo, Hubery Yin, Hao Liu, Chen Li, Chongyi Li</p>
             
         </motion.div>
         
@@ -537,34 +769,30 @@ significant improvements even over previous per-query personalization methods.</
             initial="{ opacity: 0, y: 50, scale: 0.9 }"
             whileInView="{ opacity: 1, y: 0, scale: 1 }"
             viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SafeFix: Targeted Model Repair via Controlled Image Generation</h2>
+            <h2 class="paper-title">Guiding WaveMamba with Frequency Maps for Image Debanding</h2>
             
-            <p class="paper-summary">Deep learning models for visual recognition often exhibit systematic errors
-due to underrepresented semantic subpopulations. Although existing debugging
-frameworks can pinpoint these failures by identifying key failure attributes,
-repairing the model effectively remains difficult. Current solutions often rely
-on manually designed prompts to generate synthetic training images -- an
-approach prone to distribution shift and semantic errors. To overcome these
-challenges, we introduce a model repair module that builds on an interpretable
-failure attribution pipeline. Our approach uses a conditional text-to-image
-model to generate semantically faithful and targeted images for failure cases.
-To preserve the quality and relevance of the generated samples, we further
-employ a large vision-language model (LVLM) to filter the outputs, enforcing
-alignment with the original data distribution and maintaining semantic
-consistency. By retraining vision models with this rare-case-augmented
-synthetic dataset, we significantly reduce errors associated with rare cases.
-Our experiments demonstrate that this targeted repair strategy improves model
-robustness without introducing new bugs. Code is available at
-https://github.com/oxu2/SafeFix</p>
+            <p class="paper-summary">Compression at low bitrates in modern codecs often introduces banding
+artifacts, especially in smooth regions such as skies. These artifacts degrade
+visual quality and are common in user-generated content due to repeated
+transcoding. We propose a banding restoration method that employs the Wavelet
+State Space Model and a frequency masking map to preserve high-frequency
+details. Furthermore, we provide a benchmark of open-source banding restoration
+methods and evaluate their performance on two public banding image datasets.
+Experimentation on the available datasets suggests that the proposed
+post-processing approach effectively suppresses banding compared to the
+state-of-the-art method (a DBI value of 0.082 on BAND-2k) while preserving
+image textures. Visual inspections of the results confirm this. Code and
+supplementary material are available at:
+https://github.com/xinyiW915/Debanding-PCS2025.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: SafeFix introduces a method for repairing deep learning models by generating targeted, semantically faithful images for rare failure cases using a conditional text-to-image model, filtered by an LVLM, to improve model robustness without introducing new errors.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a Wavelet State Space Model-based image debanding method guided by frequency masking maps, achieving state-of-the-art results on public datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: SafeFix 提出了一种修复深度学习模型的方法，通过使用条件文本到图像模型生成针对罕见失败案例的有针对性的、语义上忠实的图像，并由 LVLM 过滤，以提高模型的鲁棒性，而不会引入新的错误。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种基于小波状态空间模型的图像去条带方法，该方法由频率掩蔽图引导，并在公共数据集上取得了最先进的结果。</p>
             
 
             
@@ -590,116 +818,8 @@ https://github.com/oxu2/SafeFix</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.08701v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Ouyang Xu, Baoming Zhang, Ruiyu Mao, Yunhui Guo</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">CObL: Toward Zero-Shot Ordinal Layering without User Prompting</h2>
-            
-            <p class="paper-summary">Vision benefits from grouping pixels into objects and understanding their
-spatial relationships, both laterally and in depth. We capture this with a
-scene representation comprising an occlusion-ordered stack of "object layers,"
-each containing an isolated and amodally-completed object. To infer this
-representation from an image, we introduce a diffusion-based architecture named
-Concurrent Object Layers (CObL). CObL generates a stack of object layers in
-parallel, using Stable Diffusion as a prior for natural objects and
-inference-time guidance to ensure the inferred layers composite back to the
-input image. We train CObL using a few thousand synthetically-generated images
-of multi-object tabletop scenes, and we find that it zero-shot generalizes to
-photographs of real-world tabletops with varying numbers of novel objects. In
-contrast to recent models for amodal object completion, CObL reconstructs
-multiple occluded objects without user prompting and without knowing the number
-of objects beforehand. Unlike previous models for unsupervised object-centric
-representation learning, CObL is not limited to the world it was trained in.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CObL, a diffusion-based architecture that infers a scene representation as an occlusion-ordered stack of object layers from an image, generalizing to real-world tabletop scenes without user prompting.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为CObL的基于扩散的架构，它可以从图像中推断出场景的表示，该表示为一个遮挡排序的物体层堆栈，并且可以推广到现实世界的桌面场景，无需用户提示。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(4/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -743,18 +863,18 @@ representation learning, CObL is not limited to the world it was trained in.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.08498v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11331v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Aneel Damaraju, Dean Hazineh, Todd Zickler</p>
+            <p class="paper-authors">Authors: Xinyi Wang, Smaranda Tasmoc, Nantheera Anantrasirichai, Angeliki Katsenou</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-18 04:00:14 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-18 04:10:07 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
