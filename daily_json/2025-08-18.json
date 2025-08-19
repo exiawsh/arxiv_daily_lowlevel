@@ -1,0 +1,92 @@
+[
+    {
+        "title": "SNNSIR: A Simple Spiking Neural Network for Stereo Image Restoration",
+        "summary": "Spiking Neural Networks (SNNs), characterized by discrete binary activations,\noffer high computational efficiency and low energy consumption, making them\nwell-suited for computation-intensive tasks such as stereo image restoration.\nIn this work, we propose SNNSIR, a simple yet effective Spiking Neural Network\nfor Stereo Image Restoration, specifically designed under the spike-driven\nparadigm where neurons transmit information through sparse, event-based binary\nspikes. In contrast to existing hybrid SNN-ANN models that still rely on\noperations such as floating-point matrix division or exponentiation, which are\nincompatible with the binary and event-driven nature of SNNs, our proposed\nSNNSIR adopts a fully spike-driven architecture to achieve low-power and\nhardware-friendly computation. To address the expressiveness limitations of\nbinary spiking neurons, we first introduce a lightweight Spike Residual Basic\nBlock (SRBB) to enhance information flow via spike-compatible residual\nlearning. Building on this, the Spike Stereo Convolutional Modulation (SSCM)\nmodule introduces simplified nonlinearity through element-wise multiplication\nand highlights noise-sensitive regions via cross-view-aware modulation.\nComplementing this, the Spike Stereo Cross-Attention (SSCA) module further\nimproves stereo correspondence by enabling efficient bidirectional feature\ninteraction across views within a spike-compatible framework. Extensive\nexperiments on diverse stereo image restoration tasks, including rain streak\nremoval, raindrop removal, low-light enhancement, and super-resolution\ndemonstrate that our model achieves competitive restoration performance while\nsignificantly reducing computational overhead. These results highlight the\npotential for real-time, low-power stereo vision applications. The code will be\navailable after the article is accepted.",
+        "url": "http://arxiv.org/abs/2508.12271v1",
+        "published_date": "2025-08-17T07:38:25+00:00",
+        "updated_date": "2025-08-17T07:38:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ronghua Xu",
+            "Jin Xie",
+            "Jing Nie",
+            "Jiale Cao",
+            "Yanwei Pang"
+        ],
+        "tldr": "The paper introduces SNNSIR, a fully spike-driven Spiking Neural Network for stereo image restoration, achieving competitive performance with reduced computational overhead by using spike-compatible modules for residual learning, cross-view modulation, and cross-attention.",
+        "tldr_zh": "该论文介绍了SNNSIR，一个全脉冲驱动的立体图像恢复脉冲神经网络，通过使用兼容脉冲的残差学习、跨视图调制和跨注意力模块，以降低的计算开销实现了具有竞争力的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MBMamba: When Memory Buffer Meets Mamba for Structure-Aware Image Deblurring",
+        "summary": "The Mamba architecture has emerged as a promising alternative to CNNs and\nTransformers for image deblurring. However, its flatten-and-scan strategy often\nresults in local pixel forgetting and channel redundancy, limiting its ability\nto effectively aggregate 2D spatial information. Although existing methods\nmitigate this by modifying the scan strategy or incorporating local feature\nmodules, it increase computational complexity and hinder real-time performance.\nIn this paper, we propose a structure-aware image deblurring network without\nchanging the original Mamba architecture. Specifically, we design a memory\nbuffer mechanism to preserve historical information for later fusion, enabling\nreliable modeling of relevance between adjacent features. Additionally, we\nintroduce an Ising-inspired regularization loss that simulates the energy\nminimization of the physical system's \"mutual attraction\" between pixels,\nhelping to maintain image structure and coherence. Building on this, we develop\nMBMamba. Experimental results show that our method outperforms state-of-the-art\napproaches on widely used benchmarks.",
+        "url": "http://arxiv.org/abs/2508.12346v1",
+        "published_date": "2025-08-17T12:33:57+00:00",
+        "updated_date": "2025-08-17T12:33:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hu Gao",
+            "Depeng Dang"
+        ],
+        "tldr": "This paper introduces MBMamba, a structure-aware image deblurring network that enhances the original Mamba architecture with a memory buffer and Ising-inspired regularization loss to improve spatial information aggregation and structural coherence, achieving state-of-the-art performance.",
+        "tldr_zh": "本文介绍了MBMamba，一种结构感知图像去模糊网络，通过结合内存缓冲区和Ising启发的正则化损失来增强原始Mamba架构，从而改善空间信息聚合和结构一致性，并实现了最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Geometry-Aware Video Inpainting for Joint Headset Occlusion Removal and Face Reconstruction in Social XR",
+        "summary": "Head-mounted displays (HMDs) are essential for experiencing extended reality\n(XR) environments and observing virtual content. However, they obscure the\nupper part of the user's face, complicating external video recording and\nsignificantly impacting social XR applications such as teleconferencing, where\nfacial expressions and eye gaze details are crucial for creating an immersive\nexperience. This study introduces a geometry-aware learning-based framework to\njointly remove HMD occlusions and reconstruct complete 3D facial geometry from\nRGB frames captured from a single viewpoint. The method integrates a GAN-based\nvideo inpainting network, guided by dense facial landmarks and a single\nocclusion-free reference frame, to restore missing facial regions while\npreserving identity. Subsequently, a SynergyNet-based module regresses 3D\nMorphable Model (3DMM) parameters from the inpainted frames, enabling accurate\n3D face reconstruction. Dense landmark optimization is incorporated throughout\nthe pipeline to improve both the inpainting quality and the fidelity of the\nrecovered geometry. Experimental results demonstrate that the proposed\nframework can successfully remove HMDs from RGB facial videos while maintaining\nfacial identity and realism, producing photorealistic 3D face geometry outputs.\nAblation studies further show that the framework remains robust across\ndifferent landmark densities, with only minor quality degradation under sparse\nlandmark configurations.",
+        "url": "http://arxiv.org/abs/2508.12336v1",
+        "published_date": "2025-08-17T11:45:00+00:00",
+        "updated_date": "2025-08-17T11:45:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Fatemeh Ghorbani Lohesara",
+            "Karen Eguiazarian",
+            "Sebastian Knorr"
+        ],
+        "tldr": "This paper presents a geometry-aware GAN-based video inpainting framework for removing headset occlusions and reconstructing 3D facial geometry in social XR applications, leveraging facial landmarks and a SynergyNet-based module.",
+        "tldr_zh": "本文提出了一种基于几何感知的GAN视频修复框架，用于在社交XR应用中移除头戴式设备遮挡并重建3D面部几何结构，利用面部标志点和一个基于SynergyNet的模块。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Superpixel-informed Continuous Low-Rank Tensor Representation for Multi-Dimensional Data Recovery",
+        "summary": "Low-rank tensor representation (LRTR) has emerged as a powerful tool for\nmulti-dimensional data processing. However, classical LRTR-based methods face\ntwo critical limitations: (1) they typically assume that the holistic data is\nlow-rank, this assumption is often violated in real-world scenarios with\nsignificant spatial variations; and (2) they are constrained to discrete\nmeshgrid data, limiting their flexibility and applicability. To overcome these\nlimitations, we propose a Superpixel-informed Continuous low-rank Tensor\nRepresentation (SCTR) framework, which enables continuous and flexible modeling\nof multi-dimensional data beyond traditional grid-based constraints. Our\napproach introduces two main innovations: First, motivated by the observation\nthat semantically coherent regions exhibit stronger low-rank characteristics\nthan holistic data, we employ superpixels as the basic modeling units. This\ndesign not only encodes rich semantic information, but also enhances\nadaptability to diverse forms of data streams. Second, we propose a novel\nasymmetric low-rank tensor factorization (ALTF) where superpixel-specific\nfactor matrices are parameterized by a shared neural network with specialized\nheads. By strategically separating global pattern learning from local\nadaptation, this framework efficiently captures both cross-superpixel\ncommonalities and within-superpixel variations. This yields a representation\nthat is both highly expressive and compact, balancing model efficiency with\nadaptability. Extensive experiments on several benchmark datasets demonstrate\nthat SCTR achieves 3-5 dB PSNR improvements over existing LRTR-based methods\nacross multispectral images, videos, and color images.",
+        "url": "http://arxiv.org/abs/2508.12261v1",
+        "published_date": "2025-08-17T06:58:42+00:00",
+        "updated_date": "2025-08-17T06:58:42+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhizhou Wang",
+            "Ruijing Zheng",
+            "Zhenyu Wu",
+            "Jianli Wang"
+        ],
+        "tldr": "The paper introduces a Superpixel-informed Continuous low-rank Tensor Representation (SCTR) framework for multi-dimensional data recovery, using superpixels as modeling units and an asymmetric low-rank tensor factorization (ALTF) to improve performance in scenarios with spatial variations.",
+        "tldr_zh": "该论文提出了一种基于超像素的连续低秩张量表示（SCTR）框架，用于多维数据恢复。它采用超像素作为建模单元，并使用非对称低秩张量分解（ALTF）来提高在空间变化场景中的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

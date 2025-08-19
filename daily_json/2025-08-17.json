@@ -1,0 +1,51 @@
+[
+    {
+        "title": "Error Propagation Mechanisms and Compensation Strategies for Quantized Diffusion",
+        "summary": "Diffusion models have transformed image synthesis by establishing\nunprecedented quality and creativity benchmarks. Nevertheless, their\nlarge-scale deployment faces challenges due to computationally intensive\niterative denoising processes. Although post-training quantization(PTQ)\nprovides an effective pathway for accelerating sampling, the iterative nature\nof diffusion models causes stepwise quantization errors to accumulate\nprogressively during generation, inevitably compromising output fidelity. To\naddress this challenge, we develop a theoretical framework that mathematically\nformulates error propagation in Diffusion Models (DMs), deriving per-step\nquantization error propagation equations and establishing the first closed-form\nsolution for cumulative error. Building on this theoretical foundation, we\npropose a timestep-aware cumulative error compensation scheme. Extensive\nexperiments across multiple image datasets demonstrate that our compensation\nstrategy effectively mitigates error propagation, significantly enhancing\nexisting PTQ methods to achieve state-of-the-art(SOTA) performance on\nlow-precision diffusion models.",
+        "url": "http://arxiv.org/abs/2508.12094v1",
+        "published_date": "2025-08-16T16:31:00+00:00",
+        "updated_date": "2025-08-16T16:31:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Songwei Liu",
+            "Hong Liu",
+            "Fangmin Chen",
+            "Xurui Peng",
+            "Chenqian Yan",
+            "Lean Fu",
+            "Xing Mei"
+        ],
+        "tldr": "The paper analyzes error propagation in quantized diffusion models and proposes a timestep-aware compensation scheme to improve the performance of low-precision diffusion models, achieving SOTA results.",
+        "tldr_zh": "该论文分析了量化扩散模型中的误差传播，并提出了一种时间步感知误差补偿方案，以提高低精度扩散模型的性能，实现了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Large Kernel Modulation Network for Efficient Image Super-Resolution",
+        "summary": "Image super-resolution (SR) in resource-constrained scenarios demands\nlightweight models balancing performance and latency. Convolutional neural\nnetworks (CNNs) offer low latency but lack non-local feature capture, while\nTransformers excel at non-local modeling yet suffer slow inference. To address\nthis trade-off, we propose the Large Kernel Modulation Network (LKMN), a pure\nCNN-based model. LKMN has two core components: Enhanced Partial Large Kernel\nBlock (EPLKB) and Cross-Gate Feed-Forward Network (CGFN). The EPLKB utilizes\nchannel shuffle to boost inter-channel interaction, incorporates channel\nattention to focus on key information, and applies large kernel strip\nconvolutions on partial channels for non-local feature extraction with reduced\ncomplexity. The CGFN dynamically adjusts discrepancies between input, local,\nand non-local features via a learnable scaling factor, then employs a\ncross-gate strategy to modulate and fuse these features, enhancing their\ncomplementarity. Extensive experiments demonstrate that our method outperforms\nexisting state-of-the-art (SOTA) lightweight SR models while balancing quality\nand efficiency. Specifically, LKMN-L achieves 0.23 dB PSNR improvement over\nDAT-light on the Manga109 dataset at $\\times$4 upscale, with nearly $\\times$4.8\ntimes faster. Codes are in the supplementary materials. The code is available\nat https://github.com/Supereeeee/LKMN.",
+        "url": "http://arxiv.org/abs/2508.11893v1",
+        "published_date": "2025-08-16T03:43:14+00:00",
+        "updated_date": "2025-08-16T03:43:14+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Quanwei Hu",
+            "Yinggan Tang",
+            "Xuguang Zhang"
+        ],
+        "tldr": "The paper proposes a lightweight CNN-based model, LKMN, for image super-resolution that balances performance and latency by using large kernel convolutions and cross-gate feature fusion, achieving state-of-the-art results with improved efficiency.",
+        "tldr_zh": "本文提出了一种轻量级的基于CNN的图像超分辨率模型LKMN，该模型通过使用大核卷积和交叉门特征融合来平衡性能和延迟，从而以更高的效率实现最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]

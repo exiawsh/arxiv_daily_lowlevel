@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 13, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - August 18, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 13, 2025</p>
+            <p>August 18, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,31 +215,38 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Unlocking the Potential of Diffusion Priors in Blind Face Restoration</h2>
+            <h2 class="paper-title">SNNSIR: A Simple Spiking Neural Network for Stereo Image Restoration</h2>
             
-            <p class="paper-summary">Although diffusion prior is rising as a powerful solution for blind face
-restoration (BFR), the inherent gap between the vanilla diffusion model and BFR
-settings hinders its seamless adaptation. The gap mainly stems from the
-discrepancy between 1) high-quality (HQ) and low-quality (LQ) images and 2)
-synthesized and real-world images. The vanilla diffusion model is trained on
-images with no or less degradations, whereas BFR handles moderately to severely
-degraded images. Additionally, LQ images used for training are synthesized by a
-naive degradation model with limited degradation patterns, which fails to
-simulate complex and unknown degradations in real-world scenarios. In this
-work, we use a unified network FLIPNET that switches between two modes to
-resolve specific gaps. In Restoration mode, the model gradually integrates
-BFR-oriented features and face embeddings from LQ images to achieve authentic
-and faithful face restoration. In Degradation mode, the model synthesizes
-real-world like degraded images based on the knowledge learned from real-world
-degradation datasets. Extensive evaluations on benchmark datasets show that our
-model 1) outperforms previous diffusion prior based BFR methods in terms of
-authenticity and fidelity, and 2) outperforms the naive degradation model in
-modeling the real-world degradations.</p>
+            <p class="paper-summary">Spiking Neural Networks (SNNs), characterized by discrete binary activations,
+offer high computational efficiency and low energy consumption, making them
+well-suited for computation-intensive tasks such as stereo image restoration.
+In this work, we propose SNNSIR, a simple yet effective Spiking Neural Network
+for Stereo Image Restoration, specifically designed under the spike-driven
+paradigm where neurons transmit information through sparse, event-based binary
+spikes. In contrast to existing hybrid SNN-ANN models that still rely on
+operations such as floating-point matrix division or exponentiation, which are
+incompatible with the binary and event-driven nature of SNNs, our proposed
+SNNSIR adopts a fully spike-driven architecture to achieve low-power and
+hardware-friendly computation. To address the expressiveness limitations of
+binary spiking neurons, we first introduce a lightweight Spike Residual Basic
+Block (SRBB) to enhance information flow via spike-compatible residual
+learning. Building on this, the Spike Stereo Convolutional Modulation (SSCM)
+module introduces simplified nonlinearity through element-wise multiplication
+and highlights noise-sensitive regions via cross-view-aware modulation.
+Complementing this, the Spike Stereo Cross-Attention (SSCA) module further
+improves stereo correspondence by enabling efficient bidirectional feature
+interaction across views within a spike-compatible framework. Extensive
+experiments on diverse stereo image restoration tasks, including rain streak
+removal, raindrop removal, low-light enhancement, and super-resolution
+demonstrate that our model achieves competitive restoration performance while
+significantly reducing computational overhead. These results highlight the
+potential for real-time, low-power stereo vision applications. The code will be
+available after the article is accepted.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper addresses the gap between vanilla diffusion models and blind face restoration by proposing a unified network, FLIPNET, that switches between restoration and degradation modes to handle real-world degraded images and improve authenticity and fidelity.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SNNSIR, a fully spike-driven Spiking Neural Network for stereo image restoration, achieving competitive performance with reduced computational overhead by using spike-compatible modules for residual learning, cross-view modulation, and cross-attention.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文通过提出一个统一的网络FLIPNET，解决了 vanilla 扩散模型和盲脸修复之间的差距。FLIPNET 在修复和降解模式之间切换，以处理真实世界的退化图像，并提高真实性和保真度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了SNNSIR，一个全脉冲驱动的立体图像恢复脉冲神经网络，通过使用兼容脉冲的残差学习、跨视图调制和跨注意力模块，以降低的计算开销实现了具有竞争力的性能。</p>
             
 
             
@@ -310,11 +317,11 @@ modeling the real-world degradations.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.08556v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.12271v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yunqi Miao, Zhiyu Qu, Mingqi Gao, Changrui Chen, Jifei Song, Jungong Han, Jiankang Deng</p>
+            <p class="paper-authors">Authors: Ronghua Xu, Jin Xie, Jing Nie, Jiale Cao, Yanwei Pang</p>
             
         </motion.div>
         
@@ -326,30 +333,28 @@ modeling the real-world degradations.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SharpXR: Structure-Aware Denoising for Pediatric Chest X-Rays</h2>
+            <h2 class="paper-title">MBMamba: When Memory Buffer Meets Mamba for Structure-Aware Image Deblurring</h2>
             
-            <p class="paper-summary">Pediatric chest X-ray imaging is essential for early diagnosis, particularly
-in low-resource settings where advanced imaging modalities are often
-inaccessible. Low-dose protocols reduce radiation exposure in children but
-introduce substantial noise that can obscure critical anatomical details.
-Conventional denoising methods often degrade fine details, compromising
-diagnostic accuracy. In this paper, we present SharpXR, a structure-aware
-dual-decoder U-Net designed to denoise low-dose pediatric X-rays while
-preserving diagnostically relevant features. SharpXR combines a
-Laplacian-guided edge-preserving decoder with a learnable fusion module that
-adaptively balances noise suppression and structural detail retention. To
-address the scarcity of paired training data, we simulate realistic
-Poisson-Gaussian noise on the Pediatric Pneumonia Chest X-ray dataset. SharpXR
-outperforms state-of-the-art baselines across all evaluation metrics while
-maintaining computational efficiency suitable for resource-constrained
-settings. SharpXR-denoised images improved downstream pneumonia classification
-accuracy from 88.8% to 92.5%, underscoring its diagnostic value in low-resource
-pediatric care.</p>
+            <p class="paper-summary">The Mamba architecture has emerged as a promising alternative to CNNs and
+Transformers for image deblurring. However, its flatten-and-scan strategy often
+results in local pixel forgetting and channel redundancy, limiting its ability
+to effectively aggregate 2D spatial information. Although existing methods
+mitigate this by modifying the scan strategy or incorporating local feature
+modules, it increase computational complexity and hinder real-time performance.
+In this paper, we propose a structure-aware image deblurring network without
+changing the original Mamba architecture. Specifically, we design a memory
+buffer mechanism to preserve historical information for later fusion, enabling
+reliable modeling of relevance between adjacent features. Additionally, we
+introduce an Ising-inspired regularization loss that simulates the energy
+minimization of the physical system's "mutual attraction" between pixels,
+helping to maintain image structure and coherence. Building on this, we develop
+MBMamba. Experimental results show that our method outperforms state-of-the-art
+approaches on widely used benchmarks.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SharpXR, a structure-aware U-Net for denoising low-dose pediatric chest X-rays, which improves downstream pneumonia classification accuracy, especially beneficial in low-resource environments.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces MBMamba, a structure-aware image deblurring network that enhances the original Mamba architecture with a memory buffer and Ising-inspired regularization loss to improve spatial information aggregation and structural coherence, achieving state-of-the-art performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 SharpXR，一种结构感知的 U-Net，用于对低剂量儿科胸部 X 射线进行去噪，提高了下游肺炎分类的准确性，尤其是在资源匮乏的环境中具有优势。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了MBMamba，一种结构感知图像去模糊网络，通过结合内存缓冲区和Ising启发的正则化损失来增强原始Mamba架构，从而改善空间信息聚合和结构一致性，并实现了最先进的性能。</p>
             
 
             
@@ -383,8 +388,8 @@ pediatric care.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -409,22 +414,22 @@ pediatric care.</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.08518v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.12346v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ilerioluwakiiye Abolade, Emmanuel Idoko, Solomon Odelola, Promise Omoigui, Adetola Adebanwo, Aondana Iorumbur, Udunna Anazodo, Alessandro Crimi, Raymond Confidence</p>
+            <p class="paper-authors">Authors: Hu Gao, Depeng Dang</p>
             
         </motion.div>
         
@@ -436,25 +441,33 @@ pediatric care.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Per-Query Visual Concept Learning</h2>
+            <h2 class="paper-title">Geometry-Aware Video Inpainting for Joint Headset Occlusion Removal and Face Reconstruction in Social XR</h2>
             
-            <p class="paper-summary">Visual concept learning, also known as Text-to-image personalization, is the
-process of teaching new concepts to a pretrained model. This has numerous
-applications from product placement to entertainment and personalized design.
-Here we show that many existing methods can be substantially augmented by
-adding a personalization step that is (1) specific to the prompt and noise
-seed, and (2) using two loss terms based on the self- and cross- attention,
-capturing the identity of the personalized concept. Specifically, we leverage
-PDM features - previously designed to capture identity - and show how they can
-be used to improve personalized semantic similarity. We evaluate the benefit
-that our method gains on top of six different personalization methods, and
-several base text-to-image models (both UNet- and DiT-based). We find
-significant improvements even over previous per-query personalization methods.</p>
+            <p class="paper-summary">Head-mounted displays (HMDs) are essential for experiencing extended reality
+(XR) environments and observing virtual content. However, they obscure the
+upper part of the user's face, complicating external video recording and
+significantly impacting social XR applications such as teleconferencing, where
+facial expressions and eye gaze details are crucial for creating an immersive
+experience. This study introduces a geometry-aware learning-based framework to
+jointly remove HMD occlusions and reconstruct complete 3D facial geometry from
+RGB frames captured from a single viewpoint. The method integrates a GAN-based
+video inpainting network, guided by dense facial landmarks and a single
+occlusion-free reference frame, to restore missing facial regions while
+preserving identity. Subsequently, a SynergyNet-based module regresses 3D
+Morphable Model (3DMM) parameters from the inpainted frames, enabling accurate
+3D face reconstruction. Dense landmark optimization is incorporated throughout
+the pipeline to improve both the inpainting quality and the fidelity of the
+recovered geometry. Experimental results demonstrate that the proposed
+framework can successfully remove HMDs from RGB facial videos while maintaining
+facial identity and realism, producing photorealistic 3D face geometry outputs.
+Ablation studies further show that the framework remains robust across
+different landmark densities, with only minor quality degradation under sparse
+landmark configurations.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a per-query personalization method for text-to-image generation that improves semantic similarity by using self- and cross-attention based losses, and outperforms existing personalization methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a geometry-aware GAN-based video inpainting framework for removing headset occlusions and reconstructing 3D facial geometry in social XR applications, leveraging facial landmarks and a SynergyNet-based module.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于文本到图像生成的逐查询个性化方法，该方法通过使用基于自注意力和交叉注意力的损失来提高语义相似性，并且优于现有的个性化方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种基于几何感知的GAN视频修复框架，用于在社交XR应用中移除头戴式设备遮挡并重建3D面部几何结构，利用面部标志点和一个基于SynergyNet的模块。</p>
             
 
             
@@ -525,11 +538,11 @@ significant improvements even over previous per-query personalization methods.</
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.09045v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.12336v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ori Malca, Dvir Samuel, Gal Chechik</p>
+            <p class="paper-authors">Authors: Fatemeh Ghorbani Lohesara, Karen Eguiazarian, Sebastian Knorr</p>
             
         </motion.div>
         
@@ -541,30 +554,36 @@ significant improvements even over previous per-query personalization methods.</
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SafeFix: Targeted Model Repair via Controlled Image Generation</h2>
+            <h2 class="paper-title">Superpixel-informed Continuous Low-Rank Tensor Representation for Multi-Dimensional Data Recovery</h2>
             
-            <p class="paper-summary">Deep learning models for visual recognition often exhibit systematic errors
-due to underrepresented semantic subpopulations. Although existing debugging
-frameworks can pinpoint these failures by identifying key failure attributes,
-repairing the model effectively remains difficult. Current solutions often rely
-on manually designed prompts to generate synthetic training images -- an
-approach prone to distribution shift and semantic errors. To overcome these
-challenges, we introduce a model repair module that builds on an interpretable
-failure attribution pipeline. Our approach uses a conditional text-to-image
-model to generate semantically faithful and targeted images for failure cases.
-To preserve the quality and relevance of the generated samples, we further
-employ a large vision-language model (LVLM) to filter the outputs, enforcing
-alignment with the original data distribution and maintaining semantic
-consistency. By retraining vision models with this rare-case-augmented
-synthetic dataset, we significantly reduce errors associated with rare cases.
-Our experiments demonstrate that this targeted repair strategy improves model
-robustness without introducing new bugs. Code is available at
-https://github.com/oxu2/SafeFix</p>
+            <p class="paper-summary">Low-rank tensor representation (LRTR) has emerged as a powerful tool for
+multi-dimensional data processing. However, classical LRTR-based methods face
+two critical limitations: (1) they typically assume that the holistic data is
+low-rank, this assumption is often violated in real-world scenarios with
+significant spatial variations; and (2) they are constrained to discrete
+meshgrid data, limiting their flexibility and applicability. To overcome these
+limitations, we propose a Superpixel-informed Continuous low-rank Tensor
+Representation (SCTR) framework, which enables continuous and flexible modeling
+of multi-dimensional data beyond traditional grid-based constraints. Our
+approach introduces two main innovations: First, motivated by the observation
+that semantically coherent regions exhibit stronger low-rank characteristics
+than holistic data, we employ superpixels as the basic modeling units. This
+design not only encodes rich semantic information, but also enhances
+adaptability to diverse forms of data streams. Second, we propose a novel
+asymmetric low-rank tensor factorization (ALTF) where superpixel-specific
+factor matrices are parameterized by a shared neural network with specialized
+heads. By strategically separating global pattern learning from local
+adaptation, this framework efficiently captures both cross-superpixel
+commonalities and within-superpixel variations. This yields a representation
+that is both highly expressive and compact, balancing model efficiency with
+adaptability. Extensive experiments on several benchmark datasets demonstrate
+that SCTR achieves 3-5 dB PSNR improvements over existing LRTR-based methods
+across multispectral images, videos, and color images.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: SafeFix introduces a method for repairing deep learning models by generating targeted, semantically faithful images for rare failure cases using a conditional text-to-image model, filtered by an LVLM, to improve model robustness without introducing new errors.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a Superpixel-informed Continuous low-rank Tensor Representation (SCTR) framework for multi-dimensional data recovery, using superpixels as modeling units and an asymmetric low-rank tensor factorization (ALTF) to improve performance in scenarios with spatial variations.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: SafeFix 提出了一种修复深度学习模型的方法，通过使用条件文本到图像模型生成针对罕见失败案例的有针对性的、语义上忠实的图像，并由 LVLM 过滤，以提高模型的鲁棒性，而不会引入新的错误。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种基于超像素的连续低秩张量表示（SCTR）框架，用于多维数据恢复。它采用超像素作为建模单元，并使用非对称低秩张量分解（ALTF）来提高在空间变化场景中的性能。</p>
             
 
             
@@ -574,24 +593,24 @@ https://github.com/oxu2/SafeFix</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
+                    <span class="rating-label">Novelty:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -635,126 +654,18 @@ https://github.com/oxu2/SafeFix</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.08701v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.12261v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ouyang Xu, Baoming Zhang, Ruiyu Mao, Yunhui Guo</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">CObL: Toward Zero-Shot Ordinal Layering without User Prompting</h2>
-            
-            <p class="paper-summary">Vision benefits from grouping pixels into objects and understanding their
-spatial relationships, both laterally and in depth. We capture this with a
-scene representation comprising an occlusion-ordered stack of "object layers,"
-each containing an isolated and amodally-completed object. To infer this
-representation from an image, we introduce a diffusion-based architecture named
-Concurrent Object Layers (CObL). CObL generates a stack of object layers in
-parallel, using Stable Diffusion as a prior for natural objects and
-inference-time guidance to ensure the inferred layers composite back to the
-input image. We train CObL using a few thousand synthetically-generated images
-of multi-object tabletop scenes, and we find that it zero-shot generalizes to
-photographs of real-world tabletops with varying numbers of novel objects. In
-contrast to recent models for amodal object completion, CObL reconstructs
-multiple occluded objects without user prompting and without knowing the number
-of objects beforehand. Unlike previous models for unsupervised object-centric
-representation learning, CObL is not limited to the world it was trained in.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CObL, a diffusion-based architecture that infers a scene representation as an occlusion-ordered stack of object layers from an image, generalizing to real-world tabletop scenes without user prompting.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为CObL的基于扩散的架构，它可以从图像中推断出场景的表示，该表示为一个遮挡排序的物体层堆栈，并且可以推广到现实世界的桌面场景，无需用户提示。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(4/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.08498v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Aneel Damaraju, Dean Hazineh, Todd Zickler</p>
+            <p class="paper-authors">Authors: Zhizhou Wang, Ruijing Zheng, Zhenyu Wu, Jianli Wang</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-19 02:39:09 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-19 02:49:29 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
