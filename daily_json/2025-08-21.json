@@ -1,0 +1,241 @@
+[
+    {
+        "title": "GSFix3D: Diffusion-Guided Repair of Novel Views in Gaussian Splatting",
+        "summary": "Recent developments in 3D Gaussian Splatting have significantly enhanced\nnovel view synthesis, yet generating high-quality renderings from extreme novel\nviewpoints or partially observed regions remains challenging. Meanwhile,\ndiffusion models exhibit strong generative capabilities, but their reliance on\ntext prompts and lack of awareness of specific scene information hinder\naccurate 3D reconstruction tasks. To address these limitations, we introduce\nGSFix3D, a novel framework that improves the visual fidelity in\nunder-constrained regions by distilling prior knowledge from diffusion models\ninto 3D representations, while preserving consistency with observed scene\ndetails. At its core is GSFixer, a latent diffusion model obtained via our\ncustomized fine-tuning protocol that can leverage both mesh and 3D Gaussians to\nadapt pretrained generative models to a variety of environments and artifact\ntypes from different reconstruction methods, enabling robust novel view repair\nfor unseen camera poses. Moreover, we propose a random mask augmentation\nstrategy that empowers GSFixer to plausibly inpaint missing regions.\nExperiments on challenging benchmarks demonstrate that our GSFix3D and GSFixer\nachieve state-of-the-art performance, requiring only minimal scene-specific\nfine-tuning on captured data. Real-world test further confirms its resilience\nto potential pose errors. Our code and data will be made publicly available.\nProject page: https://gsfix3d.github.io.",
+        "url": "http://arxiv.org/abs/2508.14717v1",
+        "published_date": "2025-08-20T13:49:53+00:00",
+        "updated_date": "2025-08-20T13:49:53+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiaxin Wei",
+            "Stefan Leutenegger",
+            "Simon Schaefer"
+        ],
+        "tldr": "The paper introduces GSFix3D, a framework that leverages diffusion models to improve novel view synthesis in 3D Gaussian Splatting, especially for under-constrained regions, through a customized fine-tuning protocol and random mask augmentation.",
+        "tldr_zh": "该论文介绍了GSFix3D，一个利用扩散模型改进3D高斯溅射中新视角合成的框架，尤其是在欠约束区域，通过定制的微调协议和随机掩码增强。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Virtual Multiplex Staining for Histological Images using a Marker-wise Conditioned Diffusion Model",
+        "summary": "Multiplex imaging is revolutionizing pathology by enabling the simultaneous\nvisualization of multiple biomarkers within tissue samples, providing\nmolecular-level insights that traditional hematoxylin and eosin (H&E) staining\ncannot provide. However, the complexity and cost of multiplex data acquisition\nhave hindered its widespread adoption. Additionally, most existing large\nrepositories of H&E images lack corresponding multiplex images, limiting\nopportunities for multimodal analysis. To address these challenges, we leverage\nrecent advances in latent diffusion models (LDMs), which excel at modeling\ncomplex data distributions utilizing their powerful priors for fine-tuning to a\ntarget domain. In this paper, we introduce a novel framework for virtual\nmultiplex staining that utilizes pretrained LDM parameters to generate\nmultiplex images from H&E images using a conditional diffusion model. Our\napproach enables marker-by-marker generation by conditioning the diffusion\nmodel on each marker, while sharing the same architecture across all markers.\nTo tackle the challenge of varying pixel value distributions across different\nmarker stains and to improve inference speed, we fine-tune the model for\nsingle-step sampling, enhancing both color contrast fidelity and inference\nefficiency through pixel-level loss functions. We validate our framework on two\npublicly available datasets, notably demonstrating its effectiveness in\ngenerating up to 18 different marker types with improved accuracy, a\nsubstantial increase over the 2-3 marker types achieved in previous approaches.\nThis validation highlights the potential of our framework, pioneering virtual\nmultiplex staining. Finally, this paper bridges the gap between H&E and\nmultiplex imaging, potentially enabling retrospective studies and large-scale\nanalyses of existing H&E image repositories.",
+        "url": "http://arxiv.org/abs/2508.14681v1",
+        "published_date": "2025-08-20T12:54:58+00:00",
+        "updated_date": "2025-08-20T12:54:58+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Hyun-Jic Oh",
+            "Junsik Kim",
+            "Zhiyi Shi",
+            "Yichen Wu",
+            "Yu-An Chen",
+            "Peter K. Sorger",
+            "Hanspeter Pfister",
+            "Won-Ki Jeong"
+        ],
+        "tldr": "This paper introduces a novel framework for virtual multiplex staining using a marker-wise conditioned diffusion model to generate multiplex images from H&E images, demonstrating improved accuracy and scalability compared to previous approaches.",
+        "tldr_zh": "本文介绍了一种新颖的虚拟多重染色框架，该框架使用marker-wise条件扩散模型从H&E图像生成多重图像，与以前的方法相比，展示了更高的准确性和可扩展性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Vivid-VR: Distilling Concepts from Text-to-Video Diffusion Transformer for Photorealistic Video Restoration",
+        "summary": "We present Vivid-VR, a DiT-based generative video restoration method built\nupon an advanced T2V foundation model, where ControlNet is leveraged to control\nthe generation process, ensuring content consistency. However, conventional\nfine-tuning of such controllable pipelines frequently suffers from distribution\ndrift due to limitations in imperfect multimodal alignment, resulting in\ncompromised texture realism and temporal coherence. To tackle this challenge,\nwe propose a concept distillation training strategy that utilizes the\npretrained T2V model to synthesize training samples with embedded textual\nconcepts, thereby distilling its conceptual understanding to preserve texture\nand temporal quality. To enhance generation controllability, we redesign the\ncontrol architecture with two key components: 1) a control feature projector\nthat filters degradation artifacts from input video latents to minimize their\npropagation through the generation pipeline, and 2) a new ControlNet connector\nemploying a dual-branch design. This connector synergistically combines\nMLP-based feature mapping with cross-attention mechanism for dynamic control\nfeature retrieval, enabling both content preservation and adaptive control\nsignal modulation. Extensive experiments show that Vivid-VR performs favorably\nagainst existing approaches on both synthetic and real-world benchmarks, as\nwell as AIGC videos, achieving impressive texture realism, visual vividness,\nand temporal consistency. The codes and checkpoints are publicly available at\nhttps://github.com/csbhr/Vivid-VR.",
+        "url": "http://arxiv.org/abs/2508.14483v1",
+        "published_date": "2025-08-20T07:14:01+00:00",
+        "updated_date": "2025-08-20T07:14:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haoran Bai",
+            "Xiaoxu Chen",
+            "Canqian Yang",
+            "Zongyao He",
+            "Sibin Deng",
+            "Ying Chen"
+        ],
+        "tldr": "Vivid-VR is a DiT-based video restoration method using concept distillation and a redesigned ControlNet architecture to improve texture realism and temporal coherence in restored videos. It outperforms existing methods on various benchmarks.",
+        "tldr_zh": "Vivid-VR是一种基于DiT的视频修复方法，它使用概念蒸馏和重新设计的ControlNet架构，以提高修复视频中的纹理真实感和时间一致性。 在各种基准测试中，它优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Ouroboros: Single-step Diffusion Models for Cycle-consistent Forward and Inverse Rendering",
+        "summary": "While multi-step diffusion models have advanced both forward and inverse\nrendering, existing approaches often treat these problems independently,\nleading to cycle inconsistency and slow inference speed. In this work, we\npresent Ouroboros, a framework composed of two single-step diffusion models\nthat handle forward and inverse rendering with mutual reinforcement. Our\napproach extends intrinsic decomposition to both indoor and outdoor scenes and\nintroduces a cycle consistency mechanism that ensures coherence between forward\nand inverse rendering outputs. Experimental results demonstrate\nstate-of-the-art performance across diverse scenes while achieving\nsubstantially faster inference speed compared to other diffusion-based methods.\nWe also demonstrate that Ouroboros can transfer to video decomposition in a\ntraining-free manner, reducing temporal inconsistency in video sequences while\nmaintaining high-quality per-frame inverse rendering.",
+        "url": "http://arxiv.org/abs/2508.14461v1",
+        "published_date": "2025-08-20T06:32:44+00:00",
+        "updated_date": "2025-08-20T06:32:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shanlin Sun",
+            "Yifan Wang",
+            "Hanwen Zhang",
+            "Yifeng Xiong",
+            "Qin Ren",
+            "Ruogu Fang",
+            "Xiaohui Xie",
+            "Chenyu You"
+        ],
+        "tldr": "Ouroboros introduces a cycle-consistent single-step diffusion model for forward and inverse rendering, achieving state-of-the-art performance with faster inference and demonstrating transferability to video decomposition.",
+        "tldr_zh": "Ouroboros 提出了一种循环一致的单步扩散模型，用于正向和逆向渲染，实现了最先进的性能和更快的推理速度，并展示了向视频分解的可转移性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Disentanglement in T-space for Faster and Distributed Training of Diffusion Models with Fewer Latent-states",
+        "summary": "We challenge a fundamental assumption of diffusion models, namely, that a\nlarge number of latent-states or time-steps is required for training so that\nthe reverse generative process is close to a Gaussian. We first show that with\ncareful selection of a noise schedule, diffusion models trained over a small\nnumber of latent states (i.e. $T \\sim 32$) match the performance of models\ntrained over a much large number of latent states ($T \\sim 1,000$). Second, we\npush this limit (on the minimum number of latent states required) to a single\nlatent-state, which we refer to as complete disentanglement in T-space. We show\nthat high quality samples can be easily generated by the disentangled model\nobtained by combining several independently trained single latent-state models.\nWe provide extensive experiments to show that the proposed disentangled model\nprovides 4-6$\\times$ faster convergence measured across a variety of metrics on\ntwo different datasets.",
+        "url": "http://arxiv.org/abs/2508.14413v1",
+        "published_date": "2025-08-20T04:21:26+00:00",
+        "updated_date": "2025-08-20T04:21:26+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Samarth Gupta",
+            "Raghudeep Gadde",
+            "Rui Chen",
+            "Aleix M. Martinez"
+        ],
+        "tldr": "This paper explores training diffusion models with significantly fewer latent states (even just one) while maintaining performance, leading to faster training times and distributed training capabilities. It shows that by careful selection of noise schedule, performance will not degrade with far fewer latent states.",
+        "tldr_zh": "本文探索了使用明显更少的潜在状态（甚至只有一个）训练扩散模型，同时保持性能，从而实现更快的训练时间和分布式训练能力。文章表明，通过仔细选择噪声计划，性能不会因大大减少潜在状态而降低。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Squeezed Diffusion Models",
+        "summary": "Diffusion models typically inject isotropic Gaussian noise, disregarding\nstructure in the data. Motivated by the way quantum squeezed states\nredistribute uncertainty according to the Heisenberg uncertainty principle, we\nintroduce Squeezed Diffusion Models (SDM), which scale noise anisotropically\nalong the principal component of the training distribution. As squeezing\nenhances the signal-to-noise ratio in physics, we hypothesize that scaling\nnoise in a data-dependent manner can better assist diffusion models in learning\nimportant data features. We study two configurations: (i) a Heisenberg\ndiffusion model that compensates the scaling on the principal axis with inverse\nscaling on orthogonal directions and (ii) a standard SDM variant that scales\nonly the principal axis. Counterintuitively, on CIFAR-10/100 and CelebA-64,\nmild antisqueezing - i.e. increasing variance on the principal axis -\nconsistently improves FID by up to 15% and shifts the precision-recall frontier\ntoward higher recall. Our results demonstrate that simple, data-aware noise\nshaping can deliver robust generative gains without architectural changes.",
+        "url": "http://arxiv.org/abs/2508.14871v1",
+        "published_date": "2025-08-20T17:37:53+00:00",
+        "updated_date": "2025-08-20T17:37:53+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jyotirmai Singh",
+            "Samar Khanna",
+            "James Burgess"
+        ],
+        "tldr": "The paper introduces Squeezed Diffusion Models (SDM), which anisotropically scale noise based on data principal components, and surprisingly finds that mild antisqueezing improves generative performance on image datasets.",
+        "tldr_zh": "本文介绍了挤压扩散模型（SDM），该模型根据数据主成分各向异性地缩放噪声。令人惊讶的是，轻微的“反挤压”操作可以提高图像数据集上的生成性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "SATURN: Autoregressive Image Generation Guided by Scene Graphs",
+        "summary": "State-of-the-art text-to-image models excel at photorealistic rendering but\noften struggle to capture the layout and object relationships implied by\ncomplex prompts. Scene graphs provide a natural structural prior, yet previous\ngraph-guided approaches have typically relied on heavy GAN or diffusion\npipelines, which lag behind modern autoregressive architectures in both speed\nand fidelity. We introduce SATURN (Structured Arrangement of Triplets for\nUnified Rendering Networks), a lightweight extension to VAR-CLIP that\ntranslates a scene graph into a salience-ordered token sequence, enabling a\nfrozen CLIP-VQ-VAE backbone to interpret graph structure while fine-tuning only\nthe VAR transformer. On the Visual Genome dataset, SATURN reduces FID from\n56.45% to 21.62% and increases the Inception Score from 16.03 to 24.78,\noutperforming prior methods such as SG2IM and SGDiff without requiring extra\nmodules or multi-stage training. Qualitative results further confirm\nimprovements in object count fidelity and spatial relation accuracy, showing\nthat SATURN effectively combines structural awareness with state-of-the-art\nautoregressive fidelity.",
+        "url": "http://arxiv.org/abs/2508.14502v1",
+        "published_date": "2025-08-20T07:45:08+00:00",
+        "updated_date": "2025-08-20T07:45:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Thanh-Nhan Vo",
+            "Trong-Thuan Nguyen",
+            "Tam V. Nguyen",
+            "Minh-Triet Tran"
+        ],
+        "tldr": "SATURN is a lightweight extension to VAR-CLIP that uses scene graphs to guide autoregressive image generation, achieving improved fidelity and object relation accuracy compared to existing methods.",
+        "tldr_zh": "SATURN是VAR-CLIP的一个轻量级扩展，它使用场景图来引导自回归图像生成，与现有方法相比，实现了更高的保真度和对象关系准确性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "MoCHA-former: Moiré-Conditioned Hybrid Adaptive Transformer for Video Demoiréing",
+        "summary": "Recent advances in portable imaging have made camera-based screen capture\nubiquitous. Unfortunately, frequency aliasing between the camera's color filter\narray (CFA) and the display's sub-pixels induces moir\\'e patterns that severely\ndegrade captured photos and videos. Although various demoir\\'eing models have\nbeen proposed to remove such moir\\'e patterns, these approaches still suffer\nfrom several limitations: (i) spatially varying artifact strength within a\nframe, (ii) large-scale and globally spreading structures, (iii)\nchannel-dependent statistics and (iv) rapid temporal fluctuations across\nframes. We address these issues with the Moir\\'e Conditioned Hybrid Adaptive\nTransformer (MoCHA-former), which comprises two key components: Decoupled\nMoir\\'e Adaptive Demoir\\'eing (DMAD) and Spatio-Temporal Adaptive Demoir\\'eing\n(STAD). DMAD separates moir\\'e and content via a Moir\\'e Decoupling Block (MDB)\nand a Detail Decoupling Block (DDB), then produces moir\\'e-adaptive features\nusing a Moir\\'e Conditioning Block (MCB) for targeted restoration. STAD\nintroduces a Spatial Fusion Block (SFB) with window attention to capture\nlarge-scale structures, and a Feature Channel Attention (FCA) to model channel\ndependence in RAW frames. To ensure temporal consistency, MoCHA-former performs\nimplicit frame alignment without any explicit alignment module. We analyze\nmoir\\'e characteristics through qualitative and quantitative studies, and\nevaluate on two video datasets covering RAW and sRGB domains. MoCHA-former\nconsistently surpasses prior methods across PSNR, SSIM, and LPIPS.",
+        "url": "http://arxiv.org/abs/2508.14423v1",
+        "published_date": "2025-08-20T04:42:07+00:00",
+        "updated_date": "2025-08-20T04:42:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jeahun Sung",
+            "Changhyun Roh",
+            "Chanho Eom",
+            "Jihyong Oh"
+        ],
+        "tldr": "The paper introduces MoCHA-former, a novel transformer-based architecture for video demoiréing that addresses spatial and temporal inconsistencies by adaptively decoupling and restoring moiré patterns, achieving state-of-the-art performance on video datasets.",
+        "tldr_zh": "本文介绍了MoCHA-former，一种新型的基于Transformer的视频去摩尔纹架构，通过自适应地解耦和恢复摩尔纹模式来解决空间和时间上的不一致性，并在视频数据集上实现了最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Tooth-Diffusion: Guided 3D CBCT Synthesis with Fine-Grained Tooth Conditioning",
+        "summary": "Despite the growing importance of dental CBCT scans for diagnosis and\ntreatment planning, generating anatomically realistic scans with fine-grained\ncontrol remains a challenge in medical image synthesis. In this work, we\npropose a novel conditional diffusion framework for 3D dental volume\ngeneration, guided by tooth-level binary attributes that allow precise control\nover tooth presence and configuration. Our approach integrates wavelet-based\ndenoising diffusion, FiLM conditioning, and masked loss functions to focus\nlearning on relevant anatomical structures. We evaluate the model across\ndiverse tasks, such as tooth addition, removal, and full dentition synthesis,\nusing both paired and distributional similarity metrics. Results show strong\nfidelity and generalization with low FID scores, robust inpainting performance,\nand SSIM values above 0.91 even on unseen scans. By enabling realistic,\nlocalized modification of dentition without rescanning, this work opens\nopportunities for surgical planning, patient communication, and targeted data\naugmentation in dental AI workflows. The codes are available at:\nhttps://github.com/djafar1/tooth-diffusion.",
+        "url": "http://arxiv.org/abs/2508.14276v1",
+        "published_date": "2025-08-19T21:21:35+00:00",
+        "updated_date": "2025-08-19T21:21:35+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Said Djafar Said",
+            "Torkan Gholamalizadeh",
+            "Mostafa Mehdipour Ghazi"
+        ],
+        "tldr": "The paper introduces Tooth-Diffusion, a conditional diffusion framework for generating realistic 3D dental CBCT scans with fine-grained tooth-level control, enabling applications like surgical planning and data augmentation.",
+        "tldr_zh": "该论文介绍了Tooth-Diffusion，一个有条件扩散框架，用于生成具有精细牙齿级别控制的逼真3D牙科CBCT扫描，从而实现诸如手术计划和数据增强之类的应用。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Taming Transformer for Emotion-Controllable Talking Face Generation",
+        "summary": "Talking face generation is a novel and challenging generation task, aiming at\nsynthesizing a vivid speaking-face video given a specific audio. To fulfill\nemotion-controllable talking face generation, current methods need to overcome\ntwo challenges: One is how to effectively model the multimodal relationship\nrelated to the specific emotion, and the other is how to leverage this\nrelationship to synthesize identity preserving emotional videos. In this paper,\nwe propose a novel method to tackle the emotion-controllable talking face\ngeneration task discretely. Specifically, we employ two pre-training strategies\nto disentangle audio into independent components and quantize videos into\ncombinations of visual tokens. Subsequently, we propose the emotion-anchor (EA)\nrepresentation that integrates the emotional information into visual tokens.\nFinally, we introduce an autoregressive transformer to model the global\ndistribution of the visual tokens under the given conditions and further\npredict the index sequence for synthesizing the manipulated videos. We conduct\nexperiments on the MEAD dataset that controls the emotion of videos conditioned\non multiple emotional audios. Extensive experiments demonstrate the\nsuperiorities of our method both qualitatively and quantitatively.",
+        "url": "http://arxiv.org/abs/2508.14359v1",
+        "published_date": "2025-08-20T02:16:52+00:00",
+        "updated_date": "2025-08-20T02:16:52+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziqi Zhang",
+            "Cheng Deng"
+        ],
+        "tldr": "This paper presents a transformer-based method for emotion-controllable talking face generation by disentangling audio, quantizing videos, and using emotion-anchored visual tokens.",
+        "tldr_zh": "本文提出了一种基于Transformer的情感可控说话人脸生成方法，该方法通过解耦音频、量化视频以及使用情感锚定的视觉令牌来实现。",
+        "relevance_score": 3,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 5
+    }
+]
