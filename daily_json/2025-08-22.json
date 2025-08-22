@@ -1,0 +1,150 @@
+[
+    {
+        "title": "Pretrained Diffusion Models Are Inherently Skipped-Step Samplers",
+        "summary": "Diffusion models have been achieving state-of-the-art results across various\ngeneration tasks. However, a notable drawback is their sequential generation\nprocess, requiring long-sequence step-by-step generation. Existing methods,\nsuch as DDIM, attempt to reduce sampling steps by constructing a class of\nnon-Markovian diffusion processes that maintain the same training objective.\nHowever, there remains a gap in understanding whether the original diffusion\nprocess can achieve the same efficiency without resorting to non-Markovian\nprocesses. In this paper, we provide a confirmative answer and introduce\nskipped-step sampling, a mechanism that bypasses multiple intermediate\ndenoising steps in the iterative generation process, in contrast with the\ntraditional step-by-step refinement of standard diffusion inference. Crucially,\nwe demonstrate that this skipped-step sampling mechanism is derived from the\nsame training objective as the standard diffusion model, indicating that\naccelerated sampling via skipped-step sampling via a Markovian way is an\nintrinsic property of pretrained diffusion models. Additionally, we propose an\nenhanced generation method by integrating our accelerated sampling technique\nwith DDIM. Extensive experiments on popular pretrained diffusion models,\nincluding the OpenAI ADM, Stable Diffusion, and Open Sora models, show that our\nmethod achieves high-quality generation with significantly reduced sampling\nsteps.",
+        "url": "http://arxiv.org/abs/2508.15233v1",
+        "published_date": "2025-08-21T04:45:13+00:00",
+        "updated_date": "2025-08-21T04:45:13+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Wenju Xu"
+        ],
+        "tldr": "The paper introduces a \"skipped-step sampling\" method for diffusion models, demonstrating it's an inherent property that allows for faster sampling without changing the training objective, and integrates it with DDIM for enhanced generation.",
+        "tldr_zh": "该论文介绍了一种扩散模型的“跳步采样”方法，证明这是其内在属性，可以在不改变训练目标的情况下实现更快的采样，并将其与 DDIM 集成以增强生成效果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "CineScale: Free Lunch in High-Resolution Cinematic Visual Generation",
+        "summary": "Visual diffusion models achieve remarkable progress, yet they are typically\ntrained at limited resolutions due to the lack of high-resolution data and\nconstrained computation resources, hampering their ability to generate\nhigh-fidelity images or videos at higher resolutions. Recent efforts have\nexplored tuning-free strategies to exhibit the untapped potential\nhigher-resolution visual generation of pre-trained models. However, these\nmethods are still prone to producing low-quality visual content with repetitive\npatterns. The key obstacle lies in the inevitable increase in high-frequency\ninformation when the model generates visual content exceeding its training\nresolution, leading to undesirable repetitive patterns deriving from the\naccumulated errors. In this work, we propose CineScale, a novel inference\nparadigm to enable higher-resolution visual generation. To tackle the various\nissues introduced by the two types of video generation architectures, we\npropose dedicated variants tailored to each. Unlike existing baseline methods\nthat are confined to high-resolution T2I and T2V generation, CineScale broadens\nthe scope by enabling high-resolution I2V and V2V synthesis, built atop\nstate-of-the-art open-source video generation frameworks. Extensive experiments\nvalidate the superiority of our paradigm in extending the capabilities of\nhigher-resolution visual generation for both image and video models.\nRemarkably, our approach enables 8k image generation without any fine-tuning,\nand achieves 4k video generation with only minimal LoRA fine-tuning. Generated\nvideo samples are available at our website:\nhttps://eyeline-labs.github.io/CineScale/.",
+        "url": "http://arxiv.org/abs/2508.15774v1",
+        "published_date": "2025-08-21T17:59:57+00:00",
+        "updated_date": "2025-08-21T17:59:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haonan Qiu",
+            "Ning Yu",
+            "Ziqi Huang",
+            "Paul Debevec",
+            "Ziwei Liu"
+        ],
+        "tldr": "CineScale is a novel inference paradigm that enables high-resolution (up to 8k images and 4k videos) visual generation from pre-trained diffusion models, tackling the issue of repetitive patterns without extensive fine-tuning.",
+        "tldr_zh": "CineScale 是一种新的推理范式，能够从预训练的扩散模型生成高分辨率（高达 8k 图像和 4k 视频）的视觉内容，解决了重复模式的问题，而无需进行大量的微调。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Are Virtual DES Images a Valid Alternative to the Real Ones?",
+        "summary": "Contrast-enhanced spectral mammography (CESM) is an imaging modality that\nprovides two types of images, commonly known as low-energy (LE) and dual-energy\nsubtracted (DES) images. In many domains, particularly in medicine, the\nemergence of image-to-image translation techniques has enabled the artificial\ngeneration of images using other images as input. Within CESM, applying such\ntechniques to generate DES images from LE images could be highly beneficial,\npotentially reducing patient exposure to radiation associated with high-energy\nimage acquisition. In this study, we investigated three models for the\nartificial generation of DES images (virtual DES): a pre-trained U-Net model, a\nU-Net trained end-to-end model, and a CycleGAN model. We also performed a\nseries of experiments to assess the impact of using virtual DES images on the\nclassification of CESM examinations into malignant and non-malignant\ncategories. To our knowledge, this is the first study to evaluate the impact of\nvirtual DES images on CESM lesion classification. The results demonstrate that\nthe best performance was achieved with the pre-trained U-Net model, yielding an\nF1 score of 85.59% when using the virtual DES images, compared to 90.35% with\nthe real DES images. This discrepancy likely results from the additional\ndiagnostic information in real DES images, which contributes to a higher\nclassification accuracy. Nevertheless, the potential for virtual DES image\ngeneration is considerable and future advancements may narrow this performance\ngap to a level where exclusive reliance on virtual DES images becomes\nclinically viable.",
+        "url": "http://arxiv.org/abs/2508.15594v1",
+        "published_date": "2025-08-21T14:07:42+00:00",
+        "updated_date": "2025-08-21T14:07:42+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Ana C. Perre",
+            "Luís A. Alexandre",
+            "Luís C. Freire"
+        ],
+        "tldr": "This paper explores generating virtual dual-energy subtracted (DES) images from low-energy (LE) images in contrast-enhanced spectral mammography (CESM) using image-to-image translation techniques, finding promising but slightly inferior results compared to real DES images for lesion classification.",
+        "tldr_zh": "本文探讨了在对比增强光谱乳腺摄影（CESM）中，使用图像到图像的转换技术，从低能量（LE）图像生成虚拟双能量减影（DES）图像的方法。研究发现，与真实的DES图像相比，虚拟图像在病灶分类方面表现出潜力，但结果略逊一筹。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Zero-shot Volumetric CT Super-Resolution using 3D Gaussian Splatting with Upsampled 2D X-ray Projection Priors",
+        "summary": "Computed tomography (CT) is widely used in clinical diagnosis, but acquiring\nhigh-resolution (HR) CT is limited by radiation exposure risks. Deep\nlearning-based super-resolution (SR) methods have been studied to reconstruct\nHR from low-resolution (LR) inputs. While supervised SR approaches have shown\npromising results, they require large-scale paired LR-HR volume datasets that\nare often unavailable. In contrast, zero-shot methods alleviate the need for\npaired data by using only a single LR input, but typically struggle to recover\nfine anatomical details due to limited internal information. To overcome these,\nwe propose a novel zero-shot 3D CT SR framework that leverages upsampled 2D\nX-ray projection priors generated by a diffusion model. Exploiting the\nabundance of HR 2D X-ray data, we train a diffusion model on large-scale 2D\nX-ray projection and introduce a per-projection adaptive sampling strategy. It\nselects the generative process for each projection, thus providing HR\nprojections as strong external priors for 3D CT reconstruction. These\nprojections serve as inputs to 3D Gaussian splatting for reconstructing a 3D CT\nvolume. Furthermore, we propose negative alpha blending (NAB-GS) that allows\nnegative values in Gaussian density representation. NAB-GS enables residual\nlearning between LR and diffusion-based projections, thereby enhancing\nhigh-frequency structure reconstruction. Experiments on two datasets show that\nour method achieves superior quantitative and qualitative results for 3D CT SR.",
+        "url": "http://arxiv.org/abs/2508.15151v1",
+        "published_date": "2025-08-21T01:24:06+00:00",
+        "updated_date": "2025-08-21T01:24:06+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jeonghyun Noh",
+            "Hyun-Jic Oh",
+            "Byungju Chae",
+            "Won-Ki Jeong"
+        ],
+        "tldr": "This paper proposes a novel zero-shot CT super-resolution method using 3D Gaussian Splatting, guided by upsampled 2D X-ray projection priors generated by a diffusion model, and introduces negative alpha blending for enhanced high-frequency reconstruction.",
+        "tldr_zh": "本文提出了一种新颖的零样本CT超分辨率方法，该方法使用3D高斯溅射，并由扩散模型生成的上采样2D X射线投影先验引导，并引入负alpha混合以增强高频重建。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Visual Autoregressive Modeling for Instruction-Guided Image Editing",
+        "summary": "Recent advances in diffusion models have brought remarkable visual fidelity\nto instruction-guided image editing. However, their global denoising process\ninherently entangles the edited region with the entire image context, leading\nto unintended spurious modifications and compromised adherence to editing\ninstructions. In contrast, autoregressive models offer a distinct paradigm by\nformulating image synthesis as a sequential process over discrete visual\ntokens. Their causal and compositional mechanism naturally circumvents the\nadherence challenges of diffusion-based methods. In this paper, we present\nVAREdit, a visual autoregressive (VAR) framework that reframes image editing as\na next-scale prediction problem. Conditioned on source image features and text\ninstructions, VAREdit generates multi-scale target features to achieve precise\nedits. A core challenge in this paradigm is how to effectively condition the\nsource image tokens. We observe that finest-scale source features cannot\neffectively guide the prediction of coarser target features. To bridge this\ngap, we introduce a Scale-Aligned Reference (SAR) module, which injects\nscale-matched conditioning information into the first self-attention layer.\nVAREdit demonstrates significant advancements in both editing adherence and\nefficiency. On standard benchmarks, it outperforms leading diffusion-based\nmethods by 30\\%+ higher GPT-Balance score. Moreover, it completes a\n$512\\times512$ editing in 1.2 seconds, making it 2.2$\\times$ faster than the\nsimilarly sized UltraEdit. The models are available at\nhttps://github.com/HiDream-ai/VAREdit.",
+        "url": "http://arxiv.org/abs/2508.15772v1",
+        "published_date": "2025-08-21T17:59:32+00:00",
+        "updated_date": "2025-08-21T17:59:32+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.MM"
+        ],
+        "authors": [
+            "Qingyang Mao",
+            "Qi Cai",
+            "Yehao Li",
+            "Yingwei Pan",
+            "Mingyue Cheng",
+            "Ting Yao",
+            "Qi Liu",
+            "Tao Mei"
+        ],
+        "tldr": "The paper introduces VAREdit, a visual autoregressive framework for instruction-guided image editing that overcomes limitations of diffusion models by using a scale-aligned reference module for improved adherence and efficiency, achieving state-of-the-art performance.",
+        "tldr_zh": "该论文介绍了VAREdit，一个用于指令引导图像编辑的视觉自回归框架，通过使用尺度对齐参考模块，克服了扩散模型的局限性，提高了编辑的准确性和效率，并实现了最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Reversible Unfolding Network for Concealed Visual Perception with Generative Refinement",
+        "summary": "Existing methods for concealed visual perception (CVP) often leverage\nreversible strategies to decrease uncertainty, yet these are typically confined\nto the mask domain, leaving the potential of the RGB domain underexplored. To\naddress this, we propose a reversible unfolding network with generative\nrefinement, termed RUN++. Specifically, RUN++ first formulates the CVP task as\na mathematical optimization problem and unfolds the iterative solution into a\nmulti-stage deep network. This approach provides a principled way to apply\nreversible modeling across both mask and RGB domains while leveraging a\ndiffusion model to resolve the resulting uncertainty. Each stage of the network\nintegrates three purpose-driven modules: a Concealed Object Region Extraction\n(CORE) module applies reversible modeling to the mask domain to identify core\nobject regions; a Context-Aware Region Enhancement (CARE) module extends this\nprinciple to the RGB domain to foster better foreground-background separation;\nand a Finetuning Iteration via Noise-based Enhancement (FINE) module provides a\nfinal refinement. The FINE module introduces a targeted Bernoulli diffusion\nmodel that refines only the uncertain regions of the segmentation mask,\nharnessing the generative power of diffusion for fine-detail restoration\nwithout the prohibitive computational cost of a full-image process. This unique\nsynergy, where the unfolding network provides a strong uncertainty prior for\nthe diffusion model, allows RUN++ to efficiently direct its focus toward\nambiguous areas, significantly mitigating false positives and negatives.\nFurthermore, we introduce a new paradigm for building robust CVP systems that\nremain effective under real-world degradations and extend this concept into a\nbroader bi-level optimization framework.",
+        "url": "http://arxiv.org/abs/2508.15027v1",
+        "published_date": "2025-08-20T19:45:40+00:00",
+        "updated_date": "2025-08-20T19:45:40+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Chunming He",
+            "Fengyang Xiao",
+            "Rihan Zhang",
+            "Chengyu Fang",
+            "Deng-Ping Fan",
+            "Sina Farsiu"
+        ],
+        "tldr": "The paper proposes a reversible unfolding network (RUN++) for concealed visual perception, integrating reversible modeling in both mask and RGB domains with a targeted diffusion model for uncertainty refinement, achieving state-of-the-art performance and robustness.",
+        "tldr_zh": "该论文提出了一种用于隐蔽视觉感知的可逆展开网络（RUN++），它结合了掩码和RGB域中的可逆建模，并采用有针对性的扩散模型进行不确定性细化，实现了最先进的性能和鲁棒性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
