@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 22, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - August 23, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 22, 2025</p>
+            <p>August 23, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,33 +215,35 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Pretrained Diffusion Models Are Inherently Skipped-Step Samplers</h2>
+            <h2 class="paper-title">Time-Aware One Step Diffusion Network for Real-World Image Super-Resolution</h2>
             
-            <p class="paper-summary">Diffusion models have been achieving state-of-the-art results across various
-generation tasks. However, a notable drawback is their sequential generation
-process, requiring long-sequence step-by-step generation. Existing methods,
-such as DDIM, attempt to reduce sampling steps by constructing a class of
-non-Markovian diffusion processes that maintain the same training objective.
-However, there remains a gap in understanding whether the original diffusion
-process can achieve the same efficiency without resorting to non-Markovian
-processes. In this paper, we provide a confirmative answer and introduce
-skipped-step sampling, a mechanism that bypasses multiple intermediate
-denoising steps in the iterative generation process, in contrast with the
-traditional step-by-step refinement of standard diffusion inference. Crucially,
-we demonstrate that this skipped-step sampling mechanism is derived from the
-same training objective as the standard diffusion model, indicating that
-accelerated sampling via skipped-step sampling via a Markovian way is an
-intrinsic property of pretrained diffusion models. Additionally, we propose an
-enhanced generation method by integrating our accelerated sampling technique
-with DDIM. Extensive experiments on popular pretrained diffusion models,
-including the OpenAI ADM, Stable Diffusion, and Open Sora models, show that our
-method achieves high-quality generation with significantly reduced sampling
-steps.</p>
+            <p class="paper-summary">Diffusion-based real-world image super-resolution (Real-ISR) methods have
+demonstrated impressive performance. To achieve efficient Real-ISR, many works
+employ Variational Score Distillation (VSD) to distill pre-trained
+stable-diffusion (SD) model for one-step SR with a fixed timestep. However, due
+to the different noise injection timesteps, the SD will perform different
+generative priors. Therefore, a fixed timestep is difficult for these methods
+to fully leverage the generative priors in SD, leading to suboptimal
+performance. To address this, we propose a Time-Aware one-step Diffusion
+Network for Real-ISR (TADSR). We first introduce a Time-Aware VAE Encoder,
+which projects the same image into different latent features based on
+timesteps. Through joint dynamic variation of timesteps and latent features,
+the student model can better align with the input pattern distribution of the
+pre-trained SD, thereby enabling more effective utilization of SD's generative
+capabilities. To better activate the generative prior of SD at different
+timesteps, we propose a Time-Aware VSD loss that bridges the timesteps of the
+student model and those of the teacher model, thereby producing more consistent
+generative prior guidance conditioned on timesteps. Additionally, though
+utilizing the generative prior in SD at different timesteps, our method can
+naturally achieve controllable trade-offs between fidelity and realism by
+changing the timestep condition. Experimental results demonstrate that our
+method achieves both state-of-the-art performance and controllable SR results
+with only a single step.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a "skipped-step sampling" method for diffusion models, demonstrating it's an inherent property that allows for faster sampling without changing the training objective, and integrates it with DDIM for enhanced generation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a Time-Aware Diffusion Network (TADSR) for real-world image super-resolution, addressing the limitation of fixed timesteps in existing methods by dynamically adjusting timesteps and latent features to better leverage pre-trained stable-diffusion models.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种扩散模型的“跳步采样”方法，证明这是其内在属性，可以在不改变训练目标的情况下实现更快的采样，并将其与 DDIM 集成以增强生成效果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种用于真实世界图像超分辨率的时间感知扩散网络 (TADSR)，通过动态调整时间步长和潜在特征，解决了现有方法中固定时间步长的局限性，从而更好地利用预训练的稳定扩散模型。</p>
             
 
             
@@ -251,8 +253,8 @@ steps.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
                 </div>
                 
                 
@@ -275,8 +277,8 @@ steps.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -312,11 +314,11 @@ steps.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.15233v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.16557v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Wenju Xu</p>
+            <p class="paper-authors">Authors: Tainyi Zhang, Zheng-Peng Duan, Peng-Tao Jiang, Bo Li, Ming-Ming Cheng, Chun-Le Guo, Chongyi Li</p>
             
         </motion.div>
         
@@ -328,36 +330,28 @@ steps.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CineScale: Free Lunch in High-Resolution Cinematic Visual Generation</h2>
+            <h2 class="paper-title">Arbitrary-Scale 3D Gaussian Super-Resolution</h2>
             
-            <p class="paper-summary">Visual diffusion models achieve remarkable progress, yet they are typically
-trained at limited resolutions due to the lack of high-resolution data and
-constrained computation resources, hampering their ability to generate
-high-fidelity images or videos at higher resolutions. Recent efforts have
-explored tuning-free strategies to exhibit the untapped potential
-higher-resolution visual generation of pre-trained models. However, these
-methods are still prone to producing low-quality visual content with repetitive
-patterns. The key obstacle lies in the inevitable increase in high-frequency
-information when the model generates visual content exceeding its training
-resolution, leading to undesirable repetitive patterns deriving from the
-accumulated errors. In this work, we propose CineScale, a novel inference
-paradigm to enable higher-resolution visual generation. To tackle the various
-issues introduced by the two types of video generation architectures, we
-propose dedicated variants tailored to each. Unlike existing baseline methods
-that are confined to high-resolution T2I and T2V generation, CineScale broadens
-the scope by enabling high-resolution I2V and V2V synthesis, built atop
-state-of-the-art open-source video generation frameworks. Extensive experiments
-validate the superiority of our paradigm in extending the capabilities of
-higher-resolution visual generation for both image and video models.
-Remarkably, our approach enables 8k image generation without any fine-tuning,
-and achieves 4k video generation with only minimal LoRA fine-tuning. Generated
-video samples are available at our website:
-https://eyeline-labs.github.io/CineScale/.</p>
+            <p class="paper-summary">Existing 3D Gaussian Splatting (3DGS) super-resolution methods typically
+perform high-resolution (HR) rendering of fixed scale factors, making them
+impractical for resource-limited scenarios. Directly rendering arbitrary-scale
+HR views with vanilla 3DGS introduces aliasing artifacts due to the lack of
+scale-aware rendering ability, while adding a post-processing upsampler for
+3DGS complicates the framework and reduces rendering efficiency. To tackle
+these issues, we build an integrated framework that incorporates scale-aware
+rendering, generative prior-guided optimization, and progressive
+super-resolving to enable 3D Gaussian super-resolution of arbitrary scale
+factors with a single 3D model. Notably, our approach supports both integer and
+non-integer scale rendering to provide more flexibility. Extensive experiments
+demonstrate the effectiveness of our model in rendering high-quality
+arbitrary-scale HR views (6.59 dB PSNR gain over 3DGS) with a single model. It
+preserves structural consistency with LR views and across different scales,
+while maintaining real-time rendering speed (85 FPS at 1080p).</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: CineScale is a novel inference paradigm that enables high-resolution (up to 8k images and 4k videos) visual generation from pre-trained diffusion models, tackling the issue of repetitive patterns without extensive fine-tuning.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a novel framework for arbitrary-scale 3D Gaussian Splatting super-resolution, enabling high-quality rendering at varying scales with a single model while maintaining real-time performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: CineScale 是一种新的推理范式，能够从预训练的扩散模型生成高分辨率（高达 8k 图像和 4k 视频）的视觉内容，解决了重复模式的问题，而无需进行大量的微调。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新的任意尺度3D高斯溅射超分辨率框架，它可以通过单个模型在不同尺度上实现高质量渲染，同时保持实时性能。</p>
             
 
             
@@ -428,11 +422,11 @@ https://eyeline-labs.github.io/CineScale/.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.15774v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.16467v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Haonan Qiu, Ning Yu, Ziqi Huang, Paul Debevec, Ziwei Liu</p>
+            <p class="paper-authors">Authors: Huimin Zeng, Yue Bai, Yun Fu</p>
             
         </motion.div>
         
@@ -444,35 +438,27 @@ https://eyeline-labs.github.io/CineScale/.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Are Virtual DES Images a Valid Alternative to the Real Ones?</h2>
+            <h2 class="paper-title">Towards Diagnostic Quality Flat-Panel Detector CT Imaging Using Diffusion Models</h2>
             
-            <p class="paper-summary">Contrast-enhanced spectral mammography (CESM) is an imaging modality that
-provides two types of images, commonly known as low-energy (LE) and dual-energy
-subtracted (DES) images. In many domains, particularly in medicine, the
-emergence of image-to-image translation techniques has enabled the artificial
-generation of images using other images as input. Within CESM, applying such
-techniques to generate DES images from LE images could be highly beneficial,
-potentially reducing patient exposure to radiation associated with high-energy
-image acquisition. In this study, we investigated three models for the
-artificial generation of DES images (virtual DES): a pre-trained U-Net model, a
-U-Net trained end-to-end model, and a CycleGAN model. We also performed a
-series of experiments to assess the impact of using virtual DES images on the
-classification of CESM examinations into malignant and non-malignant
-categories. To our knowledge, this is the first study to evaluate the impact of
-virtual DES images on CESM lesion classification. The results demonstrate that
-the best performance was achieved with the pre-trained U-Net model, yielding an
-F1 score of 85.59% when using the virtual DES images, compared to 90.35% with
-the real DES images. This discrepancy likely results from the additional
-diagnostic information in real DES images, which contributes to a higher
-classification accuracy. Nevertheless, the potential for virtual DES image
-generation is considerable and future advancements may narrow this performance
-gap to a level where exclusive reliance on virtual DES images becomes
-clinically viable.</p>
+            <p class="paper-summary">Patients undergoing a mechanical thrombectomy procedure usually have a
+multi-detector CT (MDCT) scan before and after the intervention. The image
+quality of the flat panel detector CT (FDCT) present in the intervention room
+is generally much lower than that of a MDCT due to significant artifacts.
+However, using only FDCT images could improve patient management as the patient
+would not need to be moved to the MDCT room. Several studies have evaluated the
+potential use of FDCT imaging alone and the time that could be saved by
+acquiring the images before and/or after the intervention only with the FDCT.
+This study proposes using a denoising diffusion probabilistic model (DDPM) to
+improve the image quality of FDCT scans, making them comparable to MDCT scans.
+Clinicans evaluated FDCT, MDCT, and our model's predictions for diagnostic
+purposes using a questionnaire. The DDPM eliminated most artifacts and improved
+anatomical visibility without reducing bleeding detection, provided that the
+input FDCT image quality is not too low. Our code can be found on github.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores generating virtual dual-energy subtracted (DES) images from low-energy (LE) images in contrast-enhanced spectral mammography (CESM) using image-to-image translation techniques, finding promising but slightly inferior results compared to real DES images for lesion classification.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores using a denoising diffusion probabilistic model (DDPM) to enhance the image quality of flat panel detector CT (FDCT) scans to match multi-detector CT (MDCT) scans, showing promising results in clinical evaluation.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文探讨了在对比增强光谱乳腺摄影（CESM）中，使用图像到图像的转换技术，从低能量（LE）图像生成虚拟双能量减影（DES）图像的方法。研究发现，与真实的DES图像相比，虚拟图像在病灶分类方面表现出潜力，但结果略逊一筹。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文探讨了使用去噪扩散概率模型（DDPM）来提高平板探测器CT（FDCT）扫描的图像质量，使其与多探测器CT（MDCT）扫描相媲美，并在临床评估中显示出有希望的结果。</p>
             
 
             
@@ -506,8 +492,8 @@ clinically viable.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -543,11 +529,11 @@ clinically viable.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.15594v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.16252v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ana C. Perre, Luís A. Alexandre, Luís C. Freire</p>
+            <p class="paper-authors">Authors: Hélène Corbaz, Anh Nguyen, Victor Schulze-Zachau, Paul Friedrich, Alicia Durrer, Florentin Bieder, Philippe C. Cattin, Marios N Psychogios</p>
             
         </motion.div>
         
@@ -559,33 +545,31 @@ clinically viable.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Zero-shot Volumetric CT Super-Resolution using 3D Gaussian Splatting with Upsampled 2D X-ray Projection Priors</h2>
+            <h2 class="paper-title">Forecast then Calibrate: Feature Caching as ODE for Efficient Diffusion Transformers</h2>
             
-            <p class="paper-summary">Computed tomography (CT) is widely used in clinical diagnosis, but acquiring
-high-resolution (HR) CT is limited by radiation exposure risks. Deep
-learning-based super-resolution (SR) methods have been studied to reconstruct
-HR from low-resolution (LR) inputs. While supervised SR approaches have shown
-promising results, they require large-scale paired LR-HR volume datasets that
-are often unavailable. In contrast, zero-shot methods alleviate the need for
-paired data by using only a single LR input, but typically struggle to recover
-fine anatomical details due to limited internal information. To overcome these,
-we propose a novel zero-shot 3D CT SR framework that leverages upsampled 2D
-X-ray projection priors generated by a diffusion model. Exploiting the
-abundance of HR 2D X-ray data, we train a diffusion model on large-scale 2D
-X-ray projection and introduce a per-projection adaptive sampling strategy. It
-selects the generative process for each projection, thus providing HR
-projections as strong external priors for 3D CT reconstruction. These
-projections serve as inputs to 3D Gaussian splatting for reconstructing a 3D CT
-volume. Furthermore, we propose negative alpha blending (NAB-GS) that allows
-negative values in Gaussian density representation. NAB-GS enables residual
-learning between LR and diffusion-based projections, thereby enhancing
-high-frequency structure reconstruction. Experiments on two datasets show that
-our method achieves superior quantitative and qualitative results for 3D CT SR.</p>
+            <p class="paper-summary">Diffusion Transformers (DiTs) have demonstrated exceptional performance in
+high-fidelity image and video generation. To reduce their substantial
+computational costs, feature caching techniques have been proposed to
+accelerate inference by reusing hidden representations from previous timesteps.
+However, current methods often struggle to maintain generation quality at high
+acceleration ratios, where prediction errors increase sharply due to the
+inherent instability of long-step forecasting. In this work, we adopt an
+ordinary differential equation (ODE) perspective on the hidden-feature
+sequence, modeling layer representations along the trajectory as a feature-ODE.
+We attribute the degradation of existing caching strategies to their inability
+to robustly integrate historical features under large skipping intervals. To
+address this, we propose FoCa (Forecast-then-Calibrate), which treats feature
+caching as a feature-ODE solving problem. Extensive experiments on image
+synthesis, video generation, and super-resolution tasks demonstrate the
+effectiveness of FoCa, especially under aggressive acceleration. Without
+additional training, FoCa achieves near-lossless speedups of 5.50 times on
+FLUX, 6.45 times on HunyuanVideo, 3.17 times on Inf-DiT, and maintains high
+quality with a 4.53 times speedup on DiT.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a novel zero-shot CT super-resolution method using 3D Gaussian Splatting, guided by upsampled 2D X-ray projection priors generated by a diffusion model, and introduces negative alpha blending for enhanced high-frequency reconstruction.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes a new feature caching technique called FoCa for Diffusion Transformers (DiTs) that improves inference speed while maintaining generation quality, particularly at high acceleration ratios, by modeling feature caching as a feature-ODE solving problem.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新颖的零样本CT超分辨率方法，该方法使用3D高斯溅射，并由扩散模型生成的上采样2D X射线投影先验引导，并引入负alpha混合以增强高频重建。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种名为FoCa的新型扩散Transformer (DiT) 特征缓存技术，通过将特征缓存建模为特征ODE求解问题，在保持生成质量的同时，提高了推理速度，尤其是在高加速比下。</p>
             
 
             
@@ -595,8 +579,8 @@ our method achieves superior quantitative and qualitative results for 3D CT SR.<
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -611,8 +595,8 @@ our method achieves superior quantitative and qualitative results for 3D CT SR.<
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -656,11 +640,11 @@ our method achieves superior quantitative and qualitative results for 3D CT SR.<
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.15151v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.16211v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jeonghyun Noh, Hyun-Jic Oh, Byungju Chae, Won-Ki Jeong</p>
+            <p class="paper-authors">Authors: Shikang Zheng, Liang Feng, Xinyu Wang, Qinming Zhou, Peiliang Cai, Chang Zou, Jiacheng Liu, Yuqi Lin, Junjie Chen, Yue Ma, Linfeng Zhang</p>
             
         </motion.div>
         
@@ -672,35 +656,33 @@ our method achieves superior quantitative and qualitative results for 3D CT SR.<
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Visual Autoregressive Modeling for Instruction-Guided Image Editing</h2>
+            <h2 class="paper-title">Wavelet-Space Super-Resolution for Real-Time Rendering</h2>
             
-            <p class="paper-summary">Recent advances in diffusion models have brought remarkable visual fidelity
-to instruction-guided image editing. However, their global denoising process
-inherently entangles the edited region with the entire image context, leading
-to unintended spurious modifications and compromised adherence to editing
-instructions. In contrast, autoregressive models offer a distinct paradigm by
-formulating image synthesis as a sequential process over discrete visual
-tokens. Their causal and compositional mechanism naturally circumvents the
-adherence challenges of diffusion-based methods. In this paper, we present
-VAREdit, a visual autoregressive (VAR) framework that reframes image editing as
-a next-scale prediction problem. Conditioned on source image features and text
-instructions, VAREdit generates multi-scale target features to achieve precise
-edits. A core challenge in this paradigm is how to effectively condition the
-source image tokens. We observe that finest-scale source features cannot
-effectively guide the prediction of coarser target features. To bridge this
-gap, we introduce a Scale-Aligned Reference (SAR) module, which injects
-scale-matched conditioning information into the first self-attention layer.
-VAREdit demonstrates significant advancements in both editing adherence and
-efficiency. On standard benchmarks, it outperforms leading diffusion-based
-methods by 30\%+ higher GPT-Balance score. Moreover, it completes a
-$512\times512$ editing in 1.2 seconds, making it 2.2$\times$ faster than the
-similarly sized UltraEdit. The models are available at
-https://github.com/HiDream-ai/VAREdit.</p>
+            <p class="paper-summary">We investigate the use of wavelet-space feature decomposition in neural
+super-resolution for rendering pipelines. Building on the DFASR framework, we
+introduce a wavelet-domain representation that separates low- and
+high-frequency details before reconstruction, enabling the network to better
+preserve fine textures while maintaining structural consistency. Unlike
+RGB-space regression, our approach leverages the stationary wavelet transform
+(SWT) to avoid spatial down-sampling, ensuring alignment across subbands and
+preserving shift invariance. The model predicts wavelet coefficients
+conditioned on spatial G-buffers and temporally warped history frames, which
+are then recombined through inverse wavelet synthesis. We conduct a
+comprehensive ablation study across wavelet families, transform types, and
+architectural variants, showing that incorporating SWT improves PSNR by up to
+1.5 dB and reduces LPIPS by 17% on average, at a computational overhead of
+roughly +24 ms compared to out DFASR baseline. While absolute runtimes on our
+RTX 3050 mobile GPU are higher ( 141ms) than the original DFASR report on RTX
+4090( 11ms), the relative overhead remains modest, suggesting that on
+higher-end GPUs our method would also remain real-time capable. Taken together,
+our results suggest that wavelet-domain representations are a principled and
+effective way to enhance perceptual quality in neural upscaling for graphics
+applications.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces VAREdit, a visual autoregressive framework for instruction-guided image editing that overcomes limitations of diffusion models by using a scale-aligned reference module for improved adherence and efficiency, achieving state-of-the-art performance.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a wavelet-space neural super-resolution method for real-time rendering, achieving improved PSNR and LPIPS compared to RGB-space regression while maintaining real-time capability on modern GPUs.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了VAREdit，一个用于指令引导图像编辑的视觉自回归框架，通过使用尺度对齐参考模块，克服了扩散模型的局限性，提高了编辑的准确性和效率，并实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于实时渲染的 wavelet 空间神经超分辨率方法，与 RGB 空间回归相比，实现了更高的 PSNR 和更低的 LPIPS，同时在现代 GPU 上保持了实时能力。</p>
             
 
             
@@ -710,16 +692,16 @@ https://github.com/HiDream-ai/VAREdit.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -734,8 +716,8 @@ https://github.com/HiDream-ai/VAREdit.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -760,146 +742,29 @@ https://github.com/HiDream-ai/VAREdit.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.15772v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.16024v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Qingyang Mao, Qi Cai, Yehao Li, Yingwei Pan, Mingyue Cheng, Ting Yao, Qi Liu, Tao Mei</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Reversible Unfolding Network for Concealed Visual Perception with Generative Refinement</h2>
-            
-            <p class="paper-summary">Existing methods for concealed visual perception (CVP) often leverage
-reversible strategies to decrease uncertainty, yet these are typically confined
-to the mask domain, leaving the potential of the RGB domain underexplored. To
-address this, we propose a reversible unfolding network with generative
-refinement, termed RUN++. Specifically, RUN++ first formulates the CVP task as
-a mathematical optimization problem and unfolds the iterative solution into a
-multi-stage deep network. This approach provides a principled way to apply
-reversible modeling across both mask and RGB domains while leveraging a
-diffusion model to resolve the resulting uncertainty. Each stage of the network
-integrates three purpose-driven modules: a Concealed Object Region Extraction
-(CORE) module applies reversible modeling to the mask domain to identify core
-object regions; a Context-Aware Region Enhancement (CARE) module extends this
-principle to the RGB domain to foster better foreground-background separation;
-and a Finetuning Iteration via Noise-based Enhancement (FINE) module provides a
-final refinement. The FINE module introduces a targeted Bernoulli diffusion
-model that refines only the uncertain regions of the segmentation mask,
-harnessing the generative power of diffusion for fine-detail restoration
-without the prohibitive computational cost of a full-image process. This unique
-synergy, where the unfolding network provides a strong uncertainty prior for
-the diffusion model, allows RUN++ to efficiently direct its focus toward
-ambiguous areas, significantly mitigating false positives and negatives.
-Furthermore, we introduce a new paradigm for building robust CVP systems that
-remain effective under real-world degradations and extend this concept into a
-broader bi-level optimization framework.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes a reversible unfolding network (RUN++) for concealed visual perception, integrating reversible modeling in both mask and RGB domains with a targeted diffusion model for uncertainty refinement, achieving state-of-the-art performance and robustness.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种用于隐蔽视觉感知的可逆展开网络（RUN++），它结合了掩码和RGB域中的可逆建模，并采用有针对性的扩散模型进行不确定性细化，实现了最先进的性能和鲁棒性。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.15027v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Chunming He, Fengyang Xiao, Rihan Zhang, Chengyu Fang, Deng-Ping Fan, Sina Farsiu</p>
+            <p class="paper-authors">Authors: Prateek Poudel, Prashant Aryal, Kirtan Kunwar, Navin Nepal, Dinesh Bania Kshatri</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-25 02:42:46 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-25 03:00:51 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

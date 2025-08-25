@@ -1,0 +1,135 @@
+[
+    {
+        "title": "Time-Aware One Step Diffusion Network for Real-World Image Super-Resolution",
+        "summary": "Diffusion-based real-world image super-resolution (Real-ISR) methods have\ndemonstrated impressive performance. To achieve efficient Real-ISR, many works\nemploy Variational Score Distillation (VSD) to distill pre-trained\nstable-diffusion (SD) model for one-step SR with a fixed timestep. However, due\nto the different noise injection timesteps, the SD will perform different\ngenerative priors. Therefore, a fixed timestep is difficult for these methods\nto fully leverage the generative priors in SD, leading to suboptimal\nperformance. To address this, we propose a Time-Aware one-step Diffusion\nNetwork for Real-ISR (TADSR). We first introduce a Time-Aware VAE Encoder,\nwhich projects the same image into different latent features based on\ntimesteps. Through joint dynamic variation of timesteps and latent features,\nthe student model can better align with the input pattern distribution of the\npre-trained SD, thereby enabling more effective utilization of SD's generative\ncapabilities. To better activate the generative prior of SD at different\ntimesteps, we propose a Time-Aware VSD loss that bridges the timesteps of the\nstudent model and those of the teacher model, thereby producing more consistent\ngenerative prior guidance conditioned on timesteps. Additionally, though\nutilizing the generative prior in SD at different timesteps, our method can\nnaturally achieve controllable trade-offs between fidelity and realism by\nchanging the timestep condition. Experimental results demonstrate that our\nmethod achieves both state-of-the-art performance and controllable SR results\nwith only a single step.",
+        "url": "http://arxiv.org/abs/2508.16557v1",
+        "published_date": "2025-08-22T17:23:49+00:00",
+        "updated_date": "2025-08-22T17:23:49+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Tainyi Zhang",
+            "Zheng-Peng Duan",
+            "Peng-Tao Jiang",
+            "Bo Li",
+            "Ming-Ming Cheng",
+            "Chun-Le Guo",
+            "Chongyi Li"
+        ],
+        "tldr": "This paper introduces a Time-Aware Diffusion Network (TADSR) for real-world image super-resolution, addressing the limitation of fixed timesteps in existing methods by dynamically adjusting timesteps and latent features to better leverage pre-trained stable-diffusion models.",
+        "tldr_zh": "该论文介绍了一种用于真实世界图像超分辨率的时间感知扩散网络 (TADSR)，通过动态调整时间步长和潜在特征，解决了现有方法中固定时间步长的局限性，从而更好地利用预训练的稳定扩散模型。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Arbitrary-Scale 3D Gaussian Super-Resolution",
+        "summary": "Existing 3D Gaussian Splatting (3DGS) super-resolution methods typically\nperform high-resolution (HR) rendering of fixed scale factors, making them\nimpractical for resource-limited scenarios. Directly rendering arbitrary-scale\nHR views with vanilla 3DGS introduces aliasing artifacts due to the lack of\nscale-aware rendering ability, while adding a post-processing upsampler for\n3DGS complicates the framework and reduces rendering efficiency. To tackle\nthese issues, we build an integrated framework that incorporates scale-aware\nrendering, generative prior-guided optimization, and progressive\nsuper-resolving to enable 3D Gaussian super-resolution of arbitrary scale\nfactors with a single 3D model. Notably, our approach supports both integer and\nnon-integer scale rendering to provide more flexibility. Extensive experiments\ndemonstrate the effectiveness of our model in rendering high-quality\narbitrary-scale HR views (6.59 dB PSNR gain over 3DGS) with a single model. It\npreserves structural consistency with LR views and across different scales,\nwhile maintaining real-time rendering speed (85 FPS at 1080p).",
+        "url": "http://arxiv.org/abs/2508.16467v1",
+        "published_date": "2025-08-22T15:33:48+00:00",
+        "updated_date": "2025-08-22T15:33:48+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Huimin Zeng",
+            "Yue Bai",
+            "Yun Fu"
+        ],
+        "tldr": "The paper introduces a novel framework for arbitrary-scale 3D Gaussian Splatting super-resolution, enabling high-quality rendering at varying scales with a single model while maintaining real-time performance.",
+        "tldr_zh": "该论文介绍了一种新的任意尺度3D高斯溅射超分辨率框架，它可以通过单个模型在不同尺度上实现高质量渲染，同时保持实时性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Towards Diagnostic Quality Flat-Panel Detector CT Imaging Using Diffusion Models",
+        "summary": "Patients undergoing a mechanical thrombectomy procedure usually have a\nmulti-detector CT (MDCT) scan before and after the intervention. The image\nquality of the flat panel detector CT (FDCT) present in the intervention room\nis generally much lower than that of a MDCT due to significant artifacts.\nHowever, using only FDCT images could improve patient management as the patient\nwould not need to be moved to the MDCT room. Several studies have evaluated the\npotential use of FDCT imaging alone and the time that could be saved by\nacquiring the images before and/or after the intervention only with the FDCT.\nThis study proposes using a denoising diffusion probabilistic model (DDPM) to\nimprove the image quality of FDCT scans, making them comparable to MDCT scans.\nClinicans evaluated FDCT, MDCT, and our model's predictions for diagnostic\npurposes using a questionnaire. The DDPM eliminated most artifacts and improved\nanatomical visibility without reducing bleeding detection, provided that the\ninput FDCT image quality is not too low. Our code can be found on github.",
+        "url": "http://arxiv.org/abs/2508.16252v1",
+        "published_date": "2025-08-22T09:35:23+00:00",
+        "updated_date": "2025-08-22T09:35:23+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Hélène Corbaz",
+            "Anh Nguyen",
+            "Victor Schulze-Zachau",
+            "Paul Friedrich",
+            "Alicia Durrer",
+            "Florentin Bieder",
+            "Philippe C. Cattin",
+            "Marios N Psychogios"
+        ],
+        "tldr": "This paper explores using a denoising diffusion probabilistic model (DDPM) to enhance the image quality of flat panel detector CT (FDCT) scans to match multi-detector CT (MDCT) scans, showing promising results in clinical evaluation.",
+        "tldr_zh": "本文探讨了使用去噪扩散概率模型（DDPM）来提高平板探测器CT（FDCT）扫描的图像质量，使其与多探测器CT（MDCT）扫描相媲美，并在临床评估中显示出有希望的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Forecast then Calibrate: Feature Caching as ODE for Efficient Diffusion Transformers",
+        "summary": "Diffusion Transformers (DiTs) have demonstrated exceptional performance in\nhigh-fidelity image and video generation. To reduce their substantial\ncomputational costs, feature caching techniques have been proposed to\naccelerate inference by reusing hidden representations from previous timesteps.\nHowever, current methods often struggle to maintain generation quality at high\nacceleration ratios, where prediction errors increase sharply due to the\ninherent instability of long-step forecasting. In this work, we adopt an\nordinary differential equation (ODE) perspective on the hidden-feature\nsequence, modeling layer representations along the trajectory as a feature-ODE.\nWe attribute the degradation of existing caching strategies to their inability\nto robustly integrate historical features under large skipping intervals. To\naddress this, we propose FoCa (Forecast-then-Calibrate), which treats feature\ncaching as a feature-ODE solving problem. Extensive experiments on image\nsynthesis, video generation, and super-resolution tasks demonstrate the\neffectiveness of FoCa, especially under aggressive acceleration. Without\nadditional training, FoCa achieves near-lossless speedups of 5.50 times on\nFLUX, 6.45 times on HunyuanVideo, 3.17 times on Inf-DiT, and maintains high\nquality with a 4.53 times speedup on DiT.",
+        "url": "http://arxiv.org/abs/2508.16211v1",
+        "published_date": "2025-08-22T08:34:03+00:00",
+        "updated_date": "2025-08-22T08:34:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shikang Zheng",
+            "Liang Feng",
+            "Xinyu Wang",
+            "Qinming Zhou",
+            "Peiliang Cai",
+            "Chang Zou",
+            "Jiacheng Liu",
+            "Yuqi Lin",
+            "Junjie Chen",
+            "Yue Ma",
+            "Linfeng Zhang"
+        ],
+        "tldr": "The paper proposes a new feature caching technique called FoCa for Diffusion Transformers (DiTs) that improves inference speed while maintaining generation quality, particularly at high acceleration ratios, by modeling feature caching as a feature-ODE solving problem.",
+        "tldr_zh": "该论文提出了一种名为FoCa的新型扩散Transformer (DiT) 特征缓存技术，通过将特征缓存建模为特征ODE求解问题，在保持生成质量的同时，提高了推理速度，尤其是在高加速比下。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Wavelet-Space Super-Resolution for Real-Time Rendering",
+        "summary": "We investigate the use of wavelet-space feature decomposition in neural\nsuper-resolution for rendering pipelines. Building on the DFASR framework, we\nintroduce a wavelet-domain representation that separates low- and\nhigh-frequency details before reconstruction, enabling the network to better\npreserve fine textures while maintaining structural consistency. Unlike\nRGB-space regression, our approach leverages the stationary wavelet transform\n(SWT) to avoid spatial down-sampling, ensuring alignment across subbands and\npreserving shift invariance. The model predicts wavelet coefficients\nconditioned on spatial G-buffers and temporally warped history frames, which\nare then recombined through inverse wavelet synthesis. We conduct a\ncomprehensive ablation study across wavelet families, transform types, and\narchitectural variants, showing that incorporating SWT improves PSNR by up to\n1.5 dB and reduces LPIPS by 17% on average, at a computational overhead of\nroughly +24 ms compared to out DFASR baseline. While absolute runtimes on our\nRTX 3050 mobile GPU are higher ( 141ms) than the original DFASR report on RTX\n4090( 11ms), the relative overhead remains modest, suggesting that on\nhigher-end GPUs our method would also remain real-time capable. Taken together,\nour results suggest that wavelet-domain representations are a principled and\neffective way to enhance perceptual quality in neural upscaling for graphics\napplications.",
+        "url": "http://arxiv.org/abs/2508.16024v1",
+        "published_date": "2025-08-22T01:01:44+00:00",
+        "updated_date": "2025-08-22T01:01:44+00:00",
+        "categories": [
+            "cs.GR",
+            "cs.CV"
+        ],
+        "authors": [
+            "Prateek Poudel",
+            "Prashant Aryal",
+            "Kirtan Kunwar",
+            "Navin Nepal",
+            "Dinesh Bania Kshatri"
+        ],
+        "tldr": "This paper introduces a wavelet-space neural super-resolution method for real-time rendering, achieving improved PSNR and LPIPS compared to RGB-space regression while maintaining real-time capability on modern GPUs.",
+        "tldr_zh": "本文提出了一种用于实时渲染的 wavelet 空间神经超分辨率方法，与 RGB 空间回归相比，实现了更高的 PSNR 和更低的 LPIPS，同时在现代 GPU 上保持了实时能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
