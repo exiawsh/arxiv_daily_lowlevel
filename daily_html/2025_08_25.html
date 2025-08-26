@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 23, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - August 25, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 23, 2025</p>
+            <p>August 25, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,35 +215,32 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Time-Aware One Step Diffusion Network for Real-World Image Super-Resolution</h2>
+            <h2 class="paper-title">TinySR: Pruning Diffusion for Real-World Image Super-Resolution</h2>
             
-            <p class="paper-summary">Diffusion-based real-world image super-resolution (Real-ISR) methods have
-demonstrated impressive performance. To achieve efficient Real-ISR, many works
-employ Variational Score Distillation (VSD) to distill pre-trained
-stable-diffusion (SD) model for one-step SR with a fixed timestep. However, due
-to the different noise injection timesteps, the SD will perform different
-generative priors. Therefore, a fixed timestep is difficult for these methods
-to fully leverage the generative priors in SD, leading to suboptimal
-performance. To address this, we propose a Time-Aware one-step Diffusion
-Network for Real-ISR (TADSR). We first introduce a Time-Aware VAE Encoder,
-which projects the same image into different latent features based on
-timesteps. Through joint dynamic variation of timesteps and latent features,
-the student model can better align with the input pattern distribution of the
-pre-trained SD, thereby enabling more effective utilization of SD's generative
-capabilities. To better activate the generative prior of SD at different
-timesteps, we propose a Time-Aware VSD loss that bridges the timesteps of the
-student model and those of the teacher model, thereby producing more consistent
-generative prior guidance conditioned on timesteps. Additionally, though
-utilizing the generative prior in SD at different timesteps, our method can
-naturally achieve controllable trade-offs between fidelity and realism by
-changing the timestep condition. Experimental results demonstrate that our
-method achieves both state-of-the-art performance and controllable SR results
-with only a single step.</p>
+            <p class="paper-summary">Real-world image super-resolution (Real-ISR) focuses on recovering
+high-quality images from low-resolution inputs that suffer from complex
+degradations like noise, blur, and compression. Recently, diffusion models
+(DMs) have shown great potential in this area by leveraging strong generative
+priors to restore fine details. However, their iterative denoising process
+incurs high computational overhead, posing challenges for real-time
+applications. Although one-step distillation methods, such as OSEDiff and
+TSD-SR, offer faster inference, they remain fundamentally constrained by their
+large, over-parameterized model architectures. In this work, we present TinySR,
+a compact yet effective diffusion model specifically designed for Real-ISR that
+achieves real-time performance while maintaining perceptual quality. We
+introduce a Dynamic Inter-block Activation and an Expansion-Corrosion Strategy
+to facilitate more effective decision-making in depth pruning. We achieve VAE
+compression through channel pruning, attention removal and lightweight SepConv.
+We eliminate time- and prompt-related modules and perform pre-caching
+techniques to further speed up the model. TinySR significantly reduces
+computational cost and model size, achieving up to 5.68x speedup and 83%
+parameter reduction compared to its teacher TSD-SR, while still providing high
+quality results.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a Time-Aware Diffusion Network (TADSR) for real-world image super-resolution, addressing the limitation of fixed timesteps in existing methods by dynamically adjusting timesteps and latent features to better leverage pre-trained stable-diffusion models.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: TinySR proposes a compact diffusion model for real-world image super-resolution using pruning and compression techniques to achieve real-time performance with significant speedup and parameter reduction compared to existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种用于真实世界图像超分辨率的时间感知扩散网络 (TADSR)，通过动态调整时间步长和潜在特征，解决了现有方法中固定时间步长的局限性，从而更好地利用预训练的稳定扩散模型。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: TinySR 提出了一种紧凑的扩散模型，用于真实世界的图像超分辨率，采用剪枝和压缩技术，与现有方法相比，实现了实时性能，并显著提高了速度和减少了参数。</p>
             
 
             
@@ -314,11 +311,11 @@ with only a single step.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.16557v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.17434v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Tainyi Zhang, Zheng-Peng Duan, Peng-Tao Jiang, Bo Li, Ming-Ming Cheng, Chun-Le Guo, Chongyi Li</p>
+            <p class="paper-authors">Authors: Linwei Dong, Qingnan Fan, Yuhang Yu, Qi Zhang, Jinwei Chen, Yawei Luo, Changqing Zou</p>
             
         </motion.div>
         
@@ -330,28 +327,30 @@ with only a single step.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Arbitrary-Scale 3D Gaussian Super-Resolution</h2>
+            <h2 class="paper-title">Neural Proteomics Fields for Super-resolved Spatial Proteomics Prediction</h2>
             
-            <p class="paper-summary">Existing 3D Gaussian Splatting (3DGS) super-resolution methods typically
-perform high-resolution (HR) rendering of fixed scale factors, making them
-impractical for resource-limited scenarios. Directly rendering arbitrary-scale
-HR views with vanilla 3DGS introduces aliasing artifacts due to the lack of
-scale-aware rendering ability, while adding a post-processing upsampler for
-3DGS complicates the framework and reduces rendering efficiency. To tackle
-these issues, we build an integrated framework that incorporates scale-aware
-rendering, generative prior-guided optimization, and progressive
-super-resolving to enable 3D Gaussian super-resolution of arbitrary scale
-factors with a single 3D model. Notably, our approach supports both integer and
-non-integer scale rendering to provide more flexibility. Extensive experiments
-demonstrate the effectiveness of our model in rendering high-quality
-arbitrary-scale HR views (6.59 dB PSNR gain over 3DGS) with a single model. It
-preserves structural consistency with LR views and across different scales,
-while maintaining real-time rendering speed (85 FPS at 1080p).</p>
+            <p class="paper-summary">Spatial proteomics maps protein distributions in tissues, providing
+transformative insights for life sciences. However, current sequencing-based
+technologies suffer from low spatial resolution, and substantial inter-tissue
+variability in protein expression further compromises the performance of
+existing molecular data prediction methods. In this work, we introduce the
+novel task of spatial super-resolution for sequencing-based spatial proteomics
+(seq-SP) and, to the best of our knowledge, propose the first deep learning
+model for this task--Neural Proteomics Fields (NPF). NPF formulates seq-SP as a
+protein reconstruction problem in continuous space by training a dedicated
+network for each tissue. The model comprises a Spatial Modeling Module, which
+learns tissue-specific protein spatial distributions, and a Morphology Modeling
+Module, which extracts tissue-specific morphological features. Furthermore, to
+facilitate rigorous evaluation, we establish an open-source benchmark dataset,
+Pseudo-Visium SP, for this task. Experimental results demonstrate that NPF
+achieves state-of-the-art performance with fewer learnable parameters,
+underscoring its potential for advancing spatial proteomics research. Our code
+and dataset are publicly available at https://github.com/Bokai-Zhao/NPF.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a novel framework for arbitrary-scale 3D Gaussian Splatting super-resolution, enabling high-quality rendering at varying scales with a single model while maintaining real-time performance.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Neural Proteomics Fields (NPF), a deep learning model for spatial super-resolution in sequencing-based spatial proteomics, and provides a new benchmark dataset for evaluation.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新的任意尺度3D高斯溅射超分辨率框架，它可以通过单个模型在不同尺度上实现高质量渲染，同时保持实时性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了神经蛋白质组学场（NPF），一种用于基于测序的空间蛋白质组学中的空间超分辨率的深度学习模型，并提供了一个新的基准数据集用于评估。</p>
             
 
             
@@ -361,8 +360,8 @@ while maintaining real-time rendering speed (85 FPS at 1080p).</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -422,11 +421,11 @@ while maintaining real-time rendering speed (85 FPS at 1080p).</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.16467v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.17389v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Huimin Zeng, Yue Bai, Yun Fu</p>
+            <p class="paper-authors">Authors: Bokai Zhao, Weiyang Shi, Hanqing Chao, Zijiang Yang, Yiyang Zhang, Ming Song, Tianzi Jiang</p>
             
         </motion.div>
         
@@ -438,27 +437,36 @@ while maintaining real-time rendering speed (85 FPS at 1080p).</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Towards Diagnostic Quality Flat-Panel Detector CT Imaging Using Diffusion Models</h2>
+            <h2 class="paper-title">Condition Weaving Meets Expert Modulation: Towards Universal and Controllable Image Generation</h2>
             
-            <p class="paper-summary">Patients undergoing a mechanical thrombectomy procedure usually have a
-multi-detector CT (MDCT) scan before and after the intervention. The image
-quality of the flat panel detector CT (FDCT) present in the intervention room
-is generally much lower than that of a MDCT due to significant artifacts.
-However, using only FDCT images could improve patient management as the patient
-would not need to be moved to the MDCT room. Several studies have evaluated the
-potential use of FDCT imaging alone and the time that could be saved by
-acquiring the images before and/or after the intervention only with the FDCT.
-This study proposes using a denoising diffusion probabilistic model (DDPM) to
-improve the image quality of FDCT scans, making them comparable to MDCT scans.
-Clinicans evaluated FDCT, MDCT, and our model's predictions for diagnostic
-purposes using a questionnaire. The DDPM eliminated most artifacts and improved
-anatomical visibility without reducing bleeding detection, provided that the
-input FDCT image quality is not too low. Our code can be found on github.</p>
+            <p class="paper-summary">The image-to-image generation task aims to produce controllable images by
+leveraging conditional inputs and prompt instructions. However, existing
+methods often train separate control branches for each type of condition,
+leading to redundant model structures and inefficient use of computational
+resources. To address this, we propose a Unified image-to-image Generation
+(UniGen) framework that supports diverse conditional inputs while enhancing
+generation efficiency and expressiveness. Specifically, to tackle the widely
+existing parameter redundancy and computational inefficiency in controllable
+conditional generation architectures, we propose the Condition Modulated Expert
+(CoMoE) module. This module aggregates semantically similar patch features and
+assigns them to dedicated expert modules for visual representation and
+conditional modeling. By enabling independent modeling of foreground features
+under different conditions, CoMoE effectively mitigates feature entanglement
+and redundant computation in multi-condition scenarios. Furthermore, to bridge
+the information gap between the backbone and control branches, we propose
+WeaveNet, a dynamic, snake-like connection mechanism that enables effective
+interaction between global text-level control from the backbone and
+fine-grained control from conditional branches. Extensive experiments on the
+Subjects-200K and MultiGen-20M datasets across various conditional image
+generation tasks demonstrate that our method consistently achieves
+state-of-the-art performance, validating its advantages in both versatility and
+effectiveness. The code has been uploaded to
+https://github.com/gavin-gqzhang/UniGen.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores using a denoising diffusion probabilistic model (DDPM) to enhance the image quality of flat panel detector CT (FDCT) scans to match multi-detector CT (MDCT) scans, showing promising results in clinical evaluation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniGen, a framework for universal and controllable image generation using a Condition Modulated Expert (CoMoE) module and WeaveNet to improve efficiency and expressiveness across diverse conditional inputs.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文探讨了使用去噪扩散概率模型（DDPM）来提高平板探测器CT（FDCT）扫描的图像质量，使其与多探测器CT（MDCT）扫描相媲美，并在临床评估中显示出有希望的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了UniGen，一个用于通用和可控图像生成的框架，它使用条件调制专家（CoMoE）模块和WeaveNet来提高跨各种条件输入的效率和表现力。</p>
             
 
             
@@ -468,16 +476,16 @@ input FDCT image quality is not too low. Our code can be found on github.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -529,11 +537,11 @@ input FDCT image quality is not too low. Our code can be found on github.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.16252v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.17364v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Hélène Corbaz, Anh Nguyen, Victor Schulze-Zachau, Paul Friedrich, Alicia Durrer, Florentin Bieder, Philippe C. Cattin, Marios N Psychogios</p>
+            <p class="paper-authors">Authors: Guoqing Zhang, Xingtong Ge, Lu Shi, Xin Zhang, Muqing Xue, Wanru Xu, Yigang Cen</p>
             
         </motion.div>
         
@@ -545,144 +553,31 @@ input FDCT image quality is not too low. Our code can be found on github.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Forecast then Calibrate: Feature Caching as ODE for Efficient Diffusion Transformers</h2>
+            <h2 class="paper-title">Structural Damage Detection Using AI Super Resolution and Visual Language Model</h2>
             
-            <p class="paper-summary">Diffusion Transformers (DiTs) have demonstrated exceptional performance in
-high-fidelity image and video generation. To reduce their substantial
-computational costs, feature caching techniques have been proposed to
-accelerate inference by reusing hidden representations from previous timesteps.
-However, current methods often struggle to maintain generation quality at high
-acceleration ratios, where prediction errors increase sharply due to the
-inherent instability of long-step forecasting. In this work, we adopt an
-ordinary differential equation (ODE) perspective on the hidden-feature
-sequence, modeling layer representations along the trajectory as a feature-ODE.
-We attribute the degradation of existing caching strategies to their inability
-to robustly integrate historical features under large skipping intervals. To
-address this, we propose FoCa (Forecast-then-Calibrate), which treats feature
-caching as a feature-ODE solving problem. Extensive experiments on image
-synthesis, video generation, and super-resolution tasks demonstrate the
-effectiveness of FoCa, especially under aggressive acceleration. Without
-additional training, FoCa achieves near-lossless speedups of 5.50 times on
-FLUX, 6.45 times on HunyuanVideo, 3.17 times on Inf-DiT, and maintains high
-quality with a 4.53 times speedup on DiT.</p>
+            <p class="paper-summary">Natural disasters pose significant challenges to timely and accurate damage
+assessment due to their sudden onset and the extensive areas they affect.
+Traditional assessment methods are often labor-intensive, costly, and hazardous
+to personnel, making them impractical for rapid response, especially in
+resource-limited settings. This study proposes a novel, cost-effective
+framework that leverages aerial drone footage, an advanced AI-based video
+super-resolution model, Video Restoration Transformer (VRT), and Gemma3:27b, a
+27 billion parameter Visual Language Model (VLM). This integrated system is
+designed to improve low-resolution disaster footage, identify structural
+damage, and classify buildings into four damage categories, ranging from
+no/slight damage to total destruction, along with associated risk levels. The
+methodology was validated using pre- and post-event drone imagery from the 2023
+Turkey earthquakes (courtesy of The Guardian) and satellite data from the 2013
+Moore Tornado (xBD dataset). The framework achieved a classification accuracy
+of 84.5%, demonstrating its ability to provide highly accurate results.
+Furthermore, the system's accessibility allows non-technical users to perform
+preliminary analyses, thereby improving the responsiveness and efficiency of
+disaster management efforts.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes a new feature caching technique called FoCa for Diffusion Transformers (DiTs) that improves inference speed while maintaining generation quality, particularly at high acceleration ratios, by modeling feature caching as a feature-ODE solving problem.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种名为FoCa的新型扩散Transformer (DiT) 特征缓存技术，通过将特征缓存建模为特征ODE求解问题，在保持生成质量的同时，提高了推理速度，尤其是在高加速比下。</p>
-            
-
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a framework using drone footage, AI super-resolution (VRT), and a visual language model (Gemma3:27b) to detect and classify structural damage after natural disasters, achieving 84.5% accuracy.</p>
             
             
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.16211v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Shikang Zheng, Liang Feng, Xinyu Wang, Qinming Zhou, Peiliang Cai, Chang Zou, Jiacheng Liu, Yuqi Lin, Junjie Chen, Yue Ma, Linfeng Zhang</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Wavelet-Space Super-Resolution for Real-Time Rendering</h2>
-            
-            <p class="paper-summary">We investigate the use of wavelet-space feature decomposition in neural
-super-resolution for rendering pipelines. Building on the DFASR framework, we
-introduce a wavelet-domain representation that separates low- and
-high-frequency details before reconstruction, enabling the network to better
-preserve fine textures while maintaining structural consistency. Unlike
-RGB-space regression, our approach leverages the stationary wavelet transform
-(SWT) to avoid spatial down-sampling, ensuring alignment across subbands and
-preserving shift invariance. The model predicts wavelet coefficients
-conditioned on spatial G-buffers and temporally warped history frames, which
-are then recombined through inverse wavelet synthesis. We conduct a
-comprehensive ablation study across wavelet families, transform types, and
-architectural variants, showing that incorporating SWT improves PSNR by up to
-1.5 dB and reduces LPIPS by 17% on average, at a computational overhead of
-roughly +24 ms compared to out DFASR baseline. While absolute runtimes on our
-RTX 3050 mobile GPU are higher ( 141ms) than the original DFASR report on RTX
-4090( 11ms), the relative overhead remains modest, suggesting that on
-higher-end GPUs our method would also remain real-time capable. Taken together,
-our results suggest that wavelet-domain representations are a principled and
-effective way to enhance perceptual quality in neural upscaling for graphics
-applications.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a wavelet-space neural super-resolution method for real-time rendering, achieving improved PSNR and LPIPS compared to RGB-space regression while maintaining real-time capability on modern GPUs.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于实时渲染的 wavelet 空间神经超分辨率方法，与 RGB 空间回归相比，实现了更高的 PSNR 和更低的 LPIPS，同时在现代 GPU 上保持了实时能力。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种框架，该框架利用无人机镜头、人工智能超分辨率 (VRT) 和视觉语言模型 (Gemma3:27b) 来检测和分类自然灾害后的结构性损坏，准确率达到 84.5%。</p>
             
 
             
@@ -692,8 +587,8 @@ applications.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -716,8 +611,8 @@ applications.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -753,18 +648,232 @@ applications.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.16024v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.17130v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Prateek Poudel, Prashant Aryal, Kirtan Kunwar, Navin Nepal, Dinesh Bania Kshatri</p>
+            <p class="paper-authors">Authors: Catherine Hoier, Khandaker Mamun Ahmed</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Enhancing Underwater Images via Deep Learning: A Comparative Study of VGG19 and ResNet50-Based Approaches</h2>
+            
+            <p class="paper-summary">This paper addresses the challenging problem of image enhancement in complex
+underwater scenes by proposing a solution based on deep learning. The proposed
+method skillfully integrates two deep convolutional neural network models,
+VGG19 and ResNet50, leveraging their powerful feature extraction capabilities
+to perform multi-scale and multi-level deep feature analysis of underwater
+images. By constructing a unified model, the complementary advantages of the
+two models are effectively integrated, achieving a more comprehensive and
+accurate image enhancement effect.To objectively evaluate the enhancement
+effect, this paper introduces image quality assessment metrics such as PSNR,
+UCIQE, and UIQM to quantitatively compare images before and after enhancement
+and deeply analyzes the performance of different models in different
+scenarios.Furthermore, to improve the practicality and stability of the
+underwater visual enhancement system, this paper also provides practical
+suggestions from aspects such as model optimization, multi-model fusion, and
+hardware selection, aiming to provide strong technical support for visual
+enhancement tasks in complex underwater environments.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a deep learning approach for underwater image enhancement, integrating VGG19 and ResNet50 to improve image quality based on PSNR, UCIQE, and UIQM metrics, while also discussing practical implementation considerations.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种基于深度学习的水下图像增强方法，该方法集成了 VGG19 和 ResNet50，并通过 PSNR、UCIQE 和 UIQM 指标来提升图像质量，同时还讨论了实际应用中的考量。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.17397v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Aoqi Li, Yanghui Song, Jichao Dao, Chengfu Yang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Semantic Diffusion Posterior Sampling for Cardiac Ultrasound Dehazing</h2>
+            
+            <p class="paper-summary">Echocardiography plays a central role in cardiac imaging, offering dynamic
+views of the heart that are essential for diagnosis and monitoring. However,
+image quality can be significantly degraded by haze arising from multipath
+reverberations, particularly in difficult-to-image patients. In this work, we
+propose a semantic-guided, diffusion-based dehazing algorithm developed for the
+MICCAI Dehazing Echocardiography Challenge (DehazingEcho2025). Our method
+integrates a pixel-wise noise model, derived from semantic segmentation of hazy
+inputs into a diffusion posterior sampling framework guided by a generative
+prior trained on clean ultrasound data. Quantitative evaluation on the
+challenge dataset demonstrates strong performance across contrast and fidelity
+metrics. Code for the submitted algorithm is available at
+https://github.com/tristan-deep/semantic-diffusion-echo-dehazing.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a semantic-guided diffusion-based dehazing algorithm for cardiac ultrasound images, addressing the issue of haze caused by multipath reverberations. It shows strong performance on a challenge dataset.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种基于语义引导的扩散模型去雾算法，用于处理心脏超声图像中由多径混响引起的雾霾问题。 该方法在挑战数据集上表现出强大的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.17326v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Tristan S. W. Stevens, Oisín Nolan, Ruud J. G. van Sloun</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-26 02:38:19 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-26 02:41:42 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
