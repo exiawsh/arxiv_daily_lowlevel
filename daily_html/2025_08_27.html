@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 17, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - August 27, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 17, 2025</p>
+            <p>August 27, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,141 +215,32 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Error Propagation Mechanisms and Compensation Strategies for Quantized Diffusion</h2>
+            <h2 class="paper-title">RDDM: Practicing RAW Domain Diffusion Model for Real-world Image Restoration</h2>
             
-            <p class="paper-summary">Diffusion models have transformed image synthesis by establishing
-unprecedented quality and creativity benchmarks. Nevertheless, their
-large-scale deployment faces challenges due to computationally intensive
-iterative denoising processes. Although post-training quantization(PTQ)
-provides an effective pathway for accelerating sampling, the iterative nature
-of diffusion models causes stepwise quantization errors to accumulate
-progressively during generation, inevitably compromising output fidelity. To
-address this challenge, we develop a theoretical framework that mathematically
-formulates error propagation in Diffusion Models (DMs), deriving per-step
-quantization error propagation equations and establishing the first closed-form
-solution for cumulative error. Building on this theoretical foundation, we
-propose a timestep-aware cumulative error compensation scheme. Extensive
-experiments across multiple image datasets demonstrate that our compensation
-strategy effectively mitigates error propagation, significantly enhancing
-existing PTQ methods to achieve state-of-the-art(SOTA) performance on
-low-precision diffusion models.</p>
+            <p class="paper-summary">We present the RAW domain diffusion model (RDDM), an end-to-end diffusion
+model that restores photo-realistic images directly from the sensor RAW data.
+While recent sRGB-domain diffusion methods achieve impressive results, they are
+caught in a dilemma between high fidelity and realistic generation. As these
+models process lossy sRGB inputs and neglect the accessibility of the sensor
+RAW images in many scenarios, e.g., in image and video capturing in edge
+devices, resulting in sub-optimal performance. RDDM bypasses this limitation by
+directly restoring images in the RAW domain, replacing the conventional
+two-stage image signal processing (ISP) + IR pipeline. However, a simple
+adaptation of pre-trained diffusion models to the RAW domain confronts the
+out-of-distribution (OOD) issues. To this end, we propose: (1) a RAW-domain VAE
+(RVAE) learning optimal latent representations, (2) a differentiable Post Tone
+Processing (PTP) module enabling joint RAW and sRGB space optimization. To
+compensate for the deficiency in the dataset, we develop a scalable degradation
+pipeline synthesizing RAW LQ-HQ pairs from existing sRGB datasets for
+large-scale training. Furthermore, we devise a configurable multi-bayer (CMB)
+LoRA module handling diverse RAW patterns such as RGGB, BGGR, etc. Extensive
+experiments demonstrate RDDM's superiority over state-of-the-art sRGB diffusion
+methods, yielding higher fidelity results with fewer artifacts.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper analyzes error propagation in quantized diffusion models and proposes a timestep-aware compensation scheme to improve the performance of low-precision diffusion models, achieving SOTA results.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文分析了量化扩散模型中的误差传播，并提出了一种时间步感知误差补偿方案，以提高低精度扩散模型的性能，实现了最先进的结果。</p>
-            
-
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces RDDM, a RAW domain diffusion model for real-world image restoration, addressing limitations of sRGB-domain diffusion methods by directly processing sensor RAW data and employing a novel training pipeline with a RAW-domain VAE and differentiable Post Tone Processing module.</p>
             
             
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.12094v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Songwei Liu, Hong Liu, Fangmin Chen, Xurui Peng, Chenqian Yan, Lean Fu, Xing Mei</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Large Kernel Modulation Network for Efficient Image Super-Resolution</h2>
-            
-            <p class="paper-summary">Image super-resolution (SR) in resource-constrained scenarios demands
-lightweight models balancing performance and latency. Convolutional neural
-networks (CNNs) offer low latency but lack non-local feature capture, while
-Transformers excel at non-local modeling yet suffer slow inference. To address
-this trade-off, we propose the Large Kernel Modulation Network (LKMN), a pure
-CNN-based model. LKMN has two core components: Enhanced Partial Large Kernel
-Block (EPLKB) and Cross-Gate Feed-Forward Network (CGFN). The EPLKB utilizes
-channel shuffle to boost inter-channel interaction, incorporates channel
-attention to focus on key information, and applies large kernel strip
-convolutions on partial channels for non-local feature extraction with reduced
-complexity. The CGFN dynamically adjusts discrepancies between input, local,
-and non-local features via a learnable scaling factor, then employs a
-cross-gate strategy to modulate and fuse these features, enhancing their
-complementarity. Extensive experiments demonstrate that our method outperforms
-existing state-of-the-art (SOTA) lightweight SR models while balancing quality
-and efficiency. Specifically, LKMN-L achieves 0.23 dB PSNR improvement over
-DAT-light on the Manga109 dataset at $\times$4 upscale, with nearly $\times$4.8
-times faster. Codes are in the supplementary materials. The code is available
-at https://github.com/Supereeeee/LKMN.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes a lightweight CNN-based model, LKMN, for image super-resolution that balances performance and latency by using large kernel convolutions and cross-gate feature fusion, achieving state-of-the-art results with improved efficiency.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种轻量级的基于CNN的图像超分辨率模型LKMN，该模型通过使用大核卷积和交叉门特征融合来平衡性能和延迟，从而以更高的效率实现最先进的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了RDDM，一种用于真实世界图像恢复的RAW域扩散模型。它通过直接处理传感器原始数据，并采用一种新颖的训练流程，包括RAW域VAE和可微分的后期色调处理模块，从而解决了sRGB域扩散方法的局限性。</p>
             
 
             
@@ -367,8 +258,8 @@ at https://github.com/Supereeeee/LKMN.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -420,18 +311,18 @@ at https://github.com/Supereeeee/LKMN.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.11893v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.19154v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Quanwei Hu, Yinggan Tang, Xuguang Zhang</p>
+            <p class="paper-authors">Authors: Yan Chen, Yi Wen, Wei Li, Junchao Liu, Yong Guo, Jie Hu, Xinghao Chen</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-27 03:32:46 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-27 03:36:52 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
