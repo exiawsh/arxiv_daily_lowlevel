@@ -1,0 +1,96 @@
+[
+    {
+        "title": "WaveHiT-SR: Hierarchical Wavelet Network for Efficient Image Super-Resolution",
+        "summary": "Transformers have demonstrated promising performance in computer vision\ntasks, including image super-resolution (SR). The quadratic computational\ncomplexity of window self-attention mechanisms in many transformer-based SR\nmethods forces the use of small, fixed windows, limiting the receptive field.\nIn this paper, we propose a new approach by embedding the wavelet transform\nwithin a hierarchical transformer framework, called (WaveHiT-SR). First, using\nadaptive hierarchical windows instead of static small windows allows to capture\nfeatures across different levels and greatly improve the ability to model\nlong-range dependencies. Secondly, the proposed model utilizes wavelet\ntransforms to decompose images into multiple frequency subbands, allowing the\nnetwork to focus on both global and local features while preserving structural\ndetails. By progressively reconstructing high-resolution images through\nhierarchical processing, the network reduces computational complexity without\nsacrificing performance. The multi-level decomposition strategy enables the\nnetwork to capture fine-grained information in lowfrequency components while\nenhancing high-frequency textures. Through extensive experimentation, we\nconfirm the effectiveness and efficiency of our WaveHiT-SR. Our refined\nversions of SwinIR-Light, SwinIR-NG, and SRFormer-Light deliver cutting-edge SR\nresults, achieving higher efficiency with fewer parameters, lower FLOPs, and\nfaster speeds.",
+        "url": "http://arxiv.org/abs/2508.19927v1",
+        "published_date": "2025-08-27T14:37:50+00:00",
+        "updated_date": "2025-08-27T14:37:50+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Fayaz Ali",
+            "Muhammad Zawish",
+            "Steven Davy",
+            "Radu Timofte"
+        ],
+        "tldr": "The paper introduces WaveHiT-SR, a hierarchical wavelet transformer network for efficient image super-resolution, leveraging adaptive hierarchical windows and wavelet transforms to improve performance and reduce computational complexity.",
+        "tldr_zh": "该论文介绍了WaveHiT-SR，一种用于高效图像超分辨率的分层小波Transformer网络，利用自适应分层窗口和小波变换来提高性能并降低计算复杂度。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "IDF: Iterative Dynamic Filtering Networks for Generalizable Image Denoising",
+        "summary": "Image denoising is a fundamental challenge in computer vision, with\napplications in photography and medical imaging. While deep learning-based\nmethods have shown remarkable success, their reliance on specific noise\ndistributions limits generalization to unseen noise types and levels. Existing\napproaches attempt to address this with extensive training data and high\ncomputational resources but they still suffer from overfitting. To address\nthese issues, we conduct image denoising by utilizing dynamically generated\nkernels via efficient operations. This approach helps prevent overfitting and\nimproves resilience to unseen noise. Specifically, our method leverages a\nFeature Extraction Module for robust noise-invariant features, Global\nStatistics and Local Correlation Modules to capture comprehensive noise\ncharacteristics and structural correlations. The Kernel Prediction Module then\nemploys these cues to produce pixel-wise varying kernels adapted to local\nstructures, which are then applied iteratively for denoising. This ensures both\nefficiency and superior restoration quality. Despite being trained on\nsingle-level Gaussian noise, our compact model (~ 0.04 M) excels across diverse\nnoise types and levels, demonstrating the promise of iterative dynamic\nfiltering for practical image denoising.",
+        "url": "http://arxiv.org/abs/2508.19649v1",
+        "published_date": "2025-08-27T07:58:07+00:00",
+        "updated_date": "2025-08-27T07:58:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dongjin Kim",
+            "Jaekyun Ko",
+            "Muhammad Kashif Ali",
+            "Tae Hyun Kim"
+        ],
+        "tldr": "The paper proposes an iterative dynamic filtering network (IDF) for image denoising using dynamically generated kernels to improve generalization to unseen noise types and levels, achieving superior restoration with a compact model.",
+        "tldr_zh": "该论文提出了一种迭代动态滤波网络（IDF），用于图像去噪，使用动态生成的内核来提高对未知噪声类型和水平的泛化能力，并通过紧凑模型实现卓越的修复效果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Controllable Skin Synthesis via Lesion-Focused Vector Autoregression Model",
+        "summary": "Skin images from real-world clinical practice are often limited, resulting in\na shortage of training data for deep-learning models. While many studies have\nexplored skin image synthesis, existing methods often generate low-quality\nimages and lack control over the lesion's location and type. To address these\nlimitations, we present LF-VAR, a model leveraging quantified lesion\nmeasurement scores and lesion type labels to guide the clinically relevant and\ncontrollable synthesis of skin images. It enables controlled skin synthesis\nwith specific lesion characteristics based on language prompts. We train a\nmultiscale lesion-focused Vector Quantised Variational Auto-Encoder (VQVAE) to\nencode images into discrete latent representations for structured tokenization.\nThen, a Visual AutoRegressive (VAR) Transformer trained on tokenized\nrepresentations facilitates image synthesis. Lesion measurement from the lesion\nregion and types as conditional embeddings are integrated to enhance synthesis\nfidelity. Our method achieves the best overall FID score (average 0.74) among\nseven lesion types, improving upon the previous state-of-the-art (SOTA) by\n6.3%. The study highlights our controllable skin synthesis model's\neffectiveness in generating high-fidelity, clinically relevant synthetic skin\nimages. Our framework code is available at\nhttps://github.com/echosun1996/LF-VAR.",
+        "url": "http://arxiv.org/abs/2508.19626v1",
+        "published_date": "2025-08-27T07:04:58+00:00",
+        "updated_date": "2025-08-27T07:04:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiajun Sun",
+            "Zhen Yu",
+            "Siyuan Yan",
+            "Jason J. Ong",
+            "Zongyuan Ge",
+            "Lei Zhang"
+        ],
+        "tldr": "The paper introduces LF-VAR, a novel method for controllable skin image synthesis using lesion measurement scores and lesion type labels, achieving state-of-the-art FID scores.",
+        "tldr_zh": "该论文介绍了 LF-VAR，一种新颖的可控皮肤图像合成方法，它使用病变测量分数和病变类型标签，实现了最先进的 FID 分数。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Guiding Noisy Label Conditional Diffusion Models with Score-based Discriminator Correction",
+        "summary": "Diffusion models have gained prominence as state-of-the-art techniques for\nsynthesizing images and videos, particularly due to their ability to scale\neffectively with large datasets. Recent studies have uncovered that these\nextensive datasets often contain mistakes from manual labeling processes.\nHowever, the extent to which such errors compromise the generative capabilities\nand controllability of diffusion models is not well studied. This paper\nintroduces Score-based Discriminator Correction (SBDC), a guidance technique\nfor aligning noisy pre-trained conditional diffusion models. The guidance is\nbuilt on discriminator training using adversarial loss, drawing on prior noise\ndetection techniques to assess the authenticity of each sample. We further show\nthat limiting the usage of our guidance to the early phase of the generation\nprocess leads to better performance. Our method is computationally efficient,\nonly marginally increases inference time, and does not require retraining\ndiffusion models. Experiments on different noise settings demonstrate the\nsuperiority of our method over previous state-of-the-art methods.",
+        "url": "http://arxiv.org/abs/2508.19581v1",
+        "published_date": "2025-08-27T05:29:07+00:00",
+        "updated_date": "2025-08-27T05:29:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dat Nguyen Cong",
+            "Hieu Tran Bao",
+            "Hoang Thanh-Tung"
+        ],
+        "tldr": "This paper introduces Score-based Discriminator Correction (SBDC) to improve the generative capabilities and controllability of conditional diffusion models trained on noisy labeled data, achieving superior performance with minimal computational overhead.",
+        "tldr_zh": "本文介绍了基于分数的判别器校正（SBDC），以提高在嘈杂标签数据上训练的条件扩散模型的生成能力和可控性，并以最小的计算开销实现卓越的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

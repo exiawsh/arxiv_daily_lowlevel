@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 26, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - August 28, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 26, 2025</p>
+            <p>August 28, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,27 +215,33 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CATformer: Contrastive Adversarial Transformer for Image Super-Resolution</h2>
+            <h2 class="paper-title">WaveHiT-SR: Hierarchical Wavelet Network for Efficient Image Super-Resolution</h2>
             
-            <p class="paper-summary">Super-resolution remains a promising technique to enhance the quality of
-low-resolution images. This study introduces CATformer (Contrastive Adversarial
-Transformer), a novel neural network integrating diffusion-inspired feature
-refinement with adversarial and contrastive learning. CATformer employs a
-dual-branch architecture combining a primary diffusion-inspired transformer,
-which progressively refines latent representations, with an auxiliary
-transformer branch designed to enhance robustness to noise through learned
-latent contrasts. These complementary representations are fused and decoded
-using deep Residual-in-Residual Dense Blocks for enhanced reconstruction
-quality. Extensive experiments on benchmark datasets demonstrate that CATformer
-outperforms recent transformer-based and diffusion-inspired methods both in
-efficiency and visual image quality. This work bridges the performance gap
-among transformer-, diffusion-, and GAN-based methods, laying a foundation for
-practical applications of diffusion-inspired transformers in super-resolution.</p>
+            <p class="paper-summary">Transformers have demonstrated promising performance in computer vision
+tasks, including image super-resolution (SR). The quadratic computational
+complexity of window self-attention mechanisms in many transformer-based SR
+methods forces the use of small, fixed windows, limiting the receptive field.
+In this paper, we propose a new approach by embedding the wavelet transform
+within a hierarchical transformer framework, called (WaveHiT-SR). First, using
+adaptive hierarchical windows instead of static small windows allows to capture
+features across different levels and greatly improve the ability to model
+long-range dependencies. Secondly, the proposed model utilizes wavelet
+transforms to decompose images into multiple frequency subbands, allowing the
+network to focus on both global and local features while preserving structural
+details. By progressively reconstructing high-resolution images through
+hierarchical processing, the network reduces computational complexity without
+sacrificing performance. The multi-level decomposition strategy enables the
+network to capture fine-grained information in lowfrequency components while
+enhancing high-frequency textures. Through extensive experimentation, we
+confirm the effectiveness and efficiency of our WaveHiT-SR. Our refined
+versions of SwinIR-Light, SwinIR-NG, and SRFormer-Light deliver cutting-edge SR
+results, achieving higher efficiency with fewer parameters, lower FLOPs, and
+faster speeds.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CATformer, a novel super-resolution method combining diffusion-inspired transformers with adversarial and contrastive learning, achieving state-of-the-art performance on benchmark datasets.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces WaveHiT-SR, a hierarchical wavelet transformer network for efficient image super-resolution, leveraging adaptive hierarchical windows and wavelet transforms to improve performance and reduce computational complexity.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了CATformer，一种新颖的超分辨率方法，它将扩散启发的Transformer与对抗学习和对比学习相结合，在基准数据集上实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了WaveHiT-SR，一种用于高效图像超分辨率的分层小波Transformer网络，利用自适应分层窗口和小波变换来提高性能并降低计算复杂度。</p>
             
 
             
@@ -306,11 +312,11 @@ practical applications of diffusion-inspired transformers in super-resolution.</
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.17708v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.19927v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Qinyi Tian, Spence Cox, Laura E. Dalton</p>
+            <p class="paper-authors">Authors: Fayaz Ali, Muhammad Zawish, Steven Davy, Radu Timofte</p>
             
         </motion.div>
         
@@ -322,26 +328,31 @@ practical applications of diffusion-inspired transformers in super-resolution.</
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Incorporating Pre-trained Diffusion Models in Solving the Schrödinger Bridge Problem</h2>
+            <h2 class="paper-title">IDF: Iterative Dynamic Filtering Networks for Generalizable Image Denoising</h2>
             
-            <p class="paper-summary">This paper aims to unify Score-based Generative Models (SGMs), also known as
-Diffusion models, and the Schr\"odinger Bridge (SB) problem through three
-reparameterization techniques: Iterative Proportional Mean-Matching (IPMM),
-Iterative Proportional Terminus-Matching (IPTM), and Iterative Proportional
-Flow-Matching (IPFM). These techniques significantly accelerate and stabilize
-the training of SB-based models. Furthermore, the paper introduces novel
-initialization strategies that use pre-trained SGMs to effectively train
-SB-based models. By using SGMs as initialization, we leverage the advantages of
-both SB-based models and SGMs, ensuring efficient training of SB-based models
-and further improving the performance of SGMs. Extensive experiments
-demonstrate the significant effectiveness and improvements of the proposed
-methods. We believe this work contributes to and paves the way for future
-research on generative models.</p>
+            <p class="paper-summary">Image denoising is a fundamental challenge in computer vision, with
+applications in photography and medical imaging. While deep learning-based
+methods have shown remarkable success, their reliance on specific noise
+distributions limits generalization to unseen noise types and levels. Existing
+approaches attempt to address this with extensive training data and high
+computational resources but they still suffer from overfitting. To address
+these issues, we conduct image denoising by utilizing dynamically generated
+kernels via efficient operations. This approach helps prevent overfitting and
+improves resilience to unseen noise. Specifically, our method leverages a
+Feature Extraction Module for robust noise-invariant features, Global
+Statistics and Local Correlation Modules to capture comprehensive noise
+characteristics and structural correlations. The Kernel Prediction Module then
+employs these cues to produce pixel-wise varying kernels adapted to local
+structures, which are then applied iteratively for denoising. This ensures both
+efficiency and superior restoration quality. Despite being trained on
+single-level Gaussian noise, our compact model (~ 0.04 M) excels across diverse
+noise types and levels, demonstrating the promise of iterative dynamic
+filtering for practical image denoising.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces three reparameterization techniques (IPMM, IPTM, IPFM) and novel initialization strategies using pre-trained Score-based Generative Models (SGMs) to improve the training and performance of Schrödinger Bridge (SB) models, thereby enhancing generative models.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes an iterative dynamic filtering network (IDF) for image denoising using dynamically generated kernels to improve generalization to unseen noise types and levels, achieving superior restoration with a compact model.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了三种重参数化技术（IPMM、IPTM、IPFM）以及利用预训练的基于分数的生成模型（SGMs）的新型初始化策略，以提高薛定谔桥（SB）模型的训练和性能，从而改进生成模型。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种迭代动态滤波网络（IDF），用于图像去噪，使用动态生成的内核来提高对未知噪声类型和水平的泛化能力，并通过紧凑模型实现卓越的修复效果。</p>
             
 
             
@@ -351,16 +362,16 @@ research on generative models.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -375,8 +386,8 @@ research on generative models.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -401,22 +412,22 @@ research on generative models.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.18095v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.19649v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhicong Tang, Tiankai Hang, Shuyang Gu, Dong Chen, Baining Guo</p>
+            <p class="paper-authors">Authors: Dongjin Kim, Jaekyun Ko, Muhammad Kashif Ali, Tae Hyun Kim</p>
             
         </motion.div>
         
@@ -428,29 +439,32 @@ research on generative models.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">UniSino: Physics-Driven Foundational Model for Universal CT Sinogram Standardization</h2>
+            <h2 class="paper-title">Controllable Skin Synthesis via Lesion-Focused Vector Autoregression Model</h2>
             
-            <p class="paper-summary">During raw-data acquisition in CT imaging, diverse factors can degrade the
-collected sinograms, with undersampling and noise leading to severe artifacts
-and noise in reconstructed images and compromising diagnostic accuracy.
-Conventional correction methods rely on manually designed algorithms or fixed
-empirical parameters, but these approaches often lack generalizability across
-heterogeneous artifact types. To address these limitations, we propose UniSino,
-a foundation model for universal CT sinogram standardization. Unlike existing
-foundational models that operate in image domain, UniSino directly standardizes
-data in the projection domain, which enables stronger generalization across
-diverse undersampling scenarios. Its training framework incorporates the
-physical characteristics of sinograms, enhancing generalization and enabling
-robust performance across multiple subtasks spanning four benchmark datasets.
-Experimental results demonstrate thatUniSino achieves superior reconstruction
-quality both single and mixed undersampling case, demonstrating exceptional
-robustness and generalization in sinogram enhancement for CT imaging. The code
-is available at: https://github.com/yqx7150/UniSino.</p>
+            <p class="paper-summary">Skin images from real-world clinical practice are often limited, resulting in
+a shortage of training data for deep-learning models. While many studies have
+explored skin image synthesis, existing methods often generate low-quality
+images and lack control over the lesion's location and type. To address these
+limitations, we present LF-VAR, a model leveraging quantified lesion
+measurement scores and lesion type labels to guide the clinically relevant and
+controllable synthesis of skin images. It enables controlled skin synthesis
+with specific lesion characteristics based on language prompts. We train a
+multiscale lesion-focused Vector Quantised Variational Auto-Encoder (VQVAE) to
+encode images into discrete latent representations for structured tokenization.
+Then, a Visual AutoRegressive (VAR) Transformer trained on tokenized
+representations facilitates image synthesis. Lesion measurement from the lesion
+region and types as conditional embeddings are integrated to enhance synthesis
+fidelity. Our method achieves the best overall FID score (average 0.74) among
+seven lesion types, improving upon the previous state-of-the-art (SOTA) by
+6.3%. The study highlights our controllable skin synthesis model's
+effectiveness in generating high-fidelity, clinically relevant synthetic skin
+images. Our framework code is available at
+https://github.com/echosun1996/LF-VAR.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniSino, a foundation model for CT sinogram standardization in the projection domain, designed to address artifacts and noise caused by undersampling and other factors during raw-data acquisition, leading to improved reconstruction quality.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces LF-VAR, a novel method for controllable skin image synthesis using lesion measurement scores and lesion type labels, achieving state-of-the-art FID scores.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了UniSino，一个用于CT sinogram标准化的基础模型，它在投影域中运行，旨在解决由欠采样和其他因素引起的伪影和噪声，从而提高重建质量。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 LF-VAR，一种新颖的可控皮肤图像合成方法，它使用病变测量分数和病变类型标签，实现了最先进的 FID 分数。</p>
             
 
             
@@ -521,18 +535,126 @@ is available at: https://github.com/yqx7150/UniSino.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.17816v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.19626v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xingyu Ai, Shaoyu Wang, Zhiyuan Jia, Ao Xu, Hongming Shan, Jianhua Ma, Qiegen Liu</p>
+            <p class="paper-authors">Authors: Jiajun Sun, Zhen Yu, Siyuan Yan, Jason J. Ong, Zongyuan Ge, Lei Zhang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Guiding Noisy Label Conditional Diffusion Models with Score-based Discriminator Correction</h2>
+            
+            <p class="paper-summary">Diffusion models have gained prominence as state-of-the-art techniques for
+synthesizing images and videos, particularly due to their ability to scale
+effectively with large datasets. Recent studies have uncovered that these
+extensive datasets often contain mistakes from manual labeling processes.
+However, the extent to which such errors compromise the generative capabilities
+and controllability of diffusion models is not well studied. This paper
+introduces Score-based Discriminator Correction (SBDC), a guidance technique
+for aligning noisy pre-trained conditional diffusion models. The guidance is
+built on discriminator training using adversarial loss, drawing on prior noise
+detection techniques to assess the authenticity of each sample. We further show
+that limiting the usage of our guidance to the early phase of the generation
+process leads to better performance. Our method is computationally efficient,
+only marginally increases inference time, and does not require retraining
+diffusion models. Experiments on different noise settings demonstrate the
+superiority of our method over previous state-of-the-art methods.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Score-based Discriminator Correction (SBDC) to improve the generative capabilities and controllability of conditional diffusion models trained on noisy labeled data, achieving superior performance with minimal computational overhead.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了基于分数的判别器校正（SBDC），以提高在嘈杂标签数据上训练的条件扩散模型的生成能力和可控性，并以最小的计算开销实现卓越的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.19581v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Dat Nguyen Cong, Hieu Tran Bao, Hoang Thanh-Tung</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-28 03:32:49 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-28 03:41:05 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
