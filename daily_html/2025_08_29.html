@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 27, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - August 29, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 27, 2025</p>
+            <p>August 29, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -208,121 +208,19 @@
     <div class="bento-grid" id="paper-grid">
         
         <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.0, ease: 'easeOut' }"  
-            class="bento-item"
+            initial="{ opacity: 0 }"
+            animate="{ opacity: 1 }"
+            transition="{ duration: 0.5 }"
+            class="bento-item col-span-full text-center text-gray-500"
             data-motion-element
         >
-            <h2 class="paper-title">RDDM: Practicing RAW Domain Diffusion Model for Real-world Image Restoration</h2>
-            
-            <p class="paper-summary">We present the RAW domain diffusion model (RDDM), an end-to-end diffusion
-model that restores photo-realistic images directly from the sensor RAW data.
-While recent sRGB-domain diffusion methods achieve impressive results, they are
-caught in a dilemma between high fidelity and realistic generation. As these
-models process lossy sRGB inputs and neglect the accessibility of the sensor
-RAW images in many scenarios, e.g., in image and video capturing in edge
-devices, resulting in sub-optimal performance. RDDM bypasses this limitation by
-directly restoring images in the RAW domain, replacing the conventional
-two-stage image signal processing (ISP) + IR pipeline. However, a simple
-adaptation of pre-trained diffusion models to the RAW domain confronts the
-out-of-distribution (OOD) issues. To this end, we propose: (1) a RAW-domain VAE
-(RVAE) learning optimal latent representations, (2) a differentiable Post Tone
-Processing (PTP) module enabling joint RAW and sRGB space optimization. To
-compensate for the deficiency in the dataset, we develop a scalable degradation
-pipeline synthesizing RAW LQ-HQ pairs from existing sRGB datasets for
-large-scale training. Furthermore, we devise a configurable multi-bayer (CMB)
-LoRA module handling diverse RAW patterns such as RGGB, BGGR, etc. Extensive
-experiments demonstrate RDDM's superiority over state-of-the-art sRGB diffusion
-methods, yielding higher fidelity results with fewer artifacts.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces RDDM, a RAW domain diffusion model for real-world image restoration, addressing limitations of sRGB-domain diffusion methods by directly processing sensor RAW data and employing a novel training pipeline with a RAW-domain VAE and differentiable Post Tone Processing module.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了RDDM，一种用于真实世界图像恢复的RAW域扩散模型。它通过直接处理传感器原始数据，并采用一种新颖的训练流程，包括RAW域VAE和可微分的后期色调处理模块，从而解决了sRGB域扩散方法的局限性。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.19154v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yan Chen, Yi Wen, Wei Li, Junchao Liu, Yong Guo, Jie Hu, Xinghao Chen</p>
-            
+            <p>No relevant papers found for today.</p>
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-29 03:32:25 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-29 04:01:28 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
