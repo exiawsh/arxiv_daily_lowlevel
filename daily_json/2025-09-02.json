@@ -1,0 +1,228 @@
+[
+    {
+        "title": "A Unified Low-level Foundation Model for Enhancing Pathology Image Quality",
+        "summary": "Foundation models have revolutionized computational pathology by achieving\nremarkable success in high-level diagnostic tasks, yet the critical challenge\nof low-level image enhancement remains largely unaddressed. Real-world\npathology images frequently suffer from degradations such as noise, blur, and\nlow resolution due to slide preparation artifacts, staining variability, and\nimaging constraints, while the reliance on physical staining introduces\nsignificant costs, delays, and inconsistency. Although existing methods target\nindividual problems like denoising or super-resolution, their task-specific\ndesigns lack the versatility to handle the diverse low-level vision challenges\nencountered in practice. To bridge this gap, we propose the first unified\nLow-level Pathology Foundation Model (LPFM), capable of enhancing image quality\nin restoration tasks, including super-resolution, deblurring, and denoising, as\nwell as facilitating image translation tasks like virtual staining (H&E and\nspecial stains), all through a single adaptable architecture. Our approach\nintroduces a contrastive pre-trained encoder that learns transferable,\nstain-invariant feature representations from 190 million unlabeled pathology\nimages, enabling robust identification of degradation patterns. A unified\nconditional diffusion process dynamically adapts to specific tasks via textual\nprompts, ensuring precise control over output quality. Trained on a curated\ndataset of 87,810 whole slied images (WSIs) across 34 tissue types and 5\nstaining protocols, LPFM demonstrates statistically significant improvements\n(p<0.01) over state-of-the-art methods in most tasks (56/66), achieving Peak\nSignal-to-Noise Ratio (PSNR) gains of 10-15% for image restoration and\nStructural Similarity Index Measure (SSIM) improvements of 12-18% for virtual\nstaining.",
+        "url": "http://arxiv.org/abs/2509.01071v1",
+        "published_date": "2025-09-01T02:24:34+00:00",
+        "updated_date": "2025-09-01T02:24:34+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziyi Liu",
+            "Zhe Xu",
+            "Jiabo Ma",
+            "Wenqaing Li",
+            "Junlin Hou",
+            "Fuxiang Huang",
+            "Xi Wang",
+            "Ronald Cheong Kin Chan",
+            "Terence Tsz Wai Wong",
+            "Hao Chen"
+        ],
+        "tldr": "This paper introduces a unified Low-level Pathology Foundation Model (LPFM) for enhancing pathology image quality through restoration and translation tasks, achieving significant improvements over state-of-the-art methods.",
+        "tldr_zh": "本文介绍了一种统一的低级病理学基础模型 (LPFM)，通过修复和转换任务来提高病理图像质量，并在现有技术水平上取得了显著改进。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Acoustic Interference Suppression in Ultrasound images for Real-Time HIFU Monitoring Using an Image-Based Latent Diffusion Model",
+        "summary": "High-Intensity Focused Ultrasound (HIFU) is a non-invasive therapeutic\ntechnique widely used for treating various diseases. However, the success and\nsafety of HIFU treatments depend on real-time monitoring, which is often\nhindered by interference when using ultrasound to guide HIFU treatment. To\naddress these challenges, we developed HIFU-ILDiff, a novel deep learning-based\napproach leveraging latent diffusion models to suppress HIFU-induced\ninterference in ultrasound images. The HIFU-ILDiff model employs a Vector\nQuantized Variational Autoencoder (VQ-VAE) to encode noisy ultrasound images\ninto a lower-dimensional latent space, followed by a latent diffusion model\nthat iteratively removes interference. The denoised latent vectors are then\ndecoded to reconstruct high-resolution, interference-free ultrasound images. We\nconstructed a comprehensive dataset comprising 18,872 image pairs from in vitro\nphantoms, ex vivo tissues, and in vivo animal data across multiple imaging\nmodalities and HIFU power levels to train and evaluate the model. Experimental\nresults demonstrate that HIFU-ILDiff significantly outperforms the commonly\nused Notch Filter method, achieving a Structural Similarity Index (SSIM) of\n0.796 and Peak Signal-to-Noise Ratio (PSNR) of 23.780 compared to SSIM of 0.443\nand PSNR of 14.420 for the Notch Filter under in vitro scenarios. Additionally,\nHIFU-ILDiff achieves real-time processing at 15 frames per second, markedly\nfaster than the Notch Filter's 5 seconds per frame. These findings indicate\nthat HIFU-ILDiff is able to denoise HIFU interference in ultrasound guiding\nimages for real-time monitoring during HIFU therapy, which will greatly improve\nthe treatment precision in current clinical applications.",
+        "url": "http://arxiv.org/abs/2509.01557v1",
+        "published_date": "2025-09-01T15:36:17+00:00",
+        "updated_date": "2025-09-01T15:36:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dejia Cai",
+            "Yao Ran",
+            "Kun Yang",
+            "Xinwang Shi",
+            "Yingying Zhou",
+            "Kexian Wu",
+            "Yang Xu",
+            "Yi Hu",
+            "Xiaowei Zhou"
+        ],
+        "tldr": "This paper introduces HIFU-ILDiff, a latent diffusion model-based approach for real-time suppression of HIFU-induced interference in ultrasound images, demonstrating superior performance compared to the Notch Filter method. This improves the treatment precision in current clinical applications.",
+        "tldr_zh": "本文介绍了一种基于潜在扩散模型的 HIFU-ILDiff 方法，用于实时抑制超声图像中 HIFU 引起的干扰，与 Notch Filter 方法相比表现出卓越的性能。这将提高当前临床应用中的治疗精度。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "InfoScale: Unleashing Training-free Variable-scaled Image Generation via Effective Utilization of Information",
+        "summary": "Diffusion models (DMs) have become dominant in visual generation but suffer\nperformance drop when tested on resolutions that differ from the training\nscale, whether lower or higher. In fact, the key challenge in generating\nvariable-scale images lies in the differing amounts of information across\nresolutions, which requires information conversion procedures to be varied for\ngenerating variable-scaled images. In this paper, we investigate the issues of\nthree critical aspects in DMs for a unified analysis in variable-scaled\ngeneration: dilated convolution, attention mechanisms, and initial noise.\nSpecifically, 1) dilated convolution in DMs for the higher-resolution\ngeneration loses high-frequency information. 2) Attention for variable-scaled\nimage generation struggles to adjust the information aggregation adaptively. 3)\nThe spatial distribution of information in the initial noise is misaligned with\nvariable-scaled image. To solve the above problems, we propose\n\\textbf{InfoScale}, an information-centric framework for variable-scaled image\ngeneration by effectively utilizing information from three aspects\ncorrespondingly. For information loss in 1), we introduce Progressive Frequency\nCompensation module to compensate for high-frequency information lost by\ndilated convolution in higher-resolution generation. For information\naggregation inflexibility in 2), we introduce Adaptive Information Aggregation\nmodule to adaptively aggregate information in lower-resolution generation and\nachieve an effective balance between local and global information in\nhigher-resolution generation. For information distribution misalignment in 3),\nwe design Noise Adaptation module to re-distribute information in initial noise\nfor variable-scaled generation. Our method is plug-and-play for DMs and\nextensive experiments demonstrate the effectiveness in variable-scaled image\ngeneration.",
+        "url": "http://arxiv.org/abs/2509.01421v1",
+        "published_date": "2025-09-01T12:27:04+00:00",
+        "updated_date": "2025-09-01T12:27:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Guohui Zhang",
+            "Jiangtong Tan",
+            "Linjiang Huang",
+            "Zhonghang Yuan",
+            "Naishan Zheng",
+            "Jie Huang",
+            "Feng Zhao"
+        ],
+        "tldr": "The paper introduces InfoScale, a training-free framework to improve diffusion model performance in generating variable-resolution images by addressing information loss, aggregation, and distribution issues through novel modules for frequency compensation, adaptive aggregation, and noise adaptation.",
+        "tldr_zh": "本文介绍了一个名为InfoScale的免训练框架，旨在通过解决信息损失、聚合和分布问题，提高扩散模型在生成可变分辨率图像方面的性能。该框架通过创新模块实现了频率补偿、自适应聚合和噪声适应。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MILO: A Lightweight Perceptual Quality Metric for Image and Latent-Space Optimization",
+        "summary": "We present MILO (Metric for Image- and Latent-space Optimization), a\nlightweight, multiscale, perceptual metric for full-reference image quality\nassessment (FR-IQA). MILO is trained using pseudo-MOS (Mean Opinion Score)\nsupervision, in which reproducible distortions are applied to diverse images\nand scored via an ensemble of recent quality metrics that account for visual\nmasking effects. This approach enables accurate learning without requiring\nlarge-scale human-labeled datasets. Despite its compact architecture, MILO\noutperforms existing metrics across standard FR-IQA benchmarks and offers fast\ninference suitable for real-time applications. Beyond quality prediction, we\ndemonstrate the utility of MILO as a perceptual loss in both image and latent\ndomains. In particular, we show that spatial masking modeled by MILO, when\napplied to latent representations from a VAE encoder within Stable Diffusion,\nenables efficient and perceptually aligned optimization. By combining spatial\nmasking with a curriculum learning strategy, we first process perceptually less\nrelevant regions before progressively shifting the optimization to more\nvisually distorted areas. This strategy leads to significantly improved\nperformance in tasks like denoising, super-resolution, and face restoration,\nwhile also reducing computational overhead. MILO thus functions as both a\nstate-of-the-art image quality metric and as a practical tool for perceptual\noptimization in generative pipelines.",
+        "url": "http://arxiv.org/abs/2509.01411v1",
+        "published_date": "2025-09-01T12:08:30+00:00",
+        "updated_date": "2025-09-01T12:08:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Uğur Çoğalan",
+            "Mojtaba Bemana",
+            "Karol Myszkowski",
+            "Hans-Peter Seidel",
+            "Colin Groth"
+        ],
+        "tldr": "The paper introduces MILO, a lightweight perceptual image quality metric, trained with pseudo-MOS, that outperforms existing metrics and can be used as a perceptual loss for image and latent space optimization, enhancing denoising, super-resolution, and face restoration tasks.",
+        "tldr_zh": "该论文介绍了一种轻量级的感知图像质量指标 MILO，它使用伪 MOS 进行训练，性能优于现有指标，可用作图像和潜在空间优化的感知损失，从而增强去噪、超分辨率和面部修复任务。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FocusDPO: Dynamic Preference Optimization for Multi-Subject Personalized Image Generation via Adaptive Focus",
+        "summary": "Multi-subject personalized image generation aims to synthesize customized\nimages containing multiple specified subjects without requiring test-time\noptimization. However, achieving fine-grained independent control over multiple\nsubjects remains challenging due to difficulties in preserving subject fidelity\nand preventing cross-subject attribute leakage. We present FocusDPO, a\nframework that adaptively identifies focus regions based on dynamic semantic\ncorrespondence and supervision image complexity. During training, our method\nprogressively adjusts these focal areas across noise timesteps, implementing a\nweighted strategy that rewards information-rich patches while penalizing\nregions with low prediction confidence. The framework dynamically adjusts focus\nallocation during the DPO process according to the semantic complexity of\nreference images and establishes robust correspondence mappings between\ngenerated and reference subjects. Extensive experiments demonstrate that our\nmethod substantially enhances the performance of existing pre-trained\npersonalized generation models, achieving state-of-the-art results on both\nsingle-subject and multi-subject personalized image synthesis benchmarks. Our\nmethod effectively mitigates attribute leakage while preserving superior\nsubject fidelity across diverse generation scenarios, advancing the frontier of\ncontrollable multi-subject image synthesis.",
+        "url": "http://arxiv.org/abs/2509.01181v1",
+        "published_date": "2025-09-01T07:06:36+00:00",
+        "updated_date": "2025-09-01T07:06:36+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Qiaoqiao Jin",
+            "Siming Fu",
+            "Dong She",
+            "Weinan Jia",
+            "Hualiang Wang",
+            "Mu Liu",
+            "Jidong Jiang"
+        ],
+        "tldr": "FocusDPO introduces a dynamic preference optimization framework for multi-subject personalized image generation, using adaptive focus regions based on semantic correspondence and image complexity to improve subject fidelity and reduce attribute leakage.",
+        "tldr_zh": "FocusDPO 提出了一种动态偏好优化框架，用于多主体个性化图像生成，通过基于语义对应和图像复杂度的自适应焦点区域，来提高主体保真度并减少属性泄漏。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GPSToken: Gaussian Parameterized Spatially-adaptive Tokenization for Image Representation and Generation",
+        "summary": "Effective and efficient tokenization plays an important role in image\nrepresentation and generation. Conventional methods, constrained by uniform\n2D/1D grid tokenization, are inflexible to represent regions with varying\nshapes and textures and at different locations, limiting their efficacy of\nfeature representation. In this work, we propose $\\textbf{GPSToken}$, a novel\n$\\textbf{G}$aussian $\\textbf{P}$arameterized $\\textbf{S}$patially-adaptive\n$\\textbf{Token}$ization framework, to achieve non-uniform image tokenization by\nleveraging parametric 2D Gaussians to dynamically model the shape, position,\nand textures of different image regions. We first employ an entropy-driven\nalgorithm to partition the image into texture-homogeneous regions of variable\nsizes. Then, we parameterize each region as a 2D Gaussian (mean for position,\ncovariance for shape) coupled with texture features. A specialized transformer\nis trained to optimize the Gaussian parameters, enabling continuous adaptation\nof position/shape and content-aware feature extraction. During decoding,\nGaussian parameterized tokens are reconstructed into 2D feature maps through a\ndifferentiable splatting-based renderer, bridging our adaptive tokenization\nwith standard decoders for end-to-end training. GPSToken disentangles spatial\nlayout (Gaussian parameters) from texture features to enable efficient\ntwo-stage generation: structural layout synthesis using lightweight networks,\nfollowed by structure-conditioned texture generation. Experiments demonstrate\nthe state-of-the-art performance of GPSToken, which achieves rFID and FID\nscores of 0.65 and 1.50 on image reconstruction and generation tasks using 128\ntokens, respectively. Codes and models of GPSToken can be found at\n$\\href{https://github.com/xtudbxk/GPSToken}{https://github.com/xtudbxk/GPSToken}$.",
+        "url": "http://arxiv.org/abs/2509.01109v1",
+        "published_date": "2025-09-01T04:01:37+00:00",
+        "updated_date": "2025-09-01T04:01:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhengqiang Zhang",
+            "Rongyuan Wu",
+            "Lingchen Sun",
+            "Lei Zhang"
+        ],
+        "tldr": "The paper introduces GPSToken, a novel tokenization framework for image representation and generation that uses Gaussian parameters to adaptively model image regions, achieving state-of-the-art performance in reconstruction and generation tasks.",
+        "tldr_zh": "该论文介绍了GPSToken，一种新颖的图像表示和生成分词框架，它使用高斯参数自适应地建模图像区域，并在重建和生成任务中实现了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Seeing through Unclear Glass: Occlusion Removal with One Shot",
+        "summary": "Images taken through window glass are often degraded by contaminants adhered\nto the glass surfaces. Such contaminants cause occlusions that attenuate the\nincoming light and scatter stray light towards the camera. Most of existing\ndeep learning methods for neutralizing the effects of contaminated glasses\nrelied on synthetic training data. Few researchers used real degraded and clean\nimage pairs, but they only considered removing or alleviating the effects of\nrain drops on glasses. This paper is concerned with the more challenging task\nof learning the restoration of images taken through glasses contaminated by a\nwide range of occluders, including muddy water, dirt and other small foreign\nparticles found in reality. To facilitate the learning task we have gone to a\ngreat length to acquire real paired images with and without glass contaminants.\nMore importantly, we propose an all-in-one model to neutralize contaminants of\ndifferent types by utilizing the one-shot test-time adaptation mechanism. It\ninvolves a self-supervised auxiliary learning task to update the trained model\nfor the unique occlusion type of each test image. Experimental results show\nthat the proposed method outperforms the state-of-the-art methods\nquantitatively and qualitatively in cleaning realistic contaminated images,\nespecially the unseen ones.",
+        "url": "http://arxiv.org/abs/2509.01033v1",
+        "published_date": "2025-09-01T00:01:36+00:00",
+        "updated_date": "2025-09-01T00:01:36+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Qiang Li",
+            "Yuanming Cao"
+        ],
+        "tldr": "This paper addresses the problem of removing occlusions from images taken through contaminated glass using a one-shot test-time adaptation method trained on a newly acquired real-world dataset of paired clean and contaminated images.",
+        "tldr_zh": "本文致力于解决通过受污染玻璃拍摄的图像的遮挡去除问题，使用一种基于新获取的真实世界配对的干净和受污染图像数据集训练的单样本测试时自适应方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CompSlider: Compositional Slider for Disentangled Multiple-Attribute Image Generation",
+        "summary": "In text-to-image (T2I) generation, achieving fine-grained control over\nattributes - such as age or smile - remains challenging, even with detailed\ntext prompts. Slider-based methods offer a solution for precise control of\nimage attributes. Existing approaches typically train individual adapter for\neach attribute separately, overlooking the entanglement among multiple\nattributes. As a result, interference occurs among different attributes,\npreventing precise control of multiple attributes together. To address this\nchallenge, we aim to disentangle multiple attributes in slider-based generation\nto enbale more reliable and independent attribute manipulation. Our approach,\nCompSlider, can generate a conditional prior for the T2I foundation model to\ncontrol multiple attributes simultaneously. Furthermore, we introduce novel\ndisentanglement and structure losses to compose multiple attribute changes\nwhile maintaining structural consistency within the image. Since CompSlider\noperates in the latent space of the conditional prior and does not require\nretraining the foundation model, it reduces the computational burden for both\ntraining and inference. We evaluate our approach on a variety of image\nattributes and highlight its generality by extending to video generation.",
+        "url": "http://arxiv.org/abs/2509.01028v2",
+        "published_date": "2025-08-31T23:36:44+00:00",
+        "updated_date": "2025-09-03T15:01:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zixin Zhu",
+            "Kevin Duarte",
+            "Mamshad Nayeem Rizve",
+            "Chengyuan Xu",
+            "Ratheesh Kalarot",
+            "Junsong Yuan"
+        ],
+        "tldr": "CompSlider introduces a method for disentangled multiple-attribute image generation via sliders, addressing interference between attributes by operating in the latent space of a conditional prior without retraining the foundation model.",
+        "tldr_zh": "CompSlider提出了一种通过滑块进行解耦的多属性图像生成方法，通过在条件先验的潜在空间中操作来解决属性之间的干扰，而无需重新训练基础模型。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Guided Model-based LiDAR Super-Resolution for Resource-Efficient Automotive scene Segmentation",
+        "summary": "High-resolution LiDAR data plays a critical role in 3D semantic segmentation\nfor autonomous driving, but the high cost of advanced sensors limits\nlarge-scale deployment. In contrast, low-cost sensors such as 16-channel LiDAR\nproduce sparse point clouds that degrade segmentation accuracy. To overcome\nthis, we introduce the first end-to-end framework that jointly addresses LiDAR\nsuper-resolution (SR) and semantic segmentation. The framework employs joint\noptimization during training, allowing the SR module to incorporate semantic\ncues and preserve fine details, particularly for smaller object classes. A new\nSR loss function further directs the network to focus on regions of interest.\nThe proposed lightweight, model-based SR architecture uses significantly fewer\nparameters than existing LiDAR SR approaches, while remaining easily compatible\nwith segmentation networks. Experiments show that our method achieves\nsegmentation performance comparable to models operating on high-resolution and\ncostly 64-channel LiDAR data.",
+        "url": "http://arxiv.org/abs/2509.01317v1",
+        "published_date": "2025-09-01T10:01:40+00:00",
+        "updated_date": "2025-09-01T10:01:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Alexandros Gkillas",
+            "Nikos Piperigkos",
+            "Aris S. Lalos"
+        ],
+        "tldr": "This paper presents an end-to-end framework for LiDAR super-resolution and semantic segmentation, aiming to improve segmentation accuracy from low-cost LiDAR data by joint optimization and a lightweight, model-based SR architecture.",
+        "tldr_zh": "本文提出了一个端到端的激光雷达超分辨率和语义分割框架，旨在通过联合优化和一个轻量级的、基于模型的超分辨率架构来提高低成本激光雷达数据的分割精度。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
