@@ -1,0 +1,126 @@
+[
+    {
+        "title": "Transition Models: Rethinking the Generative Learning Objective",
+        "summary": "A fundamental dilemma in generative modeling persists: iterative diffusion\nmodels achieve outstanding fidelity, but at a significant computational cost,\nwhile efficient few-step alternatives are constrained by a hard quality\nceiling. This conflict between generation steps and output quality arises from\nrestrictive training objectives that focus exclusively on either infinitesimal\ndynamics (PF-ODEs) or direct endpoint prediction. We address this challenge by\nintroducing an exact, continuous-time dynamics equation that analytically\ndefines state transitions across any finite time interval. This leads to a\nnovel generative paradigm, Transition Models (TiM), which adapt to\narbitrary-step transitions, seamlessly traversing the generative trajectory\nfrom single leaps to fine-grained refinement with more steps. Despite having\nonly 865M parameters, TiM achieves state-of-the-art performance, surpassing\nleading models such as SD3.5 (8B parameters) and FLUX.1 (12B parameters) across\nall evaluated step counts. Importantly, unlike previous few-step generators,\nTiM demonstrates monotonic quality improvement as the sampling budget\nincreases. Additionally, when employing our native-resolution strategy, TiM\ndelivers exceptional fidelity at resolutions up to 4096x4096.",
+        "url": "http://arxiv.org/abs/2509.04394v1",
+        "published_date": "2025-09-04T17:05:59+00:00",
+        "updated_date": "2025-09-04T17:05:59+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zidong Wang",
+            "Yiyuan Zhang",
+            "Xiaoyu Yue",
+            "Xiangyu Yue",
+            "Yangguang Li",
+            "Wanli Ouyang",
+            "Lei Bai"
+        ],
+        "tldr": "This paper introduces Transition Models (TiM), a new generative modeling paradigm that achieves state-of-the-art image generation performance with fewer parameters and improves with increased sampling steps, outperforming existing models in both quality and efficiency.",
+        "tldr_zh": "本文介绍了Transition Models (TiM)，一种新的生成模型范式，它以更少的参数实现了最先进的图像生成性能，并随着采样步骤的增加而改进，在质量和效率上都优于现有模型。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "TauGenNet: Plasma-Driven Tau PET Image Synthesis via Text-Guided 3D Diffusion Models",
+        "summary": "Accurate quantification of tau pathology via tau positron emission tomography\n(PET) scan is crucial for diagnosing and monitoring Alzheimer's disease (AD).\nHowever, the high cost and limited availability of tau PET restrict its\nwidespread use. In contrast, structural magnetic resonance imaging (MRI) and\nplasma-based biomarkers provide non-invasive and widely available complementary\ninformation related to brain anatomy and disease progression. In this work, we\npropose a text-guided 3D diffusion model for 3D tau PET image synthesis,\nleveraging multimodal conditions from both structural MRI and plasma\nmeasurement. Specifically, the textual prompt is from the plasma p-tau217\nmeasurement, which is a key indicator of AD progression, while MRI provides\nanatomical structure constraints. The proposed framework is trained and\nevaluated using clinical AV1451 tau PET data from the Alzheimer's Disease\nNeuroimaging Initiative (ADNI) database. Experimental results demonstrate that\nour approach can generate realistic, clinically meaningful 3D tau PET across a\nrange of disease stages. The proposed framework can help perform tau PET data\naugmentation under different settings, provide a non-invasive, cost-effective\nalternative for visualizing tau pathology, and support the simulation of\ndisease progression under varying plasma biomarker levels and cognitive\nconditions.",
+        "url": "http://arxiv.org/abs/2509.04269v1",
+        "published_date": "2025-09-04T14:45:50+00:00",
+        "updated_date": "2025-09-04T14:45:50+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuxin Gong",
+            "Se-in Jang",
+            "Wei Shao",
+            "Yi Su",
+            "Kuang Gong"
+        ],
+        "tldr": "This paper proposes a text-guided 3D diffusion model, TauGenNet, to synthesize tau PET images from structural MRI and plasma p-tau217 measurements, addressing the limited availability and high cost of tau PET scans for Alzheimer's disease diagnosis.",
+        "tldr_zh": "本文提出了一种名为TauGenNet的文本引导3D扩散模型，通过结构MRI和血浆p-tau217测量合成tau PET图像，从而解决阿尔茨海默病诊断中tau PET扫描可用性有限且成本高昂的问题。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Hyper Diffusion Avatars: Dynamic Human Avatar Generation using Network Weight Space Diffusion",
+        "summary": "Creating human avatars is a highly desirable yet challenging task. Recent\nadvancements in radiance field rendering have achieved unprecedented\nphotorealism and real-time performance for personalized dynamic human avatars.\nHowever, these approaches are typically limited to person-specific rendering\nmodels trained on multi-view video data for a single individual, limiting their\nability to generalize across different identities. On the other hand,\ngenerative approaches leveraging prior knowledge from pre-trained 2D diffusion\nmodels can produce cartoonish, static human avatars, which are animated through\nsimple skeleton-based articulation. Therefore, the avatars generated by these\nmethods suffer from lower rendering quality compared to person-specific\nrendering methods and fail to capture pose-dependent deformations such as cloth\nwrinkles. In this paper, we propose a novel approach that unites the strengths\nof person-specific rendering and diffusion-based generative modeling to enable\ndynamic human avatar generation with both high photorealism and realistic\npose-dependent deformations. Our method follows a two-stage pipeline: first, we\noptimize a set of person-specific UNets, with each network representing a\ndynamic human avatar that captures intricate pose-dependent deformations. In\nthe second stage, we train a hyper diffusion model over the optimized network\nweights. During inference, our method generates network weights for real-time,\ncontrollable rendering of dynamic human avatars. Using a large-scale,\ncross-identity, multi-view video dataset, we demonstrate that our approach\noutperforms state-of-the-art human avatar generation methods.",
+        "url": "http://arxiv.org/abs/2509.04145v1",
+        "published_date": "2025-09-04T12:15:55+00:00",
+        "updated_date": "2025-09-04T12:15:55+00:00",
+        "categories": [
+            "cs.GR",
+            "cs.CV"
+        ],
+        "authors": [
+            "Dongliang Cao",
+            "Guoxing Sun",
+            "Marc Habermann",
+            "Florian Bernard"
+        ],
+        "tldr": "This paper proposes a novel approach for generating dynamic human avatars by combining person-specific rendering with diffusion-based generative modeling, achieving both high photorealism and realistic pose-dependent deformations using a hyper diffusion model trained on network weights.",
+        "tldr_zh": "本文提出了一种生成动态人体头像的新方法，该方法结合了特定于人物的渲染和基于扩散的生成建模，通过在网络权重上训练的超扩散模型，实现了高照片真实感和逼真姿势相关变形。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MEPG:Multi-Expert Planning and Generation for Compositionally-Rich Image Generation",
+        "summary": "Text-to-image diffusion models have achieved remarkable image quality, but\nthey still struggle with complex, multiele ment prompts, and limited stylistic\ndiversity. To address these limitations, we propose a Multi-Expert Planning and\nGen eration Framework (MEPG) that synergistically integrates position- and\nstyle-aware large language models (LLMs) with spatial-semantic expert modules.\nThe framework comprises two core components: (1) a Position-Style-Aware (PSA)\nmodule that utilizes a supervised fine-tuned LLM to decom pose input prompts\ninto precise spatial coordinates and style encoded semantic instructions; and\n(2) a Multi-Expert Dif fusion (MED) module that implements cross-region genera\ntion through dynamic expert routing across both local regions and global areas.\nDuring the generation process for each lo cal region, specialized models (e.g.,\nrealism experts, styliza tion specialists) are selectively activated for each\nspatial par tition via attention-based gating mechanisms. The architec ture\nsupports lightweight integration and replacement of ex pert models, providing\nstrong extensibility. Additionally, an interactive interface enables real-time\nspatial layout editing and per-region style selection from a portfolio of\nexperts. Ex periments show that MEPG significantly outperforms base line models\nwith the same backbone in both image quality\n  and style diversity.",
+        "url": "http://arxiv.org/abs/2509.04126v1",
+        "published_date": "2025-09-04T11:44:28+00:00",
+        "updated_date": "2025-09-04T11:44:28+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yuan Zhao",
+            "Liu Lin"
+        ],
+        "tldr": "The paper introduces a Multi-Expert Planning and Generation (MEPG) framework that uses LLMs and specialized diffusion models for compositionally-rich image generation, improving image quality and style diversity, with an interactive editing interface.",
+        "tldr_zh": "该论文介绍了一个多专家规划和生成（MEPG）框架，该框架利用大型语言模型和专门的扩散模型进行构图丰富的图像生成，从而提高图像质量和风格多样性，并提供交互式编辑界面。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "EGTM: Event-guided Efficient Turbulence Mitigation",
+        "summary": "Turbulence mitigation (TM) aims to remove the stochastic distortions and\nblurs introduced by atmospheric turbulence into frame cameras. Existing\nstate-of-the-art deep-learning TM methods extract turbulence cues from multiple\ndegraded frames to find the so-called \"lucky'', not distorted patch, for \"lucky\nfusion''. However, it requires high-capacity network to learn from\ncoarse-grained turbulence dynamics between synchronous frames with limited\nframe-rate, thus fall short in computational and storage efficiency. Event\ncameras, with microsecond-level temporal resolution, have the potential to\nfundamentally address this bottleneck with efficient sparse and asynchronous\nimaging mechanism. In light of this, we (i) present the fundamental\n\\textbf{``event-lucky insight''} to reveal the correlation between turbulence\ndistortions and inverse spatiotemporal distribution of event streams. Then,\nbuild upon this insight, we (ii) propose a novel EGTM framework that extracts\npixel-level reliable turbulence-free guidance from the explicit but noisy\nturbulent events for temporal lucky fusion. Moreover, we (iii) build the first\nturbulence data acquisition system to contribute the first real-world\nevent-driven TM dataset. Extensive experimental results demonstrate that our\napproach significantly surpass the existing SOTA TM method by 710 times, 214\ntimes and 224 times in model size, inference latency and model complexity\nrespectively, while achieving the state-of-the-art in restoration quality\n(+0.94 PSNR and +0.08 SSIM) on our real-world EGTM dataset. This demonstrating\nthe great efficiency merit of introducing event modality into TM task. Demo\ncode and data have been uploaded in supplementary material and will be released\nonce accepted.",
+        "url": "http://arxiv.org/abs/2509.03808v1",
+        "published_date": "2025-09-04T01:49:13+00:00",
+        "updated_date": "2025-09-04T01:49:13+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Huanan Li",
+            "Rui Fan",
+            "Juntao Guan",
+            "Weidong Hao",
+            "Lai Rui",
+            "Tong Wu",
+            "Yikai Wang",
+            "Lin Gu"
+        ],
+        "tldr": "This paper introduces EGTM, a novel event-guided turbulence mitigation framework that leverages event cameras for efficient and high-quality image restoration, achieving significant improvements in speed, model size, and performance compared to existing methods.",
+        "tldr_zh": "本文介绍了 EGTM，一种新颖的事件引导的湍流缓解框架，该框架利用事件相机进行高效和高质量的图像恢复，与现有方法相比，在速度、模型大小和性能方面取得了显著改进。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]

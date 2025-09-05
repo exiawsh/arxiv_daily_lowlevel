@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 23, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - September 05, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 23, 2025</p>
+            <p>September 05, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,35 +215,30 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Time-Aware One Step Diffusion Network for Real-World Image Super-Resolution</h2>
+            <h2 class="paper-title">Transition Models: Rethinking the Generative Learning Objective</h2>
             
-            <p class="paper-summary">Diffusion-based real-world image super-resolution (Real-ISR) methods have
-demonstrated impressive performance. To achieve efficient Real-ISR, many works
-employ Variational Score Distillation (VSD) to distill pre-trained
-stable-diffusion (SD) model for one-step SR with a fixed timestep. However, due
-to the different noise injection timesteps, the SD will perform different
-generative priors. Therefore, a fixed timestep is difficult for these methods
-to fully leverage the generative priors in SD, leading to suboptimal
-performance. To address this, we propose a Time-Aware one-step Diffusion
-Network for Real-ISR (TADSR). We first introduce a Time-Aware VAE Encoder,
-which projects the same image into different latent features based on
-timesteps. Through joint dynamic variation of timesteps and latent features,
-the student model can better align with the input pattern distribution of the
-pre-trained SD, thereby enabling more effective utilization of SD's generative
-capabilities. To better activate the generative prior of SD at different
-timesteps, we propose a Time-Aware VSD loss that bridges the timesteps of the
-student model and those of the teacher model, thereby producing more consistent
-generative prior guidance conditioned on timesteps. Additionally, though
-utilizing the generative prior in SD at different timesteps, our method can
-naturally achieve controllable trade-offs between fidelity and realism by
-changing the timestep condition. Experimental results demonstrate that our
-method achieves both state-of-the-art performance and controllable SR results
-with only a single step.</p>
+            <p class="paper-summary">A fundamental dilemma in generative modeling persists: iterative diffusion
+models achieve outstanding fidelity, but at a significant computational cost,
+while efficient few-step alternatives are constrained by a hard quality
+ceiling. This conflict between generation steps and output quality arises from
+restrictive training objectives that focus exclusively on either infinitesimal
+dynamics (PF-ODEs) or direct endpoint prediction. We address this challenge by
+introducing an exact, continuous-time dynamics equation that analytically
+defines state transitions across any finite time interval. This leads to a
+novel generative paradigm, Transition Models (TiM), which adapt to
+arbitrary-step transitions, seamlessly traversing the generative trajectory
+from single leaps to fine-grained refinement with more steps. Despite having
+only 865M parameters, TiM achieves state-of-the-art performance, surpassing
+leading models such as SD3.5 (8B parameters) and FLUX.1 (12B parameters) across
+all evaluated step counts. Importantly, unlike previous few-step generators,
+TiM demonstrates monotonic quality improvement as the sampling budget
+increases. Additionally, when employing our native-resolution strategy, TiM
+delivers exceptional fidelity at resolutions up to 4096x4096.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a Time-Aware Diffusion Network (TADSR) for real-world image super-resolution, addressing the limitation of fixed timesteps in existing methods by dynamically adjusting timesteps and latent features to better leverage pre-trained stable-diffusion models.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Transition Models (TiM), a new generative modeling paradigm that achieves state-of-the-art image generation performance with fewer parameters and improves with increased sampling steps, outperforming existing models in both quality and efficiency.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种用于真实世界图像超分辨率的时间感知扩散网络 (TADSR)，通过动态调整时间步长和潜在特征，解决了现有方法中固定时间步长的局限性，从而更好地利用预训练的稳定扩散模型。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了Transition Models (TiM)，一种新的生成模型范式，它以更少的参数实现了最先进的图像生成性能，并随着采样步骤的增加而改进，在质量和效率上都优于现有模型。</p>
             
 
             
@@ -253,21 +248,13 @@ with only a single step.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
@@ -275,10 +262,18 @@ with only a single step.</p>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
+                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -314,11 +309,11 @@ with only a single step.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.16557v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.04394v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Tainyi Zhang, Zheng-Peng Duan, Peng-Tao Jiang, Bo Li, Ming-Ming Cheng, Chun-Le Guo, Chongyi Li</p>
+            <p class="paper-authors">Authors: Zidong Wang, Yiyuan Zhang, Xiaoyu Yue, Xiangyu Yue, Yangguang Li, Wanli Ouyang, Lei Bai</p>
             
         </motion.div>
         
@@ -330,28 +325,32 @@ with only a single step.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Arbitrary-Scale 3D Gaussian Super-Resolution</h2>
+            <h2 class="paper-title">TauGenNet: Plasma-Driven Tau PET Image Synthesis via Text-Guided 3D Diffusion Models</h2>
             
-            <p class="paper-summary">Existing 3D Gaussian Splatting (3DGS) super-resolution methods typically
-perform high-resolution (HR) rendering of fixed scale factors, making them
-impractical for resource-limited scenarios. Directly rendering arbitrary-scale
-HR views with vanilla 3DGS introduces aliasing artifacts due to the lack of
-scale-aware rendering ability, while adding a post-processing upsampler for
-3DGS complicates the framework and reduces rendering efficiency. To tackle
-these issues, we build an integrated framework that incorporates scale-aware
-rendering, generative prior-guided optimization, and progressive
-super-resolving to enable 3D Gaussian super-resolution of arbitrary scale
-factors with a single 3D model. Notably, our approach supports both integer and
-non-integer scale rendering to provide more flexibility. Extensive experiments
-demonstrate the effectiveness of our model in rendering high-quality
-arbitrary-scale HR views (6.59 dB PSNR gain over 3DGS) with a single model. It
-preserves structural consistency with LR views and across different scales,
-while maintaining real-time rendering speed (85 FPS at 1080p).</p>
+            <p class="paper-summary">Accurate quantification of tau pathology via tau positron emission tomography
+(PET) scan is crucial for diagnosing and monitoring Alzheimer's disease (AD).
+However, the high cost and limited availability of tau PET restrict its
+widespread use. In contrast, structural magnetic resonance imaging (MRI) and
+plasma-based biomarkers provide non-invasive and widely available complementary
+information related to brain anatomy and disease progression. In this work, we
+propose a text-guided 3D diffusion model for 3D tau PET image synthesis,
+leveraging multimodal conditions from both structural MRI and plasma
+measurement. Specifically, the textual prompt is from the plasma p-tau217
+measurement, which is a key indicator of AD progression, while MRI provides
+anatomical structure constraints. The proposed framework is trained and
+evaluated using clinical AV1451 tau PET data from the Alzheimer's Disease
+Neuroimaging Initiative (ADNI) database. Experimental results demonstrate that
+our approach can generate realistic, clinically meaningful 3D tau PET across a
+range of disease stages. The proposed framework can help perform tau PET data
+augmentation under different settings, provide a non-invasive, cost-effective
+alternative for visualizing tau pathology, and support the simulation of
+disease progression under varying plasma biomarker levels and cognitive
+conditions.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a novel framework for arbitrary-scale 3D Gaussian Splatting super-resolution, enabling high-quality rendering at varying scales with a single model while maintaining real-time performance.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a text-guided 3D diffusion model, TauGenNet, to synthesize tau PET images from structural MRI and plasma p-tau217 measurements, addressing the limited availability and high cost of tau PET scans for Alzheimer's disease diagnosis.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新的任意尺度3D高斯溅射超分辨率框架，它可以通过单个模型在不同尺度上实现高质量渲染，同时保持实时性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种名为TauGenNet的文本引导3D扩散模型，通过结构MRI和血浆p-tau217测量合成tau PET图像，从而解决阿尔茨海默病诊断中tau PET扫描可用性有限且成本高昂的问题。</p>
             
 
             
@@ -361,8 +360,8 @@ while maintaining real-time rendering speed (85 FPS at 1080p).</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -422,11 +421,11 @@ while maintaining real-time rendering speed (85 FPS at 1080p).</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.16467v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.04269v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Huimin Zeng, Yue Bai, Yun Fu</p>
+            <p class="paper-authors">Authors: Yuxin Gong, Se-in Jang, Wei Shao, Yi Su, Kuang Gong</p>
             
         </motion.div>
         
@@ -438,27 +437,35 @@ while maintaining real-time rendering speed (85 FPS at 1080p).</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Towards Diagnostic Quality Flat-Panel Detector CT Imaging Using Diffusion Models</h2>
+            <h2 class="paper-title">Hyper Diffusion Avatars: Dynamic Human Avatar Generation using Network Weight Space Diffusion</h2>
             
-            <p class="paper-summary">Patients undergoing a mechanical thrombectomy procedure usually have a
-multi-detector CT (MDCT) scan before and after the intervention. The image
-quality of the flat panel detector CT (FDCT) present in the intervention room
-is generally much lower than that of a MDCT due to significant artifacts.
-However, using only FDCT images could improve patient management as the patient
-would not need to be moved to the MDCT room. Several studies have evaluated the
-potential use of FDCT imaging alone and the time that could be saved by
-acquiring the images before and/or after the intervention only with the FDCT.
-This study proposes using a denoising diffusion probabilistic model (DDPM) to
-improve the image quality of FDCT scans, making them comparable to MDCT scans.
-Clinicans evaluated FDCT, MDCT, and our model's predictions for diagnostic
-purposes using a questionnaire. The DDPM eliminated most artifacts and improved
-anatomical visibility without reducing bleeding detection, provided that the
-input FDCT image quality is not too low. Our code can be found on github.</p>
+            <p class="paper-summary">Creating human avatars is a highly desirable yet challenging task. Recent
+advancements in radiance field rendering have achieved unprecedented
+photorealism and real-time performance for personalized dynamic human avatars.
+However, these approaches are typically limited to person-specific rendering
+models trained on multi-view video data for a single individual, limiting their
+ability to generalize across different identities. On the other hand,
+generative approaches leveraging prior knowledge from pre-trained 2D diffusion
+models can produce cartoonish, static human avatars, which are animated through
+simple skeleton-based articulation. Therefore, the avatars generated by these
+methods suffer from lower rendering quality compared to person-specific
+rendering methods and fail to capture pose-dependent deformations such as cloth
+wrinkles. In this paper, we propose a novel approach that unites the strengths
+of person-specific rendering and diffusion-based generative modeling to enable
+dynamic human avatar generation with both high photorealism and realistic
+pose-dependent deformations. Our method follows a two-stage pipeline: first, we
+optimize a set of person-specific UNets, with each network representing a
+dynamic human avatar that captures intricate pose-dependent deformations. In
+the second stage, we train a hyper diffusion model over the optimized network
+weights. During inference, our method generates network weights for real-time,
+controllable rendering of dynamic human avatars. Using a large-scale,
+cross-identity, multi-view video dataset, we demonstrate that our approach
+outperforms state-of-the-art human avatar generation methods.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores using a denoising diffusion probabilistic model (DDPM) to enhance the image quality of flat panel detector CT (FDCT) scans to match multi-detector CT (MDCT) scans, showing promising results in clinical evaluation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a novel approach for generating dynamic human avatars by combining person-specific rendering with diffusion-based generative modeling, achieving both high photorealism and realistic pose-dependent deformations using a hyper diffusion model trained on network weights.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文探讨了使用去噪扩散概率模型（DDPM）来提高平板探测器CT（FDCT）扫描的图像质量，使其与多探测器CT（MDCT）扫描相媲美，并在临床评估中显示出有希望的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种生成动态人体头像的新方法，该方法结合了特定于人物的渲染和基于扩散的生成建模，通过在网络权重上训练的超扩散模型，实现了高照片真实感和逼真姿势相关变形。</p>
             
 
             
@@ -468,24 +475,24 @@ input FDCT image quality is not too low. Our code can be found on github.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
+                    <span class="rating-label">Novelty:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -529,11 +536,11 @@ input FDCT image quality is not too low. Our code can be found on github.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.16252v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.04145v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Hélène Corbaz, Anh Nguyen, Victor Schulze-Zachau, Paul Friedrich, Alicia Durrer, Florentin Bieder, Philippe C. Cattin, Marios N Psychogios</p>
+            <p class="paper-authors">Authors: Dongliang Cao, Guoxing Sun, Marc Habermann, Florian Bernard</p>
             
         </motion.div>
         
@@ -545,31 +552,32 @@ input FDCT image quality is not too low. Our code can be found on github.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Forecast then Calibrate: Feature Caching as ODE for Efficient Diffusion Transformers</h2>
+            <h2 class="paper-title">MEPG:Multi-Expert Planning and Generation for Compositionally-Rich Image Generation</h2>
             
-            <p class="paper-summary">Diffusion Transformers (DiTs) have demonstrated exceptional performance in
-high-fidelity image and video generation. To reduce their substantial
-computational costs, feature caching techniques have been proposed to
-accelerate inference by reusing hidden representations from previous timesteps.
-However, current methods often struggle to maintain generation quality at high
-acceleration ratios, where prediction errors increase sharply due to the
-inherent instability of long-step forecasting. In this work, we adopt an
-ordinary differential equation (ODE) perspective on the hidden-feature
-sequence, modeling layer representations along the trajectory as a feature-ODE.
-We attribute the degradation of existing caching strategies to their inability
-to robustly integrate historical features under large skipping intervals. To
-address this, we propose FoCa (Forecast-then-Calibrate), which treats feature
-caching as a feature-ODE solving problem. Extensive experiments on image
-synthesis, video generation, and super-resolution tasks demonstrate the
-effectiveness of FoCa, especially under aggressive acceleration. Without
-additional training, FoCa achieves near-lossless speedups of 5.50 times on
-FLUX, 6.45 times on HunyuanVideo, 3.17 times on Inf-DiT, and maintains high
-quality with a 4.53 times speedup on DiT.</p>
+            <p class="paper-summary">Text-to-image diffusion models have achieved remarkable image quality, but
+they still struggle with complex, multiele ment prompts, and limited stylistic
+diversity. To address these limitations, we propose a Multi-Expert Planning and
+Gen eration Framework (MEPG) that synergistically integrates position- and
+style-aware large language models (LLMs) with spatial-semantic expert modules.
+The framework comprises two core components: (1) a Position-Style-Aware (PSA)
+module that utilizes a supervised fine-tuned LLM to decom pose input prompts
+into precise spatial coordinates and style encoded semantic instructions; and
+(2) a Multi-Expert Dif fusion (MED) module that implements cross-region genera
+tion through dynamic expert routing across both local regions and global areas.
+During the generation process for each lo cal region, specialized models (e.g.,
+realism experts, styliza tion specialists) are selectively activated for each
+spatial par tition via attention-based gating mechanisms. The architec ture
+supports lightweight integration and replacement of ex pert models, providing
+strong extensibility. Additionally, an interactive interface enables real-time
+spatial layout editing and per-region style selection from a portfolio of
+experts. Ex periments show that MEPG significantly outperforms base line models
+with the same backbone in both image quality
+  and style diversity.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes a new feature caching technique called FoCa for Diffusion Transformers (DiTs) that improves inference speed while maintaining generation quality, particularly at high acceleration ratios, by modeling feature caching as a feature-ODE solving problem.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a Multi-Expert Planning and Generation (MEPG) framework that uses LLMs and specialized diffusion models for compositionally-rich image generation, improving image quality and style diversity, with an interactive editing interface.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种名为FoCa的新型扩散Transformer (DiT) 特征缓存技术，通过将特征缓存建模为特征ODE求解问题，在保持生成质量的同时，提高了推理速度，尤其是在高加速比下。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一个多专家规划和生成（MEPG）框架，该框架利用大型语言模型和专门的扩散模型进行构图丰富的图像生成，从而提高图像质量和风格多样性，并提供交互式编辑界面。</p>
             
 
             
@@ -579,8 +587,8 @@ quality with a 4.53 times speedup on DiT.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -595,8 +603,8 @@ quality with a 4.53 times speedup on DiT.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -640,11 +648,11 @@ quality with a 4.53 times speedup on DiT.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.16211v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.04126v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Shikang Zheng, Liang Feng, Xinyu Wang, Qinming Zhou, Peiliang Cai, Chang Zou, Jiacheng Liu, Yuqi Lin, Junjie Chen, Yue Ma, Linfeng Zhang</p>
+            <p class="paper-authors">Authors: Yuan Zhao, Liu Lin</p>
             
         </motion.div>
         
@@ -656,33 +664,37 @@ quality with a 4.53 times speedup on DiT.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Wavelet-Space Super-Resolution for Real-Time Rendering</h2>
+            <h2 class="paper-title">EGTM: Event-guided Efficient Turbulence Mitigation</h2>
             
-            <p class="paper-summary">We investigate the use of wavelet-space feature decomposition in neural
-super-resolution for rendering pipelines. Building on the DFASR framework, we
-introduce a wavelet-domain representation that separates low- and
-high-frequency details before reconstruction, enabling the network to better
-preserve fine textures while maintaining structural consistency. Unlike
-RGB-space regression, our approach leverages the stationary wavelet transform
-(SWT) to avoid spatial down-sampling, ensuring alignment across subbands and
-preserving shift invariance. The model predicts wavelet coefficients
-conditioned on spatial G-buffers and temporally warped history frames, which
-are then recombined through inverse wavelet synthesis. We conduct a
-comprehensive ablation study across wavelet families, transform types, and
-architectural variants, showing that incorporating SWT improves PSNR by up to
-1.5 dB and reduces LPIPS by 17% on average, at a computational overhead of
-roughly +24 ms compared to out DFASR baseline. While absolute runtimes on our
-RTX 3050 mobile GPU are higher ( 141ms) than the original DFASR report on RTX
-4090( 11ms), the relative overhead remains modest, suggesting that on
-higher-end GPUs our method would also remain real-time capable. Taken together,
-our results suggest that wavelet-domain representations are a principled and
-effective way to enhance perceptual quality in neural upscaling for graphics
-applications.</p>
+            <p class="paper-summary">Turbulence mitigation (TM) aims to remove the stochastic distortions and
+blurs introduced by atmospheric turbulence into frame cameras. Existing
+state-of-the-art deep-learning TM methods extract turbulence cues from multiple
+degraded frames to find the so-called "lucky'', not distorted patch, for "lucky
+fusion''. However, it requires high-capacity network to learn from
+coarse-grained turbulence dynamics between synchronous frames with limited
+frame-rate, thus fall short in computational and storage efficiency. Event
+cameras, with microsecond-level temporal resolution, have the potential to
+fundamentally address this bottleneck with efficient sparse and asynchronous
+imaging mechanism. In light of this, we (i) present the fundamental
+\textbf{``event-lucky insight''} to reveal the correlation between turbulence
+distortions and inverse spatiotemporal distribution of event streams. Then,
+build upon this insight, we (ii) propose a novel EGTM framework that extracts
+pixel-level reliable turbulence-free guidance from the explicit but noisy
+turbulent events for temporal lucky fusion. Moreover, we (iii) build the first
+turbulence data acquisition system to contribute the first real-world
+event-driven TM dataset. Extensive experimental results demonstrate that our
+approach significantly surpass the existing SOTA TM method by 710 times, 214
+times and 224 times in model size, inference latency and model complexity
+respectively, while achieving the state-of-the-art in restoration quality
+(+0.94 PSNR and +0.08 SSIM) on our real-world EGTM dataset. This demonstrating
+the great efficiency merit of introducing event modality into TM task. Demo
+code and data have been uploaded in supplementary material and will be released
+once accepted.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a wavelet-space neural super-resolution method for real-time rendering, achieving improved PSNR and LPIPS compared to RGB-space regression while maintaining real-time capability on modern GPUs.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces EGTM, a novel event-guided turbulence mitigation framework that leverages event cameras for efficient and high-quality image restoration, achieving significant improvements in speed, model size, and performance compared to existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于实时渲染的 wavelet 空间神经超分辨率方法，与 RGB 空间回归相比，实现了更高的 PSNR 和更低的 LPIPS，同时在现代 GPU 上保持了实时能力。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了 EGTM，一种新颖的事件引导的湍流缓解框架，该框架利用事件相机进行高效和高质量的图像恢复，与现有方法相比，在速度、模型大小和性能方面取得了显著改进。</p>
             
 
             
@@ -692,24 +704,24 @@ applications.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
+                    <span class="rating-label">Novelty:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -753,18 +765,18 @@ applications.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.16024v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.03808v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Prateek Poudel, Prashant Aryal, Kirtan Kunwar, Navin Nepal, Dinesh Bania Kshatri</p>
+            <p class="paper-authors">Authors: Huanan Li, Rui Fan, Juntao Guan, Weidong Hao, Lai Rui, Tong Wu, Yikai Wang, Lin Gu</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-09-05 03:28:32 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-09-05 03:34:44 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
