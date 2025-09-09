@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - September 05, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - September 09, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>September 05, 2025</p>
+            <p>September 09, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,30 +215,27 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Transition Models: Rethinking the Generative Learning Objective</h2>
+            <h2 class="paper-title">BIR-Adapter: A Low-Complexity Diffusion Model Adapter for Blind Image Restoration</h2>
             
-            <p class="paper-summary">A fundamental dilemma in generative modeling persists: iterative diffusion
-models achieve outstanding fidelity, but at a significant computational cost,
-while efficient few-step alternatives are constrained by a hard quality
-ceiling. This conflict between generation steps and output quality arises from
-restrictive training objectives that focus exclusively on either infinitesimal
-dynamics (PF-ODEs) or direct endpoint prediction. We address this challenge by
-introducing an exact, continuous-time dynamics equation that analytically
-defines state transitions across any finite time interval. This leads to a
-novel generative paradigm, Transition Models (TiM), which adapt to
-arbitrary-step transitions, seamlessly traversing the generative trajectory
-from single leaps to fine-grained refinement with more steps. Despite having
-only 865M parameters, TiM achieves state-of-the-art performance, surpassing
-leading models such as SD3.5 (8B parameters) and FLUX.1 (12B parameters) across
-all evaluated step counts. Importantly, unlike previous few-step generators,
-TiM demonstrates monotonic quality improvement as the sampling budget
-increases. Additionally, when employing our native-resolution strategy, TiM
-delivers exceptional fidelity at resolutions up to 4096x4096.</p>
+            <p class="paper-summary">This paper introduces BIR-Adapter, a low-complexity blind image restoration
+adapter for diffusion models. The BIR-Adapter enables the utilization of the
+prior of pre-trained large-scale diffusion models on blind image restoration
+without training any auxiliary feature extractor. We take advantage of the
+robustness of pretrained models. We extract features from degraded images via
+the model itself and extend the self-attention mechanism with these degraded
+features. We introduce a sampling guidance mechanism to reduce hallucinations.
+We perform experiments on synthetic and real-world degradations and demonstrate
+that BIR-Adapter achieves competitive or better performance compared to
+state-of-the-art methods while having significantly lower complexity.
+Additionally, its adapter-based design enables integration into other diffusion
+models, enabling broader applications in image restoration tasks. We showcase
+this by extending a super-resolution-only model to perform better under
+additional unknown degradations.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Transition Models (TiM), a new generative modeling paradigm that achieves state-of-the-art image generation performance with fewer parameters and improves with increased sampling steps, outperforming existing models in both quality and efficiency.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces BIR-Adapter, a low-complexity adapter for diffusion models that improves blind image restoration by leveraging pre-trained models without auxiliary feature extractors and reduces hallucinations through sampling guidance. It achieves competitive performance with lower complexity and broader applicability.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了Transition Models (TiM)，一种新的生成模型范式，它以更少的参数实现了最先进的图像生成性能，并随着采样步骤的增加而改进，在质量和效率上都优于现有模型。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种低复杂度的盲图像恢复适配器BIR-Adapter，它利用预训练扩散模型的先验知识，无需额外的特征提取器，并通过采样引导减少幻觉。BIR-Adapter在实现具有竞争力的性能的同时，具有更低的复杂度和更广泛的适用性。</p>
             
 
             
@@ -248,24 +245,24 @@ delivers exceptional fidelity at resolutions up to 4096x4096.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -309,11 +306,11 @@ delivers exceptional fidelity at resolutions up to 4096x4096.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.04394v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.06904v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zidong Wang, Yiyuan Zhang, Xiaoyu Yue, Xiangyu Yue, Yangguang Li, Wanli Ouyang, Lei Bai</p>
+            <p class="paper-authors">Authors: Cem Eteke, Alexander Griessel, Wolfgang Kellerer, Eckehard Steinbach</p>
             
         </motion.div>
         
@@ -325,32 +322,26 @@ delivers exceptional fidelity at resolutions up to 4096x4096.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">TauGenNet: Plasma-Driven Tau PET Image Synthesis via Text-Guided 3D Diffusion Models</h2>
+            <h2 class="paper-title">MIORe & VAR-MIORe: Benchmarks to Push the Boundaries of Restoration</h2>
             
-            <p class="paper-summary">Accurate quantification of tau pathology via tau positron emission tomography
-(PET) scan is crucial for diagnosing and monitoring Alzheimer's disease (AD).
-However, the high cost and limited availability of tau PET restrict its
-widespread use. In contrast, structural magnetic resonance imaging (MRI) and
-plasma-based biomarkers provide non-invasive and widely available complementary
-information related to brain anatomy and disease progression. In this work, we
-propose a text-guided 3D diffusion model for 3D tau PET image synthesis,
-leveraging multimodal conditions from both structural MRI and plasma
-measurement. Specifically, the textual prompt is from the plasma p-tau217
-measurement, which is a key indicator of AD progression, while MRI provides
-anatomical structure constraints. The proposed framework is trained and
-evaluated using clinical AV1451 tau PET data from the Alzheimer's Disease
-Neuroimaging Initiative (ADNI) database. Experimental results demonstrate that
-our approach can generate realistic, clinically meaningful 3D tau PET across a
-range of disease stages. The proposed framework can help perform tau PET data
-augmentation under different settings, provide a non-invasive, cost-effective
-alternative for visualizing tau pathology, and support the simulation of
-disease progression under varying plasma biomarker levels and cognitive
-conditions.</p>
+            <p class="paper-summary">We introduce MIORe and VAR-MIORe, two novel multi-task datasets that address
+critical limitations in current motion restoration benchmarks. Designed with
+high-frame-rate (1000 FPS) acquisition and professional-grade optics, our
+datasets capture a broad spectrum of motion scenarios, which include complex
+ego-camera movements, dynamic multi-subject interactions, and depth-dependent
+blur effects. By adaptively averaging frames based on computed optical flow
+metrics, MIORe generates consistent motion blur, and preserves sharp inputs for
+video frame interpolation and optical flow estimation. VAR-MIORe further
+extends by spanning a variable range of motion magnitudes, from minimal to
+extreme, establishing the first benchmark to offer explicit control over motion
+amplitude. We provide high-resolution, scalable ground truths that challenge
+existing algorithms under both controlled and adverse conditions, paving the
+way for next-generation research of various image and video restoration tasks.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a text-guided 3D diffusion model, TauGenNet, to synthesize tau PET images from structural MRI and plasma p-tau217 measurements, addressing the limited availability and high cost of tau PET scans for Alzheimer's disease diagnosis.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces two new high-frame-rate datasets, MIORe and VAR-MIORe, for benchmarking motion restoration algorithms, offering controlled motion blur and variable motion magnitudes.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种名为TauGenNet的文本引导3D扩散模型，通过结构MRI和血浆p-tau217测量合成tau PET图像，从而解决阿尔茨海默病诊断中tau PET扫描可用性有限且成本高昂的问题。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了两个新的高帧率数据集 MIORe 和 VAR-MIORe，用于测试运动恢复算法，提供了可控的运动模糊和可变的运动幅度。</p>
             
 
             
@@ -360,16 +351,16 @@ conditions.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -421,11 +412,11 @@ conditions.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.04269v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.06803v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yuxin Gong, Se-in Jang, Wei Shao, Yi Su, Kuang Gong</p>
+            <p class="paper-authors">Authors: George Ciubotariu, Zhuyun Zhou, Zongwei Wu, Radu Timofte</p>
             
         </motion.div>
         
@@ -437,35 +428,27 @@ conditions.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Hyper Diffusion Avatars: Dynamic Human Avatar Generation using Network Weight Space Diffusion</h2>
+            <h2 class="paper-title">Your Super Resolution Model is not Enough for Tackling Real-World Scenarios</h2>
             
-            <p class="paper-summary">Creating human avatars is a highly desirable yet challenging task. Recent
-advancements in radiance field rendering have achieved unprecedented
-photorealism and real-time performance for personalized dynamic human avatars.
-However, these approaches are typically limited to person-specific rendering
-models trained on multi-view video data for a single individual, limiting their
-ability to generalize across different identities. On the other hand,
-generative approaches leveraging prior knowledge from pre-trained 2D diffusion
-models can produce cartoonish, static human avatars, which are animated through
-simple skeleton-based articulation. Therefore, the avatars generated by these
-methods suffer from lower rendering quality compared to person-specific
-rendering methods and fail to capture pose-dependent deformations such as cloth
-wrinkles. In this paper, we propose a novel approach that unites the strengths
-of person-specific rendering and diffusion-based generative modeling to enable
-dynamic human avatar generation with both high photorealism and realistic
-pose-dependent deformations. Our method follows a two-stage pipeline: first, we
-optimize a set of person-specific UNets, with each network representing a
-dynamic human avatar that captures intricate pose-dependent deformations. In
-the second stage, we train a hyper diffusion model over the optimized network
-weights. During inference, our method generates network weights for real-time,
-controllable rendering of dynamic human avatars. Using a large-scale,
-cross-identity, multi-view video dataset, we demonstrate that our approach
-outperforms state-of-the-art human avatar generation methods.</p>
+            <p class="paper-summary">Despite remarkable progress in Single Image Super-Resolution (SISR),
+traditional models often struggle to generalize across varying scale factors,
+limiting their real-world applicability. To address this, we propose a plug-in
+Scale-Aware Attention Module (SAAM) designed to retrofit modern fixed-scale SR
+models with the ability to perform arbitrary-scale SR. SAAM employs
+lightweight, scale-adaptive feature extraction and upsampling, incorporating
+the Simple parameter-free Attention Module (SimAM) for efficient guidance and
+gradient variance loss to enhance sharpness in image details. Our method
+integrates seamlessly into multiple state-of-the-art SR backbones (e.g., SCNet,
+HiT-SR, OverNet), delivering competitive or superior performance across a wide
+range of integer and non-integer scale factors. Extensive experiments on
+benchmark datasets demonstrate that our approach enables robust multi-scale
+upscaling with minimal computational overhead, offering a practical solution
+for real-world scenarios.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a novel approach for generating dynamic human avatars by combining person-specific rendering with diffusion-based generative modeling, achieving both high photorealism and realistic pose-dependent deformations using a hyper diffusion model trained on network weights.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a Scale-Aware Attention Module (SAAM) that can be plugged into existing SR models to enable arbitrary-scale super-resolution, improving their applicability to real-world scenarios with varying scale factors. It achieves this through scale-adaptive feature extraction and upsampling with minimal overhead.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种生成动态人体头像的新方法，该方法结合了特定于人物的渲染和基于扩散的生成建模，通过在网络权重上训练的超扩散模型，实现了高照片真实感和逼真姿势相关变形。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种可插入现有SR模型的尺度感知注意力模块（SAAM），以实现任意尺度的超分辨率，从而提高其在具有不同尺度因子的实际场景中的适用性。它通过尺度自适应特征提取和上采样来实现，且开销极小。</p>
             
 
             
@@ -475,24 +458,24 @@ outperforms state-of-the-art human avatar generation methods.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -536,11 +519,11 @@ outperforms state-of-the-art human avatar generation methods.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.04145v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.06387v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Dongliang Cao, Guoxing Sun, Marc Habermann, Florian Bernard</p>
+            <p class="paper-authors">Authors: Dongsik Yoon, Jongeun Kim</p>
             
         </motion.div>
         
@@ -552,149 +535,24 @@ outperforms state-of-the-art human avatar generation methods.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MEPG:Multi-Expert Planning and Generation for Compositionally-Rich Image Generation</h2>
+            <h2 class="paper-title">AIM 2025 Challenge on High FPS Motion Deblurring: Methods and Results</h2>
             
-            <p class="paper-summary">Text-to-image diffusion models have achieved remarkable image quality, but
-they still struggle with complex, multiele ment prompts, and limited stylistic
-diversity. To address these limitations, we propose a Multi-Expert Planning and
-Gen eration Framework (MEPG) that synergistically integrates position- and
-style-aware large language models (LLMs) with spatial-semantic expert modules.
-The framework comprises two core components: (1) a Position-Style-Aware (PSA)
-module that utilizes a supervised fine-tuned LLM to decom pose input prompts
-into precise spatial coordinates and style encoded semantic instructions; and
-(2) a Multi-Expert Dif fusion (MED) module that implements cross-region genera
-tion through dynamic expert routing across both local regions and global areas.
-During the generation process for each lo cal region, specialized models (e.g.,
-realism experts, styliza tion specialists) are selectively activated for each
-spatial par tition via attention-based gating mechanisms. The architec ture
-supports lightweight integration and replacement of ex pert models, providing
-strong extensibility. Additionally, an interactive interface enables real-time
-spatial layout editing and per-region style selection from a portfolio of
-experts. Ex periments show that MEPG significantly outperforms base line models
-with the same backbone in both image quality
-  and style diversity.</p>
+            <p class="paper-summary">This paper presents a comprehensive review of the AIM 2025 High FPS
+Non-Uniform Motion Deblurring Challenge, highlighting the proposed solutions
+and final results. The objective of this challenge is to identify effective
+networks capable of producing clearer and visually compelling images in diverse
+and challenging conditions, by learning representative visual cues for complex
+aggregations of motion types. A total of 68 participants registered for the
+competition, and 9 teams ultimately submitted valid entries. This paper
+thoroughly evaluates the state-of-the-art advances in high-FPS single image
+motion deblurring, showcasing the significant progress in the field, while
+leveraging samples of the novel dataset, MIORe, that introduces challenging
+examples of movement patterns.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a Multi-Expert Planning and Generation (MEPG) framework that uses LLMs and specialized diffusion models for compositionally-rich image generation, improving image quality and style diversity, with an interactive editing interface.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper summarizes the AIM 2025 High FPS Motion Deblurring Challenge, showcasing the submitted solutions, results, and the MIORe dataset. It highlights progress in high-FPS single image motion deblurring.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一个多专家规划和生成（MEPG）框架，该框架利用大型语言模型和专门的扩散模型进行构图丰富的图像生成，从而提高图像质量和风格多样性，并提供交互式编辑界面。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2509.04126v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yuan Zhao, Liu Lin</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">EGTM: Event-guided Efficient Turbulence Mitigation</h2>
-            
-            <p class="paper-summary">Turbulence mitigation (TM) aims to remove the stochastic distortions and
-blurs introduced by atmospheric turbulence into frame cameras. Existing
-state-of-the-art deep-learning TM methods extract turbulence cues from multiple
-degraded frames to find the so-called "lucky'', not distorted patch, for "lucky
-fusion''. However, it requires high-capacity network to learn from
-coarse-grained turbulence dynamics between synchronous frames with limited
-frame-rate, thus fall short in computational and storage efficiency. Event
-cameras, with microsecond-level temporal resolution, have the potential to
-fundamentally address this bottleneck with efficient sparse and asynchronous
-imaging mechanism. In light of this, we (i) present the fundamental
-\textbf{``event-lucky insight''} to reveal the correlation between turbulence
-distortions and inverse spatiotemporal distribution of event streams. Then,
-build upon this insight, we (ii) propose a novel EGTM framework that extracts
-pixel-level reliable turbulence-free guidance from the explicit but noisy
-turbulent events for temporal lucky fusion. Moreover, we (iii) build the first
-turbulence data acquisition system to contribute the first real-world
-event-driven TM dataset. Extensive experimental results demonstrate that our
-approach significantly surpass the existing SOTA TM method by 710 times, 214
-times and 224 times in model size, inference latency and model complexity
-respectively, while achieving the state-of-the-art in restoration quality
-(+0.94 PSNR and +0.08 SSIM) on our real-world EGTM dataset. This demonstrating
-the great efficiency merit of introducing event modality into TM task. Demo
-code and data have been uploaded in supplementary material and will be released
-once accepted.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces EGTM, a novel event-guided turbulence mitigation framework that leverages event cameras for efficient and high-quality image restoration, achieving significant improvements in speed, model size, and performance compared to existing methods.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了 EGTM，一种新颖的事件引导的湍流缓解框架，该框架利用事件相机进行高效和高质量的图像恢复，与现有方法相比，在速度、模型大小和性能方面取得了显著改进。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文总结了AIM 2025高帧率运动去模糊挑战赛，展示了提交的解决方案、结果以及MIORe数据集。它强调了高帧率单图像运动去模糊领域的进展。</p>
             
 
             
@@ -712,24 +570,24 @@ once accepted.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -754,29 +612,29 @@ once accepted.</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.03808v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.06793v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Huanan Li, Rui Fan, Juntao Guan, Weidong Hao, Lai Rui, Tong Wu, Yikai Wang, Lin Gu</p>
+            <p class="paper-authors">Authors: George Ciubotariu, Florin-Alexandru Vasluianu, Zhuyun Zhou, Nancy Mehta, Radu Timofte, Ke Wu, Long Sun, Lingshun Kong, Zhongbao Yang, Jinshan Pan, Jiangxin Dong, Jinhui Tang, Hao Chen, Yinghui Fang, Dafeng Zhang, Yongqi Song, Jiangbo Guo, Shuhua Jin, Zeyu Xiao, Rui Zhao, Zhuoyuan Li, Cong Zhang, Yufeng Peng, Xin Lu, Zhijing Sun, Chengjie Ge, Zihao Li, Zishun Liao, Ziang Zhou, Qiyu Kang, Xueyang Fu, Zheng-Jun Zha, Yuqian Zhang, Shuai Liu, Jie Liu, Zhuhao Zhang, Lishen Qu, Zhihao Liu, Shihao Zhou, Yaqi Luo, Juncheng Zhou, Jufeng Yang, Qianfeng Yang, Qiyuan Guan, Xiang Chen, Guiyue Jin, Jiyu Jin</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-09-09 03:31:47 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-09-09 03:36:15 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

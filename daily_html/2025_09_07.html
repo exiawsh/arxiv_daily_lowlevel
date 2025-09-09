@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 26, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - September 07, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 26, 2025</p>
+            <p>September 07, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,27 +215,38 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CATformer: Contrastive Adversarial Transformer for Image Super-Resolution</h2>
+            <h2 class="paper-title">Depth-Aware Super-Resolution via Distance-Adaptive Variational Formulation</h2>
             
-            <p class="paper-summary">Super-resolution remains a promising technique to enhance the quality of
-low-resolution images. This study introduces CATformer (Contrastive Adversarial
-Transformer), a novel neural network integrating diffusion-inspired feature
-refinement with adversarial and contrastive learning. CATformer employs a
-dual-branch architecture combining a primary diffusion-inspired transformer,
-which progressively refines latent representations, with an auxiliary
-transformer branch designed to enhance robustness to noise through learned
-latent contrasts. These complementary representations are fused and decoded
-using deep Residual-in-Residual Dense Blocks for enhanced reconstruction
-quality. Extensive experiments on benchmark datasets demonstrate that CATformer
-outperforms recent transformer-based and diffusion-inspired methods both in
-efficiency and visual image quality. This work bridges the performance gap
-among transformer-, diffusion-, and GAN-based methods, laying a foundation for
-practical applications of diffusion-inspired transformers in super-resolution.</p>
+            <p class="paper-summary">Single image super-resolution traditionally assumes spatially-invariant
+degradation models, yet real-world imaging systems exhibit complex
+distance-dependent effects including atmospheric scattering, depth-of-field
+variations, and perspective distortions. This fundamental limitation
+necessitates spatially-adaptive reconstruction strategies that explicitly
+incorporate geometric scene understanding for optimal performance. We propose a
+rigorous variational framework that characterizes super-resolution as a
+spatially-varying inverse problem, formulating the degradation operator as a
+pseudodifferential operator with distance-dependent spectral characteristics
+that enable theoretical analysis of reconstruction limits across depth ranges.
+Our neural architecture implements discrete gradient flow dynamics through
+cascaded residual blocks with depth-conditional convolution kernels, ensuring
+convergence to stationary points of the theoretical energy functional while
+incorporating learned distance-adaptive regularization terms that dynamically
+adjust smoothness constraints based on local geometric structure. Spectral
+constraints derived from atmospheric scattering theory prevent bandwidth
+violations and noise amplification in far-field regions, while adaptive kernel
+generation networks learn continuous mappings from depth to reconstruction
+filters. Comprehensive evaluation across five benchmark datasets demonstrates
+state-of-the-art performance, achieving 36.89/0.9516 and 30.54/0.8721 PSNR/SSIM
+at 2 and 4 scales on KITTI outdoor scenes, outperforming existing methods by
+0.44dB and 0.36dB respectively. This work establishes the first
+theoretically-grounded distance-adaptive super-resolution framework and
+demonstrates significant improvements on depth-variant scenarios while
+maintaining competitive performance across traditional benchmarks.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CATformer, a novel super-resolution method combining diffusion-inspired transformers with adversarial and contrastive learning, achieving state-of-the-art performance on benchmark datasets.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a depth-aware super-resolution framework that uses a variational formulation with distance-dependent spectral characteristics and a neural architecture incorporating depth-conditional convolution kernels, achieving state-of-the-art results on depth-variant scenes.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了CATformer，一种新颖的超分辨率方法，它将扩散启发的Transformer与对抗学习和对比学习相结合，在基准数据集上实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种深度感知超分辨率框架，该框架使用具有距离相关光谱特性的变分公式和包含深度条件卷积核的神经架构，在深度变化场景中实现了最先进的结果。</p>
             
 
             
@@ -245,8 +256,8 @@ practical applications of diffusion-inspired transformers in super-resolution.</
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -261,8 +272,8 @@ practical applications of diffusion-inspired transformers in super-resolution.</
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -299,18 +310,18 @@ practical applications of diffusion-inspired transformers in super-resolution.</
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.17708v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.05746v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Qinyi Tian, Spence Cox, Laura E. Dalton</p>
+            <p class="paper-authors">Authors: Tianhao Guo, Bingjie Lu, Feng Wang, Zhengyang Lu</p>
             
         </motion.div>
         
@@ -322,26 +333,34 @@ practical applications of diffusion-inspired transformers in super-resolution.</
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Incorporating Pre-trained Diffusion Models in Solving the Schrödinger Bridge Problem</h2>
+            <h2 class="paper-title">FAVAE-Effective Frequency Aware Latent Tokenizer</h2>
             
-            <p class="paper-summary">This paper aims to unify Score-based Generative Models (SGMs), also known as
-Diffusion models, and the Schr\"odinger Bridge (SB) problem through three
-reparameterization techniques: Iterative Proportional Mean-Matching (IPMM),
-Iterative Proportional Terminus-Matching (IPTM), and Iterative Proportional
-Flow-Matching (IPFM). These techniques significantly accelerate and stabilize
-the training of SB-based models. Furthermore, the paper introduces novel
-initialization strategies that use pre-trained SGMs to effectively train
-SB-based models. By using SGMs as initialization, we leverage the advantages of
-both SB-based models and SGMs, ensuring efficient training of SB-based models
-and further improving the performance of SGMs. Extensive experiments
-demonstrate the significant effectiveness and improvements of the proposed
-methods. We believe this work contributes to and paves the way for future
-research on generative models.</p>
+            <p class="paper-summary">Latent generative models have shown remarkable progress in high-fidelity
+image synthesis, typically using a two-stage training process that involves
+compressing images into latent embeddings via learned tokenizers in the first
+stage. The quality of generation strongly depends on how expressive and
+well-optimized these latent embeddings are. While various methods have been
+proposed to learn effective latent representations, the reconstructed images
+often lack realism, particularly in textured regions with sharp transitions,
+due to loss of fine details governed by high frequencies. We conduct a detailed
+frequency decomposition of existing state-of-the-art (SOTA) latent tokenizers
+and show that conventional objectives inherently prioritize low-frequency
+reconstruction, often at the expense of high-frequency fidelity. Our analysis
+reveals these latent tokenizers exhibit a bias toward low-frequency
+information, when jointly optimized, leading to over-smoothed outputs and
+visual artifacts that diminish perceptual quality. To address this, we propose
+a wavelet-based, frequency-aware variational autoencoder (FA-VAE) framework
+that explicitly decouples the optimization of low- and high-frequency
+components. This decoupling enables improved reconstruction of fine textures
+while preserving global structure. Our approach bridges the fidelity gap in
+current latent tokenizers and emphasizes the importance of frequency-aware
+optimization for realistic image representation, with broader implications for
+applications in content creation, neural rendering, and medical imaging.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces three reparameterization techniques (IPMM, IPTM, IPFM) and novel initialization strategies using pre-trained Score-based Generative Models (SGMs) to improve the training and performance of Schrödinger Bridge (SB) models, thereby enhancing generative models.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a frequency-aware variational autoencoder (FA-VAE) to address the low-frequency bias in existing latent tokenizers, leading to improved image generation with better texture and detail reconstruction.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了三种重参数化技术（IPMM、IPTM、IPFM）以及利用预训练的基于分数的生成模型（SGMs）的新型初始化策略，以提高薛定谔桥（SB）模型的训练和性能，从而改进生成模型。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种频率感知变分自编码器（FA-VAE），旨在解决现有潜在分词器中的低频偏差问题，从而实现具有更好纹理和细节重建的改进图像生成。</p>
             
 
             
@@ -351,16 +370,16 @@ research on generative models.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -375,8 +394,8 @@ research on generative models.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -401,22 +420,22 @@ research on generative models.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.18095v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.05441v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhicong Tang, Tiankai Hang, Shuyang Gu, Dong Chen, Baining Guo</p>
+            <p class="paper-authors">Authors: Tejaswini Medi, Hsien-Yi Wang, Arianna Rampini, Margret Keuper</p>
             
         </motion.div>
         
@@ -428,29 +447,33 @@ research on generative models.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">UniSino: Physics-Driven Foundational Model for Universal CT Sinogram Standardization</h2>
+            <h2 class="paper-title">WIPUNet: A Physics-inspired Network with Weighted Inductive Biases for Image Denoising</h2>
             
-            <p class="paper-summary">During raw-data acquisition in CT imaging, diverse factors can degrade the
-collected sinograms, with undersampling and noise leading to severe artifacts
-and noise in reconstructed images and compromising diagnostic accuracy.
-Conventional correction methods rely on manually designed algorithms or fixed
-empirical parameters, but these approaches often lack generalizability across
-heterogeneous artifact types. To address these limitations, we propose UniSino,
-a foundation model for universal CT sinogram standardization. Unlike existing
-foundational models that operate in image domain, UniSino directly standardizes
-data in the projection domain, which enables stronger generalization across
-diverse undersampling scenarios. Its training framework incorporates the
-physical characteristics of sinograms, enhancing generalization and enabling
-robust performance across multiple subtasks spanning four benchmark datasets.
-Experimental results demonstrate thatUniSino achieves superior reconstruction
-quality both single and mixed undersampling case, demonstrating exceptional
-robustness and generalization in sinogram enhancement for CT imaging. The code
-is available at: https://github.com/yqx7150/UniSino.</p>
+            <p class="paper-summary">In high-energy particle physics, collider measurements are contaminated by
+"pileup", overlapping soft interactions that obscure the hard-scatter signal of
+interest. Dedicated subtraction strategies exploit physical priors such as
+conservation, locality, and isolation. Inspired by this analogy, we investigate
+how such principles can inform image denoising by embedding physics-guided
+inductive biases into neural architectures. This paper is a proof of concept:
+rather than targeting state-of-the-art (SOTA) benchmarks, we ask whether
+physics-inspired priors improve robustness under strong corruption.
+  We introduce a hierarchy of PU-inspired denoisers: a residual CNN with
+conservation constraints, its Gaussian-noise variants, and the Weighted
+Inductive Pileup-physics-inspired U-Network for Denoising (WIPUNet), which
+integrates these ideas into a UNet backbone. On CIFAR-10 with Gaussian noise at
+$\sigma\in\{15,25,50,75,100\}$, PU-inspired CNNs are competitive with standard
+baselines, while WIPUNet shows a \emph{widening margin} at higher noise.
+Complementary BSD500 experiments show the same trend, suggesting
+physics-inspired priors provide stability where purely data-driven models
+degrade. Our contributions are: (i) translating pileup-mitigation principles
+into modular inductive biases; (ii) integrating them into UNet; and (iii)
+demonstrating robustness gains at high noise without relying on heavy SOTA
+machinery.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniSino, a foundation model for CT sinogram standardization in the projection domain, designed to address artifacts and noise caused by undersampling and other factors during raw-data acquisition, leading to improved reconstruction quality.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces WIPUNet, a physics-inspired U-Net architecture for image denoising, demonstrating improved robustness to high levels of noise compared to standard baselines. It leverages principles from high-energy particle physics to inform inductive biases in the network.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了UniSino，一个用于CT sinogram标准化的基础模型，它在投影域中运行，旨在解决由欠采样和其他因素引起的伪影和噪声，从而提高重建质量。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍WIPUNet，一种受物理启发的U-Net架构，用于图像去噪，与标准基线相比，它在高噪声水平下表现出更高的鲁棒性。它利用高能粒子物理学的原理来为网络中的归纳偏置提供信息。</p>
             
 
             
@@ -521,18 +544,131 @@ is available at: https://github.com/yqx7150/UniSino.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.17816v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.05662v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xingyu Ai, Shaoyu Wang, Zhiyuan Jia, Ao Xu, Hongming Shan, Jianhua Ma, Qiegen Liu</p>
+            <p class="paper-authors">Authors: Wasikul Islam</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">RED: Robust Event-Guided Motion Deblurring with Modality-Specific Disentangled Representation</h2>
+            
+            <p class="paper-summary">Event cameras provide sparse yet temporally high-temporal-resolution motion
+information, demonstrating great potential for motion deblurring. Existing
+methods focus on cross-modal interaction, overlooking the inherent
+incompleteness of event streams, which arises from the trade-off between
+sensitivity and noise introduced by the thresholding mechanism of Dynamic
+Vision Sensors (DVS). Such degradation compromises the integrity of motion
+priors and limits the effectiveness of event-guided deblurring. To tackle these
+challenges, we propose a Robust Event-guided Deblurring (RED) network with
+modality-specific disentangled representation. First, we introduce a
+Robustness-Oriented Perturbation Strategy (RPS) that applies random masking to
+events, which exposes RED to incomplete patterns and then foster robustness
+against various unknown scenario conditions.Next, a disentangled OmniAttention
+is presented to explicitly model intra-motion, inter-motion, and cross-modality
+correlations from two inherently distinct but complementary sources: blurry
+images and partially disrupted events. Building on these reliable features, two
+interactive modules are designed to enhance motion-sensitive areas in blurry
+images and inject semantic context into incomplete event representations.
+Extensive experiments on synthetic and real-world datasets demonstrate RED
+consistently achieves state-of-the-art performance in both accuracy and
+robustness.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a robust event-guided motion deblurring network (RED) that uses disentangled representation and a robustness-oriented perturbation strategy to address the incompleteness of event streams, achieving state-of-the-art performance.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种鲁棒的事件引导的运动去模糊网络 (RED)，它使用解耦表示和面向鲁棒性的扰动策略来解决事件流的不完整性，实现了最先进的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2509.05554v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Yihong Leng, Siming Zheng, Jinwei Chen, Bo Li, Jiaojiao Li, Peng-Tao Jiang</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-09-09 03:31:47 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-09-09 03:32:58 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

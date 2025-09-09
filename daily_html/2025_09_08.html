@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - August 27, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - September 08, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>August 27, 2025</p>
+            <p>September 08, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,32 +215,28 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">RDDM: Practicing RAW Domain Diffusion Model for Real-world Image Restoration</h2>
+            <h2 class="paper-title">BranchGRPO: Stable and Efficient GRPO with Structured Branching in Diffusion Models</h2>
             
-            <p class="paper-summary">We present the RAW domain diffusion model (RDDM), an end-to-end diffusion
-model that restores photo-realistic images directly from the sensor RAW data.
-While recent sRGB-domain diffusion methods achieve impressive results, they are
-caught in a dilemma between high fidelity and realistic generation. As these
-models process lossy sRGB inputs and neglect the accessibility of the sensor
-RAW images in many scenarios, e.g., in image and video capturing in edge
-devices, resulting in sub-optimal performance. RDDM bypasses this limitation by
-directly restoring images in the RAW domain, replacing the conventional
-two-stage image signal processing (ISP) + IR pipeline. However, a simple
-adaptation of pre-trained diffusion models to the RAW domain confronts the
-out-of-distribution (OOD) issues. To this end, we propose: (1) a RAW-domain VAE
-(RVAE) learning optimal latent representations, (2) a differentiable Post Tone
-Processing (PTP) module enabling joint RAW and sRGB space optimization. To
-compensate for the deficiency in the dataset, we develop a scalable degradation
-pipeline synthesizing RAW LQ-HQ pairs from existing sRGB datasets for
-large-scale training. Furthermore, we devise a configurable multi-bayer (CMB)
-LoRA module handling diverse RAW patterns such as RGGB, BGGR, etc. Extensive
-experiments demonstrate RDDM's superiority over state-of-the-art sRGB diffusion
-methods, yielding higher fidelity results with fewer artifacts.</p>
+            <p class="paper-summary">Recent advancements in aligning image and video generative models via GRPO
+have achieved remarkable gains in enhancing human preference alignment.
+However, these methods still face high computational costs from on-policy
+rollouts and excessive SDE sampling steps, as well as training instability due
+to sparse rewards. In this paper, we propose BranchGRPO, a novel method that
+introduces a branch sampling policy updating the SDE sampling process. By
+sharing computation across common prefixes and pruning low-reward paths and
+redundant depths, BranchGRPO substantially lowers the per-update compute cost
+while maintaining or improving exploration diversity. This work makes three
+main contributions: (1) a branch sampling scheme that reduces rollout and
+training cost; (2) a tree-based advantage estimator incorporating dense
+process-level rewards; and (3) pruning strategies exploiting path and depth
+redundancy to accelerate convergence and boost performance. Experiments on
+image and video preference alignment show that BranchGRPO improves alignment
+scores by 16% over strong baselines, while cutting training time by 50%.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces RDDM, a RAW domain diffusion model for real-world image restoration, addressing limitations of sRGB-domain diffusion methods by directly processing sensor RAW data and employing a novel training pipeline with a RAW-domain VAE and differentiable Post Tone Processing module.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces BranchGRPO, a novel method for aligning image and video generative models via GRPO, which reduces computational costs and improves training stability through a branch sampling scheme, tree-based advantage estimator, and pruning strategies.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了RDDM，一种用于真实世界图像恢复的RAW域扩散模型。它通过直接处理传感器原始数据，并采用一种新颖的训练流程，包括RAW域VAE和可微分的后期色调处理模块，从而解决了sRGB域扩散方法的局限性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为BranchGRPO的新方法，用于通过GRPO对齐图像和视频生成模型，通过分支抽样方案、基于树的优势估计器和剪枝策略，降低了计算成本并提高了训练稳定性。</p>
             
 
             
@@ -250,8 +246,8 @@ methods, yielding higher fidelity results with fewer artifacts.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -266,8 +262,8 @@ methods, yielding higher fidelity results with fewer artifacts.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -311,18 +307,18 @@ methods, yielding higher fidelity results with fewer artifacts.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.19154v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.06040v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yan Chen, Yi Wen, Wei Li, Junchao Liu, Yong Guo, Jie Hu, Xinghao Chen</p>
+            <p class="paper-authors">Authors: Yuming Li, Yikai Wang, Yuying Zhu, Zhongyu Zhao, Ming Lu, Qi She, Shanghang Zhang</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-09-09 03:31:47 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-09-09 03:34:00 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

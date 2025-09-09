@@ -1,0 +1,96 @@
+[
+    {
+        "title": "Depth-Aware Super-Resolution via Distance-Adaptive Variational Formulation",
+        "summary": "Single image super-resolution traditionally assumes spatially-invariant\ndegradation models, yet real-world imaging systems exhibit complex\ndistance-dependent effects including atmospheric scattering, depth-of-field\nvariations, and perspective distortions. This fundamental limitation\nnecessitates spatially-adaptive reconstruction strategies that explicitly\nincorporate geometric scene understanding for optimal performance. We propose a\nrigorous variational framework that characterizes super-resolution as a\nspatially-varying inverse problem, formulating the degradation operator as a\npseudodifferential operator with distance-dependent spectral characteristics\nthat enable theoretical analysis of reconstruction limits across depth ranges.\nOur neural architecture implements discrete gradient flow dynamics through\ncascaded residual blocks with depth-conditional convolution kernels, ensuring\nconvergence to stationary points of the theoretical energy functional while\nincorporating learned distance-adaptive regularization terms that dynamically\nadjust smoothness constraints based on local geometric structure. Spectral\nconstraints derived from atmospheric scattering theory prevent bandwidth\nviolations and noise amplification in far-field regions, while adaptive kernel\ngeneration networks learn continuous mappings from depth to reconstruction\nfilters. Comprehensive evaluation across five benchmark datasets demonstrates\nstate-of-the-art performance, achieving 36.89/0.9516 and 30.54/0.8721 PSNR/SSIM\nat 2 and 4 scales on KITTI outdoor scenes, outperforming existing methods by\n0.44dB and 0.36dB respectively. This work establishes the first\ntheoretically-grounded distance-adaptive super-resolution framework and\ndemonstrates significant improvements on depth-variant scenarios while\nmaintaining competitive performance across traditional benchmarks.",
+        "url": "http://arxiv.org/abs/2509.05746v1",
+        "published_date": "2025-09-06T15:35:37+00:00",
+        "updated_date": "2025-09-06T15:35:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianhao Guo",
+            "Bingjie Lu",
+            "Feng Wang",
+            "Zhengyang Lu"
+        ],
+        "tldr": "This paper introduces a depth-aware super-resolution framework that uses a variational formulation with distance-dependent spectral characteristics and a neural architecture incorporating depth-conditional convolution kernels, achieving state-of-the-art results on depth-variant scenes.",
+        "tldr_zh": "本文提出了一种深度感知超分辨率框架，该框架使用具有距离相关光谱特性的变分公式和包含深度条件卷积核的神经架构，在深度变化场景中实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 7,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FAVAE-Effective Frequency Aware Latent Tokenizer",
+        "summary": "Latent generative models have shown remarkable progress in high-fidelity\nimage synthesis, typically using a two-stage training process that involves\ncompressing images into latent embeddings via learned tokenizers in the first\nstage. The quality of generation strongly depends on how expressive and\nwell-optimized these latent embeddings are. While various methods have been\nproposed to learn effective latent representations, the reconstructed images\noften lack realism, particularly in textured regions with sharp transitions,\ndue to loss of fine details governed by high frequencies. We conduct a detailed\nfrequency decomposition of existing state-of-the-art (SOTA) latent tokenizers\nand show that conventional objectives inherently prioritize low-frequency\nreconstruction, often at the expense of high-frequency fidelity. Our analysis\nreveals these latent tokenizers exhibit a bias toward low-frequency\ninformation, when jointly optimized, leading to over-smoothed outputs and\nvisual artifacts that diminish perceptual quality. To address this, we propose\na wavelet-based, frequency-aware variational autoencoder (FA-VAE) framework\nthat explicitly decouples the optimization of low- and high-frequency\ncomponents. This decoupling enables improved reconstruction of fine textures\nwhile preserving global structure. Our approach bridges the fidelity gap in\ncurrent latent tokenizers and emphasizes the importance of frequency-aware\noptimization for realistic image representation, with broader implications for\napplications in content creation, neural rendering, and medical imaging.",
+        "url": "http://arxiv.org/abs/2509.05441v1",
+        "published_date": "2025-09-05T18:49:08+00:00",
+        "updated_date": "2025-09-05T18:49:08+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Tejaswini Medi",
+            "Hsien-Yi Wang",
+            "Arianna Rampini",
+            "Margret Keuper"
+        ],
+        "tldr": "The paper introduces a frequency-aware variational autoencoder (FA-VAE) to address the low-frequency bias in existing latent tokenizers, leading to improved image generation with better texture and detail reconstruction.",
+        "tldr_zh": "该论文提出了一种频率感知变分自编码器（FA-VAE），旨在解决现有潜在分词器中的低频偏差问题，从而实现具有更好纹理和细节重建的改进图像生成。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "WIPUNet: A Physics-inspired Network with Weighted Inductive Biases for Image Denoising",
+        "summary": "In high-energy particle physics, collider measurements are contaminated by\n\"pileup\", overlapping soft interactions that obscure the hard-scatter signal of\ninterest. Dedicated subtraction strategies exploit physical priors such as\nconservation, locality, and isolation. Inspired by this analogy, we investigate\nhow such principles can inform image denoising by embedding physics-guided\ninductive biases into neural architectures. This paper is a proof of concept:\nrather than targeting state-of-the-art (SOTA) benchmarks, we ask whether\nphysics-inspired priors improve robustness under strong corruption.\n  We introduce a hierarchy of PU-inspired denoisers: a residual CNN with\nconservation constraints, its Gaussian-noise variants, and the Weighted\nInductive Pileup-physics-inspired U-Network for Denoising (WIPUNet), which\nintegrates these ideas into a UNet backbone. On CIFAR-10 with Gaussian noise at\n$\\sigma\\in\\{15,25,50,75,100\\}$, PU-inspired CNNs are competitive with standard\nbaselines, while WIPUNet shows a \\emph{widening margin} at higher noise.\nComplementary BSD500 experiments show the same trend, suggesting\nphysics-inspired priors provide stability where purely data-driven models\ndegrade. Our contributions are: (i) translating pileup-mitigation principles\ninto modular inductive biases; (ii) integrating them into UNet; and (iii)\ndemonstrating robustness gains at high noise without relying on heavy SOTA\nmachinery.",
+        "url": "http://arxiv.org/abs/2509.05662v1",
+        "published_date": "2025-09-06T09:43:55+00:00",
+        "updated_date": "2025-09-06T09:43:55+00:00",
+        "categories": [
+            "cs.CV",
+            "hep-ex"
+        ],
+        "authors": [
+            "Wasikul Islam"
+        ],
+        "tldr": "This paper introduces WIPUNet, a physics-inspired U-Net architecture for image denoising, demonstrating improved robustness to high levels of noise compared to standard baselines. It leverages principles from high-energy particle physics to inform inductive biases in the network.",
+        "tldr_zh": "本文介绍WIPUNet，一种受物理启发的U-Net架构，用于图像去噪，与标准基线相比，它在高噪声水平下表现出更高的鲁棒性。它利用高能粒子物理学的原理来为网络中的归纳偏置提供信息。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "RED: Robust Event-Guided Motion Deblurring with Modality-Specific Disentangled Representation",
+        "summary": "Event cameras provide sparse yet temporally high-temporal-resolution motion\ninformation, demonstrating great potential for motion deblurring. Existing\nmethods focus on cross-modal interaction, overlooking the inherent\nincompleteness of event streams, which arises from the trade-off between\nsensitivity and noise introduced by the thresholding mechanism of Dynamic\nVision Sensors (DVS). Such degradation compromises the integrity of motion\npriors and limits the effectiveness of event-guided deblurring. To tackle these\nchallenges, we propose a Robust Event-guided Deblurring (RED) network with\nmodality-specific disentangled representation. First, we introduce a\nRobustness-Oriented Perturbation Strategy (RPS) that applies random masking to\nevents, which exposes RED to incomplete patterns and then foster robustness\nagainst various unknown scenario conditions.Next, a disentangled OmniAttention\nis presented to explicitly model intra-motion, inter-motion, and cross-modality\ncorrelations from two inherently distinct but complementary sources: blurry\nimages and partially disrupted events. Building on these reliable features, two\ninteractive modules are designed to enhance motion-sensitive areas in blurry\nimages and inject semantic context into incomplete event representations.\nExtensive experiments on synthetic and real-world datasets demonstrate RED\nconsistently achieves state-of-the-art performance in both accuracy and\nrobustness.",
+        "url": "http://arxiv.org/abs/2509.05554v1",
+        "published_date": "2025-09-06T01:07:08+00:00",
+        "updated_date": "2025-09-06T01:07:08+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.IR"
+        ],
+        "authors": [
+            "Yihong Leng",
+            "Siming Zheng",
+            "Jinwei Chen",
+            "Bo Li",
+            "Jiaojiao Li",
+            "Peng-Tao Jiang"
+        ],
+        "tldr": "This paper introduces a robust event-guided motion deblurring network (RED) that uses disentangled representation and a robustness-oriented perturbation strategy to address the incompleteness of event streams, achieving state-of-the-art performance.",
+        "tldr_zh": "该论文介绍了一种鲁棒的事件引导的运动去模糊网络 (RED)，它使用解耦表示和面向鲁棒性的扰动策略来解决事件流的不完整性，实现了最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
