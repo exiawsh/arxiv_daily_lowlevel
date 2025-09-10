@@ -1,0 +1,125 @@
+[
+    {
+        "title": "Faster, Self-Supervised Super-Resolution for Anisotropic Multi-View MRI Using a Sparse Coordinate Loss",
+        "summary": "Acquiring images in high resolution is often a challenging task. Especially\nin the medical sector, image quality has to be balanced with acquisition time\nand patient comfort. To strike a compromise between scan time and quality for\nMagnetic Resonance (MR) imaging, two anisotropic scans with different\nlow-resolution (LR) orientations can be acquired. Typically, LR scans are\nanalyzed individually by radiologists, which is time consuming and can lead to\ninaccurate interpretation. To tackle this, we propose a novel approach for\nfusing two orthogonal anisotropic LR MR images to reconstruct anatomical\ndetails in a unified representation. Our multi-view neural network is trained\nin a self-supervised manner, without requiring corresponding high-resolution\n(HR) data. To optimize the model, we introduce a sparse coordinate-based loss,\nenabling the integration of LR images with arbitrary scaling. We evaluate our\nmethod on MR images from two independent cohorts. Our results demonstrate\ncomparable or even improved super-resolution (SR) performance compared to\nstate-of-the-art (SOTA) self-supervised SR methods for different upsampling\nscales. By combining a patient-agnostic offline and a patient-specific online\nphase, we achieve a substantial speed-up of up to ten times for\npatient-specific reconstruction while achieving similar or better SR quality.\nCode is available at https://github.com/MajaSchle/tripleSR.",
+        "url": "http://arxiv.org/abs/2509.07798v1",
+        "published_date": "2025-09-09T14:38:30+00:00",
+        "updated_date": "2025-09-09T14:38:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Maja Schlereth",
+            "Moritz Schillinger",
+            "Katharina Breininger"
+        ],
+        "tldr": "This paper introduces a self-supervised super-resolution method for anisotropic multi-view MRI using a sparse coordinate loss, achieving faster and comparable or better performance than existing methods.",
+        "tldr_zh": "本文提出了一种自监督的各向异性多视图MRI超分辨率方法，该方法使用稀疏坐标损失，与现有方法相比，实现了更快且相当或更好的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Reconstruction Alignment Improves Unified Multimodal Models",
+        "summary": "Unified multimodal models (UMMs) unify visual understanding and generation\nwithin a single architecture. However, conventional training relies on\nimage-text pairs (or sequences) whose captions are typically sparse and miss\nfine-grained visual details--even when they use hundreds of words to describe a\nsimple image. We introduce Reconstruction Alignment (RecA), a\nresource-efficient post-training method that leverages visual understanding\nencoder embeddings as dense \"text prompts,\" providing rich supervision without\ncaptions. Concretely, RecA conditions a UMM on its own visual understanding\nembeddings and optimizes it to reconstruct the input image with a\nself-supervised reconstruction loss, thereby realigning understanding and\ngeneration. Despite its simplicity, RecA is broadly applicable: across\nautoregressive, masked-autoregressive, and diffusion-based UMMs, it\nconsistently improves generation and editing fidelity. With only 27 GPU-hours,\npost-training with RecA substantially improves image generation performance on\nGenEval (0.73$\\rightarrow$0.90) and DPGBench (80.93$\\rightarrow$88.15), while\nalso boosting editing benchmarks (ImgEdit 3.38$\\rightarrow$3.75, GEdit\n6.94$\\rightarrow$7.25). Notably, RecA surpasses much larger open-source models\nand applies broadly across diverse UMM architectures, establishing it as an\nefficient and general post-training alignment strategy for UMMs",
+        "url": "http://arxiv.org/abs/2509.07295v1",
+        "published_date": "2025-09-08T23:59:32+00:00",
+        "updated_date": "2025-09-08T23:59:32+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Ji Xie",
+            "Trevor Darrell",
+            "Luke Zettlemoyer",
+            "XuDong Wang"
+        ],
+        "tldr": "The paper introduces Reconstruction Alignment (RecA), a resource-efficient post-training method for unified multimodal models (UMMs) that improves image generation and editing fidelity by leveraging visual understanding embeddings as dense text prompts.",
+        "tldr_zh": "该论文介绍了一种名为重建对齐（RecA）的资源高效的统一多模态模型（UMM）后训练方法，该方法通过利用视觉理解嵌入作为密集文本提示，提高了图像生成和编辑的保真度。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Evaluation of Machine Learning Reconstruction Techniques for Accelerated Brain MRI Scans",
+        "summary": "This retrospective-prospective study evaluated whether a deep learning-based\nMRI reconstruction algorithm can preserve diagnostic quality in brain MRI scans\naccelerated up to fourfold, using both public and prospective clinical data.\nThe study included 18 healthy volunteers (scans acquired at 3T, January\n2024-March 2025), as well as selected fastMRI public datasets with diverse\npathologies. Phase-encoding-undersampled 2D/3D T1, T2, and FLAIR sequences were\nreconstructed with DeepFoqus-Accelerate and compared with standard-of-care\n(SOC). Three board-certified neuroradiologists and two MRI technologists\nindependently reviewed 36 paired SOC/AI reconstructions from both datasets\nusing a 5-point Likert scale, while quantitative similarity was assessed for\n408 scans and 1224 datasets using Structural Similarity Index (SSIM), Peak\nSignal-to-Noise Ratio (PSNR), and Haar wavelet-based Perceptual Similarity\nIndex (HaarPSI). No AI-reconstructed scan scored below 3 (minimally\nacceptable), and 95% scored $\\geq 4$. Mean SSIM was 0.95 $\\pm$ 0.03 (90% cases\n>0.90), PSNR >41.0 dB, and HaarPSI >0.94. Inter-rater agreement was slight to\nmoderate. Rare artifacts did not affect diagnostic interpretation. These\nfindings demonstrate that DeepFoqus-Accelerate enables robust fourfold brain\nMRI acceleration with 75% reduced scan time, while preserving diagnostic image\nquality and supporting improved workflow efficiency.",
+        "url": "http://arxiv.org/abs/2509.07193v1",
+        "published_date": "2025-09-08T20:20:24+00:00",
+        "updated_date": "2025-09-08T20:20:24+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jonathan I. Mandel",
+            "Shivaprakash Hiremath",
+            "Hedyeh Keshtgar",
+            "Timothy Scholl",
+            "Sadegh Raeisi"
+        ],
+        "tldr": "This study demonstrates that a deep learning-based MRI reconstruction algorithm, DeepFoqus-Accelerate, allows for fourfold accelerated brain MRI scans while maintaining diagnostic image quality, potentially improving workflow efficiency. The evaluation included both public datasets and prospective clinical data with neuroradiologists and MRI technologists confirming the acceptable image quality.",
+        "tldr_zh": "本研究表明，基于深度学习的MRI重建算法DeepFoqus-Accelerate可在保持诊断图像质量的同时，将脑部MRI扫描加速四倍，从而可能提高工作流程效率。评估包括公共数据集和前瞻性临床数据，神经放射科医生和MRI技术人员确认了可接受的图像质量。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Feature Space Analysis by Guided Diffusion Model",
+        "summary": "One of the key issues in Deep Neural Networks (DNNs) is the black-box nature\nof their internal feature extraction process. Targeting vision-related domains,\nthis paper focuses on analysing the feature space of a DNN by proposing a\ndecoder that can generate images whose features are guaranteed to closely match\na user-specified feature. Owing to this guarantee that is missed in past\nstudies, our decoder allows us to evidence which of various attributes in an\nimage are encoded into a feature by the DNN, by generating images whose\nfeatures are in proximity to that feature. Our decoder is implemented as a\nguided diffusion model that guides the reverse image generation of a\npre-trained diffusion model to minimise the Euclidean distance between the\nfeature of a clean image estimated at each step and the user-specified feature.\nOne practical advantage of our decoder is that it can analyse feature spaces of\ndifferent DNNs with no additional training and run on a single COTS GPU. The\nexperimental results targeting CLIP's image encoder, ResNet-50 and vision\ntransformer demonstrate that images generated by our decoder have features\nremarkably similar to the user-specified ones and reveal valuable insights into\nthese DNNs' feature spaces.",
+        "url": "http://arxiv.org/abs/2509.07936v1",
+        "published_date": "2025-09-09T17:18:39+00:00",
+        "updated_date": "2025-09-09T17:18:39+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Kimiaki Shirahama",
+            "Miki Yanobu",
+            "Kaduki Yamashita",
+            "Miho Ohsaki"
+        ],
+        "tldr": "This paper proposes a guided diffusion model to analyze DNN feature spaces by generating images with features close to user-specified ones, revealing how attributes are encoded within the network. It requires no additional training and runs on a single GPU.",
+        "tldr_zh": "该论文提出了一种引导扩散模型，通过生成具有接近用户指定特征的图像来分析深度神经网络的特征空间，揭示了属性如何在网络中编码。它不需要额外的训练，并且可以在单个GPU上运行。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "XOCT: Enhancing OCT to OCTA Translation via Cross-Dimensional Supervised Multi-Scale Feature Learning",
+        "summary": "Optical Coherence Tomography Angiography (OCTA) and its derived en-face\nprojections provide high-resolution visualization of the retinal and choroidal\nvasculature, which is critical for the rapid and accurate diagnosis of retinal\ndiseases. However, acquiring high-quality OCTA images is challenging due to\nmotion sensitivity and the high costs associated with software modifications\nfor conventional OCT devices. Moreover, current deep learning methods for\nOCT-to-OCTA translation often overlook the vascular differences across retinal\nlayers and struggle to reconstruct the intricate, dense vascular details\nnecessary for reliable diagnosis. To overcome these limitations, we propose\nXOCT, a novel deep learning framework that integrates Cross-Dimensional\nSupervision (CDS) with a Multi-Scale Feature Fusion (MSFF) network for\nlayer-aware vascular reconstruction. Our CDS module leverages 2D layer-wise\nen-face projections, generated via segmentation-weighted z-axis averaging, as\nsupervisory signals to compel the network to learn distinct representations for\neach retinal layer through fine-grained, targeted guidance. Meanwhile, the MSFF\nmodule enhances vessel delineation through multi-scale feature extraction\ncombined with a channel reweighting strategy, effectively capturing vascular\ndetails at multiple spatial scales. Our experiments on the OCTA-500 dataset\ndemonstrate XOCT's improvements, especially for the en-face projections which\nare significant for clinical evaluation of retinal pathologies, underscoring\nits potential to enhance OCTA accessibility, reliability, and diagnostic value\nfor ophthalmic disease detection and monitoring. The code is available at\nhttps://github.com/uci-cbcl/XOCT.",
+        "url": "http://arxiv.org/abs/2509.07455v1",
+        "published_date": "2025-09-09T07:25:36+00:00",
+        "updated_date": "2025-09-09T07:25:36+00:00",
+        "categories": [
+            "cs.CV",
+            "J.3"
+        ],
+        "authors": [
+            "Pooya Khosravi",
+            "Kun Han",
+            "Anthony T. Wu",
+            "Arghavan Rezvani",
+            "Zexin Feng",
+            "Xiaohui Xie"
+        ],
+        "tldr": "The paper introduces XOCT, a deep learning framework for OCT to OCTA translation that utilizes cross-dimensional supervision and multi-scale feature fusion to improve layer-aware vascular reconstruction and vessel delineation, potentially enhancing OCTA accessibility and diagnostic value.",
+        "tldr_zh": "该论文介绍了 XOCT，一个用于 OCT 到 OCTA 转换的深度学习框架，它利用跨维度监督和多尺度特征融合来改进层感知血管重建和血管描绘，从而可能提高 OCTA 的可访问性和诊断价值。",
+        "relevance_score": 6,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
