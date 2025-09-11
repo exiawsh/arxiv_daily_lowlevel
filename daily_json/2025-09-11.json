@@ -1,0 +1,82 @@
+[
+    {
+        "title": "RewardDance: Reward Scaling in Visual Generation",
+        "summary": "Reward Models (RMs) are critical for improving generation models via\nReinforcement Learning (RL), yet the RM scaling paradigm in visual generation\nremains largely unexplored. It primarily due to fundamental limitations in\nexisting approaches: CLIP-based RMs suffer from architectural and input\nmodality constraints, while prevalent Bradley-Terry losses are fundamentally\nmisaligned with the next-token prediction mechanism of Vision-Language Models\n(VLMs), hindering effective scaling. More critically, the RLHF optimization\nprocess is plagued by Reward Hacking issue, where models exploit flaws in the\nreward signal without improving true quality. To address these challenges, we\nintroduce RewardDance, a scalable reward modeling framework that overcomes\nthese barriers through a novel generative reward paradigm. By reformulating the\nreward score as the model's probability of predicting a \"yes\" token, indicating\nthat the generated image outperforms a reference image according to specific\ncriteria, RewardDance intrinsically aligns reward objectives with VLM\narchitectures. This alignment unlocks scaling across two dimensions: (1) Model\nScaling: Systematic scaling of RMs up to 26 billion parameters; (2) Context\nScaling: Integration of task-specific instructions, reference examples, and\nchain-of-thought (CoT) reasoning. Extensive experiments demonstrate that\nRewardDance significantly surpasses state-of-the-art methods in text-to-image,\ntext-to-video, and image-to-video generation. Crucially, we resolve the\npersistent challenge of \"reward hacking\": Our large-scale RMs exhibit and\nmaintain high reward variance during RL fine-tuning, proving their resistance\nto hacking and ability to produce diverse, high-quality outputs. It greatly\nrelieves the mode collapse problem that plagues smaller models.",
+        "url": "http://arxiv.org/abs/2509.08826v1",
+        "published_date": "2025-09-10T17:59:31+00:00",
+        "updated_date": "2025-09-10T17:59:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jie Wu",
+            "Yu Gao",
+            "Zilyu Ye",
+            "Ming Li",
+            "Liang Li",
+            "Hanzhong Guo",
+            "Jie Liu",
+            "Zeyue Xue",
+            "Xiaoxia Hou",
+            "Wei Liu",
+            "Yan Zeng",
+            "Weilin Huang"
+        ],
+        "tldr": "The paper introduces RewardDance, a novel reward modeling framework for visual generation that addresses reward hacking and scaling limitations of existing methods by aligning reward objectives with VLMs. It demonstrates improved performance and resistance to reward hacking in text-to-image/video generation.",
+        "tldr_zh": "该论文介绍了一种新的视觉生成奖励建模框架 RewardDance，通过将奖励目标与 VLM 对齐，解决了现有方法的奖励黑客攻击和缩放限制。 实验证明，它在文本到图像/视频生成方面具有更高的性能并能抵抗奖励黑客攻击。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "First-order State Space Model for Lightweight Image Super-resolution",
+        "summary": "State space models (SSMs), particularly Mamba, have shown promise in NLP\ntasks and are increasingly applied to vision tasks. However, most Mamba-based\nvision models focus on network architecture and scan paths, with little\nattention to the SSM module. In order to explore the potential of SSMs, we\nmodified the calculation process of SSM without increasing the number of\nparameters to improve the performance on lightweight super-resolution tasks. In\nthis paper, we introduce the First-order State Space Model (FSSM) to improve\nthe original Mamba module, enhancing performance by incorporating token\ncorrelations. We apply a first-order hold condition in SSMs, derive the new\ndiscretized form, and analyzed cumulative error. Extensive experimental results\ndemonstrate that FSSM improves the performance of MambaIR on five benchmark\ndatasets without additionally increasing the number of parameters, and\nsurpasses current lightweight SR methods, achieving state-of-the-art results.",
+        "url": "http://arxiv.org/abs/2509.08458v1",
+        "published_date": "2025-09-10T10:00:43+00:00",
+        "updated_date": "2025-09-10T10:00:43+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yujie Zhu",
+            "Xinyi Zhang",
+            "Yekai Lu",
+            "Guang Yang",
+            "Faming Fang",
+            "Guixu Zhang"
+        ],
+        "tldr": "This paper introduces First-order State Space Model (FSSM) to improve Mamba module for lightweight image super-resolution by incorporating token correlations, achieving state-of-the-art results without increasing parameters.",
+        "tldr_zh": "本文提出了一阶状态空间模型（FSSM），通过结合token相关性来改进Mamba模块，用于轻量级图像超分辨率，并在不增加参数的情况下实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VRAE: Vertical Residual Autoencoder for License Plate Denoising and Deblurring",
+        "summary": "In real-world traffic surveillance, vehicle images captured under adverse\nweather, poor lighting, or high-speed motion often suffer from severe noise and\nblur. Such degradations significantly reduce the accuracy of license plate\nrecognition systems, especially when the plate occupies only a small region\nwithin the full vehicle image. Restoring these degraded images a fast realtime\nmanner is thus a crucial pre-processing step to enhance recognition\nperformance. In this work, we propose a Vertical Residual Autoencoder (VRAE)\narchitecture designed for the image enhancement task in traffic surveillance.\nThe method incorporates an enhancement strategy that employs an auxiliary\nblock, which injects input-aware features at each encoding stage to guide the\nrepresentation learning process, enabling better general information\npreservation throughout the network compared to conventional autoencoders.\nExperiments on a vehicle image dataset with visible license plates demonstrate\nthat our method consistently outperforms Autoencoder (AE), Generative\nAdversarial Network (GAN), and Flow-Based (FB) approaches. Compared with AE at\nthe same depth, it improves PSNR by about 20\\%, reduces NMSE by around 50\\%,\nand enhances SSIM by 1\\%, while requiring only a marginal increase of roughly\n1\\% in parameters.",
+        "url": "http://arxiv.org/abs/2509.08392v1",
+        "published_date": "2025-09-10T08:35:21+00:00",
+        "updated_date": "2025-09-10T08:35:21+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Cuong Nguyen",
+            "Dung T. Tran",
+            "Hong Nguyen",
+            "Xuan-Vu Phan",
+            "Nam-Phong Nguyen"
+        ],
+        "tldr": "The paper proposes a Vertical Residual Autoencoder (VRAE) for license plate denoising and deblurring in traffic surveillance, demonstrating improvements over AE, GAN, and Flow-Based approaches with minimal parameter increase.",
+        "tldr_zh": "该论文提出了一种用于交通监控中车牌去噪和去模糊的垂直残差自编码器（VRAE），结果表明，与AE、GAN和基于流的方法相比，该方法有所改进，且参数增加极少。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
