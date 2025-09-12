@@ -1,0 +1,117 @@
+[
+    {
+        "title": "Mechanistic Learning with Guided Diffusion Models to Predict Spatio-Temporal Brain Tumor Growth",
+        "summary": "Predicting the spatio-temporal progression of brain tumors is essential for\nguiding clinical decisions in neuro-oncology. We propose a hybrid mechanistic\nlearning framework that combines a mathematical tumor growth model with a\nguided denoising diffusion implicit model (DDIM) to synthesize anatomically\nfeasible future MRIs from preceding scans. The mechanistic model, formulated as\na system of ordinary differential equations, captures temporal tumor dynamics\nincluding radiotherapy effects and estimates future tumor burden. These\nestimates condition a gradient-guided DDIM, enabling image synthesis that\naligns with both predicted growth and patient anatomy. We train our model on\nthe BraTS adult and pediatric glioma datasets and evaluate on 60 axial slices\nof in-house longitudinal pediatric diffuse midline glioma (DMG) cases. Our\nframework generates realistic follow-up scans based on spatial similarity\nmetrics. It also introduces tumor growth probability maps, which capture both\nclinically relevant extent and directionality of tumor growth as shown by 95th\npercentile Hausdorff Distance. The method enables biologically informed image\ngeneration in data-limited scenarios, offering generative-space-time\npredictions that account for mechanistic priors.",
+        "url": "http://arxiv.org/abs/2509.09610v1",
+        "published_date": "2025-09-11T16:52:09+00:00",
+        "updated_date": "2025-09-11T16:52:09+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Daria Laslo",
+            "Efthymios Georgiou",
+            "Marius George Linguraru",
+            "Andreas Rauschecker",
+            "Sabine Muller",
+            "Catherine R. Jutzeler",
+            "Sarah Bruningk"
+        ],
+        "tldr": "This paper proposes a hybrid mechanistic learning framework combining a mathematical tumor growth model with a guided denoising diffusion implicit model (DDIM) to predict spatio-temporal brain tumor growth and generate realistic follow-up MRI scans, particularly useful in data-limited scenarios.",
+        "tldr_zh": "本文提出了一种混合机械学习框架，该框架结合了数学肿瘤生长模型和引导去噪扩散隐式模型（DDIM），以预测时空脑肿瘤生长并生成逼真的随访 MRI 扫描，尤其是在数据有限的情况下非常有用。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FS-Diff: Semantic guidance and clarity-aware simultaneous multimodal image fusion and super-resolution",
+        "summary": "As an influential information fusion and low-level vision technique, image\nfusion integrates complementary information from source images to yield an\ninformative fused image. A few attempts have been made in recent years to\njointly realize image fusion and super-resolution. However, in real-world\napplications such as military reconnaissance and long-range detection missions,\nthe target and background structures in multimodal images are easily corrupted,\nwith low resolution and weak semantic information, which leads to suboptimal\nresults in current fusion techniques. In response, we propose FS-Diff, a\nsemantic guidance and clarity-aware joint image fusion and super-resolution\nmethod. FS-Diff unifies image fusion and super-resolution as a conditional\ngeneration problem. It leverages semantic guidance from the proposed clarity\nsensing mechanism for adaptive low-resolution perception and cross-modal\nfeature extraction. Specifically, we initialize the desired fused result as\npure Gaussian noise and introduce the bidirectional feature Mamba to extract\nthe global features of the multimodal images. Moreover, utilizing the source\nimages and semantics as conditions, we implement a random iterative denoising\nprocess via a modified U-Net network. This network istrained for denoising at\nmultiple noise levels to produce high-resolution fusion results with\ncross-modal features and abundant semantic information. We also construct a\npowerful aerial view multiscene (AVMS) benchmark covering 600 pairs of images.\nExtensive joint image fusion and super-resolution experiments on six public and\nour AVMS datasets demonstrated that FS-Diff outperforms the state-of-the-art\nmethods at multiple magnifications and can recover richer details and semantics\nin the fused images. The code is available at\nhttps://github.com/XylonXu01/FS-Diff.",
+        "url": "http://arxiv.org/abs/2509.09427v1",
+        "published_date": "2025-09-11T13:10:22+00:00",
+        "updated_date": "2025-09-11T13:10:22+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuchan Jie",
+            "Yushen Xu",
+            "Xiaosong Li",
+            "Fuqiang Zhou",
+            "Jianming Lv",
+            "Huafeng Li"
+        ],
+        "tldr": "FS-Diff introduces a semantic guidance and clarity-aware diffusion-based method for joint image fusion and super-resolution, particularly effective for low-resolution and semantically weak multimodal images, and includes a new aerial view multiscene dataset (AVMS).",
+        "tldr_zh": "FS-Diff 提出了一种基于语义引导和清晰度感知的扩散方法，用于联合图像融合和超分辨率，尤其适用于低分辨率和语义弱的多模态图像，并包含一个新的航拍多场景数据集 (AVMS)。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Locality in Image Diffusion Models Emerges from Data Statistics",
+        "summary": "Among generative models, diffusion models are uniquely intriguing due to the\nexistence of a closed-form optimal minimizer of their training objective, often\nreferred to as the optimal denoiser. However, diffusion using this optimal\ndenoiser merely reproduces images in the training set and hence fails to\ncapture the behavior of deep diffusion models. Recent work has attempted to\ncharacterize this gap between the optimal denoiser and deep diffusion models,\nproposing analytical, training-free models that can generate images that\nresemble those generated by a trained UNet. The best-performing method\nhypothesizes that shift equivariance and locality inductive biases of\nconvolutional neural networks are the cause of the performance gap, hence\nincorporating these assumptions into its analytical model. In this work, we\npresent evidence that the locality in deep diffusion models emerges as a\nstatistical property of the image dataset, not due to the inductive bias of\nconvolutional neural networks. Specifically, we demonstrate that an optimal\nparametric linear denoiser exhibits similar locality properties to the deep\nneural denoisers. We further show, both theoretically and experimentally, that\nthis locality arises directly from the pixel correlations present in natural\nimage datasets. Finally, we use these insights to craft an analytical denoiser\nthat better matches scores predicted by a deep diffusion model than the prior\nexpert-crafted alternative.",
+        "url": "http://arxiv.org/abs/2509.09672v1",
+        "published_date": "2025-09-11T17:59:08+00:00",
+        "updated_date": "2025-09-11T17:59:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Artem Lukoianov",
+            "Chenyang Yuan",
+            "Justin Solomon",
+            "Vincent Sitzmann"
+        ],
+        "tldr": "This paper argues that locality in image diffusion models arises from the statistical properties of image datasets, specifically pixel correlations, rather than solely from the inductive bias of convolutional neural networks. They support this with theoretical and experimental evidence, and use these insights to create an improved analytical denoiser.",
+        "tldr_zh": "本文认为，图像扩散模型中的局部性源于图像数据集的统计特性（特别是像素相关性），而不是仅仅来自卷积神经网络的归纳偏置。他们通过理论和实验证据支持这一观点，并利用这些见解创建了一个改进的分析去噪器。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Plug-and-play Diffusion Models for Image Compressive Sensing with Data Consistency Projection",
+        "summary": "We explore the connection between Plug-and-Play (PnP) methods and Denoising\nDiffusion Implicit Models (DDIM) for solving ill-posed inverse problems, with a\nfocus on single-pixel imaging. We begin by identifying key distinctions between\nPnP and diffusion models-particularly in their denoising mechanisms and\nsampling procedures. By decoupling the diffusion process into three\ninterpretable stages: denoising, data consistency enforcement, and sampling, we\nprovide a unified framework that integrates learned priors with physical\nforward models in a principled manner. Building upon this insight, we propose a\nhybrid data-consistency module that linearly combines multiple PnP-style\nfidelity terms. This hybrid correction is applied directly to the denoised\nestimate, improving measurement consistency without disrupting the diffusion\nsampling trajectory. Experimental results on single-pixel imaging tasks\ndemonstrate that our method achieves better reconstruction quality.",
+        "url": "http://arxiv.org/abs/2509.09365v1",
+        "published_date": "2025-09-11T11:30:31+00:00",
+        "updated_date": "2025-09-11T11:30:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaodong Wang",
+            "Ping Wang",
+            "Zhangyuan Li",
+            "Xin Yuan"
+        ],
+        "tldr": "This paper proposes a hybrid data-consistency module within a diffusion model framework for solving ill-posed inverse problems like single-pixel imaging, achieving better reconstruction quality by combining learned priors with physical forward models.",
+        "tldr_zh": "本文提出了一种混合数据一致性模块，该模块位于扩散模型框架中，用于解决单像素成像等不适定逆问题。该方法通过将学习到的先验知识与物理前向模型相结合，实现了更好的重建质量。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Integrating Anatomical Priors into a Causal Diffusion Model",
+        "summary": "3D brain MRI studies often examine subtle morphometric differences between\ncohorts that are hard to detect visually. Given the high cost of MRI\nacquisition, these studies could greatly benefit from image syntheses,\nparticularly counterfactual image generation, as seen in other domains, such as\ncomputer vision. However, counterfactual models struggle to produce\nanatomically plausible MRIs due to the lack of explicit inductive biases to\npreserve fine-grained anatomical details. This shortcoming arises from the\ntraining of the models aiming to optimize for the overall appearance of the\nimages (e.g., via cross-entropy) rather than preserving subtle, yet medically\nrelevant, local variations across subjects. To preserve subtle variations, we\npropose to explicitly integrate anatomical constraints on a voxel-level as\nprior into a generative diffusion framework. Called Probabilistic Causal Graph\nModel (PCGM), the approach captures anatomical constraints via a probabilistic\ngraph module and translates those constraints into spatial binary masks of\nregions where subtle variations occur. The masks (encoded by a 3D extension of\nControlNet) constrain a novel counterfactual denoising UNet, whose encodings\nare then transferred into high-quality brain MRIs via our 3D diffusion decoder.\nExtensive experiments on multiple datasets demonstrate that PCGM generates\nstructural brain MRIs of higher quality than several baseline approaches.\nFurthermore, we show for the first time that brain measurements extracted from\ncounterfactuals (generated by PCGM) replicate the subtle effects of a disease\non cortical brain regions previously reported in the neuroscience literature.\nThis achievement is an important milestone in the use of synthetic MRIs in\nstudies investigating subtle morphological differences.",
+        "url": "http://arxiv.org/abs/2509.09054v1",
+        "published_date": "2025-09-10T23:22:05+00:00",
+        "updated_date": "2025-09-10T23:22:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Binxu Li",
+            "Wei Peng",
+            "Mingjie Li",
+            "Ehsan Adeli",
+            "Kilian M. Pohl"
+        ]
+    }
+]

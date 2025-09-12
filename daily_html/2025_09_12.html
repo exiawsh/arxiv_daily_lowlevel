@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - September 05, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - September 12, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>September 05, 2025</p>
+            <p>September 12, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,30 +215,148 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Transition Models: Rethinking the Generative Learning Objective</h2>
+            <h2 class="paper-title">Mechanistic Learning with Guided Diffusion Models to Predict Spatio-Temporal Brain Tumor Growth</h2>
             
-            <p class="paper-summary">A fundamental dilemma in generative modeling persists: iterative diffusion
-models achieve outstanding fidelity, but at a significant computational cost,
-while efficient few-step alternatives are constrained by a hard quality
-ceiling. This conflict between generation steps and output quality arises from
-restrictive training objectives that focus exclusively on either infinitesimal
-dynamics (PF-ODEs) or direct endpoint prediction. We address this challenge by
-introducing an exact, continuous-time dynamics equation that analytically
-defines state transitions across any finite time interval. This leads to a
-novel generative paradigm, Transition Models (TiM), which adapt to
-arbitrary-step transitions, seamlessly traversing the generative trajectory
-from single leaps to fine-grained refinement with more steps. Despite having
-only 865M parameters, TiM achieves state-of-the-art performance, surpassing
-leading models such as SD3.5 (8B parameters) and FLUX.1 (12B parameters) across
-all evaluated step counts. Importantly, unlike previous few-step generators,
-TiM demonstrates monotonic quality improvement as the sampling budget
-increases. Additionally, when employing our native-resolution strategy, TiM
-delivers exceptional fidelity at resolutions up to 4096x4096.</p>
+            <p class="paper-summary">Predicting the spatio-temporal progression of brain tumors is essential for
+guiding clinical decisions in neuro-oncology. We propose a hybrid mechanistic
+learning framework that combines a mathematical tumor growth model with a
+guided denoising diffusion implicit model (DDIM) to synthesize anatomically
+feasible future MRIs from preceding scans. The mechanistic model, formulated as
+a system of ordinary differential equations, captures temporal tumor dynamics
+including radiotherapy effects and estimates future tumor burden. These
+estimates condition a gradient-guided DDIM, enabling image synthesis that
+aligns with both predicted growth and patient anatomy. We train our model on
+the BraTS adult and pediatric glioma datasets and evaluate on 60 axial slices
+of in-house longitudinal pediatric diffuse midline glioma (DMG) cases. Our
+framework generates realistic follow-up scans based on spatial similarity
+metrics. It also introduces tumor growth probability maps, which capture both
+clinically relevant extent and directionality of tumor growth as shown by 95th
+percentile Hausdorff Distance. The method enables biologically informed image
+generation in data-limited scenarios, offering generative-space-time
+predictions that account for mechanistic priors.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Transition Models (TiM), a new generative modeling paradigm that achieves state-of-the-art image generation performance with fewer parameters and improves with increased sampling steps, outperforming existing models in both quality and efficiency.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a hybrid mechanistic learning framework combining a mathematical tumor growth model with a guided denoising diffusion implicit model (DDIM) to predict spatio-temporal brain tumor growth and generate realistic follow-up MRI scans, particularly useful in data-limited scenarios.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了Transition Models (TiM)，一种新的生成模型范式，它以更少的参数实现了最先进的图像生成性能，并随着采样步骤的增加而改进，在质量和效率上都优于现有模型。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种混合机械学习框架，该框架结合了数学肿瘤生长模型和引导去噪扩散隐式模型（DDIM），以预测时空脑肿瘤生长并生成逼真的随访 MRI 扫描，尤其是在数据有限的情况下非常有用。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2509.09610v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Daria Laslo, Efthymios Georgiou, Marius George Linguraru, Andreas Rauschecker, Sabine Muller, Catherine R. Jutzeler, Sarah Bruningk</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">FS-Diff: Semantic guidance and clarity-aware simultaneous multimodal image fusion and super-resolution</h2>
+            
+            <p class="paper-summary">As an influential information fusion and low-level vision technique, image
+fusion integrates complementary information from source images to yield an
+informative fused image. A few attempts have been made in recent years to
+jointly realize image fusion and super-resolution. However, in real-world
+applications such as military reconnaissance and long-range detection missions,
+the target and background structures in multimodal images are easily corrupted,
+with low resolution and weak semantic information, which leads to suboptimal
+results in current fusion techniques. In response, we propose FS-Diff, a
+semantic guidance and clarity-aware joint image fusion and super-resolution
+method. FS-Diff unifies image fusion and super-resolution as a conditional
+generation problem. It leverages semantic guidance from the proposed clarity
+sensing mechanism for adaptive low-resolution perception and cross-modal
+feature extraction. Specifically, we initialize the desired fused result as
+pure Gaussian noise and introduce the bidirectional feature Mamba to extract
+the global features of the multimodal images. Moreover, utilizing the source
+images and semantics as conditions, we implement a random iterative denoising
+process via a modified U-Net network. This network istrained for denoising at
+multiple noise levels to produce high-resolution fusion results with
+cross-modal features and abundant semantic information. We also construct a
+powerful aerial view multiscene (AVMS) benchmark covering 600 pairs of images.
+Extensive joint image fusion and super-resolution experiments on six public and
+our AVMS datasets demonstrated that FS-Diff outperforms the state-of-the-art
+methods at multiple magnifications and can recover richer details and semantics
+in the fused images. The code is available at
+https://github.com/XylonXu01/FS-Diff.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: FS-Diff introduces a semantic guidance and clarity-aware diffusion-based method for joint image fusion and super-resolution, particularly effective for low-resolution and semantically weak multimodal images, and includes a new aerial view multiscene dataset (AVMS).</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: FS-Diff 提出了一种基于语义引导和清晰度感知的扩散方法，用于联合图像融合和超分辨率，尤其适用于低分辨率和语义弱的多模态图像，并包含一个新的航拍多场景数据集 (AVMS)。</p>
             
 
             
@@ -256,8 +374,8 @@ delivers exceptional fidelity at resolutions up to 4096x4096.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -272,8 +390,8 @@ delivers exceptional fidelity at resolutions up to 4096x4096.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -288,6 +406,115 @@ delivers exceptional fidelity at resolutions up to 4096x4096.</p>
                     
                         <i class="fas fa-star"></i>
                     
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2509.09427v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Yuchan Jie, Yushen Xu, Xiaosong Li, Fuqiang Zhou, Jianming Lv, Huafeng Li</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.1, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Locality in Image Diffusion Models Emerges from Data Statistics</h2>
+            
+            <p class="paper-summary">Among generative models, diffusion models are uniquely intriguing due to the
+existence of a closed-form optimal minimizer of their training objective, often
+referred to as the optimal denoiser. However, diffusion using this optimal
+denoiser merely reproduces images in the training set and hence fails to
+capture the behavior of deep diffusion models. Recent work has attempted to
+characterize this gap between the optimal denoiser and deep diffusion models,
+proposing analytical, training-free models that can generate images that
+resemble those generated by a trained UNet. The best-performing method
+hypothesizes that shift equivariance and locality inductive biases of
+convolutional neural networks are the cause of the performance gap, hence
+incorporating these assumptions into its analytical model. In this work, we
+present evidence that the locality in deep diffusion models emerges as a
+statistical property of the image dataset, not due to the inductive bias of
+convolutional neural networks. Specifically, we demonstrate that an optimal
+parametric linear denoiser exhibits similar locality properties to the deep
+neural denoisers. We further show, both theoretically and experimentally, that
+this locality arises directly from the pixel correlations present in natural
+image datasets. Finally, we use these insights to craft an analytical denoiser
+that better matches scores predicted by a deep diffusion model than the prior
+expert-crafted alternative.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper argues that locality in image diffusion models arises from the statistical properties of image datasets, specifically pixel correlations, rather than solely from the inductive bias of convolutional neural networks. They support this with theoretical and experimental evidence, and use these insights to create an improved analytical denoiser.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文认为，图像扩散模型中的局部性源于图像数据集的统计特性（特别是像素相关性），而不是仅仅来自卷积神经网络的归纳偏置。他们通过理论和实验证据支持这一观点，并利用这些见解创建了一个改进的分析去噪器。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
                 
                     
                         <i class="fas fa-star"></i>
@@ -305,242 +532,19 @@ delivers exceptional fidelity at resolutions up to 4096x4096.</p>
                         <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2509.04394v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Zidong Wang, Yiyuan Zhang, Xiaoyu Yue, Xiangyu Yue, Yangguang Li, Wanli Ouyang, Lei Bai</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">TauGenNet: Plasma-Driven Tau PET Image Synthesis via Text-Guided 3D Diffusion Models</h2>
-            
-            <p class="paper-summary">Accurate quantification of tau pathology via tau positron emission tomography
-(PET) scan is crucial for diagnosing and monitoring Alzheimer's disease (AD).
-However, the high cost and limited availability of tau PET restrict its
-widespread use. In contrast, structural magnetic resonance imaging (MRI) and
-plasma-based biomarkers provide non-invasive and widely available complementary
-information related to brain anatomy and disease progression. In this work, we
-propose a text-guided 3D diffusion model for 3D tau PET image synthesis,
-leveraging multimodal conditions from both structural MRI and plasma
-measurement. Specifically, the textual prompt is from the plasma p-tau217
-measurement, which is a key indicator of AD progression, while MRI provides
-anatomical structure constraints. The proposed framework is trained and
-evaluated using clinical AV1451 tau PET data from the Alzheimer's Disease
-Neuroimaging Initiative (ADNI) database. Experimental results demonstrate that
-our approach can generate realistic, clinically meaningful 3D tau PET across a
-range of disease stages. The proposed framework can help perform tau PET data
-augmentation under different settings, provide a non-invasive, cost-effective
-alternative for visualizing tau pathology, and support the simulation of
-disease progression under varying plasma biomarker levels and cognitive
-conditions.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a text-guided 3D diffusion model, TauGenNet, to synthesize tau PET images from structural MRI and plasma p-tau217 measurements, addressing the limited availability and high cost of tau PET scans for Alzheimer's disease diagnosis.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种名为TauGenNet的文本引导3D扩散模型，通过结构MRI和血浆p-tau217测量合成tau PET图像，从而解决阿尔茨海默病诊断中tau PET扫描可用性有限且成本高昂的问题。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.04269v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.09672v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yuxin Gong, Se-in Jang, Wei Shao, Yi Su, Kuang Gong</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.1, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Hyper Diffusion Avatars: Dynamic Human Avatar Generation using Network Weight Space Diffusion</h2>
-            
-            <p class="paper-summary">Creating human avatars is a highly desirable yet challenging task. Recent
-advancements in radiance field rendering have achieved unprecedented
-photorealism and real-time performance for personalized dynamic human avatars.
-However, these approaches are typically limited to person-specific rendering
-models trained on multi-view video data for a single individual, limiting their
-ability to generalize across different identities. On the other hand,
-generative approaches leveraging prior knowledge from pre-trained 2D diffusion
-models can produce cartoonish, static human avatars, which are animated through
-simple skeleton-based articulation. Therefore, the avatars generated by these
-methods suffer from lower rendering quality compared to person-specific
-rendering methods and fail to capture pose-dependent deformations such as cloth
-wrinkles. In this paper, we propose a novel approach that unites the strengths
-of person-specific rendering and diffusion-based generative modeling to enable
-dynamic human avatar generation with both high photorealism and realistic
-pose-dependent deformations. Our method follows a two-stage pipeline: first, we
-optimize a set of person-specific UNets, with each network representing a
-dynamic human avatar that captures intricate pose-dependent deformations. In
-the second stage, we train a hyper diffusion model over the optimized network
-weights. During inference, our method generates network weights for real-time,
-controllable rendering of dynamic human avatars. Using a large-scale,
-cross-identity, multi-view video dataset, we demonstrate that our approach
-outperforms state-of-the-art human avatar generation methods.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a novel approach for generating dynamic human avatars by combining person-specific rendering with diffusion-based generative modeling, achieving both high photorealism and realistic pose-dependent deformations using a hyper diffusion model trained on network weights.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种生成动态人体头像的新方法，该方法结合了特定于人物的渲染和基于扩散的生成建模，通过在网络权重上训练的超扩散模型，实现了高照片真实感和逼真姿势相关变形。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2509.04145v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Dongliang Cao, Guoxing Sun, Marc Habermann, Florian Bernard</p>
+            <p class="paper-authors">Authors: Artem Lukoianov, Chenyang Yuan, Justin Solomon, Vincent Sitzmann</p>
             
         </motion.div>
         
@@ -552,32 +556,26 @@ outperforms state-of-the-art human avatar generation methods.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MEPG:Multi-Expert Planning and Generation for Compositionally-Rich Image Generation</h2>
+            <h2 class="paper-title">Plug-and-play Diffusion Models for Image Compressive Sensing with Data Consistency Projection</h2>
             
-            <p class="paper-summary">Text-to-image diffusion models have achieved remarkable image quality, but
-they still struggle with complex, multiele ment prompts, and limited stylistic
-diversity. To address these limitations, we propose a Multi-Expert Planning and
-Gen eration Framework (MEPG) that synergistically integrates position- and
-style-aware large language models (LLMs) with spatial-semantic expert modules.
-The framework comprises two core components: (1) a Position-Style-Aware (PSA)
-module that utilizes a supervised fine-tuned LLM to decom pose input prompts
-into precise spatial coordinates and style encoded semantic instructions; and
-(2) a Multi-Expert Dif fusion (MED) module that implements cross-region genera
-tion through dynamic expert routing across both local regions and global areas.
-During the generation process for each lo cal region, specialized models (e.g.,
-realism experts, styliza tion specialists) are selectively activated for each
-spatial par tition via attention-based gating mechanisms. The architec ture
-supports lightweight integration and replacement of ex pert models, providing
-strong extensibility. Additionally, an interactive interface enables real-time
-spatial layout editing and per-region style selection from a portfolio of
-experts. Ex periments show that MEPG significantly outperforms base line models
-with the same backbone in both image quality
-  and style diversity.</p>
+            <p class="paper-summary">We explore the connection between Plug-and-Play (PnP) methods and Denoising
+Diffusion Implicit Models (DDIM) for solving ill-posed inverse problems, with a
+focus on single-pixel imaging. We begin by identifying key distinctions between
+PnP and diffusion models-particularly in their denoising mechanisms and
+sampling procedures. By decoupling the diffusion process into three
+interpretable stages: denoising, data consistency enforcement, and sampling, we
+provide a unified framework that integrates learned priors with physical
+forward models in a principled manner. Building upon this insight, we propose a
+hybrid data-consistency module that linearly combines multiple PnP-style
+fidelity terms. This hybrid correction is applied directly to the denoised
+estimate, improving measurement consistency without disrupting the diffusion
+sampling trajectory. Experimental results on single-pixel imaging tasks
+demonstrate that our method achieves better reconstruction quality.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a Multi-Expert Planning and Generation (MEPG) framework that uses LLMs and specialized diffusion models for compositionally-rich image generation, improving image quality and style diversity, with an interactive editing interface.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a hybrid data-consistency module within a diffusion model framework for solving ill-posed inverse problems like single-pixel imaging, achieving better reconstruction quality by combining learned priors with physical forward models.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一个多专家规划和生成（MEPG）框架，该框架利用大型语言模型和专门的扩散模型进行构图丰富的图像生成，从而提高图像质量和风格多样性，并提供交互式编辑界面。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种混合数据一致性模块，该模块位于扩散模型框架中，用于解决单像素成像等不适定逆问题。该方法通过将学习到的先验知识与物理前向模型相结合，实现了更好的重建质量。</p>
             
 
             
@@ -587,16 +585,16 @@ with the same backbone in both image quality
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -611,8 +609,8 @@ with the same backbone in both image quality
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -637,22 +635,22 @@ with the same backbone in both image quality
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.04126v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.09365v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yuan Zhao, Liu Lin</p>
+            <p class="paper-authors">Authors: Xiaodong Wang, Ping Wang, Zhangyuan Li, Xin Yuan</p>
             
         </motion.div>
         
@@ -664,119 +662,53 @@ with the same backbone in both image quality
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">EGTM: Event-guided Efficient Turbulence Mitigation</h2>
+            <h2 class="paper-title">Integrating Anatomical Priors into a Causal Diffusion Model</h2>
             
-            <p class="paper-summary">Turbulence mitigation (TM) aims to remove the stochastic distortions and
-blurs introduced by atmospheric turbulence into frame cameras. Existing
-state-of-the-art deep-learning TM methods extract turbulence cues from multiple
-degraded frames to find the so-called "lucky'', not distorted patch, for "lucky
-fusion''. However, it requires high-capacity network to learn from
-coarse-grained turbulence dynamics between synchronous frames with limited
-frame-rate, thus fall short in computational and storage efficiency. Event
-cameras, with microsecond-level temporal resolution, have the potential to
-fundamentally address this bottleneck with efficient sparse and asynchronous
-imaging mechanism. In light of this, we (i) present the fundamental
-\textbf{``event-lucky insight''} to reveal the correlation between turbulence
-distortions and inverse spatiotemporal distribution of event streams. Then,
-build upon this insight, we (ii) propose a novel EGTM framework that extracts
-pixel-level reliable turbulence-free guidance from the explicit but noisy
-turbulent events for temporal lucky fusion. Moreover, we (iii) build the first
-turbulence data acquisition system to contribute the first real-world
-event-driven TM dataset. Extensive experimental results demonstrate that our
-approach significantly surpass the existing SOTA TM method by 710 times, 214
-times and 224 times in model size, inference latency and model complexity
-respectively, while achieving the state-of-the-art in restoration quality
-(+0.94 PSNR and +0.08 SSIM) on our real-world EGTM dataset. This demonstrating
-the great efficiency merit of introducing event modality into TM task. Demo
-code and data have been uploaded in supplementary material and will be released
-once accepted.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces EGTM, a novel event-guided turbulence mitigation framework that leverages event cameras for efficient and high-quality image restoration, achieving significant improvements in speed, model size, and performance compared to existing methods.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了 EGTM，一种新颖的事件引导的湍流缓解框架，该框架利用事件相机进行高效和高质量的图像恢复，与现有方法相比，在速度、模型大小和性能方面取得了显著改进。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
+            <p class="paper-summary">3D brain MRI studies often examine subtle morphometric differences between
+cohorts that are hard to detect visually. Given the high cost of MRI
+acquisition, these studies could greatly benefit from image syntheses,
+particularly counterfactual image generation, as seen in other domains, such as
+computer vision. However, counterfactual models struggle to produce
+anatomically plausible MRIs due to the lack of explicit inductive biases to
+preserve fine-grained anatomical details. This shortcoming arises from the
+training of the models aiming to optimize for the overall appearance of the
+images (e.g., via cross-entropy) rather than preserving subtle, yet medically
+relevant, local variations across subjects. To preserve subtle variations, we
+propose to explicitly integrate anatomical constraints on a voxel-level as
+prior into a generative diffusion framework. Called Probabilistic Causal Graph
+Model (PCGM), the approach captures anatomical constraints via a probabilistic
+graph module and translates those constraints into spatial binary masks of
+regions where subtle variations occur. The masks (encoded by a 3D extension of
+ControlNet) constrain a novel counterfactual denoising UNet, whose encodings
+are then transferred into high-quality brain MRIs via our 3D diffusion decoder.
+Extensive experiments on multiple datasets demonstrate that PCGM generates
+structural brain MRIs of higher quality than several baseline approaches.
+Furthermore, we show for the first time that brain measurements extracted from
+counterfactuals (generated by PCGM) replicate the subtle effects of a disease
+on cortical brain regions previously reported in the neuroscience literature.
+This achievement is an important milestone in the use of synthetic MRIs in
+studies investigating subtle morphological differences.</p>
             
             
 
             
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
+            
             
 
-            <a href="http://arxiv.org/abs/2509.03808v1" target="_blank" class="paper-link">
+            
+
+            <a href="http://arxiv.org/abs/2509.09054v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Huanan Li, Rui Fan, Juntao Guan, Weidong Hao, Lai Rui, Tong Wu, Yikai Wang, Lin Gu</p>
+            <p class="paper-authors">Authors: Binxu Li, Wei Peng, Mingjie Li, Ehsan Adeli, Kilian M. Pohl</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-09-12 03:24:23 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-09-12 03:26:39 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
