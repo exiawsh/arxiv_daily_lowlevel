@@ -1,0 +1,81 @@
+[
+    {
+        "title": "Double Helix Diffusion for Cross-Domain Anomaly Image Generation",
+        "summary": "Visual anomaly inspection is critical in manufacturing, yet hampered by the\nscarcity of real anomaly samples for training robust detectors. Synthetic data\ngeneration presents a viable strategy for data augmentation; however, current\nmethods remain constrained by two principal limitations: 1) the generation of\nanomalies that are structurally inconsistent with the normal background, and 2)\nthe presence of undesirable feature entanglement between synthesized images and\ntheir corresponding annotation masks, which undermines the perceptual realism\nof the output. This paper introduces Double Helix Diffusion (DH-Diff), a novel\ncross-domain generative framework designed to simultaneously synthesize\nhigh-fidelity anomaly images and their pixel-level annotation masks, explicitly\naddressing these challenges. DH-Diff employs a unique architecture inspired by\na double helix, cycling through distinct modules for feature separation,\nconnection, and merging. Specifically, a domain-decoupled attention mechanism\nmitigates feature entanglement by enhancing image and annotation features\nindependently, and meanwhile a semantic score map alignment module ensures\nstructural authenticity by coherently integrating anomaly foregrounds. DH-Diff\noffers flexible control via text prompts and optional graphical guidance.\nExtensive experiments demonstrate that DH-Diff significantly outperforms\nstate-of-the-art methods in diversity and authenticity, leading to significant\nimprovements in downstream anomaly detection performance.",
+        "url": "http://arxiv.org/abs/2509.12787v1",
+        "published_date": "2025-09-16T08:06:07+00:00",
+        "updated_date": "2025-09-16T08:06:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Linchun Wu",
+            "Qin Zou",
+            "Xianbiao Qi",
+            "Bo Du",
+            "Zhongyuan Wang",
+            "Qingquan Li"
+        ],
+        "tldr": "This paper introduces Double Helix Diffusion (DH-Diff), a novel cross-domain diffusion framework that generates high-fidelity anomaly images and their pixel-level annotation masks, addressing limitations in current anomaly generation methods through feature separation and structural authenticity.",
+        "tldr_zh": "本文介绍了双螺旋扩散 (DH-Diff)，一种新颖的跨域扩散框架，可生成高保真异常图像及其像素级注释掩码，通过特征分离和结构真实性解决了当前异常生成方法的局限性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MSDNet: Efficient 4D Radar Super-Resolution via Multi-Stage Distillation",
+        "summary": "4D radar super-resolution, which aims to reconstruct sparse and noisy point\nclouds into dense and geometrically consistent representations, is a\nfoundational problem in autonomous perception. However, existing methods often\nsuffer from high training cost or rely on complex diffusion-based sampling,\nresulting in high inference latency and poor generalization, making it\ndifficult to balance accuracy and efficiency. To address these limitations, we\npropose MSDNet, a multi-stage distillation framework that efficiently transfers\ndense LiDAR priors to 4D radar features to achieve both high reconstruction\nquality and computational efficiency. The first stage performs\nreconstruction-guided feature distillation, aligning and densifying the\nstudent's features through feature reconstruction. In the second stage, we\npropose diffusion-guided feature distillation, which treats the stage-one\ndistilled features as a noisy version of the teacher's representations and\nrefines them via a lightweight diffusion network. Furthermore, we introduce a\nnoise adapter that adaptively aligns the noise level of the feature with a\npredefined diffusion timestep, enabling a more precise denoising. Extensive\nexperiments on the VoD and in-house datasets demonstrate that MSDNet achieves\nboth high-fidelity reconstruction and low-latency inference in the task of 4D\nradar point cloud super-resolution, and consistently improves performance on\ndownstream tasks. The code will be publicly available upon publication.",
+        "url": "http://arxiv.org/abs/2509.13149v1",
+        "published_date": "2025-09-16T15:05:11+00:00",
+        "updated_date": "2025-09-16T15:05:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Minqing Huang",
+            "Shouyi Lu",
+            "Boyuan Zheng",
+            "Ziyao Li",
+            "Xiao Tang",
+            "Guirong Zhuo"
+        ],
+        "tldr": "The paper introduces MSDNet, a multi-stage distillation framework to improve the accuracy and efficiency of 4D radar super-resolution using LiDAR priors, achieving both high reconstruction quality and low latency.",
+        "tldr_zh": "该论文介绍了MSDNet，一个多阶段蒸馏框架，旨在利用LiDAR先验提高4D雷达超分辨率的精度和效率，从而实现高质量的重建和低延迟的推理。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Image Tokenizer Needs Post-Training",
+        "summary": "Recent image generative models typically capture the image distribution in a\npre-constructed latent space, relying on a frozen image tokenizer. However,\nthere exists a significant discrepancy between the reconstruction and\ngeneration distribution, where current tokenizers only prioritize the\nreconstruction task that happens before generative training without considering\nthe generation errors during sampling. In this paper, we comprehensively\nanalyze the reason for this discrepancy in a discrete latent space, and, from\nwhich, we propose a novel tokenizer training scheme including both\nmain-training and post-training, focusing on improving latent space\nconstruction and decoding respectively. During the main training, a latent\nperturbation strategy is proposed to simulate sampling noises, \\ie, the\nunexpected tokens generated in generative inference. Specifically, we propose a\nplug-and-play tokenizer training scheme, which significantly enhances the\nrobustness of tokenizer, thus boosting the generation quality and convergence\nspeed, and a novel tokenizer evaluation metric, \\ie, pFID, which successfully\ncorrelates the tokenizer performance to generation quality. During\npost-training, we further optimize the tokenizer decoder regarding a\nwell-trained generative model to mitigate the distribution difference between\ngenerated and reconstructed tokens. With a $\\sim$400M generator, a discrete\ntokenizer trained with our proposed main training achieves a notable 1.60 gFID\nand further obtains 1.36 gFID with the additional post-training. Further\nexperiments are conducted to broadly validate the effectiveness of our\npost-training strategy on off-the-shelf discrete and continuous tokenizers,\ncoupled with autoregressive and diffusion-based generators.",
+        "url": "http://arxiv.org/abs/2509.12474v1",
+        "published_date": "2025-09-15T21:38:03+00:00",
+        "updated_date": "2025-09-15T21:38:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kai Qiu",
+            "Xiang Li",
+            "Hao Chen",
+            "Jason Kuen",
+            "Xiaohao Xu",
+            "Jiuxiang Gu",
+            "Yinyi Luo",
+            "Bhiksha Raj",
+            "Zhe Lin",
+            "Marios Savvides"
+        ],
+        "tldr": "The paper introduces a novel tokenizer training scheme with main-training and post-training to improve image generation quality by addressing the discrepancy between reconstruction and generation distributions in discrete latent spaces.",
+        "tldr_zh": "该论文提出了一种新颖的tokenizer训练方案，包括主训练和后训练，通过解决离散潜在空间中重建和生成分布之间的差异，来提高图像生成质量。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
