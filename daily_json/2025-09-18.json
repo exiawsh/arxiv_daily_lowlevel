@@ -1,0 +1,84 @@
+[
+    {
+        "title": "Generative AI for Misalignment-Resistant Virtual Staining to Accelerate Histopathology Workflows",
+        "summary": "Accurate histopathological diagnosis often requires multiple differently\nstained tissue sections, a process that is time-consuming, labor-intensive, and\nenvironmentally taxing due to the use of multiple chemical stains. Recently,\nvirtual staining has emerged as a promising alternative that is faster,\ntissue-conserving, and environmentally friendly. However, existing virtual\nstaining methods face significant challenges in clinical applications,\nprimarily due to their reliance on well-aligned paired data. Obtaining such\ndata is inherently difficult because chemical staining processes can distort\ntissue structures, and a single tissue section cannot undergo multiple staining\nprocedures without damage or loss of information. As a result, most available\nvirtual staining datasets are either unpaired or roughly paired, making it\ndifficult for existing methods to achieve accurate pixel-level supervision. To\naddress this challenge, we propose a robust virtual staining framework\nfeaturing cascaded registration mechanisms to resolve spatial mismatches\nbetween generated outputs and their corresponding ground truth. Experimental\nresults demonstrate that our method significantly outperforms state-of-the-art\nmodels across five datasets, achieving an average improvement of 3.2% on\ninternal datasets and 10.1% on external datasets. Moreover, in datasets with\nsubstantial misalignment, our approach achieves a remarkable 23.8% improvement\nin peak signal-to-noise ratio compared to baseline models. The exceptional\nrobustness of the proposed method across diverse datasets simplifies the data\nacquisition process for virtual staining and offers new insights for advancing\nits development.",
+        "url": "http://arxiv.org/abs/2509.14119v1",
+        "published_date": "2025-09-17T15:58:59+00:00",
+        "updated_date": "2025-09-17T15:58:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiabo MA",
+            "Wenqiang Li",
+            "Jinbang Li",
+            "Ziyi Liu",
+            "Linshan Wu",
+            "Fengtao Zhou",
+            "Li Liang",
+            "Ronald Cheong Kin Chan",
+            "Terence T. W. Wong",
+            "Hao Chen"
+        ],
+        "tldr": "This paper introduces a generative AI framework for virtual staining in histopathology that is robust to misalignment between tissue sections, achieving significant performance improvements over existing methods, especially in datasets with substantial misalignment.",
+        "tldr_zh": "该论文介绍了一种用于组织病理学虚拟染色的生成式AI框架，该框架对组织切片之间的不对齐具有鲁棒性，与现有方法相比，实现了显著的性能提升，尤其是在具有明显不对齐的数据集中。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Deep Lookup Network",
+        "summary": "Convolutional neural networks are constructed with massive operations with\ndifferent types and are highly computationally intensive. Among these\noperations, multiplication operation is higher in computational complexity and\nusually requires {more} energy consumption with longer inference time than\nother operations, which hinders the deployment of convolutional neural networks\non mobile devices. In many resource-limited edge devices, complicated\noperations can be calculated via lookup tables to reduce computational cost.\nMotivated by this, in this paper, we introduce a generic and efficient lookup\noperation which can be used as a basic operation for the construction of neural\nnetworks. Instead of calculating the multiplication of weights and activation\nvalues, simple yet efficient lookup operations are adopted to compute their\nresponses. To enable end-to-end optimization of the lookup operation, we\nconstruct the lookup tables in a differentiable manner and propose several\ntraining strategies to promote their convergence. By replacing computationally\nexpensive multiplication operations with our lookup operations, we develop\nlookup networks for the image classification, image super-resolution, and point\ncloud classification tasks. It is demonstrated that our lookup networks can\nbenefit from the lookup operations to achieve higher efficiency in terms of\nenergy consumption and inference speed while maintaining competitive\nperformance to vanilla convolutional networks. Extensive experiments show that\nour lookup networks produce state-of-the-art performance on different tasks\n(both classification and regression tasks) and different data types (both\nimages and point clouds).",
+        "url": "http://arxiv.org/abs/2509.13662v1",
+        "published_date": "2025-09-17T03:31:41+00:00",
+        "updated_date": "2025-09-17T03:31:41+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yulan Guo",
+            "Longguang Wang",
+            "Wendong Mao",
+            "Xiaoyu Dong",
+            "Yingqian Wang",
+            "Li Liu",
+            "Wei An"
+        ],
+        "tldr": "This paper introduces a differentiable lookup operation to replace multiplications in CNNs, aiming to reduce energy consumption and inference time while maintaining performance, demonstrated on image classification, super-resolution, and point cloud classification.",
+        "tldr_zh": "本文提出了一种可微查找操作来替换CNN中的乘法运算，旨在降低能耗和推理时间，同时保持性能，并在图像分类、超分辨率和点云分类任务中进行了验证。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "BWCache: Accelerating Video Diffusion Transformers through Block-Wise Caching",
+        "summary": "Recent advancements in Diffusion Transformers (DiTs) have established them as\nthe state-of-the-art method for video generation. However, their inherently\nsequential denoising process results in inevitable latency, limiting real-world\napplicability. Existing acceleration methods either compromise visual quality\ndue to architectural modifications or fail to reuse intermediate features at\nproper granularity. Our analysis reveals that DiT blocks are the primary\ncontributors to inference latency. Across diffusion timesteps, the feature\nvariations of DiT blocks exhibit a U-shaped pattern with high similarity during\nintermediate timesteps, which suggests substantial computational redundancy. In\nthis paper, we propose Block-Wise Caching (BWCache), a training-free method to\naccelerate DiT-based video generation. BWCache dynamically caches and reuses\nfeatures from DiT blocks across diffusion timesteps. Furthermore, we introduce\na similarity indicator that triggers feature reuse only when the differences\nbetween block features at adjacent timesteps fall below a threshold, thereby\nminimizing redundant computations while maintaining visual fidelity. Extensive\nexperiments on several video diffusion models demonstrate that BWCache achieves\nup to 2.24$\\times$ speedup with comparable visual quality.",
+        "url": "http://arxiv.org/abs/2509.13789v1",
+        "published_date": "2025-09-17T07:58:36+00:00",
+        "updated_date": "2025-09-17T07:58:36+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hanshuai Cui",
+            "Zhiqing Tang",
+            "Zhifei Xu",
+            "Zhi Yao",
+            "Wenyi Zeng",
+            "Weijia Jia"
+        ],
+        "tldr": "The paper introduces BWCache, a training-free method that accelerates video diffusion transformers by caching and reusing features from DiT blocks across diffusion timesteps, achieving up to 2.24x speedup with comparable visual quality.",
+        "tldr_zh": "该论文介绍了一种名为BWCache的免训练方法，通过缓存和重用DiT块在扩散时间步中的特征来加速视频扩散变换器，实现了高达2.24倍的加速，同时保持了相当的视觉质量。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
