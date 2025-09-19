@@ -1,0 +1,146 @@
+[
+    {
+        "title": "Not All Degradations Are Equal: A Targeted Feature Denoising Framework for Generalizable Image Super-Resolution",
+        "summary": "Generalizable Image Super-Resolution aims to enhance model generalization\ncapabilities under unknown degradations. To achieve this goal, the models are\nexpected to focus only on image content-related features instead of overfitting\ndegradations. Recently, numerous approaches such as Dropout and Feature\nAlignment have been proposed to suppress models' natural tendency to overfit\ndegradations and yield promising results. Nevertheless, these works have\nassumed that models overfit to all degradation types (e.g., blur, noise, JPEG),\nwhile through careful investigations in this paper, we discover that models\npredominantly overfit to noise, largely attributable to its distinct\ndegradation pattern compared to other degradation types. In this paper, we\npropose a targeted feature denoising framework, comprising noise detection and\ndenoising modules. Our approach presents a general solution that can be\nseamlessly integrated with existing super-resolution models without requiring\narchitectural modifications. Our framework demonstrates superior performance\ncompared to previous regularization-based methods across five traditional\nbenchmarks and datasets, encompassing both synthetic and real-world scenarios.",
+        "url": "http://arxiv.org/abs/2509.14841v1",
+        "published_date": "2025-09-18T11:04:51+00:00",
+        "updated_date": "2025-09-18T11:04:51+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hongjun Wang",
+            "Jiyuan Chen",
+            "Zhengwei Yin",
+            "Xuan Song",
+            "Yinqiang Zheng"
+        ],
+        "tldr": "This paper proposes a targeted feature denoising framework for generalizable image super-resolution, focusing on mitigating overfitting to noise degradations, which they found to be more prevalent than other degradation types. The framework is designed for easy integration with existing models and shows improved performance.",
+        "tldr_zh": "本文提出了一种针对可泛化图像超分辨率的定向特征去噪框架，重点缓解对噪声退化的过拟合，他们发现噪声退化比其他退化类型更普遍。该框架旨在与现有模型轻松集成，并显示出改进的性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Dataset Distillation for Super-Resolution without Class Labels and Pre-trained Models",
+        "summary": "Training deep neural networks has become increasingly demanding, requiring\nlarge datasets and significant computational resources, especially as model\ncomplexity advances. Data distillation methods, which aim to improve data\nefficiency, have emerged as promising solutions to this challenge. In the field\nof single image super-resolution (SISR), the reliance on large training\ndatasets highlights the importance of these techniques. Recently, a generative\nadversarial network (GAN) inversion-based data distillation framework for SR\nwas proposed, showing potential for better data utilization. However, the\ncurrent method depends heavily on pre-trained SR networks and class-specific\ninformation, limiting its generalizability and applicability. To address these\nissues, we introduce a new data distillation approach for image SR that does\nnot need class labels or pre-trained SR models. In particular, we first extract\nhigh-gradient patches and categorize images based on CLIP features, then\nfine-tune a diffusion model on the selected patches to learn their distribution\nand synthesize distilled training images. Experimental results show that our\nmethod achieves state-of-the-art performance while using significantly less\ntraining data and requiring less computational time. Specifically, when we\ntrain a baseline Transformer model for SR with only 0.68\\% of the original\ndataset, the performance drop is just 0.3 dB. In this case, diffusion model\nfine-tuning takes 4 hours, and SR model training completes within 1 hour, much\nshorter than the 11-hour training time with the full dataset.",
+        "url": "http://arxiv.org/abs/2509.14777v1",
+        "published_date": "2025-09-18T09:25:51+00:00",
+        "updated_date": "2025-09-18T09:25:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sunwoo Cho",
+            "Yejin Jung",
+            "Nam Ik Cho",
+            "Jae Woong Soh"
+        ],
+        "tldr": "This paper introduces a novel data distillation method for image super-resolution that eliminates the need for class labels and pre-trained models, achieving state-of-the-art performance with significantly less training data and computational resources.",
+        "tldr_zh": "本文提出了一种新的图像超分辨率数据蒸馏方法，该方法无需类别标签和预训练模型，并以更少的训练数据和计算资源实现了最先进的性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Edge-Aware Normalized Attention for Efficient and Detail-Preserving Single Image Super-Resolution",
+        "summary": "Single-image super-resolution (SISR) remains highly ill-posed because\nrecovering structurally faithful high-frequency content from a single\nlow-resolution observation is ambiguous. Existing edge-aware methods often\nattach edge priors or attention branches onto increasingly complex backbones,\nyet ad hoc fusion frequently introduces redundancy, unstable optimization, or\nlimited structural gains. We address this gap with an edge-guided attention\nmechanism that derives an adaptive modulation map from jointly encoded edge\nfeatures and intermediate feature activations, then applies it to normalize and\nreweight responses, selectively amplifying structurally salient regions while\nsuppressing spurious textures. In parallel, we integrate this mechanism into a\nlightweight residual design trained under a composite objective combining\npixel-wise, perceptual, and adversarial terms to balance fidelity, perceptual\nrealism, and training stability. Extensive experiments on standard SISR\nbenchmarks demonstrate consistent improvements in structural sharpness and\nperceptual quality over SRGAN, ESRGAN, and prior edge-attention baselines at\ncomparable model complexity. The proposed formulation provides (i) a\nparameter-efficient path to inject edge priors, (ii) stabilized adversarial\nrefinement through a tailored multiterm loss, and (iii) enhanced edge fidelity\nwithout resorting to deeper or heavily overparameterized architectures. These\nresults highlight the effectiveness of principled edge-conditioned modulation\nfor advancing perceptual super-resolution.",
+        "url": "http://arxiv.org/abs/2509.14550v1",
+        "published_date": "2025-09-18T02:31:24+00:00",
+        "updated_date": "2025-09-18T02:31:24+00:00",
+        "categories": [
+            "cs.CV",
+            "68T45, 68T07, 68U10"
+        ],
+        "authors": [
+            "Penghao Rao",
+            "Tieyong Zeng"
+        ],
+        "tldr": "This paper introduces an edge-aware attention mechanism for single-image super-resolution that adaptively modulates features based on edge information, achieving improved sharpness and perceptual quality with a lightweight architecture and a composite loss function.",
+        "tldr_zh": "本文提出了一种边缘感知注意力机制，用于单图像超分辨率重建，该机制基于边缘信息自适应地调节特征，在轻量级架构和复合损失函数的支持下，实现了更好的锐度和感知质量。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Understand Before You Generate: Self-Guided Training for Autoregressive Image Generation",
+        "summary": "Recent studies have demonstrated the importance of high-quality visual\nrepresentations in image generation and have highlighted the limitations of\ngenerative models in image understanding. As a generative paradigm originally\ndesigned for natural language, autoregressive models face similar challenges.\nIn this work, we present the first systematic investigation into the mechanisms\nof applying the next-token prediction paradigm to the visual domain. We\nidentify three key properties that hinder the learning of high-level visual\nsemantics: local and conditional dependence, inter-step semantic inconsistency,\nand spatial invariance deficiency. We show that these issues can be effectively\naddressed by introducing self-supervised objectives during training, leading to\na novel training framework, Self-guided Training for AutoRegressive models\n(ST-AR). Without relying on pre-trained representation models, ST-AR\nsignificantly enhances the image understanding ability of autoregressive models\nand leads to improved generation quality. Specifically, ST-AR brings\napproximately 42% FID improvement for LlamaGen-L and 49% FID improvement for\nLlamaGen-XL, while maintaining the same sampling strategy.",
+        "url": "http://arxiv.org/abs/2509.15185v1",
+        "published_date": "2025-09-18T17:47:40+00:00",
+        "updated_date": "2025-09-18T17:47:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaoyu Yue",
+            "Zidong Wang",
+            "Yuqing Wang",
+            "Wenlong Zhang",
+            "Xihui Liu",
+            "Wanli Ouyang",
+            "Lei Bai",
+            "Luping Zhou"
+        ],
+        "tldr": "The paper introduces a self-guided training framework (ST-AR) for autoregressive image generation to improve image understanding and generation quality by addressing limitations of the next-token prediction paradigm in the visual domain. It achieves substantial FID improvements without relying on pre-trained representation models.",
+        "tldr_zh": "本文提出了一种自引导训练框架 (ST-AR)，用于自回归图像生成，旨在通过解决视觉领域中 next-token 预测范式的局限性，从而提高图像理解和生成质量。它在不依赖预训练表征模型的情况下，实现了显著的 FID 改进。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Sea-ing Through Scattered Rays: Revisiting the Image Formation Model for Realistic Underwater Image Generation",
+        "summary": "In recent years, the underwater image formation model has found extensive use\nin the generation of synthetic underwater data. Although many approaches focus\non scenes primarily affected by discoloration, they often overlook the model's\nability to capture the complex, distance-dependent visibility loss present in\nhighly turbid environments. In this work, we propose an improved synthetic data\ngeneration pipeline that includes the commonly omitted forward scattering term,\nwhile also considering a nonuniform medium. Additionally, we collected the\nBUCKET dataset under controlled turbidity conditions to acquire real turbid\nfootage with the corresponding reference images. Our results demonstrate\nqualitative improvements over the reference model, particularly under\nincreasing turbidity, with a selection rate of 82. 5\\% by survey participants.\nData and code can be accessed on the project page:\nvap.aau.dk/sea-ing-through-scattered-rays.",
+        "url": "http://arxiv.org/abs/2509.15011v1",
+        "published_date": "2025-09-18T14:42:24+00:00",
+        "updated_date": "2025-09-18T14:42:24+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Vasiliki Ismiroglou",
+            "Malte Pedersen",
+            "Stefan H. Bengtson",
+            "Andreas Aakerberg",
+            "Thomas B. Moeslund"
+        ],
+        "tldr": "This paper introduces an improved underwater image generation pipeline that incorporates forward scattering and nonuniform medium considerations, along with a new dataset (BUCKET) of turbid underwater images and corresponding reference images. They demonstrate qualitative improvements over existing models.",
+        "tldr_zh": "本文介绍了一种改进的水下图像生成流程，该流程结合了前向散射和非均匀介质的考虑，并提供了一个新的浑浊水下图像及其参考图像数据集 (BUCKET)。结果表明，该方法在现有模型基础上实现了质的提升。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "NeRF-based Visualization of 3D Cues Supporting Data-Driven Spacecraft Pose Estimation",
+        "summary": "On-orbit operations require the estimation of the relative 6D pose, i.e.,\nposition and orientation, between a chaser spacecraft and its target. While\ndata-driven spacecraft pose estimation methods have been developed, their\nadoption in real missions is hampered by the lack of understanding of their\ndecision process. This paper presents a method to visualize the 3D visual cues\non which a given pose estimator relies. For this purpose, we train a NeRF-based\nimage generator using the gradients back-propagated through the pose estimation\nnetwork. This enforces the generator to render the main 3D features exploited\nby the spacecraft pose estimation network. Experiments demonstrate that our\nmethod recovers the relevant 3D cues. Furthermore, they offer additional\ninsights on the relationship between the pose estimation network supervision\nand its implicit representation of the target spacecraft.",
+        "url": "http://arxiv.org/abs/2509.14890v1",
+        "published_date": "2025-09-18T12:10:47+00:00",
+        "updated_date": "2025-09-18T12:10:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Antoine Legrand",
+            "Renaud Detry",
+            "Christophe De Vleeschouwer"
+        ],
+        "tldr": "This paper introduces a NeRF-based visualization method to understand the 3D visual cues used by data-driven spacecraft pose estimation networks, offering insights into their decision-making process. The method trains a NeRF image generator using gradients from the pose estimation network.",
+        "tldr_zh": "本文提出了一种基于NeRF的可视化方法，用于理解数据驱动的航天器姿态估计网络所使用的3D视觉线索，从而深入了解其决策过程。该方法通过利用姿态估计网络的梯度来训练NeRF图像生成器。",
+        "relevance_score": 3,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 6,
+        "overall_priority_score": 5
+    }
+]
