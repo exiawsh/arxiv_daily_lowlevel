@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - September 09, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - September 21, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>September 09, 2025</p>
+            <p>September 21, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,27 +215,32 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">BIR-Adapter: A Low-Complexity Diffusion Model Adapter for Blind Image Restoration</h2>
+            <h2 class="paper-title">ViTCAE: ViT-based Class-conditioned Autoencoder</h2>
             
-            <p class="paper-summary">This paper introduces BIR-Adapter, a low-complexity blind image restoration
-adapter for diffusion models. The BIR-Adapter enables the utilization of the
-prior of pre-trained large-scale diffusion models on blind image restoration
-without training any auxiliary feature extractor. We take advantage of the
-robustness of pretrained models. We extract features from degraded images via
-the model itself and extend the self-attention mechanism with these degraded
-features. We introduce a sampling guidance mechanism to reduce hallucinations.
-We perform experiments on synthetic and real-world degradations and demonstrate
-that BIR-Adapter achieves competitive or better performance compared to
-state-of-the-art methods while having significantly lower complexity.
-Additionally, its adapter-based design enables integration into other diffusion
-models, enabling broader applications in image restoration tasks. We showcase
-this by extending a super-resolution-only model to perform better under
-additional unknown degradations.</p>
+            <p class="paper-summary">Vision Transformer (ViT) based autoencoders often underutilize the global
+Class token and employ static attention mechanisms, limiting both generative
+control and optimization efficiency. This paper introduces ViTCAE, a framework
+that addresses these issues by re-purposing the Class token into a generative
+linchpin. In our architecture, the encoder maps the Class token to a global
+latent variable that dictates the prior distribution for local, patch-level
+latent variables, establishing a robust dependency where global semantics
+directly inform the synthesis of local details. Drawing inspiration from
+opinion dynamics, we treat each attention head as a dynamical system of
+interacting tokens seeking consensus. This perspective motivates a
+convergence-aware temperature scheduler that adaptively anneals each head's
+influence function based on its distributional stability. This process enables
+a principled head-freezing mechanism, guided by theoretically-grounded
+diagnostics like an attention evolution distance and a consensus/cluster
+functional. This technique prunes converged heads during training to
+significantly improve computational efficiency without sacrificing fidelity. By
+unifying a generative Class token with an adaptive attention mechanism rooted
+in multi-agent consensus theory, ViTCAE offers a more efficient and
+controllable approach to transformer-based generation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces BIR-Adapter, a low-complexity adapter for diffusion models that improves blind image restoration by leveraging pre-trained models without auxiliary feature extractors and reduces hallucinations through sampling guidance. It achieves competitive performance with lower complexity and broader applicability.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ViTCAE improves ViT-based autoencoders by repurposing the Class token for generative control and introducing an adaptive attention mechanism based on opinion dynamics for efficiency, enhancing both controllability and computational performance in image generation.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种低复杂度的盲图像恢复适配器BIR-Adapter，它利用预训练扩散模型的先验知识，无需额外的特征提取器，并通过采样引导减少幻觉。BIR-Adapter在实现具有竞争力的性能的同时，具有更低的复杂度和更广泛的适用性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ViTCAE 通过重新利用 Class token 实现生成控制，并引入基于观点动态的自适应注意力机制来提高效率，从而改进了基于 ViT 的自编码器，增强了图像生成的可控性和计算性能。</p>
             
 
             
@@ -245,8 +250,8 @@ additional unknown degradations.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -269,8 +274,8 @@ additional unknown degradations.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -299,18 +304,18 @@ additional unknown degradations.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.06904v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.16554v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Cem Eteke, Alexander Griessel, Wolfgang Kellerer, Eckehard Steinbach</p>
+            <p class="paper-authors">Authors: Vahid Jebraeeli, Hamid Krim, Derya Cansever</p>
             
         </motion.div>
         
@@ -322,26 +327,28 @@ additional unknown degradations.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MIORe & VAR-MIORe: Benchmarks to Push the Boundaries of Restoration</h2>
+            <h2 class="paper-title">OS-DiffVSR: Towards One-step Latent Diffusion Model for High-detailed Real-world Video Super-Resolution</h2>
             
-            <p class="paper-summary">We introduce MIORe and VAR-MIORe, two novel multi-task datasets that address
-critical limitations in current motion restoration benchmarks. Designed with
-high-frame-rate (1000 FPS) acquisition and professional-grade optics, our
-datasets capture a broad spectrum of motion scenarios, which include complex
-ego-camera movements, dynamic multi-subject interactions, and depth-dependent
-blur effects. By adaptively averaging frames based on computed optical flow
-metrics, MIORe generates consistent motion blur, and preserves sharp inputs for
-video frame interpolation and optical flow estimation. VAR-MIORe further
-extends by spanning a variable range of motion magnitudes, from minimal to
-extreme, establishing the first benchmark to offer explicit control over motion
-amplitude. We provide high-resolution, scalable ground truths that challenge
-existing algorithms under both controlled and adverse conditions, paving the
-way for next-generation research of various image and video restoration tasks.</p>
+            <p class="paper-summary">Recently, latent diffusion models has demonstrated promising performance in
+real-world video super-resolution (VSR) task, which can reconstruct
+high-quality videos from distorted low-resolution input through multiple
+diffusion steps. Compared to image super-resolution (ISR), VSR methods needs to
+process each frame in a video, which poses challenges to its inference
+efficiency. However, video quality and inference efficiency have always been a
+trade-off for the diffusion-based VSR methods. In this work, we propose
+One-Step Diffusion model for real-world Video Super-Resolution, namely
+OS-DiffVSR. Specifically, we devise a novel adjacent frame adversarial training
+paradigm, which can significantly improve the quality of synthetic videos.
+Besides, we devise a multi-frame fusion mechanism to maintain inter-frame
+temporal consistency and reduce the flicker in video. Extensive experiments on
+several popular VSR benchmarks demonstrate that OS-DiffVSR can even achieve
+better quality than existing diffusion-based VSR methods that require dozens of
+sampling steps.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces two new high-frame-rate datasets, MIORe and VAR-MIORe, for benchmarking motion restoration algorithms, offering controlled motion blur and variable motion magnitudes.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces OS-DiffVSR, a one-step latent diffusion model for real-world video super-resolution that balances video quality and inference efficiency using a novel adversarial training paradigm and multi-frame fusion.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了两个新的高帧率数据集 MIORe 和 VAR-MIORe，用于测试运动恢复算法，提供了可控的运动模糊和可变的运动幅度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为OS-DiffVSR的单步潜在扩散模型，用于现实世界视频超分辨率，通过新颖的对抗训练范式和多帧融合来平衡视频质量和推理效率。</p>
             
 
             
@@ -351,24 +358,24 @@ way for next-generation research of various image and video restoration tasks.</
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -412,11 +419,11 @@ way for next-generation research of various image and video restoration tasks.</
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.06803v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.16507v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: George Ciubotariu, Zhuyun Zhou, Zongwei Wu, Radu Timofte</p>
+            <p class="paper-authors">Authors: Hanting Li, Huaao Tang, Jianhong Han, Tianxiong Zhou, Jiulong Cui, Haizhen Xie, Yan Chen, Jie Hu</p>
             
         </motion.div>
         
@@ -428,131 +435,37 @@ way for next-generation research of various image and video restoration tasks.</
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Your Super Resolution Model is not Enough for Tackling Real-World Scenarios</h2>
+            <h2 class="paper-title">From Canopy to Ground via ForestGen3D: Learning Cross-Domain Generation of 3D Forest Structure from Aerial-to-Terrestrial LiDAR</h2>
             
-            <p class="paper-summary">Despite remarkable progress in Single Image Super-Resolution (SISR),
-traditional models often struggle to generalize across varying scale factors,
-limiting their real-world applicability. To address this, we propose a plug-in
-Scale-Aware Attention Module (SAAM) designed to retrofit modern fixed-scale SR
-models with the ability to perform arbitrary-scale SR. SAAM employs
-lightweight, scale-adaptive feature extraction and upsampling, incorporating
-the Simple parameter-free Attention Module (SimAM) for efficient guidance and
-gradient variance loss to enhance sharpness in image details. Our method
-integrates seamlessly into multiple state-of-the-art SR backbones (e.g., SCNet,
-HiT-SR, OverNet), delivering competitive or superior performance across a wide
-range of integer and non-integer scale factors. Extensive experiments on
-benchmark datasets demonstrate that our approach enables robust multi-scale
-upscaling with minimal computational overhead, offering a practical solution
-for real-world scenarios.</p>
+            <p class="paper-summary">The 3D structure of living and non-living components in ecosystems plays a
+critical role in determining ecological processes and feedbacks from both
+natural and human-driven disturbances. Anticipating the effects of wildfire,
+drought, disease, or atmospheric deposition depends on accurate
+characterization of 3D vegetation structure, yet widespread measurement remains
+prohibitively expensive and often infeasible. We introduce ForestGen3D, a novel
+generative modeling framework that synthesizes high-fidelity 3D forest
+structure using only aerial LiDAR (ALS) inputs. ForestGen3D is based on
+conditional denoising diffusion probabilistic models (DDPMs) trained on
+co-registered ALS/TLS (terrestrial LiDAR) data. The model learns to generate
+TLS-like 3D point clouds conditioned on sparse ALS observations, effectively
+reconstructing occluded sub-canopy detail at scale. To ensure ecological
+plausibility, we introduce a geometric containment prior based on the convex
+hull of ALS observations and provide theoretical and empirical guarantees that
+generated structures remain spatially consistent. We evaluate ForestGen3D at
+tree, plot, and landscape scales using real-world data from mixed conifer
+ecosystems, and show that it produces high-fidelity reconstructions that
+closely match TLS references in terms of geometric similarity and biophysical
+metrics, such as tree height, DBH, crown diameter and crown volume.
+Additionally, we demonstrate that the containment property can serve as a
+practical proxy for generation quality in settings where TLS ground truth is
+unavailable. Our results position ForestGen3D as a scalable tool for ecological
+modeling, wildfire simulation, and structural fuel characterization in ALS-only
+environments.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a Scale-Aware Attention Module (SAAM) that can be plugged into existing SR models to enable arbitrary-scale super-resolution, improving their applicability to real-world scenarios with varying scale factors. It achieves this through scale-adaptive feature extraction and upsampling with minimal overhead.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种可插入现有SR模型的尺度感知注意力模块（SAAM），以实现任意尺度的超分辨率，从而提高其在具有不同尺度因子的实际场景中的适用性。它通过尺度自适应特征提取和上采样来实现，且开销极小。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ForestGen3D, a novel generative model using conditional denoising diffusion probabilistic models (DDPMs) to reconstruct high-fidelity 3D forest structure from aerial LiDAR data, enabling scalable ecological modeling where terrestrial LiDAR is unavailable.</p>
             
             
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2509.06387v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Dongsik Yoon, Jongeun Kim</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">AIM 2025 Challenge on High FPS Motion Deblurring: Methods and Results</h2>
-            
-            <p class="paper-summary">This paper presents a comprehensive review of the AIM 2025 High FPS
-Non-Uniform Motion Deblurring Challenge, highlighting the proposed solutions
-and final results. The objective of this challenge is to identify effective
-networks capable of producing clearer and visually compelling images in diverse
-and challenging conditions, by learning representative visual cues for complex
-aggregations of motion types. A total of 68 participants registered for the
-competition, and 9 teams ultimately submitted valid entries. This paper
-thoroughly evaluates the state-of-the-art advances in high-FPS single image
-motion deblurring, showcasing the significant progress in the field, while
-leveraging samples of the novel dataset, MIORe, that introduces challenging
-examples of movement patterns.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper summarizes the AIM 2025 High FPS Motion Deblurring Challenge, showcasing the submitted solutions, results, and the MIORe dataset. It highlights progress in high-FPS single image motion deblurring.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文总结了AIM 2025高帧率运动去模糊挑战赛，展示了提交的解决方案、结果以及MIORe数据集。它强调了高帧率单图像运动去模糊领域的进展。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 ForestGen3D，一种新型生成模型，使用条件去噪扩散概率模型 (DDPM) 从航空 LiDAR 数据重建高保真 3D 森林结构，从而在无法使用地面 LiDAR 的情况下实现可扩展的生态建模。</p>
             
 
             
@@ -561,17 +474,17 @@ examples of movement patterns.</p>
                 
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -623,18 +536,18 @@ examples of movement patterns.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.06793v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.16346v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: George Ciubotariu, Florin-Alexandru Vasluianu, Zhuyun Zhou, Nancy Mehta, Radu Timofte, Ke Wu, Long Sun, Lingshun Kong, Zhongbao Yang, Jinshan Pan, Jiangxin Dong, Jinhui Tang, Hao Chen, Yinghui Fang, Dafeng Zhang, Yongqi Song, Jiangbo Guo, Shuhua Jin, Zeyu Xiao, Rui Zhao, Zhuoyuan Li, Cong Zhang, Yufeng Peng, Xin Lu, Zhijing Sun, Chengjie Ge, Zihao Li, Zishun Liao, Ziang Zhou, Qiyu Kang, Xueyang Fu, Zheng-Jun Zha, Yuqian Zhang, Shuai Liu, Jie Liu, Zhuhao Zhang, Lishen Qu, Zhihao Liu, Shihao Zhou, Yaqi Luo, Juncheng Zhou, Jufeng Yang, Qianfeng Yang, Qiyuan Guan, Xiang Chen, Guiyue Jin, Jiyu Jin</p>
+            <p class="paper-authors">Authors: Juan Castorena, E. Louise Loudermilk, Scott Pokswinski, Rodman Linn</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-09-23 03:28:22 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-09-23 03:30:38 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

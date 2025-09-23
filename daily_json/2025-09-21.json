@@ -1,0 +1,76 @@
+[
+    {
+        "title": "ViTCAE: ViT-based Class-conditioned Autoencoder",
+        "summary": "Vision Transformer (ViT) based autoencoders often underutilize the global\nClass token and employ static attention mechanisms, limiting both generative\ncontrol and optimization efficiency. This paper introduces ViTCAE, a framework\nthat addresses these issues by re-purposing the Class token into a generative\nlinchpin. In our architecture, the encoder maps the Class token to a global\nlatent variable that dictates the prior distribution for local, patch-level\nlatent variables, establishing a robust dependency where global semantics\ndirectly inform the synthesis of local details. Drawing inspiration from\nopinion dynamics, we treat each attention head as a dynamical system of\ninteracting tokens seeking consensus. This perspective motivates a\nconvergence-aware temperature scheduler that adaptively anneals each head's\ninfluence function based on its distributional stability. This process enables\na principled head-freezing mechanism, guided by theoretically-grounded\ndiagnostics like an attention evolution distance and a consensus/cluster\nfunctional. This technique prunes converged heads during training to\nsignificantly improve computational efficiency without sacrificing fidelity. By\nunifying a generative Class token with an adaptive attention mechanism rooted\nin multi-agent consensus theory, ViTCAE offers a more efficient and\ncontrollable approach to transformer-based generation.",
+        "url": "http://arxiv.org/abs/2509.16554v1",
+        "published_date": "2025-09-20T06:48:45+00:00",
+        "updated_date": "2025-09-20T06:48:45+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Vahid Jebraeeli",
+            "Hamid Krim",
+            "Derya Cansever"
+        ],
+        "tldr": "ViTCAE improves ViT-based autoencoders by repurposing the Class token for generative control and introducing an adaptive attention mechanism based on opinion dynamics for efficiency, enhancing both controllability and computational performance in image generation.",
+        "tldr_zh": "ViTCAE 通过重新利用 Class token 实现生成控制，并引入基于观点动态的自适应注意力机制来提高效率，从而改进了基于 ViT 的自编码器，增强了图像生成的可控性和计算性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OS-DiffVSR: Towards One-step Latent Diffusion Model for High-detailed Real-world Video Super-Resolution",
+        "summary": "Recently, latent diffusion models has demonstrated promising performance in\nreal-world video super-resolution (VSR) task, which can reconstruct\nhigh-quality videos from distorted low-resolution input through multiple\ndiffusion steps. Compared to image super-resolution (ISR), VSR methods needs to\nprocess each frame in a video, which poses challenges to its inference\nefficiency. However, video quality and inference efficiency have always been a\ntrade-off for the diffusion-based VSR methods. In this work, we propose\nOne-Step Diffusion model for real-world Video Super-Resolution, namely\nOS-DiffVSR. Specifically, we devise a novel adjacent frame adversarial training\nparadigm, which can significantly improve the quality of synthetic videos.\nBesides, we devise a multi-frame fusion mechanism to maintain inter-frame\ntemporal consistency and reduce the flicker in video. Extensive experiments on\nseveral popular VSR benchmarks demonstrate that OS-DiffVSR can even achieve\nbetter quality than existing diffusion-based VSR methods that require dozens of\nsampling steps.",
+        "url": "http://arxiv.org/abs/2509.16507v1",
+        "published_date": "2025-09-20T03:04:41+00:00",
+        "updated_date": "2025-09-20T03:04:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hanting Li",
+            "Huaao Tang",
+            "Jianhong Han",
+            "Tianxiong Zhou",
+            "Jiulong Cui",
+            "Haizhen Xie",
+            "Yan Chen",
+            "Jie Hu"
+        ],
+        "tldr": "The paper introduces OS-DiffVSR, a one-step latent diffusion model for real-world video super-resolution that balances video quality and inference efficiency using a novel adversarial training paradigm and multi-frame fusion.",
+        "tldr_zh": "该论文介绍了一种名为OS-DiffVSR的单步潜在扩散模型，用于现实世界视频超分辨率，通过新颖的对抗训练范式和多帧融合来平衡视频质量和推理效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Canopy to Ground via ForestGen3D: Learning Cross-Domain Generation of 3D Forest Structure from Aerial-to-Terrestrial LiDAR",
+        "summary": "The 3D structure of living and non-living components in ecosystems plays a\ncritical role in determining ecological processes and feedbacks from both\nnatural and human-driven disturbances. Anticipating the effects of wildfire,\ndrought, disease, or atmospheric deposition depends on accurate\ncharacterization of 3D vegetation structure, yet widespread measurement remains\nprohibitively expensive and often infeasible. We introduce ForestGen3D, a novel\ngenerative modeling framework that synthesizes high-fidelity 3D forest\nstructure using only aerial LiDAR (ALS) inputs. ForestGen3D is based on\nconditional denoising diffusion probabilistic models (DDPMs) trained on\nco-registered ALS/TLS (terrestrial LiDAR) data. The model learns to generate\nTLS-like 3D point clouds conditioned on sparse ALS observations, effectively\nreconstructing occluded sub-canopy detail at scale. To ensure ecological\nplausibility, we introduce a geometric containment prior based on the convex\nhull of ALS observations and provide theoretical and empirical guarantees that\ngenerated structures remain spatially consistent. We evaluate ForestGen3D at\ntree, plot, and landscape scales using real-world data from mixed conifer\necosystems, and show that it produces high-fidelity reconstructions that\nclosely match TLS references in terms of geometric similarity and biophysical\nmetrics, such as tree height, DBH, crown diameter and crown volume.\nAdditionally, we demonstrate that the containment property can serve as a\npractical proxy for generation quality in settings where TLS ground truth is\nunavailable. Our results position ForestGen3D as a scalable tool for ecological\nmodeling, wildfire simulation, and structural fuel characterization in ALS-only\nenvironments.",
+        "url": "http://arxiv.org/abs/2509.16346v1",
+        "published_date": "2025-09-19T18:39:50+00:00",
+        "updated_date": "2025-09-19T18:39:50+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Juan Castorena",
+            "E. Louise Loudermilk",
+            "Scott Pokswinski",
+            "Rodman Linn"
+        ],
+        "tldr": "The paper introduces ForestGen3D, a novel generative model using conditional denoising diffusion probabilistic models (DDPMs) to reconstruct high-fidelity 3D forest structure from aerial LiDAR data, enabling scalable ecological modeling where terrestrial LiDAR is unavailable.",
+        "tldr_zh": "该论文介绍了 ForestGen3D，一种新型生成模型，使用条件去噪扩散概率模型 (DDPM) 从航空 LiDAR 数据重建高保真 3D 森林结构，从而在无法使用地面 LiDAR 的情况下实现可扩展的生态建模。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

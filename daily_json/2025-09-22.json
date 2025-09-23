@@ -1,0 +1,125 @@
+[
+    {
+        "title": "Stencil: Subject-Driven Generation with Context Guidance",
+        "summary": "Recent text-to-image diffusion models can generate striking visuals from text\nprompts, but they often fail to maintain subject consistency across generations\nand contexts. One major limitation of current fine-tuning approaches is the\ninherent trade-off between quality and efficiency. Fine-tuning large models\nimproves fidelity but is computationally expensive, while fine-tuning\nlightweight models improves efficiency but compromises image fidelity.\nMoreover, fine-tuning pre-trained models on a small set of images of the\nsubject can damage the existing priors, resulting in suboptimal results. To\nthis end, we present Stencil, a novel framework that jointly employs two\ndiffusion models during inference. Stencil efficiently fine-tunes a lightweight\nmodel on images of the subject, while a large frozen pre-trained model provides\ncontextual guidance during inference, injecting rich priors to enhance\ngeneration with minimal overhead. Stencil excels at generating high-fidelity,\nnovel renditions of the subject in less than a minute, delivering\nstate-of-the-art performance and setting a new benchmark in subject-driven\ngeneration.",
+        "url": "http://arxiv.org/abs/2509.17120v1",
+        "published_date": "2025-09-21T15:19:08+00:00",
+        "updated_date": "2025-09-21T15:19:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Gordon Chen",
+            "Ziqi Huang",
+            "Cheston Tan",
+            "Ziwei Liu"
+        ],
+        "tldr": "The paper introduces Stencil, a framework using a fine-tuned lightweight diffusion model and a large frozen pre-trained model to generate subject-consistent images with high fidelity and contextual richness efficiently.",
+        "tldr_zh": "本文介绍了Stencil，一个框架，它使用微调的轻量级扩散模型和一个大型冻结的预训练模型，以高效地生成具有高保真度和上下文丰富性的主体一致图像。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "When Color-Space Decoupling Meets Diffusion for Adverse-Weather Image Restoration",
+        "summary": "Adverse Weather Image Restoration (AWIR) is a highly challenging task due to\nthe unpredictable and dynamic nature of weather-related degradations.\nTraditional task-specific methods often fail to generalize to unseen or complex\ndegradation types, while recent prompt-learning approaches depend heavily on\nthe degradation estimation capabilities of vision-language models, resulting in\ninconsistent restorations. In this paper, we propose \\textbf{LCDiff}, a novel\nframework comprising two key components: \\textit{Lumina-Chroma Decomposition\nNetwork} (LCDN) and \\textit{Lumina-Guided Diffusion Model} (LGDM). LCDN\nprocesses degraded images in the YCbCr color space, separately handling\ndegradation-related luminance and degradation-invariant chrominance components.\nThis decomposition effectively mitigates weather-induced degradation while\npreserving color fidelity. To further enhance restoration quality, LGDM\nleverages degradation-related luminance information as a guiding condition,\neliminating the need for explicit degradation prompts. Additionally, LGDM\nincorporates a \\textit{Dynamic Time Step Loss} to optimize the denoising\nnetwork, ensuring a balanced recovery of both low- and high-frequency features\nin the image. Finally, we present DriveWeather, a comprehensive all-weather\ndriving dataset designed to enable robust evaluation. Extensive experiments\ndemonstrate that our approach surpasses state-of-the-art methods, setting a new\nbenchmark in AWIR. The dataset and code are available at:\nhttps://github.com/fiwy0527/LCDiff.",
+        "url": "http://arxiv.org/abs/2509.17024v1",
+        "published_date": "2025-09-21T10:39:06+00:00",
+        "updated_date": "2025-09-21T10:39:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Wenxuan Fang",
+            "Jili Fan",
+            "Chao Wang",
+            "Xiantao Hu",
+            "Jiangwei Weng",
+            "Ying Tai",
+            "Jian Yang",
+            "Jun Li"
+        ],
+        "tldr": "The paper introduces LCDiff, a novel framework for adverse weather image restoration that utilizes Lumina-Chroma Decomposition and a Lumina-Guided Diffusion Model, achieving state-of-the-art results on a new driving dataset.",
+        "tldr_zh": "该论文介绍了一种名为LCDiff的新型恶劣天气图像恢复框架，该框架利用亮度-色度分解和亮度引导的扩散模型，并在一个新的驾驶数据集上实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VCE: Safe Autoregressive Image Generation via Visual Contrast Exploitation",
+        "summary": "Recently, autoregressive image generation models have wowed audiences with\ntheir remarkable capability in creating surprisingly realistic images. Models\nsuch as GPT-4o and LlamaGen can not only produce images that faithfully mimic\nrenowned artistic styles like Ghibli, Van Gogh, or Picasso, but also\npotentially generate Not-Safe-For-Work (NSFW) content, raising significant\nconcerns regarding copyright infringement and ethical use. Despite these\nconcerns, methods to safeguard autoregressive text-to-image models remain\nunderexplored. Previous concept erasure methods, primarily designed for\ndiffusion models that operate in denoising latent space, are not directly\napplicable to autoregressive models that generate images token by token. To\naddress this critical gap, we propose Visual Contrast Exploitation (VCE), a\nnovel framework comprising: (1) an innovative contrastive image pair\nconstruction paradigm that precisely decouples unsafe concepts from their\nassociated content semantics, and (2) a sophisticated DPO-based training\napproach that enhances the model's ability to identify and leverage visual\ncontrastive features from image pairs, enabling precise concept erasure. Our\ncomprehensive experiments across three challenging tasks-artist style erasure,\nexplicit content erasure, and object removal-demonstrate that our method\neffectively secures the model, achieving state-of-the-art results while erasing\nunsafe concepts and maintaining the integrity of unrelated safe concepts. The\ncode and models are available at https://github.com/Maplebb/VCE.",
+        "url": "http://arxiv.org/abs/2509.16986v1",
+        "published_date": "2025-09-21T09:00:27+00:00",
+        "updated_date": "2025-09-21T09:00:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Feng Han",
+            "Chao Gong",
+            "Zhipeng Wei",
+            "Jingjing Chen",
+            "Yu-Gang Jiang"
+        ],
+        "tldr": "This paper introduces Visual Contrast Exploitation (VCE), a novel framework for safe autoregressive image generation that erases unsafe concepts while preserving safe content, achieving state-of-the-art results in artist style erasure, explicit content erasure, and object removal.",
+        "tldr_zh": "本文介绍了一种名为视觉对比度利用 (VCE) 的新框架，用于安全自回归图像生成，可以在擦除不安全概念的同时保留安全内容，并在艺术家风格擦除、显式内容擦除和对象移除方面取得最先进的结果。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Penalizing Boundary Activation for Object Completeness in Diffusion Models",
+        "summary": "Diffusion models have emerged as a powerful technique for text-to-image (T2I)\ngeneration, creating high-quality, diverse images across various domains.\nHowever, a common limitation in these models is the incomplete display of\nobjects, where fragments or missing parts undermine the model's performance in\ndownstream applications. In this study, we conduct an in-depth analysis of the\nincompleteness issue and reveal that the primary factor behind incomplete\nobject generation is the usage of RandomCrop during model training. This widely\nused data augmentation method, though enhances model generalization ability,\ndisrupts object continuity during training. To address this, we propose a\ntraining-free solution that penalizes activation values at image boundaries\nduring the early denoising steps. Our method is easily applicable to\npre-trained Stable Diffusion models with minimal modifications and negligible\ncomputational overhead. Extensive experiments demonstrate the effectiveness of\nour method, showing substantial improvements in object integrity and image\nquality.",
+        "url": "http://arxiv.org/abs/2509.16968v1",
+        "published_date": "2025-09-21T07:58:48+00:00",
+        "updated_date": "2025-09-21T07:58:48+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haoyang Xu",
+            "Tianhao Zhao",
+            "Sibei Yang",
+            "Yutian Li"
+        ],
+        "tldr": "The paper identifies RandomCrop as a cause of object incompleteness in diffusion models and proposes a training-free method penalizing boundary activation to improve object integrity.",
+        "tldr_zh": "该论文指出，RandomCrop是扩散模型中对象不完整的原因，并提出了一种无需训练的方法，通过惩罚边界激活来提高对象完整性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "$\\mathtt{M^3VIR}$: A Large-Scale Multi-Modality Multi-View Synthesized Benchmark Dataset for Image Restoration and Content Creation",
+        "summary": "The gaming and entertainment industry is rapidly evolving, driven by\nimmersive experiences and the integration of generative AI (GAI) technologies.\nTraining such models effectively requires large-scale datasets that capture the\ndiversity and context of gaming environments. However, existing datasets are\noften limited to specific domains or rely on artificial degradations, which do\nnot accurately capture the unique characteristics of gaming content. Moreover,\nbenchmarks for controllable video generation remain absent.\n  To address these limitations, we introduce $\\mathtt{M^3VIR}$, a large-scale,\nmulti-modal, multi-view dataset specifically designed to overcome the\nshortcomings of current resources. Unlike existing datasets, $\\mathtt{M^3VIR}$\nprovides diverse, high-fidelity gaming content rendered with Unreal Engine 5,\noffering authentic ground-truth LR-HR paired and multi-view frames across 80\nscenes in 8 categories. It includes $\\mathtt{M^3VIR\\_MR}$ for super-resolution\n(SR), novel view synthesis (NVS), and combined NVS+SR tasks, and\n$\\mathtt{M^3VIR\\_{MS}}$, the first multi-style, object-level ground-truth set\nenabling research on controlled video generation. Additionally, we benchmark\nseveral state-of-the-art SR and NVS methods to establish performance baselines.\nWhile no existing approaches directly handle controlled video generation,\n$\\mathtt{M^3VIR}$ provides a benchmark for advancing this area. By releasing\nthe dataset, we aim to facilitate research in AI-powered restoration,\ncompression, and controllable content generation for next-generation cloud\ngaming and entertainment.",
+        "url": "http://arxiv.org/abs/2509.16873v1",
+        "published_date": "2025-09-21T01:50:14+00:00",
+        "updated_date": "2025-09-21T01:50:14+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuanzhi Li",
+            "Lebin Zhou",
+            "Nam Ling",
+            "Zhenghao Chen",
+            "Wei Wang",
+            "Wei Jiang"
+        ],
+        "tldr": "The paper introduces M3VIR, a large-scale, multi-modal, multi-view dataset of gaming content for image restoration and controllable video generation, addressing limitations of existing datasets and providing benchmarks for super-resolution, novel view synthesis, and controlled video generation tasks.",
+        "tldr_zh": "该论文介绍了M3VIR，一个大规模、多模态、多视角的包含游戏内容的数据集，用于图像恢复和可控视频生成。它解决了现有数据集的局限性，并为超分辨率、新视角合成和可控视频生成任务提供基准。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
