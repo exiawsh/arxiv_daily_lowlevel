@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - September 11, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - September 25, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>September 11, 2025</p>
+            <p>September 25, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,37 +215,35 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">RewardDance: Reward Scaling in Visual Generation</h2>
+            <h2 class="paper-title">An Anisotropic Cross-View Texture Transfer with Multi-Reference Non-Local Attention for CT Slice Interpolation</h2>
             
-            <p class="paper-summary">Reward Models (RMs) are critical for improving generation models via
-Reinforcement Learning (RL), yet the RM scaling paradigm in visual generation
-remains largely unexplored. It primarily due to fundamental limitations in
-existing approaches: CLIP-based RMs suffer from architectural and input
-modality constraints, while prevalent Bradley-Terry losses are fundamentally
-misaligned with the next-token prediction mechanism of Vision-Language Models
-(VLMs), hindering effective scaling. More critically, the RLHF optimization
-process is plagued by Reward Hacking issue, where models exploit flaws in the
-reward signal without improving true quality. To address these challenges, we
-introduce RewardDance, a scalable reward modeling framework that overcomes
-these barriers through a novel generative reward paradigm. By reformulating the
-reward score as the model's probability of predicting a "yes" token, indicating
-that the generated image outperforms a reference image according to specific
-criteria, RewardDance intrinsically aligns reward objectives with VLM
-architectures. This alignment unlocks scaling across two dimensions: (1) Model
-Scaling: Systematic scaling of RMs up to 26 billion parameters; (2) Context
-Scaling: Integration of task-specific instructions, reference examples, and
-chain-of-thought (CoT) reasoning. Extensive experiments demonstrate that
-RewardDance significantly surpasses state-of-the-art methods in text-to-image,
-text-to-video, and image-to-video generation. Crucially, we resolve the
-persistent challenge of "reward hacking": Our large-scale RMs exhibit and
-maintain high reward variance during RL fine-tuning, proving their resistance
-to hacking and ability to produce diverse, high-quality outputs. It greatly
-relieves the mode collapse problem that plagues smaller models.</p>
+            <p class="paper-summary">Computed tomography (CT) is one of the most widely used non-invasive imaging
+modalities for medical diagnosis. In clinical practice, CT images are usually
+acquired with large slice thicknesses due to the high cost of memory storage
+and operation time, resulting in an anisotropic CT volume with much lower
+inter-slice resolution than in-plane resolution. Since such inconsistent
+resolution may lead to difficulties in disease diagnosis, deep learning-based
+volumetric super-resolution methods have been developed to improve inter-slice
+resolution. Most existing methods conduct single-image super-resolution on the
+through-plane or synthesize intermediate slices from adjacent slices; however,
+the anisotropic characteristic of 3D CT volume has not been well explored. In
+this paper, we propose a novel cross-view texture transfer approach for CT
+slice interpolation by fully utilizing the anisotropic nature of 3D CT volume.
+Specifically, we design a unique framework that takes high-resolution in-plane
+texture details as a reference and transfers them to low-resolution
+through-plane images. To this end, we introduce a multi-reference non-local
+attention module that extracts meaningful features for reconstructing
+through-plane high-frequency details from multiple in-plane images. Through
+extensive experiments, we demonstrate that our method performs significantly
+better in CT slice interpolation than existing competing methods on public CT
+datasets including a real-paired benchmark, verifying the effectiveness of the
+proposed framework. The source code of this work is available at
+https://github.com/khuhm/ACVTT.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces RewardDance, a novel reward modeling framework for visual generation that addresses reward hacking and scaling limitations of existing methods by aligning reward objectives with VLMs. It demonstrates improved performance and resistance to reward hacking in text-to-image/video generation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel cross-view texture transfer approach using multi-reference non-local attention for CT slice interpolation, leveraging the anisotropic nature of 3D CT volumes to improve inter-slice resolution.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新的视觉生成奖励建模框架 RewardDance，通过将奖励目标与 VLM 对齐，解决了现有方法的奖励黑客攻击和缩放限制。 实验证明，它在文本到图像/视频生成方面具有更高的性能并能抵抗奖励黑客攻击。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新颖的交叉视角纹理传递方法，该方法使用多参考非局部注意力进行CT切片插值，利用3D CT体各向异性的特性来提高切片间分辨率。</p>
             
 
             
@@ -255,13 +253,21 @@ relieves the mode collapse problem that plagues smaller models.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
@@ -269,18 +275,10 @@ relieves the mode collapse problem that plagues smaller models.</p>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -316,11 +314,11 @@ relieves the mode collapse problem that plagues smaller models.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.08826v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.20242v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jie Wu, Yu Gao, Zilyu Ye, Ming Li, Liang Li, Hanzhong Guo, Jie Liu, Zeyue Xue, Xiaoxia Hou, Wei Liu, Yan Zeng, Weilin Huang</p>
+            <p class="paper-authors">Authors: Kwang-Hyun Uhm, Hyunjun Cho, Sung-Hoo Hong, Seung-Won Jung</p>
             
         </motion.div>
         
@@ -332,26 +330,30 @@ relieves the mode collapse problem that plagues smaller models.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">First-order State Space Model for Lightweight Image Super-resolution</h2>
+            <h2 class="paper-title">StrCGAN: A Generative Framework for Stellar Image Restoration</h2>
             
-            <p class="paper-summary">State space models (SSMs), particularly Mamba, have shown promise in NLP
-tasks and are increasingly applied to vision tasks. However, most Mamba-based
-vision models focus on network architecture and scan paths, with little
-attention to the SSM module. In order to explore the potential of SSMs, we
-modified the calculation process of SSM without increasing the number of
-parameters to improve the performance on lightweight super-resolution tasks. In
-this paper, we introduce the First-order State Space Model (FSSM) to improve
-the original Mamba module, enhancing performance by incorporating token
-correlations. We apply a first-order hold condition in SSMs, derive the new
-discretized form, and analyzed cumulative error. Extensive experimental results
-demonstrate that FSSM improves the performance of MambaIR on five benchmark
-datasets without additionally increasing the number of parameters, and
-surpasses current lightweight SR methods, achieving state-of-the-art results.</p>
+            <p class="paper-summary">We introduce StrCGAN (Stellar Cyclic GAN), a generative model designed to
+enhance low-resolution astrophotography images. Our goal is to reconstruct
+high-fidelity ground truth-like representations of celestial objects, a task
+that is challenging due to the limited resolution and quality of
+small-telescope observations such as the MobilTelesco dataset. Traditional
+models such as CycleGAN provide a foundation for image-to-image translation but
+are restricted to 2D mappings and often distort the morphology of stars and
+galaxies. To overcome these limitations, we extend the CycleGAN framework with
+three key innovations: 3D convolutional layers to capture volumetric spatial
+correlations, multi-spectral fusion to align optical and near-infrared (NIR)
+domains, and astrophysical regularization modules to preserve stellar
+morphology. Ground-truth references from multi-mission all-sky surveys spanning
+optical to NIR guide the training process, ensuring that reconstructions remain
+consistent across spectral bands. Together, these components allow StrCGAN to
+generate reconstructions that are not only visually sharper but also physically
+consistent, outperforming standard GAN models in the task of astrophysical
+image enhancement.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces First-order State Space Model (FSSM) to improve Mamba module for lightweight image super-resolution by incorporating token correlations, achieving state-of-the-art results without increasing parameters.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces StrCGAN, a novel generative model for enhancing low-resolution astrophotography images by incorporating 3D convolutions, multi-spectral fusion, and astrophysical regularization within a CycleGAN framework to improve image quality and preserve stellar morphology.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一阶状态空间模型（FSSM），通过结合token相关性来改进Mamba模块，用于轻量级图像超分辨率，并在不增加参数的情况下实现了最先进的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了StrCGAN，一种新型生成模型，通过在CycleGAN框架中结合3D卷积、多光谱融合和天体物理正则化来增强低分辨率天体摄影图像，从而提高图像质量并保持恒星形态。</p>
             
 
             
@@ -384,122 +386,11 @@ surpasses current lightweight SR methods, achieving state-of-the-art results.</p
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2509.08458v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yujie Zhu, Xinyi Zhang, Yekai Lu, Guang Yang, Faming Fang, Guixu Zhang</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.1, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">VRAE: Vertical Residual Autoencoder for License Plate Denoising and Deblurring</h2>
-            
-            <p class="paper-summary">In real-world traffic surveillance, vehicle images captured under adverse
-weather, poor lighting, or high-speed motion often suffer from severe noise and
-blur. Such degradations significantly reduce the accuracy of license plate
-recognition systems, especially when the plate occupies only a small region
-within the full vehicle image. Restoring these degraded images a fast realtime
-manner is thus a crucial pre-processing step to enhance recognition
-performance. In this work, we propose a Vertical Residual Autoencoder (VRAE)
-architecture designed for the image enhancement task in traffic surveillance.
-The method incorporates an enhancement strategy that employs an auxiliary
-block, which injects input-aware features at each encoding stage to guide the
-representation learning process, enabling better general information
-preservation throughout the network compared to conventional autoencoders.
-Experiments on a vehicle image dataset with visible license plates demonstrate
-that our method consistently outperforms Autoencoder (AE), Generative
-Adversarial Network (GAN), and Flow-Based (FB) approaches. Compared with AE at
-the same depth, it improves PSNR by about 20\%, reduces NMSE by around 50\%,
-and enhances SSIM by 1\%, while requiring only a marginal increase of roughly
-1\% in parameters.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes a Vertical Residual Autoencoder (VRAE) for license plate denoising and deblurring in traffic surveillance, demonstrating improvements over AE, GAN, and Flow-Based approaches with minimal parameter increase.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种用于交通监控中车牌去噪和去模糊的垂直残差自编码器（VRAE），结果表明，与AE、GAN和基于流的方法相比，该方法有所改进，且参数增加极少。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
             </div>
             
             
@@ -533,18 +424,18 @@ and enhances SSIM by 1\%, while requiring only a marginal increase of roughly
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.08392v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.19805v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Cuong Nguyen, Dung T. Tran, Hong Nguyen, Xuan-Vu Phan, Nam-Phong Nguyen</p>
+            <p class="paper-authors">Authors: Shantanusinh Parmar</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-09-25 03:31:40 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-09-25 03:34:40 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
