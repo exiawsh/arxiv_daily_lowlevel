@@ -1,0 +1,252 @@
+[
+    {
+        "title": "LucidFlux: Caption-Free Universal Image Restoration via a Large-Scale Diffusion Transformer",
+        "summary": "Universal image restoration (UIR) aims to recover images degraded by unknown\nmixtures while preserving semantics -- conditions under which discriminative\nrestorers and UNet-based diffusion priors often oversmooth, hallucinate, or\ndrift. We present LucidFlux, a caption-free UIR framework that adapts a large\ndiffusion transformer (Flux.1) without image captions. LucidFlux introduces a\nlightweight dual-branch conditioner that injects signals from the degraded\ninput and a lightly restored proxy to respectively anchor geometry and suppress\nartifacts. Then, a timestep- and layer-adaptive modulation schedule is designed\nto route these cues across the backbone's hierarchy, in order to yield\ncoarse-to-fine and context-aware updates that protect the global structure\nwhile recovering texture. After that, to avoid the latency and instability of\ntext prompts or MLLM captions, we enforce caption-free semantic alignment via\nSigLIP features extracted from the proxy. A scalable curation pipeline further\nfilters large-scale data for structure-rich supervision. Across synthetic and\nin-the-wild benchmarks, LucidFlux consistently outperforms strong open-source\nand commercial baselines, and ablation studies verify the necessity of each\ncomponent. LucidFlux shows that, for large DiTs, when, where, and what to\ncondition on -- rather than adding parameters or relying on text prompts -- is\nthe governing lever for robust and caption-free universal image restoration in\nthe wild.",
+        "url": "http://arxiv.org/abs/2509.22414v1",
+        "published_date": "2025-09-26T14:39:08+00:00",
+        "updated_date": "2025-09-26T14:39:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Song Fei",
+            "Tian Ye",
+            "Lujia Wang",
+            "Lei Zhu"
+        ],
+        "tldr": "LucidFlux is a caption-free universal image restoration framework using a large diffusion transformer with a novel conditioning approach and semantic alignment via SigLIP features, outperforming existing methods.",
+        "tldr_zh": "LucidFlux 是一种无需标题的通用图像修复框架，它使用大型扩散Transformer，采用新颖的调节方法，并通过SigLIP特征进行语义对齐，性能优于现有方法。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "RAPID^3: Tri-Level Reinforced Acceleration Policies for Diffusion Transformer",
+        "summary": "Diffusion Transformers (DiTs) excel at visual generation yet remain hampered\nby slow sampling. Existing training-free accelerators - step reduction, feature\ncaching, and sparse attention - enhance inference speed but typically rely on a\nuniform heuristic or a manually designed adaptive strategy for all images,\nleaving quality on the table. Alternatively, dynamic neural networks offer\nper-image adaptive acceleration, but their high fine-tuning costs limit broader\napplicability. To address these limitations, we introduce RAPID3: Tri-Level\nReinforced Acceleration Policies for Diffusion Transformers, a framework that\ndelivers image-wise acceleration with zero updates to the base generator.\nSpecifically, three lightweight policy heads - Step-Skip, Cache-Reuse, and\nSparse-Attention - observe the current denoising state and independently decide\ntheir corresponding speed-up at each timestep. All policy parameters are\ntrained online via Group Relative Policy Optimization (GRPO) while the\ngenerator remains frozen. Meanwhile, an adversarially learned discriminator\naugments the reward signal, discouraging reward hacking by boosting returns\nonly when generated samples stay close to the original model's distribution.\nAcross state-of-the-art DiT backbones, including Stable Diffusion 3 and FLUX,\nRAPID3 achieves nearly 3x faster sampling with competitive generation quality.",
+        "url": "http://arxiv.org/abs/2509.22323v1",
+        "published_date": "2025-09-26T13:20:52+00:00",
+        "updated_date": "2025-09-26T13:20:52+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wangbo Zhao",
+            "Yizeng Han",
+            "Zhiwei Tang",
+            "Jiasheng Tang",
+            "Pengfei Zhou",
+            "Kai Wang",
+            "Bohan Zhuang",
+            "Zhangyang Wang",
+            "Fan Wang",
+            "Yang You"
+        ],
+        "tldr": "The paper introduces RAPID^3, a training-free framework to accelerate Diffusion Transformers (DiTs) by using three lightweight policy heads to adaptively control step-skipping, cache-reuse, and sparse-attention at each timestep, achieving nearly 3x faster sampling with competitive generation quality.",
+        "tldr_zh": "该论文介绍了 RAPID^3，一个无需训练的框架，通过使用三个轻量级的策略头自适应地控制每一步的时间步跳过、缓存重用和稀疏注意力，从而加速扩散变换器 (DiT)，在保证生成质量的同时，实现了近 3 倍的采样速度提升。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "HiGS: History-Guided Sampling for Plug-and-Play Enhancement of Diffusion Models",
+        "summary": "While diffusion models have made remarkable progress in image generation,\ntheir outputs can still appear unrealistic and lack fine details, especially\nwhen using fewer number of neural function evaluations (NFEs) or lower guidance\nscales. To address this issue, we propose a novel momentum-based sampling\ntechnique, termed history-guided sampling (HiGS), which enhances quality and\nefficiency of diffusion sampling by integrating recent model predictions into\neach inference step. Specifically, HiGS leverages the difference between the\ncurrent prediction and a weighted average of past predictions to steer the\nsampling process toward more realistic outputs with better details and\nstructure. Our approach introduces practically no additional computation and\nintegrates seamlessly into existing diffusion frameworks, requiring neither\nextra training nor fine-tuning. Extensive experiments show that HiGS\nconsistently improves image quality across diverse models and architectures and\nunder varying sampling budgets and guidance scales. Moreover, using a\npretrained SiT model, HiGS achieves a new state-of-the-art FID of 1.61 for\nunguided ImageNet generation at 256$\\times$256 with only 30 sampling steps\n(instead of the standard 250). We thus present HiGS as a plug-and-play\nenhancement to standard diffusion sampling that enables faster generation with\nhigher fidelity.",
+        "url": "http://arxiv.org/abs/2509.22300v1",
+        "published_date": "2025-09-26T13:01:10+00:00",
+        "updated_date": "2025-09-26T13:01:10+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Seyedmorteza Sadat",
+            "Farnood Salehi",
+            "Romann M. Weber"
+        ],
+        "tldr": "The paper introduces HiGS, a plug-and-play momentum-based sampling technique for diffusion models that enhances image quality and efficiency by integrating recent model predictions into the sampling process without requiring additional training or fine-tuning.",
+        "tldr_zh": "该论文介绍了一种名为HiGS的即插即用动量采样技术，用于扩散模型，通过将最近的模型预测整合到采样过程中，从而提高图像质量和效率，且无需额外的训练或微调。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "REFINE-CONTROL: A Semi-supervised Distillation Method For Conditional Image Generation",
+        "summary": "Conditional image generation models have achieved remarkable results by\nleveraging text-based control to generate customized images. However, the high\nresource demands of these models and the scarcity of well-annotated data have\nhindered their deployment on edge devices, leading to enormous costs and\nprivacy concerns, especially when user data is sent to a third party. To\novercome these challenges, we propose Refine-Control, a semi-supervised\ndistillation framework. Specifically, we improve the performance of the student\nmodel by introducing a tri-level knowledge fusion loss to transfer different\nlevels of knowledge. To enhance generalization and alleviate dataset scarcity,\nwe introduce a semi-supervised distillation method utilizing both labeled and\nunlabeled data. Our experiments reveal that Refine-Control achieves significant\nreductions in computational cost and latency, while maintaining high-fidelity\ngeneration capabilities and controllability, as quantified by comparative\nmetrics.",
+        "url": "http://arxiv.org/abs/2509.22139v1",
+        "published_date": "2025-09-26T09:59:40+00:00",
+        "updated_date": "2025-09-26T09:59:40+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yicheng Jiang",
+            "Jin Yuan",
+            "Hua Yuan",
+            "Yao Zhang",
+            "Yong Rui"
+        ],
+        "tldr": "The paper introduces Refine-Control, a semi-supervised knowledge distillation framework for conditional image generation, aiming to reduce computational costs and improve generalization, making it suitable for edge devices.",
+        "tldr_zh": "该论文介绍了Refine-Control，一种用于条件图像生成的半监督知识蒸馏框架，旨在降低计算成本并提高泛化能力，使其适用于边缘设备。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SRHand: Super-Resolving Hand Images and 3D Shapes via View/Pose-aware Neural Image Representations and Explicit 3D Meshes",
+        "summary": "Reconstructing detailed hand avatars plays a crucial role in various\napplications. While prior works have focused on capturing high-fidelity hand\ngeometry, they heavily rely on high-resolution multi-view image inputs and\nstruggle to generalize on low-resolution images. Multi-view image\nsuper-resolution methods have been proposed to enforce 3D view consistency.\nThese methods, however, are limited to static objects/scenes with fixed\nresolutions and are not applicable to articulated deformable hands. In this\npaper, we propose SRHand (Super-Resolution Hand), the method for reconstructing\ndetailed 3D geometry as well as textured images of hands from low-resolution\nimages. SRHand leverages the advantages of implicit image representation with\nexplicit hand meshes. Specifically, we introduce a geometric-aware implicit\nimage function (GIIF) that learns detailed hand prior by upsampling the coarse\ninput images. By jointly optimizing the implicit image function and explicit 3D\nhand shapes, our method preserves multi-view and pose consistency among\nupsampled hand images, and achieves fine-detailed 3D reconstruction (wrinkles,\nnails). In experiments using the InterHand2.6M and Goliath datasets, our method\nsignificantly outperforms state-of-the-art image upsampling methods adapted to\nhand datasets, and 3D hand reconstruction methods, quantitatively and\nqualitatively. Project page: https://yunminjin2.github.io/projects/srhand",
+        "url": "http://arxiv.org/abs/2509.21859v1",
+        "published_date": "2025-09-26T04:34:34+00:00",
+        "updated_date": "2025-09-26T04:34:34+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Minje Kim",
+            "Tae-Kyun Kim"
+        ],
+        "tldr": "SRHand reconstructs detailed 3D hand geometry and textured images from low-resolution images by leveraging a geometric-aware implicit image function and explicit hand meshes, outperforming existing super-resolution and 3D reconstruction methods.",
+        "tldr_zh": "SRHand通过结合几何感知的隐式图像函数和显式手部网格，从低分辨率图像重建详细的3D手部几何形状和纹理图像，优于现有的超分辨率和3D重建方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "No Alignment Needed for Generation: Learning Linearly Separable Representations in Diffusion Models",
+        "summary": "Efficient training strategies for large-scale diffusion models have recently\nemphasized the importance of improving discriminative feature representations\nin these models. A central line of work in this direction is representation\nalignment with features obtained from powerful external encoders, which\nimproves the representation quality as assessed through linear probing.\nAlignment-based approaches show promise but depend on large pretrained\nencoders, which are computationally expensive to obtain. In this work, we\npropose an alternative regularization for training, based on promoting the\nLinear SEParability (LSEP) of intermediate layer representations. LSEP\neliminates the need for an auxiliary encoder and representation alignment,\nwhile incorporating linear probing directly into the network's learning\ndynamics rather than treating it as a simple post-hoc evaluation tool. Our\nresults demonstrate substantial improvements in both training efficiency and\ngeneration quality on flow-based transformer architectures such as SiTs,\nachieving an FID of 1.46 on $256 \\times 256$ ImageNet dataset.",
+        "url": "http://arxiv.org/abs/2509.21565v1",
+        "published_date": "2025-09-25T20:46:48+00:00",
+        "updated_date": "2025-09-25T20:46:48+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Junno Yun",
+            "Yaşar Utku Alçalar",
+            "Mehmet Akçakaya"
+        ],
+        "tldr": "This paper introduces a novel regularization method, Linear Separability (LSEP), for training diffusion models, eliminating the need for computationally expensive external encoders and achieving improved training efficiency and generation quality. It attains an FID of 1.46 on 256x256 ImageNet.",
+        "tldr_zh": "本文提出了一种新的正则化方法，线性可分性（LSEP），用于训练扩散模型，无需昂贵的外部编码器，并提高了训练效率和生成质量。在256x256 ImageNet上实现了1.46的FID。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Patch-Based Diffusion for Data-Efficient, Radiologist-Preferred MRI Reconstruction",
+        "summary": "Magnetic resonance imaging (MRI) requires long acquisition times, raising\ncosts, reducing accessibility, and making scans more susceptible to motion\nartifacts. Diffusion probabilistic models that learn data-driven priors can\npotentially assist in reducing acquisition time. However, they typically\nrequire large training datasets that can be prohibitively expensive to collect.\nPatch-based diffusion models have shown promise in learning effective\ndata-driven priors over small real-valued datasets, but have not yet\ndemonstrated clinical value in MRI. We extend the Patch-based Diffusion Inverse\nSolver (PaDIS) to complex-valued, multi-coil MRI reconstruction, and compare it\nagainst a state-of-the-art whole-image diffusion baseline (FastMRI-EDM) for 7x\nundersampled MRI reconstruction on the FastMRI brain dataset. We show that\nPaDIS-MRI models trained on small datasets of as few as 25 k-space images\noutperform FastMRI-EDM on image quality metrics (PSNR, SSIM, NRMSE),\npixel-level uncertainty, cross-contrast generalization, and robustness to\nsevere k-space undersampling. In a blinded study with three radiologists,\nPaDIS-MRI reconstructions were chosen as diagnostically superior in 91.7% of\ncases, compared to baselines (i) FastMRI-EDM and (ii) classical convex\nreconstruction with wavelet sparsity. These findings highlight the potential of\npatch-based diffusion priors for high-fidelity MRI reconstruction in\ndata-scarce clinical settings where diagnostic confidence matters.",
+        "url": "http://arxiv.org/abs/2509.21531v1",
+        "published_date": "2025-09-25T20:18:56+00:00",
+        "updated_date": "2025-09-25T20:18:56+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Rohan Sanda",
+            "Asad Aali",
+            "Andrew Johnston",
+            "Eduardo Reis",
+            "Jonathan Singh",
+            "Gordon Wetzstein",
+            "Sara Fridovich-Keil"
+        ],
+        "tldr": "This paper introduces a patch-based diffusion model (PaDIS-MRI) for MRI reconstruction that outperforms whole-image diffusion baselines, especially in data-scarce scenarios, and is preferred by radiologists.",
+        "tldr_zh": "该论文介绍了一种基于补丁的扩散模型 (PaDIS-MRI) 用于 MRI 重建，该模型优于整体图像扩散基线，尤其是在数据稀缺的情况下，并且更受放射科医生的青睐。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DistillKac: Few-Step Image Generation via Damped Wave Equations",
+        "summary": "We present DistillKac, a fast image generator that uses the damped wave\nequation and its stochastic Kac representation to move probability mass at\nfinite speed. In contrast to diffusion models whose reverse time velocities can\nbecome stiff and implicitly allow unbounded propagation speed, Kac dynamics\nenforce finite speed transport and yield globally bounded kinetic energy.\nBuilding on this structure, we introduce classifier-free guidance in velocity\nspace that preserves square integrability under mild conditions. We then\npropose endpoint only distillation that trains a student to match a frozen\nteacher over long intervals. We prove a stability result that promotes\nsupervision at the endpoints to closeness along the entire path. Experiments\ndemonstrate DistillKac delivers high quality samples with very few function\nevaluations while retaining the numerical stability benefits of finite speed\nprobability flows.",
+        "url": "http://arxiv.org/abs/2509.21513v1",
+        "published_date": "2025-09-25T20:04:41+00:00",
+        "updated_date": "2025-09-25T20:04:41+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV",
+            "math.PR",
+            "stat.ML"
+        ],
+        "authors": [
+            "Weiqiao Han",
+            "Chenlin Meng",
+            "Christopher D. Manning",
+            "Stefano Ermon"
+        ],
+        "tldr": "DistillKac introduces a fast image generation method using damped wave equations and Kac representation, achieving high-quality samples with few function evaluations while maintaining numerical stability through finite speed probability flows.",
+        "tldr_zh": "DistillKac 提出了一种使用阻尼波动方程和 Kac 表示的快速图像生成方法，通过有限速度概率流，以少量函数评估实现高质量样本并保持数值稳定性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Group Critical-token Policy Optimization for Autoregressive Image Generation",
+        "summary": "Recent studies have extended Reinforcement Learning with Verifiable Rewards\n(RLVR) to autoregressive (AR) visual generation and achieved promising\nprogress. However, existing methods typically apply uniform optimization across\nall image tokens, while the varying contributions of different image tokens for\nRLVR's training remain unexplored. In fact, the key obstacle lies in how to\nidentify more critical image tokens during AR generation and implement\neffective token-wise optimization for them. To tackle this challenge, we\npropose $\\textbf{G}$roup $\\textbf{C}$ritical-token $\\textbf{P}$olicy\n$\\textbf{O}$ptimization ($\\textbf{GCPO}$), which facilitates effective policy\noptimization on critical tokens. We identify the critical tokens in RLVR-based\nAR generation from three perspectives, specifically: $\\textbf{(1)}$ Causal\ndependency: early tokens fundamentally determine the later tokens and final\nimage effect due to unidirectional dependency; $\\textbf{(2)}$ Entropy-induced\nspatial structure: tokens with high entropy gradients correspond to image\nstructure and bridges distinct visual regions; $\\textbf{(3)}$ RLVR-focused\ntoken diversity: tokens with low visual similarity across a group of sampled\nimages contribute to richer token-level diversity. For these identified\ncritical tokens, we further introduce a dynamic token-wise advantage weight to\nencourage exploration, based on confidence divergence between the policy model\nand reference model. By leveraging 30\\% of the image tokens, GCPO achieves\nbetter performance than GRPO with full tokens. Extensive experiments on\nmultiple text-to-image benchmarks for both AR models and unified multimodal\nmodels demonstrate the effectiveness of GCPO for AR visual generation.",
+        "url": "http://arxiv.org/abs/2509.22485v1",
+        "published_date": "2025-09-26T15:33:18+00:00",
+        "updated_date": "2025-09-26T15:33:18+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Guohui Zhang",
+            "Hu Yu",
+            "Xiaoxiao Ma",
+            "JingHao Zhang",
+            "Yaning Pan",
+            "Mingde Yao",
+            "Jie Xiao",
+            "Linjiang Huang",
+            "Feng Zhao"
+        ],
+        "tldr": "The paper introduces Group Critical-token Policy Optimization (GCPO) for autoregressive image generation, which identifies and optimizes critical image tokens based on causal dependency, entropy, and token diversity, achieving improved performance with fewer tokens.",
+        "tldr_zh": "该论文介绍了用于自回归图像生成的Group Critical-token Policy Optimization (GCPO)，该方法基于因果依赖、熵和token多样性来识别和优化关键图像token，从而以更少的token实现了更好的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "UniVid: Unifying Vision Tasks with Pre-trained Video Generation Models",
+        "summary": "Large language models, trained on extensive corpora, successfully unify\ndiverse linguistic tasks within a single generative framework. Inspired by\nthis, recent works like Large Vision Model (LVM) extend this paradigm to vision\nby organizing tasks into sequential visual sentences, where visual prompts\nserve as the context to guide outputs. However, such modeling requires\ntask-specific pre-training across modalities and sources, which is costly and\nlimits scalability to unseen tasks. Given that pre-trained video generation\nmodels inherently capture temporal sequence dependencies, we explore a more\nunified and scalable alternative: can a pre-trained video generation model\nadapt to diverse image and video tasks? To answer this, we propose UniVid, a\nframework that fine-tunes a video diffusion transformer to handle various\nvision tasks without task-specific modifications. Tasks are represented as\nvisual sentences, where the context sequence defines both the task and the\nexpected output modality. We evaluate the generalization of UniVid from two\nperspectives: (1) cross-modal inference with contexts composed of both images\nand videos, extending beyond LVM's uni-modal setting; (2) cross-source tasks\nfrom natural to annotated data, without multi-source pre-training. Despite\nbeing trained solely on natural video data, UniVid generalizes well in both\nsettings. Notably, understanding and generation tasks can easily switch by\nsimply reversing the visual sentence order in this paradigm. These findings\nhighlight the potential of pre-trained video generation models to serve as a\nscalable and unified foundation for vision modeling. Our code will be released\nat https://github.com/CUC-MIPG/UniVid.",
+        "url": "http://arxiv.org/abs/2509.21760v1",
+        "published_date": "2025-09-26T01:43:40+00:00",
+        "updated_date": "2025-09-26T01:43:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Lan Chen",
+            "Yuchao Gu",
+            "Qi Mao"
+        ],
+        "tldr": "The paper proposes UniVid, a framework that fine-tunes a pre-trained video diffusion transformer to handle diverse vision tasks by representing them as visual sentences, demonstrating its generalization capabilities across modalities and sources without task-specific pre-training.",
+        "tldr_zh": "该论文提出了 UniVid，一个通过微调预训练视频扩散transformer来处理各种视觉任务的框架，通过将任务表示为视觉句子，展示了其在跨模态和跨源的泛化能力，而无需特定于任务的预训练。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
