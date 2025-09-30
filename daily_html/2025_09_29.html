@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - September 23, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - September 29, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>September 23, 2025</p>
+            <p>September 29, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,112 +215,95 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Degradation-Aware All-in-One Image Restoration via Latent Prior Encoding</h2>
+            <h2 class="paper-title">Towards Redundancy Reduction in Diffusion Models for Efficient Video Super-Resolution</h2>
             
-            <p class="paper-summary">Real-world images often suffer from spatially diverse degradations such as
-haze, rain, snow, and low-light, significantly impacting visual quality and
-downstream vision tasks. Existing all-in-one restoration (AIR) approaches
-either depend on external text prompts or embed hand-crafted architectural
-priors (e.g., frequency heuristics); both impose discrete, brittle assumptions
-that weaken generalization to unseen or mixed degradations. To address this
-limitation, we propose to reframe AIR as learned latent prior inference, where
-degradation-aware representations are automatically inferred from the input
-without explicit task cues. Based on latent priors, we formulate AIR as a
-structured reasoning paradigm: (1) which features to route (adaptive feature
-selection), (2) where to restore (spatial localization), and (3) what to
-restore (degradation semantics). We design a lightweight decoding module that
-efficiently leverages these latent encoded cues for spatially-adaptive
-restoration. Extensive experiments across six common degradation tasks, five
-compound settings, and previously unseen degradations demonstrate that our
-method outperforms state-of-the-art (SOTA) approaches, achieving an average
-PSNR improvement of 1.68 dB while being three times more efficient.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel all-in-one image restoration (AIR) approach that uses learned latent priors to address various degradations, outperforming SOTA methods with improved efficiency and generalization.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新颖的All-in-One图像恢复(AIR)方法，该方法使用学习到的潜在先验来解决各种退化问题，在提高效率和泛化能力的同时，优于SOTA方法。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-            </div>
+            <p class="paper-summary">Diffusion models have recently shown promising results for video
+super-resolution (VSR). However, directly adapting generative diffusion models
+to VSR can result in redundancy, since low-quality videos already preserve
+substantial content information. Such redundancy leads to increased
+computational overhead and learning burden, as the model performs superfluous
+operations and must learn to filter out irrelevant information. To address this
+problem, we propose OASIS, an efficient $\textbf{o}$ne-step diffusion model
+with $\textbf{a}$ttention $\textbf{s}$pecialization for real-world
+v$\textbf{i}$deo $\textbf{s}$uper-resolution. OASIS incorporates an attention
+specialization routing that assigns attention heads to different patterns
+according to their intrinsic behaviors. This routing mitigates redundancy while
+effectively preserving pretrained knowledge, allowing diffusion models to
+better adapt to VSR and achieve stronger performance. Moreover, we propose a
+simple yet effective progressive training strategy, which starts with
+temporally consistent degradations and then shifts to inconsistent settings.
+This strategy facilitates learning under complex degradations. Extensive
+experiments demonstrate that OASIS achieves state-of-the-art performance on
+both synthetic and real-world datasets. OASIS also provides superior inference
+speed, offering a $\textbf{6.2$\times$}$ speedup over one-step diffusion
+baselines such as SeedVR2. The code will be available at
+\href{https://github.com/jp-guo/OASIS}{https://github.com/jp-guo/OASIS}.</p>
             
             
 
             
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-            </div>
+            
             
 
-            <a href="http://arxiv.org/abs/2509.17792v1" target="_blank" class="paper-link">
+            
+
+            <a href="http://arxiv.org/abs/2509.23980v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: S M A Sharif, Abdur Rehman, Fayaz Ali Dharejo, Radu Timofte, Rizwan Ali Naqvi</p>
+            <p class="paper-authors">Authors: Jinpei Guo, Yifei Ji, Zheng Chen, Yufei Wang, Sizhuo Ma, Yong Guo, Yulun Zhang, Jian Wang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">HunyuanImage 3.0 Technical Report</h2>
+            
+            <p class="paper-summary">We present HunyuanImage 3.0, a native multimodal model that unifies
+multimodal understanding and generation within an autoregressive framework,
+with its image generation module publicly available. The achievement of
+HunyuanImage 3.0 relies on several key components, including meticulous data
+curation, advanced architecture design, a native Chain-of-Thoughts schema,
+progressive model pre-training, aggressive model post-training, and an
+efficient infrastructure that enables large-scale training and inference. With
+these advancements, we successfully trained a Mixture-of-Experts (MoE) model
+comprising over 80 billion parameters in total, with 13 billion parameters
+activated per token during inference, making it the largest and most powerful
+open-source image generative model to date. We conducted extensive experiments
+and the results of automatic and human evaluation of text-image alignment and
+visual quality demonstrate that HunyuanImage 3.0 rivals previous
+state-of-the-art models. By releasing the code and weights of HunyuanImage 3.0,
+we aim to enable the community to explore new ideas with a state-of-the-art
+foundation model, fostering a dynamic and vibrant multimodal ecosystem. All
+open source assets are publicly available at
+https://github.com/Tencent-Hunyuan/HunyuanImage-3.0</p>
+            
+            
+
+            
+            
+            
+
+            
+
+            <a href="http://arxiv.org/abs/2509.23951v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Siyu Cao, Hangting Chen, Peng Chen, Yiji Cheng, Yutao Cui, Xinchi Deng, Ying Dong, Kipper Gong, Tianpeng Gu, Xiusen Gu, Tiankai Hang, Duojun Huang, Jie Jiang, Zhengkai Jiang, Weijie Kong, Changlin Li, Donghao Li, Junzhe Li, Xin Li, Yang Li, Zhenxi Li, Zhimin Li, Jiaxin Lin, Linus, Lucaz Liu, Shu Liu, Songtao Liu, Yu Liu, Yuhong Liu, Yanxin Long, Fanbin Lu, Qinglin Lu, Yuyang Peng, Yuanbo Peng, Xiangwei Shen, Yixuan Shi, Jiale Tao, Yangyu Tao, Qi Tian, Pengfei Wan, Chunyu Wang, Kai Wang, Lei Wang, Linqing Wang, Lucas Wang, Qixun Wang, Weiyan Wang, Hao Wen, Bing Wu, Jianbing Wu, Yue Wu, Senhao Xie, Fang Yang, Miles Yang, Xiaofeng Yang, Xuan Yang, Zhantao Yang, Jingmiao Yu, Zheng Yuan, Chao Zhang, Jian-Wei Zhang, Peizhen Zhang, Shi-Xue Zhang, Tao Zhang, Weigang Zhang, Yepeng Zhang, Yingfang Zhang, Zihao Zhang, Zijian Zhang, Penghao Zhao, Zhiyuan Zhao, Xuefei Zhe, Jianchen Zhu, Zhao Zhong</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-09-30 03:29:10 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-09-30 04:30:19 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
