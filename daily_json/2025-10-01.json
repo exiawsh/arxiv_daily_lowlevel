@@ -1,0 +1,96 @@
+[
+    {
+        "title": "Continuous Space-Time Video Super-Resolution with 3D Fourier Fields",
+        "summary": "We introduce a novel formulation for continuous space-time video\nsuper-resolution. Instead of decoupling the representation of a video sequence\ninto separate spatial and temporal components and relying on brittle, explicit\nframe warping for motion compensation, we encode video as a continuous,\nspatio-temporally coherent 3D Video Fourier Field (VFF). That representation\noffers three key advantages: (1) it enables cheap, flexible sampling at\narbitrary locations in space and time; (2) it is able to simultaneously capture\nfine spatial detail and smooth temporal dynamics; and (3) it offers the\npossibility to include an analytical, Gaussian point spread function in the\nsampling to ensure aliasing-free reconstruction at arbitrary scale. The\ncoefficients of the proposed, Fourier-like sinusoidal basis are predicted with\na neural encoder with a large spatio-temporal receptive field, conditioned on\nthe low-resolution input video. Through extensive experiments, we show that our\njoint modeling substantially improves both spatial and temporal\nsuper-resolution and sets a new state of the art for multiple benchmarks:\nacross a wide range of upscaling factors, it delivers sharper and temporally\nmore consistent reconstructions than existing baselines, while being\ncomputationally more efficient. Project page: https://v3vsr.github.io.",
+        "url": "http://arxiv.org/abs/2509.26325v1",
+        "published_date": "2025-09-30T14:34:02+00:00",
+        "updated_date": "2025-09-30T14:34:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Alexander Becker",
+            "Julius Erbach",
+            "Dominik Narnhofer",
+            "Konrad Schindler"
+        ],
+        "tldr": "This paper introduces a novel video super-resolution method using a 3D Video Fourier Field (VFF) representation, achieving state-of-the-art results with improved spatial and temporal consistency and computational efficiency.",
+        "tldr_zh": "本文提出了一种新的视频超分辨率方法，该方法使用3D视频傅里叶场（VFF）表示，实现了最先进的结果，并提高了空间和时间一致性以及计算效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FLOWER: A Flow-Matching Solver for Inverse Problems",
+        "summary": "We introduce Flower, a solver for inverse problems. It leverages a\npre-trained flow model to produce reconstructions that are consistent with the\nobserved measurements. Flower operates through an iterative procedure over\nthree steps: (i) a flow-consistent destination estimation, where the velocity\nnetwork predicts a denoised target; (ii) a refinement step that projects the\nestimated destination onto a feasible set defined by the forward operator; and\n(iii) a time-progression step that re-projects the refined destination along\nthe flow trajectory. We provide a theoretical analysis that demonstrates how\nFlower approximates Bayesian posterior sampling, thereby unifying perspectives\nfrom plug-and-play methods and generative inverse solvers. On the practical\nside, Flower achieves state-of-the-art reconstruction quality while using\nnearly identical hyperparameters across various inverse problems.",
+        "url": "http://arxiv.org/abs/2509.26287v1",
+        "published_date": "2025-09-30T14:07:10+00:00",
+        "updated_date": "2025-09-30T14:07:10+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Mehrsa Pourya",
+            "Bassam El Rawas",
+            "Michael Unser"
+        ],
+        "tldr": "The paper introduces FLOWER, a novel solver for inverse problems that leverages flow models for reconstruction, achieving state-of-the-art results across various tasks with consistent hyperparameters.",
+        "tldr_zh": "该论文介绍了一种名为FLOWER的新型逆问题求解器，它利用流模型进行重建，并在各种任务中以一致的超参数实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PatchVSR: Breaking Video Diffusion Resolution Limits with Patch-wise Video Super-Resolution",
+        "summary": "Pre-trained video generation models hold great potential for generative video\nsuper-resolution (VSR). However, adapting them for full-size VSR, as most\nexisting methods do, suffers from unnecessary intensive full-attention\ncomputation and fixed output resolution. To overcome these limitations, we make\nthe first exploration into utilizing video diffusion priors for patch-wise VSR.\nThis is non-trivial because pre-trained video diffusion models are not native\nfor patch-level detail generation. To mitigate this challenge, we propose an\ninnovative approach, called PatchVSR, which integrates a dual-stream adapter\nfor conditional guidance. The patch branch extracts features from input patches\nto maintain content fidelity while the global branch extracts context features\nfrom the resized full video to bridge the generation gap caused by incomplete\nsemantics of patches. Particularly, we also inject the patch's location\ninformation into the model to better contextualize patch synthesis within the\nglobal video frame. Experiments demonstrate that our method can synthesize\nhigh-fidelity, high-resolution details at the patch level. A tailor-made\nmulti-patch joint modulation is proposed to ensure visual consistency across\nindividually enhanced patches. Due to the flexibility of our patch-based\nparadigm, we can achieve highly competitive 4K VSR based on a 512x512\nresolution base model, with extremely high efficiency.",
+        "url": "http://arxiv.org/abs/2509.26025v1",
+        "published_date": "2025-09-30T09:55:14+00:00",
+        "updated_date": "2025-09-30T09:55:14+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shian Du",
+            "Menghan Xia",
+            "Chang Liu",
+            "Xintao Wang",
+            "Jing Wang",
+            "Pengfei Wan",
+            "Di Zhang",
+            "Xiangyang Ji"
+        ],
+        "tldr": "PatchVSR proposes a patch-wise video super-resolution method using pre-trained video diffusion models with a dual-stream adapter to overcome limitations of full-size VSR, enabling efficient and high-resolution video enhancement.",
+        "tldr_zh": "PatchVSR 提出了一种基于预训练视频扩散模型的逐块视频超分辨率方法，采用双流适配器克服了全尺寸 VSR 的局限性，实现了高效的高分辨率视频增强。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PCPO: Proportionate Credit Policy Optimization for Aligning Image Generation Models",
+        "summary": "While reinforcement learning has advanced the alignment of text-to-image\n(T2I) models, state-of-the-art policy gradient methods are still hampered by\ntraining instability and high variance, hindering convergence speed and\ncompromising image quality. Our analysis identifies a key cause of this\ninstability: disproportionate credit assignment, in which the mathematical\nstructure of the generative sampler produces volatile and non-proportional\nfeedback across timesteps. To address this, we introduce Proportionate Credit\nPolicy Optimization (PCPO), a framework that enforces proportional credit\nassignment through a stable objective reformulation and a principled\nreweighting of timesteps. This correction stabilizes the training process,\nleading to significantly accelerated convergence and superior image quality.\nThe improvement in quality is a direct result of mitigating model collapse, a\ncommon failure mode in recursive training. PCPO substantially outperforms\nexisting policy gradient baselines on all fronts, including the\nstate-of-the-art DanceGRPO.",
+        "url": "http://arxiv.org/abs/2509.25774v1",
+        "published_date": "2025-09-30T04:43:58+00:00",
+        "updated_date": "2025-09-30T04:43:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jeongjae Lee",
+            "Jong Chul Ye"
+        ],
+        "tldr": "This paper introduces PCPO, a novel reinforcement learning framework for aligning text-to-image models. It addresses the issue of disproportionate credit assignment, leading to faster convergence and improved image quality compared to existing methods.",
+        "tldr_zh": "该论文介绍了一种新的用于对齐文本到图像模型的强化学习框架PCPO。它解决了不成比例的信用分配问题，从而与现有方法相比，实现了更快的收敛速度和更高的图像质量。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
