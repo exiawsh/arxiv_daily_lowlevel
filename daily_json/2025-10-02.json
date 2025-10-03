@@ -1,0 +1,285 @@
+[
+    {
+        "title": "NSARM: Next-Scale Autoregressive Modeling for Robust Real-World Image Super-Resolution",
+        "summary": "Most recent real-world image super-resolution (Real-ISR) methods employ\npre-trained text-to-image (T2I) diffusion models to synthesize the high-quality\nimage either from random Gaussian noise, which yields realistic results but is\nslow due to iterative denoising, or directly from the input low-quality image,\nwhich is efficient but at the price of lower output quality. These approaches\ntrain ControlNet or LoRA modules while keeping the pre-trained model fixed,\nwhich often introduces over-enhanced artifacts and hallucinations, suffering\nfrom the robustness to inputs of varying degradations. Recent visual\nautoregressive (AR) models, such as pre-trained Infinity, can provide strong\nT2I generation capabilities while offering superior efficiency by using the\nbitwise next-scale prediction strategy. Building upon next-scale prediction, we\nintroduce a robust Real-ISR framework, namely Next-Scale Autoregressive\nModeling (NSARM). Specifically, we train NSARM in two stages: a transformation\nnetwork is first trained to map the input low-quality image to preliminary\nscales, followed by an end-to-end full-model fine-tuning. Such a comprehensive\nfine-tuning enhances the robustness of NSARM in Real-ISR tasks without\ncompromising its generative capability. Extensive quantitative and qualitative\nevaluations demonstrate that as a pure AR model, NSARM achieves superior visual\nresults over existing Real-ISR methods while maintaining a fast inference\nspeed. Most importantly, it demonstrates much higher robustness to the quality\nof input images, showing stronger generalization performance. Project page:\nhttps://github.com/Xiangtaokong/NSARM",
+        "url": "http://arxiv.org/abs/2510.00820v1",
+        "published_date": "2025-10-01T12:29:58+00:00",
+        "updated_date": "2025-10-01T12:29:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiangtao Kong",
+            "Rongyuan Wu",
+            "Shuaizheng Liu",
+            "Lingchen Sun",
+            "Lei Zhang"
+        ],
+        "tldr": "The paper introduces NSARM, a robust and efficient autoregressive model for real-world image super-resolution that addresses the limitations of diffusion-based methods by using a next-scale prediction strategy and full-model fine-tuning for enhanced generalization and speed.",
+        "tldr_zh": "该论文介绍了NSARM，一种鲁棒且高效的自回归模型，用于真实世界图像超分辨率。它通过使用下一尺度预测策略和全模型微调，克服了基于扩散的方法的局限性，从而提高了泛化能力和速度。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "SoftCFG: Uncertainty-guided Stable Guidance for Visual Autoregressive Model",
+        "summary": "Autoregressive (AR) models have emerged as powerful tools for image\ngeneration by modeling images as sequences of discrete tokens. While\nClassifier-Free Guidance (CFG) has been adopted to improve conditional\ngeneration, its application in AR models faces two key issues: guidance\ndiminishing, where the conditional-unconditional gap quickly vanishes as\ndecoding progresses, and over-guidance, where strong conditions distort visual\ncoherence. To address these challenges, we propose SoftCFG, an\nuncertainty-guided inference method that distributes adaptive perturbations\nacross all tokens in the sequence. The key idea behind SoftCFG is to let each\ngenerated token contribute certainty-weighted guidance, ensuring that the\nsignal persists across steps while resolving conflicts between text guidance\nand visual context. To further stabilize long-sequence generation, we introduce\nStep Normalization, which bounds cumulative perturbations of SoftCFG. Our\nmethod is training-free, model-agnostic, and seamlessly integrates with\nexisting AR pipelines. Experiments show that SoftCFG significantly improves\nimage quality over standard CFG and achieves state-of-the-art FID on ImageNet\n256*256 among autoregressive models.",
+        "url": "http://arxiv.org/abs/2510.00996v2",
+        "published_date": "2025-10-01T15:04:00+00:00",
+        "updated_date": "2025-10-02T09:32:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dongli Xu",
+            "Aleksei Tiulpin",
+            "Matthew B. Blaschko"
+        ],
+        "tldr": "The paper introduces SoftCFG, a novel uncertainty-guided inference method for autoregressive image generation that addresses the diminishing guidance and over-guidance problems of Classifier-Free Guidance (CFG) by adaptively perturbing tokens based on their certainty. It achieves state-of-the-art FID on ImageNet 256x256.",
+        "tldr_zh": "本文提出了一种名为SoftCFG的新型不确定性引导推理方法，用于自回归图像生成，通过基于令牌的确定性自适应扰动来解决Classifier-Free Guidance (CFG) 的指导减弱和过度指导问题。 该方法在 ImageNet 256x256 上实现了最先进的 FID。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Visual Self-Refinement for Autoregressive Models",
+        "summary": "Autoregressive models excel in sequential modeling and have proven to be\neffective for vision-language data. However, the spatial nature of visual\nsignals conflicts with the sequential dependencies of next-token prediction,\nleading to suboptimal results. This work proposes a plug-and-play refinement\nmodule to enhance the complex spatial correspondence modeling within the\ngenerated visual sequence. This module operates as a post-pretraining step to\njointly refine all generated tokens of autoregressive model, enhancing\nvision-language modeling under a shared sequential prediction framework. By\nleveraging global context and relationship across the tokens, our method\nmitigates the error accumulation issue within the sequential generation.\nExperiments demonstrate that the proposed method improves the generation\nquality, enhancing the model's ability to produce semantically consistent\nresults.",
+        "url": "http://arxiv.org/abs/2510.00993v1",
+        "published_date": "2025-10-01T15:03:32+00:00",
+        "updated_date": "2025-10-01T15:03:32+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiamian Wang",
+            "Ziqi Zhou",
+            "Chaithanya Kumar Mummadi",
+            "Sohail Dianat",
+            "Majid Rabbani",
+            "Raghuveer Rao",
+            "Chen Qiu",
+            "Zhiqiang Tao"
+        ],
+        "tldr": "The paper introduces a post-pretraining refinement module for autoregressive vision-language models to improve spatial consistency in generated visual sequences, mitigating error accumulation and enhancing generation quality.",
+        "tldr_zh": "该论文提出了一种自回归视觉-语言模型的后预训练精炼模块，旨在提高生成视觉序列中的空间一致性，缓解误差累积并提高生成质量。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "JEPA-T: Joint-Embedding Predictive Architecture with Text Fusion for Image Generation",
+        "summary": "Modern Text-to-Image (T2I) generation increasingly relies on token-centric\narchitectures that are trained with self-supervision, yet effectively fusing\ntext with visual tokens remains a challenge. We propose \\textbf{JEPA-T}, a\nunified multimodal framework that encodes images and captions into discrete\nvisual and textual tokens, processed by a joint-embedding predictive\nTransformer. To enhance fusion, we incorporate cross-attention after the\nfeature predictor for conditional denoising while maintaining a task-agnostic\nbackbone. Additionally, raw texts embeddings are injected prior to the flow\nmatching loss to improve alignment during training. During inference, the same\nnetwork performs both class-conditional and free-text image generation by\niteratively denoising visual tokens conditioned on text. Evaluations on\nImageNet-1K demonstrate that JEPA-T achieves strong data efficiency,\nopen-vocabulary generalization, and consistently outperforms non-fusion and\nlate-fusion baselines. Our approach shows that late architectural fusion\ncombined with objective-level alignment offers an effective balance between\nconditioning strength and backbone generality in token-based T2I.The code is\nnow available: https://github.com/justin-herry/JEPA-T.git",
+        "url": "http://arxiv.org/abs/2510.00974v1",
+        "published_date": "2025-10-01T14:51:10+00:00",
+        "updated_date": "2025-10-01T14:51:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Siheng Wan",
+            "Zhengtao Yao",
+            "Zhengdao Li",
+            "Junhao Dong",
+            "Yanshu Li",
+            "Yikai Li",
+            "Linshan Li",
+            "Haoyan Xu",
+            "Yijiang Li",
+            "Zhikang Dong",
+            "Huacan Wang",
+            "Jifeng Shen"
+        ],
+        "tldr": "The paper introduces JEPA-T, a novel text-to-image generation framework that uses a joint-embedding predictive Transformer with late fusion and objective-level alignment to improve text and visual token fusion, demonstrating strong performance on ImageNet-1K.",
+        "tldr_zh": "该论文介绍了JEPA-T，一种新颖的文本到图像生成框架，它使用联合嵌入预测Transformer，通过后期融合和目标级别对齐来改善文本和视觉标记融合，并在ImageNet-1K上表现出强大的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Equivariant Splitting: Self-supervised learning from incomplete data",
+        "summary": "Self-supervised learning for inverse problems allows to train a\nreconstruction network from noise and/or incomplete data alone. These methods\nhave the potential of enabling learning-based solutions when obtaining\nground-truth references for training is expensive or even impossible. In this\npaper, we propose a new self-supervised learning strategy devised for the\nchallenging setting where measurements are observed via a single incomplete\nobservation model. We introduce a new definition of equivariance in the context\nof reconstruction networks, and show that the combination of self-supervised\nsplitting losses and equivariant reconstruction networks results in the same\nminimizer in expectation as the one of a supervised loss. Through a series of\nexperiments on image inpainting, accelerated magnetic resonance imaging, and\ncompressive sensing, we demonstrate that the proposed loss achieves\nstate-of-the-art performance in settings with highly rank-deficient forward\nmodels.",
+        "url": "http://arxiv.org/abs/2510.00929v2",
+        "published_date": "2025-10-01T14:08:17+00:00",
+        "updated_date": "2025-10-02T15:27:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Victor Sechaud",
+            "Jérémy Scanvic",
+            "Quentin Barthélemy",
+            "Patrice Abry",
+            "Julián Tachella"
+        ],
+        "tldr": "This paper introduces a self-supervised learning method using equivariant splitting losses for reconstruction networks, particularly effective in scenarios with incomplete data and rank-deficient forward models, achieving state-of-the-art performance in image inpainting, MRI, and compressive sensing.",
+        "tldr_zh": "本文提出了一种使用等变分裂损失的自监督学习方法，用于重建网络，尤其是在不完整数据和秩亏前向模型的情况下有效，并在图像修复、MRI 和压缩感知方面实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MorphGen: Controllable and Morphologically Plausible Generative Cell-Imaging",
+        "summary": "Simulating in silico cellular responses to interventions is a promising\ndirection to accelerate high-content image-based assays, critical for advancing\ndrug discovery and gene editing. To support this, we introduce MorphGen, a\nstate-of-the-art diffusion-based generative model for fluorescent microscopy\nthat enables controllable generation across multiple cell types and\nperturbations. To capture biologically meaningful patterns consistent with\nknown cellular morphologies, MorphGen is trained with an alignment loss to\nmatch its representations to the phenotypic embeddings of OpenPhenom, a\nstate-of-the-art biological foundation model. Unlike prior approaches that\ncompress multichannel stains into RGB images -- thus sacrificing\norganelle-specific detail -- MorphGen generates the complete set of fluorescent\nchannels jointly, preserving per-organelle structures and enabling a\nfine-grained morphological analysis that is essential for biological\ninterpretation. We demonstrate biological consistency with real images via\nCellProfiler features, and MorphGen attains an FID score over $35\\%$ lower than\nthe prior state-of-the-art MorphoDiff, which only generates RGB images for a\nsingle cell type. Code is available at https://github.com/czi-ai/MorphGen.",
+        "url": "http://arxiv.org/abs/2510.01298v1",
+        "published_date": "2025-10-01T13:34:29+00:00",
+        "updated_date": "2025-10-01T13:34:29+00:00",
+        "categories": [
+            "q-bio.QM",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Berker Demirel",
+            "Marco Fumero",
+            "Theofanis Karaletsos",
+            "Francesco Locatello"
+        ],
+        "tldr": "MorphGen is a novel diffusion-based generative model for fluorescent microscopy that generates multichannel cell images with morphological plausibility, achieving better FID scores compared to existing methods.",
+        "tldr_zh": "MorphGen 是一种新型的基于扩散的荧光显微镜生成模型，它能生成具有形态学合理性的多通道细胞图像，并比现有方法实现了更好的FID分数。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Gather-Scatter Mamba: Accelerating Propagation with Efficient State Space Model",
+        "summary": "State Space Models (SSMs)-most notably RNNs-have historically played a\ncentral role in sequential modeling. Although attention mechanisms such as\nTransformers have since dominated due to their ability to model global context,\ntheir quadratic complexity and limited scalability make them less suited for\nlong sequences. Video super-resolution (VSR) methods have traditionally relied\non recurrent architectures to propagate features across frames. However, such\napproaches suffer from well-known issues including vanishing gradients, lack of\nparallelism, and slow inference speed. Recent advances in selective SSMs like\nMamba offer a compelling alternative: by enabling input-dependent state\ntransitions with linear-time complexity, Mamba mitigates these issues while\nmaintaining strong long-range modeling capabilities. Despite this potential,\nMamba alone struggles to capture fine-grained spatial dependencies due to its\ncausal nature and lack of explicit context aggregation. To address this, we\npropose a hybrid architecture that combines shifted window self-attention for\nspatial context aggregation with Mamba-based selective scanning for efficient\ntemporal propagation. Furthermore, we introduce Gather-Scatter Mamba (GSM), an\nalignment-aware mechanism that warps features toward a center anchor frame\nwithin the temporal window before Mamba propagation and scatters them back\nafterward, effectively reducing occlusion artifacts and ensuring effective\nredistribution of aggregated information across all frames. The official\nimplementation is provided at: https://github.com/Ko-Lani/GSMamba.",
+        "url": "http://arxiv.org/abs/2510.00862v1",
+        "published_date": "2025-10-01T13:11:13+00:00",
+        "updated_date": "2025-10-01T13:11:13+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hyun-kyu Ko",
+            "Youbin Kim",
+            "Jihyeon Park",
+            "Dongheok Park",
+            "Gyeongjin Kang",
+            "Wonjun Cho",
+            "Hyung Yi",
+            "Eunbyung Park"
+        ],
+        "tldr": "This paper introduces Gather-Scatter Mamba (GSM), a hybrid architecture combining shifted window self-attention and Mamba-based selective scanning for efficient video super-resolution, addressing limitations of both Transformers and recurrent architectures.",
+        "tldr_zh": "本文介绍了一种名为Gather-Scatter Mamba (GSM) 的混合架构，它结合了移位窗口自注意力机制和基于Mamba的选择性扫描，用于高效的视频超分辨率，旨在解决Transformer和循环架构的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Extreme Blind Image Restoration via Prompt-Conditioned Information Bottleneck",
+        "summary": "Blind Image Restoration (BIR) methods have achieved remarkable success but\nfalter when faced with Extreme Blind Image Restoration (EBIR), where inputs\nsuffer from severe, compounded degradations beyond their training scope.\nDirectly learning a mapping from extremely low-quality (ELQ) to high-quality\n(HQ) images is challenging due to the massive domain gap, often leading to\nunnatural artifacts and loss of detail. To address this, we propose a novel\nframework that decomposes the intractable ELQ-to-HQ restoration process. We\nfirst learn a projector that maps an ELQ image onto an intermediate,\nless-degraded LQ manifold. This intermediate image is then restored to HQ using\na frozen, off-the-shelf BIR model. Our approach is grounded in information\ntheory; we provide a novel perspective of image restoration as an Information\nBottleneck problem and derive a theoretically-driven objective to train our\nprojector. This loss function effectively stabilizes training by balancing a\nlow-quality reconstruction term with a high-quality prior-matching term. Our\nframework enables Look Forward Once (LFO) for inference-time prompt refinement,\nand supports plug-and-play strengthening of existing image restoration models\nwithout need for finetuning. Extensive experiments under severe degradation\nregimes provide a thorough analysis of the effectiveness of our work.",
+        "url": "http://arxiv.org/abs/2510.00728v1",
+        "published_date": "2025-10-01T10:13:27+00:00",
+        "updated_date": "2025-10-01T10:13:27+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Hongeun Kim",
+            "Bryan Sangwoo Kim",
+            "Jong Chul Ye"
+        ],
+        "tldr": "The paper proposes a novel framework for extreme blind image restoration (EBIR) by decomposing the problem into projecting ELQ images to an intermediate LQ manifold and then restoring to HQ using an off-the-shelf BIR model, trained with a theoretically-driven information bottleneck objective.",
+        "tldr_zh": "该论文提出了一种新的极端盲图像修复（EBIR）框架，通过将问题分解为将ELQ图像投影到中间LQ流形，然后使用现成的BIR模型恢复到HQ，并通过理论驱动的信息瓶颈目标进行训练。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "A Geometric Unification of Generative AI with Manifold-Probabilistic Projection Models",
+        "summary": "The foundational premise of generative AI for images is the assumption that\nimages are inherently low-dimensional objects embedded within a\nhigh-dimensional space. Additionally, it is often implicitly assumed that\nthematic image datasets form smooth or piecewise smooth manifolds. Common\napproaches overlook the geometric structure and focus solely on probabilistic\nmethods, approximating the probability distribution through universal\napproximation techniques such as the kernel method. In some generative models,\nthe low dimensional nature of the data manifest itself by the introduction of a\nlower dimensional latent space. Yet, the probability distribution in the latent\nor the manifold coordinate space is considered uninteresting and is predefined\nor considered uniform. This study unifies the geometric and probabilistic\nperspectives by providing a geometric framework and a kernel-based\nprobabilistic method simultaneously. The resulting framework demystifies\ndiffusion models by interpreting them as a projection mechanism onto the\nmanifold of ``good images''. This interpretation leads to the construction of a\nnew deterministic model, the Manifold-Probabilistic Projection Model (MPPM),\nwhich operates in both the representation (pixel) space and the latent space.\nWe demonstrate that the Latent MPPM (LMPPM) outperforms the Latent Diffusion\nModel (LDM) across various datasets, achieving superior results in terms of\nimage restoration and generation.",
+        "url": "http://arxiv.org/abs/2510.00666v1",
+        "published_date": "2025-10-01T08:50:30+00:00",
+        "updated_date": "2025-10-01T08:50:30+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Leah Bar",
+            "Liron Mor Yosef",
+            "Shai Zucker",
+            "Neta Shoham",
+            "Inbar Seroussi",
+            "Nir Sochen"
+        ],
+        "tldr": "This paper introduces a geometric framework unifying geometric and probabilistic perspectives in generative AI, proposing a Manifold-Probabilistic Projection Model (MPPM) that outperforms Latent Diffusion Models (LDM) in image restoration and generation.",
+        "tldr_zh": "本文提出了一个几何框架，统一了生成人工智能中的几何和概率视角，并提出了一种流形概率投影模型（MPPM），该模型在图像恢复和生成方面优于潜在扩散模型（LDM）。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 7,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning Energy-based Variational Latent Prior for VAEs",
+        "summary": "Variational Auto-Encoders (VAEs) are known to generate blurry and\ninconsistent samples. One reason for this is the \"prior hole\" problem. A prior\nhole refers to regions that have high probability under the VAE's prior but low\nprobability under the VAE's posterior. This means that during data generation,\nhigh probability samples from the prior could have low probability under the\nposterior, resulting in poor quality data. Ideally, a prior needs to be\nflexible enough to match the posterior while retaining the ability to generate\nsamples fast. Generative models continue to address this tradeoff. This paper\nproposes to model the prior as an energy-based model (EBM). While EBMs are\nknown to offer the flexibility to match posteriors (and also improving the\nELBO), they are traditionally slow in sample generation due to their dependency\non MCMC methods. Our key idea is to bring a variational approach to tackle the\nnormalization constant in EBMs, thus bypassing the expensive MCMC approaches.\nThe variational form can be approximated with a sampler network, and we show\nthat such an approach to training priors can be formulated as an alternating\noptimization problem. Moreover, the same sampler reduces to an implicit\nvariational prior during generation, providing efficient and fast sampling. We\ncompare our Energy-based Variational Latent Prior (EVaLP) method to multiple\nSOTA baselines and show improvements in image generation quality, reduced prior\nholes, and better sampling efficiency.",
+        "url": "http://arxiv.org/abs/2510.00260v1",
+        "published_date": "2025-09-30T20:32:00+00:00",
+        "updated_date": "2025-09-30T20:32:00+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Debottam Dutta",
+            "Chaitanya Amballa",
+            "Zhongweiyang Xu",
+            "Yu-Lin Wei",
+            "Romit Roy Choudhury"
+        ],
+        "tldr": "This paper introduces Energy-based Variational Latent Prior (EVaLP) for VAEs to address the prior hole problem, improving image generation quality and sampling efficiency by using a variational approach to train EBM priors, bypassing expensive MCMC methods.",
+        "tldr_zh": "该论文提出了一种用于 VAE 的基于能量的变分潜在先验 (EVaLP)，旨在解决先验孔问题，通过使用变分方法训练 EBM 先验，绕过昂贵的 MCMC 方法，从而提高图像生成质量和采样效率。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Measuring and Controlling the Spectral Bias for Self-Supervised Image Denoising",
+        "summary": "Current self-supervised denoising methods for paired noisy images typically\ninvolve mapping one noisy image through the network to the other noisy image.\nHowever, after measuring the spectral bias of such methods using our proposed\nImage Pair Frequency-Band Similarity, it suffers from two practical\nlimitations. Firstly, the high-frequency structural details in images are not\npreserved well enough. Secondly, during the process of fitting high\nfrequencies, the network learns high-frequency noise from the mapped noisy\nimages. To address these challenges, we introduce a Spectral Controlling\nnetwork (SCNet) to optimize self-supervised denoising of paired noisy images.\nFirst, we propose a selection strategy to choose frequency band components for\nnoisy images, to accelerate the convergence speed of training. Next, we present\na parameter optimization method that restricts the learning ability of\nconvolutional kernels to high-frequency noise using the Lipschitz constant,\nwithout changing the network structure. Finally, we introduce the Spectral\nSeparation and low-rank Reconstruction module (SSR module), which separates\nnoise and high-frequency details through frequency domain separation and\nlow-rank space reconstruction, to retain the high-frequency structural details\nof images. Experiments performed on synthetic and real-world datasets verify\nthe effectiveness of SCNet.",
+        "url": "http://arxiv.org/abs/2510.00454v1",
+        "published_date": "2025-10-01T03:07:05+00:00",
+        "updated_date": "2025-10-01T03:07:05+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Wang Zhang",
+            "Huaqiu Li",
+            "Xiaowan Hu",
+            "Tao Jiang",
+            "Zikang Chen",
+            "Haoqian Wang"
+        ],
+        "tldr": "The paper introduces a Spectral Controlling Network (SCNet) for self-supervised image denoising that addresses the spectral bias limitations of existing methods by preserving high-frequency details and mitigating noise learning. It leverages frequency band selection, Lipschitz constant-based parameter optimization, and spectral separation to achieve improved denoising performance.",
+        "tldr_zh": "该论文提出了一种用于自监督图像去噪的频谱控制网络(SCNet)，通过保留高频细节和减少噪声学习，解决了现有方法的频谱偏差限制。它利用频带选择、基于Lipschitz常数的参数优化和频谱分离，以实现改进的去噪性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

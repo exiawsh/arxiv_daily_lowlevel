@@ -1,0 +1,330 @@
+[
+    {
+        "title": "Pure-Pass: Fine-Grained, Adaptive Masking for Dynamic Token-Mixing Routing in Lightweight Image Super-Resolution",
+        "summary": "Image Super-Resolution (SR) aims to reconstruct high-resolution images from\nlow-resolution counterparts, but the computational complexity of deep\nlearning-based methods often hinders practical deployment. CAMixer is the\npioneering work to integrate the advantages of existing lightweight SR methods\nand proposes a content-aware mixer to route token mixers of varied complexities\naccording to the difficulty of content recovery. However, several limitations\nremain, such as poor adaptability, coarse-grained masking and spatial\ninflexibility, among others. We propose Pure-Pass (PP), a pixel-level masking\nmechanism that identifies pure pixels and exempts them from expensive\ncomputations. PP utilizes fixed color center points to classify pixels into\ndistinct categories, enabling fine-grained, spatially flexible masking while\nmaintaining adaptive flexibility. Integrated into the state-of-the-art\nATD-light model, PP-ATD-light achieves superior SR performance with minimal\noverhead, outperforming CAMixer-ATD-light in reconstruction quality and\nparameter efficiency when saving a similar amount of computation.",
+        "url": "http://arxiv.org/abs/2510.01997v1",
+        "published_date": "2025-10-02T13:18:43+00:00",
+        "updated_date": "2025-10-02T13:18:43+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Junyu Wu",
+            "Jie Tang",
+            "Jie Liu",
+            "Gangshan Wu"
+        ],
+        "tldr": "This paper introduces Pure-Pass (PP), a pixel-level masking mechanism for lightweight image super-resolution, which improves upon CAMixer by offering fine-grained, spatially flexible masking and enhanced performance with minimal overhead.",
+        "tldr_zh": "该论文提出了一种用于轻量级图像超分辨率的像素级掩码机制Pure-Pass (PP)，通过提供细粒度、空间灵活的掩码以及增强的性能和最小的开销，改进了CAMixer。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Optimal Control Meets Flow Matching: A Principled Route to Multi-Subject Fidelity",
+        "summary": "Text-to-image (T2I) models excel on single-entity prompts but struggle with\nmulti-subject descriptions, often showing attribute leakage, identity\nentanglement, and subject omissions. We introduce the first theoretical\nframework with a principled, optimizable objective for steering sampling\ndynamics toward multi-subject fidelity. Viewing flow matching (FM) through\nstochastic optimal control (SOC), we formulate subject disentanglement as\ncontrol over a trained FM sampler. This yields two architecture-agnostic\nalgorithms: (i) a training-free test-time controller that perturbs the base\nvelocity with a single-pass update, and (ii) Adjoint Matching, a lightweight\nfine-tuning rule that regresses a control network to a backward adjoint signal\nwhile preserving base-model capabilities. The same formulation unifies prior\nattention heuristics, extends to diffusion models via a flow-diffusion\ncorrespondence, and provides the first fine-tuning route explicitly designed\nfor multi-subject fidelity. Empirically, on Stable Diffusion 3.5, FLUX, and\nStable Diffusion XL, both algorithms consistently improve multi-subject\nalignment while maintaining base-model style. Test-time control runs\nefficiently on commodity GPUs, and fine-tuned controllers trained on limited\nprompts generalize to unseen ones. We further highlight FOCUS (Flow Optimal\nControl for Unentangled Subjects), which achieves state-of-the-art\nmulti-subject fidelity across models.",
+        "url": "http://arxiv.org/abs/2510.02315v1",
+        "published_date": "2025-10-02T17:59:58+00:00",
+        "updated_date": "2025-10-02T17:59:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Eric Tillmann Bill",
+            "Enis Simsar",
+            "Thomas Hofmann"
+        ],
+        "tldr": "This paper introduces a novel framework leveraging stochastic optimal control (SOC) and flow matching (FM) to improve multi-subject fidelity in text-to-image generation, offering both training-free and fine-tuning methods with state-of-the-art results.",
+        "tldr_zh": "本文提出了一种新颖的框架，利用随机最优控制（SOC）和流匹配（FM）来提高文本到图像生成中多对象保真度，提供了无需训练和微调的方法，并取得了最先进的结果。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "NoiseShift: Resolution-Aware Noise Recalibration for Better Low-Resolution Image Generation",
+        "summary": "Text-to-image diffusion models trained on a fixed set of resolutions often\nfail to generalize, even when asked to generate images at lower resolutions\nthan those seen during training. High-resolution text-to-image generators are\ncurrently unable to easily offer an out-of-the-box budget-efficient alternative\nto their users who might not need high-resolution images. We identify a key\ntechnical insight in diffusion models that when addressed can help tackle this\nlimitation: Noise schedulers have unequal perceptual effects across\nresolutions. The same level of noise removes disproportionately more signal\nfrom lower-resolution images than from high-resolution images, leading to a\ntrain-test mismatch. We propose NoiseShift, a training-free method that\nrecalibrates the noise level of the denoiser conditioned on resolution size.\nNoiseShift requires no changes to model architecture or sampling schedule and\nis compatible with existing models. When applied to Stable Diffusion 3, Stable\nDiffusion 3.5, and Flux-Dev, quality at low resolutions is significantly\nimproved. On LAION-COCO, NoiseShift improves SD3.5 by 15.89%, SD3 by 8.56%, and\nFlux-Dev by 2.44% in FID on average. On CelebA, NoiseShift improves SD3.5 by\n10.36%, SD3 by 5.19%, and Flux-Dev by 3.02% in FID on average. These results\ndemonstrate the effectiveness of NoiseShift in mitigating resolution-dependent\nartifacts and enhancing the quality of low-resolution image generation.",
+        "url": "http://arxiv.org/abs/2510.02307v1",
+        "published_date": "2025-10-02T17:59:43+00:00",
+        "updated_date": "2025-10-02T17:59:43+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Ruozhen He",
+            "Moayed Haji-Ali",
+            "Ziyan Yang",
+            "Vicente Ordonez"
+        ],
+        "tldr": "The paper introduces NoiseShift, a training-free method to recalibrate noise levels in diffusion models based on resolution, significantly improving low-resolution image generation quality for models like Stable Diffusion 3 and 3.5, and Flux-Dev.",
+        "tldr_zh": "该论文介绍了一种名为 NoiseShift 的免训练方法，该方法根据分辨率重新校准扩散模型中的噪声水平，从而显著提高 Stable Diffusion 3 和 3.5 以及 Flux-Dev 等模型的低分辨率图像生成质量。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Equilibrium Matching: Generative Modeling with Implicit Energy-Based Models",
+        "summary": "We introduce Equilibrium Matching (EqM), a generative modeling framework\nbuilt from an equilibrium dynamics perspective. EqM discards the\nnon-equilibrium, time-conditional dynamics in traditional diffusion and\nflow-based generative models and instead learns the equilibrium gradient of an\nimplicit energy landscape. Through this approach, we can adopt an\noptimization-based sampling process at inference time, where samples are\nobtained by gradient descent on the learned landscape with adjustable step\nsizes, adaptive optimizers, and adaptive compute. EqM surpasses the generation\nperformance of diffusion/flow models empirically, achieving an FID of 1.90 on\nImageNet 256$\\times$256. EqM is also theoretically justified to learn and\nsample from the data manifold. Beyond generation, EqM is a flexible framework\nthat naturally handles tasks including partially noised image denoising, OOD\ndetection, and image composition. By replacing time-conditional velocities with\na unified equilibrium landscape, EqM offers a tighter bridge between flow and\nenergy-based models and a simple route to optimization-driven inference.",
+        "url": "http://arxiv.org/abs/2510.02300v1",
+        "published_date": "2025-10-02T17:59:06+00:00",
+        "updated_date": "2025-10-02T17:59:06+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Runqian Wang",
+            "Yilun Du"
+        ],
+        "tldr": "Equilibrium Matching (EqM) is a novel generative modeling framework that learns an implicit energy landscape for optimization-based sampling, achieving state-of-the-art image generation performance and extending to other tasks like denoising and OOD detection.",
+        "tldr_zh": "Equilibrium Matching (EqM) 是一种新的生成模型框架，它学习一个隐式的能量景观用于基于优化的采样，实现了最先进的图像生成性能，并扩展到其他任务，如去噪和异常检测。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Test-Time Anchoring for Discrete Diffusion Posterior Sampling",
+        "summary": "We study the problem of posterior sampling using pretrained discrete\ndiffusion foundation models, aiming to recover images from noisy measurements\nwithout retraining task-specific models. While diffusion models have achieved\nremarkable success in generative modeling, most advances rely on continuous\nGaussian diffusion. In contrast, discrete diffusion offers a unified framework\nfor jointly modeling categorical data such as text and images. Beyond\nunification, discrete diffusion provides faster inference, finer control, and\nprincipled training-free Bayesian inference, making it particularly well-suited\nfor posterior sampling. However, existing approaches to discrete diffusion\nposterior sampling face severe challenges: derivative-free guidance yields\nsparse signals, continuous relaxations limit applicability, and split Gibbs\nsamplers suffer from the curse of dimensionality. To overcome these\nlimitations, we introduce Anchored Posterior Sampling (APS) for masked\ndiffusion foundation models, built on two key innovations -- quantized\nexpectation for gradient-like guidance in discrete embedding space, and\nanchored remasking for adaptive decoding. Our approach achieves\nstate-of-the-art performance among discrete diffusion samplers across linear\nand nonlinear inverse problems on the standard benchmarks. We further\ndemonstrate the benefits of our approach in training-free stylization and\ntext-guided editing.",
+        "url": "http://arxiv.org/abs/2510.02291v1",
+        "published_date": "2025-10-02T17:58:37+00:00",
+        "updated_date": "2025-10-02T17:58:37+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV",
+            "stat.ML"
+        ],
+        "authors": [
+            "Litu Rout",
+            "Andreas Lugmayr",
+            "Yasamin Jafarian",
+            "Srivatsan Varadharajan",
+            "Constantine Caramanis",
+            "Sanjay Shakkottai",
+            "Ira Kemelmacher-Shlizerman"
+        ],
+        "tldr": "This paper introduces Anchored Posterior Sampling (APS), a novel method for discrete diffusion posterior sampling using masked diffusion foundation models, achieving state-of-the-art performance on inverse problems and demonstrating benefits in stylization and text-guided editing.",
+        "tldr_zh": "本文介绍了锚定后验采样（APS），一种用于离散扩散后验采样的新方法，该方法使用掩蔽扩散基础模型，在逆问题上实现了最先进的性能，并在风格化和文本引导编辑中展示了优势。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Measurement-Guided Consistency Model Sampling for Inverse Problems",
+        "summary": "Diffusion models have become powerful generative priors for solving inverse\nimaging problems, but their reliance on slow multi-step sampling limits\npractical deployment. Consistency models address this bottleneck by enabling\nhigh-quality generation in a single or only a few steps, yet their direct\nadaptation to inverse problems is underexplored. In this paper, we present a\nmodified consistency sampling approach tailored for inverse problem\nreconstruction: the sampler's stochasticity is guided by a\nmeasurement-consistency mechanism tied to the measurement operator, which\nenforces fidelity to the acquired measurements while retaining the efficiency\nof consistency-based generation. Experiments on Fashion-MNIST and LSUN Bedroom\ndatasets demonstrate consistent improvements in perceptual and pixel-level\nmetrics, including Fr\\'echet Inception Distance, Kernel Inception Distance,\npeak signal-to-noise ratio, and structural similarity index measure, compared\nto baseline consistency sampling, yielding competitive or superior\nreconstructions with only a handful of steps.",
+        "url": "http://arxiv.org/abs/2510.02208v1",
+        "published_date": "2025-10-02T16:53:07+00:00",
+        "updated_date": "2025-10-02T16:53:07+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Amirreza Tanevardi",
+            "Pooria Abbas Rad Moghadam",
+            "Sajjad Amini"
+        ],
+        "tldr": "This paper introduces a measurement-guided consistency model sampling method for inverse imaging problems, enhancing reconstruction quality while maintaining the efficiency of consistency models. It demonstrates improved performance on image datasets compared to baseline consistency sampling.",
+        "tldr_zh": "本文提出了一种测量引导的一致性模型采样方法，用于解决逆向成像问题，在保持一致性模型效率的同时，提高了重建质量。实验表明，与基线一致性采样相比，该方法在图像数据集上表现出更好的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FideDiff: Efficient Diffusion Model for High-Fidelity Image Motion Deblurring",
+        "summary": "Recent advancements in image motion deblurring, driven by CNNs and\ntransformers, have made significant progress. Large-scale pre-trained diffusion\nmodels, which are rich in true-world modeling, have shown great promise for\nhigh-quality image restoration tasks such as deblurring, demonstrating stronger\ngenerative capabilities than CNN and transformer-based methods. However,\nchallenges such as unbearable inference time and compromised fidelity still\nlimit the full potential of the diffusion models. To address this, we introduce\nFideDiff, a novel single-step diffusion model designed for high-fidelity\ndeblurring. We reformulate motion deblurring as a diffusion-like process where\neach timestep represents a progressively blurred image, and we train a\nconsistency model that aligns all timesteps to the same clean image. By\nreconstructing training data with matched blur trajectories, the model learns\ntemporal consistency, enabling accurate one-step deblurring. We further enhance\nmodel performance by integrating Kernel ControlNet for blur kernel estimation\nand introducing adaptive timestep prediction. Our model achieves superior\nperformance on full-reference metrics, surpassing previous diffusion-based\nmethods and matching the performance of other state-of-the-art models. FideDiff\noffers a new direction for applying pre-trained diffusion models to\nhigh-fidelity image restoration tasks, establishing a robust baseline for\nfurther advancing diffusion models in real-world industrial applications. Our\ndataset and code will be available at https://github.com/xyLiu339/FideDiff.",
+        "url": "http://arxiv.org/abs/2510.01641v1",
+        "published_date": "2025-10-02T03:44:45+00:00",
+        "updated_date": "2025-10-02T03:44:45+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaoyang Liu",
+            "Zhengyan Zhou",
+            "Zihang Xu",
+            "Jiezhang Cao",
+            "Zheng Chen",
+            "Yulun Zhang"
+        ],
+        "tldr": "FideDiff is a novel single-step diffusion model for high-fidelity image motion deblurring, achieving superior performance by reformulating deblurring as a diffusion process and integrating Kernel ControlNet and adaptive timestep prediction.",
+        "tldr_zh": "FideDiff 是一种新颖的单步扩散模型，用于高保真图像运动去模糊。它通过将去模糊重构为扩散过程，并结合 Kernel ControlNet 和自适应时间步长预测，实现了卓越的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "NPN: Non-Linear Projections of the Null-Space for Imaging Inverse Problems",
+        "summary": "Imaging inverse problems aims to recover high-dimensional signals from\nundersampled, noisy measurements, a fundamentally ill-posed task with infinite\nsolutions in the null-space of the sensing operator. To resolve this ambiguity,\nprior information is typically incorporated through handcrafted regularizers or\nlearned models that constrain the solution space. However, these priors\ntypically ignore the task-specific structure of that null-space. In this work,\nwe propose \\textit{Non-Linear Projections of the Null-Space} (NPN), a novel\nclass of regularization that, instead of enforcing structural constraints in\nthe image domain, promotes solutions that lie in a low-dimensional projection\nof the sensing matrix's null-space with a neural network. Our approach has two\nkey advantages: (1) Interpretability: by focusing on the structure of the\nnull-space, we design sensing-matrix-specific priors that capture information\northogonal to the signal components that are fundamentally blind to the sensing\nprocess. (2) Flexibility: NPN is adaptable to various inverse problems,\ncompatible with existing reconstruction frameworks, and complementary to\nconventional image-domain priors. We provide theoretical guarantees on\nconvergence and reconstruction accuracy when used within plug-and-play methods.\nEmpirical results across diverse sensing matrices demonstrate that NPN priors\nconsistently enhance reconstruction fidelity in various imaging inverse\nproblems, such as compressive sensing, deblurring, super-resolution, computed\ntomography, and magnetic resonance imaging, with plug-and-play methods,\nunrolling networks, deep image prior, and diffusion models.",
+        "url": "http://arxiv.org/abs/2510.01608v1",
+        "published_date": "2025-10-02T02:45:06+00:00",
+        "updated_date": "2025-10-02T02:45:06+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.SP",
+            "math.OC"
+        ],
+        "authors": [
+            "Roman Jacome",
+            "Romario Gualdrón-Hurtado",
+            "Leon Suarez",
+            "Henry Arguello"
+        ],
+        "tldr": "This paper introduces Non-Linear Projections of the Null-Space (NPN), a novel regularization technique for imaging inverse problems that projects solutions into a low-dimensional null-space of the sensing matrix using a neural network, improving reconstruction fidelity across various tasks.",
+        "tldr_zh": "该论文介绍了非线性零空间投影 (NPN)，一种新的图像逆问题的正则化技术，它使用神经网络将解投影到传感矩阵的低维零空间中，从而提高各种任务的重建保真度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AortaDiff: A Unified Multitask Diffusion Framework For Contrast-Free AAA Imaging",
+        "summary": "While contrast-enhanced CT (CECT) is standard for assessing abdominal aortic\naneurysms (AAA), the required iodinated contrast agents pose significant risks,\nincluding nephrotoxicity, patient allergies, and environmental harm. To reduce\ncontrast agent use, recent deep learning methods have focused on generating\nsynthetic CECT from non-contrast CT (NCCT) scans. However, most adopt a\nmulti-stage pipeline that first generates images and then performs\nsegmentation, which leads to error accumulation and fails to leverage shared\nsemantic and anatomical structures. To address this, we propose a unified deep\nlearning framework that generates synthetic CECT images from NCCT scans while\nsimultaneously segmenting the aortic lumen and thrombus. Our approach\nintegrates conditional diffusion models (CDM) with multi-task learning,\nenabling end-to-end joint optimization of image synthesis and anatomical\nsegmentation. Unlike previous multitask diffusion models, our approach requires\nno initial predictions (e.g., a coarse segmentation mask), shares both encoder\nand decoder parameters across tasks, and employs a semi-supervised training\nstrategy to learn from scans with missing segmentation labels, a common\nconstraint in real-world clinical data. We evaluated our method on a cohort of\n264 patients, where it consistently outperformed state-of-the-art single-task\nand multi-stage models. For image synthesis, our model achieved a PSNR of 25.61\ndB, compared to 23.80 dB from a single-task CDM. For anatomical segmentation,\nit improved the lumen Dice score to 0.89 from 0.87 and the challenging thrombus\nDice score to 0.53 from 0.48 (nnU-Net). These segmentation enhancements led to\nmore accurate clinical measurements, reducing the lumen diameter MAE to 4.19 mm\nfrom 5.78 mm and the thrombus area error to 33.85% from 41.45% when compared to\nnnU-Net. Code is available at https://github.com/yuxuanou623/AortaDiff.git.",
+        "url": "http://arxiv.org/abs/2510.01498v1",
+        "published_date": "2025-10-01T22:19:27+00:00",
+        "updated_date": "2025-10-01T22:19:27+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yuxuan Ou",
+            "Ning Bi",
+            "Jiazhen Pan",
+            "Jiancheng Yang",
+            "Boliang Yu",
+            "Usama Zidan",
+            "Regent Lee",
+            "Vicente Grau"
+        ],
+        "tldr": "The paper introduces AortaDiff, a unified multitask diffusion framework for generating contrast-enhanced CT images from non-contrast CT scans while simultaneously segmenting aortic lumen and thrombus, outperforming existing methods.",
+        "tldr_zh": "本文介绍了一种统一的多任务扩散框架AortaDiff，用于从非对比CT扫描生成对比增强CT图像，同时分割主动脉腔和血栓，优于现有方法。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Purrception: Variational Flow Matching for Vector-Quantized Image Generation",
+        "summary": "We introduce Purrception, a variational flow matching approach for\nvector-quantized image generation that provides explicit categorical\nsupervision while maintaining continuous transport dynamics. Our method adapts\nVariational Flow Matching to vector-quantized latents by learning categorical\nposteriors over codebook indices while computing velocity fields in the\ncontinuous embedding space. This combines the geometric awareness of continuous\nmethods with the discrete supervision of categorical approaches, enabling\nuncertainty quantification over plausible codes and temperature-controlled\ngeneration. We evaluate Purrception on ImageNet-1k 256x256 generation. Training\nconverges faster than both continuous flow matching and discrete flow matching\nbaselines while achieving competitive FID scores with state-of-the-art models.\nThis demonstrates that Variational Flow Matching can effectively bridge\ncontinuous transport and discrete supervision for improved training efficiency\nin image generation.",
+        "url": "http://arxiv.org/abs/2510.01478v1",
+        "published_date": "2025-10-01T21:41:30+00:00",
+        "updated_date": "2025-10-01T21:41:30+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Răzvan-Andrei Matişan",
+            "Vincent Tao Hu",
+            "Grigory Bartosh",
+            "Björn Ommer",
+            "Cees G. M. Snoek",
+            "Max Welling",
+            "Jan-Willem van de Meent",
+            "Mohammad Mahdi Derakhshani",
+            "Floor Eijkelboom"
+        ],
+        "tldr": "The paper introduces Purrception, a variational flow matching method for vector-quantized image generation that combines continuous transport dynamics with discrete categorical supervision, achieving faster training and competitive FID scores on ImageNet-1k.",
+        "tldr_zh": "本文介绍了一种名为Purrception的变分流匹配方法，用于向量量化图像生成，该方法结合了连续传输动力学和离散分类监督，在ImageNet-1k上实现了更快的训练速度和具有竞争力的FID分数。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LVTINO: LAtent Video consisTency INverse sOlver for High Definition Video Restoration",
+        "summary": "Computational imaging methods increasingly rely on powerful generative\ndiffusion models to tackle challenging image restoration tasks. In particular,\nstate-of-the-art zero-shot image inverse solvers leverage distilled\ntext-to-image latent diffusion models (LDMs) to achieve unprecedented accuracy\nand perceptual quality with high computational efficiency. However, extending\nthese advances to high-definition video restoration remains a significant\nchallenge, due to the need to recover fine spatial detail while capturing\nsubtle temporal dependencies. Consequently, methods that naively apply\nimage-based LDM priors on a frame-by-frame basis often result in temporally\ninconsistent reconstructions. We address this challenge by leveraging recent\nadvances in Video Consistency Models (VCMs), which distill video latent\ndiffusion models into fast generators that explicitly capture temporal\ncausality. Building on this foundation, we propose LVTINO, the first zero-shot\nor plug-and-play inverse solver for high definition video restoration with\npriors encoded by VCMs. Our conditioning mechanism bypasses the need for\nautomatic differentiation and achieves state-of-the-art video reconstruction\nquality with only a few neural function evaluations, while ensuring strong\nmeasurement consistency and smooth temporal transitions across frames.\nExtensive experiments on a diverse set of video inverse problems show\nsignificant perceptual improvements over current state-of-the-art methods that\napply image LDMs frame by frame, establishing a new benchmark in both\nreconstruction fidelity and computational efficiency.",
+        "url": "http://arxiv.org/abs/2510.01339v1",
+        "published_date": "2025-10-01T18:10:08+00:00",
+        "updated_date": "2025-10-01T18:10:08+00:00",
+        "categories": [
+            "cs.CV",
+            "stat.ML"
+        ],
+        "authors": [
+            "Alessio Spagnoletti",
+            "Andrés Almansa",
+            "Marcelo Pereyra"
+        ],
+        "tldr": "The paper introduces LVTINO, a zero-shot inverse solver for high-definition video restoration that leverages Video Consistency Models (VCMs) to achieve state-of-the-art reconstruction quality and temporal consistency with high computational efficiency.",
+        "tldr_zh": "该论文介绍了LVTINO，一种零样本逆解算器，用于高清视频修复，它利用视频一致性模型（VCM）以高计算效率实现最先进的重建质量和时间一致性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Unsupervised Dynamic Feature Selection for Robust Latent Spaces in Vision Tasks",
+        "summary": "Latent representations are critical for the performance and robustness of\nmachine learning models, as they encode the essential features of data in a\ncompact and informative manner. However, in vision tasks, these representations\nare often affected by noisy or irrelevant features, which can degrade the\nmodel's performance and generalization capabilities. This paper presents a\nnovel approach for enhancing latent representations using unsupervised Dynamic\nFeature Selection (DFS). For each instance, the proposed method identifies and\nremoves misleading or redundant information in images, ensuring that only the\nmost relevant features contribute to the latent space. By leveraging an\nunsupervised framework, our approach avoids reliance on labeled data, making it\nbroadly applicable across various domains and datasets. Experiments conducted\non image datasets demonstrate that models equipped with unsupervised DFS\nachieve significant improvements in generalization performance across various\ntasks, including clustering and image generation, while incurring a minimal\nincrease in the computational cost.",
+        "url": "http://arxiv.org/abs/2510.01758v1",
+        "published_date": "2025-10-02T07:46:59+00:00",
+        "updated_date": "2025-10-02T07:46:59+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Bruno Corcuera",
+            "Carlos Eiras-Franco",
+            "Brais Cancela"
+        ],
+        "tldr": "This paper introduces an unsupervised dynamic feature selection method to improve the robustness and generalization of latent representations in vision tasks by removing noisy features before encoding. It claims improvements in clustering and image generation tasks.",
+        "tldr_zh": "本文介绍了一种无监督的动态特征选择方法，旨在通过在编码前去除噪声特征来提高视觉任务中潜在表示的鲁棒性和泛化能力。 声称在聚类和图像生成任务中有所改进。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Growing Visual Generative Capacity for Pre-Trained MLLMs",
+        "summary": "Multimodal large language models (MLLMs) extend the success of language\nmodels to visual understanding, and recent efforts have sought to build unified\nMLLMs that support both understanding and generation. However, constructing\nsuch models remains challenging: hybrid approaches combine continuous\nembeddings with diffusion or flow-based objectives, producing high-quality\nimages but breaking the autoregressive paradigm, while pure autoregressive\napproaches unify text and image prediction over discrete visual tokens but\noften face trade-offs between semantic alignment and pixel-level fidelity. In\nthis work, we present Bridge, a pure autoregressive unified MLLM that augments\npre-trained visual understanding models with generative ability through a\nMixture-of-Transformers architecture, enabling both image understanding and\ngeneration within a single next-token prediction framework. To further improve\nvisual generation fidelity, we propose a semantic-to-pixel discrete\nrepresentation that integrates compact semantic tokens with fine-grained pixel\ntokens, achieving strong language alignment and precise description of visual\ndetails with only a 7.9% increase in sequence length. Extensive experiments\nacross diverse multimodal benchmarks demonstrate that Bridge achieves\ncompetitive or superior results in both understanding and generation\nbenchmarks, while requiring less training data and reduced training time\ncompared to prior unified MLLMs.",
+        "url": "http://arxiv.org/abs/2510.01546v1",
+        "published_date": "2025-10-02T00:40:02+00:00",
+        "updated_date": "2025-10-02T00:40:02+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Hanyu Wang",
+            "Jiaming Han",
+            "Ziyan Yang",
+            "Qi Zhao",
+            "Shanchuan Lin",
+            "Xiangyu Yue",
+            "Abhinav Shrivastava",
+            "Zhenheng Yang",
+            "Hao Chen"
+        ],
+        "tldr": "The paper introduces Bridge, a unified MLLM that uses a Mixture-of-Transformers architecture and a semantic-to-pixel discrete representation to achieve competitive image understanding and generation with less data and training time compared to other unified MLLMs.",
+        "tldr_zh": "该论文介绍了Bridge，一种统一的MLLM，它使用混合Transformer架构和语义到像素的离散表示，从而以比其他统一的MLLM更少的数据和训练时间实现有竞争力的图像理解和生成。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
