@@ -1,0 +1,126 @@
+[
+    {
+        "title": "Compact Multi-level-prior Tensor Representation for Hyperspectral Image Super-resolution",
+        "summary": "Fusing a hyperspectral image with a multispectral image acquired over the\nsame scene, \\textit{i.e.}, hyperspectral image super-resolution, has become a\npopular computational way to access the latent high-spatial-spectral-resolution\nimage. To date, a variety of fusion methods have been proposed, among which the\ntensor-based ones have testified that multiple priors, such as multidimensional\nlow-rankness and spatial total variation at multiple levels, effectively drive\nthe fusion process. However, existing tensor-based models can only effectively\nleverage one or two priors at one or two levels, since simultaneously\nincorporating multi-level priors inevitably increases model complexity. This\nintroduces challenges in both balancing the weights of different priors and\noptimizing multi-block structures. Concerning this, we present a novel\nhyperspectral super-resolution model compactly characterizing these multi-level\npriors of hyperspectral images within the tensor framework. Firstly, the\nproposed model decouples the spectral low-rankness and spatial priors by\ncasting the latent high-spatial-spectral-resolution image into spectral\nsubspace and spatial maps via block term decomposition. Secondly, these spatial\nmaps are stacked as the spatial tensor encoding the high-order spatial\nlow-rankness and smoothness priors, which are co-modeled via the proposed\nnon-convex mode-shuffled tensor correlated total variation. Finally, we draw\ninspiration from the linearized alternating direction method of multipliers to\ndesign an efficient algorithm to optimize the resulting model, theoretically\nproving its Karush-Kuhn-Tucker convergence under mild conditions. Experiments\non multiple datasets demonstrate the effectiveness of the proposed algorithm.\nThe code implementation will be available from https://github.com/WongYinJ.",
+        "url": "http://arxiv.org/abs/2510.06098v1",
+        "published_date": "2025-10-07T16:26:34+00:00",
+        "updated_date": "2025-10-07T16:26:34+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yinjian Wang",
+            "Wei Li",
+            "Yuanyuan Gui",
+            "Gemine Vivone"
+        ],
+        "tldr": "This paper presents a novel tensor-based hyperspectral image super-resolution model that leverages multi-level priors with a compact representation and an efficient optimization algorithm, demonstrating its effectiveness on multiple datasets.",
+        "tldr_zh": "本文提出了一种新的基于张量的超光谱图像超分辨率模型，该模型利用紧凑表示的多层先验信息和一个高效的优化算法，并在多个数据集上验证了其有效性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Rasterized Steered Mixture of Experts for Efficient 2D Image Regression",
+        "summary": "The Steered Mixture of Experts regression framework has demonstrated strong\nperformance in image reconstruction, compression, denoising, and\nsuper-resolution. However, its high computational cost limits practical\napplications. This work introduces a rasterization-based optimization strategy\nthat combines the efficiency of rasterized Gaussian kernel rendering with the\nedge-aware gating mechanism of the Steered Mixture of Experts. The proposed\nmethod is designed to accelerate two-dimensional image regression while\nmaintaining the model's inherent sparsity and reconstruction quality. By\nreplacing global iterative optimization with a rasterized formulation, the\nmethod achieves significantly faster parameter updates and more\nmemory-efficient model representations. In addition, the proposed framework\nsupports applications such as native super-resolution and image denoising,\nwhich are not directly achievable with standard rasterized Gaussian kernel\napproaches. The combination of fast rasterized optimization with the edge-aware\nstructure of the Steered Mixture of Experts provides a new balance between\ncomputational efficiency and reconstruction fidelity for two-dimensional image\nprocessing tasks.",
+        "url": "http://arxiv.org/abs/2510.05814v1",
+        "published_date": "2025-10-07T11:32:44+00:00",
+        "updated_date": "2025-10-07T11:32:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yi-Hsin Li",
+            "Thomas Sikora",
+            "Sebastian Knorr",
+            "Mårten Sjöström"
+        ],
+        "tldr": "This paper introduces a rasterization-based optimization strategy for Steered Mixture of Experts to accelerate 2D image regression tasks like super-resolution and denoising, improving computational efficiency and reconstruction quality.",
+        "tldr_zh": "本文提出了一种基于栅格化的Steered Mixture of Experts优化策略，以加速二维图像回归任务，如超分辨率和图像去噪，从而提高计算效率和重建质量。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Teleportraits: Training-Free People Insertion into Any Scene",
+        "summary": "The task of realistically inserting a human from a reference image into a\nbackground scene is highly challenging, requiring the model to (1) determine\nthe correct location and poses of the person and (2) perform high-quality\npersonalization conditioned on the background. Previous approaches often treat\nthem as separate problems, overlooking their interconnections, and typically\nrely on training to achieve high performance. In this work, we introduce a\nunified training-free pipeline that leverages pre-trained text-to-image\ndiffusion models. We show that diffusion models inherently possess the\nknowledge to place people in complex scenes without requiring task-specific\ntraining. By combining inversion techniques with classifier-free guidance, our\nmethod achieves affordance-aware global editing, seamlessly inserting people\ninto scenes. Furthermore, our proposed mask-guided self-attention mechanism\nensures high-quality personalization, preserving the subject's identity,\nclothing, and body features from just a single reference image. To the best of\nour knowledge, we are the first to perform realistic human insertions into\nscenes in a training-free manner and achieve state-of-the-art results in\ndiverse composite scene images with excellent identity preservation in\nbackgrounds and subjects.",
+        "url": "http://arxiv.org/abs/2510.05660v1",
+        "published_date": "2025-10-07T08:12:57+00:00",
+        "updated_date": "2025-10-07T08:12:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jialu Gao",
+            "K J Joseph",
+            "Fernando De La Torre"
+        ],
+        "tldr": "This paper presents a training-free method for realistically inserting people into scenes using pre-trained diffusion models, achieving state-of-the-art results with excellent identity preservation.",
+        "tldr_zh": "本文提出了一种无需训练的方法，利用预训练的扩散模型将人物真实地插入到场景中，并在背景和人物的身份保持方面取得了最先进的成果。",
+        "relevance_score": 6,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Efficient Conditional Generation on Scale-based Visual Autoregressive Models",
+        "summary": "Recent advances in autoregressive (AR) models have demonstrated their\npotential to rival diffusion models in image synthesis. However, for complex\nspatially-conditioned generation, current AR approaches rely on fine-tuning the\npre-trained model, leading to significant training costs. In this paper, we\npropose the Efficient Control Model (ECM), a plug-and-play framework featuring\na lightweight control module that introduces control signals via a distributed\narchitecture. This architecture consists of context-aware attention layers that\nrefine conditional features using real-time generated tokens, and a shared\ngated feed-forward network (FFN) designed to maximize the utilization of its\nlimited capacity and ensure coherent control feature learning. Furthermore,\nrecognizing the critical role of early-stage generation in determining semantic\nstructure, we introduce an early-centric sampling strategy that prioritizes\nlearning early control sequences. This approach reduces computational cost by\nlowering the number of training tokens per iteration, while a complementary\ntemperature scheduling during inference compensates for the resulting\ninsufficient training of late-stage tokens. Extensive experiments on\nscale-based AR models validate that our method achieves high-fidelity and\ndiverse control over image generation, surpassing existing baselines while\nsignificantly improving both training and inference efficiency.",
+        "url": "http://arxiv.org/abs/2510.05610v1",
+        "published_date": "2025-10-07T06:27:03+00:00",
+        "updated_date": "2025-10-07T06:27:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiaqi Liu",
+            "Tao Huang",
+            "Chang Xu"
+        ],
+        "tldr": "The paper introduces an Efficient Control Model (ECM) for spatially-conditioned image generation using autoregressive models, which improves training and inference efficiency through a lightweight control module and early-centric sampling.",
+        "tldr_zh": "该论文介绍了一种用于基于自回归模型的空间条件图像生成的有效控制模型（ECM），该模型通过轻量级控制模块和以早期为中心的采样提高了训练和推理效率。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Improving Chain-of-Thought Efficiency for Autoregressive Image Generation",
+        "summary": "Autoregressive multimodal large language models have recently gained\npopularity for image generation, driven by advances in foundation models. To\nenhance alignment and detail, newer approaches employ chain-of-thought (CoT)\nreasoning, expanding user inputs into elaborated prompts prior to image\nsynthesis. However, this strategy can introduce unnecessary redundancy -- a\nphenomenon we call visual overthinking -- which increases computational costs\nand can introduce details that contradict the original prompt. In this work, we\nexplore how to generate more concise CoT sequences for more efficient image\ngeneration. We introduce ShortCoTI, a lightweight optimization framework that\nencourages more concise CoT while preserving output image quality. ShortCoTI\nrewards more concise prompts with an adaptive function that scales according to\nan estimated difficulty for each task. Incorporating this reward into a\nreinforcement learning paradigm reduces prompt reasoning length by 54% while\nmaintaining or slightly improving quality metrics across multiple benchmarks\n(T2I-CompBench, GenEval). Qualitative analysis shows that our method eliminates\nverbose explanations and repetitive refinements, producing reasoning prompts\nthat are both concise and semantically rich. As a result, ShortCoTI improves\ncomputational efficiency without compromising the fidelity or visual appeal of\ngenerated images.",
+        "url": "http://arxiv.org/abs/2510.05593v1",
+        "published_date": "2025-10-07T05:40:43+00:00",
+        "updated_date": "2025-10-07T05:40:43+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "authors": [
+            "Zeqi Gu",
+            "Markos Georgopoulos",
+            "Xiaoliang Dai",
+            "Marjan Ghazvininejad",
+            "Chu Wang",
+            "Felix Juefei-Xu",
+            "Kunpeng Li",
+            "Yujun Shi",
+            "Zecheng He",
+            "Zijian He",
+            "Jiawei Zhou",
+            "Abe Davis",
+            "Jialiang Wang"
+        ],
+        "tldr": "The paper introduces ShortCoTI, a reinforcement learning framework to generate more concise Chain-of-Thought prompts for efficient image generation, reducing prompt length by 54% while maintaining image quality.",
+        "tldr_zh": "该论文介绍了一种名为 ShortCoTI 的强化学习框架，用于生成更简洁的思维链提示，从而实现高效的图像生成。该方法在保持图像质量的同时，将提示长度缩短了 54%。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

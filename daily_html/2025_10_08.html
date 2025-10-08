@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 04, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - October 08, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 04, 2025</p>
+            <p>October 08, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,32 +215,37 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">PocketSR: The Super-Resolution Expert in Your Pocket Mobiles</h2>
+            <h2 class="paper-title">Compact Multi-level-prior Tensor Representation for Hyperspectral Image Super-resolution</h2>
             
-            <p class="paper-summary">Real-world image super-resolution (RealSR) aims to enhance the visual quality
-of in-the-wild images, such as those captured by mobile phones. While existing
-methods leveraging large generative models demonstrate impressive results, the
-high computational cost and latency make them impractical for edge deployment.
-In this paper, we introduce PocketSR, an ultra-lightweight, single-step model
-that brings generative modeling capabilities to RealSR while maintaining high
-fidelity. To achieve this, we design LiteED, a highly efficient alternative to
-the original computationally intensive VAE in SD, reducing parameters by 97.5%
-while preserving high-quality encoding and decoding. Additionally, we propose
-online annealing pruning for the U-Net, which progressively shifts generative
-priors from heavy modules to lightweight counterparts, ensuring effective
-knowledge transfer and further optimizing efficiency. To mitigate the loss of
-prior knowledge during pruning, we incorporate a multi-layer feature
-distillation loss. Through an in-depth analysis of each design component, we
-provide valuable insights for future research. PocketSR, with a model size of
-146M parameters, processes 4K images in just 0.8 seconds, achieving a
-remarkable speedup over previous methods. Notably, it delivers performance on
-par with state-of-the-art single-step and even multi-step RealSR models, making
-it a highly practical solution for edge-device applications.</p>
+            <p class="paper-summary">Fusing a hyperspectral image with a multispectral image acquired over the
+same scene, \textit{i.e.}, hyperspectral image super-resolution, has become a
+popular computational way to access the latent high-spatial-spectral-resolution
+image. To date, a variety of fusion methods have been proposed, among which the
+tensor-based ones have testified that multiple priors, such as multidimensional
+low-rankness and spatial total variation at multiple levels, effectively drive
+the fusion process. However, existing tensor-based models can only effectively
+leverage one or two priors at one or two levels, since simultaneously
+incorporating multi-level priors inevitably increases model complexity. This
+introduces challenges in both balancing the weights of different priors and
+optimizing multi-block structures. Concerning this, we present a novel
+hyperspectral super-resolution model compactly characterizing these multi-level
+priors of hyperspectral images within the tensor framework. Firstly, the
+proposed model decouples the spectral low-rankness and spatial priors by
+casting the latent high-spatial-spectral-resolution image into spectral
+subspace and spatial maps via block term decomposition. Secondly, these spatial
+maps are stacked as the spatial tensor encoding the high-order spatial
+low-rankness and smoothness priors, which are co-modeled via the proposed
+non-convex mode-shuffled tensor correlated total variation. Finally, we draw
+inspiration from the linearized alternating direction method of multipliers to
+design an efficient algorithm to optimize the resulting model, theoretically
+proving its Karush-Kuhn-Tucker convergence under mild conditions. Experiments
+on multiple datasets demonstrate the effectiveness of the proposed algorithm.
+The code implementation will be available from https://github.com/WongYinJ.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: PocketSR introduces an ultra-lightweight, single-step model for real-world image super-resolution on edge devices, achieving state-of-the-art performance with significantly reduced computational cost by using LiteED and online annealing pruning.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a novel tensor-based hyperspectral image super-resolution model that leverages multi-level priors with a compact representation and an efficient optimization algorithm, demonstrating its effectiveness on multiple datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: PocketSR 提出了一种超轻量级的单步模型，用于边缘设备上的真实世界图像超分辨率，通过使用 LiteED 和在线退火剪枝，以显著降低的计算成本实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新的基于张量的超光谱图像超分辨率模型，该模型利用紧凑表示的多层先验信息和一个高效的优化算法，并在多个数据集上验证了其有效性。</p>
             
 
             
@@ -250,32 +255,32 @@ it a highly practical solution for edge-device applications.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -304,18 +309,18 @@ it a highly practical solution for edge-device applications.</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.03012v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.06098v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Haoze Sun, Linfeng Jiang, Fan Li, Renjing Pei, Zhixin Wang, Yong Guo, Jiaqi Xu, Haoyu Chen, Jin Han, Fenglong Song, Yujiu Yang, Wenbo Li</p>
+            <p class="paper-authors">Authors: Yinjian Wang, Wei Li, Yuanyuan Gui, Gemine Vivone</p>
             
         </motion.div>
         
@@ -327,31 +332,30 @@ it a highly practical solution for edge-device applications.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Product-Quantised Image Representation for High-Quality Image Synthesis</h2>
+            <h2 class="paper-title">Rasterized Steered Mixture of Experts for Efficient 2D Image Regression</h2>
             
-            <p class="paper-summary">Product quantisation (PQ) is a classical method for scalable vector encoding,
-yet it has seen limited usage for latent representations in high-fidelity image
-generation. In this work, we introduce PQGAN, a quantised image autoencoder
-that integrates PQ into the well-known vector quantisation (VQ) framework of
-VQGAN. PQGAN achieves a noticeable improvement over state-of-the-art methods in
-terms of reconstruction performance, including both quantisation methods and
-their continuous counterparts. We achieve a PSNR score of 37dB, where prior
-work achieves 27dB, and are able to reduce the FID, LPIPS, and CMMD score by up
-to 96%. Our key to success is a thorough analysis of the interaction between
-codebook size, embedding dimensionality, and subspace factorisation, with
-vector and scalar quantisation as special cases. We obtain novel findings, such
-that the performance of VQ and PQ behaves in opposite ways when scaling the
-embedding dimension. Furthermore, our analysis shows performance trends for PQ
-that help guide optimal hyperparameter selection. Finally, we demonstrate that
-PQGAN can be seamlessly integrated into pre-trained diffusion models. This
-enables either a significantly faster and more compute-efficient generation, or
-a doubling of the output resolution at no additional cost, positioning PQ as a
-strong extension for discrete latent representation in image synthesis.</p>
+            <p class="paper-summary">The Steered Mixture of Experts regression framework has demonstrated strong
+performance in image reconstruction, compression, denoising, and
+super-resolution. However, its high computational cost limits practical
+applications. This work introduces a rasterization-based optimization strategy
+that combines the efficiency of rasterized Gaussian kernel rendering with the
+edge-aware gating mechanism of the Steered Mixture of Experts. The proposed
+method is designed to accelerate two-dimensional image regression while
+maintaining the model's inherent sparsity and reconstruction quality. By
+replacing global iterative optimization with a rasterized formulation, the
+method achieves significantly faster parameter updates and more
+memory-efficient model representations. In addition, the proposed framework
+supports applications such as native super-resolution and image denoising,
+which are not directly achievable with standard rasterized Gaussian kernel
+approaches. The combination of fast rasterized optimization with the edge-aware
+structure of the Steered Mixture of Experts provides a new balance between
+computational efficiency and reconstruction fidelity for two-dimensional image
+processing tasks.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces PQGAN, a product-quantized image autoencoder that improves upon VQGAN for high-fidelity image generation, offering significant improvements in reconstruction performance and enabling efficient integration with diffusion models for faster or higher-resolution synthesis.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a rasterization-based optimization strategy for Steered Mixture of Experts to accelerate 2D image regression tasks like super-resolution and denoising, improving computational efficiency and reconstruction quality.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种产品量化的图像自编码器PQGAN，它改进了VQGAN在高保真图像生成方面的性能，并在重建性能方面取得了显著提升，同时能够高效地集成到扩散模型中，以实现更快或更高分辨率的图像合成。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种基于栅格化的Steered Mixture of Experts优化策略，以加速二维图像回归任务，如超分辨率和图像去噪，从而提高计算效率和重建质量。</p>
             
 
             
@@ -361,8 +365,8 @@ strong extension for discrete latent representation in image synthesis.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -377,16 +381,16 @@ strong extension for discrete latent representation in image synthesis.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -422,11 +426,11 @@ strong extension for discrete latent representation in image synthesis.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.03191v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.05814v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Denis Zavadski, Nikita Philip Tatsch, Carsten Rother</p>
+            <p class="paper-authors">Authors: Yi-Hsin Li, Thomas Sikora, Sebastian Knorr, Mårten Sjöström</p>
             
         </motion.div>
         
@@ -438,263 +442,31 @@ strong extension for discrete latent representation in image synthesis.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Net2Net: When Un-trained Meets Pre-trained Networks for Robust Real-World Denoising</h2>
+            <h2 class="paper-title">Teleportraits: Training-Free People Insertion into Any Scene</h2>
             
-            <p class="paper-summary">Traditional denoising methods for noise removal have largely relied on
-handcrafted priors, often perform well in controlled environments but struggle
-to address the complexity and variability of real noise. In contrast, deep
-learning-based approaches have gained prominence for learning noise
-characteristics from large datasets, but these methods frequently require
-extensive labeled data and may not generalize effectively across diverse noise
-types and imaging conditions. In this paper, we present an innovative method,
-termed as Net2Net, that combines the strengths of untrained and pre-trained
-networks to tackle the challenges of real-world noise removal. The innovation
-of Net2Net lies in its combination of unsupervised DIP and supervised
-pre-trained model DRUNet by regularization by denoising (RED). The untrained
-network adapts to the unique noise characteristics of each input image without
-requiring labeled data, while the pre-trained network leverages learned
-representations from large-scale datasets to deliver robust denoising
-performance. This hybrid framework enhances generalization across varying noise
-patterns and improves performance, particularly in scenarios with limited
-training data. Extensive experiments on benchmark datasets demonstrate the
-superiority of our method for real-world noise removal.</p>
+            <p class="paper-summary">The task of realistically inserting a human from a reference image into a
+background scene is highly challenging, requiring the model to (1) determine
+the correct location and poses of the person and (2) perform high-quality
+personalization conditioned on the background. Previous approaches often treat
+them as separate problems, overlooking their interconnections, and typically
+rely on training to achieve high performance. In this work, we introduce a
+unified training-free pipeline that leverages pre-trained text-to-image
+diffusion models. We show that diffusion models inherently possess the
+knowledge to place people in complex scenes without requiring task-specific
+training. By combining inversion techniques with classifier-free guidance, our
+method achieves affordance-aware global editing, seamlessly inserting people
+into scenes. Furthermore, our proposed mask-guided self-attention mechanism
+ensures high-quality personalization, preserving the subject's identity,
+clothing, and body features from just a single reference image. To the best of
+our knowledge, we are the first to perform realistic human insertions into
+scenes in a training-free manner and achieve state-of-the-art results in
+diverse composite scene images with excellent identity preservation in
+backgrounds and subjects.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Net2Net, a novel denoising method that combines untrained (DIP) and pre-trained (DRUNet) networks using regularization by denoising (RED) to address real-world noise removal challenges, especially with limited training data.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为Net2Net的新型去噪方法，该方法结合了未经训练的（DIP）和预训练的（DRUNet）网络，使用基于去噪的正则化（RED）来解决实际噪声去除的挑战，尤其是在训练数据有限的情况下。</p>
-            
-
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a training-free method for realistically inserting people into scenes using pre-trained diffusion models, achieving state-of-the-art results with excellent identity preservation.</p>
             
             
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.02733v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Weimin Yuan, Cai Meng</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Mask2IV: Interaction-Centric Video Generation via Mask Trajectories</h2>
-            
-            <p class="paper-summary">Generating interaction-centric videos, such as those depicting humans or
-robots interacting with objects, is crucial for embodied intelligence, as they
-provide rich and diverse visual priors for robot learning, manipulation policy
-training, and affordance reasoning. However, existing methods often struggle to
-model such complex and dynamic interactions. While recent studies show that
-masks can serve as effective control signals and enhance generation quality,
-obtaining dense and precise mask annotations remains a major challenge for
-real-world use. To overcome this limitation, we introduce Mask2IV, a novel
-framework specifically designed for interaction-centric video generation. It
-adopts a decoupled two-stage pipeline that first predicts plausible motion
-trajectories for both actor and object, then generates a video conditioned on
-these trajectories. This design eliminates the need for dense mask inputs from
-users while preserving the flexibility to manipulate the interaction process.
-Furthermore, Mask2IV supports versatile and intuitive control, allowing users
-to specify the target object of interaction and guide the motion trajectory
-through action descriptions or spatial position cues. To support systematic
-training and evaluation, we curate two benchmarks covering diverse action and
-object categories across both human-object interaction and robotic manipulation
-scenarios. Extensive experiments demonstrate that our method achieves superior
-visual realism and controllability compared to existing baselines.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Mask2IV, a framework for generating interaction-centric videos by predicting actor and object motion trajectories, thus avoiding the need for dense mask inputs and improving controllability and realism. Two new benchmarks are introduced for evaluation.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了Mask2IV，一个通过预测演员和物体运动轨迹来生成以互动为中心的视频的框架，从而避免了对密集掩码输入的需求，并提高了可控性和真实感。同时提出了两个新的基准数据集用于评估。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.03135v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Gen Li, Bo Zhao, Jianfei Yang, Laura Sevilla-Lara</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Dale meets Langevin: A Multiplicative Denoising Diffusion Model</h2>
-            
-            <p class="paper-summary">Gradient descent has proven to be a powerful and effective technique for
-optimization in numerous machine learning applications. Recent advances in
-computational neuroscience have shown that learning in standard gradient
-descent optimization formulation is not consistent with learning in biological
-systems. This has opened up interesting avenues for building biologically
-inspired learning techniques. One such approach is inspired by Dale's law,
-which states that inhibitory and excitatory synapses do not swap roles during
-the course of learning. The resulting exponential gradient descent optimization
-scheme leads to log-normally distributed synaptic weights. Interestingly, the
-density that satisfies the Fokker-Planck equation corresponding to the
-stochastic differential equation (SDE) with geometric Brownian motion (GBM) is
-the log-normal density. Leveraging this connection, we start with the SDE
-governing geometric Brownian motion, and show that discretizing the
-corresponding reverse-time SDE yields a multiplicative update rule, which
-surprisingly, coincides with the sampling equivalent of the exponential
-gradient descent update founded on Dale's law. Furthermore, we propose a new
-formalism for multiplicative denoising score-matching, subsuming the loss
-function proposed by Hyvaerinen for non-negative data. Indeed, log-normally
-distributed data is positive and the proposed score-matching formalism turns
-out to be a natural fit. This allows for training of score-based models for
-image data and results in a novel multiplicative update scheme for sample
-generation starting from a log-normal density. Experimental results on MNIST,
-Fashion MNIST, and Kuzushiji datasets demonstrate generative capability of the
-new scheme. To the best of our knowledge, this is the first instance of a
-biologically inspired generative model employing multiplicative updates,
-founded on geometric Brownian motion.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel multiplicative denoising diffusion model inspired by Dale's law and geometric Brownian motion, demonstrating generative capabilities on image datasets. It connects biological inspiration with score-matching for positive data distributions.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新型的乘性去噪扩散模型，其灵感来自戴尔定律和几何布朗运动，并在图像数据集上展示了其生成能力。它将生物学灵感与正数据分布的得分匹配联系起来。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种无需训练的方法，利用预训练的扩散模型将人物真实地插入到场景中，并在背景和人物的身份保持方面取得了最先进的成果。</p>
             
 
             
@@ -712,6 +484,118 @@ founded on geometric Brownian motion.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.05660v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Jialu Gao, K J Joseph, Fernando De La Torre</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Efficient Conditional Generation on Scale-based Visual Autoregressive Models</h2>
+            
+            <p class="paper-summary">Recent advances in autoregressive (AR) models have demonstrated their
+potential to rival diffusion models in image synthesis. However, for complex
+spatially-conditioned generation, current AR approaches rely on fine-tuning the
+pre-trained model, leading to significant training costs. In this paper, we
+propose the Efficient Control Model (ECM), a plug-and-play framework featuring
+a lightweight control module that introduces control signals via a distributed
+architecture. This architecture consists of context-aware attention layers that
+refine conditional features using real-time generated tokens, and a shared
+gated feed-forward network (FFN) designed to maximize the utilization of its
+limited capacity and ensure coherent control feature learning. Furthermore,
+recognizing the critical role of early-stage generation in determining semantic
+structure, we introduce an early-centric sampling strategy that prioritizes
+learning early control sequences. This approach reduces computational cost by
+lowering the number of training tokens per iteration, while a complementary
+temperature scheduling during inference compensates for the resulting
+insufficient training of late-stage tokens. Extensive experiments on
+scale-based AR models validate that our method achieves high-fidelity and
+diverse control over image generation, surpassing existing baselines while
+significantly improving both training and inference efficiency.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces an Efficient Control Model (ECM) for spatially-conditioned image generation using autoregressive models, which improves training and inference efficiency through a lightweight control module and early-centric sampling.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种用于基于自回归模型的空间条件图像生成的有效控制模型（ECM），该模型通过轻量级控制模块和以早期为中心的采样提高了训练和推理效率。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
@@ -720,8 +604,8 @@ founded on geometric Brownian motion.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -765,18 +649,130 @@ founded on geometric Brownian motion.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.02730v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.05610v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Nishanth Shetty, Madhava Prasath, Chandra Sekhar Seelamantula</p>
+            <p class="paper-authors">Authors: Jiaqi Liu, Tao Huang, Chang Xu</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Improving Chain-of-Thought Efficiency for Autoregressive Image Generation</h2>
+            
+            <p class="paper-summary">Autoregressive multimodal large language models have recently gained
+popularity for image generation, driven by advances in foundation models. To
+enhance alignment and detail, newer approaches employ chain-of-thought (CoT)
+reasoning, expanding user inputs into elaborated prompts prior to image
+synthesis. However, this strategy can introduce unnecessary redundancy -- a
+phenomenon we call visual overthinking -- which increases computational costs
+and can introduce details that contradict the original prompt. In this work, we
+explore how to generate more concise CoT sequences for more efficient image
+generation. We introduce ShortCoTI, a lightweight optimization framework that
+encourages more concise CoT while preserving output image quality. ShortCoTI
+rewards more concise prompts with an adaptive function that scales according to
+an estimated difficulty for each task. Incorporating this reward into a
+reinforcement learning paradigm reduces prompt reasoning length by 54% while
+maintaining or slightly improving quality metrics across multiple benchmarks
+(T2I-CompBench, GenEval). Qualitative analysis shows that our method eliminates
+verbose explanations and repetitive refinements, producing reasoning prompts
+that are both concise and semantically rich. As a result, ShortCoTI improves
+computational efficiency without compromising the fidelity or visual appeal of
+generated images.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ShortCoTI, a reinforcement learning framework to generate more concise Chain-of-Thought prompts for efficient image generation, reducing prompt length by 54% while maintaining image quality.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为 ShortCoTI 的强化学习框架，用于生成更简洁的思维链提示，从而实现高效的图像生成。该方法在保持图像质量的同时，将提示长度缩短了 54%。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.05593v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Zeqi Gu, Markos Georgopoulos, Xiaoliang Dai, Marjan Ghazvininejad, Chu Wang, Felix Juefei-Xu, Kunpeng Li, Yujun Shi, Zecheng He, Zijian He, Jiawei Zhou, Abe Davis, Jialiang Wang</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-08 03:28:05 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-08 03:34:15 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
