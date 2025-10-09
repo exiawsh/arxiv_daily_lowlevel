@@ -1,0 +1,347 @@
+[
+    {
+        "title": "IAR2: Improving Autoregressive Visual Generation with Semantic-Detail Associated Token Prediction",
+        "summary": "Autoregressive models have emerged as a powerful paradigm for visual content\ncreation, but often overlook the intrinsic structural properties of visual\ndata. Our prior work, IAR, initiated a direction to address this by\nreorganizing the visual codebook based on embedding similarity, thereby\nimproving generation robustness. However, it is constrained by the rigidity of\npre-trained codebooks and the inaccuracies of hard, uniform clustering. To\novercome these limitations, we propose IAR2, an advanced autoregressive\nframework that enables a hierarchical semantic-detail synthesis process. At the\ncore of IAR2 is a novel Semantic-Detail Associated Dual Codebook, which\ndecouples image representations into a semantic codebook for global semantic\ninformation and a detail codebook for fine-grained refinements. It expands the\nquantization capacity from a linear to a polynomial scale, significantly\nenhancing expressiveness. To accommodate this dual representation, we propose a\nSemantic-Detail Autoregressive Prediction scheme coupled with a Local-Context\nEnhanced Autoregressive Head, which performs hierarchical prediction-first the\nsemantic token, then the detail token-while leveraging a local context window\nto enhance spatial coherence. Furthermore, for conditional generation, we\nintroduce a Progressive Attention-Guided Adaptive CFG mechanism that\ndynamically modulates the guidance scale for each token based on its relevance\nto the condition and its temporal position in the generation sequence,\nimproving conditional alignment without sacrificing realism. Extensive\nexperiments demonstrate that IAR2 sets a new state-of-the-art for\nautoregressive image generation, achieving a FID of 1.50 on ImageNet. Our model\nnot only surpasses previous methods in performance but also demonstrates\nsuperior computational efficiency, highlighting the effectiveness of our\nstructured, coarse-to-fine generation strategy.",
+        "url": "http://arxiv.org/abs/2510.06928v1",
+        "published_date": "2025-10-08T12:08:21+00:00",
+        "updated_date": "2025-10-08T12:08:21+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ran Yi",
+            "Teng Hu",
+            "Zihan Su",
+            "Lizhuang Ma"
+        ],
+        "tldr": "The paper introduces IAR2, a novel autoregressive framework for visual generation that utilizes a Semantic-Detail Associated Dual Codebook and a hierarchical prediction scheme, achieving state-of-the-art results on ImageNet with improved efficiency.",
+        "tldr_zh": "该论文介绍了IAR2，一种新颖的自回归视觉生成框架，它利用语义-细节相关的双重码本和分层预测方案，在ImageNet上实现了最先进的结果，并提高了效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Transforming Noise Distributions with Histogram Matching: Towards a Single Denoiser for All",
+        "summary": "Supervised Gaussian denoisers exhibit limited generalization when confronted\nwith out-of-distribution noise, due to the diverse distributional\ncharacteristics of different noise types. To bridge this gap, we propose a\nhistogram matching approach that transforms arbitrary noise towards a target\nGaussian distribution with known intensity. Moreover, a mutually reinforcing\ncycle is established between noise transformation and subsequent denoising.\nThis cycle progressively refines the noise to be converted, making it\napproximate the real noise, thereby enhancing the noise transformation effect\nand further improving the denoising performance. We tackle specific noise\ncomplexities: local histogram matching handles signal-dependent noise,\nintrapatch permutation processes channel-related noise, and frequency-domain\nhistogram matching coupled with pixel-shuffle down-sampling breaks spatial\ncorrelation. By applying these transformations, a single Gaussian denoiser\ngains remarkable capability to handle various out-of-distribution noises,\nincluding synthetic noises such as Poisson, salt-and-pepper and repeating\npattern noises, as well as complex real-world noises. Extensive experiments\ndemonstrate the superior generalization and effectiveness of our method.",
+        "url": "http://arxiv.org/abs/2510.06757v1",
+        "published_date": "2025-10-08T08:34:50+00:00",
+        "updated_date": "2025-10-08T08:34:50+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sheng Fu",
+            "Junchao Zhang",
+            "Kailun Yang"
+        ],
+        "tldr": "The paper proposes a histogram matching approach to transform various noise distributions into a target Gaussian distribution, enabling a single Gaussian denoiser to handle diverse out-of-distribution noises effectively, showing superior generalization and performance.",
+        "tldr_zh": "该论文提出了一种直方图匹配方法，将各种噪声分布转换为目标高斯分布，使得单个高斯去噪器能够有效地处理各种分布外的噪声，展示了卓越的泛化性和性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Heptapod: Language Modeling on Visual Signals",
+        "summary": "We introduce Heptapod, an image autoregressive model that adheres to the\nfoundational principles of language modeling. Heptapod employs \\textbf{causal\nattention}, \\textbf{eliminates reliance on CFG}, and \\textbf{eschews the trend\nof semantic tokenizers}. Our key innovation is \\textit{next 2D distribution\nprediction}: a causal Transformer with reconstruction-focused visual tokenizer,\nlearns to predict the distribution over the entire 2D spatial grid of images at\neach timestep. This learning objective unifies the sequential modeling of\nautoregressive framework with the holistic self-supervised learning of masked\nautoencoding, enabling the model to capture comprehensive image semantics via\ngenerative training. On the ImageNet generation benchmark, Heptapod achieves an\nFID of $2.70$, significantly outperforming previous causal autoregressive\napproaches. We hope our work inspires a principled rethinking of language\nmodeling on visual signals and beyond.",
+        "url": "http://arxiv.org/abs/2510.06673v1",
+        "published_date": "2025-10-08T05:54:46+00:00",
+        "updated_date": "2025-10-08T05:54:46+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yongxin Zhu",
+            "Jiawei Chen",
+            "Yuanzhe Chen",
+            "Zhuo Chen",
+            "Dongya Jia",
+            "Jian Cong",
+            "Xiaobin Zhuang",
+            "Yuping Wang",
+            "Yuxuan Wang"
+        ],
+        "tldr": "Heptapod is a novel image autoregressive model using a causal Transformer and a reconstruction-focused visual tokenizer to predict the entire 2D spatial grid of images, achieving state-of-the-art FID scores on ImageNet generation.",
+        "tldr_zh": "Heptapod 是一种新型图像自回归模型，它使用因果 Transformer 和以重建为中心的视觉分词器来预测整个图像的 2D 空间网格，在 ImageNet 生成上实现了最先进的 FID 分数。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AIM 2025 Challenge on Real-World RAW Image Denoising",
+        "summary": "We introduce the AIM 2025 Real-World RAW Image Denoising Challenge, aiming to\nadvance efficient and effective denoising techniques grounded in data\nsynthesis. The competition is built upon a newly established evaluation\nbenchmark featuring challenging low-light noisy images captured in the wild\nusing five different DSLR cameras. Participants are tasked with developing\nnovel noise synthesis pipelines, network architectures, and training\nmethodologies to achieve high performance across different camera models.\nWinners are determined based on a combination of performance metrics, including\nfull-reference measures (PSNR, SSIM, LPIPS), and non-reference ones (ARNIQA,\nTOPIQ). By pushing the boundaries of camera-agnostic low-light RAW image\ndenoising trained on synthetic data, the competition promotes the development\nof robust and practical models aligned with the rapid progress in digital\nphotography. We expect the competition outcomes to influence multiple domains,\nfrom image restoration to night-time autonomous driving.",
+        "url": "http://arxiv.org/abs/2510.06601v1",
+        "published_date": "2025-10-08T03:22:42+00:00",
+        "updated_date": "2025-10-08T03:22:42+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Feiran Li",
+            "Jiacheng Li",
+            "Marcos V. Conde",
+            "Beril Besbinar",
+            "Vlad Hosu",
+            "Daisuke Iso",
+            "Radu Timofte"
+        ],
+        "tldr": "This paper introduces the AIM 2025 challenge for real-world RAW image denoising, focusing on developing efficient and effective denoising techniques using synthetic data and evaluating them on a new benchmark of low-light noisy images. The challenge aims to push the boundaries of camera-agnostic denoising and impact areas like image restoration and autonomous driving.",
+        "tldr_zh": "这篇论文介绍了 AIM 2025 真实世界 RAW 图像去噪挑战赛，重点是开发使用合成数据的高效去噪技术，并在一个新的低光噪声图像基准上进行评估。该挑战旨在推动相机无关的去噪技术，并影响图像修复和自动驾驶等领域。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Ming-UniVision: Joint Image Understanding and Generation with a Unified Continuous Tokenizer",
+        "summary": "Visual tokenization remains a core challenge in unifying visual understanding\nand generation within the autoregressive paradigm. Existing methods typically\nemploy tokenizers in discrete latent spaces to align with the tokens from large\nlanguage models, where the quantization errors can limit semantic\nexpressiveness and degrade the capability of vision-language understanding. To\naddress this, we introduce MingTok, a new family of visual tokenizers with a\ncontinuous latent space, for unified autoregressive generation and\nunderstanding. While understanding tasks favor discriminative high-dimensional\nfeatures, generation tasks prefer compact low-level codes. Thus, to reconcile\nthese competing demands, MingTok adopts a three-stage sequential architecture\ninvolving low-level encoding, semantic expansion, and visual reconstruction.\nBuilt on top of it, Ming-UniVision eliminates the need for task-specific visual\nrepresentations, and unifies diverse vision-language tasks under a single\nautoregrsssive prediction paradigm. By formulating both understanding and\ngeneration as next-token prediction in a shared continuous space, it seamlessly\nsupports multi-round, in-context tasks such as iterative understanding,\ngeneration and editing. Empirically, we find that using a unified continuous\nvisual representation reconciles the competing requirements on the tokenizers\nby the understanding and generation tasks, thereby leading to state-of-the-art\nlevel performance across both domains. We hope our findings will facilitate\nunified visual tokenization in the continuous domain. Inference code and model\nweights are released to benefit community.",
+        "url": "http://arxiv.org/abs/2510.06590v1",
+        "published_date": "2025-10-08T02:50:14+00:00",
+        "updated_date": "2025-10-08T02:50:14+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziyuan Huang",
+            "DanDan Zheng",
+            "Cheng Zou",
+            "Rui Liu",
+            "Xiaolong Wang",
+            "Kaixiang Ji",
+            "Weilong Chai",
+            "Jianxin Sun",
+            "Libin Wang",
+            "Yongjie Lv",
+            "Taozhi Huang",
+            "Jiajia Liu",
+            "Qingpei Guo",
+            "Ming Yang",
+            "Jingdong Chen",
+            "Jun Zhou"
+        ],
+        "tldr": "The paper introduces Ming-UniVision, which uses a continuous visual tokenizer (MingTok) to unify image understanding and generation within an autoregressive framework, achieving state-of-the-art performance in both domains.",
+        "tldr_zh": "该论文介绍了 Ming-UniVision，它使用连续视觉 tokenizer (MingTok) 在自回归框架内统一图像理解和生成，并在两个领域都实现了最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "HSNet: Heterogeneous Subgraph Network for Single Image Super-resolution",
+        "summary": "Existing deep learning approaches for image super-resolution, particularly\nthose based on CNNs and attention mechanisms, often suffer from structural\ninflexibility. Although graph-based methods offer greater representational\nadaptability, they are frequently impeded by excessive computational\ncomplexity. To overcome these limitations, this paper proposes the\nHeterogeneous Subgraph Network (HSNet), a novel framework that efficiently\nleverages graph modeling while maintaining computational feasibility. The core\nidea of HSNet is to decompose the global graph into manageable sub-components.\nFirst, we introduce the Constructive Subgraph Set Block (CSSB), which generates\na diverse set of complementary subgraphs. Rather than relying on a single\nmonolithic graph, CSSB captures heterogeneous characteristics of the image by\nmodeling different relational patterns and feature interactions, producing a\nrich ensemble of both local and global graph structures. Subsequently, the\nSubgraph Aggregation Block (SAB) integrates the representations embedded across\nthese subgraphs. Through adaptive weighting and fusion of multi-graph features,\nSAB constructs a comprehensive and discriminative representation that captures\nintricate interdependencies. Furthermore, a Node Sampling Strategy (NSS) is\ndesigned to selectively retain the most salient features, thereby enhancing\naccuracy while reducing computational overhead. Extensive experiments\ndemonstrate that HSNet achieves state-of-the-art performance, effectively\nbalancing reconstruction quality with computational efficiency. The code will\nbe made publicly available.",
+        "url": "http://arxiv.org/abs/2510.06564v1",
+        "published_date": "2025-10-08T01:32:52+00:00",
+        "updated_date": "2025-10-08T01:32:52+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Qiongyang Hu",
+            "Wenyang Liu",
+            "Wenbin Zou",
+            "Yuejiao Su",
+            "Lap-Pui Chau",
+            "Yi Wang"
+        ],
+        "tldr": "The paper introduces HSNet, a novel heterogeneous subgraph network for single image super-resolution that balances reconstruction quality and computational efficiency by decomposing the global graph into subgraphs and using adaptive weighting.",
+        "tldr_zh": "本文介绍了一种名为HSNet的异构子图网络，用于单图像超分辨率。该网络通过将全局图分解为子图并使用自适应加权，从而平衡了重建质量和计算效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VUGEN: Visual Understanding priors for GENeration",
+        "summary": "Recent advances in Vision-Language Models (VLMs) have enabled unified\nunderstanding across text and images, yet equipping these models with robust\nimage generation capabilities remains challenging. Existing approaches often\nrely on reconstruction-oriented autoencoders or complex bridging mechanisms,\nleading to misalignment between understanding and generation representations,\nor architectural complexity. In this work, we propose VUGEN, a novel framework\nthat explicitly leverages VLM's pretrained visual understanding priors for\nefficient and high-quality image generation. Our approach first transforms the\nhigh-dimensional latent space of the VLM's native vision encoder into a\nlower-dimensional, tractable distribution that maximally preserves visual\ninformation. The VLM is then trained to sample within this reduced latent\nspace, ensuring alignment with its visual understanding capabilities. Finally,\na dedicated pixel decoder maps these generated latents back to the image space.\nWe find that a VAE-free pixel diffusion decoder to be on par or better than\ncommonly used complex latent diffusion decoders that internally rely on VAE\nlatents. Extensive experiments demonstrate that VUGEN achieves superior image\ngeneration performance, improving DPG Bench from 71.17 to 74.32 and FID from\n11.86 to 9.06 on COCO, while fully preserving the VLM's original understanding\ncapabilities.",
+        "url": "http://arxiv.org/abs/2510.06529v1",
+        "published_date": "2025-10-08T00:04:47+00:00",
+        "updated_date": "2025-10-08T00:04:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiangyi Chen",
+            "Théophane Vallaeys",
+            "Maha Elbayad",
+            "John Nguyen",
+            "Jakob Verbeek"
+        ],
+        "tldr": "The paper introduces VUGEN, a framework that improves image generation quality and efficiency by leveraging visual understanding priors from VLMs through a reduced latent space and a VAE-free pixel diffusion decoder.",
+        "tldr_zh": "该论文介绍了 VUGEN，一个通过利用 VLM 的视觉理解先验，并通过缩减的潜在空间和无 VAE 的像素扩散解码器来提高图像生成质量和效率的框架。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TDiff: Thermal Plug-And-Play Prior with Patch-Based Diffusion",
+        "summary": "Thermal images from low-cost cameras often suffer from low resolution, fixed\npattern noise, and other localized degradations. Available datasets for thermal\nimaging are also limited in both size and diversity. To address these\nchallenges, we propose a patch-based diffusion framework (TDiff) that leverages\nthe local nature of these distortions by training on small thermal patches. In\nthis approach, full-resolution images are restored by denoising overlapping\npatches and blending them using smooth spatial windowing. To our knowledge,\nthis is the first patch-based diffusion framework that models a learned prior\nfor thermal image restoration across multiple tasks. Experiments on denoising,\nsuper-resolution, and deblurring demonstrate strong results on both simulated\nand real thermal data, establishing our method as a unified restoration\npipeline.",
+        "url": "http://arxiv.org/abs/2510.06460v1",
+        "published_date": "2025-10-07T20:54:34+00:00",
+        "updated_date": "2025-10-07T20:54:34+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Piyush Dashpute",
+            "Niki Nezakati",
+            "Wolfgang Heidrich",
+            "Vishwanath Saragadam"
+        ],
+        "tldr": "The paper introduces TDiff, a patch-based diffusion framework for thermal image restoration (denoising, super-resolution, deblurring) that addresses limitations in thermal image datasets and low-cost thermal camera quality. It claims strong results on both simulated and real thermal data.",
+        "tldr_zh": "该论文介绍了一种基于patch的扩散框架TDiff，用于热图像恢复（去噪、超分辨率、去模糊），解决了热图像数据集和低成本热像仪质量的局限性。该方法在模拟和真实热数据上都取得了较好的效果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Conditional Denoising Diffusion Model-Based Robust MR Image Reconstruction from Highly Undersampled Data",
+        "summary": "Magnetic Resonance Imaging (MRI) is a critical tool in modern medical\ndiagnostics, yet its prolonged acquisition time remains a critical limitation,\nespecially in time-sensitive clinical scenarios. While undersampling strategies\ncan accelerate image acquisition, they often result in image artifacts and\ndegraded quality. Recent diffusion models have shown promise for reconstructing\nhigh-fidelity images from undersampled data by learning powerful image priors;\nhowever, most existing approaches either (i) rely on unsupervised score\nfunctions without paired supervision or (ii) apply data consistency only as a\npost-processing step. In this work, we introduce a conditional denoising\ndiffusion framework with iterative data-consistency correction, which differs\nfrom prior methods by embedding the measurement model directly into every\nreverse diffusion step and training the model on paired undersampled-ground\ntruth data. This hybrid design bridges generative flexibility with explicit\nenforcement of MRI physics. Experiments on the fastMRI dataset demonstrate that\nour framework consistently outperforms recent state-of-the-art deep learning\nand diffusion-based methods in SSIM, PSNR, and LPIPS, with LPIPS capturing\nperceptual improvements more faithfully. These results demonstrate that\nintegrating conditional supervision with iterative consistency updates yields\nsubstantial improvements in both pixel-level fidelity and perceptual realism,\nestablishing a principled and practical advance toward robust, accelerated MRI\nreconstruction.",
+        "url": "http://arxiv.org/abs/2510.06335v1",
+        "published_date": "2025-10-07T18:01:08+00:00",
+        "updated_date": "2025-10-07T18:01:08+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Mohammed Alsubaie",
+            "Wenxi Liu",
+            "Linxia Gu",
+            "Ovidiu C. Andronesi",
+            "Sirani M. Perera",
+            "Xianqi Li"
+        ],
+        "tldr": "This paper introduces a conditional denoising diffusion model for MRI reconstruction from undersampled data, incorporating iterative data consistency correction at each reverse diffusion step and supervised training, achieving state-of-the-art results.",
+        "tldr_zh": "本文提出了一种基于条件去噪扩散模型的MRI图像重建方法，该方法从欠采样数据中重建图像，并在每个反向扩散步骤中结合迭代数据一致性校正以及监督训练，实现了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Graph Conditioned Diffusion for Controllable Histopathology Image Generation",
+        "summary": "Recent advances in Diffusion Probabilistic Models (DPMs) have set new\nstandards in high-quality image synthesis. Yet, controlled generation remains\nchallenging, particularly in sensitive areas such as medical imaging. Medical\nimages feature inherent structure such as consistent spatial arrangement, shape\nor texture, all of which are critical for diagnosis. However, existing DPMs\noperate in noisy latent spaces that lack semantic structure and strong priors,\nmaking it difficult to ensure meaningful control over generated content. To\naddress this, we propose graph-based object-level representations for\nGraph-Conditioned-Diffusion. Our approach generates graph nodes corresponding\nto each major structure in the image, encapsulating their individual features\nand relationships. These graph representations are processed by a transformer\nmodule and integrated into a diffusion model via the text-conditioning\nmechanism, enabling fine-grained control over generation. We evaluate this\napproach using a real-world histopathology use case, demonstrating that our\ngenerated data can reliably substitute for annotated patient data in downstream\nsegmentation tasks. The code is available here.",
+        "url": "http://arxiv.org/abs/2510.07129v1",
+        "published_date": "2025-10-08T15:26:08+00:00",
+        "updated_date": "2025-10-08T15:26:08+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Sarah Cechnicka",
+            "Matthew Baugh",
+            "Weitong Zhang",
+            "Mischa Dombrowski",
+            "Zhe Li",
+            "Johannes C. Paetzold",
+            "Candice Roufosse",
+            "Bernhard Kainz"
+        ],
+        "tldr": "This paper introduces a graph-conditioned diffusion model for controllable histopathology image generation, allowing fine-grained control over the generation process and demonstrating its utility in downstream segmentation tasks.",
+        "tldr_zh": "本文提出了一种基于图条件扩散模型的方法，用于可控的组织病理学图像生成，能够对生成过程进行细粒度控制，并证明了其在下游分割任务中的有效性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Limited-Angle Tomography Reconstruction via Projector Guided 3D Diffusion",
+        "summary": "Limited-angle electron tomography aims to reconstruct 3D shapes from 2D\nprojections of Transmission Electron Microscopy (TEM) within a restricted range\nand number of tilting angles, but it suffers from the missing-wedge problem\nthat causes severe reconstruction artifacts. Deep learning approaches have\nshown promising results in alleviating these artifacts, yet they typically\nrequire large high-quality training datasets with known 3D ground truth which\nare difficult to obtain in electron microscopy. To address these challenges, we\npropose TEMDiff, a novel 3D diffusion-based iterative reconstruction framework.\nOur method is trained on readily available volumetric FIB-SEM data using a\nsimulator that maps them to TEM tilt series, enabling the model to learn\nrealistic structural priors without requiring clean TEM ground truth. By\noperating directly on 3D volumes, TEMDiff implicitly enforces consistency\nacross slices without the need for additional regularization. On simulated\nelectron tomography datasets with limited angular coverage, TEMDiff outperforms\nstate-of-the-art methods in reconstruction quality. We further demonstrate that\na trained TEMDiff model generalizes well to real-world TEM tilts obtained under\ndifferent conditions and can recover accurate structures from tilt ranges as\nnarrow as 8 degrees, with 2-degree increments, without any retraining or\nfine-tuning.",
+        "url": "http://arxiv.org/abs/2510.06516v1",
+        "published_date": "2025-10-07T23:27:28+00:00",
+        "updated_date": "2025-10-07T23:27:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhantao Deng",
+            "Mériem Er-Rafik",
+            "Anna Sushko",
+            "Cécile Hébert",
+            "Pascal Fua"
+        ],
+        "tldr": "The paper introduces TEMDiff, a 3D diffusion-based iterative reconstruction framework for limited-angle electron tomography, trained on synthetic TEM data to overcome the need for real ground truth, achieving state-of-the-art results and generalization to real-world data.",
+        "tldr_zh": "该论文介绍了TEMDiff，一个基于3D扩散的迭代重建框架，用于有限角度电子断层扫描。该框架使用合成TEM数据进行训练，克服了对真实ground truth的需求，实现了最先进的结果，并能推广到真实世界的数据。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "WristWorld: Generating Wrist-Views via 4D World Models for Robotic Manipulation",
+        "summary": "Wrist-view observations are crucial for VLA models as they capture\nfine-grained hand-object interactions that directly enhance manipulation\nperformance. Yet large-scale datasets rarely include such recordings, resulting\nin a substantial gap between abundant anchor views and scarce wrist views.\nExisting world models cannot bridge this gap, as they require a wrist-view\nfirst frame and thus fail to generate wrist-view videos from anchor views\nalone. Amid this gap, recent visual geometry models such as VGGT emerge with\ngeometric and cross-view priors that make it possible to address extreme\nviewpoint shifts. Inspired by these insights, we propose WristWorld, the first\n4D world model that generates wrist-view videos solely from anchor views.\nWristWorld operates in two stages: (i) Reconstruction, which extends VGGT and\nincorporates our Spatial Projection Consistency (SPC) Loss to estimate\ngeometrically consistent wrist-view poses and 4D point clouds; (ii) Generation,\nwhich employs our video generation model to synthesize temporally coherent\nwrist-view videos from the reconstructed perspective. Experiments on Droid,\nCalvin, and Franka Panda demonstrate state-of-the-art video generation with\nsuperior spatial consistency, while also improving VLA performance, raising the\naverage task completion length on Calvin by 3.81% and closing 42.4% of the\nanchor-wrist view gap.",
+        "url": "http://arxiv.org/abs/2510.07313v1",
+        "published_date": "2025-10-08T17:59:08+00:00",
+        "updated_date": "2025-10-08T17:59:08+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Zezhong Qian",
+            "Xiaowei Chi",
+            "Yuming Li",
+            "Shizun Wang",
+            "Zhiyuan Qin",
+            "Xiaozhu Ju",
+            "Sirui Han",
+            "Shanghang Zhang"
+        ],
+        "tldr": "The paper introduces WristWorld, a novel 4D world model capable of generating wrist-view videos from anchor views for robotic manipulation by leveraging visual geometry models and spatial projection consistency.",
+        "tldr_zh": "该论文介绍了WristWorld，一种新颖的4D世界模型，能够通过利用视觉几何模型和空间投影一致性，从锚视图生成用于机器人操作的手腕视图视频。",
+        "relevance_score": 3,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 5
+    },
+    {
+        "title": "TalkCuts: A Large-Scale Dataset for Multi-Shot Human Speech Video Generation",
+        "summary": "In this work, we present TalkCuts, a large-scale dataset designed to\nfacilitate the study of multi-shot human speech video generation. Unlike\nexisting datasets that focus on single-shot, static viewpoints, TalkCuts offers\n164k clips totaling over 500 hours of high-quality human speech videos with\ndiverse camera shots, including close-up, half-body, and full-body views. The\ndataset includes detailed textual descriptions, 2D keypoints and 3D SMPL-X\nmotion annotations, covering over 10k identities, enabling multimodal learning\nand evaluation. As a first attempt to showcase the value of the dataset, we\npresent Orator, an LLM-guided multi-modal generation framework as a simple\nbaseline, where the language model functions as a multi-faceted director,\norchestrating detailed specifications for camera transitions, speaker\ngesticulations, and vocal modulation. This architecture enables the synthesis\nof coherent long-form videos through our integrated multi-modal video\ngeneration module. Extensive experiments in both pose-guided and audio-driven\nsettings show that training on TalkCuts significantly enhances the\ncinematographic coherence and visual appeal of generated multi-shot speech\nvideos. We believe TalkCuts provides a strong foundation for future work in\ncontrollable, multi-shot speech video generation and broader multimodal\nlearning.",
+        "url": "http://arxiv.org/abs/2510.07249v1",
+        "published_date": "2025-10-08T17:16:09+00:00",
+        "updated_date": "2025-10-08T17:16:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiaben Chen",
+            "Zixin Wang",
+            "Ailing Zeng",
+            "Yang Fu",
+            "Xueyang Yu",
+            "Siyuan Cen",
+            "Julian Tanke",
+            "Yihang Chen",
+            "Koichi Saito",
+            "Yuki Mitsufuji",
+            "Chuang Gan"
+        ],
+        "tldr": "The paper introduces TalkCuts, a large-scale dataset for multi-shot human speech video generation, and presents Orator, an LLM-guided multimodal generation framework as a baseline, demonstrating improved cinematographic coherence and visual appeal in generated videos.",
+        "tldr_zh": "本文介绍了一个名为TalkCuts的大规模多镜头人类语音视频生成数据集，并提出了Orator，一个基于LLM的多模态生成框架作为基线，展示了生成视频在电影拍摄连贯性和视觉吸引力方面的改进。",
+        "relevance_score": 3,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 6,
+        "overall_priority_score": 5
+    }
+]
