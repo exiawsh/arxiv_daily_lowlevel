@@ -1,0 +1,210 @@
+[
+    {
+        "title": "Large Scale Diffusion Distillation via Score-Regularized Continuous-Time Consistency",
+        "summary": "This work represents the first effort to scale up continuous-time consistency\ndistillation to general application-level image and video diffusion models.\nAlthough continuous-time consistency model (sCM) is theoretically principled\nand empirically powerful for accelerating academic-scale diffusion, its\napplicability to large-scale text-to-image and video tasks remains unclear due\nto infrastructure challenges in Jacobian-vector product (JVP) computation and\nthe limitations of standard evaluation benchmarks. We first develop a\nparallelism-compatible FlashAttention-2 JVP kernel, enabling sCM training on\nmodels with over 10 billion parameters and high-dimensional video tasks. Our\ninvestigation reveals fundamental quality limitations of sCM in fine-detail\ngeneration, which we attribute to error accumulation and the \"mode-covering\"\nnature of its forward-divergence objective. To remedy this, we propose the\nscore-regularized continuous-time consistency model (rCM), which incorporates\nscore distillation as a long-skip regularizer. This integration complements sCM\nwith the \"mode-seeking\" reverse divergence, effectively improving visual\nquality while maintaining high generation diversity. Validated on large-scale\nmodels (Cosmos-Predict2, Wan2.1) up to 14B parameters and 5-second videos, rCM\nmatches or surpasses the state-of-the-art distillation method DMD2 on quality\nmetrics while offering notable advantages in diversity, all without GAN tuning\nor extensive hyperparameter searches. The distilled models generate\nhigh-fidelity samples in only $1\\sim4$ steps, accelerating diffusion sampling\nby $15\\times\\sim50\\times$. These results position rCM as a practical and\ntheoretically grounded framework for advancing large-scale diffusion\ndistillation.",
+        "url": "http://arxiv.org/abs/2510.08431v1",
+        "published_date": "2025-10-09T16:45:30+00:00",
+        "updated_date": "2025-10-09T16:45:30+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Kaiwen Zheng",
+            "Yuji Wang",
+            "Qianli Ma",
+            "Huayu Chen",
+            "Jintao Zhang",
+            "Yogesh Balaji",
+            "Jianfei Chen",
+            "Ming-Yu Liu",
+            "Jun Zhu",
+            "Qinsheng Zhang"
+        ],
+        "tldr": "The paper introduces score-regularized continuous-time consistency model (rCM) for efficient and high-quality image and video generation by distilling large-scale diffusion models, overcoming limitations of previous consistency models.",
+        "tldr_zh": "该论文介绍了score-regularized连续时间一致性模型 (rCM)，通过提炼大规模扩散模型，用于高效、高质量的图像和视频生成，克服了先前一致性模型的局限性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Biology-driven assessment of deep learning super-resolution imaging of the porosity network in dentin",
+        "summary": "The mechanosensory system of teeth is currently believed to partly rely on\nOdontoblast cells stimulation by fluid flow through a porosity network\nextending through dentin. Visualizing the smallest sub-microscopic porosity\nvessels therefore requires the highest achievable resolution from confocal\nfluorescence microscopy, the current gold standard. This considerably limits\nthe extent of the field of view to very small sample regions. To overcome this\nlimitation, we tested different deep learning (DL) super-resolution (SR) models\nto allow faster experimental acquisitions of lower resolution images and\nrestore optimal image quality by post-processing. Three supervised 2D SR models\n(RCAN, pix2pix, FSRCNN) and one unsupervised (CycleGAN) were applied to a\nunique set of experimentally paired high- and low-resolution confocal images\nacquired with different sampling schemes, resulting in a pixel size increase of\nx2, x4, x8. Model performance was quantified using a broad set of similarity\nand distribution-based image quality assessment (IQA) metrics, which yielded\ninconsistent results that mostly contradicted our visual perception. This\nraises the question of the relevance of such generic metrics to efficiently\ntarget the specific structure of dental porosity. To resolve this conflicting\ninformation, the generated SR images were segmented taking into account the\nspecific scales and morphology of the porosity network and analysed by\ncomparing connected components. Additionally, the capacity of the SR models to\npreserve 3D porosity connectivity throughout the confocal image stacks was\nevaluated using graph analysis. This biology-driven assessment allowed a far\nbetter mechanistic interpretation of SR performance, highlighting differences\nin model sensitivity to weak intensity features and the impact of non-linearity\nin image generation, which explains the failure of standard IQA metrics.",
+        "url": "http://arxiv.org/abs/2510.08407v1",
+        "published_date": "2025-10-09T16:26:38+00:00",
+        "updated_date": "2025-10-09T16:26:38+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV",
+            "q-bio.TO"
+        ],
+        "authors": [
+            "Lauren Anderson",
+            "Lucas Chatelain",
+            "Nicolas Tremblay",
+            "Kathryn Grandfield",
+            "David Rousseau",
+            "Aurélien Gourrier"
+        ],
+        "tldr": "This paper explores deep learning super-resolution (SR) models for enhancing confocal microscopy images of dentin porosity, using a biology-driven assessment based on segmentation and graph analysis to overcome limitations of standard image quality assessment metrics.",
+        "tldr_zh": "本文探索了深度学习超分辨率（SR）模型在增强牙本质孔隙率的共聚焦显微图像方面的应用，并采用基于分割和图分析的生物学驱动评估方法，克服了标准图像质量评估指标的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UniMMVSR: A Unified Multi-Modal Framework for Cascaded Video Super-Resolution",
+        "summary": "Cascaded video super-resolution has emerged as a promising technique for\ndecoupling the computational burden associated with generating high-resolution\nvideos using large foundation models. Existing studies, however, are largely\nconfined to text-to-video tasks and fail to leverage additional generative\nconditions beyond text, which are crucial for ensuring fidelity in multi-modal\nvideo generation. We address this limitation by presenting UniMMVSR, the first\nunified generative video super-resolution framework to incorporate hybrid-modal\nconditions, including text, images, and videos. We conduct a comprehensive\nexploration of condition injection strategies, training schemes, and data\nmixture techniques within a latent video diffusion model. A key challenge was\ndesigning distinct data construction and condition utilization methods to\nenable the model to precisely utilize all condition types, given their varied\ncorrelations with the target video. Our experiments demonstrate that UniMMVSR\nsignificantly outperforms existing methods, producing videos with superior\ndetail and a higher degree of conformity to multi-modal conditions. We also\nvalidate the feasibility of combining UniMMVSR with a base model to achieve\nmulti-modal guided generation of 4K video, a feat previously unattainable with\nexisting techniques.",
+        "url": "http://arxiv.org/abs/2510.08143v1",
+        "published_date": "2025-10-09T12:25:16+00:00",
+        "updated_date": "2025-10-09T12:25:16+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shian Du",
+            "Menghan Xia",
+            "Chang Liu",
+            "Quande Liu",
+            "Xintao Wang",
+            "Pengfei Wan",
+            "Xiangyang Ji"
+        ],
+        "tldr": "The paper introduces UniMMVSR, a unified video super-resolution framework that incorporates multiple conditions like text, images, and videos to enhance fidelity and achieve 4K video generation, outperforming existing methods.",
+        "tldr_zh": "该论文介绍了 UniMMVSR，一个统一的视频超分辨率框架，它结合了文本、图像和视频等多种条件，以提高保真度并实现 4K 视频生成，优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Is Architectural Complexity Always the Answer? A Case Study on SwinIR vs. an Efficient CNN",
+        "summary": "The simultaneous restoration of high-frequency details and suppression of\nsevere noise in low-light imagery presents a significant and persistent\nchallenge in computer vision. While large-scale Transformer models like SwinIR\nhave set the state of the art in performance, their high computational cost can\nbe a barrier for practical applications. This paper investigates the critical\ntrade-off between performance and efficiency by comparing the state-of-the-art\nSwinIR model against a standard, lightweight Convolutional Neural Network (CNN)\non this challenging task. Our experimental results reveal a nuanced but\nimportant finding. While the Transformer-based SwinIR model achieves a higher\npeak performance, with a Peak Signal-to-Noise Ratio (PSNR) of 39.03 dB, the\nlightweight CNN delivers a surprisingly competitive PSNR of 37.4 dB. Crucially,\nthe CNN reached this performance after converging in only 10 epochs of\ntraining, whereas the more complex SwinIR model required 132 epochs. This\nefficiency is further underscored by the model's size; the CNN is over 55 times\nsmaller than SwinIR. This work demonstrates that a standard CNN can provide a\nnear state-of-the-art result with significantly lower computational overhead,\npresenting a compelling case for its use in real-world scenarios where resource\nconstraints are a primary concern.",
+        "url": "http://arxiv.org/abs/2510.07984v1",
+        "published_date": "2025-10-09T09:16:05+00:00",
+        "updated_date": "2025-10-09T09:16:05+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Chandresh Sutariya",
+            "Nitin Singh"
+        ],
+        "tldr": "This paper compares SwinIR with a lightweight CNN for low-light image restoration, finding that the CNN achieves near state-of-the-art performance with significantly less computational cost and training time, highlighting the importance of efficiency.",
+        "tldr_zh": "本文比较了SwinIR和一个轻量级CNN在低光图像恢复方面的性能。研究发现，CNN以更低的计算成本和训练时间实现了接近最先进的性能，突出了效率的重要性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 10,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Latent Harmony: Synergistic Unified UHD Image Restoration via Latent Space Regularization and Controllable Refinement",
+        "summary": "Ultra-High Definition (UHD) image restoration faces a trade-off between\ncomputational efficiency and high-frequency detail retention. While Variational\nAutoencoders (VAEs) improve efficiency via latent-space processing, their\nGaussian constraint often discards degradation-specific high-frequency\ninformation, hurting reconstruction fidelity. To overcome this, we propose\nLatent Harmony, a two-stage framework that redefines VAEs for UHD restoration\nby jointly regularizing the latent space and enforcing high-frequency-aware\nreconstruction.In Stage One, we introduce LH-VAE, which enhances semantic\nrobustness through visual semantic constraints and progressive degradation\nperturbations, while latent equivariance strengthens high-frequency\nreconstruction.Stage Two jointly trains this refined VAE with a restoration\nmodel using High-Frequency Low-Rank Adaptation (HF-LoRA): an encoder LoRA\nguided by a fidelity-oriented high-frequency alignment loss to recover\nauthentic details, and a decoder LoRA driven by a perception-oriented loss to\nsynthesize realistic textures. Both LoRA modules are trained via alternating\noptimization with selective gradient propagation to preserve the pretrained\nlatent structure.At inference, a tunable parameter {\\alpha} enables flexible\nfidelity-perception trade-offs.Experiments show Latent Harmony achieves\nstate-of-the-art performance across UHD and standard-resolution tasks,\neffectively balancing efficiency, perceptual quality, and reconstruction\naccuracy.",
+        "url": "http://arxiv.org/abs/2510.07961v1",
+        "published_date": "2025-10-09T08:54:26+00:00",
+        "updated_date": "2025-10-09T08:54:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yidi Liu",
+            "Xueyang Fu",
+            "Jie Huang",
+            "Jie Xiao",
+            "Dong Li",
+            "Wenlong Zhang",
+            "Lei Bai",
+            "Zheng-Jun Zha"
+        ],
+        "tldr": "The paper introduces Latent Harmony, a two-stage framework using Variational Autoencoders (VAEs) with latent space regularization and high-frequency-aware reconstruction to improve UHD image restoration, balancing efficiency, perceptual quality, and reconstruction accuracy.",
+        "tldr_zh": "该论文介绍了一种名为Latent Harmony的两阶段框架，它使用变分自编码器（VAE）与潜在空间正则化和高频感知重建相结合，以改善超高清图像的修复效果，并在效率、感知质量和重建精度之间取得平衡。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SatFusion: A Unified Framework for Enhancing Satellite IoT Images via Multi-Temporal and Multi-Source Data Fusion",
+        "summary": "With the rapid advancement of the digital society, the proliferation of\nsatellites in the Satellite Internet of Things (Sat-IoT) has led to the\ncontinuous accumulation of large-scale multi-temporal and multi-source images\nacross diverse application scenarios. However, existing methods fail to fully\nexploit the complementary information embedded in both temporal and source\ndimensions. For example, Multi-Image Super-Resolution (MISR) enhances\nreconstruction quality by leveraging temporal complementarity across multiple\nobservations, yet the limited fine-grained texture details in input images\nconstrain its performance. Conversely, pansharpening integrates multi-source\nimages by injecting high-frequency spatial information from panchromatic data,\nbut typically relies on pre-interpolated low-resolution inputs and assumes\nnoise-free alignment, making it highly sensitive to noise and misregistration.\nTo address these issues, we propose SatFusion: A Unified Framework for\nEnhancing Satellite IoT Images via Multi-Temporal and Multi-Source Data Fusion.\nSpecifically, SatFusion first employs a Multi-Temporal Image Fusion (MTIF)\nmodule to achieve deep feature alignment with the panchromatic image. Then, a\nMulti-Source Image Fusion (MSIF) module injects fine-grained texture\ninformation from the panchromatic data. Finally, a Fusion Composition module\nadaptively integrates the complementary advantages of both modalities while\ndynamically refining spectral consistency, supervised by a weighted combination\nof multiple loss functions. Extensive experiments on the WorldStrat, WV3, QB,\nand GF2 datasets demonstrate that SatFusion significantly improves fusion\nquality, robustness under challenging conditions, and generalizability to\nreal-world Sat-IoT scenarios. The code is available at:\nhttps://github.com/dllgyufei/SatFusion.git.",
+        "url": "http://arxiv.org/abs/2510.07905v1",
+        "published_date": "2025-10-09T07:59:37+00:00",
+        "updated_date": "2025-10-09T07:59:37+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV",
+            "cs.MM"
+        ],
+        "authors": [
+            "Yufei Tong",
+            "Guanjie Cheng",
+            "Peihan Wu",
+            "Yicheng Zhu",
+            "Kexu Lu",
+            "Feiyi Chen",
+            "Meng Xi",
+            "Junqin Huang",
+            "Shuiguang Deng"
+        ],
+        "tldr": "SatFusion is a unified framework for enhancing satellite IoT images by fusing multi-temporal and multi-source data, addressing limitations of existing methods like MISR and pansharpening through a novel three-module approach.",
+        "tldr_zh": "SatFusion 是一个统一的框架，通过融合多时相和多源数据来增强卫星物联网图像。它通过一种新颖的三模块方法，解决了现有方法（如 MISR 和 pansharpening）的局限性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Provably Accelerated Imaging with Restarted Inertia and Score-based Image Priors",
+        "summary": "Fast convergence and high-quality image recovery are two essential features\nof algorithms for solving ill-posed imaging inverse problems. Existing methods,\nsuch as regularization by denoising (RED), often focus on designing\nsophisticated image priors to improve reconstruction quality, while leaving\nconvergence acceleration to heuristics. To bridge the gap, we propose Restarted\nInertia with Score-based Priors (RISP) as a principled extension of RED. RISP\nincorporates a restarting inertia for fast convergence, while still allowing\nscore-based image priors for high-quality reconstruction. We prove that RISP\nattains a faster stationary-point convergence rate than RED, without requiring\nthe convexity of the image prior. We further derive and analyze the associated\ncontinuous-time dynamical system, offering insight into the connection between\nRISP and the heavy-ball ordinary differential equation (ODE). Experiments\nacross a range of imaging inverse problems demonstrate that RISP enables fast\nconvergence while achieving high-quality reconstructions.",
+        "url": "http://arxiv.org/abs/2510.07470v1",
+        "published_date": "2025-10-08T19:16:27+00:00",
+        "updated_date": "2025-10-08T19:16:27+00:00",
+        "categories": [
+            "cs.CV",
+            "94A08, 68U10"
+        ],
+        "authors": [
+            "Marien Renaud",
+            "Julien Hermant",
+            "Deliang Wei",
+            "Yu Sun"
+        ],
+        "tldr": "The paper introduces Restarted Inertia with Score-based Priors (RISP), a provably faster and high-quality image reconstruction method for ill-posed inverse problems, extending RED with a restarting inertia mechanism and score-based priors.",
+        "tldr_zh": "该论文介绍了基于分数先验的重启动惯性算法（RISP），这是一种针对不适定逆问题的、可证明的更快且高质量的图像重建方法，通过重启惯性机制和基于分数的先验扩展了RED。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SPICE: Simple and Practical Image Clarification and Enhancement",
+        "summary": "We introduce a simple and efficient method to enhance and clarify images.\nMore specifically, we deal with low light image enhancement and clarification\nof hazy imagery (hazy/foggy images, images containing sand dust, and underwater\nimages). Our method involves constructing an image filter to simulate low-light\nor hazy conditions and deriving approximate reverse filters to minimize\ndistortions in the enhanced images. Experimental results show that our approach\nis highly competitive and often surpasses state-of-the-art techniques in\nhandling extremely dark images and in enhancing hazy images. A key advantage of\nour approach lies in its simplicity: Our method is implementable with just a\nfew lines of MATLAB code.",
+        "url": "http://arxiv.org/abs/2510.08358v1",
+        "published_date": "2025-10-09T15:43:07+00:00",
+        "updated_date": "2025-10-09T15:43:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Alexander Belyaev",
+            "Pierre-Alain Fayolle",
+            "Michael Cohen"
+        ],
+        "tldr": "This paper introduces a simple and efficient image enhancement method (SPICE) for low-light and hazy images using a filter-based approach with minimal code complexity, claiming to surpass state-of-the-art techniques.",
+        "tldr_zh": "本文介绍了一种简单高效的图像增强方法（SPICE），用于低光照和朦胧图像，该方法采用基于滤波的方法，代码复杂度极低，并声称超越了最先进的技术。",
+        "relevance_score": 7,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

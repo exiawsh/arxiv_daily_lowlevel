@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArXiv CS.CV Papers (Visual Language Model) - October 10, 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
+    <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            /* New Palette: Light, Clean, Futuristic with Teal/Aqua accents */
+            --bg-color: #f8fafc; /* Tailwind slate-50 (Very Light Gray) */
+            --card-bg-color: #ffffff; /* White */
+            --text-color: #1e293b; /* Tailwind slate-800 (Dark Gray-Blue) */
+            --text-muted-color: #64748b; /* Tailwind slate-500 (Medium Gray-Blue) */
+            --header-color: #0f172a; /* Tailwind slate-900 (Very Dark Blue) */
+            --highlight-primary: #14b8a6; /* Tailwind teal-500 */
+            --highlight-secondary: #67e8f9; /* Tailwind cyan-300 */
+            --border-color: #e2e8f0; /* Tailwind slate-200 (Light Gray) */
+            --shadow-color: rgba(15, 23, 42, 0.08); /* Subtle shadow based on slate-900 */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            line-height: 1.6;
+        }
+
+        .bento-grid {
+            display: grid;
+            gap: 1.5rem; /* Tailwind gap-6 */
+            grid-template-columns: 1fr; /* Force single column */
+            padding-bottom: 4rem; /* Add padding at the bottom */
+        }
+
+        .bento-item {
+            /* Apply semi-transparent white background and blur */
+            background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+            backdrop-filter: blur(10px); /* Apply blur effect */
+            -webkit-backdrop-filter: blur(10px); /* Safari prefix */
+            border-radius: 1rem; /* Slightly larger radius */
+            padding: 1.75rem; /* Slightly more padding */
+            border: 1px solid rgba(226, 232, 240, 0.5); /* Lighter border with transparency */
+            box-shadow: 0 4px 12px var(--shadow-color);
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+            overflow: hidden; /* Ensure content doesn't overflow */
+            position: relative; /* For potential pseudo-elements */
+        }
+
+        /* Removed ::before pseudo-element for a cleaner look */
+
+
+        .bento-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px var(--shadow-color), 0 4px 8px rgba(15, 23, 42, 0.06); /* Adjusted hover shadow */
+        }
+
+        .paper-title {
+            font-size: 1.125rem; /* Tailwind text-lg */
+            font-weight: 600; /* Tailwind font-semibold */
+            color: var(--highlight-primary); /* Use new primary highlight */
+            margin-bottom: 0.75rem; /* Tailwind mb-3 */
+            line-height: 1.4;
+        }
+
+        .paper-summary {
+            font-size: 0.875rem; /* Tailwind text-sm */
+            color: var(--text-muted-color);
+            margin-bottom: 1.25rem; /* Tailwind mb-5 */
+            line-height: 1.6;
+        }
+
+        .paper-link {
+            display: inline-flex; /* Use flex for icon alignment */
+            align-items: center;
+            font-size: 0.875rem; /* Tailwind text-sm */
+            font-weight: 600;
+            color: var(--highlight-primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem; /* Add padding */
+            border-radius: 0.5rem; /* Slightly rounder */
+            background-color: rgba(20, 184, 166, 0.08); /* Subtle teal background */
+            border: 1px solid rgba(20, 184, 166, 0.2);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        .paper-link i {
+            margin-right: 0.5rem; /* Tailwind mr-2 */
+            transition: transform 0.3s ease;
+        }
+
+        .paper-link:hover {
+            background-color: rgba(20, 184, 166, 0.15);
+            color: #0d9488; /* Darker teal on hover */
+            transform: translateY(-1px);
+        }
+        .paper-link:hover i {
+             transform: translateX(2px);
+        }
+
+        .paper-authors {
+            font-size: 0.75rem; /* Tailwind text-xs */
+            color: var(--text-muted-color);
+            margin-top: 1rem; /* Tailwind mt-4 */
+            font-style: italic;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem; /* Tailwind mb-12 */
+            padding-top: 3rem; /* Tailwind pt-12 */
+        }
+
+        .header h1 {
+            font-size: 2.5rem; /* Tailwind text-4xl or 5xl */
+            font-weight: 700; /* Tailwind font-bold */
+            color: var(--header-color);
+            letter-spacing: -0.025em; /* Tailwind tracking-tight */
+            margin-bottom: 0.5rem;
+            /* Optional: Add a subtle text gradient */
+            /* background: linear-gradient(90deg, var(--highlight-primary), var(--highlight-secondary)); */
+            /* -webkit-background-clip: text; */
+            /* -webkit-text-fill-color: transparent; */
+        }
+
+        .header p {
+            font-size: 1.125rem; /* Tailwind text-lg */
+            color: var(--text-muted-color);
+            margin-top: 0.5rem; /* Tailwind mt-2 */
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer {
+            text-align: center;
+            color: var(--text-muted-color);
+            font-size: 0.875rem; /* Tailwind text-sm */
+            padding-top: 2rem;
+            padding-bottom: 2rem; /* Tailwind py-8 */
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        /* Simple line graphic element (optional) */
+        .line-graphic {
+            height: 1px; /* Thinner line */
+            background: linear-gradient(90deg, rgba(20, 184, 166, 0), var(--highlight-primary), rgba(20, 184, 166, 0));
+            opacity: 0.6;
+            margin: 1.5rem 0; /* Adjust margin */
+        }
+
+        /* Framer Motion requires the script, styles enhance appearance */
+        [data-motion-element] {
+             /* Base styles for elements animated by Framer Motion */
+        }
+
+        .paper-tldr {
+            font-size: 0.95rem; /* Slightly bigger than summary */
+            color: #475569; /* Changed to Tailwind slate-600 (slightly darker than summary) */
+            margin-top: 0.75rem; /* Tailwind mt-3 */
+            margin-bottom: 0.75rem; /* Tailwind mb-2 */
+            /* font-style: italic; */
+            font-weight: bold;
+        }
+
+        .paper-rating {
+            margin-top: 1rem; /* Tailwind mt-4 */
+            margin-bottom: 1rem; /* Tailwind mb-4 */
+            color: #f59e0b; /* Tailwind amber-500 */
+        }
+
+        .paper-rating i {
+            margin-right: 0.125rem; /* Tailwind mr-0.5 */
+        }
+
+        /* Apply consistent star color to sub-ratings */
+        .paper-sub-ratings .rating-item i {
+            color: #f59e0b; /* Match overall rating star color (amber-500) */
+            margin-right: 0.125rem; /* Consistent spacing */
+        }
+
+    </style>
+</head>
+<body class="container mx-auto px-4 antialiased">
+
+    <motion.div
+        initial="{ opacity: 0, y: -30 }"
+        animate="{ opacity: 1, y: 0 }"
+        transition="{ duration: 0.6, ease: 'easeOut' }"
+        class="header"
+        data-motion-element
+    >
+        <h1>Low-level/Image generation Daily Papers</h1>
+        <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
+        
+            <p>October 10, 2025</p>
+        
+        <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
+    </motion.div>
+
+    <div class="bento-grid" id="paper-grid">
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.0, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Large Scale Diffusion Distillation via Score-Regularized Continuous-Time Consistency</h2>
+            
+            <p class="paper-summary">This work represents the first effort to scale up continuous-time consistency
+distillation to general application-level image and video diffusion models.
+Although continuous-time consistency model (sCM) is theoretically principled
+and empirically powerful for accelerating academic-scale diffusion, its
+applicability to large-scale text-to-image and video tasks remains unclear due
+to infrastructure challenges in Jacobian-vector product (JVP) computation and
+the limitations of standard evaluation benchmarks. We first develop a
+parallelism-compatible FlashAttention-2 JVP kernel, enabling sCM training on
+models with over 10 billion parameters and high-dimensional video tasks. Our
+investigation reveals fundamental quality limitations of sCM in fine-detail
+generation, which we attribute to error accumulation and the "mode-covering"
+nature of its forward-divergence objective. To remedy this, we propose the
+score-regularized continuous-time consistency model (rCM), which incorporates
+score distillation as a long-skip regularizer. This integration complements sCM
+with the "mode-seeking" reverse divergence, effectively improving visual
+quality while maintaining high generation diversity. Validated on large-scale
+models (Cosmos-Predict2, Wan2.1) up to 14B parameters and 5-second videos, rCM
+matches or surpasses the state-of-the-art distillation method DMD2 on quality
+metrics while offering notable advantages in diversity, all without GAN tuning
+or extensive hyperparameter searches. The distilled models generate
+high-fidelity samples in only $1\sim4$ steps, accelerating diffusion sampling
+by $15\times\sim50\times$. These results position rCM as a practical and
+theoretically grounded framework for advancing large-scale diffusion
+distillation.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces score-regularized continuous-time consistency model (rCM) for efficient and high-quality image and video generation by distilling large-scale diffusion models, overcoming limitations of previous consistency models.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了score-regularized连续时间一致性模型 (rCM)，通过提炼大规模扩散模型，用于高效、高质量的图像和视频生成，克服了先前一致性模型的局限性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08431v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Kaiwen Zheng, Yuji Wang, Qianli Ma, Huayu Chen, Jintao Zhang, Yogesh Balaji, Jianfei Chen, Ming-Yu Liu, Jun Zhu, Qinsheng Zhang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Biology-driven assessment of deep learning super-resolution imaging of the porosity network in dentin</h2>
+            
+            <p class="paper-summary">The mechanosensory system of teeth is currently believed to partly rely on
+Odontoblast cells stimulation by fluid flow through a porosity network
+extending through dentin. Visualizing the smallest sub-microscopic porosity
+vessels therefore requires the highest achievable resolution from confocal
+fluorescence microscopy, the current gold standard. This considerably limits
+the extent of the field of view to very small sample regions. To overcome this
+limitation, we tested different deep learning (DL) super-resolution (SR) models
+to allow faster experimental acquisitions of lower resolution images and
+restore optimal image quality by post-processing. Three supervised 2D SR models
+(RCAN, pix2pix, FSRCNN) and one unsupervised (CycleGAN) were applied to a
+unique set of experimentally paired high- and low-resolution confocal images
+acquired with different sampling schemes, resulting in a pixel size increase of
+x2, x4, x8. Model performance was quantified using a broad set of similarity
+and distribution-based image quality assessment (IQA) metrics, which yielded
+inconsistent results that mostly contradicted our visual perception. This
+raises the question of the relevance of such generic metrics to efficiently
+target the specific structure of dental porosity. To resolve this conflicting
+information, the generated SR images were segmented taking into account the
+specific scales and morphology of the porosity network and analysed by
+comparing connected components. Additionally, the capacity of the SR models to
+preserve 3D porosity connectivity throughout the confocal image stacks was
+evaluated using graph analysis. This biology-driven assessment allowed a far
+better mechanistic interpretation of SR performance, highlighting differences
+in model sensitivity to weak intensity features and the impact of non-linearity
+in image generation, which explains the failure of standard IQA metrics.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores deep learning super-resolution (SR) models for enhancing confocal microscopy images of dentin porosity, using a biology-driven assessment based on segmentation and graph analysis to overcome limitations of standard image quality assessment metrics.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文探索了深度学习超分辨率（SR）模型在增强牙本质孔隙率的共聚焦显微图像方面的应用，并采用基于分割和图分析的生物学驱动评估方法，克服了标准图像质量评估指标的局限性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08407v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Lauren Anderson, Lucas Chatelain, Nicolas Tremblay, Kathryn Grandfield, David Rousseau, Aurélien Gourrier</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.1, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">UniMMVSR: A Unified Multi-Modal Framework for Cascaded Video Super-Resolution</h2>
+            
+            <p class="paper-summary">Cascaded video super-resolution has emerged as a promising technique for
+decoupling the computational burden associated with generating high-resolution
+videos using large foundation models. Existing studies, however, are largely
+confined to text-to-video tasks and fail to leverage additional generative
+conditions beyond text, which are crucial for ensuring fidelity in multi-modal
+video generation. We address this limitation by presenting UniMMVSR, the first
+unified generative video super-resolution framework to incorporate hybrid-modal
+conditions, including text, images, and videos. We conduct a comprehensive
+exploration of condition injection strategies, training schemes, and data
+mixture techniques within a latent video diffusion model. A key challenge was
+designing distinct data construction and condition utilization methods to
+enable the model to precisely utilize all condition types, given their varied
+correlations with the target video. Our experiments demonstrate that UniMMVSR
+significantly outperforms existing methods, producing videos with superior
+detail and a higher degree of conformity to multi-modal conditions. We also
+validate the feasibility of combining UniMMVSR with a base model to achieve
+multi-modal guided generation of 4K video, a feat previously unattainable with
+existing techniques.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniMMVSR, a unified video super-resolution framework that incorporates multiple conditions like text, images, and videos to enhance fidelity and achieve 4K video generation, outperforming existing methods.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 UniMMVSR，一个统一的视频超分辨率框架，它结合了文本、图像和视频等多种条件，以提高保真度并实现 4K 视频生成，优于现有方法。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08143v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Shian Du, Menghan Xia, Chang Liu, Quande Liu, Xintao Wang, Pengfei Wan, Xiangyang Ji</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Is Architectural Complexity Always the Answer? A Case Study on SwinIR vs. an Efficient CNN</h2>
+            
+            <p class="paper-summary">The simultaneous restoration of high-frequency details and suppression of
+severe noise in low-light imagery presents a significant and persistent
+challenge in computer vision. While large-scale Transformer models like SwinIR
+have set the state of the art in performance, their high computational cost can
+be a barrier for practical applications. This paper investigates the critical
+trade-off between performance and efficiency by comparing the state-of-the-art
+SwinIR model against a standard, lightweight Convolutional Neural Network (CNN)
+on this challenging task. Our experimental results reveal a nuanced but
+important finding. While the Transformer-based SwinIR model achieves a higher
+peak performance, with a Peak Signal-to-Noise Ratio (PSNR) of 39.03 dB, the
+lightweight CNN delivers a surprisingly competitive PSNR of 37.4 dB. Crucially,
+the CNN reached this performance after converging in only 10 epochs of
+training, whereas the more complex SwinIR model required 132 epochs. This
+efficiency is further underscored by the model's size; the CNN is over 55 times
+smaller than SwinIR. This work demonstrates that a standard CNN can provide a
+near state-of-the-art result with significantly lower computational overhead,
+presenting a compelling case for its use in real-world scenarios where resource
+constraints are a primary concern.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper compares SwinIR with a lightweight CNN for low-light image restoration, finding that the CNN achieves near state-of-the-art performance with significantly less computational cost and training time, highlighting the importance of efficiency.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文比较了SwinIR和一个轻量级CNN在低光图像恢复方面的性能。研究发现，CNN以更低的计算成本和训练时间实现了接近最先进的性能，突出了效率的重要性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.07984v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Chandresh Sutariya, Nitin Singh</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Latent Harmony: Synergistic Unified UHD Image Restoration via Latent Space Regularization and Controllable Refinement</h2>
+            
+            <p class="paper-summary">Ultra-High Definition (UHD) image restoration faces a trade-off between
+computational efficiency and high-frequency detail retention. While Variational
+Autoencoders (VAEs) improve efficiency via latent-space processing, their
+Gaussian constraint often discards degradation-specific high-frequency
+information, hurting reconstruction fidelity. To overcome this, we propose
+Latent Harmony, a two-stage framework that redefines VAEs for UHD restoration
+by jointly regularizing the latent space and enforcing high-frequency-aware
+reconstruction.In Stage One, we introduce LH-VAE, which enhances semantic
+robustness through visual semantic constraints and progressive degradation
+perturbations, while latent equivariance strengthens high-frequency
+reconstruction.Stage Two jointly trains this refined VAE with a restoration
+model using High-Frequency Low-Rank Adaptation (HF-LoRA): an encoder LoRA
+guided by a fidelity-oriented high-frequency alignment loss to recover
+authentic details, and a decoder LoRA driven by a perception-oriented loss to
+synthesize realistic textures. Both LoRA modules are trained via alternating
+optimization with selective gradient propagation to preserve the pretrained
+latent structure.At inference, a tunable parameter {\alpha} enables flexible
+fidelity-perception trade-offs.Experiments show Latent Harmony achieves
+state-of-the-art performance across UHD and standard-resolution tasks,
+effectively balancing efficiency, perceptual quality, and reconstruction
+accuracy.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Latent Harmony, a two-stage framework using Variational Autoencoders (VAEs) with latent space regularization and high-frequency-aware reconstruction to improve UHD image restoration, balancing efficiency, perceptual quality, and reconstruction accuracy.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为Latent Harmony的两阶段框架，它使用变分自编码器（VAE）与潜在空间正则化和高频感知重建相结合，以改善超高清图像的修复效果，并在效率、感知质量和重建精度之间取得平衡。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.07961v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Yidi Liu, Xueyang Fu, Jie Huang, Jie Xiao, Dong Li, Wenlong Zhang, Lei Bai, Zheng-Jun Zha</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">SatFusion: A Unified Framework for Enhancing Satellite IoT Images via Multi-Temporal and Multi-Source Data Fusion</h2>
+            
+            <p class="paper-summary">With the rapid advancement of the digital society, the proliferation of
+satellites in the Satellite Internet of Things (Sat-IoT) has led to the
+continuous accumulation of large-scale multi-temporal and multi-source images
+across diverse application scenarios. However, existing methods fail to fully
+exploit the complementary information embedded in both temporal and source
+dimensions. For example, Multi-Image Super-Resolution (MISR) enhances
+reconstruction quality by leveraging temporal complementarity across multiple
+observations, yet the limited fine-grained texture details in input images
+constrain its performance. Conversely, pansharpening integrates multi-source
+images by injecting high-frequency spatial information from panchromatic data,
+but typically relies on pre-interpolated low-resolution inputs and assumes
+noise-free alignment, making it highly sensitive to noise and misregistration.
+To address these issues, we propose SatFusion: A Unified Framework for
+Enhancing Satellite IoT Images via Multi-Temporal and Multi-Source Data Fusion.
+Specifically, SatFusion first employs a Multi-Temporal Image Fusion (MTIF)
+module to achieve deep feature alignment with the panchromatic image. Then, a
+Multi-Source Image Fusion (MSIF) module injects fine-grained texture
+information from the panchromatic data. Finally, a Fusion Composition module
+adaptively integrates the complementary advantages of both modalities while
+dynamically refining spectral consistency, supervised by a weighted combination
+of multiple loss functions. Extensive experiments on the WorldStrat, WV3, QB,
+and GF2 datasets demonstrate that SatFusion significantly improves fusion
+quality, robustness under challenging conditions, and generalizability to
+real-world Sat-IoT scenarios. The code is available at:
+https://github.com/dllgyufei/SatFusion.git.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: SatFusion is a unified framework for enhancing satellite IoT images by fusing multi-temporal and multi-source data, addressing limitations of existing methods like MISR and pansharpening through a novel three-module approach.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: SatFusion 是一个统一的框架，通过融合多时相和多源数据来增强卫星物联网图像。它通过一种新颖的三模块方法，解决了现有方法（如 MISR 和 pansharpening）的局限性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.07905v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Yufei Tong, Guanjie Cheng, Peihan Wu, Yicheng Zhu, Kexu Lu, Feiyi Chen, Meng Xi, Junqin Huang, Shuiguang Deng</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Provably Accelerated Imaging with Restarted Inertia and Score-based Image Priors</h2>
+            
+            <p class="paper-summary">Fast convergence and high-quality image recovery are two essential features
+of algorithms for solving ill-posed imaging inverse problems. Existing methods,
+such as regularization by denoising (RED), often focus on designing
+sophisticated image priors to improve reconstruction quality, while leaving
+convergence acceleration to heuristics. To bridge the gap, we propose Restarted
+Inertia with Score-based Priors (RISP) as a principled extension of RED. RISP
+incorporates a restarting inertia for fast convergence, while still allowing
+score-based image priors for high-quality reconstruction. We prove that RISP
+attains a faster stationary-point convergence rate than RED, without requiring
+the convexity of the image prior. We further derive and analyze the associated
+continuous-time dynamical system, offering insight into the connection between
+RISP and the heavy-ball ordinary differential equation (ODE). Experiments
+across a range of imaging inverse problems demonstrate that RISP enables fast
+convergence while achieving high-quality reconstructions.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Restarted Inertia with Score-based Priors (RISP), a provably faster and high-quality image reconstruction method for ill-posed inverse problems, extending RED with a restarting inertia mechanism and score-based priors.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了基于分数先验的重启动惯性算法（RISP），这是一种针对不适定逆问题的、可证明的更快且高质量的图像重建方法，通过重启惯性机制和基于分数的先验扩展了RED。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.07470v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Marien Renaud, Julien Hermant, Deliang Wei, Yu Sun</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.35000000000000003, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">SPICE: Simple and Practical Image Clarification and Enhancement</h2>
+            
+            <p class="paper-summary">We introduce a simple and efficient method to enhance and clarify images.
+More specifically, we deal with low light image enhancement and clarification
+of hazy imagery (hazy/foggy images, images containing sand dust, and underwater
+images). Our method involves constructing an image filter to simulate low-light
+or hazy conditions and deriving approximate reverse filters to minimize
+distortions in the enhanced images. Experimental results show that our approach
+is highly competitive and often surpasses state-of-the-art techniques in
+handling extremely dark images and in enhancing hazy images. A key advantage of
+our approach lies in its simplicity: Our method is implementable with just a
+few lines of MATLAB code.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a simple and efficient image enhancement method (SPICE) for low-light and hazy images using a filter-based approach with minimal code complexity, claiming to surpass state-of-the-art techniques.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种简单高效的图像增强方法（SPICE），用于低光照和朦胧图像，该方法采用基于滤波的方法，代码复杂度极低，并声称超越了最先进的技术。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08358v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Alexander Belyaev, Pierre-Alain Fayolle, Michael Cohen</p>
+            
+        </motion.div>
+        
+    </div>
+
+    <footer class="footer">
+        Generated on 2025-10-10 03:33:30 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+    </footer>
+
+</body>
+</html>
