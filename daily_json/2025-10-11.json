@@ -1,0 +1,193 @@
+[
+    {
+        "title": "SkipSR: Faster Super Resolution with Token Skipping",
+        "summary": "Diffusion-based super-resolution (SR) is a key component in video generation\nand video restoration, but is slow and expensive, limiting scalability to\nhigher resolutions and longer videos. Our key insight is that many regions in\nvideo are inherently low-detail and gain little from refinement, yet current\nmethods process all pixels uniformly. To take advantage of this, we propose\nSkipSR, a simple framework for accelerating video SR by identifying low-detail\nregions directly from low-resolution input, then skipping computation on them\nentirely, only super-resolving the areas that require refinement. This simple\nyet effective strategy preserves perceptual quality in both standard and\none-step diffusion SR models while significantly reducing computation. In\nstandard SR benchmarks, our method achieves up to 60% faster end-to-end latency\nthan prior models on 720p videos with no perceptible loss in quality. Video\ndemos are available at https://rccchoudhury.github.io/skipsr/",
+        "url": "http://arxiv.org/abs/2510.08799v1",
+        "published_date": "2025-10-09T20:27:11+00:00",
+        "updated_date": "2025-10-09T20:27:11+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Rohan Choudhury",
+            "Shanchuan Lin",
+            "Jianyi Wang",
+            "Hao Chen",
+            "Qi Zhao",
+            "Feng Cheng",
+            "Lu Jiang",
+            "Kris Kitani",
+            "Laszlo A. Jeni"
+        ],
+        "tldr": "SkipSR accelerates video super-resolution by skipping computation on low-detail regions identified in the low-resolution input, achieving significant speedups with minimal quality loss.",
+        "tldr_zh": "SkipSR 通过跳过在低分辨率输入中识别出的低细节区域的计算来加速视频超分辨率，从而在质量损失最小的情况下实现显着加速。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "LinearSR: Unlocking Linear Attention for Stable and Efficient Image Super-Resolution",
+        "summary": "Generative models for Image Super-Resolution (SR) are increasingly powerful,\nyet their reliance on self-attention's quadratic complexity (O(N^2)) creates a\nmajor computational bottleneck. Linear Attention offers an O(N) solution, but\nits promise for photorealistic SR has remained largely untapped, historically\nhindered by a cascade of interrelated and previously unsolved challenges. This\npaper introduces LinearSR, a holistic framework that, for the first time,\nsystematically overcomes these critical hurdles. Specifically, we resolve a\nfundamental, training instability that causes catastrophic model divergence\nusing our novel \"knee point\"-based Early-Stopping Guided Fine-tuning (ESGF)\nstrategy. Furthermore, we mitigate the classic perception-distortion trade-off\nwith a dedicated SNR-based Mixture of Experts (MoE) architecture. Finally, we\nestablish an effective and lightweight guidance paradigm, TAG, derived from our\n\"precision-over-volume\" principle. Our resulting LinearSR model simultaneously\ndelivers state-of-the-art perceptual quality with exceptional efficiency. Its\ncore diffusion forward pass (1-NFE) achieves SOTA-level speed, while its\noverall multi-step inference time remains highly competitive. This work\nprovides the first robust methodology for applying Linear Attention in the\nphotorealistic SR domain, establishing a foundational paradigm for future\nresearch in efficient generative super-resolution.",
+        "url": "http://arxiv.org/abs/2510.08771v1",
+        "published_date": "2025-10-09T19:41:51+00:00",
+        "updated_date": "2025-10-09T19:41:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaohui Li",
+            "Shaobin Zhuang",
+            "Shuo Cao",
+            "Yang Yang",
+            "Yuandong Pu",
+            "Qi Qin",
+            "Siqi Luo",
+            "Bin Fu",
+            "Yihao Liu"
+        ],
+        "tldr": "The paper introduces LinearSR, a framework using linear attention for efficient and high-quality image super-resolution, addressing instability, the perception-distortion trade-off, and guidance paradigms.",
+        "tldr_zh": "该论文介绍了LinearSR，一个使用线性注意力的高效高质量图像超分辨率框架，解决了训练不稳定、感知-失真权衡以及指导范式等问题。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "TC-LoRA: Temporally Modulated Conditional LoRA for Adaptive Diffusion Control",
+        "summary": "Current controllable diffusion models typically rely on fixed architectures\nthat modify intermediate activations to inject guidance conditioned on a new\nmodality. This approach uses a static conditioning strategy for a dynamic,\nmulti-stage denoising process, limiting the model's ability to adapt its\nresponse as the generation evolves from coarse structure to fine detail. We\nintroduce TC-LoRA (Temporally Modulated Conditional LoRA), a new paradigm that\nenables dynamic, context-aware control by conditioning the model's weights\ndirectly. Our framework uses a hypernetwork to generate LoRA adapters\non-the-fly, tailoring weight modifications for the frozen backbone at each\ndiffusion step based on time and the user's condition. This mechanism enables\nthe model to learn and execute an explicit, adaptive strategy for applying\nconditional guidance throughout the entire generation process. Through\nexperiments on various data domains, we demonstrate that this dynamic,\nparametric control significantly enhances generative fidelity and adherence to\nspatial conditions compared to static, activation-based methods. TC-LoRA\nestablishes an alternative approach in which the model's conditioning strategy\nis modified through a deeper functional adaptation of its weights, allowing\ncontrol to align with the dynamic demands of the task and generative stage.",
+        "url": "http://arxiv.org/abs/2510.09561v1",
+        "published_date": "2025-10-10T17:13:02+00:00",
+        "updated_date": "2025-10-10T17:13:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Minkyoung Cho",
+            "Ruben Ohana",
+            "Christian Jacobsen",
+            "Adityan Jothi",
+            "Min-Hung Chen",
+            "Z. Morley Mao",
+            "Ethem Can"
+        ],
+        "tldr": "The paper introduces TC-LoRA, a novel approach for controllable diffusion models that dynamically adjusts the model's weights using a hypernetwork to generate LoRA adapters based on time and user conditions, leading to improved fidelity and conditional adherence.",
+        "tldr_zh": "本文介绍了 TC-LoRA，一种新颖的可控扩散模型方法，它使用超网络根据时间和用户条件动态调整模型的权重来生成 LoRA 适配器，从而提高了保真度和条件遵从性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation",
+        "summary": "Adverse weather conditions such as haze, rain, and snow significantly degrade\nthe quality of images and videos, posing serious challenges to intelligent\ntransportation systems (ITS) that rely on visual input. These degradations\naffect critical applications including autonomous driving, traffic monitoring,\nand surveillance. This survey presents a comprehensive review of image and\nvideo restoration techniques developed to mitigate weather-induced visual\nimpairments. We categorize existing approaches into traditional prior-based\nmethods and modern data-driven models, including CNNs, transformers, diffusion\nmodels, and emerging vision-language models (VLMs). Restoration strategies are\nfurther classified based on their scope: single-task models,\nmulti-task/multi-weather systems, and all-in-one frameworks capable of handling\ndiverse degradations. In addition, we discuss day and night time restoration\nchallenges, benchmark datasets, and evaluation protocols. The survey concludes\nwith an in-depth discussion on limitations in current research and outlines\nfuture directions such as mixed/compound-degradation restoration, real-time\ndeployment, and agentic AI frameworks. This work aims to serve as a valuable\nreference for advancing weather-resilient vision systems in smart\ntransportation environments. Lastly, to stay current with rapid advancements in\nthis field, we will maintain regular updates of the latest relevant papers and\ntheir open-source implementations at\nhttps://github.com/ChaudharyUPES/A-comprehensive-review-on-Multi-weather-restoration",
+        "url": "http://arxiv.org/abs/2510.09228v1",
+        "published_date": "2025-10-10T10:15:59+00:00",
+        "updated_date": "2025-10-10T10:15:59+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Vijay M. Galshetwar",
+            "Praful Hambarde",
+            "Prashant W. Patil",
+            "Akshay Dudhane",
+            "Sachin Chaudhary",
+            "Santosh Kumar Vipparathi",
+            "Subrahmanyam Murala"
+        ],
+        "tldr": "This survey paper comprehensively reviews image and video restoration techniques for adverse weather conditions in intelligent transportation systems, categorizing methods, discussing challenges, and outlining future research directions, with a regularly updated GitHub repository.",
+        "tldr_zh": "这篇综述性论文全面回顾了智能交通系统中恶劣天气条件下的图像和视频恢复技术，对方法进行了分类，讨论了挑战，并概述了未来的研究方向，并附带一个定期更新的GitHub存储库。",
+        "relevance_score": 9,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MSDM: Generating Task-Specific Pathology Images with a Multimodal Conditioned Diffusion Model for Cell and Nuclei Segmentation",
+        "summary": "Scarcity of annotated data, particularly for rare or atypical morphologies,\npresent significant challenges for cell and nuclei segmentation in\ncomputational pathology. While manual annotation is labor-intensive and costly,\nsynthetic data offers a cost-effective alternative. We introduce a Multimodal\nSemantic Diffusion Model (MSDM) for generating realistic pixel-precise\nimage-mask pairs for cell and nuclei segmentation. By conditioning the\ngenerative process with cellular/nuclear morphologies (using horizontal and\nvertical maps), RGB color characteristics, and BERT-encoded assay/indication\nmetadata, MSDM generates datasests with desired morphological properties. These\nheterogeneous modalities are integrated via multi-head cross-attention,\nenabling fine-grained control over the generated images. Quantitative analysis\ndemonstrates that synthetic images closely match real data, with low\nWasserstein distances between embeddings of generated and real images under\nmatching biological conditions. The incorporation of these synthetic samples,\nexemplified by columnar cells, significantly improves segmentation model\naccuracy on columnar cells. This strategy systematically enriches data sets,\ndirectly targeting model deficiencies. We highlight the effectiveness of\nmultimodal diffusion-based augmentation for advancing the robustness and\ngeneralizability of cell and nuclei segmentation models. Thereby, we pave the\nway for broader application of generative models in computational pathology.",
+        "url": "http://arxiv.org/abs/2510.09121v1",
+        "published_date": "2025-10-10T08:23:14+00:00",
+        "updated_date": "2025-10-10T08:23:14+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Dominik Winter",
+            "Mai Bui",
+            "Monica Azqueta Gavaldon",
+            "Nicolas Triltsch",
+            "Marco Rosati",
+            "Nicolas Brieu"
+        ],
+        "tldr": "This paper introduces a Multimodal Semantic Diffusion Model (MSDM) to generate synthetic pathology images for cell and nuclei segmentation, addressing the issue of scarce annotated data, particularly for rare morphologies, thereby improving segmentation model accuracy.",
+        "tldr_zh": "本文介绍了一种多模态语义扩散模型（MSDM），用于生成用于细胞和细胞核分割的合成病理图像，解决了注释数据稀缺的问题，尤其是对于罕见形态，从而提高分割模型的准确性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy",
+        "summary": "In this work, we first revisit the sampling issues in current autoregressive\n(AR) image generation models and identify that image tokens, unlike text\ntokens, exhibit lower information density and non-uniform spatial distribution.\nAccordingly, we present an entropy-informed decoding strategy that facilitates\nhigher autoregressive generation quality with faster synthesis speed.\nSpecifically, the proposed method introduces two main innovations: 1) dynamic\ntemperature control guided by spatial entropy of token distributions, enhancing\nthe balance between content diversity, alignment accuracy, and structural\ncoherence in both mask-based and scale-wise models, without extra computational\noverhead, and 2) entropy-aware acceptance rules in speculative decoding,\nachieving near-lossless generation at about 85\\% of the inference cost of\nconventional acceleration methods. Extensive experiments across multiple\nbenchmarks using diverse AR image generation models demonstrate the\neffectiveness and generalizability of our approach in enhancing both generation\nquality and sampling speed.",
+        "url": "http://arxiv.org/abs/2510.09012v1",
+        "published_date": "2025-10-10T05:26:11+00:00",
+        "updated_date": "2025-10-10T05:26:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaoxiao Ma",
+            "Feng Zhao",
+            "Pengyang Ling",
+            "Haibo Qiu",
+            "Zhixiang Wei",
+            "Hu Yu",
+            "Jie Huang",
+            "Zhixiong Zeng",
+            "Lin Ma"
+        ],
+        "tldr": "The paper introduces an entropy-informed decoding strategy for autoregressive image generation that improves generation quality and sampling speed by dynamically controlling temperature and employing entropy-aware acceptance rules in speculative decoding.",
+        "tldr_zh": "该论文提出了一种基于熵的自回归图像生成解码策略，通过动态控制温度和在推测解码中采用熵感知接受规则，提高了生成质量和采样速度。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching",
+        "summary": "Flow-based text-to-image models follow deterministic trajectories, forcing\nusers to repeatedly sample to discover diverse modes, which is a costly and\ninefficient process. We present a training-free, inference-time control\nmechanism that makes the flow itself diversity-aware. Our method simultaneously\nencourages lateral spread among trajectories via a feature-space objective and\nreintroduces uncertainty through a time-scheduled stochastic perturbation.\nCrucially, this perturbation is projected to be orthogonal to the generation\nflow, a geometric constraint that allows it to boost variation without\ndegrading image details or prompt fidelity. Our procedure requires no\nretraining or modification to the base sampler and is compatible with common\nflow-matching solvers. Theoretically, our method is shown to monotonically\nincrease a volume surrogate while, due to its geometric constraints,\napproximately preserving the marginal distribution. This provides a principled\nexplanation for why generation quality is robustly maintained. Empirically,\nacross multiple text-to-image settings under fixed sampling budgets, our method\nconsistently improves diversity metrics such as the Vendi Score and Brisque\nover strong baselines, while upholding image quality and alignment.",
+        "url": "http://arxiv.org/abs/2510.09060v1",
+        "published_date": "2025-10-10T07:07:19+00:00",
+        "updated_date": "2025-10-10T07:07:19+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jingxuan Wu",
+            "Zhenglin Wan",
+            "Xingrui Yu",
+            "Yuzhe Yang",
+            "Bo An",
+            "Ivor Tsang"
+        ],
+        "tldr": "The paper introduces OSCAR, a training-free inference-time method for flow-based text-to-image models that enhances diversity by introducing orthogonal stochastic perturbations to the flow, preserving image quality and prompt fidelity without retraining.",
+        "tldr_zh": "该论文介绍了OSCAR，一种无需训练的推理时方法，用于基于流的文本到图像模型，通过向流中引入正交随机扰动来增强多样性，从而在无需重新训练的情况下保持图像质量和提示的保真度。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

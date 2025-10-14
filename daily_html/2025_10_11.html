@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 07, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - October 11, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 07, 2025</p>
+            <p>October 11, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,23 +215,26 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CLEAR-IR: Clarity-Enhanced Active Reconstruction of Infrared Imagery</h2>
+            <h2 class="paper-title">SkipSR: Faster Super Resolution with Token Skipping</h2>
             
-            <p class="paper-summary">This paper presents a novel approach for enabling robust robotic perception
-in dark environments using infrared (IR) stream. IR stream is less susceptible
-to noise than RGB in low-light conditions. However, it is dominated by active
-emitter patterns that hinder high-level tasks such as object detection,
-tracking and localisation. To address this, a U-Net-based architecture is
-proposed that reconstructs clean IR images from emitter-populated input,
-improving both image quality and downstream robotic performance. This approach
-outperforms existing enhancement techniques and enables reliable operation of
-vision-driven robotic systems across illumination conditions from well-lit to
-extreme low-light scenes.</p>
+            <p class="paper-summary">Diffusion-based super-resolution (SR) is a key component in video generation
+and video restoration, but is slow and expensive, limiting scalability to
+higher resolutions and longer videos. Our key insight is that many regions in
+video are inherently low-detail and gain little from refinement, yet current
+methods process all pixels uniformly. To take advantage of this, we propose
+SkipSR, a simple framework for accelerating video SR by identifying low-detail
+regions directly from low-resolution input, then skipping computation on them
+entirely, only super-resolving the areas that require refinement. This simple
+yet effective strategy preserves perceptual quality in both standard and
+one-step diffusion SR models while significantly reducing computation. In
+standard SR benchmarks, our method achieves up to 60% faster end-to-end latency
+than prior models on 720p videos with no perceptible loss in quality. Video
+demos are available at https://rccchoudhury.github.io/skipsr/</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a U-Net based method to reconstruct clean infrared (IR) images from noisy, emitter-populated IR streams, enhancing robotic perception in low-light conditions.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SkipSR accelerates video super-resolution by skipping computation on low-detail regions identified in the low-resolution input, achieving significant speedups with minimal quality loss.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种基于U-Net的方法，用于从嘈杂的、充满发射器的红外(IR)流中重建干净的红外图像，从而增强了机器人在弱光条件下的感知能力。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SkipSR 通过跳过在低分辨率输入中识别出的低细节区域的计算来加速视频超分辨率，从而在质量损失最小的情况下实现显着加速。</p>
             
 
             
@@ -241,16 +244,16 @@ extreme low-light scenes.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -295,18 +298,18 @@ extreme low-light scenes.</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.04883v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.08799v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Nathan Shankar, Pawel Ladosz, Hujun Yin</p>
+            <p class="paper-authors">Authors: Rohan Choudhury, Shanchuan Lin, Jianyi Wang, Hao Chen, Qi Zhao, Feng Cheng, Lu Jiang, Kris Kitani, Laszlo A. Jeni</p>
             
         </motion.div>
         
@@ -318,29 +321,32 @@ extreme low-light scenes.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">REAR: Rethinking Visual Autoregressive Models via Generator-Tokenizer Consistency Regularization</h2>
+            <h2 class="paper-title">LinearSR: Unlocking Linear Attention for Stable and Efficient Image Super-Resolution</h2>
             
-            <p class="paper-summary">Visual autoregressive (AR) generation offers a promising path toward unifying
-vision and language models, yet its performance remains suboptimal against
-diffusion models. Prior work often attributes this gap to tokenizer limitations
-and rasterization ordering. In this work, we identify a core bottleneck from
-the perspective of generator-tokenizer inconsistency, i.e., the AR-generated
-tokens may not be well-decoded by the tokenizer. To address this, we propose
-reAR, a simple training strategy introducing a token-wise regularization
-objective: when predicting the next token, the causal transformer is also
-trained to recover the visual embedding of the current token and predict the
-embedding of the target token under a noisy context. It requires no changes to
-the tokenizer, generation order, inference pipeline, or external models.
-Despite its simplicity, reAR substantially improves performance. On ImageNet,
-it reduces gFID from 3.02 to 1.86 and improves IS to 316.9 using a standard
-rasterization-based tokenizer. When applied to advanced tokenizers, it achieves
-a gFID of 1.42 with only 177M parameters, matching the performance with larger
-state-of-the-art diffusion models (675M).</p>
+            <p class="paper-summary">Generative models for Image Super-Resolution (SR) are increasingly powerful,
+yet their reliance on self-attention's quadratic complexity (O(N^2)) creates a
+major computational bottleneck. Linear Attention offers an O(N) solution, but
+its promise for photorealistic SR has remained largely untapped, historically
+hindered by a cascade of interrelated and previously unsolved challenges. This
+paper introduces LinearSR, a holistic framework that, for the first time,
+systematically overcomes these critical hurdles. Specifically, we resolve a
+fundamental, training instability that causes catastrophic model divergence
+using our novel "knee point"-based Early-Stopping Guided Fine-tuning (ESGF)
+strategy. Furthermore, we mitigate the classic perception-distortion trade-off
+with a dedicated SNR-based Mixture of Experts (MoE) architecture. Finally, we
+establish an effective and lightweight guidance paradigm, TAG, derived from our
+"precision-over-volume" principle. Our resulting LinearSR model simultaneously
+delivers state-of-the-art perceptual quality with exceptional efficiency. Its
+core diffusion forward pass (1-NFE) achieves SOTA-level speed, while its
+overall multi-step inference time remains highly competitive. This work
+provides the first robust methodology for applying Linear Attention in the
+photorealistic SR domain, establishing a foundational paradigm for future
+research in efficient generative super-resolution.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes a novel training strategy, reAR, for visual autoregressive models that improves generator-tokenizer consistency, leading to significant performance gains in image generation without modifying the tokenizer or inference pipeline.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces LinearSR, a framework using linear attention for efficient and high-quality image super-resolution, addressing instability, the perception-distortion trade-off, and guidance paradigms.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种新的视觉自回归模型训练策略 reAR，通过提高生成器-分词器的一致性，在不修改分词器或推理流程的情况下，显著提高了图像生成性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了LinearSR，一个使用线性注意力的高效高质量图像超分辨率框架，解决了训练不稳定、感知-失真权衡以及指导范式等问题。</p>
             
 
             
@@ -350,21 +356,13 @@ state-of-the-art diffusion models (675M).</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
@@ -372,10 +370,18 @@ state-of-the-art diffusion models (675M).</p>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
+                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -404,18 +410,18 @@ state-of-the-art diffusion models (675M).</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.04450v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.08771v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Qiyuan He, Yicong Li, Haotian Ye, Jinghao Wang, Xinyao Liao, Pheng-Ann Heng, Stefano Ermon, James Zou, Angela Yao</p>
+            <p class="paper-authors">Authors: Xiaohui Li, Shaobin Zhuang, Shuo Cao, Yang Yang, Yuandong Pu, Qi Qin, Siqi Luo, Bin Fu, Yihao Liu</p>
             
         </motion.div>
         
@@ -427,33 +433,145 @@ state-of-the-art diffusion models (675M).</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CodeFormer++: Blind Face Restoration Using Deformable Registration and Deep Metric Learning</h2>
+            <h2 class="paper-title">TC-LoRA: Temporally Modulated Conditional LoRA for Adaptive Diffusion Control</h2>
             
-            <p class="paper-summary">Blind face restoration (BFR) has attracted increasing attention with the rise
-of generative methods. Most existing approaches integrate generative priors
-into the restoration pro- cess, aiming to jointly address facial detail
-generation and identity preservation. However, these methods often suffer from
-a trade-off between visual quality and identity fidelity, leading to either
-identity distortion or suboptimal degradation removal. In this paper, we
-present CodeFormer++, a novel framework that maximizes the utility of
-generative priors for high-quality face restoration while preserving identity.
-We decompose BFR into three sub-tasks: (i) identity- preserving face
-restoration, (ii) high-quality face generation, and (iii) dynamic fusion of
-identity features with realistic texture details. Our method makes three key
-contributions: (1) a learning-based deformable face registration module that
-semantically aligns generated and restored faces; (2) a texture guided
-restoration network to dynamically extract and transfer the texture of
-generated face to boost the quality of identity-preserving restored face; and
-(3) the integration of deep metric learning for BFR with the generation of
-informative positive and hard negative samples to better fuse identity-
-preserving and generative features. Extensive experiments on real-world and
-synthetic datasets demonstrate that, the pro- posed CodeFormer++ achieves
-superior performance in terms of both visual fidelity and identity consistency.</p>
+            <p class="paper-summary">Current controllable diffusion models typically rely on fixed architectures
+that modify intermediate activations to inject guidance conditioned on a new
+modality. This approach uses a static conditioning strategy for a dynamic,
+multi-stage denoising process, limiting the model's ability to adapt its
+response as the generation evolves from coarse structure to fine detail. We
+introduce TC-LoRA (Temporally Modulated Conditional LoRA), a new paradigm that
+enables dynamic, context-aware control by conditioning the model's weights
+directly. Our framework uses a hypernetwork to generate LoRA adapters
+on-the-fly, tailoring weight modifications for the frozen backbone at each
+diffusion step based on time and the user's condition. This mechanism enables
+the model to learn and execute an explicit, adaptive strategy for applying
+conditional guidance throughout the entire generation process. Through
+experiments on various data domains, we demonstrate that this dynamic,
+parametric control significantly enhances generative fidelity and adherence to
+spatial conditions compared to static, activation-based methods. TC-LoRA
+establishes an alternative approach in which the model's conditioning strategy
+is modified through a deeper functional adaptation of its weights, allowing
+control to align with the dynamic demands of the task and generative stage.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: CodeFormer++ introduces a novel framework for blind face restoration that balances visual quality and identity preservation by using deformable registration, texture-guided restoration, and deep metric learning to fuse generative priors with identity-preserving features.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces TC-LoRA, a novel approach for controllable diffusion models that dynamically adjusts the model's weights using a hypernetwork to generate LoRA adapters based on time and user conditions, leading to improved fidelity and conditional adherence.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: CodeFormer++ 提出了一种新颖的盲人脸部修复框架，通过使用可变形配准、纹理引导修复和深度度量学习来融合生成先验与身份保持特征，从而平衡了视觉质量和身份保持。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了 TC-LoRA，一种新颖的可控扩散模型方法，它使用超网络根据时间和用户条件动态调整模型的权重来生成 LoRA 适配器，从而提高了保真度和条件遵从性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.09561v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Minkyoung Cho, Ruben Ohana, Christian Jacobsen, Adityan Jothi, Min-Hung Chen, Z. Morley Mao, Ethem Can</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation</h2>
+            
+            <p class="paper-summary">Adverse weather conditions such as haze, rain, and snow significantly degrade
+the quality of images and videos, posing serious challenges to intelligent
+transportation systems (ITS) that rely on visual input. These degradations
+affect critical applications including autonomous driving, traffic monitoring,
+and surveillance. This survey presents a comprehensive review of image and
+video restoration techniques developed to mitigate weather-induced visual
+impairments. We categorize existing approaches into traditional prior-based
+methods and modern data-driven models, including CNNs, transformers, diffusion
+models, and emerging vision-language models (VLMs). Restoration strategies are
+further classified based on their scope: single-task models,
+multi-task/multi-weather systems, and all-in-one frameworks capable of handling
+diverse degradations. In addition, we discuss day and night time restoration
+challenges, benchmark datasets, and evaluation protocols. The survey concludes
+with an in-depth discussion on limitations in current research and outlines
+future directions such as mixed/compound-degradation restoration, real-time
+deployment, and agentic AI frameworks. This work aims to serve as a valuable
+reference for advancing weather-resilient vision systems in smart
+transportation environments. Lastly, to stay current with rapid advancements in
+this field, we will maintain regular updates of the latest relevant papers and
+their open-source implementations at
+https://github.com/ChaudharyUPES/A-comprehensive-review-on-Multi-weather-restoration</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This survey paper comprehensively reviews image and video restoration techniques for adverse weather conditions in intelligent transportation systems, categorizing methods, discussing challenges, and outlining future research directions, with a regularly updated GitHub repository.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 这篇综述性论文全面回顾了智能交通系统中恶劣天气条件下的图像和视频恢复技术，对方法进行了分类，讨论了挑战，并概述了未来的研究方向，并附带一个定期更新的GitHub存储库。</p>
             
 
             
@@ -465,6 +583,119 @@ superior performance in terms of both visual fidelity and identity consistency.<
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.09228v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Vijay M. Galshetwar, Praful Hambarde, Prashant W. Patil, Akshay Dudhane, Sachin Chaudhary, Santosh Kumar Vipparathi, Subrahmanyam Murala</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">MSDM: Generating Task-Specific Pathology Images with a Multimodal Conditioned Diffusion Model for Cell and Nuclei Segmentation</h2>
+            
+            <p class="paper-summary">Scarcity of annotated data, particularly for rare or atypical morphologies,
+present significant challenges for cell and nuclei segmentation in
+computational pathology. While manual annotation is labor-intensive and costly,
+synthetic data offers a cost-effective alternative. We introduce a Multimodal
+Semantic Diffusion Model (MSDM) for generating realistic pixel-precise
+image-mask pairs for cell and nuclei segmentation. By conditioning the
+generative process with cellular/nuclear morphologies (using horizontal and
+vertical maps), RGB color characteristics, and BERT-encoded assay/indication
+metadata, MSDM generates datasests with desired morphological properties. These
+heterogeneous modalities are integrated via multi-head cross-attention,
+enabling fine-grained control over the generated images. Quantitative analysis
+demonstrates that synthetic images closely match real data, with low
+Wasserstein distances between embeddings of generated and real images under
+matching biological conditions. The incorporation of these synthetic samples,
+exemplified by columnar cells, significantly improves segmentation model
+accuracy on columnar cells. This strategy systematically enriches data sets,
+directly targeting model deficiencies. We highlight the effectiveness of
+multimodal diffusion-based augmentation for advancing the robustness and
+generalizability of cell and nuclei segmentation models. Thereby, we pave the
+way for broader application of generative models in computational pathology.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a Multimodal Semantic Diffusion Model (MSDM) to generate synthetic pathology images for cell and nuclei segmentation, addressing the issue of scarce annotated data, particularly for rare morphologies, thereby improving segmentation model accuracy.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种多模态语义扩散模型（MSDM），用于生成用于细胞和细胞核分割的合成病理图像，解决了注释数据稀缺的问题，尤其是对于罕见形态，从而提高分割模型的准确性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -524,230 +755,11 @@ superior performance in terms of both visual fidelity and identity consistency.<
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.04410v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.09121v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Venkata Bharath Reddy Reddem, Akshay P Sarashetti, Ranjith Merugu, Amit Satish Unde</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Flow Matching for Conditional MRI-CT and CBCT-CT Image Synthesis</h2>
-            
-            <p class="paper-summary">Generating synthetic CT (sCT) from MRI or CBCT plays a crucial role in
-enabling MRI-only and CBCT-based adaptive radiotherapy, improving treatment
-precision while reducing patient radiation exposure. To address this task, we
-adopt a fully 3D Flow Matching (FM) framework, motivated by recent work
-demonstrating FM's efficiency in producing high-quality images. In our
-approach, a Gaussian noise volume is transformed into an sCT image by
-integrating a learned FM velocity field, conditioned on features extracted from
-the input MRI or CBCT using a lightweight 3D encoder. We evaluated the method
-on the SynthRAD2025 Challenge benchmark, training separate models for MRI
-$\rightarrow$ sCT and CBCT $\rightarrow$ sCT across three anatomical regions:
-abdomen, head and neck, and thorax. Validation and testing were performed
-through the challenge submission system. The results indicate that the method
-accurately reconstructs global anatomical structures; however, preservation of
-fine details was limited, primarily due to the relatively low training
-resolution imposed by memory and runtime constraints. Future work will explore
-patch-based training and latent-space flow models to improve resolution and
-local structural fidelity.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a 3D Flow Matching framework for generating synthetic CT images from MRI or CBCT scans, achieving accurate reconstruction of global anatomical structures but with limited fine detail preservation due to resolution constraints.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种基于 3D Flow Matching 的框架，用于从 MRI 或 CBCT 扫描生成合成 CT 图像。该方法能够准确重建全局解剖结构，但由于分辨率限制，对细节的保留有限。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.04823v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Arnela Hadzic, Simon Johannes Joham, Martin Urschler</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">TAG:Tangential Amplifying Guidance for Hallucination-Resistant Diffusion Sampling</h2>
-            
-            <p class="paper-summary">Recent diffusion models achieve the state-of-the-art performance in image
-generation, but often suffer from semantic inconsistencies or hallucinations.
-While various inference-time guidance methods can enhance generation, they
-often operate indirectly by relying on external signals or architectural
-modifications, which introduces additional computational overhead. In this
-paper, we propose Tangential Amplifying Guidance (TAG), a more efficient and
-direct guidance method that operates solely on trajectory signals without
-modifying the underlying diffusion model. TAG leverages an intermediate sample
-as a projection basis and amplifies the tangential components of the estimated
-scores with respect to this basis to correct the sampling trajectory. We
-formalize this guidance process by leveraging a first-order Taylor expansion,
-which demonstrates that amplifying the tangential component steers the state
-toward higher-probability regions, thereby reducing inconsistencies and
-enhancing sample quality. TAG is a plug-and-play, architecture-agnostic module
-that improves diffusion sampling fidelity with minimal computational addition,
-offering a new perspective on diffusion guidance.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Tangential Amplifying Guidance (TAG), a computationally efficient, plug-and-play method that directly guides diffusion model sampling trajectories to reduce hallucinations without architectural modifications.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为切向放大引导 (TAG) 的方法，它是一种计算效率高、即插即用的方法，可以直接引导扩散模型采样轨迹，以减少幻觉，而无需修改架构。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.04533v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Hyunmin Cho, Donghoon Ahn, Susung Hong, Jee Eun Kim, Seungryong Kim, Kyong Hwan Jin</p>
+            <p class="paper-authors">Authors: Dominik Winter, Mai Bui, Monica Azqueta Gavaldon, Nicolas Triltsch, Marco Rosati, Nicolas Brieu</p>
             
         </motion.div>
         
@@ -759,19 +771,28 @@ offering a new perspective on diffusion guidance.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Adaptive double-phase Rudin--Osher--Fatemi denoising model</h2>
+            <h2 class="paper-title">Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy</h2>
             
-            <p class="paper-summary">We propose a new image denoising model based on a variable-growth total
-variation regularization of double-phase type with adaptive weight. It is
-designed to reduce staircasing with respect to the classical
-Rudin--Osher--Fatemi model, while preserving the edges of the image in a
-similar fashion. We implement the model and test its performance on synthetic
-and natural images in 1D and 2D over a range of noise levels.</p>
+            <p class="paper-summary">In this work, we first revisit the sampling issues in current autoregressive
+(AR) image generation models and identify that image tokens, unlike text
+tokens, exhibit lower information density and non-uniform spatial distribution.
+Accordingly, we present an entropy-informed decoding strategy that facilitates
+higher autoregressive generation quality with faster synthesis speed.
+Specifically, the proposed method introduces two main innovations: 1) dynamic
+temperature control guided by spatial entropy of token distributions, enhancing
+the balance between content diversity, alignment accuracy, and structural
+coherence in both mask-based and scale-wise models, without extra computational
+overhead, and 2) entropy-aware acceptance rules in speculative decoding,
+achieving near-lossless generation at about 85\% of the inference cost of
+conventional acceleration methods. Extensive experiments across multiple
+benchmarks using diverse AR image generation models demonstrate the
+effectiveness and generalizability of our approach in enhancing both generation
+quality and sampling speed.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a new image denoising model based on adaptive double-phase total variation regularization, aiming to reduce staircasing artifacts while preserving edges, and its performance is validated on synthetic and natural images.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces an entropy-informed decoding strategy for autoregressive image generation that improves generation quality and sampling speed by dynamically controlling temperature and employing entropy-aware acceptance rules in speculative decoding.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新的图像去噪模型，该模型基于自适应双相全变分正则化，旨在减少阶梯效应，同时保留边缘，并在合成图像和自然图像上验证了其性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种基于熵的自回归图像生成解码策略，通过动态控制温度和在推测解码中采用熵感知接受规则，提高了生成质量和采样速度。</p>
             
 
             
@@ -781,8 +802,8 @@ and natural images in 1D and 2D over a range of noise levels.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -797,16 +818,16 @@ and natural images in 1D and 2D over a range of noise levels.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -831,29 +852,139 @@ and natural images in 1D and 2D over a range of noise levels.</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.04382v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.09012v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Wojciech Górny, Michał Łasica, Alexandros Matsoukas</p>
+            <p class="paper-authors">Authors: Xiaoxiao Ma, Feng Zhao, Pengyang Ling, Haibo Qiu, Zhixiang Wei, Hu Yu, Jie Huang, Zhixiong Zeng, Lin Ma</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching</h2>
+            
+            <p class="paper-summary">Flow-based text-to-image models follow deterministic trajectories, forcing
+users to repeatedly sample to discover diverse modes, which is a costly and
+inefficient process. We present a training-free, inference-time control
+mechanism that makes the flow itself diversity-aware. Our method simultaneously
+encourages lateral spread among trajectories via a feature-space objective and
+reintroduces uncertainty through a time-scheduled stochastic perturbation.
+Crucially, this perturbation is projected to be orthogonal to the generation
+flow, a geometric constraint that allows it to boost variation without
+degrading image details or prompt fidelity. Our procedure requires no
+retraining or modification to the base sampler and is compatible with common
+flow-matching solvers. Theoretically, our method is shown to monotonically
+increase a volume surrogate while, due to its geometric constraints,
+approximately preserving the marginal distribution. This provides a principled
+explanation for why generation quality is robustly maintained. Empirically,
+across multiple text-to-image settings under fixed sampling budgets, our method
+consistently improves diversity metrics such as the Vendi Score and Brisque
+over strong baselines, while upholding image quality and alignment.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces OSCAR, a training-free inference-time method for flow-based text-to-image models that enhances diversity by introducing orthogonal stochastic perturbations to the flow, preserving image quality and prompt fidelity without retraining.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了OSCAR，一种无需训练的推理时方法，用于基于流的文本到图像模型，通过向流中引入正交随机扰动来增强多样性，从而在无需重新训练的情况下保持图像质量和提示的保真度。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.09060v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Jingxuan Wu, Zhenglin Wan, Xingrui Yu, Yuzhe Yang, Bo An, Ivor Tsang</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-14 02:21:20 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-14 02:27:35 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
