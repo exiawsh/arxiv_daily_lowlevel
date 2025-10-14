@@ -1,0 +1,57 @@
+[
+    {
+        "title": "UniFlow: A Unified Pixel Flow Tokenizer for Visual Understanding and Generation",
+        "summary": "Tokenizer is a crucial component for both visual understanding and\ngeneration. To advance toward the ultimate goal of universal modeling, recent\nresearch has focused on developing a unified tokenizer. However, existing\ntokenizers face a significant performance trade-off between understanding and\ngeneration, stemming from the inherent conflict between high-level semantic\nabstraction and low-level pixel reconstruction. To tackle this challenge, we\npropose a generic and unified tokenizer, namely UniFlow, by flexibly adapting\nany visual encoder with a concise reconstruction decoder. Specifically, we\nintroduce layer-wise adaptive self-distillation applied to the well-pretrained\nvisual encoders, which enables UniFlow to simultaneously inherit the strong\nsemantic features for visual understanding and flexibly adapt to model\nfine-grained details for visual generation. Moreover, we propose a lightweight\npatch-wise pixel flow decoder, which efficiently achieves high-fidelity pixel\nreconstruction by modeling a conditional flow from the noisy state back to the\npatch-wise pixel domain. By leveraging the semantic features as visual\nconditions for the decoder, we effectively alleviate the training conflicts\nbetween understanding and generation. Furthermore, the patch-wise learning\nstrategy simplifies the data distribution, thereby improving training\nefficiency. Extensive experiments across 13 challenging benchmarks spanning 7\nwidely studied visual understanding and generation tasks demonstrate that\nUniFlow achieves a win-win outcome. For instance, our 7B UniFlow-XL not only\nsurpasses the 14B TokenFlow-XL by 7.75% on average understanding benchmarks,\nbut also achieves competitive results in both visual reconstruction and\ngeneration, surpassing UniTok by 0.15 in rFID and 0.09 in gFID (without\nguidance), respectively.",
+        "url": "http://arxiv.org/abs/2510.10575v1",
+        "published_date": "2025-10-12T12:50:23+00:00",
+        "updated_date": "2025-10-12T12:50:23+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhengrong Yue",
+            "Haiyu Zhang",
+            "Xiangyu Zeng",
+            "Boyu Chen",
+            "Chenting Wang",
+            "Shaobin Zhuang",
+            "Lu Dong",
+            "KunPeng Du",
+            "Yi Wang",
+            "Limin Wang",
+            "Yali Wang"
+        ],
+        "tldr": "The paper introduces UniFlow, a unified tokenizer using layer-wise self-distillation and a pixel flow decoder, achieving a balance between visual understanding and generation tasks, outperforming existing methods on several benchmarks.",
+        "tldr_zh": "该论文介绍了一种统一的 tokenizer UniFlow，它采用分层自蒸馏和像素流解码器，在视觉理解和生成任务之间实现了平衡，并在多个基准测试中优于现有方法。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Head-wise Adaptive Rotary Positional Encoding for Fine-Grained Image Generation",
+        "summary": "Transformers rely on explicit positional encoding to model structure in data.\nWhile Rotary Position Embedding (RoPE) excels in 1D domains, its application to\nimage generation reveals significant limitations such as fine-grained spatial\nrelation modeling, color cues, and object counting. This paper identifies key\nlimitations of standard multi-dimensional RoPE-rigid frequency allocation,\naxis-wise independence, and uniform head treatment-in capturing the complex\nstructural biases required for fine-grained image generation. We propose\nHARoPE, a head-wise adaptive extension that inserts a learnable linear\ntransformation parameterized via singular value decomposition (SVD) before the\nrotary mapping. This lightweight modification enables dynamic frequency\nreallocation, semantic alignment of rotary planes, and head-specific positional\nreceptive fields while rigorously preserving RoPE's relative-position property.\nExtensive experiments on class-conditional ImageNet and text-to-image\ngeneration (Flux and MMDiT) demonstrate that HARoPE consistently improves\nperformance over strong RoPE baselines and other extensions. The method serves\nas an effective drop-in replacement, offering a principled and adaptable\nsolution for enhancing positional awareness in transformer-based image\ngenerative models.",
+        "url": "http://arxiv.org/abs/2510.10489v1",
+        "published_date": "2025-10-12T07:46:28+00:00",
+        "updated_date": "2025-10-12T07:46:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiaye Li",
+            "Baoyou Chen",
+            "Hui Li",
+            "Zilong Dong",
+            "Jingdong Wang",
+            "Siyu Zhu"
+        ],
+        "tldr": "The paper introduces HARoPE, a head-wise adaptive extension of RoPE for image generation, addressing limitations in fine-grained spatial relation modeling. It demonstrates improved performance in class-conditional ImageNet and text-to-image generation tasks.",
+        "tldr_zh": "本文介绍了HARoPE，一种用于图像生成的RoPE的头式自适应扩展，解决了在细粒度空间关系建模方面的局限性。它在类条件ImageNet和文本到图像生成任务中表现出改进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]

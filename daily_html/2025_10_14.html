@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 10, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - October 14, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 10, 2025</p>
+            <p>October 14, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,37 +215,35 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Large Scale Diffusion Distillation via Score-Regularized Continuous-Time Consistency</h2>
+            <h2 class="paper-title">Diffusion Transformers with Representation Autoencoders</h2>
             
-            <p class="paper-summary">This work represents the first effort to scale up continuous-time consistency
-distillation to general application-level image and video diffusion models.
-Although continuous-time consistency model (sCM) is theoretically principled
-and empirically powerful for accelerating academic-scale diffusion, its
-applicability to large-scale text-to-image and video tasks remains unclear due
-to infrastructure challenges in Jacobian-vector product (JVP) computation and
-the limitations of standard evaluation benchmarks. We first develop a
-parallelism-compatible FlashAttention-2 JVP kernel, enabling sCM training on
-models with over 10 billion parameters and high-dimensional video tasks. Our
-investigation reveals fundamental quality limitations of sCM in fine-detail
-generation, which we attribute to error accumulation and the "mode-covering"
-nature of its forward-divergence objective. To remedy this, we propose the
-score-regularized continuous-time consistency model (rCM), which incorporates
-score distillation as a long-skip regularizer. This integration complements sCM
-with the "mode-seeking" reverse divergence, effectively improving visual
-quality while maintaining high generation diversity. Validated on large-scale
-models (Cosmos-Predict2, Wan2.1) up to 14B parameters and 5-second videos, rCM
-matches or surpasses the state-of-the-art distillation method DMD2 on quality
-metrics while offering notable advantages in diversity, all without GAN tuning
-or extensive hyperparameter searches. The distilled models generate
-high-fidelity samples in only $1\sim4$ steps, accelerating diffusion sampling
-by $15\times\sim50\times$. These results position rCM as a practical and
-theoretically grounded framework for advancing large-scale diffusion
-distillation.</p>
+            <p class="paper-summary">Latent generative modeling, where a pretrained autoencoder maps pixels into a
+latent space for the diffusion process, has become the standard strategy for
+Diffusion Transformers (DiT); however, the autoencoder component has barely
+evolved. Most DiTs continue to rely on the original VAE encoder, which
+introduces several limitations: outdated backbones that compromise
+architectural simplicity, low-dimensional latent spaces that restrict
+information capacity, and weak representations that result from purely
+reconstruction-based training and ultimately limit generative quality. In this
+work, we explore replacing the VAE with pretrained representation encoders
+(e.g., DINO, SigLIP, MAE) paired with trained decoders, forming what we term
+Representation Autoencoders (RAEs). These models provide both high-quality
+reconstructions and semantically rich latent spaces, while allowing for a
+scalable transformer-based architecture. Since these latent spaces are
+typically high-dimensional, a key challenge is enabling diffusion transformers
+to operate effectively within them. We analyze the sources of this difficulty,
+propose theoretically motivated solutions, and validate them empirically. Our
+approach achieves faster convergence without auxiliary representation alignment
+losses. Using a DiT variant equipped with a lightweight, wide DDT head, we
+achieve strong image generation results on ImageNet: 1.51 FID at 256x256 (no
+guidance) and 1.13 at both 256x256 and 512x512 (with guidance). RAE offers
+clear advantages and should be the new default for diffusion transformer
+training.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces score-regularized continuous-time consistency model (rCM) for efficient and high-quality image and video generation by distilling large-scale diffusion models, overcoming limitations of previous consistency models.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes using Representation Autoencoders (RAEs), which combine pre-trained representation encoders (like DINO, SigLIP, MAE) with trained decoders, to improve Diffusion Transformers (DiTs). RAEs offer better image generation results and faster convergence compared to traditional VAE-based DiTs.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了score-regularized连续时间一致性模型 (rCM)，通过提炼大规模扩散模型，用于高效、高质量的图像和视频生成，克服了先前一致性模型的局限性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出使用表征自编码器 (RAEs) 来改进扩散Transformer (DiTs)，该方法结合了预训练的表征编码器（如 DINO、SigLIP、MAE）和训练的解码器。与传统的基于VAE的DiTs相比，RAEs提供了更好的图像生成结果和更快的收敛速度。</p>
             
 
             
@@ -263,24 +261,24 @@ distillation.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
+                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -309,18 +307,18 @@ distillation.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.08431v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.11690v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Kaiwen Zheng, Yuji Wang, Qianli Ma, Huayu Chen, Jintao Zhang, Yogesh Balaji, Jianfei Chen, Ming-Yu Liu, Jun Zhu, Qinsheng Zhang</p>
+            <p class="paper-authors">Authors: Boyang Zheng, Nanye Ma, Shengbang Tong, Saining Xie</p>
             
         </motion.div>
         
@@ -332,38 +330,31 @@ distillation.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Biology-driven assessment of deep learning super-resolution imaging of the porosity network in dentin</h2>
+            <h2 class="paper-title">Massive Activations are the Key to Local Detail Synthesis in Diffusion Transformers</h2>
             
-            <p class="paper-summary">The mechanosensory system of teeth is currently believed to partly rely on
-Odontoblast cells stimulation by fluid flow through a porosity network
-extending through dentin. Visualizing the smallest sub-microscopic porosity
-vessels therefore requires the highest achievable resolution from confocal
-fluorescence microscopy, the current gold standard. This considerably limits
-the extent of the field of view to very small sample regions. To overcome this
-limitation, we tested different deep learning (DL) super-resolution (SR) models
-to allow faster experimental acquisitions of lower resolution images and
-restore optimal image quality by post-processing. Three supervised 2D SR models
-(RCAN, pix2pix, FSRCNN) and one unsupervised (CycleGAN) were applied to a
-unique set of experimentally paired high- and low-resolution confocal images
-acquired with different sampling schemes, resulting in a pixel size increase of
-x2, x4, x8. Model performance was quantified using a broad set of similarity
-and distribution-based image quality assessment (IQA) metrics, which yielded
-inconsistent results that mostly contradicted our visual perception. This
-raises the question of the relevance of such generic metrics to efficiently
-target the specific structure of dental porosity. To resolve this conflicting
-information, the generated SR images were segmented taking into account the
-specific scales and morphology of the porosity network and analysed by
-comparing connected components. Additionally, the capacity of the SR models to
-preserve 3D porosity connectivity throughout the confocal image stacks was
-evaluated using graph analysis. This biology-driven assessment allowed a far
-better mechanistic interpretation of SR performance, highlighting differences
-in model sensitivity to weak intensity features and the impact of non-linearity
-in image generation, which explains the failure of standard IQA metrics.</p>
+            <p class="paper-summary">Diffusion Transformers (DiTs) have recently emerged as a powerful backbone
+for visual generation. Recent observations reveal \emph{Massive Activations}
+(MAs) in their internal feature maps, yet their function remains poorly
+understood. In this work, we systematically investigate these activations to
+elucidate their role in visual generation. We found that these massive
+activations occur across all spatial tokens, and their distribution is
+modulated by the input timestep embeddings. Importantly, our investigations
+further demonstrate that these massive activations play a key role in local
+detail synthesis, while having minimal impact on the overall semantic content
+of output. Building on these insights, we propose \textbf{D}etail
+\textbf{G}uidance (\textbf{DG}), a MAs-driven, training-free self-guidance
+strategy to explicitly enhance local detail fidelity for DiTs. Specifically, DG
+constructs a degraded ``detail-deficient'' model by disrupting MAs and
+leverages it to guide the original network toward higher-quality detail
+synthesis. Our DG can seamlessly integrate with Classifier-Free Guidance (CFG),
+enabling further refinements of fine-grained details. Extensive experiments
+demonstrate that our DG consistently improves fine-grained detail quality
+across various pre-trained DiTs (\eg, SD3, SD3.5, and Flux).</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores deep learning super-resolution (SR) models for enhancing confocal microscopy images of dentin porosity, using a biology-driven assessment based on segmentation and graph analysis to overcome limitations of standard image quality assessment metrics.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper investigates the role of Massive Activations (MAs) in Diffusion Transformers (DiTs) for visual generation, finding they are crucial for local detail synthesis. They propose Detail Guidance (DG), a training-free strategy to enhance detail fidelity by leveraging MAs.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文探索了深度学习超分辨率（SR）模型在增强牙本质孔隙率的共聚焦显微图像方面的应用，并采用基于分割和图分析的生物学驱动评估方法，克服了标准图像质量评估指标的局限性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文研究了扩散Transformer (DiT)中大规模激活(MA)在视觉生成中的作用，发现它们对于局部细节合成至关重要。他们提出了一种名为细节指导(DG)的免训练策略，通过利用MA来增强细节保真度。</p>
             
 
             
@@ -373,8 +364,8 @@ in image generation, which explains the failure of standard IQA metrics.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -389,8 +380,8 @@ in image generation, which explains the failure of standard IQA metrics.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -434,11 +425,11 @@ in image generation, which explains the failure of standard IQA metrics.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.08407v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.11538v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Lauren Anderson, Lucas Chatelain, Nicolas Tremblay, Kathryn Grandfield, David Rousseau, Aurélien Gourrier</p>
+            <p class="paper-authors">Authors: Chaofan Gan, Zicheng Zhao, Yuanpeng Tu, Xi Chen, Ziran Qin, Tieyuan Chen, Mehrtash Harandi, Weiyao Lin</p>
             
         </motion.div>
         
@@ -450,31 +441,31 @@ in image generation, which explains the failure of standard IQA metrics.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">UniMMVSR: A Unified Multi-Modal Framework for Cascaded Video Super-Resolution</h2>
+            <h2 class="paper-title">DISC-GAN: Disentangling Style and Content for Cluster-Specific Synthetic Underwater Image Generation</h2>
             
-            <p class="paper-summary">Cascaded video super-resolution has emerged as a promising technique for
-decoupling the computational burden associated with generating high-resolution
-videos using large foundation models. Existing studies, however, are largely
-confined to text-to-video tasks and fail to leverage additional generative
-conditions beyond text, which are crucial for ensuring fidelity in multi-modal
-video generation. We address this limitation by presenting UniMMVSR, the first
-unified generative video super-resolution framework to incorporate hybrid-modal
-conditions, including text, images, and videos. We conduct a comprehensive
-exploration of condition injection strategies, training schemes, and data
-mixture techniques within a latent video diffusion model. A key challenge was
-designing distinct data construction and condition utilization methods to
-enable the model to precisely utilize all condition types, given their varied
-correlations with the target video. Our experiments demonstrate that UniMMVSR
-significantly outperforms existing methods, producing videos with superior
-detail and a higher degree of conformity to multi-modal conditions. We also
-validate the feasibility of combining UniMMVSR with a base model to achieve
-multi-modal guided generation of 4K video, a feat previously unattainable with
-existing techniques.</p>
+            <p class="paper-summary">In this paper, we propose a novel framework, Disentangled Style-Content GAN
+(DISC-GAN), which integrates style-content disentanglement with a
+cluster-specific training strategy towards photorealistic underwater image
+synthesis. The quality of synthetic underwater images is challenged by optical
+due to phenomena such as color attenuation and turbidity. These phenomena are
+represented by distinct stylistic variations across different waterbodies, such
+as changes in tint and haze. While generative models are well-suited to capture
+complex patterns, they often lack the ability to model the non-uniform
+conditions of diverse underwater environments. To address these challenges, we
+employ K-means clustering to partition a dataset into style-specific domains.
+We use separate encoders to get latent spaces for style and content; we further
+integrate these latent representations via Adaptive Instance Normalization
+(AdaIN) and decode the result to produce the final synthetic image. The model
+is trained independently on each style cluster to preserve domain-specific
+characteristics. Our framework demonstrates state-of-the-art performance,
+obtaining a Structural Similarity Index (SSIM) of 0.9012, an average Peak
+Signal-to-Noise Ratio (PSNR) of 32.5118 dB, and a Frechet Inception Distance
+(FID) of 13.3728.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniMMVSR, a unified video super-resolution framework that incorporates multiple conditions like text, images, and videos to enhance fidelity and achieve 4K video generation, outperforming existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DISC-GAN, a novel GAN-based framework that disentangles style and content for cluster-specific underwater image generation, achieving state-of-the-art results in SSIM, PSNR, and FID.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 UniMMVSR，一个统一的视频超分辨率框架，它结合了文本、图像和视频等多种条件，以提高保真度并实现 4K 视频生成，优于现有方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DISC-GAN，一种新颖的基于GAN的框架，可解开风格和内容，用于特定于集群的水下图像生成，并在SSIM、PSNR和FID方面取得了最先进的结果。</p>
             
 
             
@@ -484,8 +475,8 @@ existing techniques.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -508,8 +499,8 @@ existing techniques.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -545,11 +536,11 @@ existing techniques.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.08143v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.10782v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Shian Du, Menghan Xia, Chang Liu, Quande Liu, Xintao Wang, Pengfei Wan, Xiangyang Ji</p>
+            <p class="paper-authors">Authors: Sneha Varur, Anirudh R Hanchinamani, Tarun S Bagewadi, Uma Mudenagudi, Chaitra D Desai, Sujata C, Padmashree Desai, Sumit Meharwade</p>
             
         </motion.div>
         
@@ -561,473 +552,30 @@ existing techniques.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Is Architectural Complexity Always the Answer? A Case Study on SwinIR vs. an Efficient CNN</h2>
+            <h2 class="paper-title">DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training</h2>
             
-            <p class="paper-summary">The simultaneous restoration of high-frequency details and suppression of
-severe noise in low-light imagery presents a significant and persistent
-challenge in computer vision. While large-scale Transformer models like SwinIR
-have set the state of the art in performance, their high computational cost can
-be a barrier for practical applications. This paper investigates the critical
-trade-off between performance and efficiency by comparing the state-of-the-art
-SwinIR model against a standard, lightweight Convolutional Neural Network (CNN)
-on this challenging task. Our experimental results reveal a nuanced but
-important finding. While the Transformer-based SwinIR model achieves a higher
-peak performance, with a Peak Signal-to-Noise Ratio (PSNR) of 39.03 dB, the
-lightweight CNN delivers a surprisingly competitive PSNR of 37.4 dB. Crucially,
-the CNN reached this performance after converging in only 10 epochs of
-training, whereas the more complex SwinIR model required 132 epochs. This
-efficiency is further underscored by the model's size; the CNN is over 55 times
-smaller than SwinIR. This work demonstrates that a standard CNN can provide a
-near state-of-the-art result with significantly lower computational overhead,
-presenting a compelling case for its use in real-world scenarios where resource
-constraints are a primary concern.</p>
+            <p class="paper-summary">In this work, we propose DiT360, a DiT-based framework that performs hybrid
+training on perspective and panoramic data for panoramic image generation. For
+the issues of maintaining geometric fidelity and photorealism in generation
+quality, we attribute the main reason to the lack of large-scale, high-quality,
+real-world panoramic data, where such a data-centric view differs from prior
+methods that focus on model design. Basically, DiT360 has several key modules
+for inter-domain transformation and intra-domain augmentation, applied at both
+the pre-VAE image level and the post-VAE token level. At the image level, we
+incorporate cross-domain knowledge through perspective image guidance and
+panoramic refinement, which enhance perceptual quality while regularizing
+diversity and photorealism. At the token level, hybrid supervision is applied
+across multiple modules, which include circular padding for boundary
+continuity, yaw loss for rotational robustness, and cube loss for distortion
+awareness. Extensive experiments on text-to-panorama, inpainting, and
+outpainting tasks demonstrate that our method achieves better boundary
+consistency and image fidelity across eleven quantitative metrics. Our code is
+available at https://github.com/Insta360-Research-Team/DiT360.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper compares SwinIR with a lightweight CNN for low-light image restoration, finding that the CNN achieves near state-of-the-art performance with significantly less computational cost and training time, highlighting the importance of efficiency.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文比较了SwinIR和一个轻量级CNN在低光图像恢复方面的性能。研究发现，CNN以更低的计算成本和训练时间实现了接近最先进的性能，突出了效率的重要性。</p>
-            
-
+            <p class="paper-tldr"><strong>TLDR</strong>: DiT360 is a DiT-based framework for high-fidelity panoramic image generation using a hybrid training approach on perspective and panoramic data, focusing on improving geometric fidelity and photorealism by addressing the lack of high-quality panoramic datasets.</p>
             
             
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.07984v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Chandresh Sutariya, Nitin Singh</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Latent Harmony: Synergistic Unified UHD Image Restoration via Latent Space Regularization and Controllable Refinement</h2>
-            
-            <p class="paper-summary">Ultra-High Definition (UHD) image restoration faces a trade-off between
-computational efficiency and high-frequency detail retention. While Variational
-Autoencoders (VAEs) improve efficiency via latent-space processing, their
-Gaussian constraint often discards degradation-specific high-frequency
-information, hurting reconstruction fidelity. To overcome this, we propose
-Latent Harmony, a two-stage framework that redefines VAEs for UHD restoration
-by jointly regularizing the latent space and enforcing high-frequency-aware
-reconstruction.In Stage One, we introduce LH-VAE, which enhances semantic
-robustness through visual semantic constraints and progressive degradation
-perturbations, while latent equivariance strengthens high-frequency
-reconstruction.Stage Two jointly trains this refined VAE with a restoration
-model using High-Frequency Low-Rank Adaptation (HF-LoRA): an encoder LoRA
-guided by a fidelity-oriented high-frequency alignment loss to recover
-authentic details, and a decoder LoRA driven by a perception-oriented loss to
-synthesize realistic textures. Both LoRA modules are trained via alternating
-optimization with selective gradient propagation to preserve the pretrained
-latent structure.At inference, a tunable parameter {\alpha} enables flexible
-fidelity-perception trade-offs.Experiments show Latent Harmony achieves
-state-of-the-art performance across UHD and standard-resolution tasks,
-effectively balancing efficiency, perceptual quality, and reconstruction
-accuracy.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Latent Harmony, a two-stage framework using Variational Autoencoders (VAEs) with latent space regularization and high-frequency-aware reconstruction to improve UHD image restoration, balancing efficiency, perceptual quality, and reconstruction accuracy.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为Latent Harmony的两阶段框架，它使用变分自编码器（VAE）与潜在空间正则化和高频感知重建相结合，以改善超高清图像的修复效果，并在效率、感知质量和重建精度之间取得平衡。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.07961v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yidi Liu, Xueyang Fu, Jie Huang, Jie Xiao, Dong Li, Wenlong Zhang, Lei Bai, Zheng-Jun Zha</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">SatFusion: A Unified Framework for Enhancing Satellite IoT Images via Multi-Temporal and Multi-Source Data Fusion</h2>
-            
-            <p class="paper-summary">With the rapid advancement of the digital society, the proliferation of
-satellites in the Satellite Internet of Things (Sat-IoT) has led to the
-continuous accumulation of large-scale multi-temporal and multi-source images
-across diverse application scenarios. However, existing methods fail to fully
-exploit the complementary information embedded in both temporal and source
-dimensions. For example, Multi-Image Super-Resolution (MISR) enhances
-reconstruction quality by leveraging temporal complementarity across multiple
-observations, yet the limited fine-grained texture details in input images
-constrain its performance. Conversely, pansharpening integrates multi-source
-images by injecting high-frequency spatial information from panchromatic data,
-but typically relies on pre-interpolated low-resolution inputs and assumes
-noise-free alignment, making it highly sensitive to noise and misregistration.
-To address these issues, we propose SatFusion: A Unified Framework for
-Enhancing Satellite IoT Images via Multi-Temporal and Multi-Source Data Fusion.
-Specifically, SatFusion first employs a Multi-Temporal Image Fusion (MTIF)
-module to achieve deep feature alignment with the panchromatic image. Then, a
-Multi-Source Image Fusion (MSIF) module injects fine-grained texture
-information from the panchromatic data. Finally, a Fusion Composition module
-adaptively integrates the complementary advantages of both modalities while
-dynamically refining spectral consistency, supervised by a weighted combination
-of multiple loss functions. Extensive experiments on the WorldStrat, WV3, QB,
-and GF2 datasets demonstrate that SatFusion significantly improves fusion
-quality, robustness under challenging conditions, and generalizability to
-real-world Sat-IoT scenarios. The code is available at:
-https://github.com/dllgyufei/SatFusion.git.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: SatFusion is a unified framework for enhancing satellite IoT images by fusing multi-temporal and multi-source data, addressing limitations of existing methods like MISR and pansharpening through a novel three-module approach.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: SatFusion 是一个统一的框架，通过融合多时相和多源数据来增强卫星物联网图像。它通过一种新颖的三模块方法，解决了现有方法（如 MISR 和 pansharpening）的局限性。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.07905v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yufei Tong, Guanjie Cheng, Peihan Wu, Yicheng Zhu, Kexu Lu, Feiyi Chen, Meng Xi, Junqin Huang, Shuiguang Deng</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Provably Accelerated Imaging with Restarted Inertia and Score-based Image Priors</h2>
-            
-            <p class="paper-summary">Fast convergence and high-quality image recovery are two essential features
-of algorithms for solving ill-posed imaging inverse problems. Existing methods,
-such as regularization by denoising (RED), often focus on designing
-sophisticated image priors to improve reconstruction quality, while leaving
-convergence acceleration to heuristics. To bridge the gap, we propose Restarted
-Inertia with Score-based Priors (RISP) as a principled extension of RED. RISP
-incorporates a restarting inertia for fast convergence, while still allowing
-score-based image priors for high-quality reconstruction. We prove that RISP
-attains a faster stationary-point convergence rate than RED, without requiring
-the convexity of the image prior. We further derive and analyze the associated
-continuous-time dynamical system, offering insight into the connection between
-RISP and the heavy-ball ordinary differential equation (ODE). Experiments
-across a range of imaging inverse problems demonstrate that RISP enables fast
-convergence while achieving high-quality reconstructions.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Restarted Inertia with Score-based Priors (RISP), a provably faster and high-quality image reconstruction method for ill-posed inverse problems, extending RED with a restarting inertia mechanism and score-based priors.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了基于分数先验的重启动惯性算法（RISP），这是一种针对不适定逆问题的、可证明的更快且高质量的图像重建方法，通过重启惯性机制和基于分数的先验扩展了RED。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.07470v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Marien Renaud, Julien Hermant, Deliang Wei, Yu Sun</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.35000000000000003, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">SPICE: Simple and Practical Image Clarification and Enhancement</h2>
-            
-            <p class="paper-summary">We introduce a simple and efficient method to enhance and clarify images.
-More specifically, we deal with low light image enhancement and clarification
-of hazy imagery (hazy/foggy images, images containing sand dust, and underwater
-images). Our method involves constructing an image filter to simulate low-light
-or hazy conditions and deriving approximate reverse filters to minimize
-distortions in the enhanced images. Experimental results show that our approach
-is highly competitive and often surpasses state-of-the-art techniques in
-handling extremely dark images and in enhancing hazy images. A key advantage of
-our approach lies in its simplicity: Our method is implementable with just a
-few lines of MATLAB code.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a simple and efficient image enhancement method (SPICE) for low-light and hazy images using a filter-based approach with minimal code complexity, claiming to surpass state-of-the-art techniques.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种简单高效的图像增强方法（SPICE），用于低光照和朦胧图像，该方法采用基于滤波的方法，代码复杂度极低，并声称超越了最先进的技术。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: DiT360是一个基于DiT框架的全景图像生成方法，它采用透视和全景数据的混合训练方法，旨在通过解决高质量全景数据集的缺乏来提高几何保真度和照片真实感。</p>
             
 
             
@@ -1045,8 +593,8 @@ few lines of MATLAB code.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1098,18 +646,468 @@ few lines of MATLAB code.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.08358v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.11712v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Alexander Belyaev, Pierre-Alain Fayolle, Michael Cohen</p>
+            <p class="paper-authors">Authors: Haoran Feng, Dizhe Zhang, Xiangtai Li, Bo Du, Lu Qi</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Uncertainty-Aware ControlNet: Bridging Domain Gaps with Synthetic Image Generation</h2>
+            
+            <p class="paper-summary">Generative Models are a valuable tool for the controlled creation of
+high-quality image data. Controlled diffusion models like the ControlNet have
+allowed the creation of labeled distributions. Such synthetic datasets can
+augment the original training distribution when discriminative models, like
+semantic segmentation, are trained. However, this augmentation effect is
+limited since ControlNets tend to reproduce the original training distribution.
+  This work introduces a method to utilize data from unlabeled domains to train
+ControlNets by introducing the concept of uncertainty into the control
+mechanism. The uncertainty indicates that a given image was not part of the
+training distribution of a downstream task, e.g., segmentation. Thus, two types
+of control are engaged in the final network: an uncertainty control from an
+unlabeled dataset and a semantic control from the labeled dataset. The
+resulting ControlNet allows us to create annotated data with high uncertainty
+from the target domain, i.e., synthetic data from the unlabeled distribution
+with labels. In our scenario, we consider retinal OCTs, where typically
+high-quality Spectralis images are available with given ground truth
+segmentations, enabling the training of segmentation networks. The recent
+development in Home-OCT devices, however, yields retinal OCTs with lower
+quality and a large domain shift, such that out-of-the-pocket segmentation
+networks cannot be applied for this type of data. Synthesizing annotated images
+from the Home-OCT domain using the proposed approach closes this gap and leads
+to significantly improved segmentation results without adding any further
+supervision. The advantage of uncertainty-guidance becomes obvious when
+compared to style transfer: it enables arbitrary domain shifts without any
+strict learning of an image style. This is also demonstrated in a traffic scene
+experiment.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces an uncertainty-aware ControlNet for synthetic image generation to bridge domain gaps, particularly for cases where labeled data in the target domain is scarce, using retinal OCT images as an example.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种不确定性感知的 ControlNet，用于合成图像生成以弥合域差距，特别是在目标域中标记数据稀缺的情况下，并以视网膜 OCT 图像为例。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.11346v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Joshua Niemeijer, Jan Ehrhardt, Heinz Handels, Hristina Uzunova</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Demystifying Numerosity in Diffusion Models -- Limitations and Remedies</h2>
+            
+            <p class="paper-summary">Numerosity remains a challenge for state-of-the-art text-to-image generation
+models like FLUX and GPT-4o, which often fail to accurately follow counting
+instructions in text prompts. In this paper, we aim to study a fundamental yet
+often overlooked question: Can diffusion models inherently generate the correct
+number of objects specified by a textual prompt simply by scaling up the
+dataset and model size? To enable rigorous and reproducible evaluation, we
+construct a clean synthetic numerosity benchmark comprising two complementary
+datasets: GrayCount250 for controlled scaling studies, and NaturalCount6
+featuring complex naturalistic scenes. Second, we empirically show that the
+scaling hypothesis does not hold: larger models and datasets alone fail to
+improve counting accuracy on our benchmark. Our analysis identifies a key
+reason: diffusion models tend to rely heavily on the noise initialization
+rather than the explicit numerosity specified in the prompt. We observe that
+noise priors exhibit biases toward specific object counts. In addition, we
+propose an effective strategy for controlling numerosity by injecting
+count-aware layout information into the noise prior. Our method achieves
+significant gains, improving accuracy on GrayCount250 from 20.0\% to 85.3\% and
+on NaturalCount6 from 74.8\% to 86.3\%, demonstrating effective generalization
+across settings.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper investigates why diffusion models struggle with accurate object counting and proposes a method to improve numerosity control by injecting count-aware layout information into the noise prior, achieving significant accuracy gains.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文研究了扩散模型在精确物体计数方面的困难，并提出了一种通过将计数感知的布局信息注入噪声先验来改善数量控制的方法，从而显著提高了准确性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.11117v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Yaqi Zhao, Xiaochen Wang, Li Dong, Wentao Zhang, Yuhui Yuan</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Zero-shot Face Editing via ID-Attribute Decoupled Inversion</h2>
+            
+            <p class="paper-summary">Recent advancements in text-guided diffusion models have shown promise for
+general image editing via inversion techniques, but often struggle to maintain
+ID and structural consistency in real face editing tasks. To address this
+limitation, we propose a zero-shot face editing method based on ID-Attribute
+Decoupled Inversion. Specifically, we decompose the face representation into ID
+and attribute features, using them as joint conditions to guide both the
+inversion and the reverse diffusion processes. This allows independent control
+over ID and attributes, ensuring strong ID preservation and structural
+consistency while enabling precise facial attribute manipulation. Our method
+supports a wide range of complex multi-attribute face editing tasks using only
+text prompts, without requiring region-specific input, and operates at a speed
+comparable to DDIM inversion. Comprehensive experiments demonstrate its
+practicality and effectiveness.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper presents a zero-shot face editing method using ID-Attribute Decoupled Inversion to improve ID preservation and structural consistency in text-guided face editing, which often suffers in current diffusion models.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种零样本人脸编辑方法，通过ID-属性解耦反演来改进文本引导人脸编辑中的ID保持和结构一致性，而这通常是当前扩散模型所欠缺的。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.11050v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Yang Hou, Minggu Wang, Jianjun Zhao</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.35000000000000003, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">SceneTextStylizer: A Training-Free Scene Text Style Transfer Framework with Diffusion Model</h2>
+            
+            <p class="paper-summary">With the rapid development of diffusion models, style transfer has made
+remarkable progress. However, flexible and localized style editing for scene
+text remains an unsolved challenge. Although existing scene text editing
+methods have achieved text region editing, they are typically limited to
+content replacement and simple styles, which lack the ability of free-style
+transfer. In this paper, we introduce SceneTextStylizer, a novel training-free
+diffusion-based framework for flexible and high-fidelity style transfer of text
+in scene images. Unlike prior approaches that either perform global style
+transfer or focus solely on textual content modification, our method enables
+prompt-guided style transformation specifically for text regions, while
+preserving both text readability and stylistic consistency. To achieve this, we
+design a feature injection module that leverages diffusion model inversion and
+self-attention to transfer style features effectively. Additionally, a region
+control mechanism is introduced by applying a distance-based changing mask at
+each denoising step, enabling precise spatial control. To further enhance
+visual quality, we incorporate a style enhancement module based on the Fourier
+transform to reinforce stylistic richness. Extensive experiments demonstrate
+that our method achieves superior performance in scene text style
+transformation, outperforming existing state-of-the-art methods in both visual
+fidelity and text preservation.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SceneTextStylizer, a training-free diffusion-based framework for style transfer of text in scene images, enabling prompt-guided localized style transformation and preserving text readability.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为 SceneTextStylizer 的无训练场景文本风格迁移框架，该框架基于扩散模型，能够实现提示引导的局部风格转换，并保持文本的可读性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.10910v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Honghui Yuan, Keiji Yanai</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-14 03:31:15 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-14 03:44:22 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

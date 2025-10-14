@@ -1,0 +1,197 @@
+[
+    {
+        "title": "Diffusion Transformers with Representation Autoencoders",
+        "summary": "Latent generative modeling, where a pretrained autoencoder maps pixels into a\nlatent space for the diffusion process, has become the standard strategy for\nDiffusion Transformers (DiT); however, the autoencoder component has barely\nevolved. Most DiTs continue to rely on the original VAE encoder, which\nintroduces several limitations: outdated backbones that compromise\narchitectural simplicity, low-dimensional latent spaces that restrict\ninformation capacity, and weak representations that result from purely\nreconstruction-based training and ultimately limit generative quality. In this\nwork, we explore replacing the VAE with pretrained representation encoders\n(e.g., DINO, SigLIP, MAE) paired with trained decoders, forming what we term\nRepresentation Autoencoders (RAEs). These models provide both high-quality\nreconstructions and semantically rich latent spaces, while allowing for a\nscalable transformer-based architecture. Since these latent spaces are\ntypically high-dimensional, a key challenge is enabling diffusion transformers\nto operate effectively within them. We analyze the sources of this difficulty,\npropose theoretically motivated solutions, and validate them empirically. Our\napproach achieves faster convergence without auxiliary representation alignment\nlosses. Using a DiT variant equipped with a lightweight, wide DDT head, we\nachieve strong image generation results on ImageNet: 1.51 FID at 256x256 (no\nguidance) and 1.13 at both 256x256 and 512x512 (with guidance). RAE offers\nclear advantages and should be the new default for diffusion transformer\ntraining.",
+        "url": "http://arxiv.org/abs/2510.11690v1",
+        "published_date": "2025-10-13T17:51:39+00:00",
+        "updated_date": "2025-10-13T17:51:39+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Boyang Zheng",
+            "Nanye Ma",
+            "Shengbang Tong",
+            "Saining Xie"
+        ],
+        "tldr": "The paper proposes using Representation Autoencoders (RAEs), which combine pre-trained representation encoders (like DINO, SigLIP, MAE) with trained decoders, to improve Diffusion Transformers (DiTs). RAEs offer better image generation results and faster convergence compared to traditional VAE-based DiTs.",
+        "tldr_zh": "本文提出使用表征自编码器 (RAEs) 来改进扩散Transformer (DiTs)，该方法结合了预训练的表征编码器（如 DINO、SigLIP、MAE）和训练的解码器。与传统的基于VAE的DiTs相比，RAEs提供了更好的图像生成结果和更快的收敛速度。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Massive Activations are the Key to Local Detail Synthesis in Diffusion Transformers",
+        "summary": "Diffusion Transformers (DiTs) have recently emerged as a powerful backbone\nfor visual generation. Recent observations reveal \\emph{Massive Activations}\n(MAs) in their internal feature maps, yet their function remains poorly\nunderstood. In this work, we systematically investigate these activations to\nelucidate their role in visual generation. We found that these massive\nactivations occur across all spatial tokens, and their distribution is\nmodulated by the input timestep embeddings. Importantly, our investigations\nfurther demonstrate that these massive activations play a key role in local\ndetail synthesis, while having minimal impact on the overall semantic content\nof output. Building on these insights, we propose \\textbf{D}etail\n\\textbf{G}uidance (\\textbf{DG}), a MAs-driven, training-free self-guidance\nstrategy to explicitly enhance local detail fidelity for DiTs. Specifically, DG\nconstructs a degraded ``detail-deficient'' model by disrupting MAs and\nleverages it to guide the original network toward higher-quality detail\nsynthesis. Our DG can seamlessly integrate with Classifier-Free Guidance (CFG),\nenabling further refinements of fine-grained details. Extensive experiments\ndemonstrate that our DG consistently improves fine-grained detail quality\nacross various pre-trained DiTs (\\eg, SD3, SD3.5, and Flux).",
+        "url": "http://arxiv.org/abs/2510.11538v1",
+        "published_date": "2025-10-13T15:39:13+00:00",
+        "updated_date": "2025-10-13T15:39:13+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chaofan Gan",
+            "Zicheng Zhao",
+            "Yuanpeng Tu",
+            "Xi Chen",
+            "Ziran Qin",
+            "Tieyuan Chen",
+            "Mehrtash Harandi",
+            "Weiyao Lin"
+        ],
+        "tldr": "This paper investigates the role of Massive Activations (MAs) in Diffusion Transformers (DiTs) for visual generation, finding they are crucial for local detail synthesis. They propose Detail Guidance (DG), a training-free strategy to enhance detail fidelity by leveraging MAs.",
+        "tldr_zh": "本文研究了扩散Transformer (DiT)中大规模激活(MA)在视觉生成中的作用，发现它们对于局部细节合成至关重要。他们提出了一种名为细节指导(DG)的免训练策略，通过利用MA来增强细节保真度。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DISC-GAN: Disentangling Style and Content for Cluster-Specific Synthetic Underwater Image Generation",
+        "summary": "In this paper, we propose a novel framework, Disentangled Style-Content GAN\n(DISC-GAN), which integrates style-content disentanglement with a\ncluster-specific training strategy towards photorealistic underwater image\nsynthesis. The quality of synthetic underwater images is challenged by optical\ndue to phenomena such as color attenuation and turbidity. These phenomena are\nrepresented by distinct stylistic variations across different waterbodies, such\nas changes in tint and haze. While generative models are well-suited to capture\ncomplex patterns, they often lack the ability to model the non-uniform\nconditions of diverse underwater environments. To address these challenges, we\nemploy K-means clustering to partition a dataset into style-specific domains.\nWe use separate encoders to get latent spaces for style and content; we further\nintegrate these latent representations via Adaptive Instance Normalization\n(AdaIN) and decode the result to produce the final synthetic image. The model\nis trained independently on each style cluster to preserve domain-specific\ncharacteristics. Our framework demonstrates state-of-the-art performance,\nobtaining a Structural Similarity Index (SSIM) of 0.9012, an average Peak\nSignal-to-Noise Ratio (PSNR) of 32.5118 dB, and a Frechet Inception Distance\n(FID) of 13.3728.",
+        "url": "http://arxiv.org/abs/2510.10782v1",
+        "published_date": "2025-10-12T19:56:20+00:00",
+        "updated_date": "2025-10-12T19:56:20+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Sneha Varur",
+            "Anirudh R Hanchinamani",
+            "Tarun S Bagewadi",
+            "Uma Mudenagudi",
+            "Chaitra D Desai",
+            "Sujata C",
+            "Padmashree Desai",
+            "Sumit Meharwade"
+        ],
+        "tldr": "The paper introduces DISC-GAN, a novel GAN-based framework that disentangles style and content for cluster-specific underwater image generation, achieving state-of-the-art results in SSIM, PSNR, and FID.",
+        "tldr_zh": "该论文介绍了DISC-GAN，一种新颖的基于GAN的框架，可解开风格和内容，用于特定于集群的水下图像生成，并在SSIM、PSNR和FID方面取得了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training",
+        "summary": "In this work, we propose DiT360, a DiT-based framework that performs hybrid\ntraining on perspective and panoramic data for panoramic image generation. For\nthe issues of maintaining geometric fidelity and photorealism in generation\nquality, we attribute the main reason to the lack of large-scale, high-quality,\nreal-world panoramic data, where such a data-centric view differs from prior\nmethods that focus on model design. Basically, DiT360 has several key modules\nfor inter-domain transformation and intra-domain augmentation, applied at both\nthe pre-VAE image level and the post-VAE token level. At the image level, we\nincorporate cross-domain knowledge through perspective image guidance and\npanoramic refinement, which enhance perceptual quality while regularizing\ndiversity and photorealism. At the token level, hybrid supervision is applied\nacross multiple modules, which include circular padding for boundary\ncontinuity, yaw loss for rotational robustness, and cube loss for distortion\nawareness. Extensive experiments on text-to-panorama, inpainting, and\noutpainting tasks demonstrate that our method achieves better boundary\nconsistency and image fidelity across eleven quantitative metrics. Our code is\navailable at https://github.com/Insta360-Research-Team/DiT360.",
+        "url": "http://arxiv.org/abs/2510.11712v1",
+        "published_date": "2025-10-13T17:59:15+00:00",
+        "updated_date": "2025-10-13T17:59:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haoran Feng",
+            "Dizhe Zhang",
+            "Xiangtai Li",
+            "Bo Du",
+            "Lu Qi"
+        ],
+        "tldr": "DiT360 is a DiT-based framework for high-fidelity panoramic image generation using a hybrid training approach on perspective and panoramic data, focusing on improving geometric fidelity and photorealism by addressing the lack of high-quality panoramic datasets.",
+        "tldr_zh": "DiT360是一个基于DiT框架的全景图像生成方法，它采用透视和全景数据的混合训练方法，旨在通过解决高质量全景数据集的缺乏来提高几何保真度和照片真实感。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Uncertainty-Aware ControlNet: Bridging Domain Gaps with Synthetic Image Generation",
+        "summary": "Generative Models are a valuable tool for the controlled creation of\nhigh-quality image data. Controlled diffusion models like the ControlNet have\nallowed the creation of labeled distributions. Such synthetic datasets can\naugment the original training distribution when discriminative models, like\nsemantic segmentation, are trained. However, this augmentation effect is\nlimited since ControlNets tend to reproduce the original training distribution.\n  This work introduces a method to utilize data from unlabeled domains to train\nControlNets by introducing the concept of uncertainty into the control\nmechanism. The uncertainty indicates that a given image was not part of the\ntraining distribution of a downstream task, e.g., segmentation. Thus, two types\nof control are engaged in the final network: an uncertainty control from an\nunlabeled dataset and a semantic control from the labeled dataset. The\nresulting ControlNet allows us to create annotated data with high uncertainty\nfrom the target domain, i.e., synthetic data from the unlabeled distribution\nwith labels. In our scenario, we consider retinal OCTs, where typically\nhigh-quality Spectralis images are available with given ground truth\nsegmentations, enabling the training of segmentation networks. The recent\ndevelopment in Home-OCT devices, however, yields retinal OCTs with lower\nquality and a large domain shift, such that out-of-the-pocket segmentation\nnetworks cannot be applied for this type of data. Synthesizing annotated images\nfrom the Home-OCT domain using the proposed approach closes this gap and leads\nto significantly improved segmentation results without adding any further\nsupervision. The advantage of uncertainty-guidance becomes obvious when\ncompared to style transfer: it enables arbitrary domain shifts without any\nstrict learning of an image style. This is also demonstrated in a traffic scene\nexperiment.",
+        "url": "http://arxiv.org/abs/2510.11346v1",
+        "published_date": "2025-10-13T12:41:28+00:00",
+        "updated_date": "2025-10-13T12:41:28+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Joshua Niemeijer",
+            "Jan Ehrhardt",
+            "Heinz Handels",
+            "Hristina Uzunova"
+        ],
+        "tldr": "This paper introduces an uncertainty-aware ControlNet for synthetic image generation to bridge domain gaps, particularly for cases where labeled data in the target domain is scarce, using retinal OCT images as an example.",
+        "tldr_zh": "本文介绍了一种不确定性感知的 ControlNet，用于合成图像生成以弥合域差距，特别是在目标域中标记数据稀缺的情况下，并以视网膜 OCT 图像为例。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Demystifying Numerosity in Diffusion Models -- Limitations and Remedies",
+        "summary": "Numerosity remains a challenge for state-of-the-art text-to-image generation\nmodels like FLUX and GPT-4o, which often fail to accurately follow counting\ninstructions in text prompts. In this paper, we aim to study a fundamental yet\noften overlooked question: Can diffusion models inherently generate the correct\nnumber of objects specified by a textual prompt simply by scaling up the\ndataset and model size? To enable rigorous and reproducible evaluation, we\nconstruct a clean synthetic numerosity benchmark comprising two complementary\ndatasets: GrayCount250 for controlled scaling studies, and NaturalCount6\nfeaturing complex naturalistic scenes. Second, we empirically show that the\nscaling hypothesis does not hold: larger models and datasets alone fail to\nimprove counting accuracy on our benchmark. Our analysis identifies a key\nreason: diffusion models tend to rely heavily on the noise initialization\nrather than the explicit numerosity specified in the prompt. We observe that\nnoise priors exhibit biases toward specific object counts. In addition, we\npropose an effective strategy for controlling numerosity by injecting\ncount-aware layout information into the noise prior. Our method achieves\nsignificant gains, improving accuracy on GrayCount250 from 20.0\\% to 85.3\\% and\non NaturalCount6 from 74.8\\% to 86.3\\%, demonstrating effective generalization\nacross settings.",
+        "url": "http://arxiv.org/abs/2510.11117v1",
+        "published_date": "2025-10-13T08:07:24+00:00",
+        "updated_date": "2025-10-13T08:07:24+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yaqi Zhao",
+            "Xiaochen Wang",
+            "Li Dong",
+            "Wentao Zhang",
+            "Yuhui Yuan"
+        ],
+        "tldr": "This paper investigates why diffusion models struggle with accurate object counting and proposes a method to improve numerosity control by injecting count-aware layout information into the noise prior, achieving significant accuracy gains.",
+        "tldr_zh": "本文研究了扩散模型在精确物体计数方面的困难，并提出了一种通过将计数感知的布局信息注入噪声先验来改善数量控制的方法，从而显著提高了准确性。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Zero-shot Face Editing via ID-Attribute Decoupled Inversion",
+        "summary": "Recent advancements in text-guided diffusion models have shown promise for\ngeneral image editing via inversion techniques, but often struggle to maintain\nID and structural consistency in real face editing tasks. To address this\nlimitation, we propose a zero-shot face editing method based on ID-Attribute\nDecoupled Inversion. Specifically, we decompose the face representation into ID\nand attribute features, using them as joint conditions to guide both the\ninversion and the reverse diffusion processes. This allows independent control\nover ID and attributes, ensuring strong ID preservation and structural\nconsistency while enabling precise facial attribute manipulation. Our method\nsupports a wide range of complex multi-attribute face editing tasks using only\ntext prompts, without requiring region-specific input, and operates at a speed\ncomparable to DDIM inversion. Comprehensive experiments demonstrate its\npracticality and effectiveness.",
+        "url": "http://arxiv.org/abs/2510.11050v1",
+        "published_date": "2025-10-13T06:34:40+00:00",
+        "updated_date": "2025-10-13T06:34:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yang Hou",
+            "Minggu Wang",
+            "Jianjun Zhao"
+        ],
+        "tldr": "The paper presents a zero-shot face editing method using ID-Attribute Decoupled Inversion to improve ID preservation and structural consistency in text-guided face editing, which often suffers in current diffusion models.",
+        "tldr_zh": "该论文提出了一种零样本人脸编辑方法，通过ID-属性解耦反演来改进文本引导人脸编辑中的ID保持和结构一致性，而这通常是当前扩散模型所欠缺的。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "SceneTextStylizer: A Training-Free Scene Text Style Transfer Framework with Diffusion Model",
+        "summary": "With the rapid development of diffusion models, style transfer has made\nremarkable progress. However, flexible and localized style editing for scene\ntext remains an unsolved challenge. Although existing scene text editing\nmethods have achieved text region editing, they are typically limited to\ncontent replacement and simple styles, which lack the ability of free-style\ntransfer. In this paper, we introduce SceneTextStylizer, a novel training-free\ndiffusion-based framework for flexible and high-fidelity style transfer of text\nin scene images. Unlike prior approaches that either perform global style\ntransfer or focus solely on textual content modification, our method enables\nprompt-guided style transformation specifically for text regions, while\npreserving both text readability and stylistic consistency. To achieve this, we\ndesign a feature injection module that leverages diffusion model inversion and\nself-attention to transfer style features effectively. Additionally, a region\ncontrol mechanism is introduced by applying a distance-based changing mask at\neach denoising step, enabling precise spatial control. To further enhance\nvisual quality, we incorporate a style enhancement module based on the Fourier\ntransform to reinforce stylistic richness. Extensive experiments demonstrate\nthat our method achieves superior performance in scene text style\ntransformation, outperforming existing state-of-the-art methods in both visual\nfidelity and text preservation.",
+        "url": "http://arxiv.org/abs/2510.10910v1",
+        "published_date": "2025-10-13T02:11:57+00:00",
+        "updated_date": "2025-10-13T02:11:57+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Honghui Yuan",
+            "Keiji Yanai"
+        ],
+        "tldr": "The paper introduces SceneTextStylizer, a training-free diffusion-based framework for style transfer of text in scene images, enabling prompt-guided localized style transformation and preserving text readability.",
+        "tldr_zh": "该论文介绍了一种名为 SceneTextStylizer 的无训练场景文本风格迁移框架，该框架基于扩散模型，能够实现提示引导的局部风格转换，并保持文本的可读性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
