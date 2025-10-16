@@ -1,0 +1,176 @@
+[
+    {
+        "title": "Universal Image Restoration Pre-training via Masked Degradation Classification",
+        "summary": "This study introduces a Masked Degradation Classification Pre-Training method\n(MaskDCPT), designed to facilitate the classification of degradation types in\ninput images, leading to comprehensive image restoration pre-training. Unlike\nconventional pre-training methods, MaskDCPT uses the degradation type of the\nimage as an extremely weak supervision, while simultaneously leveraging the\nimage reconstruction to enhance performance and robustness. MaskDCPT includes\nan encoder and two decoders: the encoder extracts features from the masked\nlow-quality input image. The classification decoder uses these features to\nidentify the degradation type, whereas the reconstruction decoder aims to\nreconstruct a corresponding high-quality image. This design allows the\npre-training to benefit from both masked image modeling and contrastive\nlearning, resulting in a generalized representation suited for restoration\ntasks. Benefit from the straightforward yet potent MaskDCPT, the pre-trained\nencoder can be used to address universal image restoration and achieve\noutstanding performance. Implementing MaskDCPT significantly improves\nperformance for both convolution neural networks (CNNs) and Transformers, with\na minimum increase in PSNR of 3.77 dB in the 5D all-in-one restoration task and\na 34.8% reduction in PIQE compared to baseline in real-world degradation\nscenarios. It also emergences strong generalization to previously unseen\ndegradation types and levels. In addition, we curate and release the UIR-2.5M\ndataset, which includes 2.5 million paired restoration samples across 19\ndegradation types and over 200 degradation levels, incorporating both synthetic\nand real-world data. The dataset, source code, and models are available at\nhttps://github.com/MILab-PKU/MaskDCPT.",
+        "url": "http://arxiv.org/abs/2510.13282v1",
+        "published_date": "2025-10-15T08:30:15+00:00",
+        "updated_date": "2025-10-15T08:30:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "JiaKui Hu",
+            "Zhengjian Yao",
+            "Lujia Jin",
+            "Yinghao Chen",
+            "Yanye Lu"
+        ],
+        "tldr": "The paper introduces MaskDCPT, a pre-training method for universal image restoration that leverages masked degradation classification and image reconstruction, and releases a large-scale UIR-2.5M dataset.",
+        "tldr_zh": "本文介绍了一种名为MaskDCPT的通用图像修复预训练方法，该方法利用掩码退化分类和图像重建，并发布了一个大规模的UIR-2.5M数据集。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Cyclic Self-Supervised Diffusion for Ultra Low-field to High-field MRI Synthesis",
+        "summary": "Synthesizing high-quality images from low-field MRI holds significant\npotential. Low-field MRI is cheaper, more accessible, and safer, but suffers\nfrom low resolution and poor signal-to-noise ratio. This synthesis process can\nreduce reliance on costly acquisitions and expand data availability. However,\nsynthesizing high-field MRI still suffers from a clinical fidelity gap. There\nis a need to preserve anatomical fidelity, enhance fine-grained structural\ndetails, and bridge domain gaps in image contrast. To address these issues, we\npropose a \\emph{cyclic self-supervised diffusion (CSS-Diff)} framework for\nhigh-field MRI synthesis from real low-field MRI data. Our core idea is to\nreformulate diffusion-based synthesis under a cycle-consistent constraint. It\nenforces anatomical preservation throughout the generative process rather than\njust relying on paired pixel-level supervision. The CSS-Diff framework further\nincorporates two novel processes. The slice-wise gap perception network aligns\ninter-slice inconsistencies via contrastive learning. The local structure\ncorrection network enhances local feature restoration through\nself-reconstruction of masked and perturbed patches. Extensive experiments on\ncross-field synthesis tasks demonstrate the effectiveness of our method,\nachieving state-of-the-art performance (e.g., 31.80 $\\pm$ 2.70 dB in PSNR,\n0.943 $\\pm$ 0.102 in SSIM, and 0.0864 $\\pm$ 0.0689 in LPIPS). Beyond pixel-wise\nfidelity, our method also preserves fine-grained anatomical structures compared\nwith the original low-field MRI (e.g., left cerebral white matter error drops\nfrom 12.1$\\%$ to 2.1$\\%$, cortex from 4.2$\\%$ to 3.7$\\%$). To conclude, our\nCSS-Diff can synthesize images that are both quantitatively reliable and\nanatomically consistent.",
+        "url": "http://arxiv.org/abs/2510.13735v1",
+        "published_date": "2025-10-15T16:41:54+00:00",
+        "updated_date": "2025-10-15T16:41:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhenxuan Zhang",
+            "Peiyuan Jing",
+            "Zi Wang",
+            "Ula Briski",
+            "Coraline Beitone",
+            "Yue Yang",
+            "Yinzhe Wu",
+            "Fanwen Wang",
+            "Liutao Yang",
+            "Jiahao Huang",
+            "Zhifan Gao",
+            "Zhaolin Chen",
+            "Kh Tohidul Islam",
+            "Guang Yang",
+            "Peter J. Lally"
+        ],
+        "tldr": "This paper introduces a cyclic self-supervised diffusion framework (CSS-Diff) to synthesize high-field MRI images from low-field MRI data, improving anatomical fidelity and image quality through cycle consistency, slice-wise gap perception, and local structure correction.",
+        "tldr_zh": "本文介绍了一种循环自监督扩散框架 (CSS-Diff)，用于从低场 MRI 数据合成高场 MRI 图像，通过循环一致性、切片间隙感知和局部结构校正来提高解剖学保真度和图像质量。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Generating healthy counterfactuals with denoising diffusion bridge models",
+        "summary": "Generating healthy counterfactuals from pathological images holds significant\npromise in medical imaging, e.g., in anomaly detection or for application of\nanalysis tools that are designed for healthy scans. These counterfactuals\nshould represent what a patient's scan would plausibly look like in the absence\nof pathology, preserving individual anatomical characteristics while modifying\nonly the pathological regions. Denoising diffusion probabilistic models (DDPMs)\nhave become popular methods for generating healthy counterfactuals of pathology\ndata. Typically, this involves training on solely healthy data with the\nassumption that a partial denoising process will be unable to model disease\nregions and will instead reconstruct a closely matched healthy counterpart.\nMore recent methods have incorporated synthetic pathological images to better\nguide the diffusion process. However, it remains challenging to guide the\ngenerative process in a way that effectively balances the removal of anomalies\nwith the retention of subject-specific features. To solve this problem, we\npropose a novel application of denoising diffusion bridge models (DDBMs) -\nwhich, unlike DDPMs, condition the diffusion process not only on the initial\npoint (i.e., the healthy image), but also on the final point (i.e., a\ncorresponding synthetically generated pathological image). Treating the\npathological image as a structurally informative prior enables us to generate\ncounterfactuals that closely match the patient's anatomy while selectively\nremoving pathology. The results show that our DDBM outperforms previously\nproposed diffusion models and fully supervised approaches at segmentation and\nanomaly detection tasks.",
+        "url": "http://arxiv.org/abs/2510.13684v1",
+        "published_date": "2025-10-15T15:40:57+00:00",
+        "updated_date": "2025-10-15T15:40:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ana Lawry Aguila",
+            "Peirong Liu",
+            "Marina Crespo Aguirre",
+            "Juan Eugenio Iglesias"
+        ],
+        "tldr": "The paper introduces a novel application of denoising diffusion bridge models (DDBMs) for generating healthy counterfactuals from pathological medical images, demonstrating improved performance in anomaly detection and segmentation compared to existing methods.",
+        "tldr_zh": "该论文提出了一种新颖的去噪扩散桥模型（DDBM）应用，用于从病理医学图像生成健康的对抗样本，并在异常检测和分割方面表现出优于现有方法的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CanvasMAR: Improving Masked Autoregressive Video Generation With Canvas",
+        "summary": "Masked autoregressive models (MAR) have recently emerged as a powerful\nparadigm for image and video generation, combining the flexibility of masked\nmodeling with the potential of continuous tokenizer. However, video MAR models\nsuffer from two major limitations: the slow-start problem, caused by the lack\nof a structured global prior at early sampling stages, and error accumulation\nacross the autoregression in both spatial and temporal dimensions. In this\nwork, we propose CanvasMAR, a novel video MAR model that mitigates these issues\nby introducing a canvas mechanism--a blurred, global prediction of the next\nframe, used as the starting point for masked generation. The canvas provides\nglobal structure early in sampling, enabling faster and more coherent frame\nsynthesis. Furthermore, we introduce compositional classifier-free guidance\nthat jointly enlarges spatial (canvas) and temporal conditioning, and employ\nnoise-based canvas augmentation to enhance robustness. Experiments on the BAIR\nand Kinetics-600 benchmarks demonstrate that CanvasMAR produces high-quality\nvideos with fewer autoregressive steps. Our approach achieves remarkable\nperformance among autoregressive models on Kinetics-600 dataset and rivals\ndiffusion-based methods.",
+        "url": "http://arxiv.org/abs/2510.13669v1",
+        "published_date": "2025-10-15T15:29:09+00:00",
+        "updated_date": "2025-10-15T15:29:09+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Zian Li",
+            "Muhan Zhang"
+        ],
+        "tldr": "CanvasMAR improves masked autoregressive video generation by introducing a canvas mechanism (blurred global prediction) to address the slow-start and error accumulation problems, achieving state-of-the-art results on video generation benchmarks.",
+        "tldr_zh": "CanvasMAR通过引入画布机制（模糊的全局预测）来改进掩码自回归视频生成，从而解决了慢启动和误差累积问题，并在视频生成基准测试中取得了最先进的结果。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "End-to-End Multi-Modal Diffusion Mamba",
+        "summary": "Current end-to-end multi-modal models utilize different encoders and decoders\nto process input and output information. This separation hinders the joint\nrepresentation learning of various modalities. To unify multi-modal processing,\nwe propose a novel architecture called MDM (Multi-modal Diffusion Mamba). MDM\nutilizes a Mamba-based multi-step selection diffusion model to progressively\ngenerate and refine modality-specific information through a unified variational\nautoencoder for both encoding and decoding. This innovative approach allows MDM\nto achieve superior performance when processing high-dimensional data,\nparticularly in generating high-resolution images and extended text sequences\nsimultaneously. Our evaluations in areas such as image generation, image\ncaptioning, visual question answering, text comprehension, and reasoning tasks\ndemonstrate that MDM significantly outperforms existing end-to-end models\n(MonoFormer, LlamaGen, and Chameleon etc.) and competes effectively with SOTA\nmodels like GPT-4V, Gemini Pro, and Mistral. Our results validate MDM's\neffectiveness in unifying multi-modal processes while maintaining computational\nefficiency, establishing a new direction for end-to-end multi-modal\narchitectures.",
+        "url": "http://arxiv.org/abs/2510.13253v1",
+        "published_date": "2025-10-15T08:03:50+00:00",
+        "updated_date": "2025-10-15T08:03:50+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chunhao Lu",
+            "Qiang Lu",
+            "Meichen Dong",
+            "Jake Luo"
+        ],
+        "tldr": "The paper introduces Multi-modal Diffusion Mamba (MDM), a novel end-to-end architecture for multi-modal processing that unifies encoding and decoding using a Mamba-based diffusion model, achieving superior performance in various tasks.",
+        "tldr_zh": "该论文介绍了多模态扩散Mamba (MDM)，一种新颖的端到端多模态处理架构，它使用基于Mamba的扩散模型统一编码和解码，在各种任务中实现了卓越的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UniCalli: A Unified Diffusion Framework for Column-Level Generation and Recognition of Chinese Calligraphy",
+        "summary": "Computational replication of Chinese calligraphy remains challenging.\nExisting methods falter, either creating high-quality isolated characters while\nignoring page-level aesthetics like ligatures and spacing, or attempting page\nsynthesis at the expense of calligraphic correctness. We introduce\n\\textbf{UniCalli}, a unified diffusion framework for column-level recognition\nand generation. Training both tasks jointly is deliberate: recognition\nconstrains the generator to preserve character structure, while generation\nprovides style and layout priors. This synergy fosters concept-level\nabstractions that improve both tasks, especially in limited-data regimes. We\ncurated a dataset of over 8,000 digitized pieces, with ~4,000 densely\nannotated. UniCalli employs asymmetric noising and a rasterized box map for\nspatial priors, trained on a mix of synthetic, labeled, and unlabeled data. The\nmodel achieves state-of-the-art generative quality with superior ligature\ncontinuity and layout fidelity, alongside stronger recognition. The framework\nsuccessfully extends to other ancient scripts, including Oracle bone\ninscriptions and Egyptian hieroglyphs. Code and data can be viewed in\n\\href{https://github.com/EnVision-Research/UniCalli}{this URL}.",
+        "url": "http://arxiv.org/abs/2510.13745v1",
+        "published_date": "2025-10-15T16:52:07+00:00",
+        "updated_date": "2025-10-15T16:52:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianshuo Xu",
+            "Kai Wang",
+            "Zhifei Chen",
+            "Leyi Wu",
+            "Tianshui Wen",
+            "Fei Chao",
+            "Ying-Cong Chen"
+        ],
+        "tldr": "The paper introduces UniCalli, a unified diffusion framework for column-level generation and recognition of Chinese calligraphy, achieving state-of-the-art results by jointly training generation and recognition with a novel dataset and techniques.",
+        "tldr_zh": "该论文介绍了UniCalli，一个统一的扩散框架，用于中文书法的列级别生成和识别。通过联合训练生成和识别任务，并结合新的数据集和技术，实现了最先进的结果。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Group-Wise Optimization for Self-Extensible Codebooks in Vector Quantized Models",
+        "summary": "Vector Quantized Variational Autoencoders (VQ-VAEs) leverage self-supervised\nlearning through reconstruction tasks to represent continuous vectors using the\nclosest vectors in a codebook. However, issues such as codebook collapse\npersist in the VQ model. To address these issues, existing approaches employ\nimplicit static codebooks or jointly optimize the entire codebook, but these\nmethods constrain the codebook's learning capability, leading to reduced\nreconstruction quality. In this paper, we propose Group-VQ, which performs\ngroup-wise optimization on the codebook. Each group is optimized independently,\nwith joint optimization performed within groups. This approach improves the\ntrade-off between codebook utilization and reconstruction performance.\nAdditionally, we introduce a training-free codebook resampling method, allowing\npost-training adjustment of the codebook size. In image reconstruction\nexperiments under various settings, Group-VQ demonstrates improved performance\non reconstruction metrics. And the post-training codebook sampling method\nachieves the desired flexibility in adjusting the codebook size.",
+        "url": "http://arxiv.org/abs/2510.13331v1",
+        "published_date": "2025-10-15T09:14:22+00:00",
+        "updated_date": "2025-10-15T09:14:22+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hong-Kai Zheng",
+            "Piji Li"
+        ],
+        "tldr": "The paper introduces Group-VQ, a group-wise optimization method for VQ-VAEs to address codebook collapse and improve reconstruction quality, along with a training-free codebook resampling method for adjusting codebook size.",
+        "tldr_zh": "该论文介绍了 Group-VQ，一种针对 VQ-VAE 的分组优化方法，旨在解决码本崩溃并提高重建质量，以及一种用于调整码本大小的无训练码本重采样方法。",
+        "relevance_score": 4,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 5
+    }
+]

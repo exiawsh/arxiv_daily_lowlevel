@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 12, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - October 16, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 12, 2025</p>
+            <p>October 16, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,35 +215,37 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Are Video Models Emerging as Zero-Shot Learners and Reasoners in Medical Imaging?</h2>
+            <h2 class="paper-title">Universal Image Restoration Pre-training via Masked Degradation Classification</h2>
             
-            <p class="paper-summary">Recent advances in large generative models have shown that simple
-autoregressive formulations, when scaled appropriately, can exhibit strong
-zero-shot generalization across domains. Motivated by this trend, we
-investigate whether autoregressive video modeling principles can be directly
-applied to medical imaging tasks, despite the model never being trained on
-medical data. Specifically, we evaluate a large vision model (LVM) in a
-zero-shot setting across four representative tasks: organ segmentation,
-denoising, super-resolution, and motion prediction. Remarkably, even without
-domain-specific fine-tuning, the LVM can delineate anatomical structures in CT
-scans and achieve competitive performance on segmentation, denoising, and
-super-resolution. Most notably, in radiotherapy motion prediction, the model
-forecasts future 3D CT phases directly from prior phases of a 4D CT scan,
-producing anatomically consistent predictions that capture patient-specific
-respiratory dynamics with realistic temporal coherence. We evaluate the LVM on
-4D CT data from 122 patients, totaling over 1,820 3D CT volumes. Despite no
-prior exposure to medical data, the model achieves strong performance across
-all tasks and surpasses specialized DVF-based and generative baselines in
-motion prediction, achieving state-of-the-art spatial accuracy. These findings
-reveal the emergence of zero-shot capabilities in medical video modeling and
-highlight the potential of general-purpose video models to serve as unified
-learners and reasoners laying the groundwork for future medical foundation
-models built on video models.</p>
+            <p class="paper-summary">This study introduces a Masked Degradation Classification Pre-Training method
+(MaskDCPT), designed to facilitate the classification of degradation types in
+input images, leading to comprehensive image restoration pre-training. Unlike
+conventional pre-training methods, MaskDCPT uses the degradation type of the
+image as an extremely weak supervision, while simultaneously leveraging the
+image reconstruction to enhance performance and robustness. MaskDCPT includes
+an encoder and two decoders: the encoder extracts features from the masked
+low-quality input image. The classification decoder uses these features to
+identify the degradation type, whereas the reconstruction decoder aims to
+reconstruct a corresponding high-quality image. This design allows the
+pre-training to benefit from both masked image modeling and contrastive
+learning, resulting in a generalized representation suited for restoration
+tasks. Benefit from the straightforward yet potent MaskDCPT, the pre-trained
+encoder can be used to address universal image restoration and achieve
+outstanding performance. Implementing MaskDCPT significantly improves
+performance for both convolution neural networks (CNNs) and Transformers, with
+a minimum increase in PSNR of 3.77 dB in the 5D all-in-one restoration task and
+a 34.8% reduction in PIQE compared to baseline in real-world degradation
+scenarios. It also emergences strong generalization to previously unseen
+degradation types and levels. In addition, we curate and release the UIR-2.5M
+dataset, which includes 2.5 million paired restoration samples across 19
+degradation types and over 200 degradation levels, incorporating both synthetic
+and real-world data. The dataset, source code, and models are available at
+https://github.com/MILab-PKU/MaskDCPT.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores the zero-shot capabilities of a large vision model (LVM) on medical imaging tasks, demonstrating surprisingly good performance in organ segmentation, denoising, super-resolution, and especially motion prediction without any medical data training.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MaskDCPT, a pre-training method for universal image restoration that leverages masked degradation classification and image reconstruction, and releases a large-scale UIR-2.5M dataset.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文探索了大型视觉模型（LVM）在医学影像任务中的零样本能力，展示了在器官分割、去噪、超分辨率，尤其是运动预测方面出色的性能，而无需任何医学数据训练。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为MaskDCPT的通用图像修复预训练方法，该方法利用掩码退化分类和图像重建，并发布了一个大规模的UIR-2.5M数据集。</p>
             
 
             
@@ -253,16 +255,16 @@ models built on video models.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -277,8 +279,8 @@ models built on video models.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -307,18 +309,18 @@ models built on video models.</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.10254v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.13282v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yuxiang Lai, Jike Zhong, Ming Li, Yuheng Li, Xiaofeng Yang</p>
+            <p class="paper-authors">Authors: JiaKui Hu, Zhengjian Yao, Lujia Jin, Yinghao Chen, Yanye Lu</p>
             
         </motion.div>
         
@@ -330,29 +332,37 @@ models built on video models.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DeepFusionNet: Autoencoder-Based Low-Light Image Enhancement and Super-Resolution</h2>
+            <h2 class="paper-title">Cyclic Self-Supervised Diffusion for Ultra Low-field to High-field MRI Synthesis</h2>
             
-            <p class="paper-summary">Computer vision and image processing applications suffer from dark and
-low-light images, particularly during real-time image transmission. Currently,
-low light and dark images are converted to bright and colored forms using
-autoencoders; however, these methods often achieve low SSIM and PSNR scores and
-require high computational power due to their large number of parameters. To
-address these challenges, the DeepFusionNet architecture has been developed.
-According to the results obtained with the LOL-v1 dataset, DeepFusionNet
-achieved an SSIM of 92.8% and a PSNR score of 26.30, while containing only
-approximately 2.5 million parameters. On the other hand, conversion of blurry
-and low-resolution images into high-resolution and blur-free images has gained
-importance in image processing applications. Unlike GAN-based super-resolution
-methods, an autoencoder-based super resolution model has been developed that
-contains approximately 100 thousand parameters and uses the DeepFusionNet
-architecture. According to the results of the tests, the DeepFusionNet based
-super-resolution method achieved a PSNR of 25.30 and a SSIM score of 80.7
-percent according to the validation set.</p>
+            <p class="paper-summary">Synthesizing high-quality images from low-field MRI holds significant
+potential. Low-field MRI is cheaper, more accessible, and safer, but suffers
+from low resolution and poor signal-to-noise ratio. This synthesis process can
+reduce reliance on costly acquisitions and expand data availability. However,
+synthesizing high-field MRI still suffers from a clinical fidelity gap. There
+is a need to preserve anatomical fidelity, enhance fine-grained structural
+details, and bridge domain gaps in image contrast. To address these issues, we
+propose a \emph{cyclic self-supervised diffusion (CSS-Diff)} framework for
+high-field MRI synthesis from real low-field MRI data. Our core idea is to
+reformulate diffusion-based synthesis under a cycle-consistent constraint. It
+enforces anatomical preservation throughout the generative process rather than
+just relying on paired pixel-level supervision. The CSS-Diff framework further
+incorporates two novel processes. The slice-wise gap perception network aligns
+inter-slice inconsistencies via contrastive learning. The local structure
+correction network enhances local feature restoration through
+self-reconstruction of masked and perturbed patches. Extensive experiments on
+cross-field synthesis tasks demonstrate the effectiveness of our method,
+achieving state-of-the-art performance (e.g., 31.80 $\pm$ 2.70 dB in PSNR,
+0.943 $\pm$ 0.102 in SSIM, and 0.0864 $\pm$ 0.0689 in LPIPS). Beyond pixel-wise
+fidelity, our method also preserves fine-grained anatomical structures compared
+with the original low-field MRI (e.g., left cerebral white matter error drops
+from 12.1$\%$ to 2.1$\%$, cortex from 4.2$\%$ to 3.7$\%$). To conclude, our
+CSS-Diff can synthesize images that are both quantitatively reliable and
+anatomically consistent.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DeepFusionNet, an autoencoder-based architecture for low-light image enhancement and super-resolution, claiming competitive performance with fewer parameters than existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a cyclic self-supervised diffusion framework (CSS-Diff) to synthesize high-field MRI images from low-field MRI data, improving anatomical fidelity and image quality through cycle consistency, slice-wise gap perception, and local structure correction.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DeepFusionNet，一种基于自动编码器的低光图像增强和超分辨率架构，声称与现有方法相比，性能具有竞争力且参数更少。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种循环自监督扩散框架 (CSS-Diff)，用于从低场 MRI 数据合成高场 MRI 图像，通过循环一致性、切片间隙感知和局部结构校正来提高解剖学保真度和图像质量。</p>
             
 
             
@@ -362,8 +372,8 @@ percent according to the validation set.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -378,16 +388,16 @@ percent according to the validation set.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -423,11 +433,11 @@ percent according to the validation set.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.10122v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.13735v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Halil Hüseyin Çalışkan, Talha Koruk</p>
+            <p class="paper-authors">Authors: Zhenxuan Zhang, Peiyuan Jing, Zi Wang, Ula Briski, Coraline Beitone, Yue Yang, Yinzhe Wu, Fanwen Wang, Liutao Yang, Jiahao Huang, Zhifan Gao, Zhaolin Chen, Kh Tohidul Islam, Guang Yang, Peter J. Lally</p>
             
         </motion.div>
         
@@ -439,29 +449,36 @@ percent according to the validation set.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Enabling High-Quality In-the-Wild Imaging from Severely Aberrated Metalens Bursts</h2>
+            <h2 class="paper-title">Generating healthy counterfactuals with denoising diffusion bridge models</h2>
             
-            <p class="paper-summary">We tackle the challenge of robust, in-the-wild imaging using ultra-thin
-nanophotonic metalens cameras. Meta-lenses, composed of planar arrays of
-nanoscale scatterers, promise dramatic reductions in size and weight compared
-to conventional refractive optics. However, severe chromatic aberration,
-pronounced light scattering, narrow spectral bandwidth, and low light
-efficiency continue to limit their practical adoption. In this work, we present
-an end-to-end solution for in-the-wild imaging that pairs a metalens several
-times thinner than conventional optics with a bespoke multi-image restoration
-framework optimized for practical metalens cameras. Our method centers on a
-lightweight convolutional network paired with a memory-efficient burst fusion
-algorithm that adaptively corrects noise, saturation clipping, and lens-induced
-distortions across rapid sequences of extremely degraded metalens captures.
-Extensive experiments on diverse, real-world handheld captures demonstrate that
-our approach consistently outperforms existing burst-mode and single-image
-restoration techniques.These results point toward a practical route for
-deploying metalens-based cameras in everyday imaging applications.</p>
+            <p class="paper-summary">Generating healthy counterfactuals from pathological images holds significant
+promise in medical imaging, e.g., in anomaly detection or for application of
+analysis tools that are designed for healthy scans. These counterfactuals
+should represent what a patient's scan would plausibly look like in the absence
+of pathology, preserving individual anatomical characteristics while modifying
+only the pathological regions. Denoising diffusion probabilistic models (DDPMs)
+have become popular methods for generating healthy counterfactuals of pathology
+data. Typically, this involves training on solely healthy data with the
+assumption that a partial denoising process will be unable to model disease
+regions and will instead reconstruct a closely matched healthy counterpart.
+More recent methods have incorporated synthetic pathological images to better
+guide the diffusion process. However, it remains challenging to guide the
+generative process in a way that effectively balances the removal of anomalies
+with the retention of subject-specific features. To solve this problem, we
+propose a novel application of denoising diffusion bridge models (DDBMs) -
+which, unlike DDPMs, condition the diffusion process not only on the initial
+point (i.e., the healthy image), but also on the final point (i.e., a
+corresponding synthetically generated pathological image). Treating the
+pathological image as a structurally informative prior enables us to generate
+counterfactuals that closely match the patient's anatomy while selectively
+removing pathology. The results show that our DDBM outperforms previously
+proposed diffusion models and fully supervised approaches at segmentation and
+anomaly detection tasks.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents an end-to-end solution for in-the-wild imaging using metalenses, employing a lightweight convolutional network and burst fusion algorithm to overcome challenges like chromatic aberration and low light efficiency. It shows improved performance over existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a novel application of denoising diffusion bridge models (DDBMs) for generating healthy counterfactuals from pathological medical images, demonstrating improved performance in anomaly detection and segmentation compared to existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于金属透镜的端到端解决方案，用于现实场景的成像，该方案采用轻量级卷积网络和突发融合算法，克服了色差和低光效等挑战。实验表明，该方法优于现有的图像修复方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种新颖的去噪扩散桥模型（DDBM）应用，用于从病理医学图像生成健康的对抗样本，并在异常检测和分割方面表现出优于现有方法的性能。</p>
             
 
             
@@ -471,16 +488,16 @@ deploying metalens-based cameras in everyday imaging applications.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -532,11 +549,11 @@ deploying metalens-based cameras in everyday imaging applications.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.10083v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.13684v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Debabrata Mandal, Zhihan Peng, Yujie Wang, Praneeth Chakravarthula</p>
+            <p class="paper-authors">Authors: Ana Lawry Aguila, Peirong Liu, Marina Crespo Aguirre, Juan Eugenio Iglesias</p>
             
         </motion.div>
         
@@ -548,35 +565,30 @@ deploying metalens-based cameras in everyday imaging applications.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">HeadsUp! High-Fidelity Portrait Image Super-Resolution</h2>
+            <h2 class="paper-title">CanvasMAR: Improving Masked Autoregressive Video Generation With Canvas</h2>
             
-            <p class="paper-summary">Portrait pictures, which typically feature both human subjects and natural
-backgrounds, are one of the most prevalent forms of photography on social
-media. Existing image super-resolution (ISR) techniques generally focus either
-on generic real-world images or strictly aligned facial images (i.e., face
-super-resolution). In practice, separate models are blended to handle portrait
-photos: the face specialist model handles the face region, and the general
-model processes the rest. However, these blending approaches inevitably
-introduce blending or boundary artifacts around the facial regions due to
-different model training recipes, while human perception is particularly
-sensitive to facial fidelity. To overcome these limitations, we study the
-portrait image supersolution (PortraitISR) problem, and propose HeadsUp, a
-single-step diffusion model that is capable of seamlessly restoring and
-upscaling portrait images in an end-to-end manner. Specifically, we build our
-model on top of a single-step diffusion model and develop a face supervision
-mechanism to guide the model in focusing on the facial region. We then
-integrate a reference-based mechanism to help with identity restoration,
-reducing face ambiguity in low-quality face restoration. Additionally, we have
-built a high-quality 4K portrait image ISR dataset dubbed PortraitSR-4K, to
-support model training and benchmarking for portrait images. Extensive
-experiments show that HeadsUp achieves state-of-the-art performance on the
-PortraitISR task while maintaining comparable or higher performance on both
-general image and aligned face datasets.</p>
+            <p class="paper-summary">Masked autoregressive models (MAR) have recently emerged as a powerful
+paradigm for image and video generation, combining the flexibility of masked
+modeling with the potential of continuous tokenizer. However, video MAR models
+suffer from two major limitations: the slow-start problem, caused by the lack
+of a structured global prior at early sampling stages, and error accumulation
+across the autoregression in both spatial and temporal dimensions. In this
+work, we propose CanvasMAR, a novel video MAR model that mitigates these issues
+by introducing a canvas mechanism--a blurred, global prediction of the next
+frame, used as the starting point for masked generation. The canvas provides
+global structure early in sampling, enabling faster and more coherent frame
+synthesis. Furthermore, we introduce compositional classifier-free guidance
+that jointly enlarges spatial (canvas) and temporal conditioning, and employ
+noise-based canvas augmentation to enhance robustness. Experiments on the BAIR
+and Kinetics-600 benchmarks demonstrate that CanvasMAR produces high-quality
+videos with fewer autoregressive steps. Our approach achieves remarkable
+performance among autoregressive models on Kinetics-600 dataset and rivals
+diffusion-based methods.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces HeadsUp, a single-step diffusion model for portrait image super-resolution, addressing blending artifacts common in existing methods by using face supervision and reference-based mechanisms, and it also includes a new 4K portrait image dataset.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: CanvasMAR improves masked autoregressive video generation by introducing a canvas mechanism (blurred global prediction) to address the slow-start and error accumulation problems, achieving state-of-the-art results on video generation benchmarks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为HeadsUp的单步扩散模型，用于人像图像超分辨率，通过使用面部监督和基于参考的机制解决了现有方法中常见的混合伪影，并包含一个新的4K人像图像数据集。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: CanvasMAR通过引入画布机制（模糊的全局预测）来改进掩码自回归视频生成，从而解决了慢启动和误差累积问题，并在视频生成基准测试中取得了最先进的结果。</p>
             
 
             
@@ -586,8 +598,8 @@ general image and aligned face datasets.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -647,11 +659,11 @@ general image and aligned face datasets.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.09924v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.13669v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Renjie Li, Zihao Zhu, Xiaoyu Wang, Zhengzhong Tu</p>
+            <p class="paper-authors">Authors: Zian Li, Muhan Zhang</p>
             
         </motion.div>
         
@@ -663,30 +675,30 @@ general image and aligned face datasets.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Denoising Diffusion as a New Framework for Underwater Images</h2>
+            <h2 class="paper-title">End-to-End Multi-Modal Diffusion Mamba</h2>
             
-            <p class="paper-summary">Underwater images play a crucial role in ocean research and marine
-environmental monitoring since they provide quality information about the
-ecosystem. However, the complex and remote nature of the environment results in
-poor image quality with issues such as low visibility, blurry textures, color
-distortion, and noise. In recent years, research in image enhancement has
-proven to be effective but also presents its own limitations, like poor
-generalization and heavy reliance on clean datasets. One of the challenges
-herein is the lack of diversity and the low quality of images included in these
-datasets. Also, most existing datasets consist only of monocular images, a fact
-that limits the representation of different lighting conditions and angles. In
-this paper, we propose a new plan of action to overcome these limitations. On
-one hand, we call for expanding the datasets using a denoising diffusion model
-to include a variety of image types such as stereo, wide-angled, macro, and
-close-up images. On the other hand, we recommend enhancing the images using
-Controlnet to evaluate and increase the quality of the corresponding datasets,
-and hence improve the study of the marine ecosystem.
-  Tags - Underwater Images, Denoising Diffusion, Marine ecosystem, Controlnet</p>
+            <p class="paper-summary">Current end-to-end multi-modal models utilize different encoders and decoders
+to process input and output information. This separation hinders the joint
+representation learning of various modalities. To unify multi-modal processing,
+we propose a novel architecture called MDM (Multi-modal Diffusion Mamba). MDM
+utilizes a Mamba-based multi-step selection diffusion model to progressively
+generate and refine modality-specific information through a unified variational
+autoencoder for both encoding and decoding. This innovative approach allows MDM
+to achieve superior performance when processing high-dimensional data,
+particularly in generating high-resolution images and extended text sequences
+simultaneously. Our evaluations in areas such as image generation, image
+captioning, visual question answering, text comprehension, and reasoning tasks
+demonstrate that MDM significantly outperforms existing end-to-end models
+(MonoFormer, LlamaGen, and Chameleon etc.) and competes effectively with SOTA
+models like GPT-4V, Gemini Pro, and Mistral. Our results validate MDM's
+effectiveness in unifying multi-modal processes while maintaining computational
+efficiency, establishing a new direction for end-to-end multi-modal
+architectures.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes using denoising diffusion models and ControlNet to expand and enhance underwater image datasets, aiming to improve marine ecosystem studies.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Multi-modal Diffusion Mamba (MDM), a novel end-to-end architecture for multi-modal processing that unifies encoding and decoding using a Mamba-based diffusion model, achieving superior performance in various tasks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出使用去噪扩散模型和ControlNet来扩展和增强水下图像数据集，旨在改善海洋生态系统的研究。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了多模态扩散Mamba (MDM)，一种新颖的端到端多模态处理架构，它使用基于Mamba的扩散模型统一编码和解码，在各种任务中实现了卓越的性能。</p>
             
 
             
@@ -704,8 +716,8 @@ and hence improve the study of the marine ecosystem.
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -714,6 +726,116 @@ and hence improve the study of the marine ecosystem.
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.13253v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Chunhao Lu, Qiang Lu, Meichen Dong, Jake Luo</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">UniCalli: A Unified Diffusion Framework for Column-Level Generation and Recognition of Chinese Calligraphy</h2>
+            
+            <p class="paper-summary">Computational replication of Chinese calligraphy remains challenging.
+Existing methods falter, either creating high-quality isolated characters while
+ignoring page-level aesthetics like ligatures and spacing, or attempting page
+synthesis at the expense of calligraphic correctness. We introduce
+\textbf{UniCalli}, a unified diffusion framework for column-level recognition
+and generation. Training both tasks jointly is deliberate: recognition
+constrains the generator to preserve character structure, while generation
+provides style and layout priors. This synergy fosters concept-level
+abstractions that improve both tasks, especially in limited-data regimes. We
+curated a dataset of over 8,000 digitized pieces, with ~4,000 densely
+annotated. UniCalli employs asymmetric noising and a rasterized box map for
+spatial priors, trained on a mix of synthetic, labeled, and unlabeled data. The
+model achieves state-of-the-art generative quality with superior ligature
+continuity and layout fidelity, alongside stronger recognition. The framework
+successfully extends to other ancient scripts, including Oracle bone
+inscriptions and Egyptian hieroglyphs. Code and data can be viewed in
+\href{https://github.com/EnVision-Research/UniCalli}{this URL}.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniCalli, a unified diffusion framework for column-level generation and recognition of Chinese calligraphy, achieving state-of-the-art results by jointly training generation and recognition with a novel dataset and techniques.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了UniCalli，一个统一的扩散框架，用于中文书法的列级别生成和识别。通过联合训练生成和识别任务，并结合新的数据集和技术，实现了最先进的结果。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -757,11 +879,11 @@ and hence improve the study of the marine ecosystem.
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.09934v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.13745v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Nilesh Jain, Elie Alhajjar</p>
+            <p class="paper-authors">Authors: Tianshuo Xu, Kai Wang, Zhifei Chen, Leyi Wu, Tianshui Wen, Fei Chao, Ying-Cong Chen</p>
             
         </motion.div>
         
@@ -769,30 +891,32 @@ and hence improve the study of the marine ecosystem.
             initial="{ opacity: 0, y: 50, scale: 0.9 }"
             whileInView="{ opacity: 1, y: 0, scale: 1 }"
             viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Cross-Sensor Touch Generation</h2>
+            <h2 class="paper-title">Group-Wise Optimization for Self-Extensible Codebooks in Vector Quantized Models</h2>
             
-            <p class="paper-summary">Today's visuo-tactile sensors come in many shapes and sizes, making it
-challenging to develop general-purpose tactile representations. This is because
-most models are tied to a specific sensor design. To address this challenge, we
-propose two approaches to cross-sensor image generation. The first is an
-end-to-end method that leverages paired data (Touch2Touch). The second method
-builds an intermediate depth representation and does not require paired data
-(T2D2: Touch-to-Depth-to-Touch). Both methods enable the use of sensor-specific
-models across multiple sensors via the cross-sensor touch generation process.
-Together, these models offer flexible solutions for sensor translation,
-depending on data availability and application needs. We demonstrate their
-effectiveness on downstream tasks such as in-hand pose estimation and behavior
-cloning, successfully transferring models trained on one sensor to another.
-Project page: https://samantabelen.github.io/cross_sensor_touch_generation.</p>
+            <p class="paper-summary">Vector Quantized Variational Autoencoders (VQ-VAEs) leverage self-supervised
+learning through reconstruction tasks to represent continuous vectors using the
+closest vectors in a codebook. However, issues such as codebook collapse
+persist in the VQ model. To address these issues, existing approaches employ
+implicit static codebooks or jointly optimize the entire codebook, but these
+methods constrain the codebook's learning capability, leading to reduced
+reconstruction quality. In this paper, we propose Group-VQ, which performs
+group-wise optimization on the codebook. Each group is optimized independently,
+with joint optimization performed within groups. This approach improves the
+trade-off between codebook utilization and reconstruction performance.
+Additionally, we introduce a training-free codebook resampling method, allowing
+post-training adjustment of the codebook size. In image reconstruction
+experiments under various settings, Group-VQ demonstrates improved performance
+on reconstruction metrics. And the post-training codebook sampling method
+achieves the desired flexibility in adjusting the codebook size.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces two cross-sensor touch image generation methods (Touch2Touch and T2D2) to enable the transfer of sensor-specific models across different tactile sensors, demonstrated on in-hand pose estimation and behavior cloning.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Group-VQ, a group-wise optimization method for VQ-VAEs to address codebook collapse and improve reconstruction quality, along with a training-free codebook resampling method for adjusting codebook size.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了两种跨传感器触觉图像生成方法 (Touch2Touch 和 T2D2)，旨在实现传感器特定模型在不同触觉传感器之间的迁移，并在手部姿势估计和行为克隆方面进行了演示。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 Group-VQ，一种针对 VQ-VAE 的分组优化方法，旨在解决码本崩溃并提高重建质量，以及一种用于调整码本大小的无训练码本重采样方法。</p>
             
 
             
@@ -818,8 +942,8 @@ Project page: https://samantabelen.github.io/cross_sensor_touch_generation.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -863,18 +987,18 @@ Project page: https://samantabelen.github.io/cross_sensor_touch_generation.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.09817v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.13331v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Samanta Rodriguez, Yiming Dou, Miquel Oller, Andrew Owens, Nima Fazeli</p>
+            <p class="paper-authors">Authors: Hong-Kai Zheng, Piji Li</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-16 03:34:50 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-16 03:41:23 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
