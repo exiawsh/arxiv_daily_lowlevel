@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 16, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - October 17, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 16, 2025</p>
+            <p>October 17, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,37 +215,35 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Universal Image Restoration Pre-training via Masked Degradation Classification</h2>
+            <h2 class="paper-title">WithAnyone: Towards Controllable and ID Consistent Image Generation</h2>
             
-            <p class="paper-summary">This study introduces a Masked Degradation Classification Pre-Training method
-(MaskDCPT), designed to facilitate the classification of degradation types in
-input images, leading to comprehensive image restoration pre-training. Unlike
-conventional pre-training methods, MaskDCPT uses the degradation type of the
-image as an extremely weak supervision, while simultaneously leveraging the
-image reconstruction to enhance performance and robustness. MaskDCPT includes
-an encoder and two decoders: the encoder extracts features from the masked
-low-quality input image. The classification decoder uses these features to
-identify the degradation type, whereas the reconstruction decoder aims to
-reconstruct a corresponding high-quality image. This design allows the
-pre-training to benefit from both masked image modeling and contrastive
-learning, resulting in a generalized representation suited for restoration
-tasks. Benefit from the straightforward yet potent MaskDCPT, the pre-trained
-encoder can be used to address universal image restoration and achieve
-outstanding performance. Implementing MaskDCPT significantly improves
-performance for both convolution neural networks (CNNs) and Transformers, with
-a minimum increase in PSNR of 3.77 dB in the 5D all-in-one restoration task and
-a 34.8% reduction in PIQE compared to baseline in real-world degradation
-scenarios. It also emergences strong generalization to previously unseen
-degradation types and levels. In addition, we curate and release the UIR-2.5M
-dataset, which includes 2.5 million paired restoration samples across 19
-degradation types and over 200 degradation levels, incorporating both synthetic
-and real-world data. The dataset, source code, and models are available at
-https://github.com/MILab-PKU/MaskDCPT.</p>
+            <p class="paper-summary">Identity-consistent generation has become an important focus in text-to-image
+research, with recent models achieving notable success in producing images
+aligned with a reference identity. Yet, the scarcity of large-scale paired
+datasets containing multiple images of the same individual forces most
+approaches to adopt reconstruction-based training. This reliance often leads to
+a failure mode we term copy-paste, where the model directly replicates the
+reference face rather than preserving identity across natural variations in
+pose, expression, or lighting. Such over-similarity undermines controllability
+and limits the expressive power of generation. To address these limitations, we
+(1) construct a large-scale paired dataset MultiID-2M, tailored for
+multi-person scenarios, providing diverse references for each identity; (2)
+introduce a benchmark that quantifies both copy-paste artifacts and the
+trade-off between identity fidelity and variation; and (3) propose a novel
+training paradigm with a contrastive identity loss that leverages paired data
+to balance fidelity with diversity. These contributions culminate in
+WithAnyone, a diffusion-based model that effectively mitigates copy-paste while
+preserving high identity similarity. Extensive qualitative and quantitative
+experiments demonstrate that WithAnyone significantly reduces copy-paste
+artifacts, improves controllability over pose and expression, and maintains
+strong perceptual quality. User studies further validate that our method
+achieves high identity fidelity while enabling expressive controllable
+generation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MaskDCPT, a pre-training method for universal image restoration that leverages masked degradation classification and image reconstruction, and releases a large-scale UIR-2.5M dataset.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces WithAnyone, a diffusion-based model for identity-consistent image generation that addresses the 'copy-paste' problem by using a new paired dataset, benchmark, and contrastive identity loss.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为MaskDCPT的通用图像修复预训练方法，该方法利用掩码退化分类和图像重建，并发布了一个大规模的UIR-2.5M数据集。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了WithAnyone，一个基于扩散模型的身份一致图像生成模型，它通过使用新的配对数据集、基准和对比身份损失来解决“复制粘贴”问题。</p>
             
 
             
@@ -255,16 +253,16 @@ https://github.com/MILab-PKU/MaskDCPT.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -279,8 +277,8 @@ https://github.com/MILab-PKU/MaskDCPT.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -309,18 +307,18 @@ https://github.com/MILab-PKU/MaskDCPT.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.13282v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.14975v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: JiaKui Hu, Zhengjian Yao, Lujia Jin, Yinghao Chen, Yanye Lu</p>
+            <p class="paper-authors">Authors: Hengyuan Xu, Wei Cheng, Peng Xing, Yixiao Fang, Shuhan Wu, Rui Wang, Xianfang Zeng, Daxin Jiang, Gang Yu, Xingjun Ma, Yu-Gang Jiang</p>
             
         </motion.div>
         
@@ -332,37 +330,31 @@ https://github.com/MILab-PKU/MaskDCPT.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Cyclic Self-Supervised Diffusion for Ultra Low-field to High-field MRI Synthesis</h2>
+            <h2 class="paper-title">pi-Flow: Policy-Based Few-Step Generation via Imitation Distillation</h2>
             
-            <p class="paper-summary">Synthesizing high-quality images from low-field MRI holds significant
-potential. Low-field MRI is cheaper, more accessible, and safer, but suffers
-from low resolution and poor signal-to-noise ratio. This synthesis process can
-reduce reliance on costly acquisitions and expand data availability. However,
-synthesizing high-field MRI still suffers from a clinical fidelity gap. There
-is a need to preserve anatomical fidelity, enhance fine-grained structural
-details, and bridge domain gaps in image contrast. To address these issues, we
-propose a \emph{cyclic self-supervised diffusion (CSS-Diff)} framework for
-high-field MRI synthesis from real low-field MRI data. Our core idea is to
-reformulate diffusion-based synthesis under a cycle-consistent constraint. It
-enforces anatomical preservation throughout the generative process rather than
-just relying on paired pixel-level supervision. The CSS-Diff framework further
-incorporates two novel processes. The slice-wise gap perception network aligns
-inter-slice inconsistencies via contrastive learning. The local structure
-correction network enhances local feature restoration through
-self-reconstruction of masked and perturbed patches. Extensive experiments on
-cross-field synthesis tasks demonstrate the effectiveness of our method,
-achieving state-of-the-art performance (e.g., 31.80 $\pm$ 2.70 dB in PSNR,
-0.943 $\pm$ 0.102 in SSIM, and 0.0864 $\pm$ 0.0689 in LPIPS). Beyond pixel-wise
-fidelity, our method also preserves fine-grained anatomical structures compared
-with the original low-field MRI (e.g., left cerebral white matter error drops
-from 12.1$\%$ to 2.1$\%$, cortex from 4.2$\%$ to 3.7$\%$). To conclude, our
-CSS-Diff can synthesize images that are both quantitatively reliable and
-anatomically consistent.</p>
+            <p class="paper-summary">Few-step diffusion or flow-based generative models typically distill a
+velocity-predicting teacher into a student that predicts a shortcut towards
+denoised data. This format mismatch has led to complex distillation procedures
+that often suffer from a quality-diversity trade-off. To address this, we
+propose policy-based flow models ($\pi$-Flow). $\pi$-Flow modifies the output
+layer of a student flow model to predict a network-free policy at one timestep.
+The policy then produces dynamic flow velocities at future substeps with
+negligible overhead, enabling fast and accurate ODE integration on these
+substeps without extra network evaluations. To match the policy's ODE
+trajectory to the teacher's, we introduce a novel imitation distillation
+approach, which matches the policy's velocity to the teacher's along the
+policy's trajectory using a standard $\ell_2$ flow matching loss. By simply
+mimicking the teacher's behavior, $\pi$-Flow enables stable and scalable
+training and avoids the quality-diversity trade-off. On ImageNet 256$^2$, it
+attains a 1-NFE FID of 2.85, outperforming MeanFlow of the same DiT
+architecture. On FLUX.1-12B and Qwen-Image-20B at 4 NFEs, $\pi$-Flow achieves
+substantially better diversity than state-of-the-art few-step methods, while
+maintaining teacher-level quality.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a cyclic self-supervised diffusion framework (CSS-Diff) to synthesize high-field MRI images from low-field MRI data, improving anatomical fidelity and image quality through cycle consistency, slice-wise gap perception, and local structure correction.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces pi-Flow, a policy-based flow model for few-step image generation that uses imitation distillation to avoid quality-diversity trade-offs, achieving state-of-the-art results on ImageNet and large-scale datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种循环自监督扩散框架 (CSS-Diff)，用于从低场 MRI 数据合成高场 MRI 图像，通过循环一致性、切片间隙感知和局部结构校正来提高解剖学保真度和图像质量。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 pi-Flow，一种基于策略的流模型，用于少步图像生成，它使用模仿蒸馏来避免质量-多样性权衡，并在 ImageNet 和大型数据集上取得了最先进的结果。</p>
             
 
             
@@ -372,16 +364,16 @@ anatomically consistent.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -433,11 +425,11 @@ anatomically consistent.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.13735v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.14974v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhenxuan Zhang, Peiyuan Jing, Zi Wang, Ula Briski, Coraline Beitone, Yue Yang, Yinzhe Wu, Fanwen Wang, Liutao Yang, Jiahao Huang, Zhifan Gao, Zhaolin Chen, Kh Tohidul Islam, Guang Yang, Peter J. Lally</p>
+            <p class="paper-authors">Authors: Hansheng Chen, Kai Zhang, Hao Tan, Leonidas Guibas, Gordon Wetzstein, Sai Bi</p>
             
         </motion.div>
         
@@ -449,36 +441,34 @@ anatomically consistent.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Generating healthy counterfactuals with denoising diffusion bridge models</h2>
+            <h2 class="paper-title">ScaleWeaver: Weaving Efficient Controllable T2I Generation with Multi-Scale Reference Attention</h2>
             
-            <p class="paper-summary">Generating healthy counterfactuals from pathological images holds significant
-promise in medical imaging, e.g., in anomaly detection or for application of
-analysis tools that are designed for healthy scans. These counterfactuals
-should represent what a patient's scan would plausibly look like in the absence
-of pathology, preserving individual anatomical characteristics while modifying
-only the pathological regions. Denoising diffusion probabilistic models (DDPMs)
-have become popular methods for generating healthy counterfactuals of pathology
-data. Typically, this involves training on solely healthy data with the
-assumption that a partial denoising process will be unable to model disease
-regions and will instead reconstruct a closely matched healthy counterpart.
-More recent methods have incorporated synthetic pathological images to better
-guide the diffusion process. However, it remains challenging to guide the
-generative process in a way that effectively balances the removal of anomalies
-with the retention of subject-specific features. To solve this problem, we
-propose a novel application of denoising diffusion bridge models (DDBMs) -
-which, unlike DDPMs, condition the diffusion process not only on the initial
-point (i.e., the healthy image), but also on the final point (i.e., a
-corresponding synthetically generated pathological image). Treating the
-pathological image as a structurally informative prior enables us to generate
-counterfactuals that closely match the patient's anatomy while selectively
-removing pathology. The results show that our DDBM outperforms previously
-proposed diffusion models and fully supervised approaches at segmentation and
-anomaly detection tasks.</p>
+            <p class="paper-summary">Text-to-image generation with visual autoregressive~(VAR) models has recently
+achieved impressive advances in generation fidelity and inference efficiency.
+While control mechanisms have been explored for diffusion models, enabling
+precise and flexible control within VAR paradigm remains underexplored. To
+bridge this critical gap, in this paper, we introduce ScaleWeaver, a novel
+framework designed to achieve high-fidelity, controllable generation upon
+advanced VAR models through parameter-efficient fine-tuning. The core module in
+ScaleWeaver is the improved MMDiT block with the proposed Reference Attention
+module, which efficiently and effectively incorporates conditional information.
+Different from MM Attention, the proposed Reference Attention module discards
+the unnecessary attention from image$\rightarrow$condition, reducing
+computational cost while stabilizing control injection. Besides, it
+strategically emphasizes parameter reuse, leveraging the capability of the VAR
+backbone itself with a few introduced parameters to process control
+information, and equipping a zero-initialized linear projection to ensure that
+control signals are incorporated effectively without disrupting the generative
+capability of the base model. Extensive experiments show that ScaleWeaver
+delivers high-quality generation and precise control while attaining superior
+efficiency over diffusion-based methods, making ScaleWeaver a practical and
+effective solution for controllable text-to-image generation within the visual
+autoregressive paradigm. Code and models will be released.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a novel application of denoising diffusion bridge models (DDBMs) for generating healthy counterfactuals from pathological medical images, demonstrating improved performance in anomaly detection and segmentation compared to existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ScaleWeaver, a parameter-efficient fine-tuning framework for controllable text-to-image generation using visual autoregressive models, leveraging a novel Reference Attention mechanism. It achieves high-quality generation, precise control, and superior efficiency compared to diffusion-based methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种新颖的去噪扩散桥模型（DDBM）应用，用于从病理医学图像生成健康的对抗样本，并在异常检测和分割方面表现出优于现有方法的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了ScaleWeaver，一个参数高效的微调框架，用于使用视觉自回归模型进行可控的文本到图像生成，利用了一种新颖的参考注意力机制。 与基于扩散的方法相比，它实现了高质量的生成、精确的控制和卓越的效率。</p>
             
 
             
@@ -488,8 +478,8 @@ anomaly detection tasks.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -512,8 +502,8 @@ anomaly detection tasks.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -549,11 +539,11 @@ anomaly detection tasks.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.13684v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.14882v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ana Lawry Aguila, Peirong Liu, Marina Crespo Aguirre, Juan Eugenio Iglesias</p>
+            <p class="paper-authors">Authors: Keli Liu, Zhendong Wang, Wengang Zhou, Shaodong Xu, Ruixiao Dong, Houqiang Li</p>
             
         </motion.div>
         
@@ -565,30 +555,29 @@ anomaly detection tasks.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CanvasMAR: Improving Masked Autoregressive Video Generation With Canvas</h2>
+            <h2 class="paper-title">FraQAT: Quantization Aware Training with Fractional bits</h2>
             
-            <p class="paper-summary">Masked autoregressive models (MAR) have recently emerged as a powerful
-paradigm for image and video generation, combining the flexibility of masked
-modeling with the potential of continuous tokenizer. However, video MAR models
-suffer from two major limitations: the slow-start problem, caused by the lack
-of a structured global prior at early sampling stages, and error accumulation
-across the autoregression in both spatial and temporal dimensions. In this
-work, we propose CanvasMAR, a novel video MAR model that mitigates these issues
-by introducing a canvas mechanism--a blurred, global prediction of the next
-frame, used as the starting point for masked generation. The canvas provides
-global structure early in sampling, enabling faster and more coherent frame
-synthesis. Furthermore, we introduce compositional classifier-free guidance
-that jointly enlarges spatial (canvas) and temporal conditioning, and employ
-noise-based canvas augmentation to enhance robustness. Experiments on the BAIR
-and Kinetics-600 benchmarks demonstrate that CanvasMAR produces high-quality
-videos with fewer autoregressive steps. Our approach achieves remarkable
-performance among autoregressive models on Kinetics-600 dataset and rivals
-diffusion-based methods.</p>
+            <p class="paper-summary">State-of-the-art (SOTA) generative models have demonstrated impressive
+capabilities in image synthesis or text generation, often with a large capacity
+model. However, these large models cannot be deployed on smartphones due to the
+limited availability of on-board memory and computations. Quantization methods
+lower the precision of the model parameters, allowing for efficient
+computations, \eg, in \INT{8}. Although aggressive quantization addresses
+efficiency and memory constraints, preserving the quality of the model remains
+a challenge. To retain quality in previous aggressive quantization, we propose
+a new fractional bits quantization (\short) approach. The novelty is a simple
+yet effective idea: we progressively reduce the model's precision from 32 to 4
+bits per parameter, and exploit the fractional bits during optimization to
+maintain high generation quality. We show that the \short{} yields improved
+quality on a variety of diffusion models, including SD3.5-Medium, Sana,
+\pixart, and FLUX.1-schnell, while achieving $4-7\%$ lower FiD than standard
+QAT. Finally, we deploy and run Sana on a Samsung S25U, which runs on the
+Qualcomm SM8750-AB Snapdragon 8 Elite Hexagon Tensor Processor (HTP).</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: CanvasMAR improves masked autoregressive video generation by introducing a canvas mechanism (blurred global prediction) to address the slow-start and error accumulation problems, achieving state-of-the-art results on video generation benchmarks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a fractional bits quantization (FraQAT) method for aggressively quantizing generative models to improve efficiency and reduce memory footprint while maintaining high generation quality, achieving better FID scores compared to standard QAT.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: CanvasMAR通过引入画布机制（模糊的全局预测）来改进掩码自回归视频生成，从而解决了慢启动和误差累积问题，并在视频生成基准测试中取得了最先进的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种分数位量化（FraQAT）方法，用于对生成模型进行积极量化，以提高效率并减少内存占用，同时保持高生成质量，与标准QAT相比，实现了更好的FID分数。</p>
             
 
             
@@ -659,11 +648,11 @@ diffusion-based methods.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.13669v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.14823v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zian Li, Muhan Zhang</p>
+            <p class="paper-authors">Authors: Luca Morreale, Alberto Gil C. P. Ramos, Malcolm Chadwick, Mehid Noroozi, Ruchika Chavhan, Abhinav Mehrotra, Sourav Bhattacharya</p>
             
         </motion.div>
         
@@ -675,30 +664,35 @@ diffusion-based methods.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">End-to-End Multi-Modal Diffusion Mamba</h2>
+            <h2 class="paper-title">Inpainting the Red Planet: Diffusion Models for the Reconstruction of Martian Environments in Virtual Reality</h2>
             
-            <p class="paper-summary">Current end-to-end multi-modal models utilize different encoders and decoders
-to process input and output information. This separation hinders the joint
-representation learning of various modalities. To unify multi-modal processing,
-we propose a novel architecture called MDM (Multi-modal Diffusion Mamba). MDM
-utilizes a Mamba-based multi-step selection diffusion model to progressively
-generate and refine modality-specific information through a unified variational
-autoencoder for both encoding and decoding. This innovative approach allows MDM
-to achieve superior performance when processing high-dimensional data,
-particularly in generating high-resolution images and extended text sequences
-simultaneously. Our evaluations in areas such as image generation, image
-captioning, visual question answering, text comprehension, and reasoning tasks
-demonstrate that MDM significantly outperforms existing end-to-end models
-(MonoFormer, LlamaGen, and Chameleon etc.) and competes effectively with SOTA
-models like GPT-4V, Gemini Pro, and Mistral. Our results validate MDM's
-effectiveness in unifying multi-modal processes while maintaining computational
-efficiency, establishing a new direction for end-to-end multi-modal
-architectures.</p>
+            <p class="paper-summary">Space exploration increasingly relies on Virtual Reality for several tasks,
+such as mission planning, multidisciplinary scientific analysis, and astronaut
+training. A key factor for the reliability of the simulations is having
+accurate 3D representations of planetary terrains. Extraterrestrial heightmaps
+derived from satellite imagery often contain missing values due to acquisition
+and transmission constraints. Mars is among the most studied planets beyond
+Earth, and its extensive terrain datasets make the Martian surface
+reconstruction a valuable task, although many areas remain unmapped. Deep
+learning algorithms can support void-filling tasks; however, whereas Earth's
+comprehensive datasets enables the use of conditional methods, such approaches
+cannot be applied to Mars. Current approaches rely on simpler interpolation
+techniques which, however, often fail to preserve geometric coherence. In this
+work, we propose a method for reconstructing the surface of Mars based on an
+unconditional diffusion model. Training was conducted on an augmented dataset
+of 12000 Martian heightmaps derived from NASA's HiRISE survey. A
+non-homogeneous rescaling strategy captures terrain features across multiple
+scales before resizing to a fixed 128x128 model resolution. We compared our
+method against established void-filling and inpainting techniques, including
+Inverse Distance Weighting, kriging, and Navier-Stokes algorithm, on an
+evaluation set of 1000 samples. Results show that our approach consistently
+outperforms these methods in terms of reconstruction accuracy (4-15% on RMSE)
+and perceptual similarity (29-81% on LPIPS) with the original data.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Multi-modal Diffusion Mamba (MDM), a novel end-to-end architecture for multi-modal processing that unifies encoding and decoding using a Mamba-based diffusion model, achieving superior performance in various tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper presents an unconditional diffusion model for reconstructing Martian terrain heightmaps from incomplete satellite data, outperforming traditional interpolation methods in reconstruction accuracy and perceptual similarity.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了多模态扩散Mamba (MDM)，一种新颖的端到端多模态处理架构，它使用基于Mamba的扩散模型统一编码和解码，在各种任务中实现了卓越的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种无条件扩散模型，用于从不完整的卫星数据重建火星地形高度图，在重建精度和感知相似度方面优于传统的插值方法。</p>
             
 
             
@@ -708,16 +702,241 @@ architectures.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.14765v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Giuseppe Lorenzo Catalano, Agata Marta Soccini</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Adapting Self-Supervised Representations as a Latent Space for Efficient Generation</h2>
+            
+            <p class="paper-summary">We introduce Representation Tokenizer (RepTok), a generative modeling
+framework that represents an image using a single continuous latent token
+obtained from self-supervised vision transformers. Building on a pre-trained
+SSL encoder, we fine-tune only the semantic token embedding and pair it with a
+generative decoder trained jointly using a standard flow matching objective.
+This adaptation enriches the token with low-level, reconstruction-relevant
+details, enabling faithful image reconstruction. To preserve the favorable
+geometry of the original SSL space, we add a cosine-similarity loss that
+regularizes the adapted token, ensuring the latent space remains smooth and
+suitable for generation. Our single-token formulation resolves spatial
+redundancies of 2D latent spaces and significantly reduces training costs.
+Despite its simplicity and efficiency, RepTok achieves competitive results on
+class-conditional ImageNet generation and naturally extends to text-to-image
+synthesis, reaching competitive zero-shot performance on MS-COCO under
+extremely limited training budgets. Our findings highlight the potential of
+fine-tuned SSL representations as compact and effective latent spaces for
+efficient generative modeling.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Representation Tokenizer (RepTok), a method for efficient image generation by fine-tuning a single latent token from self-supervised vision transformers, achieving competitive results with limited training.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 Representation Tokenizer (RepTok)，一种通过微调自监督视觉 Transformer 中的单个潜在令牌来实现高效图像生成的方法，并在有限的训练下取得了具有竞争力的结果。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.14630v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Ming Gui, Johannes Schusterbauer, Timy Phan, Felix Krause, Josh Susskind, Miguel Angel Bautista, Björn Ommer</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Pruning Overparameterized Multi-Task Networks for Degraded Web Image Restoration</h2>
+            
+            <p class="paper-summary">Image quality is a critical factor in delivering visually appealing content
+on web platforms. However, images often suffer from degradation due to lossy
+operations applied by online social networks (OSNs), negatively affecting user
+experience. Image restoration is the process of recovering a clean high-quality
+image from a given degraded input. Recently, multi-task (all-in-one) image
+restoration models have gained significant attention, due to their ability to
+simultaneously handle different types of image degradations. However, these
+models often come with an excessively high number of trainable parameters,
+making them computationally inefficient. In this paper, we propose a strategy
+for compressing multi-task image restoration models. We aim to discover highly
+sparse subnetworks within overparameterized deep models that can match or even
+surpass the performance of their dense counterparts. The proposed model, namely
+MIR-L, utilizes an iterative pruning strategy that removes low-magnitude
+weights across multiple rounds, while resetting the remaining weights to their
+original initialization. This iterative process is important for the multi-task
+image restoration model's optimization, effectively uncovering "winning
+tickets" that maintain or exceed state-of-the-art performance at high sparsity
+levels. Experimental evaluation on benchmark datasets for the deraining,
+dehazing, and denoising tasks shows that MIR-L retains only 10% of the
+trainable parameters while maintaining high image restoration performance. Our
+code, datasets and pre-trained models are made publicly available at
+https://github.com/Thomkat/MIR-L.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes an iterative pruning strategy (MIR-L) for compressing multi-task image restoration models used in online social networks, achieving high sparsity with maintained or improved performance on deraining, dehazing, and denoising tasks.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种迭代剪枝策略 (MIR-L)，用于压缩在线社交网络中使用的多任务图像恢复模型，在去雨、去雾和去噪任务中，以高稀疏性实现或保持了高图像恢复性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -769,11 +988,11 @@ architectures.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.13253v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.14463v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Chunhao Lu, Qiang Lu, Meichen Dong, Jake Luo</p>
+            <p class="paper-authors">Authors: Thomas Katraouras, Dimitrios Rafailidis</p>
             
         </motion.div>
         
@@ -781,34 +1000,28 @@ architectures.</p>
             initial="{ opacity: 0, y: 50, scale: 0.9 }"
             whileInView="{ opacity: 1, y: 0, scale: 1 }"
             viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            transition="{ duration: 0.5, delay: 0.35000000000000003, ease: 'easeOut' }"  
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">UniCalli: A Unified Diffusion Framework for Column-Level Generation and Recognition of Chinese Calligraphy</h2>
+            <h2 class="paper-title">SteeringTTA: Guiding Diffusion Trajectories for Robust Test-Time-Adaptation</h2>
             
-            <p class="paper-summary">Computational replication of Chinese calligraphy remains challenging.
-Existing methods falter, either creating high-quality isolated characters while
-ignoring page-level aesthetics like ligatures and spacing, or attempting page
-synthesis at the expense of calligraphic correctness. We introduce
-\textbf{UniCalli}, a unified diffusion framework for column-level recognition
-and generation. Training both tasks jointly is deliberate: recognition
-constrains the generator to preserve character structure, while generation
-provides style and layout priors. This synergy fosters concept-level
-abstractions that improve both tasks, especially in limited-data regimes. We
-curated a dataset of over 8,000 digitized pieces, with ~4,000 densely
-annotated. UniCalli employs asymmetric noising and a rasterized box map for
-spatial priors, trained on a mix of synthetic, labeled, and unlabeled data. The
-model achieves state-of-the-art generative quality with superior ligature
-continuity and layout fidelity, alongside stronger recognition. The framework
-successfully extends to other ancient scripts, including Oracle bone
-inscriptions and Egyptian hieroglyphs. Code and data can be viewed in
-\href{https://github.com/EnVision-Research/UniCalli}{this URL}.</p>
+            <p class="paper-summary">Test-time adaptation (TTA) aims to correct performance degradation of deep
+models under distribution shifts by updating models or inputs using unlabeled
+test data. Input-only diffusion-based TTA methods improve robustness for
+classification to corruptions but rely on gradient guidance, limiting
+exploration and generalization across distortion types. We propose SteeringTTA,
+an inference-only framework that adapts Feynman-Kac steering to guide
+diffusion-based input adaptation for classification with rewards driven by
+pseudo-label. SteeringTTA maintains multiple particle trajectories, steered by
+a combination of cumulative top-K probabilities and an entropy schedule, to
+balance exploration and confidence. On ImageNet-C, SteeringTTA consistently
+outperforms the baseline without any model updates or source data.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniCalli, a unified diffusion framework for column-level generation and recognition of Chinese calligraphy, achieving state-of-the-art results by jointly training generation and recognition with a novel dataset and techniques.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces SteeringTTA, an inference-only method that uses Feynman-Kac steering to guide diffusion-based input adaptation for robust classification under distribution shifts, achieving improved performance on ImageNet-C without model updates or source data.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了UniCalli，一个统一的扩散框架，用于中文书法的列级别生成和识别。通过联合训练生成和识别任务，并结合新的数据集和技术，实现了最先进的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了SteeringTTA，一种仅在推理阶段使用的方法，利用Feynman-Kac引导扩散的输入适配，以提高在分布偏移下的稳健分类性能，并在ImageNet-C上取得了优于基线的结果，无需模型更新或源数据。</p>
             
 
             
@@ -818,116 +1031,8 @@ inscriptions and Egyptian hieroglyphs. Code and data can be viewed in
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.13745v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Tianshuo Xu, Kai Wang, Zhifei Chen, Leyi Wu, Tianshui Wen, Fei Chao, Ying-Cong Chen</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Group-Wise Optimization for Self-Extensible Codebooks in Vector Quantized Models</h2>
-            
-            <p class="paper-summary">Vector Quantized Variational Autoencoders (VQ-VAEs) leverage self-supervised
-learning through reconstruction tasks to represent continuous vectors using the
-closest vectors in a codebook. However, issues such as codebook collapse
-persist in the VQ model. To address these issues, existing approaches employ
-implicit static codebooks or jointly optimize the entire codebook, but these
-methods constrain the codebook's learning capability, leading to reduced
-reconstruction quality. In this paper, we propose Group-VQ, which performs
-group-wise optimization on the codebook. Each group is optimized independently,
-with joint optimization performed within groups. This approach improves the
-trade-off between codebook utilization and reconstruction performance.
-Additionally, we introduce a training-free codebook resampling method, allowing
-post-training adjustment of the codebook size. In image reconstruction
-experiments under various settings, Group-VQ demonstrates improved performance
-on reconstruction metrics. And the post-training codebook sampling method
-achieves the desired flexibility in adjusting the codebook size.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Group-VQ, a group-wise optimization method for VQ-VAEs to address codebook collapse and improve reconstruction quality, along with a training-free codebook resampling method for adjusting codebook size.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 Group-VQ，一种针对 VQ-VAE 的分组优化方法，旨在解决码本崩溃并提高重建质量，以及一种用于调整码本大小的无训练码本重采样方法。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(4/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(3/10)</span>
                 </div>
                 
                 
@@ -987,18 +1092,18 @@ achieves the desired flexibility in adjusting the codebook size.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.13331v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.14634v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Hong-Kai Zheng, Piji Li</p>
+            <p class="paper-authors">Authors: Jihyun Yu, Yoojin Oh, Wonho Bae, Mingyu Kim, Junhyug Noh</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-17 03:32:08 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-17 03:40:13 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

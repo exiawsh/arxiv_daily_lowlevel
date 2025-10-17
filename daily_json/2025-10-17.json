@@ -1,0 +1,205 @@
+[
+    {
+        "title": "WithAnyone: Towards Controllable and ID Consistent Image Generation",
+        "summary": "Identity-consistent generation has become an important focus in text-to-image\nresearch, with recent models achieving notable success in producing images\naligned with a reference identity. Yet, the scarcity of large-scale paired\ndatasets containing multiple images of the same individual forces most\napproaches to adopt reconstruction-based training. This reliance often leads to\na failure mode we term copy-paste, where the model directly replicates the\nreference face rather than preserving identity across natural variations in\npose, expression, or lighting. Such over-similarity undermines controllability\nand limits the expressive power of generation. To address these limitations, we\n(1) construct a large-scale paired dataset MultiID-2M, tailored for\nmulti-person scenarios, providing diverse references for each identity; (2)\nintroduce a benchmark that quantifies both copy-paste artifacts and the\ntrade-off between identity fidelity and variation; and (3) propose a novel\ntraining paradigm with a contrastive identity loss that leverages paired data\nto balance fidelity with diversity. These contributions culminate in\nWithAnyone, a diffusion-based model that effectively mitigates copy-paste while\npreserving high identity similarity. Extensive qualitative and quantitative\nexperiments demonstrate that WithAnyone significantly reduces copy-paste\nartifacts, improves controllability over pose and expression, and maintains\nstrong perceptual quality. User studies further validate that our method\nachieves high identity fidelity while enabling expressive controllable\ngeneration.",
+        "url": "http://arxiv.org/abs/2510.14975v1",
+        "published_date": "2025-10-16T17:59:54+00:00",
+        "updated_date": "2025-10-16T17:59:54+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hengyuan Xu",
+            "Wei Cheng",
+            "Peng Xing",
+            "Yixiao Fang",
+            "Shuhan Wu",
+            "Rui Wang",
+            "Xianfang Zeng",
+            "Daxin Jiang",
+            "Gang Yu",
+            "Xingjun Ma",
+            "Yu-Gang Jiang"
+        ],
+        "tldr": "The paper introduces WithAnyone, a diffusion-based model for identity-consistent image generation that addresses the 'copy-paste' problem by using a new paired dataset, benchmark, and contrastive identity loss.",
+        "tldr_zh": "该论文介绍了WithAnyone，一个基于扩散模型的身份一致图像生成模型，它通过使用新的配对数据集、基准和对比身份损失来解决“复制粘贴”问题。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "pi-Flow: Policy-Based Few-Step Generation via Imitation Distillation",
+        "summary": "Few-step diffusion or flow-based generative models typically distill a\nvelocity-predicting teacher into a student that predicts a shortcut towards\ndenoised data. This format mismatch has led to complex distillation procedures\nthat often suffer from a quality-diversity trade-off. To address this, we\npropose policy-based flow models ($\\pi$-Flow). $\\pi$-Flow modifies the output\nlayer of a student flow model to predict a network-free policy at one timestep.\nThe policy then produces dynamic flow velocities at future substeps with\nnegligible overhead, enabling fast and accurate ODE integration on these\nsubsteps without extra network evaluations. To match the policy's ODE\ntrajectory to the teacher's, we introduce a novel imitation distillation\napproach, which matches the policy's velocity to the teacher's along the\npolicy's trajectory using a standard $\\ell_2$ flow matching loss. By simply\nmimicking the teacher's behavior, $\\pi$-Flow enables stable and scalable\ntraining and avoids the quality-diversity trade-off. On ImageNet 256$^2$, it\nattains a 1-NFE FID of 2.85, outperforming MeanFlow of the same DiT\narchitecture. On FLUX.1-12B and Qwen-Image-20B at 4 NFEs, $\\pi$-Flow achieves\nsubstantially better diversity than state-of-the-art few-step methods, while\nmaintaining teacher-level quality.",
+        "url": "http://arxiv.org/abs/2510.14974v1",
+        "published_date": "2025-10-16T17:59:51+00:00",
+        "updated_date": "2025-10-16T17:59:51+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Hansheng Chen",
+            "Kai Zhang",
+            "Hao Tan",
+            "Leonidas Guibas",
+            "Gordon Wetzstein",
+            "Sai Bi"
+        ],
+        "tldr": "The paper introduces pi-Flow, a policy-based flow model for few-step image generation that uses imitation distillation to avoid quality-diversity trade-offs, achieving state-of-the-art results on ImageNet and large-scale datasets.",
+        "tldr_zh": "该论文介绍了 pi-Flow，一种基于策略的流模型，用于少步图像生成，它使用模仿蒸馏来避免质量-多样性权衡，并在 ImageNet 和大型数据集上取得了最先进的结果。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ScaleWeaver: Weaving Efficient Controllable T2I Generation with Multi-Scale Reference Attention",
+        "summary": "Text-to-image generation with visual autoregressive~(VAR) models has recently\nachieved impressive advances in generation fidelity and inference efficiency.\nWhile control mechanisms have been explored for diffusion models, enabling\nprecise and flexible control within VAR paradigm remains underexplored. To\nbridge this critical gap, in this paper, we introduce ScaleWeaver, a novel\nframework designed to achieve high-fidelity, controllable generation upon\nadvanced VAR models through parameter-efficient fine-tuning. The core module in\nScaleWeaver is the improved MMDiT block with the proposed Reference Attention\nmodule, which efficiently and effectively incorporates conditional information.\nDifferent from MM Attention, the proposed Reference Attention module discards\nthe unnecessary attention from image$\\rightarrow$condition, reducing\ncomputational cost while stabilizing control injection. Besides, it\nstrategically emphasizes parameter reuse, leveraging the capability of the VAR\nbackbone itself with a few introduced parameters to process control\ninformation, and equipping a zero-initialized linear projection to ensure that\ncontrol signals are incorporated effectively without disrupting the generative\ncapability of the base model. Extensive experiments show that ScaleWeaver\ndelivers high-quality generation and precise control while attaining superior\nefficiency over diffusion-based methods, making ScaleWeaver a practical and\neffective solution for controllable text-to-image generation within the visual\nautoregressive paradigm. Code and models will be released.",
+        "url": "http://arxiv.org/abs/2510.14882v1",
+        "published_date": "2025-10-16T17:00:59+00:00",
+        "updated_date": "2025-10-16T17:00:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Keli Liu",
+            "Zhendong Wang",
+            "Wengang Zhou",
+            "Shaodong Xu",
+            "Ruixiao Dong",
+            "Houqiang Li"
+        ],
+        "tldr": "The paper introduces ScaleWeaver, a parameter-efficient fine-tuning framework for controllable text-to-image generation using visual autoregressive models, leveraging a novel Reference Attention mechanism. It achieves high-quality generation, precise control, and superior efficiency compared to diffusion-based methods.",
+        "tldr_zh": "本文介绍了ScaleWeaver，一个参数高效的微调框架，用于使用视觉自回归模型进行可控的文本到图像生成，利用了一种新颖的参考注意力机制。 与基于扩散的方法相比，它实现了高质量的生成、精确的控制和卓越的效率。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FraQAT: Quantization Aware Training with Fractional bits",
+        "summary": "State-of-the-art (SOTA) generative models have demonstrated impressive\ncapabilities in image synthesis or text generation, often with a large capacity\nmodel. However, these large models cannot be deployed on smartphones due to the\nlimited availability of on-board memory and computations. Quantization methods\nlower the precision of the model parameters, allowing for efficient\ncomputations, \\eg, in \\INT{8}. Although aggressive quantization addresses\nefficiency and memory constraints, preserving the quality of the model remains\na challenge. To retain quality in previous aggressive quantization, we propose\na new fractional bits quantization (\\short) approach. The novelty is a simple\nyet effective idea: we progressively reduce the model's precision from 32 to 4\nbits per parameter, and exploit the fractional bits during optimization to\nmaintain high generation quality. We show that the \\short{} yields improved\nquality on a variety of diffusion models, including SD3.5-Medium, Sana,\n\\pixart, and FLUX.1-schnell, while achieving $4-7\\%$ lower FiD than standard\nQAT. Finally, we deploy and run Sana on a Samsung S25U, which runs on the\nQualcomm SM8750-AB Snapdragon 8 Elite Hexagon Tensor Processor (HTP).",
+        "url": "http://arxiv.org/abs/2510.14823v1",
+        "published_date": "2025-10-16T16:01:08+00:00",
+        "updated_date": "2025-10-16T16:01:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Luca Morreale",
+            "Alberto Gil C. P. Ramos",
+            "Malcolm Chadwick",
+            "Mehid Noroozi",
+            "Ruchika Chavhan",
+            "Abhinav Mehrotra",
+            "Sourav Bhattacharya"
+        ],
+        "tldr": "The paper introduces a fractional bits quantization (FraQAT) method for aggressively quantizing generative models to improve efficiency and reduce memory footprint while maintaining high generation quality, achieving better FID scores compared to standard QAT.",
+        "tldr_zh": "该论文介绍了一种分数位量化（FraQAT）方法，用于对生成模型进行积极量化，以提高效率并减少内存占用，同时保持高生成质量，与标准QAT相比，实现了更好的FID分数。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Inpainting the Red Planet: Diffusion Models for the Reconstruction of Martian Environments in Virtual Reality",
+        "summary": "Space exploration increasingly relies on Virtual Reality for several tasks,\nsuch as mission planning, multidisciplinary scientific analysis, and astronaut\ntraining. A key factor for the reliability of the simulations is having\naccurate 3D representations of planetary terrains. Extraterrestrial heightmaps\nderived from satellite imagery often contain missing values due to acquisition\nand transmission constraints. Mars is among the most studied planets beyond\nEarth, and its extensive terrain datasets make the Martian surface\nreconstruction a valuable task, although many areas remain unmapped. Deep\nlearning algorithms can support void-filling tasks; however, whereas Earth's\ncomprehensive datasets enables the use of conditional methods, such approaches\ncannot be applied to Mars. Current approaches rely on simpler interpolation\ntechniques which, however, often fail to preserve geometric coherence. In this\nwork, we propose a method for reconstructing the surface of Mars based on an\nunconditional diffusion model. Training was conducted on an augmented dataset\nof 12000 Martian heightmaps derived from NASA's HiRISE survey. A\nnon-homogeneous rescaling strategy captures terrain features across multiple\nscales before resizing to a fixed 128x128 model resolution. We compared our\nmethod against established void-filling and inpainting techniques, including\nInverse Distance Weighting, kriging, and Navier-Stokes algorithm, on an\nevaluation set of 1000 samples. Results show that our approach consistently\noutperforms these methods in terms of reconstruction accuracy (4-15% on RMSE)\nand perceptual similarity (29-81% on LPIPS) with the original data.",
+        "url": "http://arxiv.org/abs/2510.14765v1",
+        "published_date": "2025-10-16T15:02:05+00:00",
+        "updated_date": "2025-10-16T15:02:05+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.GR"
+        ],
+        "authors": [
+            "Giuseppe Lorenzo Catalano",
+            "Agata Marta Soccini"
+        ],
+        "tldr": "The paper presents an unconditional diffusion model for reconstructing Martian terrain heightmaps from incomplete satellite data, outperforming traditional interpolation methods in reconstruction accuracy and perceptual similarity.",
+        "tldr_zh": "该论文提出了一种无条件扩散模型，用于从不完整的卫星数据重建火星地形高度图，在重建精度和感知相似度方面优于传统的插值方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Adapting Self-Supervised Representations as a Latent Space for Efficient Generation",
+        "summary": "We introduce Representation Tokenizer (RepTok), a generative modeling\nframework that represents an image using a single continuous latent token\nobtained from self-supervised vision transformers. Building on a pre-trained\nSSL encoder, we fine-tune only the semantic token embedding and pair it with a\ngenerative decoder trained jointly using a standard flow matching objective.\nThis adaptation enriches the token with low-level, reconstruction-relevant\ndetails, enabling faithful image reconstruction. To preserve the favorable\ngeometry of the original SSL space, we add a cosine-similarity loss that\nregularizes the adapted token, ensuring the latent space remains smooth and\nsuitable for generation. Our single-token formulation resolves spatial\nredundancies of 2D latent spaces and significantly reduces training costs.\nDespite its simplicity and efficiency, RepTok achieves competitive results on\nclass-conditional ImageNet generation and naturally extends to text-to-image\nsynthesis, reaching competitive zero-shot performance on MS-COCO under\nextremely limited training budgets. Our findings highlight the potential of\nfine-tuned SSL representations as compact and effective latent spaces for\nefficient generative modeling.",
+        "url": "http://arxiv.org/abs/2510.14630v1",
+        "published_date": "2025-10-16T12:43:03+00:00",
+        "updated_date": "2025-10-16T12:43:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ming Gui",
+            "Johannes Schusterbauer",
+            "Timy Phan",
+            "Felix Krause",
+            "Josh Susskind",
+            "Miguel Angel Bautista",
+            "Björn Ommer"
+        ],
+        "tldr": "The paper introduces Representation Tokenizer (RepTok), a method for efficient image generation by fine-tuning a single latent token from self-supervised vision transformers, achieving competitive results with limited training.",
+        "tldr_zh": "该论文介绍了 Representation Tokenizer (RepTok)，一种通过微调自监督视觉 Transformer 中的单个潜在令牌来实现高效图像生成的方法，并在有限的训练下取得了具有竞争力的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Pruning Overparameterized Multi-Task Networks for Degraded Web Image Restoration",
+        "summary": "Image quality is a critical factor in delivering visually appealing content\non web platforms. However, images often suffer from degradation due to lossy\noperations applied by online social networks (OSNs), negatively affecting user\nexperience. Image restoration is the process of recovering a clean high-quality\nimage from a given degraded input. Recently, multi-task (all-in-one) image\nrestoration models have gained significant attention, due to their ability to\nsimultaneously handle different types of image degradations. However, these\nmodels often come with an excessively high number of trainable parameters,\nmaking them computationally inefficient. In this paper, we propose a strategy\nfor compressing multi-task image restoration models. We aim to discover highly\nsparse subnetworks within overparameterized deep models that can match or even\nsurpass the performance of their dense counterparts. The proposed model, namely\nMIR-L, utilizes an iterative pruning strategy that removes low-magnitude\nweights across multiple rounds, while resetting the remaining weights to their\noriginal initialization. This iterative process is important for the multi-task\nimage restoration model's optimization, effectively uncovering \"winning\ntickets\" that maintain or exceed state-of-the-art performance at high sparsity\nlevels. Experimental evaluation on benchmark datasets for the deraining,\ndehazing, and denoising tasks shows that MIR-L retains only 10% of the\ntrainable parameters while maintaining high image restoration performance. Our\ncode, datasets and pre-trained models are made publicly available at\nhttps://github.com/Thomkat/MIR-L.",
+        "url": "http://arxiv.org/abs/2510.14463v1",
+        "published_date": "2025-10-16T09:04:05+00:00",
+        "updated_date": "2025-10-16T09:04:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Thomas Katraouras",
+            "Dimitrios Rafailidis"
+        ],
+        "tldr": "The paper proposes an iterative pruning strategy (MIR-L) for compressing multi-task image restoration models used in online social networks, achieving high sparsity with maintained or improved performance on deraining, dehazing, and denoising tasks.",
+        "tldr_zh": "本文提出了一种迭代剪枝策略 (MIR-L)，用于压缩在线社交网络中使用的多任务图像恢复模型，在去雨、去雾和去噪任务中，以高稀疏性实现或保持了高图像恢复性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SteeringTTA: Guiding Diffusion Trajectories for Robust Test-Time-Adaptation",
+        "summary": "Test-time adaptation (TTA) aims to correct performance degradation of deep\nmodels under distribution shifts by updating models or inputs using unlabeled\ntest data. Input-only diffusion-based TTA methods improve robustness for\nclassification to corruptions but rely on gradient guidance, limiting\nexploration and generalization across distortion types. We propose SteeringTTA,\nan inference-only framework that adapts Feynman-Kac steering to guide\ndiffusion-based input adaptation for classification with rewards driven by\npseudo-label. SteeringTTA maintains multiple particle trajectories, steered by\na combination of cumulative top-K probabilities and an entropy schedule, to\nbalance exploration and confidence. On ImageNet-C, SteeringTTA consistently\noutperforms the baseline without any model updates or source data.",
+        "url": "http://arxiv.org/abs/2510.14634v1",
+        "published_date": "2025-10-16T12:46:53+00:00",
+        "updated_date": "2025-10-16T12:46:53+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jihyun Yu",
+            "Yoojin Oh",
+            "Wonho Bae",
+            "Mingyu Kim",
+            "Junhyug Noh"
+        ],
+        "tldr": "This paper introduces SteeringTTA, an inference-only method that uses Feynman-Kac steering to guide diffusion-based input adaptation for robust classification under distribution shifts, achieving improved performance on ImageNet-C without model updates or source data.",
+        "tldr_zh": "该论文介绍了SteeringTTA，一种仅在推理阶段使用的方法，利用Feynman-Kac引导扩散的输入适配，以提高在分布偏移下的稳健分类性能，并在ImageNet-C上取得了优于基线的结果，无需模型更新或源数据。",
+        "relevance_score": 3,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 5
+    }
+]
