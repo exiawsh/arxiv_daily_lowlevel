@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 13, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - October 21, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 13, 2025</p>
+            <p>October 21, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,38 +215,35 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">UniFlow: A Unified Pixel Flow Tokenizer for Visual Understanding and Generation</h2>
+            <h2 class="paper-title">Generation then Reconstruction: Accelerating Masked Autoregressive Models via Two-Stage Sampling</h2>
             
-            <p class="paper-summary">Tokenizer is a crucial component for both visual understanding and
-generation. To advance toward the ultimate goal of universal modeling, recent
-research has focused on developing a unified tokenizer. However, existing
-tokenizers face a significant performance trade-off between understanding and
-generation, stemming from the inherent conflict between high-level semantic
-abstraction and low-level pixel reconstruction. To tackle this challenge, we
-propose a generic and unified tokenizer, namely UniFlow, by flexibly adapting
-any visual encoder with a concise reconstruction decoder. Specifically, we
-introduce layer-wise adaptive self-distillation applied to the well-pretrained
-visual encoders, which enables UniFlow to simultaneously inherit the strong
-semantic features for visual understanding and flexibly adapt to model
-fine-grained details for visual generation. Moreover, we propose a lightweight
-patch-wise pixel flow decoder, which efficiently achieves high-fidelity pixel
-reconstruction by modeling a conditional flow from the noisy state back to the
-patch-wise pixel domain. By leveraging the semantic features as visual
-conditions for the decoder, we effectively alleviate the training conflicts
-between understanding and generation. Furthermore, the patch-wise learning
-strategy simplifies the data distribution, thereby improving training
-efficiency. Extensive experiments across 13 challenging benchmarks spanning 7
-widely studied visual understanding and generation tasks demonstrate that
-UniFlow achieves a win-win outcome. For instance, our 7B UniFlow-XL not only
-surpasses the 14B TokenFlow-XL by 7.75% on average understanding benchmarks,
-but also achieves competitive results in both visual reconstruction and
-generation, surpassing UniTok by 0.15 in rFID and 0.09 in gFID (without
-guidance), respectively.</p>
+            <p class="paper-summary">Masked Autoregressive (MAR) models promise better efficiency in visual
+generation than autoregressive (AR) models for the ability of parallel
+generation, yet their acceleration potential remains constrained by the
+modeling complexity of spatially correlated visual tokens in a single step. To
+address this limitation, we introduce Generation then Reconstruction (GtR), a
+training-free hierarchical sampling strategy that decomposes generation into
+two stages: structure generation establishing global semantic scaffolding,
+followed by detail reconstruction efficiently completing remaining tokens.
+Assuming that it is more difficult to create an image from scratch than to
+complement images based on a basic image framework, GtR is designed to achieve
+acceleration by computing the reconstruction stage quickly while maintaining
+the generation quality by computing the generation stage slowly. Moreover,
+observing that tokens on the details of an image often carry more semantic
+information than tokens in the salient regions, we further propose
+Frequency-Weighted Token Selection (FTS) to offer more computation budget to
+tokens on image details, which are localized based on the energy of high
+frequency information. Extensive experiments on ImageNet class-conditional and
+text-to-image generation demonstrate 3.72x speedup on MAR-H while maintaining
+comparable quality (e.g., FID: 1.59, IS: 304.4 vs. original 1.59, 299.1),
+substantially outperforming existing acceleration methods across various model
+scales and generation tasks. Our codes will be released in
+https://github.com/feihongyan1/GtR.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniFlow, a unified tokenizer using layer-wise self-distillation and a pixel flow decoder, achieving a balance between visual understanding and generation tasks, outperforming existing methods on several benchmarks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a two-stage sampling strategy (Generation then Reconstruction, GtR) to accelerate Masked Autoregressive models for image generation, achieving significant speedup while maintaining comparable image quality by focusing computational budget on image details.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种统一的 tokenizer UniFlow，它采用分层自蒸馏和像素流解码器，在视觉理解和生成任务之间实现了平衡，并在多个基准测试中优于现有方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种两阶段采样策略（先生成后重建，GtR）来加速用于图像生成的掩码自回归模型。通过将计算预算集中在图像细节上，该方法在保持图像质量的同时实现了显著的加速。</p>
             
 
             
@@ -256,16 +253,16 @@ guidance), respectively.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -280,8 +277,8 @@ guidance), respectively.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -317,11 +314,11 @@ guidance), respectively.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.10575v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.17171v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhengrong Yue, Haiyu Zhang, Xiangyu Zeng, Boyu Chen, Chenting Wang, Shaobin Zhuang, Lu Dong, KunPeng Du, Yi Wang, Limin Wang, Yali Wang</p>
+            <p class="paper-authors">Authors: Feihong Yan, Peiru Wang, Yao Zhu, Kaiyu Pang, Qingyan Wei, Huiqi Li, Linfeng Zhang</p>
             
         </motion.div>
         
@@ -333,31 +330,32 @@ guidance), respectively.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Head-wise Adaptive Rotary Positional Encoding for Fine-Grained Image Generation</h2>
+            <h2 class="paper-title">CharDiff: A Diffusion Model with Character-Level Guidance for License Plate Image Restoration</h2>
             
-            <p class="paper-summary">Transformers rely on explicit positional encoding to model structure in data.
-While Rotary Position Embedding (RoPE) excels in 1D domains, its application to
-image generation reveals significant limitations such as fine-grained spatial
-relation modeling, color cues, and object counting. This paper identifies key
-limitations of standard multi-dimensional RoPE-rigid frequency allocation,
-axis-wise independence, and uniform head treatment-in capturing the complex
-structural biases required for fine-grained image generation. We propose
-HARoPE, a head-wise adaptive extension that inserts a learnable linear
-transformation parameterized via singular value decomposition (SVD) before the
-rotary mapping. This lightweight modification enables dynamic frequency
-reallocation, semantic alignment of rotary planes, and head-specific positional
-receptive fields while rigorously preserving RoPE's relative-position property.
-Extensive experiments on class-conditional ImageNet and text-to-image
-generation (Flux and MMDiT) demonstrate that HARoPE consistently improves
-performance over strong RoPE baselines and other extensions. The method serves
-as an effective drop-in replacement, offering a principled and adaptable
-solution for enhancing positional awareness in transformer-based image
-generative models.</p>
+            <p class="paper-summary">The significance of license plate image restoration goes beyond the
+preprocessing stage of License Plate Recognition (LPR) systems, as it also
+serves various purposes, including increasing evidential value, enhancing the
+clarity of visual interface, and facilitating further utilization of license
+plate images. We propose a novel diffusion-based framework with character-level
+guidance, CharDiff, which effectively restores and recognizes severely degraded
+license plate images captured under realistic conditions. CharDiff leverages
+fine-grained character-level priors extracted through external segmentation and
+Optical Character Recognition (OCR) modules tailored for low-quality license
+plate images. For precise and focused guidance, CharDiff incorporates a novel
+Character-guided Attention through Region-wise Masking (CHARM) module, which
+ensures that each character's guidance is restricted to its own region, thereby
+avoiding interference with other regions. In experiments, CharDiff
+significantly outperformed the baseline restoration models in both restoration
+quality and recognition accuracy, achieving a 28% relative reduction in CER on
+the Roboflow-LP dataset, compared to the best-performing baseline model. These
+results indicate that the structured character-guided conditioning effectively
+enhances the robustness of diffusion-based license plate restoration and
+recognition in practical deployment scenarios.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces HARoPE, a head-wise adaptive extension of RoPE for image generation, addressing limitations in fine-grained spatial relation modeling. It demonstrates improved performance in class-conditional ImageNet and text-to-image generation tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces CharDiff, a diffusion model for license plate image restoration that leverages character-level guidance to improve restoration quality and recognition accuracy, achieving a 28% CER reduction on the Roboflow-LP dataset.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了HARoPE，一种用于图像生成的RoPE的头式自适应扩展，解决了在细粒度空间关系建模方面的局限性。它在类条件ImageNet和文本到图像生成任务中表现出改进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为CharDiff的扩散模型，用于车牌图像修复。该模型利用字符级指导来提高修复质量和识别精度，在Roboflow-LP数据集上实现了28%的CER降低。</p>
             
 
             
@@ -367,8 +365,8 @@ generative models.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -417,29 +415,29 @@ generative models.</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.10489v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.17330v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jiaye Li, Baoyou Chen, Hui Li, Zilong Dong, Jingdong Wang, Siyu Zhu</p>
+            <p class="paper-authors">Authors: Gyuhwan Park, Kihyun Na, Injung Kim</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-21 03:36:30 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-21 04:26:19 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

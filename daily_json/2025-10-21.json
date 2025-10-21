@@ -1,0 +1,51 @@
+[
+    {
+        "title": "Generation then Reconstruction: Accelerating Masked Autoregressive Models via Two-Stage Sampling",
+        "summary": "Masked Autoregressive (MAR) models promise better efficiency in visual\ngeneration than autoregressive (AR) models for the ability of parallel\ngeneration, yet their acceleration potential remains constrained by the\nmodeling complexity of spatially correlated visual tokens in a single step. To\naddress this limitation, we introduce Generation then Reconstruction (GtR), a\ntraining-free hierarchical sampling strategy that decomposes generation into\ntwo stages: structure generation establishing global semantic scaffolding,\nfollowed by detail reconstruction efficiently completing remaining tokens.\nAssuming that it is more difficult to create an image from scratch than to\ncomplement images based on a basic image framework, GtR is designed to achieve\nacceleration by computing the reconstruction stage quickly while maintaining\nthe generation quality by computing the generation stage slowly. Moreover,\nobserving that tokens on the details of an image often carry more semantic\ninformation than tokens in the salient regions, we further propose\nFrequency-Weighted Token Selection (FTS) to offer more computation budget to\ntokens on image details, which are localized based on the energy of high\nfrequency information. Extensive experiments on ImageNet class-conditional and\ntext-to-image generation demonstrate 3.72x speedup on MAR-H while maintaining\ncomparable quality (e.g., FID: 1.59, IS: 304.4 vs. original 1.59, 299.1),\nsubstantially outperforming existing acceleration methods across various model\nscales and generation tasks. Our codes will be released in\nhttps://github.com/feihongyan1/GtR.",
+        "url": "http://arxiv.org/abs/2510.17171v1",
+        "published_date": "2025-10-20T05:22:10+00:00",
+        "updated_date": "2025-10-20T05:22:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Feihong Yan",
+            "Peiru Wang",
+            "Yao Zhu",
+            "Kaiyu Pang",
+            "Qingyan Wei",
+            "Huiqi Li",
+            "Linfeng Zhang"
+        ],
+        "tldr": "The paper introduces a two-stage sampling strategy (Generation then Reconstruction, GtR) to accelerate Masked Autoregressive models for image generation, achieving significant speedup while maintaining comparable image quality by focusing computational budget on image details.",
+        "tldr_zh": "该论文提出了一种两阶段采样策略（先生成后重建，GtR）来加速用于图像生成的掩码自回归模型。通过将计算预算集中在图像细节上，该方法在保持图像质量的同时实现了显著的加速。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CharDiff: A Diffusion Model with Character-Level Guidance for License Plate Image Restoration",
+        "summary": "The significance of license plate image restoration goes beyond the\npreprocessing stage of License Plate Recognition (LPR) systems, as it also\nserves various purposes, including increasing evidential value, enhancing the\nclarity of visual interface, and facilitating further utilization of license\nplate images. We propose a novel diffusion-based framework with character-level\nguidance, CharDiff, which effectively restores and recognizes severely degraded\nlicense plate images captured under realistic conditions. CharDiff leverages\nfine-grained character-level priors extracted through external segmentation and\nOptical Character Recognition (OCR) modules tailored for low-quality license\nplate images. For precise and focused guidance, CharDiff incorporates a novel\nCharacter-guided Attention through Region-wise Masking (CHARM) module, which\nensures that each character's guidance is restricted to its own region, thereby\navoiding interference with other regions. In experiments, CharDiff\nsignificantly outperformed the baseline restoration models in both restoration\nquality and recognition accuracy, achieving a 28% relative reduction in CER on\nthe Roboflow-LP dataset, compared to the best-performing baseline model. These\nresults indicate that the structured character-guided conditioning effectively\nenhances the robustness of diffusion-based license plate restoration and\nrecognition in practical deployment scenarios.",
+        "url": "http://arxiv.org/abs/2510.17330v1",
+        "published_date": "2025-10-20T09:23:29+00:00",
+        "updated_date": "2025-10-20T09:23:29+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Gyuhwan Park",
+            "Kihyun Na",
+            "Injung Kim"
+        ],
+        "tldr": "This paper introduces CharDiff, a diffusion model for license plate image restoration that leverages character-level guidance to improve restoration quality and recognition accuracy, achieving a 28% CER reduction on the Roboflow-LP dataset.",
+        "tldr_zh": "本文介绍了一种名为CharDiff的扩散模型，用于车牌图像修复。该模型利用字符级指导来提高修复质量和识别精度，在Roboflow-LP数据集上实现了28%的CER降低。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

@@ -1,0 +1,99 @@
+[
+    {
+        "title": "Scale-DiT: Ultra-High-Resolution Image Generation with Hierarchical Local Attention",
+        "summary": "Ultra-high-resolution text-to-image generation demands both fine-grained\ntexture synthesis and globally coherent structure, yet current diffusion models\nremain constrained to sub-$1K \\times 1K$ resolutions due to the prohibitive\nquadratic complexity of attention and the scarcity of native $4K$ training\ndata. We present \\textbf{Scale-DiT}, a new diffusion framework that introduces\nhierarchical local attention with low-resolution global guidance, enabling\nefficient, scalable, and semantically coherent image synthesis at ultra-high\nresolutions. Specifically, high-resolution latents are divided into fixed-size\nlocal windows to reduce attention complexity from quadratic to near-linear,\nwhile a low-resolution latent equipped with scaled positional anchors injects\nglobal semantics. A lightweight LoRA adaptation bridges global and local\npathways during denoising, ensuring consistency across structure and detail. To\nmaximize inference efficiency, we repermute token sequence in Hilbert curve\norder and implement a fused-kernel for skipping masked operations, resulting in\na GPU-friendly design. Extensive experiments demonstrate that Scale-DiT\nachieves more than $2\\times$ faster inference and lower memory usage compared\nto dense attention baselines, while reliably scaling to $4K \\times 4K$\nresolution without requiring additional high-resolution training data. On both\nquantitative benchmarks (FID, IS, CLIP Score) and qualitative comparisons,\nScale-DiT delivers superior global coherence and sharper local detail, matching\nor outperforming state-of-the-art methods that rely on native 4K training.\nTaken together, these results highlight hierarchical local attention with\nguided low-resolution anchors as a promising and effective approach for\nadvancing ultra-high-resolution image generation.",
+        "url": "http://arxiv.org/abs/2510.16325v1",
+        "published_date": "2025-10-18T03:15:26+00:00",
+        "updated_date": "2025-10-18T03:15:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuyao Zhang",
+            "Yu-Wing Tai"
+        ],
+        "tldr": "Scale-DiT introduces a hierarchical local attention mechanism with low-resolution global guidance for efficient and high-quality ultra-high-resolution (4K) text-to-image generation, surpassing existing methods without requiring native 4K training data.",
+        "tldr_zh": "Scale-DiT 引入了一种分层局部注意力机制，并结合低分辨率的全局指导，实现了高效、高质量的超高分辨率 (4K) 文本到图像生成，无需原生 4K 训练数据，优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DiffusionX: Efficient Edge-Cloud Collaborative Image Generation with Multi-Round Prompt Evolution",
+        "summary": "Recent advances in diffusion models have driven remarkable progress in image\ngeneration. However, the generation process remains computationally intensive,\nand users often need to iteratively refine prompts to achieve the desired\nresults, further increasing latency and placing a heavy burden on cloud\nresources. To address this challenge, we propose DiffusionX, a cloud-edge\ncollaborative framework for efficient multi-round, prompt-based generation. In\nthis system, a lightweight on-device diffusion model interacts with users by\nrapidly producing preview images, while a high-capacity cloud model performs\nfinal refinements after the prompt is finalized. We further introduce a noise\nlevel predictor that dynamically balances the computation load, optimizing the\ntrade-off between latency and cloud workload. Experiments show that DiffusionX\nreduces average generation time by 15.8% compared with Stable Diffusion v1.5,\nwhile maintaining comparable image quality. Moreover, it is only 0.9% slower\nthan Tiny-SD with significantly improved image quality, thereby demonstrating\nefficiency and scalability with minimal overhead.",
+        "url": "http://arxiv.org/abs/2510.16326v1",
+        "published_date": "2025-10-18T03:20:39+00:00",
+        "updated_date": "2025-10-18T03:20:39+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Yi Wei",
+            "Shunpu Tang",
+            "Liang Zhao",
+            "Qiangian Yang"
+        ],
+        "tldr": "DiffusionX is a cloud-edge collaborative framework that accelerates prompt-based image generation by using a lightweight on-device model for previews and a cloud model for final refinements, resulting in faster generation times and balanced workload.",
+        "tldr_zh": "DiffusionX是一个云边协同框架，通过使用轻量级的设备端模型进行预览，以及云端模型进行最终优化，加速了基于prompt的图像生成，实现了更快的生成时间和均衡的工作负载。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TokenAR: Multiple Subject Generation via Autoregressive Token-level enhancement",
+        "summary": "Autoregressive Model (AR) has shown remarkable success in conditional image\ngeneration. However, these approaches for multiple reference generation\nstruggle with decoupling different reference identities. In this work, we\npropose the TokenAR framework, specifically focused on a simple but effective\ntoken-level enhancement mechanism to address reference identity confusion\nproblem. Such token-level enhancement consists of three parts, 1). Token Index\nEmbedding clusters the tokens index for better representing the same reference\nimages; 2). Instruct Token Injection plays as a role of extra visual feature\ncontainer to inject detailed and complementary priors for reference tokens; 3).\nThe identity-token disentanglement strategy (ITD) explicitly guides the token\nrepresentations toward independently representing the features of each\nidentity.This token-enhancement framework significantly augments the\ncapabilities of existing AR based methods in conditional image generation,\nenabling good identity consistency while preserving high quality background\nreconstruction. Driven by the goal of high-quality and high-diversity in\nmulti-subject generation, we introduce the InstructAR Dataset, the first\nopen-source, large-scale, multi-reference input, open domain image generation\ndataset that includes 28K training pairs, each example has two reference\nsubjects, a relative prompt and a background with mask annotation, curated for\nmultiple reference image generation training and evaluating. Comprehensive\nexperiments validate that our approach surpasses current state-of-the-art\nmodels in multiple reference image generation task. The implementation code and\ndatasets will be made publicly. Codes are available, see\nhttps://github.com/lyrig/TokenAR",
+        "url": "http://arxiv.org/abs/2510.16332v1",
+        "published_date": "2025-10-18T03:36:26+00:00",
+        "updated_date": "2025-10-18T03:36:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haiyue Sun",
+            "Qingdong He",
+            "Jinlong Peng",
+            "Peng Tang",
+            "Jiangning Zhang",
+            "Junwei Zhu",
+            "Xiaobin Hu",
+            "Shuicheng Yan"
+        ],
+        "tldr": "This paper introduces TokenAR, a token-level enhancement framework for autoregressive models to improve multi-subject image generation by addressing identity confusion. They also introduce a new dataset, InstructAR, for this task.",
+        "tldr_zh": "本文介绍了 TokenAR，一种用于自回归模型的 Token 级别增强框架，通过解决身份混淆问题来改进多对象图像生成。他们还为这项任务引入了一个新的数据集 InstructAR。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Beyond Fixed Anchors: Precisely Erasing Concepts with Sibling Exclusive Counterparts",
+        "summary": "Existing concept erasure methods for text-to-image diffusion models commonly\nrely on fixed anchor strategies, which often lead to critical issues such as\nconcept re-emergence and erosion. To address this, we conduct causal tracing to\nreveal the inherent sensitivity of erasure to anchor selection and define\nSibling Exclusive Concepts as a superior class of anchors. Based on this\ninsight, we propose \\textbf{SELECT} (Sibling-Exclusive Evaluation for\nContextual Targeting), a dynamic anchor selection framework designed to\novercome the limitations of fixed anchors. Our framework introduces a novel\ntwo-stage evaluation mechanism that automatically discovers optimal anchors for\nprecise erasure while identifying critical boundary anchors to preserve related\nconcepts. Extensive evaluations demonstrate that SELECT, as a universal anchor\nsolution, not only efficiently adapts to multiple erasure frameworks but also\nconsistently outperforms existing baselines across key performance metrics,\naveraging only 4 seconds for anchor mining of a single concept.",
+        "url": "http://arxiv.org/abs/2510.16342v1",
+        "published_date": "2025-10-18T04:03:27+00:00",
+        "updated_date": "2025-10-18T04:03:27+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Tong Zhang",
+            "Ru Zhang",
+            "Jianyi Liu",
+            "Zhen Yang",
+            "Gongshen Liu"
+        ],
+        "tldr": "The paper introduces SELECT, a dynamic anchor selection framework for concept erasure in text-to-image diffusion models, addressing limitations of fixed anchor methods by using sibling exclusive concepts for precise and efficient erasure.",
+        "tldr_zh": "该论文介绍了一种名为SELECT的动态锚点选择框架，用于文本到图像扩散模型中的概念擦除。它通过使用同级互斥概念，解决了固定锚点方法的局限性，实现了精确高效的擦除。",
+        "relevance_score": 3,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 5
+    }
+]
