@@ -1,0 +1,204 @@
+[
+    {
+        "title": "DP$^2$O-SR: Direct Perceptual Preference Optimization for Real-World Image Super-Resolution",
+        "summary": "Benefiting from pre-trained text-to-image (T2I) diffusion models, real-world\nimage super-resolution (Real-ISR) methods can synthesize rich and realistic\ndetails. However, due to the inherent stochasticity of T2I models, different\nnoise inputs often lead to outputs with varying perceptual quality. Although\nthis randomness is sometimes seen as a limitation, it also introduces a wider\nperceptual quality range, which can be exploited to improve Real-ISR\nperformance. To this end, we introduce Direct Perceptual Preference\nOptimization for Real-ISR (DP$^2$O-SR), a framework that aligns generative\nmodels with perceptual preferences without requiring costly human annotations.\nWe construct a hybrid reward signal by combining full-reference and\nno-reference image quality assessment (IQA) models trained on large-scale human\npreference datasets. This reward encourages both structural fidelity and\nnatural appearance. To better utilize perceptual diversity, we move beyond the\nstandard best-vs-worst selection and construct multiple preference pairs from\noutputs of the same model. Our analysis reveals that the optimal selection\nratio depends on model capacity: smaller models benefit from broader coverage,\nwhile larger models respond better to stronger contrast in supervision.\nFurthermore, we propose hierarchical preference optimization, which adaptively\nweights training pairs based on intra-group reward gaps and inter-group\ndiversity, enabling more efficient and stable learning. Extensive experiments\nacross both diffusion- and flow-based T2I backbones demonstrate that DP$^2$O-SR\nsignificantly improves perceptual quality and generalizes well to real-world\nbenchmarks.",
+        "url": "http://arxiv.org/abs/2510.18851v1",
+        "published_date": "2025-10-21T17:43:23+00:00",
+        "updated_date": "2025-10-21T17:43:23+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Rongyuan Wu",
+            "Lingchen Sun",
+            "Zhengqiang Zhang",
+            "Shihao Wang",
+            "Tianhe Wu",
+            "Qiaosi Yi",
+            "Shuai Li",
+            "Lei Zhang"
+        ],
+        "tldr": "This paper introduces DP$^2$O-SR, a framework for real-world image super-resolution that leverages perceptual preferences without human annotations by optimizing generative models using a hybrid reward signal from IQA models and hierarchical preference optimization.",
+        "tldr_zh": "本文介绍了DP$^2$O-SR，一个用于真实世界图像超分辨率的框架，它通过使用IQA模型的混合奖励信号和分层偏好优化来优化生成模型，从而在不需要人工标注的情况下利用感知偏好。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Vision Foundation Models Can Be Good Tokenizers for Latent Diffusion Models",
+        "summary": "The performance of Latent Diffusion Models (LDMs) is critically dependent on\nthe quality of their visual tokenizer. While recent works have explored\nincorporating Vision Foundation Models (VFMs) via distillation, we identify a\nfundamental flaw in this approach: it inevitably weakens the robustness of\nalignment with the original VFM, causing the aligned latents to deviate\nsemantically under distribution shifts. In this paper, we bypass distillation\nby proposing a more direct approach: Vision Foundation Model Variational\nAutoencoder (VFM-VAE). To resolve the inherent tension between the VFM's\nsemantic focus and the need for pixel-level fidelity, we redesign the VFM-VAE\ndecoder with Multi-Scale Latent Fusion and Progressive Resolution\nReconstruction blocks, enabling high-quality reconstruction from spatially\ncoarse VFM features. Furthermore, we provide a comprehensive analysis of\nrepresentation dynamics during diffusion training, introducing the proposed\nSE-CKNNA metric as a more precise tool for this diagnosis. This analysis allows\nus to develop a joint tokenizer-diffusion alignment strategy that dramatically\naccelerates convergence. Our innovations in tokenizer design and training\nstrategy lead to superior performance and efficiency: our system reaches a gFID\n(w/o CFG) of 2.20 in merely 80 epochs (a 10x speedup over prior tokenizers).\nWith continued training to 640 epochs, it further attains a gFID (w/o CFG) of\n1.62, establishing direct VFM integration as a superior paradigm for LDMs.",
+        "url": "http://arxiv.org/abs/2510.18457v1",
+        "published_date": "2025-10-21T09:30:45+00:00",
+        "updated_date": "2025-10-21T09:30:45+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Tianci Bi",
+            "Xiaoyi Zhang",
+            "Yan Lu",
+            "Nanning Zheng"
+        ],
+        "tldr": "This paper introduces a novel VFM-VAE tokenizer for Latent Diffusion Models that directly integrates Vision Foundation Models, achieving superior performance and training efficiency compared to distillation-based approaches. They also present a new metric (SE-CKNNA) for analyzing representation dynamics during diffusion training and a joint alignment strategy.",
+        "tldr_zh": "本文提出了一种用于潜在扩散模型的新型VFM-VAE tokenizer，该tokenizer直接集成了视觉基础模型，与基于蒸馏的方法相比，实现了卓越的性能和训练效率。他们还提出了一种新的指标 (SE-CKNNA) 用于分析扩散训练期间的表示动态，并提出了一种联合对齐策略。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LAND: Lung and Nodule Diffusion for 3D Chest CT Synthesis with Anatomical Guidance",
+        "summary": "This work introduces a new latent diffusion model to generate high-quality 3D\nchest CT scans conditioned on 3D anatomical masks. The method synthesizes\nvolumetric images of size 256x256x256 at 1 mm isotropic resolution using a\nsingle mid-range GPU, significantly lowering the computational cost compared to\nexisting approaches. The conditioning masks delineate lung and nodule regions,\nenabling precise control over the output anatomical features. Experimental\nresults demonstrate that conditioning solely on nodule masks leads to\nanatomically incorrect outputs, highlighting the importance of incorporating\nglobal lung structure for accurate conditional synthesis. The proposed approach\nsupports the generation of diverse CT volumes with and without lung nodules of\nvarying attributes, providing a valuable tool for training AI models or\nhealthcare professionals.",
+        "url": "http://arxiv.org/abs/2510.18446v1",
+        "published_date": "2025-10-21T09:20:22+00:00",
+        "updated_date": "2025-10-21T09:20:22+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Anna Oliveras",
+            "Roger Marí",
+            "Rafael Redondo",
+            "Oriol Guardià",
+            "Ana Tost",
+            "Bhalaji Nagarajan",
+            "Carolina Migliorelli",
+            "Vicent Ribas",
+            "Petia Radeva"
+        ],
+        "tldr": "The paper introduces a latent diffusion model (LAND) for generating high-quality 3D chest CT scans conditioned on anatomical masks of lung and nodules, offering a computationally efficient way to create diverse CT volumes for AI model training.",
+        "tldr_zh": "该论文介绍了一种潜空间扩散模型 (LAND)，用于生成高质量的 3D 胸部 CT 扫描，并以肺和结节的解剖掩模为条件，提供了一种计算效率高的方法来创建用于 AI 模型训练的各种 CT 体积。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GPTFace: Generative Pre-training of Facial-Linguistic Transformer by Span Masking and Weakly Correlated Text-image Data",
+        "summary": "Compared to the prosperity of pre-training models in natural image\nunderstanding, the research on large-scale pre-training models for facial\nknowledge learning is still limited. Current approaches mainly rely on manually\nassembled and annotated face datasets for training, but labeling such datasets\nis labor-intensive and the trained models have limited scalability beyond the\ntraining data. To address these limitations, we present a generative\npre-training model for facial knowledge learning that leverages large-scale\nweb-built data for training. We use texts and images containing human faces\ncrawled from the internet and conduct pre-training on self-supervised tasks,\nincluding masked image/language modeling (MILM) and image-text matching (ITM).\nDuring the generation stage, we further utilize the image-text matching loss to\npull the generation distribution towards the control signal for controllable\nimage/text generation. Experimental results demonstrate that our model achieves\ncomparable performance to state-of-the-art pre-training models for various\nfacial downstream tasks, such as attribution classification and expression\nrecognition. Furthermore, our approach is also applicable to a wide range of\nface editing tasks, including face attribute editing, expression manipulation,\nmask removal, and photo inpainting.",
+        "url": "http://arxiv.org/abs/2510.18345v1",
+        "published_date": "2025-10-21T06:55:44+00:00",
+        "updated_date": "2025-10-21T06:55:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yudong Li",
+            "Hao Li",
+            "Xianxu Hou",
+            "Linlin Shen"
+        ],
+        "tldr": "The paper introduces GPTFace, a generative pre-training model for facial knowledge learning using weakly correlated text-image data crawled from the web, achieving comparable performance to SOTA models on various facial downstream tasks and face editing tasks.",
+        "tldr_zh": "该论文介绍了GPTFace，一种使用从网络上抓取的弱相关文本-图像数据进行面部知识学习的生成式预训练模型，在各种面部下游任务和面部编辑任务上实现了与SOTA模型相当的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Competition to Synergy: Unlocking Reinforcement Learning for Subject-Driven Image Generation",
+        "summary": "Subject-driven image generation models face a fundamental trade-off between\nidentity preservation (fidelity) and prompt adherence (editability). While\nonline reinforcement learning (RL), specifically GPRO, offers a promising\nsolution, we find that a naive application of GRPO leads to competitive\ndegradation, as the simple linear aggregation of rewards with static weights\ncauses conflicting gradient signals and a misalignment with the temporal\ndynamics of the diffusion process. To overcome these limitations, we propose\nCustomized-GRPO, a novel framework featuring two key innovations: (i)\nSynergy-Aware Reward Shaping (SARS), a non-linear mechanism that explicitly\npenalizes conflicted reward signals and amplifies synergistic ones, providing a\nsharper and more decisive gradient. (ii) Time-Aware Dynamic Weighting (TDW),\nwhich aligns the optimization pressure with the model's temporal dynamics by\nprioritizing prompt-following in the early, identity preservation in the later.\nExtensive experiments demonstrate that our method significantly outperforms\nnaive GRPO baselines, successfully mitigating competitive degradation. Our\nmodel achieves a superior balance, generating images that both preserve key\nidentity features and accurately adhere to complex textual prompts.",
+        "url": "http://arxiv.org/abs/2510.18263v1",
+        "published_date": "2025-10-21T03:32:26+00:00",
+        "updated_date": "2025-10-21T03:32:26+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV",
+            "cs.GR"
+        ],
+        "authors": [
+            "Ziwei Huang",
+            "Ying Shu",
+            "Hao Fang",
+            "Quanyu Long",
+            "Wenya Wang",
+            "Qiushi Guo",
+            "Tiezheng Ge",
+            "Leilei Gan"
+        ],
+        "tldr": "This paper introduces Customized-GRPO, a reinforcement learning framework for subject-driven image generation that addresses the trade-off between identity preservation and prompt adherence by using synergy-aware reward shaping and time-aware dynamic weighting.",
+        "tldr_zh": "本文介绍了Customized-GRPO，一种用于主题驱动图像生成的强化学习框架，通过协同感知奖励塑造和时间感知动态加权，解决了身份保持和提示遵循之间的权衡问题。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OmniNWM: Omniscient Driving Navigation World Models",
+        "summary": "Autonomous driving world models are expected to work effectively across three\ncore dimensions: state, action, and reward. Existing models, however, are\ntypically restricted to limited state modalities, short video sequences,\nimprecise action control, and a lack of reward awareness. In this paper, we\nintroduce OmniNWM, an omniscient panoramic navigation world model that\naddresses all three dimensions within a unified framework. For state, OmniNWM\njointly generates panoramic videos of RGB, semantics, metric depth, and 3D\noccupancy. A flexible forcing strategy enables high-quality long-horizon\nauto-regressive generation. For action, we introduce a normalized panoramic\nPlucker ray-map representation that encodes input trajectories into pixel-level\nsignals, enabling highly precise and generalizable control over panoramic video\ngeneration. Regarding reward, we move beyond learning reward functions with\nexternal image-based models: instead, we leverage the generated 3D occupancy to\ndirectly define rule-based dense rewards for driving compliance and safety.\nExtensive experiments demonstrate that OmniNWM achieves state-of-the-art\nperformance in video generation, control accuracy, and long-horizon stability,\nwhile providing a reliable closed-loop evaluation framework through\noccupancy-grounded rewards. Project page is available at\nhttps://github.com/Arlo0o/OmniNWM.",
+        "url": "http://arxiv.org/abs/2510.18313v1",
+        "published_date": "2025-10-21T05:49:01+00:00",
+        "updated_date": "2025-10-21T05:49:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bohan Li",
+            "Zhuang Ma",
+            "Dalong Du",
+            "Baorui Peng",
+            "Zhujin Liang",
+            "Zhenqiang Liu",
+            "Chao Ma",
+            "Yueming Jin",
+            "Hao Zhao",
+            "Wenjun Zeng",
+            "Xin Jin"
+        ],
+        "tldr": "The paper introduces OmniNWM, a novel world model for autonomous driving that unifies state, action, and reward by jointly generating panoramic videos with RGB, semantics, depth, and occupancy, enabling precise control and rule-based reward definition.",
+        "tldr_zh": "该论文介绍了OmniNWM，一种用于自动驾驶的新型世界模型，它通过联合生成具有RGB、语义、深度和占用率的全景视频来统一状态、动作和奖励，从而实现精确控制和基于规则的奖励定义。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Demystifying Transition Matching: When and Why It Can Beat Flow Matching",
+        "summary": "Flow Matching (FM) underpins many state-of-the-art generative models, yet\nrecent results indicate that Transition Matching (TM) can achieve higher\nquality with fewer sampling steps. This work answers the question of when and\nwhy TM outperforms FM. First, when the target is a unimodal Gaussian\ndistribution, we prove that TM attains strictly lower KL divergence than FM for\nfinite number of steps. The improvement arises from stochastic difference\nlatent updates in TM, which preserve target covariance that deterministic FM\nunderestimates. We then characterize convergence rates, showing that TM\nachieves faster convergence than FM under a fixed compute budget, establishing\nits advantage in the unimodal Gaussian setting. Second, we extend the analysis\nto Gaussian mixtures and identify local-unimodality regimes in which the\nsampling dynamics approximate the unimodal case, where TM can outperform FM.\nThe approximation error decreases as the minimal distance between component\nmeans increases, highlighting that TM is favored when the modes are well\nseparated. However, when the target variance approaches zero, each TM update\nconverges to the FM update, and the performance advantage of TM diminishes. In\nsummary, we show that TM outperforms FM when the target distribution has\nwell-separated modes and non-negligible variances. We validate our theoretical\nresults with controlled experiments on Gaussian distributions, and extend the\ncomparison to real-world applications in image and video generation.",
+        "url": "http://arxiv.org/abs/2510.17991v1",
+        "published_date": "2025-10-20T18:11:29+00:00",
+        "updated_date": "2025-10-20T18:11:29+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jaihoon Kim",
+            "Rajarshi Saha",
+            "Minhyuk Sung",
+            "Youngsuk Park"
+        ],
+        "tldr": "This paper theoretically and experimentally demonstrates that Transition Matching (TM) can outperform Flow Matching (FM) in generative models, particularly when the target distribution has well-separated modes and non-negligible variances, analyzing why and when TM is superior.",
+        "tldr_zh": "本文从理论和实验上证明了，在生成模型中，当目标分布具有良好分离的模式和不可忽略的方差时，转移匹配（TM）可以优于流匹配（FM），并分析了TM何时以及为何优于FM。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Ranking-based Preference Optimization for Diffusion Models from Implicit User Feedback",
+        "summary": "Direct preference optimization (DPO) methods have shown strong potential in\naligning text-to-image diffusion models with human preferences by training on\npaired comparisons. These methods improve training stability by avoiding the\nREINFORCE algorithm but still struggle with challenges such as accurately\nestimating image probabilities due to the non-linear nature of the sigmoid\nfunction and the limited diversity of offline datasets. In this paper, we\nintroduce Diffusion Denoising Ranking Optimization (Diffusion-DRO), a new\npreference learning framework grounded in inverse reinforcement learning.\nDiffusion-DRO removes the dependency on a reward model by casting preference\nlearning as a ranking problem, thereby simplifying the training objective into\na denoising formulation and overcoming the non-linear estimation issues found\nin prior methods. Moreover, Diffusion-DRO uniquely integrates offline expert\ndemonstrations with online policy-generated negative samples, enabling it to\neffectively capture human preferences while addressing the limitations of\noffline data. Comprehensive experiments show that Diffusion-DRO delivers\nimproved generation quality across a range of challenging and unseen prompts,\noutperforming state-of-the-art baselines in both both quantitative metrics and\nuser studies. Our source code and pre-trained models are available at\nhttps://github.com/basiclab/DiffusionDRO.",
+        "url": "http://arxiv.org/abs/2510.18353v1",
+        "published_date": "2025-10-21T07:22:34+00:00",
+        "updated_date": "2025-10-21T07:22:34+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yi-Lun Wu",
+            "Bo-Kai Ruan",
+            "Chiang Tseng",
+            "Hong-Han Shuai"
+        ]
+    }
+]
