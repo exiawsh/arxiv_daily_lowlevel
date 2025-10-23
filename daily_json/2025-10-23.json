@@ -1,0 +1,94 @@
+[
+    {
+        "title": "Predicting before Reconstruction: A generative prior framework for MRI acceleration",
+        "summary": "Recent advancements in artificial intelligence have created transformative\ncapabilities in image synthesis and generation, enabling diverse research\nfields to innovate at revolutionary speed and spectrum. In this study, we\nleverage this generative power to introduce a new paradigm for accelerating\nMagnetic Resonance Imaging (MRI), introducing a shift from image reconstruction\nto proactive predictive imaging. Despite being a cornerstone of modern patient\ncare, MRI's lengthy acquisition times limit clinical throughput. Our novel\nframework addresses this challenge by first predicting a target contrast image,\nwhich then serves as a data-driven prior for reconstructing highly\nunder-sampled data. This informative prior is predicted by a generative model\nconditioned on diverse data sources, such as other contrast images, previously\nscanned images, acquisition parameters, patient information. We demonstrate\nthis approach with two key applications: (1) reconstructing FLAIR images using\npredictions from T1w and/or T2w scans, and (2) reconstructing T1w images using\npredictions from previously acquired T1w scans. The framework was evaluated on\ninternal and multiple public datasets (total 14,921 scans; 1,051,904 slices),\nincluding multi-channel k-space data, for a range of high acceleration factors\n(x4, x8 and x12). The results demonstrate that our prediction-prior\nreconstruction method significantly outperforms other approaches, including\nthose with alternative or no prior information. Through this framework we\nintroduce a fundamental shift from image reconstruction towards a new paradigm\nof predictive imaging.",
+        "url": "http://arxiv.org/abs/2510.19472v1",
+        "published_date": "2025-10-22T11:07:57+00:00",
+        "updated_date": "2025-10-22T11:07:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Juhyung Park",
+            "Rokgi Hong",
+            "Roh-Eul Yoo",
+            "Jaehyeon Koo",
+            "Se Young Chun",
+            "Seung Hong Choi",
+            "Jongho Lee"
+        ],
+        "tldr": "This paper introduces a novel MRI acceleration framework that predicts target contrast images to use as priors for reconstructing under-sampled data, demonstrating improved performance over existing methods.",
+        "tldr_zh": "本文介绍了一种新颖的MRI加速框架，该框架预测目标对比度图像，并将其用作重建欠采样数据的先验，从而证明了比现有方法更好的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PCP-GAN: Property-Constrained Pore-scale image reconstruction via conditional Generative Adversarial Networks",
+        "summary": "Obtaining truly representative pore-scale images that match bulk formation\nproperties remains a fundamental challenge in subsurface characterization, as\nnatural spatial heterogeneity causes extracted sub-images to deviate\nsignificantly from core-measured values. This challenge is compounded by data\nscarcity, where physical samples are only available at sparse well locations.\nThis study presents a multi-conditional Generative Adversarial Network (cGAN)\nframework that generates representative pore-scale images with precisely\ncontrolled properties, addressing both the representativeness challenge and\ndata availability constraints. The framework was trained on thin section\nsamples from four depths (1879.50-1943.50 m) of a carbonate formation,\nsimultaneously conditioning on porosity values and depth parameters within a\nsingle unified model. This approach captures both universal pore network\nprinciples and depth-specific geological characteristics, from grainstone\nfabrics with interparticle-intercrystalline porosity to crystalline textures\nwith anhydrite inclusions. The model achieved exceptional porosity control\n(R^2=0.95) across all formations with mean absolute errors of 0.0099-0.0197.\nMorphological validation confirmed preservation of critical pore network\ncharacteristics including average pore radius, specific surface area, and\ntortuosity, with statistical differences remaining within acceptable geological\ntolerances. Most significantly, generated images demonstrated superior\nrepresentativeness with dual-constraint errors of 1.9-11.3% compared to\n36.4-578% for randomly extracted real sub-images. This capability provides\ntransformative tools for subsurface characterization, particularly valuable for\ncarbon storage, geothermal energy, and groundwater management applications\nwhere knowing the representative morphology of the pore space is critical for\nimplementing digital rock physics.",
+        "url": "http://arxiv.org/abs/2510.19465v1",
+        "published_date": "2025-10-22T10:54:51+00:00",
+        "updated_date": "2025-10-22T10:54:51+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "physics.geo-ph"
+        ],
+        "authors": [
+            "Ali Sadeghkhani",
+            "Brandon Bennett",
+            "Masoud Babaei",
+            "Arash Rabbani"
+        ],
+        "tldr": "This paper introduces PCP-GAN, a conditional GAN framework for generating representative pore-scale images with controlled properties, addressing the challenge of obtaining accurate pore-scale images in subsurface characterization. The model demonstrates superior representativeness compared to real sub-images.",
+        "tldr_zh": "本文介绍了一种名为PCP-GAN的条件生成对抗网络框架，用于生成具有可控属性的代表性孔隙尺度图像，解决了地下表征中获取准确孔隙尺度图像的挑战。该模型相比于真实子图像展现出卓越的代表性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SCEESR: Semantic-Control Edge Enhancement for Diffusion-Based Super-Resolution",
+        "summary": "Real-world image super-resolution (Real-ISR) must handle complex degradations\nand inherent reconstruction ambiguities. While generative models have improved\nperceptual quality, a key trade-off remains with computational cost. One-step\ndiffusion models offer speed but often produce structural inaccuracies due to\ndistillation artifacts. To address this, we propose a novel SR framework that\nenhances a one-step diffusion model using a ControlNet mechanism for semantic\nedge guidance. This integrates edge information to provide dynamic structural\ncontrol during single-pass inference. We also introduce a hybrid loss combining\nL2, LPIPS, and an edge-aware AME loss to optimize for pixel accuracy,\nperceptual quality, and geometric precision. Experiments show our method\neffectively improves structural integrity and realism while maintaining the\nefficiency of one-step generation, achieving a superior balance between output\nquality and inference speed. The results of test datasets will be published at\nhttps://drive.google.com/drive/folders/1amddXQ5orIyjbxHgGpzqFHZ6KTolinJF?usp=drive_link\nand the related code will be published at\nhttps://github.com/ARBEZ-ZEBRA/SCEESR.",
+        "url": "http://arxiv.org/abs/2510.19272v1",
+        "published_date": "2025-10-22T06:06:01+00:00",
+        "updated_date": "2025-10-22T06:06:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yun Kai Zhuang"
+        ],
+        "tldr": "The paper introduces SCEESR, a novel super-resolution framework that enhances one-step diffusion models with semantic edge guidance using ControlNet, improving structural integrity and realism while maintaining efficiency.",
+        "tldr_zh": "本文介绍了一种名为SCEESR的新型超分辨率框架，该框架使用ControlNet通过语义边缘引导来增强单步扩散模型，从而在保持效率的同时，提高结构完整性和真实感。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Beyond sparse denoising in frames: minimax estimation with a scattering transform",
+        "summary": "A considerable amount of research in harmonic analysis has been devoted to\nnon-linear estimators of signals contaminated by additive Gaussian noise. They\nare implemented by thresholding coefficients in a frame, which provide a sparse\nsignal representation, or by minimising their $\\ell^1$ norm. However, sparse\nestimators in frames are not sufficiently rich to adapt to complex signal\nregularities. For cartoon images whose edges are piecewise $\\bf C^\\alpha$\ncurves, wavelet, curvelet and Xlet frames are suboptimal if the Lipschitz\nexponent $\\alpha \\leq 2$ is an unknown parameter. Deep convolutional neural\nnetworks have recently obtained much better numerical results, which reach the\nminimax asymptotic bounds for all $\\alpha$. Wavelet scattering coefficients\nhave been introduced as simplified convolutional neural network models. They\nare computed by transforming the modulus of wavelet coefficients with a second\nwavelet transform. We introduce a denoising estimator by jointly minimising and\nmaximising the $\\ell^1$ norms of different subsets of scattering coefficients.\nWe prove that these $\\ell^1$ norms capture different types of geometric image\nregularity. Numerical experiments show that this denoising estimator reaches\nthe minimax asymptotic bound for cartoon images for all Lipschitz exponents\n$\\alpha \\leq 2$. We state this numerical result as a mathematical conjecture.\nIt provides a different harmonic analysis approach to suppress noise from\nsignals, and to specify the geometric regularity of functions. It also opens a\nmathematical bridge between harmonic analysis and denoising estimators with\ndeep convolutional network.",
+        "url": "http://arxiv.org/abs/2510.19612v1",
+        "published_date": "2025-10-22T14:05:25+00:00",
+        "updated_date": "2025-10-22T14:05:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Nathanaël Cuvelle--Magar",
+            "Stéphane Mallat"
+        ],
+        "tldr": "This paper introduces a denoising estimator based on minimizing and maximizing the l1 norms of scattering coefficients, demonstrating it achieves minimax asymptotic bounds for cartoon images and bridging harmonic analysis with deep convolutional networks.",
+        "tldr_zh": "本文介绍了一种基于最小化和最大化散射系数的l1范数的去噪估计器，证明了它达到了卡通图像的极小极大渐近界限，并将调和分析与深度卷积网络联系起来。",
+        "relevance_score": 6,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
