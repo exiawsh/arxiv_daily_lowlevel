@@ -1,0 +1,173 @@
+[
+    {
+        "title": "SpectraMorph: Structured Latent Learning for Self-Supervised Hyperspectral Super-Resolution",
+        "summary": "Hyperspectral sensors capture dense spectra per pixel but suffer from low\nspatial resolution, causing blurred boundaries and mixed-pixel effects.\nCo-registered companion sensors such as multispectral, RGB, or panchromatic\ncameras provide high-resolution spatial detail, motivating hyperspectral\nsuper-resolution through the fusion of hyperspectral and multispectral images\n(HSI-MSI). Existing deep learning based methods achieve strong performance but\nrely on opaque regressors that lack interpretability and often fail when the\nMSI has very few bands. We propose SpectraMorph, a physics-guided\nself-supervised fusion framework with a structured latent space. Instead of\ndirect regression, SpectraMorph enforces an unmixing bottleneck: endmember\nsignatures are extracted from the low-resolution HSI, and a compact multilayer\nperceptron predicts abundance-like maps from the MSI. Spectra are reconstructed\nby linear mixing, with training performed in a self-supervised manner via the\nMSI sensor's spectral response function. SpectraMorph produces interpretable\nintermediates, trains in under a minute, and remains robust even with a\nsingle-band (pan-chromatic) MSI. Experiments on synthetic and real-world\ndatasets show SpectraMorph consistently outperforming state-of-the-art\nunsupervised/self-supervised baselines while remaining very competitive against\nsupervised baselines.",
+        "url": "http://arxiv.org/abs/2510.20814v1",
+        "published_date": "2025-10-23T17:59:26+00:00",
+        "updated_date": "2025-10-23T17:59:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ritik Shah",
+            "Marco F Duarte"
+        ],
+        "tldr": "SpectraMorph is a physics-guided self-supervised hyperspectral super-resolution method that uses a structured latent space and an unmixing bottleneck to fuse hyperspectral and multispectral images, achieving state-of-the-art performance with interpretability and robustness.",
+        "tldr_zh": "SpectraMorph是一种基于物理的自监督高光谱超分辨率方法，它使用结构化的潜在空间和解混瓶颈来融合高光谱和多光谱图像，从而实现最先进的性能，并具有可解释性和鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AlphaFlow: Understanding and Improving MeanFlow Models",
+        "summary": "MeanFlow has recently emerged as a powerful framework for few-step generative\nmodeling trained from scratch, but its success is not yet fully understood. In\nthis work, we show that the MeanFlow objective naturally decomposes into two\nparts: trajectory flow matching and trajectory consistency. Through gradient\nanalysis, we find that these terms are strongly negatively correlated, causing\noptimization conflict and slow convergence. Motivated by these insights, we\nintroduce $\\alpha$-Flow, a broad family of objectives that unifies trajectory\nflow matching, Shortcut Model, and MeanFlow under one formulation. By adopting\na curriculum strategy that smoothly anneals from trajectory flow matching to\nMeanFlow, $\\alpha$-Flow disentangles the conflicting objectives, and achieves\nbetter convergence. When trained from scratch on class-conditional ImageNet-1K\n256x256 with vanilla DiT backbones, $\\alpha$-Flow consistently outperforms\nMeanFlow across scales and settings. Our largest $\\alpha$-Flow-XL/2+ model\nachieves new state-of-the-art results using vanilla DiT backbones, with FID\nscores of 2.58 (1-NFE) and 2.15 (2-NFE).",
+        "url": "http://arxiv.org/abs/2510.20771v1",
+        "published_date": "2025-10-23T17:45:06+00:00",
+        "updated_date": "2025-10-23T17:45:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Huijie Zhang",
+            "Aliaksandr Siarohin",
+            "Willi Menapace",
+            "Michael Vasilkovsky",
+            "Sergey Tulyakov",
+            "Qing Qu",
+            "Ivan Skorokhodov"
+        ],
+        "tldr": "The paper identifies conflicting objectives within the MeanFlow generative modeling framework and introduces AlphaFlow, a modified objective with a curriculum strategy, achieving state-of-the-art image generation results on ImageNet with DiT backbones.",
+        "tldr_zh": "该论文发现了 MeanFlow 生成模型框架中存在的冲突目标，并提出了 AlphaFlow，一种带有课程策略的改进目标函数，在使用 DiT backbone 的 ImageNet 上取得了最先进的图像生成效果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DyPE: Dynamic Position Extrapolation for Ultra High Resolution Diffusion",
+        "summary": "Diffusion Transformer models can generate images with remarkable fidelity and\ndetail, yet training them at ultra-high resolutions remains extremely costly\ndue to the self-attention mechanism's quadratic scaling with the number of\nimage tokens. In this paper, we introduce Dynamic Position Extrapolation\n(DyPE), a novel, training-free method that enables pre-trained diffusion\ntransformers to synthesize images at resolutions far beyond their training\ndata, with no additional sampling cost. DyPE takes advantage of the spectral\nprogression inherent to the diffusion process, where low-frequency structures\nconverge early, while high-frequencies take more steps to resolve.\nSpecifically, DyPE dynamically adjusts the model's positional encoding at each\ndiffusion step, matching their frequency spectrum with the current stage of the\ngenerative process. This approach allows us to generate images at resolutions\nthat exceed the training resolution dramatically, e.g., 16 million pixels using\nFLUX. On multiple benchmarks, DyPE consistently improves performance and\nachieves state-of-the-art fidelity in ultra-high-resolution image generation,\nwith gains becoming even more pronounced at higher resolutions. Project page is\navailable at https://noamissachar.github.io/DyPE/.",
+        "url": "http://arxiv.org/abs/2510.20766v1",
+        "published_date": "2025-10-23T17:42:14+00:00",
+        "updated_date": "2025-10-23T17:42:14+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Noam Issachar",
+            "Guy Yariv",
+            "Sagie Benaim",
+            "Yossi Adi",
+            "Dani Lischinski",
+            "Raanan Fattal"
+        ],
+        "tldr": "The paper introduces DyPE, a training-free method that dynamically adjusts positional encodings in diffusion transformer models to enable ultra-high-resolution image generation beyond the training resolution, achieving state-of-the-art fidelity.",
+        "tldr_zh": "该论文介绍了一种名为DyPE的免训练方法，它动态调整扩散Transformer模型中的位置编码，以实现超出训练分辨率的超高分辨率图像生成，并达到最先进的保真度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AutoScape: Geometry-Consistent Long-Horizon Scene Generation",
+        "summary": "This paper proposes AutoScape, a long-horizon driving scene generation\nframework. At its core is a novel RGB-D diffusion model that iteratively\ngenerates sparse, geometrically consistent keyframes, serving as reliable\nanchors for the scene's appearance and geometry. To maintain long-range\ngeometric consistency, the model 1) jointly handles image and depth in a shared\nlatent space, 2) explicitly conditions on the existing scene geometry (i.e.,\nrendered point clouds) from previously generated keyframes, and 3) steers the\nsampling process with a warp-consistent guidance. Given high-quality RGB-D\nkeyframes, a video diffusion model then interpolates between them to produce\ndense and coherent video frames. AutoScape generates realistic and\ngeometrically consistent driving videos of over 20 seconds, improving the\nlong-horizon FID and FVD scores over the prior state-of-the-art by 48.6\\% and\n43.0\\%, respectively.",
+        "url": "http://arxiv.org/abs/2510.20726v1",
+        "published_date": "2025-10-23T16:44:34+00:00",
+        "updated_date": "2025-10-23T16:44:34+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiacheng Chen",
+            "Ziyu Jiang",
+            "Mingfu Liang",
+            "Bingbing Zhuang",
+            "Jong-Chyi Su",
+            "Sparsh Garg",
+            "Ying Wu",
+            "Manmohan Chandraker"
+        ],
+        "tldr": "AutoScape is a framework for generating long-horizon driving scene videos using a novel RGB-D diffusion model with geometric consistency, achieving state-of-the-art results. It uses keyframes and point clouds to maintain coherence across the long-range video.",
+        "tldr_zh": "AutoScape是一个用于生成长时域驾驶场景视频的框架，它使用了一种新颖的具有几何一致性的RGB-D扩散模型，并取得了最先进的结果。它使用关键帧和点云来保持长时域视频的连贯性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Blur2seq: Blind Deblurring and Camera Trajectory Estimation from a Single Camera Motion-blurred Image",
+        "summary": "Motion blur caused by camera shake, particularly under large or rotational\nmovements, remains a major challenge in image restoration. We propose a deep\nlearning framework that jointly estimates the latent sharp image and the\nunderlying camera motion trajectory from a single blurry image. Our method\nleverages the Projective Motion Blur Model (PMBM), implemented efficiently\nusing a differentiable blur creation module compatible with modern networks. A\nneural network predicts a full 3D rotation trajectory, which guides a\nmodel-based restoration network trained end-to-end. This modular architecture\nprovides interpretability by revealing the camera motion that produced the\nblur. Moreover, this trajectory enables the reconstruction of the sequence of\nsharp images that generated the observed blurry image. To further refine\nresults, we optimize the trajectory post-inference via a reblur loss, improving\nconsistency between the blurry input and the restored output. Extensive\nexperiments show that our method achieves state-of-the-art performance on both\nsynthetic and real datasets, particularly in cases with severe or spatially\nvariant blur, where end-to-end deblurring networks struggle.\n  Code and trained models are available at\nhttps://github.com/GuillermoCarbajal/Blur2Seq/",
+        "url": "http://arxiv.org/abs/2510.20539v1",
+        "published_date": "2025-10-23T13:26:07+00:00",
+        "updated_date": "2025-10-23T13:26:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Guillermo Carbajal",
+            "Andrés Almansa",
+            "Pablo Musé"
+        ],
+        "tldr": "The paper introduces Blur2Seq, a deep learning framework that jointly estimates a sharp image and the camera motion trajectory from a single motion-blurred image, achieving state-of-the-art deblurring performance, particularly in cases with severe blur.",
+        "tldr_zh": "本文介绍了一种名为Blur2Seq的深度学习框架，该框架可以从单张运动模糊图像中联合估计清晰图像和相机运动轨迹，从而实现最先进的去模糊性能，尤其是在严重模糊的情况下。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AccuQuant: Simulating Multiple Denoising Steps for Quantizing Diffusion Models",
+        "summary": "We present in this paper a novel post-training quantization (PTQ) method,\ndubbed AccuQuant, for diffusion models. We show analytically and empirically\nthat quantization errors for diffusion models are accumulated over denoising\nsteps in a sampling process. To alleviate the error accumulation problem,\nAccuQuant minimizes the discrepancies between outputs of a full-precision\ndiffusion model and its quantized version within a couple of denoising steps.\nThat is, it simulates multiple denoising steps of a diffusion sampling process\nexplicitly for quantization, accounting the accumulated errors over multiple\ndenoising steps, which is in contrast to previous approaches to imitating a\ntraining process of diffusion models, namely, minimizing the discrepancies\nindependently for each step. We also present an efficient implementation\ntechnique for AccuQuant, together with a novel objective, which reduces a\nmemory complexity significantly from $\\mathcal{O}(n)$ to $\\mathcal{O}(1)$,\nwhere $n$ is the number of denoising steps. We demonstrate the efficacy and\nefficiency of AccuQuant across various tasks and diffusion models on standard\nbenchmarks.",
+        "url": "http://arxiv.org/abs/2510.20348v1",
+        "published_date": "2025-10-23T08:48:12+00:00",
+        "updated_date": "2025-10-23T08:48:12+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Seunghoon Lee",
+            "Jeongwoo Choi",
+            "Byunggwan Son",
+            "Jaehyeon Moon",
+            "Jeimin Jeon",
+            "Bumsub Ham"
+        ],
+        "tldr": "This paper introduces AccuQuant, a post-training quantization method for diffusion models that minimizes accumulated quantization errors over multiple denoising steps, achieving better performance and efficiency compared to prior approaches.",
+        "tldr_zh": "本文介绍了一种名为AccuQuant的扩散模型训练后量化方法，该方法通过最小化多个去噪步骤中累积的量化误差，与先前方法相比，实现了更好的性能和效率。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MEIcoder: Decoding Visual Stimuli from Neural Activity by Leveraging Most Exciting Inputs",
+        "summary": "Decoding visual stimuli from neural population activity is crucial for\nunderstanding the brain and for applications in brain-machine interfaces.\nHowever, such biological data is often scarce, particularly in primates or\nhumans, where high-throughput recording techniques, such as two-photon imaging,\nremain challenging or impossible to apply. This, in turn, poses a challenge for\ndeep learning decoding techniques. To overcome this, we introduce MEIcoder, a\nbiologically informed decoding method that leverages neuron-specific most\nexciting inputs (MEIs), a structural similarity index measure loss, and\nadversarial training. MEIcoder achieves state-of-the-art performance in\nreconstructing visual stimuli from single-cell activity in primary visual\ncortex (V1), especially excelling on small datasets with fewer recorded\nneurons. Using ablation studies, we demonstrate that MEIs are the main drivers\nof the performance, and in scaling experiments, we show that MEIcoder can\nreconstruct high-fidelity natural-looking images from as few as 1,000-2,500\nneurons and less than 1,000 training data points. We also propose a unified\nbenchmark with over 160,000 samples to foster future research. Our results\ndemonstrate the feasibility of reliable decoding in early visual system and\nprovide practical insights for neuroscience and neuroengineering applications.",
+        "url": "http://arxiv.org/abs/2510.20762v1",
+        "published_date": "2025-10-23T17:35:34+00:00",
+        "updated_date": "2025-10-23T17:35:34+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jan Sobotka",
+            "Luca Baroni",
+            "Ján Antolík"
+        ],
+        "tldr": "The paper introduces MEIcoder, a biologically inspired deep learning method for decoding visual stimuli from neural activity, achieving state-of-the-art performance with small datasets, especially in reconstructing images from V1 neuron activity.",
+        "tldr_zh": "该论文介绍了MEIcoder，一种受生物学启发的深度学习方法，用于从神经活动中解码视觉刺激。该方法在小数据集上实现了最先进的性能，尤其擅长从V1神经元活动中重建图像。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

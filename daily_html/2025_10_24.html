@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 14, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - October 24, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 14, 2025</p>
+            <p>October 24, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,35 +215,32 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Diffusion Transformers with Representation Autoencoders</h2>
+            <h2 class="paper-title">SpectraMorph: Structured Latent Learning for Self-Supervised Hyperspectral Super-Resolution</h2>
             
-            <p class="paper-summary">Latent generative modeling, where a pretrained autoencoder maps pixels into a
-latent space for the diffusion process, has become the standard strategy for
-Diffusion Transformers (DiT); however, the autoencoder component has barely
-evolved. Most DiTs continue to rely on the original VAE encoder, which
-introduces several limitations: outdated backbones that compromise
-architectural simplicity, low-dimensional latent spaces that restrict
-information capacity, and weak representations that result from purely
-reconstruction-based training and ultimately limit generative quality. In this
-work, we explore replacing the VAE with pretrained representation encoders
-(e.g., DINO, SigLIP, MAE) paired with trained decoders, forming what we term
-Representation Autoencoders (RAEs). These models provide both high-quality
-reconstructions and semantically rich latent spaces, while allowing for a
-scalable transformer-based architecture. Since these latent spaces are
-typically high-dimensional, a key challenge is enabling diffusion transformers
-to operate effectively within them. We analyze the sources of this difficulty,
-propose theoretically motivated solutions, and validate them empirically. Our
-approach achieves faster convergence without auxiliary representation alignment
-losses. Using a DiT variant equipped with a lightweight, wide DDT head, we
-achieve strong image generation results on ImageNet: 1.51 FID at 256x256 (no
-guidance) and 1.13 at both 256x256 and 512x512 (with guidance). RAE offers
-clear advantages and should be the new default for diffusion transformer
-training.</p>
+            <p class="paper-summary">Hyperspectral sensors capture dense spectra per pixel but suffer from low
+spatial resolution, causing blurred boundaries and mixed-pixel effects.
+Co-registered companion sensors such as multispectral, RGB, or panchromatic
+cameras provide high-resolution spatial detail, motivating hyperspectral
+super-resolution through the fusion of hyperspectral and multispectral images
+(HSI-MSI). Existing deep learning based methods achieve strong performance but
+rely on opaque regressors that lack interpretability and often fail when the
+MSI has very few bands. We propose SpectraMorph, a physics-guided
+self-supervised fusion framework with a structured latent space. Instead of
+direct regression, SpectraMorph enforces an unmixing bottleneck: endmember
+signatures are extracted from the low-resolution HSI, and a compact multilayer
+perceptron predicts abundance-like maps from the MSI. Spectra are reconstructed
+by linear mixing, with training performed in a self-supervised manner via the
+MSI sensor's spectral response function. SpectraMorph produces interpretable
+intermediates, trains in under a minute, and remains robust even with a
+single-band (pan-chromatic) MSI. Experiments on synthetic and real-world
+datasets show SpectraMorph consistently outperforming state-of-the-art
+unsupervised/self-supervised baselines while remaining very competitive against
+supervised baselines.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes using Representation Autoencoders (RAEs), which combine pre-trained representation encoders (like DINO, SigLIP, MAE) with trained decoders, to improve Diffusion Transformers (DiTs). RAEs offer better image generation results and faster convergence compared to traditional VAE-based DiTs.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SpectraMorph is a physics-guided self-supervised hyperspectral super-resolution method that uses a structured latent space and an unmixing bottleneck to fuse hyperspectral and multispectral images, achieving state-of-the-art performance with interpretability and robustness.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出使用表征自编码器 (RAEs) 来改进扩散Transformer (DiTs)，该方法结合了预训练的表征编码器（如 DINO、SigLIP、MAE）和训练的解码器。与传统的基于VAE的DiTs相比，RAEs提供了更好的图像生成结果和更快的收敛速度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SpectraMorph是一种基于物理的自监督高光谱超分辨率方法，它使用结构化的潜在空间和解混瓶颈来融合高光谱和多光谱图像，从而实现最先进的性能，并具有可解释性和鲁棒性。</p>
             
 
             
@@ -253,8 +250,8 @@ training.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -314,11 +311,11 @@ training.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.11690v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.20814v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Boyang Zheng, Nanye Ma, Shengbang Tong, Saining Xie</p>
+            <p class="paper-authors">Authors: Ritik Shah, Marco F Duarte</p>
             
         </motion.div>
         
@@ -330,31 +327,28 @@ training.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Massive Activations are the Key to Local Detail Synthesis in Diffusion Transformers</h2>
+            <h2 class="paper-title">AlphaFlow: Understanding and Improving MeanFlow Models</h2>
             
-            <p class="paper-summary">Diffusion Transformers (DiTs) have recently emerged as a powerful backbone
-for visual generation. Recent observations reveal \emph{Massive Activations}
-(MAs) in their internal feature maps, yet their function remains poorly
-understood. In this work, we systematically investigate these activations to
-elucidate their role in visual generation. We found that these massive
-activations occur across all spatial tokens, and their distribution is
-modulated by the input timestep embeddings. Importantly, our investigations
-further demonstrate that these massive activations play a key role in local
-detail synthesis, while having minimal impact on the overall semantic content
-of output. Building on these insights, we propose \textbf{D}etail
-\textbf{G}uidance (\textbf{DG}), a MAs-driven, training-free self-guidance
-strategy to explicitly enhance local detail fidelity for DiTs. Specifically, DG
-constructs a degraded ``detail-deficient'' model by disrupting MAs and
-leverages it to guide the original network toward higher-quality detail
-synthesis. Our DG can seamlessly integrate with Classifier-Free Guidance (CFG),
-enabling further refinements of fine-grained details. Extensive experiments
-demonstrate that our DG consistently improves fine-grained detail quality
-across various pre-trained DiTs (\eg, SD3, SD3.5, and Flux).</p>
+            <p class="paper-summary">MeanFlow has recently emerged as a powerful framework for few-step generative
+modeling trained from scratch, but its success is not yet fully understood. In
+this work, we show that the MeanFlow objective naturally decomposes into two
+parts: trajectory flow matching and trajectory consistency. Through gradient
+analysis, we find that these terms are strongly negatively correlated, causing
+optimization conflict and slow convergence. Motivated by these insights, we
+introduce $\alpha$-Flow, a broad family of objectives that unifies trajectory
+flow matching, Shortcut Model, and MeanFlow under one formulation. By adopting
+a curriculum strategy that smoothly anneals from trajectory flow matching to
+MeanFlow, $\alpha$-Flow disentangles the conflicting objectives, and achieves
+better convergence. When trained from scratch on class-conditional ImageNet-1K
+256x256 with vanilla DiT backbones, $\alpha$-Flow consistently outperforms
+MeanFlow across scales and settings. Our largest $\alpha$-Flow-XL/2+ model
+achieves new state-of-the-art results using vanilla DiT backbones, with FID
+scores of 2.58 (1-NFE) and 2.15 (2-NFE).</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper investigates the role of Massive Activations (MAs) in Diffusion Transformers (DiTs) for visual generation, finding they are crucial for local detail synthesis. They propose Detail Guidance (DG), a training-free strategy to enhance detail fidelity by leveraging MAs.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper identifies conflicting objectives within the MeanFlow generative modeling framework and introduces AlphaFlow, a modified objective with a curriculum strategy, achieving state-of-the-art image generation results on ImageNet with DiT backbones.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文研究了扩散Transformer (DiT)中大规模激活(MA)在视觉生成中的作用，发现它们对于局部细节合成至关重要。他们提出了一种名为细节指导(DG)的免训练策略，通过利用MA来增强细节保真度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文发现了 MeanFlow 生成模型框架中存在的冲突目标，并提出了 AlphaFlow，一种带有课程策略的改进目标函数，在使用 DiT backbone 的 ImageNet 上取得了最先进的图像生成效果。</p>
             
 
             
@@ -372,24 +366,24 @@ across various pre-trained DiTs (\eg, SD3, SD3.5, and Flux).</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -425,11 +419,11 @@ across various pre-trained DiTs (\eg, SD3, SD3.5, and Flux).</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.11538v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.20771v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Chaofan Gan, Zicheng Zhao, Yuanpeng Tu, Xi Chen, Ziran Qin, Tieyuan Chen, Mehrtash Harandi, Weiyao Lin</p>
+            <p class="paper-authors">Authors: Huijie Zhang, Aliaksandr Siarohin, Willi Menapace, Michael Vasilkovsky, Sergey Tulyakov, Qing Qu, Ivan Skorokhodov</p>
             
         </motion.div>
         
@@ -441,31 +435,356 @@ across various pre-trained DiTs (\eg, SD3, SD3.5, and Flux).</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DISC-GAN: Disentangling Style and Content for Cluster-Specific Synthetic Underwater Image Generation</h2>
+            <h2 class="paper-title">DyPE: Dynamic Position Extrapolation for Ultra High Resolution Diffusion</h2>
             
-            <p class="paper-summary">In this paper, we propose a novel framework, Disentangled Style-Content GAN
-(DISC-GAN), which integrates style-content disentanglement with a
-cluster-specific training strategy towards photorealistic underwater image
-synthesis. The quality of synthetic underwater images is challenged by optical
-due to phenomena such as color attenuation and turbidity. These phenomena are
-represented by distinct stylistic variations across different waterbodies, such
-as changes in tint and haze. While generative models are well-suited to capture
-complex patterns, they often lack the ability to model the non-uniform
-conditions of diverse underwater environments. To address these challenges, we
-employ K-means clustering to partition a dataset into style-specific domains.
-We use separate encoders to get latent spaces for style and content; we further
-integrate these latent representations via Adaptive Instance Normalization
-(AdaIN) and decode the result to produce the final synthetic image. The model
-is trained independently on each style cluster to preserve domain-specific
-characteristics. Our framework demonstrates state-of-the-art performance,
-obtaining a Structural Similarity Index (SSIM) of 0.9012, an average Peak
-Signal-to-Noise Ratio (PSNR) of 32.5118 dB, and a Frechet Inception Distance
-(FID) of 13.3728.</p>
+            <p class="paper-summary">Diffusion Transformer models can generate images with remarkable fidelity and
+detail, yet training them at ultra-high resolutions remains extremely costly
+due to the self-attention mechanism's quadratic scaling with the number of
+image tokens. In this paper, we introduce Dynamic Position Extrapolation
+(DyPE), a novel, training-free method that enables pre-trained diffusion
+transformers to synthesize images at resolutions far beyond their training
+data, with no additional sampling cost. DyPE takes advantage of the spectral
+progression inherent to the diffusion process, where low-frequency structures
+converge early, while high-frequencies take more steps to resolve.
+Specifically, DyPE dynamically adjusts the model's positional encoding at each
+diffusion step, matching their frequency spectrum with the current stage of the
+generative process. This approach allows us to generate images at resolutions
+that exceed the training resolution dramatically, e.g., 16 million pixels using
+FLUX. On multiple benchmarks, DyPE consistently improves performance and
+achieves state-of-the-art fidelity in ultra-high-resolution image generation,
+with gains becoming even more pronounced at higher resolutions. Project page is
+available at https://noamissachar.github.io/DyPE/.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DISC-GAN, a novel GAN-based framework that disentangles style and content for cluster-specific underwater image generation, achieving state-of-the-art results in SSIM, PSNR, and FID.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DyPE, a training-free method that dynamically adjusts positional encodings in diffusion transformer models to enable ultra-high-resolution image generation beyond the training resolution, achieving state-of-the-art fidelity.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DISC-GAN，一种新颖的基于GAN的框架，可解开风格和内容，用于特定于集群的水下图像生成，并在SSIM、PSNR和FID方面取得了最先进的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为DyPE的免训练方法，它动态调整扩散Transformer模型中的位置编码，以实现超出训练分辨率的超高分辨率图像生成，并达到最先进的保真度。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.20766v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Noam Issachar, Guy Yariv, Sagie Benaim, Yossi Adi, Dani Lischinski, Raanan Fattal</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">AutoScape: Geometry-Consistent Long-Horizon Scene Generation</h2>
+            
+            <p class="paper-summary">This paper proposes AutoScape, a long-horizon driving scene generation
+framework. At its core is a novel RGB-D diffusion model that iteratively
+generates sparse, geometrically consistent keyframes, serving as reliable
+anchors for the scene's appearance and geometry. To maintain long-range
+geometric consistency, the model 1) jointly handles image and depth in a shared
+latent space, 2) explicitly conditions on the existing scene geometry (i.e.,
+rendered point clouds) from previously generated keyframes, and 3) steers the
+sampling process with a warp-consistent guidance. Given high-quality RGB-D
+keyframes, a video diffusion model then interpolates between them to produce
+dense and coherent video frames. AutoScape generates realistic and
+geometrically consistent driving videos of over 20 seconds, improving the
+long-horizon FID and FVD scores over the prior state-of-the-art by 48.6\% and
+43.0\%, respectively.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: AutoScape is a framework for generating long-horizon driving scene videos using a novel RGB-D diffusion model with geometric consistency, achieving state-of-the-art results. It uses keyframes and point clouds to maintain coherence across the long-range video.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: AutoScape是一个用于生成长时域驾驶场景视频的框架，它使用了一种新颖的具有几何一致性的RGB-D扩散模型，并取得了最先进的结果。它使用关键帧和点云来保持长时域视频的连贯性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.20726v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Jiacheng Chen, Ziyu Jiang, Mingfu Liang, Bingbing Zhuang, Jong-Chyi Su, Sparsh Garg, Ying Wu, Manmohan Chandraker</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Blur2seq: Blind Deblurring and Camera Trajectory Estimation from a Single Camera Motion-blurred Image</h2>
+            
+            <p class="paper-summary">Motion blur caused by camera shake, particularly under large or rotational
+movements, remains a major challenge in image restoration. We propose a deep
+learning framework that jointly estimates the latent sharp image and the
+underlying camera motion trajectory from a single blurry image. Our method
+leverages the Projective Motion Blur Model (PMBM), implemented efficiently
+using a differentiable blur creation module compatible with modern networks. A
+neural network predicts a full 3D rotation trajectory, which guides a
+model-based restoration network trained end-to-end. This modular architecture
+provides interpretability by revealing the camera motion that produced the
+blur. Moreover, this trajectory enables the reconstruction of the sequence of
+sharp images that generated the observed blurry image. To further refine
+results, we optimize the trajectory post-inference via a reblur loss, improving
+consistency between the blurry input and the restored output. Extensive
+experiments show that our method achieves state-of-the-art performance on both
+synthetic and real datasets, particularly in cases with severe or spatially
+variant blur, where end-to-end deblurring networks struggle.
+  Code and trained models are available at
+https://github.com/GuillermoCarbajal/Blur2Seq/</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Blur2Seq, a deep learning framework that jointly estimates a sharp image and the camera motion trajectory from a single motion-blurred image, achieving state-of-the-art deblurring performance, particularly in cases with severe blur.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为Blur2Seq的深度学习框架，该框架可以从单张运动模糊图像中联合估计清晰图像和相机运动轨迹，从而实现最先进的去模糊性能，尤其是在严重模糊的情况下。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.20539v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Guillermo Carbajal, Andrés Almansa, Pablo Musé</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">AccuQuant: Simulating Multiple Denoising Steps for Quantizing Diffusion Models</h2>
+            
+            <p class="paper-summary">We present in this paper a novel post-training quantization (PTQ) method,
+dubbed AccuQuant, for diffusion models. We show analytically and empirically
+that quantization errors for diffusion models are accumulated over denoising
+steps in a sampling process. To alleviate the error accumulation problem,
+AccuQuant minimizes the discrepancies between outputs of a full-precision
+diffusion model and its quantized version within a couple of denoising steps.
+That is, it simulates multiple denoising steps of a diffusion sampling process
+explicitly for quantization, accounting the accumulated errors over multiple
+denoising steps, which is in contrast to previous approaches to imitating a
+training process of diffusion models, namely, minimizing the discrepancies
+independently for each step. We also present an efficient implementation
+technique for AccuQuant, together with a novel objective, which reduces a
+memory complexity significantly from $\mathcal{O}(n)$ to $\mathcal{O}(1)$,
+where $n$ is the number of denoising steps. We demonstrate the efficacy and
+efficiency of AccuQuant across various tasks and diffusion models on standard
+benchmarks.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces AccuQuant, a post-training quantization method for diffusion models that minimizes accumulated quantization errors over multiple denoising steps, achieving better performance and efficiency compared to prior approaches.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为AccuQuant的扩散模型训练后量化方法，该方法通过最小化多个去噪步骤中累积的量化误差，与先前方法相比，实现了更好的性能和效率。</p>
             
 
             
@@ -536,352 +855,11 @@ Signal-to-Noise Ratio (PSNR) of 32.5118 dB, and a Frechet Inception Distance
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.10782v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.20348v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Sneha Varur, Anirudh R Hanchinamani, Tarun S Bagewadi, Uma Mudenagudi, Chaitra D Desai, Sujata C, Padmashree Desai, Sumit Meharwade</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training</h2>
-            
-            <p class="paper-summary">In this work, we propose DiT360, a DiT-based framework that performs hybrid
-training on perspective and panoramic data for panoramic image generation. For
-the issues of maintaining geometric fidelity and photorealism in generation
-quality, we attribute the main reason to the lack of large-scale, high-quality,
-real-world panoramic data, where such a data-centric view differs from prior
-methods that focus on model design. Basically, DiT360 has several key modules
-for inter-domain transformation and intra-domain augmentation, applied at both
-the pre-VAE image level and the post-VAE token level. At the image level, we
-incorporate cross-domain knowledge through perspective image guidance and
-panoramic refinement, which enhance perceptual quality while regularizing
-diversity and photorealism. At the token level, hybrid supervision is applied
-across multiple modules, which include circular padding for boundary
-continuity, yaw loss for rotational robustness, and cube loss for distortion
-awareness. Extensive experiments on text-to-panorama, inpainting, and
-outpainting tasks demonstrate that our method achieves better boundary
-consistency and image fidelity across eleven quantitative metrics. Our code is
-available at https://github.com/Insta360-Research-Team/DiT360.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: DiT360 is a DiT-based framework for high-fidelity panoramic image generation using a hybrid training approach on perspective and panoramic data, focusing on improving geometric fidelity and photorealism by addressing the lack of high-quality panoramic datasets.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: DiT360是一个基于DiT框架的全景图像生成方法，它采用透视和全景数据的混合训练方法，旨在通过解决高质量全景数据集的缺乏来提高几何保真度和照片真实感。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.11712v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Haoran Feng, Dizhe Zhang, Xiangtai Li, Bo Du, Lu Qi</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Uncertainty-Aware ControlNet: Bridging Domain Gaps with Synthetic Image Generation</h2>
-            
-            <p class="paper-summary">Generative Models are a valuable tool for the controlled creation of
-high-quality image data. Controlled diffusion models like the ControlNet have
-allowed the creation of labeled distributions. Such synthetic datasets can
-augment the original training distribution when discriminative models, like
-semantic segmentation, are trained. However, this augmentation effect is
-limited since ControlNets tend to reproduce the original training distribution.
-  This work introduces a method to utilize data from unlabeled domains to train
-ControlNets by introducing the concept of uncertainty into the control
-mechanism. The uncertainty indicates that a given image was not part of the
-training distribution of a downstream task, e.g., segmentation. Thus, two types
-of control are engaged in the final network: an uncertainty control from an
-unlabeled dataset and a semantic control from the labeled dataset. The
-resulting ControlNet allows us to create annotated data with high uncertainty
-from the target domain, i.e., synthetic data from the unlabeled distribution
-with labels. In our scenario, we consider retinal OCTs, where typically
-high-quality Spectralis images are available with given ground truth
-segmentations, enabling the training of segmentation networks. The recent
-development in Home-OCT devices, however, yields retinal OCTs with lower
-quality and a large domain shift, such that out-of-the-pocket segmentation
-networks cannot be applied for this type of data. Synthesizing annotated images
-from the Home-OCT domain using the proposed approach closes this gap and leads
-to significantly improved segmentation results without adding any further
-supervision. The advantage of uncertainty-guidance becomes obvious when
-compared to style transfer: it enables arbitrary domain shifts without any
-strict learning of an image style. This is also demonstrated in a traffic scene
-experiment.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces an uncertainty-aware ControlNet for synthetic image generation to bridge domain gaps, particularly for cases where labeled data in the target domain is scarce, using retinal OCT images as an example.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种不确定性感知的 ControlNet，用于合成图像生成以弥合域差距，特别是在目标域中标记数据稀缺的情况下，并以视网膜 OCT 图像为例。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.11346v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Joshua Niemeijer, Jan Ehrhardt, Heinz Handels, Hristina Uzunova</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Demystifying Numerosity in Diffusion Models -- Limitations and Remedies</h2>
-            
-            <p class="paper-summary">Numerosity remains a challenge for state-of-the-art text-to-image generation
-models like FLUX and GPT-4o, which often fail to accurately follow counting
-instructions in text prompts. In this paper, we aim to study a fundamental yet
-often overlooked question: Can diffusion models inherently generate the correct
-number of objects specified by a textual prompt simply by scaling up the
-dataset and model size? To enable rigorous and reproducible evaluation, we
-construct a clean synthetic numerosity benchmark comprising two complementary
-datasets: GrayCount250 for controlled scaling studies, and NaturalCount6
-featuring complex naturalistic scenes. Second, we empirically show that the
-scaling hypothesis does not hold: larger models and datasets alone fail to
-improve counting accuracy on our benchmark. Our analysis identifies a key
-reason: diffusion models tend to rely heavily on the noise initialization
-rather than the explicit numerosity specified in the prompt. We observe that
-noise priors exhibit biases toward specific object counts. In addition, we
-propose an effective strategy for controlling numerosity by injecting
-count-aware layout information into the noise prior. Our method achieves
-significant gains, improving accuracy on GrayCount250 from 20.0\% to 85.3\% and
-on NaturalCount6 from 74.8\% to 86.3\%, demonstrating effective generalization
-across settings.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper investigates why diffusion models struggle with accurate object counting and proposes a method to improve numerosity control by injecting count-aware layout information into the noise prior, achieving significant accuracy gains.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文研究了扩散模型在精确物体计数方面的困难，并提出了一种通过将计数感知的布局信息注入噪声先验来改善数量控制的方法，从而显著提高了准确性。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.11117v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yaqi Zhao, Xiaochen Wang, Li Dong, Wentao Zhang, Yuhui Yuan</p>
+            <p class="paper-authors">Authors: Seunghoon Lee, Jeongwoo Choi, Byunggwan Son, Jaehyeon Moon, Jeimin Jeon, Bumsub Ham</p>
             
         </motion.div>
         
@@ -893,26 +871,31 @@ across settings.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Zero-shot Face Editing via ID-Attribute Decoupled Inversion</h2>
+            <h2 class="paper-title">MEIcoder: Decoding Visual Stimuli from Neural Activity by Leveraging Most Exciting Inputs</h2>
             
-            <p class="paper-summary">Recent advancements in text-guided diffusion models have shown promise for
-general image editing via inversion techniques, but often struggle to maintain
-ID and structural consistency in real face editing tasks. To address this
-limitation, we propose a zero-shot face editing method based on ID-Attribute
-Decoupled Inversion. Specifically, we decompose the face representation into ID
-and attribute features, using them as joint conditions to guide both the
-inversion and the reverse diffusion processes. This allows independent control
-over ID and attributes, ensuring strong ID preservation and structural
-consistency while enabling precise facial attribute manipulation. Our method
-supports a wide range of complex multi-attribute face editing tasks using only
-text prompts, without requiring region-specific input, and operates at a speed
-comparable to DDIM inversion. Comprehensive experiments demonstrate its
-practicality and effectiveness.</p>
+            <p class="paper-summary">Decoding visual stimuli from neural population activity is crucial for
+understanding the brain and for applications in brain-machine interfaces.
+However, such biological data is often scarce, particularly in primates or
+humans, where high-throughput recording techniques, such as two-photon imaging,
+remain challenging or impossible to apply. This, in turn, poses a challenge for
+deep learning decoding techniques. To overcome this, we introduce MEIcoder, a
+biologically informed decoding method that leverages neuron-specific most
+exciting inputs (MEIs), a structural similarity index measure loss, and
+adversarial training. MEIcoder achieves state-of-the-art performance in
+reconstructing visual stimuli from single-cell activity in primary visual
+cortex (V1), especially excelling on small datasets with fewer recorded
+neurons. Using ablation studies, we demonstrate that MEIs are the main drivers
+of the performance, and in scaling experiments, we show that MEIcoder can
+reconstruct high-fidelity natural-looking images from as few as 1,000-2,500
+neurons and less than 1,000 training data points. We also propose a unified
+benchmark with over 160,000 samples to foster future research. Our results
+demonstrate the feasibility of reliable decoding in early visual system and
+provide practical insights for neuroscience and neuroengineering applications.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper presents a zero-shot face editing method using ID-Attribute Decoupled Inversion to improve ID preservation and structural consistency in text-guided face editing, which often suffers in current diffusion models.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MEIcoder, a biologically inspired deep learning method for decoding visual stimuli from neural activity, achieving state-of-the-art performance with small datasets, especially in reconstructing images from V1 neuron activity.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种零样本人脸编辑方法，通过ID-属性解耦反演来改进文本引导人脸编辑中的ID保持和结构一致性，而这通常是当前扩散模型所欠缺的。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了MEIcoder，一种受生物学启发的深度学习方法，用于从神经活动中解码视觉刺激。该方法在小数据集上实现了最先进的性能，尤其擅长从V1神经元活动中重建图像。</p>
             
 
             
@@ -983,131 +966,18 @@ practicality and effectiveness.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.11050v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.20762v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yang Hou, Minggu Wang, Jianjun Zhao</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.35000000000000003, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">SceneTextStylizer: A Training-Free Scene Text Style Transfer Framework with Diffusion Model</h2>
-            
-            <p class="paper-summary">With the rapid development of diffusion models, style transfer has made
-remarkable progress. However, flexible and localized style editing for scene
-text remains an unsolved challenge. Although existing scene text editing
-methods have achieved text region editing, they are typically limited to
-content replacement and simple styles, which lack the ability of free-style
-transfer. In this paper, we introduce SceneTextStylizer, a novel training-free
-diffusion-based framework for flexible and high-fidelity style transfer of text
-in scene images. Unlike prior approaches that either perform global style
-transfer or focus solely on textual content modification, our method enables
-prompt-guided style transformation specifically for text regions, while
-preserving both text readability and stylistic consistency. To achieve this, we
-design a feature injection module that leverages diffusion model inversion and
-self-attention to transfer style features effectively. Additionally, a region
-control mechanism is introduced by applying a distance-based changing mask at
-each denoising step, enabling precise spatial control. To further enhance
-visual quality, we incorporate a style enhancement module based on the Fourier
-transform to reinforce stylistic richness. Extensive experiments demonstrate
-that our method achieves superior performance in scene text style
-transformation, outperforming existing state-of-the-art methods in both visual
-fidelity and text preservation.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SceneTextStylizer, a training-free diffusion-based framework for style transfer of text in scene images, enabling prompt-guided localized style transformation and preserving text readability.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为 SceneTextStylizer 的无训练场景文本风格迁移框架，该框架基于扩散模型，能够实现提示引导的局部风格转换，并保持文本的可读性。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.10910v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Honghui Yuan, Keiji Yanai</p>
+            <p class="paper-authors">Authors: Jan Sobotka, Luca Baroni, Ján Antolík</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-24 03:31:17 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-24 03:36:03 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
