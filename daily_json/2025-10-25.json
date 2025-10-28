@@ -1,0 +1,159 @@
+[
+    {
+        "title": "Restore Text First, Enhance Image Later: Two-Stage Scene Text Image Super-Resolution with Glyph Structure Guidance",
+        "summary": "Current generative super-resolution methods show strong performance on\nnatural images but distort text, creating a fundamental trade-off between image\nquality and textual readability. To address this, we introduce \\textbf{TIGER}\n(\\textbf{T}ext-\\textbf{I}mage \\textbf{G}uided\nsup\\textbf{E}r-\\textbf{R}esolution), a novel two-stage framework that breaks\nthis trade-off through a \\textit{\"text-first, image-later\"} paradigm.\n\\textbf{TIGER} explicitly decouples glyph restoration from image enhancement:\nit first reconstructs precise text structures and then uses them to guide\nsubsequent full-image super-resolution. This glyph-to-image guidance ensures\nboth high fidelity and visual consistency. To support comprehensive training\nand evaluation, we also contribute the \\textbf{UltraZoom-ST} (UltraZoom-Scene\nText), the first scene text dataset with extreme zoom (\\textbf{$\\times$14.29}).\nExtensive experiments show that \\textbf{TIGER} achieves\n\\textbf{state-of-the-art} performance, enhancing readability while preserving\noverall image quality.",
+        "url": "http://arxiv.org/abs/2510.21590v1",
+        "published_date": "2025-10-24T15:59:04+00:00",
+        "updated_date": "2025-10-24T15:59:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Minxing Luo",
+            "Linlong Fan",
+            "Wang Qiushi",
+            "Ge Wu",
+            "Yiyan Luo",
+            "Yuhang Yu",
+            "Jinwei Chen",
+            "Yaxing Wang",
+            "Qingnan Fan",
+            "Jian Yang"
+        ],
+        "tldr": "The paper introduces TIGER, a two-stage scene text image super-resolution framework that prioritizes text restoration before image enhancement, and also contributes a new dataset for extreme zoom scene text super-resolution.",
+        "tldr_zh": "该论文介绍了一种名为TIGER的两阶段场景文本图像超分辨率框架，该框架优先考虑文本恢复，然后再进行图像增强，同时还贡献了一个用于极端缩放场景文本超分辨率的新数据集。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Anisotropic Pooling for LUT-realizable CNN Image Restoration",
+        "summary": "Table look-up realization of image restoration CNNs has the potential of\nachieving competitive image quality while being much faster and resource frugal\nthan the straightforward CNN implementation. The main technical challenge\nfacing the LUT-based CNN algorithm designers is to manage the table size\nwithout overly restricting the receptive field. The prevailing strategy is to\nreuse the table for small pixel patches of different orientations (apparently\nassuming a degree of isotropy) and then fuse the look-up results. The fusion is\ncurrently done by average pooling, which we find being ill suited to\nanisotropic signal structures. To alleviate the problem, we investigate and\ndiscuss anisotropic pooling methods to replace naive averaging for improving\nthe performance of the current LUT-realizable CNN restoration methods. First,\nwe introduce the method of generalized median pooling which leads to measurable\ngains over average pooling. We then extend this idea by learning data-dependent\npooling coefficients for each orientation, so that they can adaptively weigh\nthe contributions of differently oriented pixel patches. Experimental results\non various restoration benchmarks show that our anisotropic pooling strategy\nyields both perceptually and numerically superior results compared to existing\nLUT-realizable CNN methods.",
+        "url": "http://arxiv.org/abs/2510.21437v1",
+        "published_date": "2025-10-24T13:14:57+00:00",
+        "updated_date": "2025-10-24T13:14:57+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Xi Zhang",
+            "Xiaolin Wu"
+        ],
+        "tldr": "This paper introduces anisotropic pooling methods to improve the performance of LUT-realizable CNNs for image restoration, addressing the limitations of average pooling with anisotropic signal structures and achieving superior results.",
+        "tldr_zh": "本文介绍了各向异性池化方法，旨在提升基于查找表（LUT）实现的图像恢复卷积神经网络（CNN）的性能。该方法解决了平均池化在处理各向异性信号结构时的局限性，并取得了更优越的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Improved Training Technique for Shortcut Models",
+        "summary": "Shortcut models represent a promising, non-adversarial paradigm for\ngenerative modeling, uniquely supporting one-step, few-step, and multi-step\nsampling from a single trained network. However, their widespread adoption has\nbeen stymied by critical performance bottlenecks. This paper tackles the five\ncore issues that held shortcut models back: (1) the hidden flaw of compounding\nguidance, which we are the first to formalize, causing severe image artifacts;\n(2) inflexible fixed guidance that restricts inference-time control; (3) a\npervasive frequency bias driven by a reliance on low-level distances in the\ndirect domain, which biases reconstructions toward low frequencies; (4)\ndivergent self-consistency arising from a conflict with EMA training; and (5)\ncurvy flow trajectories that impede convergence. To address these challenges,\nwe introduce iSM, a unified training framework that systematically resolves\neach limitation. Our framework is built on four key improvements: Intrinsic\nGuidance provides explicit, dynamic control over guidance strength, resolving\nboth compounding guidance and inflexibility. A Multi-Level Wavelet Loss\nmitigates frequency bias to restore high-frequency details. Scaling Optimal\nTransport (sOT) reduces training variance and learns straighter, more stable\ngenerative paths. Finally, a Twin EMA strategy reconciles training stability\nwith self-consistency. Extensive experiments on ImageNet 256 x 256 demonstrate\nthat our approach yields substantial FID improvements over baseline shortcut\nmodels across one-step, few-step, and multi-step generation, making shortcut\nmodels a viable and competitive class of generative models.",
+        "url": "http://arxiv.org/abs/2510.21250v1",
+        "published_date": "2025-10-24T08:35:04+00:00",
+        "updated_date": "2025-10-24T08:35:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Anh Nguyen",
+            "Viet Nguyen",
+            "Duc Vu",
+            "Trung Dao",
+            "Chi Tran",
+            "Toan Tran",
+            "Anh Tran"
+        ],
+        "tldr": "The paper introduces iSM, a new training framework that tackles key limitations of shortcut models for generative modeling, achieving significant FID improvements on ImageNet.",
+        "tldr_zh": "该论文介绍了一种新的训练框架 iSM，旨在解决生成建模中 shortcut 模型的关键限制，并在 ImageNet 上实现了显著的 FID 改进。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Blockwise Flow Matching: Improving Flow Matching Models For Efficient High-Quality Generation",
+        "summary": "Recently, Flow Matching models have pushed the boundaries of high-fidelity\ndata generation across a wide range of domains. It typically employs a single\nlarge network to learn the entire generative trajectory from noise to data.\nDespite their effectiveness, this design struggles to capture distinct signal\ncharacteristics across timesteps simultaneously and incurs substantial\ninference costs due to the iterative evaluation of the entire model. To address\nthese limitations, we propose Blockwise Flow Matching (BFM), a novel framework\nthat partitions the generative trajectory into multiple temporal segments, each\nmodeled by smaller but specialized velocity blocks. This blockwise design\nenables each block to specialize effectively in its designated interval,\nimproving inference efficiency and sample quality. To further enhance\ngeneration fidelity, we introduce a Semantic Feature Guidance module that\nexplicitly conditions velocity blocks on semantically rich features aligned\nwith pretrained representations. Additionally, we propose a lightweight Feature\nResidual Approximation strategy that preserves semantic quality while\nsignificantly reducing inference cost. Extensive experiments on ImageNet\n256x256 demonstrate that BFM establishes a substantially improved Pareto\nfrontier over existing Flow Matching methods, achieving 2.1x to 4.9x\naccelerations in inference complexity at comparable generation performance.\nCode is available at https://github.com/mlvlab/BFM.",
+        "url": "http://arxiv.org/abs/2510.21167v1",
+        "published_date": "2025-10-24T05:41:23+00:00",
+        "updated_date": "2025-10-24T05:41:23+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dogyun Park",
+            "Taehoon Lee",
+            "Minseok Joo",
+            "Hyunwoo J. Kim"
+        ],
+        "tldr": "The paper proposes Blockwise Flow Matching (BFM) to improve the efficiency and quality of flow matching models by partitioning the generative trajectory into specialized blocks and using semantic feature guidance. Experiments show significant acceleration in inference with comparable generation performance.",
+        "tldr_zh": "该论文提出了分块流匹配（BFM），通过将生成轨迹划分为专门的块并使用语义特征指导来提高流匹配模型的效率和质量。实验表明，在具有可比的生成性能下，推理速度得到了显著加速。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Digital Contrast CT Pulmonary Angiography Synthesis from Non-contrast CT for Pulmonary Vascular Disease",
+        "summary": "Computed Tomography Pulmonary Angiography (CTPA) is the reference standard\nfor diagnosing pulmonary vascular diseases such as Pulmonary Embolism (PE) and\nChronic Thromboembolic Pulmonary Hypertension (CTEPH). However, its reliance on\niodinated contrast agents poses risks including nephrotoxicity and allergic\nreactions, particularly in high-risk patients. This study proposes a method to\ngenerate Digital Contrast CTPA (DCCTPA) from Non-Contrast CT (NCCT) scans using\na cascaded synthesizer based on Cycle-Consistent Generative Adversarial\nNetworks (CycleGAN). Totally retrospective 410 paired CTPA and NCCT scans were\nobtained from three centers. The model was trained and validated internally on\n249 paired images. Extra dataset that comprising 161 paired images was as test\nset for model generalization evaluation and downstream clinical tasks\nvalidation. Compared with state-of-the-art (SOTA) methods, the proposed method\nachieved the best comprehensive performance by evaluating quantitative metrics\n(For validation, MAE: 156.28, PSNR: 20.71 and SSIM: 0.98; For test, MAE:\n165.12, PSNR: 20.27 and SSIM: 0.98) and qualitative visualization,\ndemonstrating valid vessel enhancement, superior image fidelity and structural\npreservation. The approach was further applied to downstream tasks of pulmonary\nvessel segmentation and vascular quantification. On the test set, the average\nDice, clDice, and clRecall of artery and vein pulmonary segmentation was 0.70,\n0.71, 0.73 and 0.70, 0.72, 0.75 respectively, all markedly improved compared\nwith NCCT inputs.\\@ Inter-class Correlation Coefficient (ICC) for vessel volume\nbetween DCCTPA and CTPA was significantly better than that between NCCT and\nCTPA (Average ICC : 0.81 vs 0.70), indicating effective vascular enhancement in\nDCCTPA, especially for small vessels.",
+        "url": "http://arxiv.org/abs/2510.21140v1",
+        "published_date": "2025-10-24T04:24:49+00:00",
+        "updated_date": "2025-10-24T04:24:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ying Ming",
+            "Yue Lin",
+            "Longfei Zhao",
+            "Gengwan Li",
+            "Zuopeng Tan",
+            "Bing Li",
+            "Sheng Xie",
+            "Wei Song",
+            "Qiqi Xu"
+        ],
+        "tldr": "The paper proposes a CycleGAN-based method to synthesize contrast-enhanced CTPA images from non-contrast CT scans, aiming to reduce the risks associated with contrast agents, and demonstrates improved vessel enhancement and downstream task performance.",
+        "tldr_zh": "该论文提出了一种基于CycleGAN的方法，用于从非对比CT扫描合成对比增强的CTPA图像，旨在减少对比剂相关的风险，并展示了改善的血管增强和下游任务性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation",
+        "summary": "Group Relative Policy Optimization (GRPO) has shown strong potential for\nflow-matching-based text-to-image (T2I) generation, but it faces two key\nlimitations: inaccurate advantage attribution, and the neglect of temporal\ndynamics of generation. In this work, we argue that shifting the optimization\nparadigm from the step level to the chunk level can effectively alleviate these\nissues. Building on this idea, we propose Chunk-GRPO, the first chunk-level\nGRPO-based approach for T2I generation. The insight is to group consecutive\nsteps into coherent 'chunk's that capture the intrinsic temporal dynamics of\nflow matching, and to optimize policies at the chunk level. In addition, we\nintroduce an optional weighted sampling strategy to further enhance\nperformance. Extensive experiments show that ChunkGRPO achieves superior\nresults in both preference alignment and image quality, highlighting the\npromise of chunk-level optimization for GRPO-based methods.",
+        "url": "http://arxiv.org/abs/2510.21583v1",
+        "published_date": "2025-10-24T15:50:36+00:00",
+        "updated_date": "2025-10-24T15:50:36+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yifu Luo",
+            "Penghui Du",
+            "Bo Li",
+            "Sinan Du",
+            "Tiantian Zhang",
+            "Yongzhe Chang",
+            "Kai Wu",
+            "Kun Gai",
+            "Xueqian Wang"
+        ],
+        "tldr": "This paper introduces Chunk-GRPO, a novel chunk-level optimization method for text-to-image generation using Group Relative Policy Optimization (GRPO), addressing limitations of step-level GRPO.",
+        "tldr_zh": "本文介绍了Chunk-GRPO，一种新的块级优化方法，用于使用组相对策略优化(GRPO)进行文本到图像的生成，解决了步级GRPO的局限性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

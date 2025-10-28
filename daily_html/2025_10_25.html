@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 22, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - October 25, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 22, 2025</p>
+            <p>October 25, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,36 +215,28 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DP$^2$O-SR: Direct Perceptual Preference Optimization for Real-World Image Super-Resolution</h2>
+            <h2 class="paper-title">Restore Text First, Enhance Image Later: Two-Stage Scene Text Image Super-Resolution with Glyph Structure Guidance</h2>
             
-            <p class="paper-summary">Benefiting from pre-trained text-to-image (T2I) diffusion models, real-world
-image super-resolution (Real-ISR) methods can synthesize rich and realistic
-details. However, due to the inherent stochasticity of T2I models, different
-noise inputs often lead to outputs with varying perceptual quality. Although
-this randomness is sometimes seen as a limitation, it also introduces a wider
-perceptual quality range, which can be exploited to improve Real-ISR
-performance. To this end, we introduce Direct Perceptual Preference
-Optimization for Real-ISR (DP$^2$O-SR), a framework that aligns generative
-models with perceptual preferences without requiring costly human annotations.
-We construct a hybrid reward signal by combining full-reference and
-no-reference image quality assessment (IQA) models trained on large-scale human
-preference datasets. This reward encourages both structural fidelity and
-natural appearance. To better utilize perceptual diversity, we move beyond the
-standard best-vs-worst selection and construct multiple preference pairs from
-outputs of the same model. Our analysis reveals that the optimal selection
-ratio depends on model capacity: smaller models benefit from broader coverage,
-while larger models respond better to stronger contrast in supervision.
-Furthermore, we propose hierarchical preference optimization, which adaptively
-weights training pairs based on intra-group reward gaps and inter-group
-diversity, enabling more efficient and stable learning. Extensive experiments
-across both diffusion- and flow-based T2I backbones demonstrate that DP$^2$O-SR
-significantly improves perceptual quality and generalizes well to real-world
-benchmarks.</p>
+            <p class="paper-summary">Current generative super-resolution methods show strong performance on
+natural images but distort text, creating a fundamental trade-off between image
+quality and textual readability. To address this, we introduce \textbf{TIGER}
+(\textbf{T}ext-\textbf{I}mage \textbf{G}uided
+sup\textbf{E}r-\textbf{R}esolution), a novel two-stage framework that breaks
+this trade-off through a \textit{"text-first, image-later"} paradigm.
+\textbf{TIGER} explicitly decouples glyph restoration from image enhancement:
+it first reconstructs precise text structures and then uses them to guide
+subsequent full-image super-resolution. This glyph-to-image guidance ensures
+both high fidelity and visual consistency. To support comprehensive training
+and evaluation, we also contribute the \textbf{UltraZoom-ST} (UltraZoom-Scene
+Text), the first scene text dataset with extreme zoom (\textbf{$\times$14.29}).
+Extensive experiments show that \textbf{TIGER} achieves
+\textbf{state-of-the-art} performance, enhancing readability while preserving
+overall image quality.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces DP$^2$O-SR, a framework for real-world image super-resolution that leverages perceptual preferences without human annotations by optimizing generative models using a hybrid reward signal from IQA models and hierarchical preference optimization.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces TIGER, a two-stage scene text image super-resolution framework that prioritizes text restoration before image enhancement, and also contributes a new dataset for extreme zoom scene text super-resolution.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了DP$^2$O-SR，一个用于真实世界图像超分辨率的框架，它通过使用IQA模型的混合奖励信号和分层偏好优化来优化生成模型，从而在不需要人工标注的情况下利用感知偏好。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为TIGER的两阶段场景文本图像超分辨率框架，该框架优先考虑文本恢复，然后再进行图像增强，同时还贡献了一个用于极端缩放场景文本超分辨率的新数据集。</p>
             
 
             
@@ -315,11 +307,11 @@ benchmarks.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.18851v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21590v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Rongyuan Wu, Lingchen Sun, Zhengqiang Zhang, Shihao Wang, Tianhe Wu, Qiaosi Yi, Shuai Li, Lei Zhang</p>
+            <p class="paper-authors">Authors: Minxing Luo, Linlong Fan, Wang Qiushi, Ge Wu, Yiyan Luo, Yuhang Yu, Jinwei Chen, Yaxing Wang, Qingnan Fan, Jian Yang</p>
             
         </motion.div>
         
@@ -331,33 +323,31 @@ benchmarks.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Vision Foundation Models Can Be Good Tokenizers for Latent Diffusion Models</h2>
+            <h2 class="paper-title">Anisotropic Pooling for LUT-realizable CNN Image Restoration</h2>
             
-            <p class="paper-summary">The performance of Latent Diffusion Models (LDMs) is critically dependent on
-the quality of their visual tokenizer. While recent works have explored
-incorporating Vision Foundation Models (VFMs) via distillation, we identify a
-fundamental flaw in this approach: it inevitably weakens the robustness of
-alignment with the original VFM, causing the aligned latents to deviate
-semantically under distribution shifts. In this paper, we bypass distillation
-by proposing a more direct approach: Vision Foundation Model Variational
-Autoencoder (VFM-VAE). To resolve the inherent tension between the VFM's
-semantic focus and the need for pixel-level fidelity, we redesign the VFM-VAE
-decoder with Multi-Scale Latent Fusion and Progressive Resolution
-Reconstruction blocks, enabling high-quality reconstruction from spatially
-coarse VFM features. Furthermore, we provide a comprehensive analysis of
-representation dynamics during diffusion training, introducing the proposed
-SE-CKNNA metric as a more precise tool for this diagnosis. This analysis allows
-us to develop a joint tokenizer-diffusion alignment strategy that dramatically
-accelerates convergence. Our innovations in tokenizer design and training
-strategy lead to superior performance and efficiency: our system reaches a gFID
-(w/o CFG) of 2.20 in merely 80 epochs (a 10x speedup over prior tokenizers).
-With continued training to 640 epochs, it further attains a gFID (w/o CFG) of
-1.62, establishing direct VFM integration as a superior paradigm for LDMs.</p>
+            <p class="paper-summary">Table look-up realization of image restoration CNNs has the potential of
+achieving competitive image quality while being much faster and resource frugal
+than the straightforward CNN implementation. The main technical challenge
+facing the LUT-based CNN algorithm designers is to manage the table size
+without overly restricting the receptive field. The prevailing strategy is to
+reuse the table for small pixel patches of different orientations (apparently
+assuming a degree of isotropy) and then fuse the look-up results. The fusion is
+currently done by average pooling, which we find being ill suited to
+anisotropic signal structures. To alleviate the problem, we investigate and
+discuss anisotropic pooling methods to replace naive averaging for improving
+the performance of the current LUT-realizable CNN restoration methods. First,
+we introduce the method of generalized median pooling which leads to measurable
+gains over average pooling. We then extend this idea by learning data-dependent
+pooling coefficients for each orientation, so that they can adaptively weigh
+the contributions of differently oriented pixel patches. Experimental results
+on various restoration benchmarks show that our anisotropic pooling strategy
+yields both perceptually and numerically superior results compared to existing
+LUT-realizable CNN methods.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel VFM-VAE tokenizer for Latent Diffusion Models that directly integrates Vision Foundation Models, achieving superior performance and training efficiency compared to distillation-based approaches. They also present a new metric (SE-CKNNA) for analyzing representation dynamics during diffusion training and a joint alignment strategy.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces anisotropic pooling methods to improve the performance of LUT-realizable CNNs for image restoration, addressing the limitations of average pooling with anisotropic signal structures and achieving superior results.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于潜在扩散模型的新型VFM-VAE tokenizer，该tokenizer直接集成了视觉基础模型，与基于蒸馏的方法相比，实现了卓越的性能和训练效率。他们还提出了一种新的指标 (SE-CKNNA) 用于分析扩散训练期间的表示动态，并提出了一种联合对齐策略。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了各向异性池化方法，旨在提升基于查找表（LUT）实现的图像恢复卷积神经网络（CNN）的性能。该方法解决了平均池化在处理各向异性信号结构时的局限性，并取得了更优越的结果。</p>
             
 
             
@@ -367,13 +357,21 @@ With continued training to 640 epochs, it further attains a gFID (w/o CFG) of
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
+                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
@@ -381,18 +379,10 @@ With continued training to 640 epochs, it further attains a gFID (w/o CFG) of
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -428,11 +418,11 @@ With continued training to 640 epochs, it further attains a gFID (w/o CFG) of
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.18457v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21437v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Tianci Bi, Xiaoyi Zhang, Yan Lu, Nanning Zheng</p>
+            <p class="paper-authors">Authors: Xi Zhang, Xiaolin Wu</p>
             
         </motion.div>
         
@@ -444,25 +434,35 @@ With continued training to 640 epochs, it further attains a gFID (w/o CFG) of
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">LAND: Lung and Nodule Diffusion for 3D Chest CT Synthesis with Anatomical Guidance</h2>
+            <h2 class="paper-title">Improved Training Technique for Shortcut Models</h2>
             
-            <p class="paper-summary">This work introduces a new latent diffusion model to generate high-quality 3D
-chest CT scans conditioned on 3D anatomical masks. The method synthesizes
-volumetric images of size 256x256x256 at 1 mm isotropic resolution using a
-single mid-range GPU, significantly lowering the computational cost compared to
-existing approaches. The conditioning masks delineate lung and nodule regions,
-enabling precise control over the output anatomical features. Experimental
-results demonstrate that conditioning solely on nodule masks leads to
-anatomically incorrect outputs, highlighting the importance of incorporating
-global lung structure for accurate conditional synthesis. The proposed approach
-supports the generation of diverse CT volumes with and without lung nodules of
-varying attributes, providing a valuable tool for training AI models or
-healthcare professionals.</p>
+            <p class="paper-summary">Shortcut models represent a promising, non-adversarial paradigm for
+generative modeling, uniquely supporting one-step, few-step, and multi-step
+sampling from a single trained network. However, their widespread adoption has
+been stymied by critical performance bottlenecks. This paper tackles the five
+core issues that held shortcut models back: (1) the hidden flaw of compounding
+guidance, which we are the first to formalize, causing severe image artifacts;
+(2) inflexible fixed guidance that restricts inference-time control; (3) a
+pervasive frequency bias driven by a reliance on low-level distances in the
+direct domain, which biases reconstructions toward low frequencies; (4)
+divergent self-consistency arising from a conflict with EMA training; and (5)
+curvy flow trajectories that impede convergence. To address these challenges,
+we introduce iSM, a unified training framework that systematically resolves
+each limitation. Our framework is built on four key improvements: Intrinsic
+Guidance provides explicit, dynamic control over guidance strength, resolving
+both compounding guidance and inflexibility. A Multi-Level Wavelet Loss
+mitigates frequency bias to restore high-frequency details. Scaling Optimal
+Transport (sOT) reduces training variance and learns straighter, more stable
+generative paths. Finally, a Twin EMA strategy reconciles training stability
+with self-consistency. Extensive experiments on ImageNet 256 x 256 demonstrate
+that our approach yields substantial FID improvements over baseline shortcut
+models across one-step, few-step, and multi-step generation, making shortcut
+models a viable and competitive class of generative models.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a latent diffusion model (LAND) for generating high-quality 3D chest CT scans conditioned on anatomical masks of lung and nodules, offering a computationally efficient way to create diverse CT volumes for AI model training.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces iSM, a new training framework that tackles key limitations of shortcut models for generative modeling, achieving significant FID improvements on ImageNet.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种潜空间扩散模型 (LAND)，用于生成高质量的 3D 胸部 CT 扫描，并以肺和结节的解剖掩模为条件，提供了一种计算效率高的方法来创建用于 AI 模型训练的各种 CT 体积。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新的训练框架 iSM，旨在解决生成建模中 shortcut 模型的关键限制，并在 ImageNet 上实现了显著的 FID 改进。</p>
             
 
             
@@ -480,16 +480,16 @@ healthcare professionals.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -533,11 +533,11 @@ healthcare professionals.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.18446v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21250v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Anna Oliveras, Roger Marí, Rafael Redondo, Oriol Guardià, Ana Tost, Bhalaji Nagarajan, Carolina Migliorelli, Vicent Ribas, Petia Radeva</p>
+            <p class="paper-authors">Authors: Anh Nguyen, Viet Nguyen, Duc Vu, Trung Dao, Chi Tran, Toan Tran, Anh Tran</p>
             
         </motion.div>
         
@@ -549,31 +549,33 @@ healthcare professionals.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">GPTFace: Generative Pre-training of Facial-Linguistic Transformer by Span Masking and Weakly Correlated Text-image Data</h2>
+            <h2 class="paper-title">Blockwise Flow Matching: Improving Flow Matching Models For Efficient High-Quality Generation</h2>
             
-            <p class="paper-summary">Compared to the prosperity of pre-training models in natural image
-understanding, the research on large-scale pre-training models for facial
-knowledge learning is still limited. Current approaches mainly rely on manually
-assembled and annotated face datasets for training, but labeling such datasets
-is labor-intensive and the trained models have limited scalability beyond the
-training data. To address these limitations, we present a generative
-pre-training model for facial knowledge learning that leverages large-scale
-web-built data for training. We use texts and images containing human faces
-crawled from the internet and conduct pre-training on self-supervised tasks,
-including masked image/language modeling (MILM) and image-text matching (ITM).
-During the generation stage, we further utilize the image-text matching loss to
-pull the generation distribution towards the control signal for controllable
-image/text generation. Experimental results demonstrate that our model achieves
-comparable performance to state-of-the-art pre-training models for various
-facial downstream tasks, such as attribution classification and expression
-recognition. Furthermore, our approach is also applicable to a wide range of
-face editing tasks, including face attribute editing, expression manipulation,
-mask removal, and photo inpainting.</p>
+            <p class="paper-summary">Recently, Flow Matching models have pushed the boundaries of high-fidelity
+data generation across a wide range of domains. It typically employs a single
+large network to learn the entire generative trajectory from noise to data.
+Despite their effectiveness, this design struggles to capture distinct signal
+characteristics across timesteps simultaneously and incurs substantial
+inference costs due to the iterative evaluation of the entire model. To address
+these limitations, we propose Blockwise Flow Matching (BFM), a novel framework
+that partitions the generative trajectory into multiple temporal segments, each
+modeled by smaller but specialized velocity blocks. This blockwise design
+enables each block to specialize effectively in its designated interval,
+improving inference efficiency and sample quality. To further enhance
+generation fidelity, we introduce a Semantic Feature Guidance module that
+explicitly conditions velocity blocks on semantically rich features aligned
+with pretrained representations. Additionally, we propose a lightweight Feature
+Residual Approximation strategy that preserves semantic quality while
+significantly reducing inference cost. Extensive experiments on ImageNet
+256x256 demonstrate that BFM establishes a substantially improved Pareto
+frontier over existing Flow Matching methods, achieving 2.1x to 4.9x
+accelerations in inference complexity at comparable generation performance.
+Code is available at https://github.com/mlvlab/BFM.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces GPTFace, a generative pre-training model for facial knowledge learning using weakly correlated text-image data crawled from the web, achieving comparable performance to SOTA models on various facial downstream tasks and face editing tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes Blockwise Flow Matching (BFM) to improve the efficiency and quality of flow matching models by partitioning the generative trajectory into specialized blocks and using semantic feature guidance. Experiments show significant acceleration in inference with comparable generation performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了GPTFace，一种使用从网络上抓取的弱相关文本-图像数据进行面部知识学习的生成式预训练模型，在各种面部下游任务和面部编辑任务上实现了与SOTA模型相当的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了分块流匹配（BFM），通过将生成轨迹划分为专门的块并使用语义特征指导来提高流匹配模型的效率和质量。实验表明，在具有可比的生成性能下，推理速度得到了显著加速。</p>
             
 
             
@@ -644,11 +646,11 @@ mask removal, and photo inpainting.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.18345v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21167v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yudong Li, Hao Li, Xianxu Hou, Linlin Shen</p>
+            <p class="paper-authors">Authors: Dogyun Park, Taehoon Lee, Minseok Joo, Hyunwoo J. Kim</p>
             
         </motion.div>
         
@@ -660,30 +662,37 @@ mask removal, and photo inpainting.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">From Competition to Synergy: Unlocking Reinforcement Learning for Subject-Driven Image Generation</h2>
+            <h2 class="paper-title">Digital Contrast CT Pulmonary Angiography Synthesis from Non-contrast CT for Pulmonary Vascular Disease</h2>
             
-            <p class="paper-summary">Subject-driven image generation models face a fundamental trade-off between
-identity preservation (fidelity) and prompt adherence (editability). While
-online reinforcement learning (RL), specifically GPRO, offers a promising
-solution, we find that a naive application of GRPO leads to competitive
-degradation, as the simple linear aggregation of rewards with static weights
-causes conflicting gradient signals and a misalignment with the temporal
-dynamics of the diffusion process. To overcome these limitations, we propose
-Customized-GRPO, a novel framework featuring two key innovations: (i)
-Synergy-Aware Reward Shaping (SARS), a non-linear mechanism that explicitly
-penalizes conflicted reward signals and amplifies synergistic ones, providing a
-sharper and more decisive gradient. (ii) Time-Aware Dynamic Weighting (TDW),
-which aligns the optimization pressure with the model's temporal dynamics by
-prioritizing prompt-following in the early, identity preservation in the later.
-Extensive experiments demonstrate that our method significantly outperforms
-naive GRPO baselines, successfully mitigating competitive degradation. Our
-model achieves a superior balance, generating images that both preserve key
-identity features and accurately adhere to complex textual prompts.</p>
+            <p class="paper-summary">Computed Tomography Pulmonary Angiography (CTPA) is the reference standard
+for diagnosing pulmonary vascular diseases such as Pulmonary Embolism (PE) and
+Chronic Thromboembolic Pulmonary Hypertension (CTEPH). However, its reliance on
+iodinated contrast agents poses risks including nephrotoxicity and allergic
+reactions, particularly in high-risk patients. This study proposes a method to
+generate Digital Contrast CTPA (DCCTPA) from Non-Contrast CT (NCCT) scans using
+a cascaded synthesizer based on Cycle-Consistent Generative Adversarial
+Networks (CycleGAN). Totally retrospective 410 paired CTPA and NCCT scans were
+obtained from three centers. The model was trained and validated internally on
+249 paired images. Extra dataset that comprising 161 paired images was as test
+set for model generalization evaluation and downstream clinical tasks
+validation. Compared with state-of-the-art (SOTA) methods, the proposed method
+achieved the best comprehensive performance by evaluating quantitative metrics
+(For validation, MAE: 156.28, PSNR: 20.71 and SSIM: 0.98; For test, MAE:
+165.12, PSNR: 20.27 and SSIM: 0.98) and qualitative visualization,
+demonstrating valid vessel enhancement, superior image fidelity and structural
+preservation. The approach was further applied to downstream tasks of pulmonary
+vessel segmentation and vascular quantification. On the test set, the average
+Dice, clDice, and clRecall of artery and vein pulmonary segmentation was 0.70,
+0.71, 0.73 and 0.70, 0.72, 0.75 respectively, all markedly improved compared
+with NCCT inputs.\@ Inter-class Correlation Coefficient (ICC) for vessel volume
+between DCCTPA and CTPA was significantly better than that between NCCT and
+CTPA (Average ICC : 0.81 vs 0.70), indicating effective vascular enhancement in
+DCCTPA, especially for small vessels.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Customized-GRPO, a reinforcement learning framework for subject-driven image generation that addresses the trade-off between identity preservation and prompt adherence by using synergy-aware reward shaping and time-aware dynamic weighting.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes a CycleGAN-based method to synthesize contrast-enhanced CTPA images from non-contrast CT scans, aiming to reduce the risks associated with contrast agents, and demonstrates improved vessel enhancement and downstream task performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了Customized-GRPO，一种用于主题驱动图像生成的强化学习框架，通过协同感知奖励塑造和时间感知动态加权，解决了身份保持和提示遵循之间的权衡问题。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种基于CycleGAN的方法，用于从非对比CT扫描合成对比增强的CTPA图像，旨在减少对比剂相关的风险，并展示了改善的血管增强和下游任务性能。</p>
             
 
             
@@ -701,8 +710,8 @@ identity features and accurately adhere to complex textual prompts.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -754,11 +763,11 @@ identity features and accurately adhere to complex textual prompts.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.18263v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21140v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ziwei Huang, Ying Shu, Hao Fang, Quanyu Long, Wenya Wang, Qiushi Guo, Tiezheng Ge, Leilei Gan</p>
+            <p class="paper-authors">Authors: Ying Ming, Yue Lin, Longfei Zhao, Gengwan Li, Zuopeng Tan, Bing Li, Sheng Xie, Wei Song, Qiqi Xu</p>
             
         </motion.div>
         
@@ -770,145 +779,26 @@ identity features and accurately adhere to complex textual prompts.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">OmniNWM: Omniscient Driving Navigation World Models</h2>
+            <h2 class="paper-title">Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation</h2>
             
-            <p class="paper-summary">Autonomous driving world models are expected to work effectively across three
-core dimensions: state, action, and reward. Existing models, however, are
-typically restricted to limited state modalities, short video sequences,
-imprecise action control, and a lack of reward awareness. In this paper, we
-introduce OmniNWM, an omniscient panoramic navigation world model that
-addresses all three dimensions within a unified framework. For state, OmniNWM
-jointly generates panoramic videos of RGB, semantics, metric depth, and 3D
-occupancy. A flexible forcing strategy enables high-quality long-horizon
-auto-regressive generation. For action, we introduce a normalized panoramic
-Plucker ray-map representation that encodes input trajectories into pixel-level
-signals, enabling highly precise and generalizable control over panoramic video
-generation. Regarding reward, we move beyond learning reward functions with
-external image-based models: instead, we leverage the generated 3D occupancy to
-directly define rule-based dense rewards for driving compliance and safety.
-Extensive experiments demonstrate that OmniNWM achieves state-of-the-art
-performance in video generation, control accuracy, and long-horizon stability,
-while providing a reliable closed-loop evaluation framework through
-occupancy-grounded rewards. Project page is available at
-https://github.com/Arlo0o/OmniNWM.</p>
+            <p class="paper-summary">Group Relative Policy Optimization (GRPO) has shown strong potential for
+flow-matching-based text-to-image (T2I) generation, but it faces two key
+limitations: inaccurate advantage attribution, and the neglect of temporal
+dynamics of generation. In this work, we argue that shifting the optimization
+paradigm from the step level to the chunk level can effectively alleviate these
+issues. Building on this idea, we propose Chunk-GRPO, the first chunk-level
+GRPO-based approach for T2I generation. The insight is to group consecutive
+steps into coherent 'chunk's that capture the intrinsic temporal dynamics of
+flow matching, and to optimize policies at the chunk level. In addition, we
+introduce an optional weighted sampling strategy to further enhance
+performance. Extensive experiments show that ChunkGRPO achieves superior
+results in both preference alignment and image quality, highlighting the
+promise of chunk-level optimization for GRPO-based methods.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces OmniNWM, a novel world model for autonomous driving that unifies state, action, and reward by jointly generating panoramic videos with RGB, semantics, depth, and occupancy, enabling precise control and rule-based reward definition.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Chunk-GRPO, a novel chunk-level optimization method for text-to-image generation using Group Relative Policy Optimization (GRPO), addressing limitations of step-level GRPO.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了OmniNWM，一种用于自动驾驶的新型世界模型，它通过联合生成具有RGB、语义、深度和占用率的全景视频来统一状态、动作和奖励，从而实现精确控制和基于规则的奖励定义。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.18313v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Bohan Li, Zhuang Ma, Dalong Du, Baorui Peng, Zhujin Liang, Zhenqiang Liu, Chao Ma, Yueming Jin, Hao Zhao, Wenjun Zeng, Xin Jin</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Demystifying Transition Matching: When and Why It Can Beat Flow Matching</h2>
-            
-            <p class="paper-summary">Flow Matching (FM) underpins many state-of-the-art generative models, yet
-recent results indicate that Transition Matching (TM) can achieve higher
-quality with fewer sampling steps. This work answers the question of when and
-why TM outperforms FM. First, when the target is a unimodal Gaussian
-distribution, we prove that TM attains strictly lower KL divergence than FM for
-finite number of steps. The improvement arises from stochastic difference
-latent updates in TM, which preserve target covariance that deterministic FM
-underestimates. We then characterize convergence rates, showing that TM
-achieves faster convergence than FM under a fixed compute budget, establishing
-its advantage in the unimodal Gaussian setting. Second, we extend the analysis
-to Gaussian mixtures and identify local-unimodality regimes in which the
-sampling dynamics approximate the unimodal case, where TM can outperform FM.
-The approximation error decreases as the minimal distance between component
-means increases, highlighting that TM is favored when the modes are well
-separated. However, when the target variance approaches zero, each TM update
-converges to the FM update, and the performance advantage of TM diminishes. In
-summary, we show that TM outperforms FM when the target distribution has
-well-separated modes and non-negligible variances. We validate our theoretical
-results with controlled experiments on Gaussian distributions, and extend the
-comparison to real-world applications in image and video generation.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper theoretically and experimentally demonstrates that Transition Matching (TM) can outperform Flow Matching (FM) in generative models, particularly when the target distribution has well-separated modes and non-negligible variances, analyzing why and when TM is superior.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文从理论和实验上证明了，在生成模型中，当目标分布具有良好分离的模式和不可忽略的方差时，转移匹配（TM）可以优于流匹配（FM），并分析了TM何时以及为何优于FM。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了Chunk-GRPO，一种新的块级优化方法，用于使用组相对策略优化(GRPO)进行文本到图像的生成，解决了步级GRPO的局限性。</p>
             
 
             
@@ -979,64 +869,18 @@ comparison to real-world applications in image and video generation.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17991v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21583v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jaihoon Kim, Rajarshi Saha, Minhyuk Sung, Youngsuk Park</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.35000000000000003, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Ranking-based Preference Optimization for Diffusion Models from Implicit User Feedback</h2>
-            
-            <p class="paper-summary">Direct preference optimization (DPO) methods have shown strong potential in
-aligning text-to-image diffusion models with human preferences by training on
-paired comparisons. These methods improve training stability by avoiding the
-REINFORCE algorithm but still struggle with challenges such as accurately
-estimating image probabilities due to the non-linear nature of the sigmoid
-function and the limited diversity of offline datasets. In this paper, we
-introduce Diffusion Denoising Ranking Optimization (Diffusion-DRO), a new
-preference learning framework grounded in inverse reinforcement learning.
-Diffusion-DRO removes the dependency on a reward model by casting preference
-learning as a ranking problem, thereby simplifying the training objective into
-a denoising formulation and overcoming the non-linear estimation issues found
-in prior methods. Moreover, Diffusion-DRO uniquely integrates offline expert
-demonstrations with online policy-generated negative samples, enabling it to
-effectively capture human preferences while addressing the limitations of
-offline data. Comprehensive experiments show that Diffusion-DRO delivers
-improved generation quality across a range of challenging and unseen prompts,
-outperforming state-of-the-art baselines in both both quantitative metrics and
-user studies. Our source code and pre-trained models are available at
-https://github.com/basiclab/DiffusionDRO.</p>
-            
-            
-
-            
-            
-            
-
-            
-
-            <a href="http://arxiv.org/abs/2510.18353v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yi-Lun Wu, Bo-Kai Ruan, Chiang Tseng, Hong-Han Shuai</p>
+            <p class="paper-authors">Authors: Yifu Luo, Penghui Du, Bo Li, Sinan Du, Tiantian Zhang, Yongzhe Chang, Kai Wu, Kun Gai, Xueqian Wang</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-28 02:25:52 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-28 02:28:32 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
