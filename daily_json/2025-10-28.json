@@ -1,0 +1,126 @@
+[
+    {
+        "title": "FARMER: Flow AutoRegressive Transformer over Pixels",
+        "summary": "Directly modeling the explicit likelihood of the raw data distribution is key\ntopic in the machine learning area, which achieves the scaling successes in\nLarge Language Models by autoregressive modeling. However, continuous AR\nmodeling over visual pixel data suffer from extremely long sequences and\nhigh-dimensional spaces. In this paper, we present FARMER, a novel end-to-end\ngenerative framework that unifies Normalizing Flows (NF) and Autoregressive\n(AR) models for tractable likelihood estimation and high-quality image\nsynthesis directly from raw pixels. FARMER employs an invertible autoregressive\nflow to transform images into latent sequences, whose distribution is modeled\nimplicitly by an autoregressive model. To address the redundancy and complexity\nin pixel-level modeling, we propose a self-supervised dimension reduction\nscheme that partitions NF latent channels into informative and redundant\ngroups, enabling more effective and efficient AR modeling. Furthermore, we\ndesign a one-step distillation scheme to significantly accelerate inference\nspeed and introduce a resampling-based classifier-free guidance algorithm to\nboost image generation quality. Extensive experiments demonstrate that FARMER\nachieves competitive performance compared to existing pixel-based generative\nmodels while providing exact likelihoods and scalable training.",
+        "url": "http://arxiv.org/abs/2510.23588v1",
+        "published_date": "2025-10-27T17:54:08+00:00",
+        "updated_date": "2025-10-27T17:54:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Guangting Zheng",
+            "Qinyu Zhao",
+            "Tao Yang",
+            "Fei Xiao",
+            "Zhijie Lin",
+            "Jie Wu",
+            "Jiajun Deng",
+            "Yanyong Zhang",
+            "Rui Zhu"
+        ],
+        "tldr": "FARMER combines Normalizing Flows and Autoregressive models for efficient, high-quality image generation directly from raw pixels, employing a dimension reduction scheme and distillation for improved speed and quality.",
+        "tldr_zh": "FARMER结合了归一化流和自回归模型，用于直接从原始像素进行高效、高质量的图像生成，并采用降维方案和蒸馏来提高速度和质量。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "An Efficient Remote Sensing Super Resolution Method Exploring Diffusion Priors and Multi-Modal Constraints for Crop Type Mapping",
+        "summary": "Super resolution offers a way to harness medium even lowresolution but\nhistorically valuable remote sensing image archives. Generative models,\nespecially diffusion models, have recently been applied to remote sensing super\nresolution (RSSR), yet several challenges exist. First, diffusion models are\neffective but require expensive training from scratch resources and have slow\ninference speeds. Second, current methods have limited utilization of auxiliary\ninformation as real-world constraints to reconstruct scientifically realistic\nimages. Finally, most current methods lack evaluation on downstream tasks. In\nthis study, we present a efficient LSSR framework for RSSR, supported by a new\nmultimodal dataset of paired 30 m Landsat 8 and 10 m Sentinel 2 imagery. Built\non frozen pretrained Stable Diffusion, LSSR integrates crossmodal attention\nwith auxiliary knowledge (Digital Elevation Model, land cover, month) and\nSynthetic Aperture Radar guidance, enhanced by adapters and a tailored Fourier\nNDVI loss to balance spatial details and spectral fidelity. Extensive\nexperiments demonstrate that LSSR significantly improves crop boundary\ndelineation and recovery, achieving state-of-the-art performance with Peak\nSignal-to-Noise Ratio/Structural Similarity Index Measure of 32.63/0.84 (RGB)\nand 23.99/0.78 (IR), and the lowest NDVI Mean Squared Error (0.042), while\nmaintaining efficient inference (0.39 sec/image). Moreover, LSSR transfers\neffectively to NASA Harmonized Landsat and Sentinel (HLS) super resolution,\nyielding more reliable crop classification (F1: 0.86) than Sentinel-2 (F1:\n0.85). These results highlight the potential of RSSR to advance precision\nagriculture.",
+        "url": "http://arxiv.org/abs/2510.23382v1",
+        "published_date": "2025-10-27T14:34:52+00:00",
+        "updated_date": "2025-10-27T14:34:52+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Songxi Yang",
+            "Tang Sui",
+            "Qunying Huang"
+        ],
+        "tldr": "The paper introduces an efficient remote sensing super-resolution (RSSR) framework called LSSR, which leverages pretrained Stable Diffusion, multi-modal constraints, and task-specific loss functions to achieve state-of-the-art performance in crop type mapping with fast inference.",
+        "tldr_zh": "该论文介绍了一种高效的遥感超分辨率（RSSR）框架LSSR，该框架利用预训练的Stable Diffusion模型、多模态约束和特定任务的损失函数，在作物类型映射方面实现了最先进的性能，并具有快速的推理速度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Adaptive Stochastic Coefficients for Accelerating Diffusion Sampling",
+        "summary": "Diffusion-based generative processes, formulated as differential equation\nsolving, frequently balance computational speed with sample quality. Our\ntheoretical investigation of ODE- and SDE-based solvers reveals complementary\nweaknesses: ODE solvers accumulate irreducible gradient error along\ndeterministic trajectories, while SDE methods suffer from amplified\ndiscretization errors when the step budget is limited. Building upon this\ninsight, we introduce AdaSDE, a novel single-step SDE solver that aims to unify\nthe efficiency of ODEs with the error resilience of SDEs. Specifically, we\nintroduce a single per-step learnable coefficient, estimated via lightweight\ndistillation, which dynamically regulates the error correction strength to\naccelerate diffusion sampling. Notably, our framework can be integrated with\nexisting solvers to enhance their capabilities. Extensive experiments\ndemonstrate state-of-the-art performance: at 5 NFE, AdaSDE achieves FID scores\nof 4.18 on CIFAR-10, 8.05 on FFHQ and 6.96 on LSUN Bedroom. Codes are available\nin https://github.com/WLU-wry02/AdaSDE.",
+        "url": "http://arxiv.org/abs/2510.23285v1",
+        "published_date": "2025-10-27T12:53:48+00:00",
+        "updated_date": "2025-10-27T12:53:48+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ruoyu Wang",
+            "Beier Zhu",
+            "Junzhi Li",
+            "Liangyu Yuan",
+            "Chi Zhang"
+        ],
+        "tldr": "This paper introduces AdaSDE, a novel single-step SDE solver with a learnable coefficient to dynamically regulate error correction in diffusion models, achieving state-of-the-art FID scores at low NFEs.",
+        "tldr_zh": "本文介绍了一种新的单步SDE求解器AdaSDE，它具有可学习的系数，可以动态调节扩散模型中的误差校正，并在低NFE下实现了最先进的FID分数。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Residual Diffusion Bridge Model for Image Restoration",
+        "summary": "Diffusion bridge models establish probabilistic paths between arbitrary\npaired distributions and exhibit great potential for universal image\nrestoration. Most existing methods merely treat them as simple variants of\nstochastic interpolants, lacking a unified analytical perspective. Besides,\nthey indiscriminately reconstruct images through global noise injection and\nremoval, inevitably distorting undegraded regions due to imperfect\nreconstruction. To address these challenges, we propose the Residual Diffusion\nBridge Model (RDBM). Specifically, we theoretically reformulate the stochastic\ndifferential equations of generalized diffusion bridge and derive the\nanalytical formulas of its forward and reverse processes. Crucially, we\nleverage the residuals from given distributions to modulate the noise injection\nand removal, enabling adaptive restoration of degraded regions while preserving\nintact others. Moreover, we unravel the fundamental mathematical essence of\nexisting bridge models, all of which are special cases of RDBM and empirically\ndemonstrate the optimality of our proposed models. Extensive experiments are\nconducted to demonstrate the state-of-the-art performance of our method both\nqualitatively and quantitatively across diverse image restoration tasks. Code\nis publicly available at https://github.com/MiliLab/RDBM.",
+        "url": "http://arxiv.org/abs/2510.23116v1",
+        "published_date": "2025-10-27T08:35:49+00:00",
+        "updated_date": "2025-10-27T08:35:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hebaixu Wang",
+            "Jing Zhang",
+            "Haoyang Chen",
+            "Haonan Guo",
+            "Di Wang",
+            "Jiayi Ma",
+            "Bo Du"
+        ],
+        "tldr": "The paper introduces Residual Diffusion Bridge Model (RDBM) for image restoration, which adaptively restores degraded regions by leveraging residuals and offers a unified analytical perspective on diffusion bridge models, achieving state-of-the-art performance.",
+        "tldr_zh": "该论文介绍了用于图像修复的残差扩散桥模型（RDBM），它通过利用残差自适应地修复退化区域，并为扩散桥模型提供了一个统一的分析视角，从而实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Nested AutoRegressive Models",
+        "summary": "AutoRegressive (AR) models have demonstrated competitive performance in image\ngeneration, achieving results comparable to those of diffusion models. However,\ntheir token-by-token image generation mechanism remains computationally\nintensive and existing solutions such as VAR often lead to limited sample\ndiversity. In this work, we propose a Nested AutoRegressive~(NestAR) model,\nwhich proposes nested AutoRegressive architectures in generating images. NestAR\ndesigns multi-scale modules in a hierarchical order. These different scaled\nmodules are constructed in an AR architecture, where one larger-scale module is\nconditioned on outputs from its previous smaller-scale module. Within each\nmodule, NestAR uses another AR structure to generate ``patches'' of tokens. The\nproposed nested AR architecture reduces the overall complexity from\n$\\mathcal{O}(n)$ to $\\mathcal{O}(\\log n)$ in generating $n$ image tokens, as\nwell as increases image diversities. NestAR further incorporates flow matching\nloss to use continuous tokens, and develops objectives to coordinate these\nmulti-scale modules in model training. NestAR achieves competitive image\ngeneration performance while significantly lowering computational cost.",
+        "url": "http://arxiv.org/abs/2510.23028v1",
+        "published_date": "2025-10-27T05:49:02+00:00",
+        "updated_date": "2025-10-27T05:49:02+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hongyu Wu",
+            "Xuhui Fan",
+            "Zhangkai Wu",
+            "Longbing Cao"
+        ],
+        "tldr": "The paper introduces NestAR, a novel nested AutoRegressive model for image generation that aims to reduce computational complexity and increase sample diversity by using multi-scale modules and flow matching loss.",
+        "tldr_zh": "该论文介绍了一种新的嵌套自回归模型NestAR，用于图像生成，旨在通过使用多尺度模块和流匹配损失来降低计算复杂度并增加样本多样性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]

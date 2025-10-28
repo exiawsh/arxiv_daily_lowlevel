@@ -1,0 +1,188 @@
+[
+    {
+        "title": "Expert Validation of Synthetic Cervical Spine Radiographs Generated with a Denoising Diffusion Probabilistic Model",
+        "summary": "Machine learning in neurosurgery is limited by challenges in assembling\nlarge, high-quality imaging datasets. Synthetic data offers a scalable,\nprivacy-preserving solution. We evaluated the feasibility of generating\nrealistic lateral cervical spine radiographs using a denoising diffusion\nprobabilistic model (DDPM) trained on 4,963 images from the Cervical Spine\nX-ray Atlas. Model performance was monitored via training/validation loss and\nFrechet inception distance, and synthetic image quality was assessed in a\nblinded \"clinical Turing test\" with six neuroradiologists and two\nspine-fellowship trained neurosurgeons. Experts reviewed 50 quartets containing\none real and three synthetic images, identifying the real image and rating\nrealism on a 4-point Likert scale. Experts correctly identified the real image\nin 29% of trials (Fleiss' kappa=0.061). Mean realism scores were comparable\nbetween real (3.323) and synthetic images (3.228, 3.258, and 3.320; p=0.383,\n0.471, 1.000). Nearest-neighbor analysis found no evidence of memorization. We\nalso provide a dataset of 20,063 synthetic radiographs. These results\ndemonstrate that DDPM-generated cervical spine X-rays are statistically\nindistinguishable in realism and quality from real clinical images, offering a\nnovel approach to creating large-scale neuroimaging datasets for ML\napplications in landmarking, segmentation, and classification.",
+        "url": "http://arxiv.org/abs/2510.22166v1",
+        "published_date": "2025-10-25T05:25:37+00:00",
+        "updated_date": "2025-10-25T05:25:37+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Austin A. Barr",
+            "Brij S. Karmur",
+            "Anthony J. Winder",
+            "Eddie Guo",
+            "John T. Lysack",
+            "James N. Scott",
+            "William F. Morrish",
+            "Muneer Eesa",
+            "Morgan Willson",
+            "David W. Cadotte",
+            "Michael M. H. Yang",
+            "Ian Y. M. Chan",
+            "Sanju Lama",
+            "Garnette R. Sutherland"
+        ],
+        "tldr": "This paper demonstrates that denoising diffusion probabilistic models (DDPMs) can generate realistic cervical spine radiographs indistinguishable from real clinical images, offering a solution for creating large neuroimaging datasets for machine learning.",
+        "tldr_zh": "本文展示了去噪扩散概率模型（DDPM）可以生成与真实临床图像无法区分的逼真颈椎X光片，为创建用于机器学习的大型神经影像数据集提供了一种解决方案。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Discovering Latent Graphs with GFlowNets for Diverse Conditional Image Generation",
+        "summary": "Capturing diversity is crucial in conditional and prompt-based image\ngeneration, particularly when conditions contain uncertainty that can lead to\nmultiple plausible outputs. To generate diverse images reflecting this\ndiversity, traditional methods often modify random seeds, making it difficult\nto discern meaningful differences between samples, or diversify the input\nprompt, which is limited in verbally interpretable diversity. We propose\nRainbow, a novel conditional image generation framework, applicable to any\npretrained conditional generative model, that addresses inherent\ncondition/prompt uncertainty and generates diverse plausible images. Rainbow is\nbased on a simple yet effective idea: decomposing the input condition into\ndiverse latent representations, each capturing an aspect of the uncertainty and\ngenerating a distinct image. First, we integrate a latent graph, parameterized\nby Generative Flow Networks (GFlowNets), into the prompt representation\ncomputation. Second, leveraging GFlowNets' advanced graph sampling capabilities\nto capture uncertainty and output diverse trajectories over the graph, we\nproduce multiple trajectories that collectively represent the input condition,\nleading to diverse condition representations and corresponding output images.\nEvaluations on natural image and medical image datasets demonstrate Rainbow's\nimprovement in both diversity and fidelity across image synthesis, image\ngeneration, and counterfactual generation tasks.",
+        "url": "http://arxiv.org/abs/2510.22107v1",
+        "published_date": "2025-10-25T01:25:50+00:00",
+        "updated_date": "2025-10-25T01:25:50+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Bailey Trang",
+            "Parham Saremi",
+            "Alan Q. Wang",
+            "Fangrui Huang",
+            "Zahra TehraniNasab",
+            "Amar Kumar",
+            "Tal Arbel",
+            "Li Fei-Fei",
+            "Ehsan Adeli"
+        ],
+        "tldr": "The paper introduces Rainbow, a GFlowNet-based framework that decomposes input conditions into diverse latent representations using a latent graph to improve diversity in conditional image generation tasks.",
+        "tldr_zh": "本文介绍了一种名为Rainbow的框架，该框架基于GFlowNet，利用潜在图将输入条件分解为不同的潜在表示，从而提高条件图像生成任务中的多样性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Sprint: Sparse-Dense Residual Fusion for Efficient Diffusion Transformers",
+        "summary": "Diffusion Transformers (DiTs) deliver state-of-the-art generative performance\nbut their quadratic training cost with sequence length makes large-scale\npretraining prohibitively expensive. Token dropping can reduce training cost,\nyet na\\\"ive strategies degrade representations, and existing methods are either\nparameter-heavy or fail at high drop ratios. We present SPRINT, Sparse--Dense\nResidual Fusion for Efficient Diffusion Transformers, a simple method that\nenables aggressive token dropping (up to 75%) while preserving quality. SPRINT\nleverages the complementary roles of shallow and deep layers: early layers\nprocess all tokens to capture local detail, deeper layers operate on a sparse\nsubset to cut computation, and their outputs are fused through residual\nconnections. Training follows a two-stage schedule: long masked pre-training\nfor efficiency followed by short full-token fine-tuning to close the\ntrain--inference gap. On ImageNet-1K 256x256, SPRINT achieves 9.8x training\nsavings with comparable FID/FDD, and at inference, its Path-Drop Guidance (PDG)\nnearly halves FLOPs while improving quality. These results establish SPRINT as\na simple, effective, and general solution for efficient DiT training.",
+        "url": "http://arxiv.org/abs/2510.21986v1",
+        "published_date": "2025-10-24T19:29:55+00:00",
+        "updated_date": "2025-10-24T19:29:55+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dogyun Park",
+            "Moayed Haji-Ali",
+            "Yanyu Li",
+            "Willi Menapace",
+            "Sergey Tulyakov",
+            "Hyunwoo J. Kim",
+            "Aliaksandr Siarohin",
+            "Anil Kag"
+        ],
+        "tldr": "The paper introduces SPRINT, a method for efficient Diffusion Transformer (DiT) training that uses sparse-dense residual fusion to enable aggressive token dropping while maintaining generative performance, achieving significant training savings and inference speedups.",
+        "tldr_zh": "该论文介绍了一种高效扩散Transformer（DiT）训练方法SPRINT，它利用稀疏-密集残差融合来实现积极的token丢弃，同时保持生成性能，从而显著节省训练成本并提高推理速度。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Moving Beyond Diffusion: Hierarchy-to-Hierarchy Autoregression for fMRI-to-Image Reconstruction",
+        "summary": "Reconstructing visual stimuli from fMRI signals is a central challenge\nbridging machine learning and neuroscience. Recent diffusion-based methods\ntypically map fMRI activity to a single high-level embedding, using it as fixed\nguidance throughout the entire generation process. However, this fixed guidance\ncollapses hierarchical neural information and is misaligned with the\nstage-dependent demands of image reconstruction. In response, we propose\nMindHier, a coarse-to-fine fMRI-to-image reconstruction framework built on\nscale-wise autoregressive modeling. MindHier introduces three components: a\nHierarchical fMRI Encoder to extract multi-level neural embeddings, a\nHierarchy-to-Hierarchy Alignment scheme to enforce layer-wise correspondence\nwith CLIP features, and a Scale-Aware Coarse-to-Fine Neural Guidance strategy\nto inject these embeddings into autoregression at matching scales. These\ndesigns make MindHier an efficient and cognitively-aligned alternative to\ndiffusion-based methods by enabling a hierarchical reconstruction process that\nsynthesizes global semantics before refining local details, akin to human\nvisual perception. Extensive experiments on the NSD dataset show that MindHier\nachieves superior semantic fidelity, 4.67x faster inference, and more\ndeterministic results than the diffusion-based baselines.",
+        "url": "http://arxiv.org/abs/2510.22335v1",
+        "published_date": "2025-10-25T15:40:07+00:00",
+        "updated_date": "2025-10-25T15:40:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Xu Zhang",
+            "Ruijie Quan",
+            "Wenguan Wang",
+            "Yi Yang"
+        ],
+        "tldr": "The paper introduces MindHier, a novel coarse-to-fine fMRI-to-image reconstruction framework that leverages hierarchical fMRI encoding and autoregressive modeling to achieve superior semantic fidelity and faster inference compared to diffusion-based methods.",
+        "tldr_zh": "该论文介绍了一种名为MindHier的新型由粗到精的fMRI到图像重建框架，该框架利用分层fMRI编码和自回归建模，与基于扩散的方法相比，实现了卓越的语义保真度和更快的推理速度。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Scaling Non-Parametric Sampling with Representation",
+        "summary": "Scaling and architectural advances have produced strikingly photorealistic\nimage generative models, yet their mechanisms still remain opaque. Rather than\nadvancing scaling, our goal is to strip away complicated engineering tricks and\npropose a simple, non-parametric generative model. Our design is grounded in\nthree principles of natural images-(i) spatial non-stationarity, (ii) low-level\nregularities, and (iii) high-level semantics-and defines each pixel's\ndistribution from its local context window. Despite its minimal architecture\nand no training, the model produces high-fidelity samples on MNIST and visually\ncompelling CIFAR-10 images. This combination of simplicity and strong empirical\nperformance points toward a minimal theory of natural-image structure. The\nmodel's white-box nature also allows us to have a mechanistic understanding of\nhow the model generalizes and generates diverse images. We study it by tracing\neach generated pixel back to its source images. These analyses reveal a simple,\ncompositional procedure for \"part-whole generalization\", suggesting a\nhypothesis for how large neural network generative models learn to generalize.",
+        "url": "http://arxiv.org/abs/2510.22196v1",
+        "published_date": "2025-10-25T07:29:26+00:00",
+        "updated_date": "2025-10-25T07:29:26+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Vincent Lu",
+            "Aaron Truong",
+            "Zeyu Yun",
+            "Yubei Chen"
+        ],
+        "tldr": "The paper proposes a simple, non-parametric generative model based on local context windows, achieving high-fidelity MNIST and compelling CIFAR-10 image generation without training. It offers a mechanistic understanding of image generation and generalization.",
+        "tldr_zh": "该论文提出了一种简单的非参数生成模型，该模型基于局部上下文窗口，无需训练即可实现高保真MNIST和引人注目的CIFAR-10图像生成。它为图像生成和泛化提供了机械性的理解。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "FlowOpt: Fast Optimization Through Whole Flow Processes for Training-Free Editing",
+        "summary": "The remarkable success of diffusion and flow-matching models has ignited a\nsurge of works on adapting them at test time for controlled generation tasks.\nExamples range from image editing to restoration, compression and\npersonalization. However, due to the iterative nature of the sampling process\nin those models, it is computationally impractical to use gradient-based\noptimization to directly control the image generated at the end of the process.\nAs a result, existing methods typically resort to manipulating each timestep\nseparately. Here we introduce FlowOpt - a zero-order (gradient-free)\noptimization framework that treats the entire flow process as a black box,\nenabling optimization through the whole sampling path without backpropagation\nthrough the model. Our method is both highly efficient and allows users to\nmonitor the intermediate optimization results and perform early stopping if\ndesired. We prove a sufficient condition on FlowOpt's step-size, under which\nconvergence to the global optimum is guaranteed. We further show how to\nempirically estimate this upper bound so as to choose an appropriate step-size.\nWe demonstrate how FlowOpt can be used for image editing, showcasing two\noptions: (i) inversion (determining the initial noise that generates a given\nimage), and (ii) directly steering the edited image to be similar to the source\nimage while conforming to a target text prompt. In both cases, FlowOpt achieves\nstate-of-the-art results while using roughly the same number of neural function\nevaluations (NFEs) as existing methods. Code and examples are available on the\nproject's webpage.",
+        "url": "http://arxiv.org/abs/2510.22010v1",
+        "published_date": "2025-10-24T20:24:26+00:00",
+        "updated_date": "2025-10-24T20:24:26+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "eess.IV"
+        ],
+        "authors": [
+            "Or Ronai",
+            "Vladimir Kulikov",
+            "Tomer Michaeli"
+        ],
+        "tldr": "The paper introduces FlowOpt, a gradient-free optimization framework for controlled image generation using flow models, achieving state-of-the-art results in image editing with comparable computational cost to existing methods.",
+        "tldr_zh": "本文介绍了FlowOpt，一个用于使用流动模型进行可控图像生成的无梯度优化框架，在图像编辑方面取得了最先进的结果，且计算成本与现有方法相当。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "LiteDiff",
+        "summary": "In recent years, diffusion models have demonstrated remarkable success in\nhigh-fidelity image synthesis. However, fine-tuning these models for\nspecialized domains, such as medical imaging, remains challenging due to\nlimited domain-specific data and the high computational cost of full model\nadaptation. In this paper, we introduce Lite-Diff (Lightweight Diffusion Model\nAdaptation), a novel finetuning approach that integrates lightweight adaptation\nlayers into a frozen diffusion U-Net while enhancing training with a latent\nmorphological autoencoder (for domain-specific latent consistency) and a pixel\nlevel discriminator(for adversarial alignment). By freezing weights of the base\nmodel and optimizing only small residual adapter modules, LiteDiff\nsignificantly reduces the computational overhead and mitigates overfitting,\neven in minimal-data settings. Additionally, we conduct ablation studies to\nanalyze the effects of selectively integrating adaptation layers in different\nU-Net blocks, revealing an optimal balance between efficiency and performance.\nExperiments on three chest X-ray datasets - (1) Kaggle Chest X-Ray Pneumonia,\n(2) NIH Chest X-ray14 and (3) VinBigData Chest X_ray demonstrate that LiteDiff\nachieves superior adaptation efficiency compared to naive full fine-tuning. Our\nframework provides a promising direction for transfer learning in diffusion\nmodels, facilitating their deployment in diverse low data domains.",
+        "url": "http://arxiv.org/abs/2510.22004v1",
+        "published_date": "2025-10-24T20:12:17+00:00",
+        "updated_date": "2025-10-24T20:12:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ruchir Namjoshi",
+            "Nagasai Thadishetty",
+            "Vignesh Kumar",
+            "Hemanth Venkateshwara"
+        ],
+        "tldr": "LiteDiff introduces a lightweight fine-tuning method for diffusion models using adapter layers, a latent morphological autoencoder, and a pixel-level discriminator, achieving efficient adaptation in low-data medical imaging scenarios.",
+        "tldr_zh": "LiteDiff提出了一种轻量级的扩散模型微调方法，使用适配器层、潜在形态自编码器和像素级判别器，从而在低数据医学成像场景中实现高效的适应。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

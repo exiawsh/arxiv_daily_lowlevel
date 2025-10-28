@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 21, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - October 27, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 21, 2025</p>
+            <p>October 27, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,35 +215,31 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Generation then Reconstruction: Accelerating Masked Autoregressive Models via Two-Stage Sampling</h2>
+            <h2 class="paper-title">SRSR: Enhancing Semantic Accuracy in Real-World Image Super-Resolution with Spatially Re-Focused Text-Conditioning</h2>
             
-            <p class="paper-summary">Masked Autoregressive (MAR) models promise better efficiency in visual
-generation than autoregressive (AR) models for the ability of parallel
-generation, yet their acceleration potential remains constrained by the
-modeling complexity of spatially correlated visual tokens in a single step. To
-address this limitation, we introduce Generation then Reconstruction (GtR), a
-training-free hierarchical sampling strategy that decomposes generation into
-two stages: structure generation establishing global semantic scaffolding,
-followed by detail reconstruction efficiently completing remaining tokens.
-Assuming that it is more difficult to create an image from scratch than to
-complement images based on a basic image framework, GtR is designed to achieve
-acceleration by computing the reconstruction stage quickly while maintaining
-the generation quality by computing the generation stage slowly. Moreover,
-observing that tokens on the details of an image often carry more semantic
-information than tokens in the salient regions, we further propose
-Frequency-Weighted Token Selection (FTS) to offer more computation budget to
-tokens on image details, which are localized based on the energy of high
-frequency information. Extensive experiments on ImageNet class-conditional and
-text-to-image generation demonstrate 3.72x speedup on MAR-H while maintaining
-comparable quality (e.g., FID: 1.59, IS: 304.4 vs. original 1.59, 299.1),
-substantially outperforming existing acceleration methods across various model
-scales and generation tasks. Our codes will be released in
-https://github.com/feihongyan1/GtR.</p>
+            <p class="paper-summary">Existing diffusion-based super-resolution approaches often exhibit semantic
+ambiguities due to inaccuracies and incompleteness in their text conditioning,
+coupled with the inherent tendency for cross-attention to divert towards
+irrelevant pixels. These limitations can lead to semantic misalignment and
+hallucinated details in the generated high-resolution outputs. To address
+these, we propose a novel, plug-and-play spatially re-focused super-resolution
+(SRSR) framework that consists of two core components: first, we introduce
+Spatially Re-focused Cross-Attention (SRCA), which refines text conditioning at
+inference time by applying visually-grounded segmentation masks to guide
+cross-attention. Second, we introduce a Spatially Targeted Classifier-Free
+Guidance (STCFG) mechanism that selectively bypasses text influences on
+ungrounded pixels to prevent hallucinations. Extensive experiments on both
+synthetic and real-world datasets demonstrate that SRSR consistently
+outperforms seven state-of-the-art baselines in standard fidelity metrics (PSNR
+and SSIM) across all datasets, and in perceptual quality measures (LPIPS and
+DISTS) on two real-world benchmarks, underscoring its effectiveness in
+achieving both high semantic fidelity and perceptual quality in
+super-resolution.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a two-stage sampling strategy (Generation then Reconstruction, GtR) to accelerate Masked Autoregressive models for image generation, achieving significant speedup while maintaining comparable image quality by focusing computational budget on image details.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces SRSR, a plug-and-play framework that enhances semantic accuracy in diffusion-based image super-resolution by using spatially re-focused text conditioning via visually-grounded segmentation masks and spatially targeted classifier-free guidance, demonstrating improved fidelity and perceptual quality.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种两阶段采样策略（先生成后重建，GtR）来加速用于图像生成的掩码自回归模型。通过将计算预算集中在图像细节上，该方法在保持图像质量的同时实现了显著的加速。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为SRSR的即插即用框架，通过使用空间重聚焦的文本条件，利用视觉接地的分割掩码和空间目标分类器自由引导，增强了基于扩散的图像超分辨率的语义准确性，并展示了改进的保真度和感知质量。</p>
             
 
             
@@ -253,120 +249,8 @@ https://github.com/feihongyan1/GtR.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.17171v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Feihong Yan, Peiru Wang, Yao Zhu, Kaiyu Pang, Qingyan Wei, Huiqi Li, Linfeng Zhang</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">CharDiff: A Diffusion Model with Character-Level Guidance for License Plate Image Restoration</h2>
-            
-            <p class="paper-summary">The significance of license plate image restoration goes beyond the
-preprocessing stage of License Plate Recognition (LPR) systems, as it also
-serves various purposes, including increasing evidential value, enhancing the
-clarity of visual interface, and facilitating further utilization of license
-plate images. We propose a novel diffusion-based framework with character-level
-guidance, CharDiff, which effectively restores and recognizes severely degraded
-license plate images captured under realistic conditions. CharDiff leverages
-fine-grained character-level priors extracted through external segmentation and
-Optical Character Recognition (OCR) modules tailored for low-quality license
-plate images. For precise and focused guidance, CharDiff incorporates a novel
-Character-guided Attention through Region-wise Masking (CHARM) module, which
-ensures that each character's guidance is restricted to its own region, thereby
-avoiding interference with other regions. In experiments, CharDiff
-significantly outperformed the baseline restoration models in both restoration
-quality and recognition accuracy, achieving a 28% relative reduction in CER on
-the Roboflow-LP dataset, compared to the best-performing baseline model. These
-results indicate that the structured character-guided conditioning effectively
-enhances the robustness of diffusion-based license plate restoration and
-recognition in practical deployment scenarios.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces CharDiff, a diffusion model for license plate image restoration that leverages character-level guidance to improve restoration quality and recognition accuracy, achieving a 28% CER reduction on the Roboflow-LP dataset.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为CharDiff的扩散模型，用于车牌图像修复。该模型利用字符级指导来提高修复质量和识别精度，在Roboflow-LP数据集上实现了28%的CER降低。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
                 </div>
                 
                 
@@ -389,8 +273,8 @@ recognition in practical deployment scenarios.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -401,6 +285,10 @@ recognition in practical deployment scenarios.</p>
             <div class="paper-rating">
                 <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
                 
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
                 
                     
                         <i class="fas fa-star"></i>
@@ -418,26 +306,22 @@ recognition in practical deployment scenarios.</p>
                         <i class="fas fa-star-half-alt"></i>
                     
                 
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17330v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.22534v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Gyuhwan Park, Kihyun Na, Injung Kim</p>
+            <p class="paper-authors">Authors: Chen Chen, Majid Abdolshah, Violetta Shevchenko, Hongdong Li, Chang Xu, Pulak Purkait</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-28 03:39:15 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-28 03:43:03 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
