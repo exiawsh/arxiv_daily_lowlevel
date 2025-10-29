@@ -1,0 +1,142 @@
+[
+    {
+        "title": "Decoupled MeanFlow: Turning Flow Models into Flow Maps for Accelerated Sampling",
+        "summary": "Denoising generative models, such as diffusion and flow-based models, produce\nhigh-quality samples but require many denoising steps due to discretization\nerror. Flow maps, which estimate the average velocity between timesteps,\nmitigate this error and enable faster sampling. However, their training\ntypically demands architectural changes that limit compatibility with\npretrained flow models. We introduce Decoupled MeanFlow, a simple decoding\nstrategy that converts flow models into flow map models without architectural\nmodifications. Our method conditions the final blocks of diffusion transformers\non the subsequent timestep, allowing pretrained flow models to be directly\nrepurposed as flow maps. Combined with enhanced training techniques, this\ndesign enables high-quality generation in as few as 1 to 4 steps. Notably, we\nfind that training flow models and subsequently converting them is more\nefficient and effective than training flow maps from scratch. On ImageNet\n256x256 and 512x512, our models attain 1-step FID of 2.16 and 2.12,\nrespectively, surpassing prior art by a large margin. Furthermore, we achieve\nFID of 1.51 and 1.68 when increasing the steps to 4, which nearly matches the\nperformance of flow models while delivering over 100x faster inference.",
+        "url": "http://arxiv.org/abs/2510.24474v1",
+        "published_date": "2025-10-28T14:43:48+00:00",
+        "updated_date": "2025-10-28T14:43:48+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kyungmin Lee",
+            "Sihyun Yu",
+            "Jinwoo Shin"
+        ],
+        "tldr": "The paper introduces Decoupled MeanFlow, a method to convert pretrained flow models into flow map models for accelerated sampling without architectural changes, achieving state-of-the-art FID scores with significantly fewer steps.",
+        "tldr_zh": "该论文介绍了Decoupled MeanFlow，一种将预训练的Flow模型转换为Flow Map模型的方法，用于加速采样，无需架构修改，并以显著更少的步骤实现了最先进的FID分数。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MC-SJD : Maximal Coupling Speculative Jacobi Decoding for Autoregressive Visual Generation Acceleration",
+        "summary": "While autoregressive (AR) modeling has recently emerged as a new paradigm in\nvisual generation, its practical adoption is severely constrained by the slow\ninference speed of per-token generation, which often requires thousands of\nsteps to produce a single sample. To address this challenge, we propose MC-SJD,\na training-free, lossless parallel decoding framework designed to accelerate AR\nvisual generation by extending the recently introduced Speculative Jacobi\nDecoding (SJD). Although SJD shows strong potential for accelerating AR\ngeneration, we demonstrate that token instability across iterations\nsignificantly reduces the acceptance rate, a limitation that primarily arises\nfrom the independent sampling process used during draft token generation. To\novercome this, we introduce MC-SJD, an information-theoretic approach based on\ncoupling, which substantially accelerates standard SJD by maximizing the\nprobability of sampling identical draft tokens across consecutive iterations,\nall while preserving its lossless property. Remarkably, this method requires\nonly a single-line modification to the existing algorithm, yet achieves\nsubstantial performance gains, delivering up to a ~4.2x acceleration in image\ngeneration and ~13.3x acceleration in video generation compared to standard AR\ndecoding, without any degradation in output quality.",
+        "url": "http://arxiv.org/abs/2510.24211v1",
+        "published_date": "2025-10-28T09:26:27+00:00",
+        "updated_date": "2025-10-28T09:26:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Junhyuk So",
+            "Hyunho Kook",
+            "Chaeyeon Jang",
+            "Eunhyeok Park"
+        ],
+        "tldr": "The paper introduces MC-SJD, a training-free, lossless parallel decoding framework that accelerates autoregressive visual generation by maximizing the probability of sampling identical draft tokens across consecutive iterations in Speculative Jacobi Decoding (SJD), achieving significant speedups in image and video generation.",
+        "tldr_zh": "该论文介绍了一种名为MC-SJD的无训练、无损并行解码框架，通过最大化Speculative Jacobi Decoding (SJD)中连续迭代采样相同草稿token的概率来加速自回归视觉生成，并在图像和视频生成方面实现了显著的加速。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ETC: training-free diffusion models acceleration with Error-aware Trend Consistency",
+        "summary": "Diffusion models have achieved remarkable generative quality but remain\nbottlenecked by costly iterative sampling. Recent training-free methods\naccelerate diffusion process by reusing model outputs. However, these methods\nignore denoising trends and lack error control for model-specific tolerance,\nleading to trajectory deviations under multi-step reuse and exacerbating\ninconsistencies in the generated results. To address these issues, we introduce\nError-aware Trend Consistency (ETC), a framework that (1) introduces a\nconsistent trend predictor that leverages the smooth continuity of diffusion\ntrajectories, projecting historical denoising patterns into stable future\ndirections and progressively distributing them across multiple approximation\nsteps to achieve acceleration without deviating; (2) proposes a model-specific\nerror tolerance search mechanism that derives corrective thresholds by\nidentifying transition points from volatile semantic planning to stable quality\nrefinement. Experiments show that ETC achieves a 2.65x acceleration over FLUX\nwith negligible (-0.074 SSIM score) degradation of consistency.",
+        "url": "http://arxiv.org/abs/2510.24129v1",
+        "published_date": "2025-10-28T07:08:09+00:00",
+        "updated_date": "2025-10-28T07:08:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiajian Xie",
+            "Hubery Yin",
+            "Chen Li",
+            "Zhou Zhao",
+            "Shengyu Zhang"
+        ],
+        "tldr": "The paper introduces ETC, a training-free framework for accelerating diffusion models by predicting consistent trends and controlling errors based on model-specific tolerance, achieving 2.65x speedup with minimal consistency degradation.",
+        "tldr_zh": "该论文介绍了ETC，一个无需训练的框架，通过预测一致的趋势并基于模型特定的容错性来控制误差，从而加速扩散模型，实现了2.65倍的加速，且一致性降级很小。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Efficient Cost-and-Quality Controllable Arbitrary-scale Super-resolution with Fourier Constraints",
+        "summary": "Cost-and-Quality (CQ) controllability in arbitrary-scale super-resolution is\ncrucial. Existing methods predict Fourier components one by one using a\nrecurrent neural network. However, this approach leads to performance\ndegradation and inefficiency due to independent prediction. This paper proposes\npredicting multiple components jointly to improve both quality and efficiency.",
+        "url": "http://arxiv.org/abs/2510.23978v1",
+        "published_date": "2025-10-28T01:19:54+00:00",
+        "updated_date": "2025-10-28T01:19:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kazutoshi Akita",
+            "Norimichi Ukita"
+        ],
+        "tldr": "This paper proposes a new arbitrary-scale super-resolution method that jointly predicts Fourier components to improve quality and efficiency, addressing the limitations of existing recurrent neural network approaches.",
+        "tldr_zh": "该论文提出了一种新的任意尺度超分辨率方法，通过联合预测傅里叶分量来提高质量和效率，解决了现有循环神经网络方法的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RareFlow: Physics-Aware Flow-Matching for Cross-Sensor Super-Resolution of Rare-Earth Features",
+        "summary": "Super-resolution (SR) for remote sensing imagery often fails under\nout-of-distribution (OOD) conditions, such as rare geomorphic features captured\nby diverse sensors, producing visually plausible but physically inaccurate\nresults. We present RareFlow, a physics-aware SR framework designed for OOD\nrobustness. RareFlow's core is a dual-conditioning architecture. A Gated\nControlNet preserves fine-grained geometric fidelity from the low-resolution\ninput, while textual prompts provide semantic guidance for synthesizing complex\nfeatures. To ensure physically sound outputs, we introduce a multifaceted loss\nfunction that enforces both spectral and radiometric consistency with sensor\nproperties. Furthermore, the framework quantifies its own predictive\nuncertainty by employing a stochastic forward pass approach; the resulting\noutput variance directly identifies unfamiliar inputs, mitigating feature\nhallucination. We validate RareFlow on a new, curated benchmark of multi-sensor\nsatellite imagery. In blind evaluations, geophysical experts rated our model's\noutputs as approaching the fidelity of ground truth imagery, significantly\noutperforming state-of-the-art baselines. This qualitative superiority is\ncorroborated by quantitative gains in perceptual metrics, including a nearly\n40\\% reduction in FID. RareFlow provides a robust framework for high-fidelity\nsynthesis in data-scarce scientific domains and offers a new paradigm for\ncontrolled generation under severe domain shift.",
+        "url": "http://arxiv.org/abs/2510.23816v1",
+        "published_date": "2025-10-27T19:56:43+00:00",
+        "updated_date": "2025-10-27T19:56:43+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Forouzan Fallah",
+            "Wenwen Li",
+            "Chia-Yu Hsu",
+            "Hyunho Lee",
+            "Yezhou Yang"
+        ],
+        "tldr": "RareFlow is a physics-aware super-resolution framework for remote sensing imagery that addresses out-of-distribution robustness by incorporating a dual-conditioning architecture, a multifaceted loss function, and uncertainty quantification, demonstrably outperforming state-of-the-art methods.",
+        "tldr_zh": "RareFlow 是一种针对遥感图像的物理感知超分辨率框架，通过结合双重条件架构、多方面损失函数和不确定性量化来解决分布外鲁棒性问题，并且已经证明优于目前最先进的方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Delving into Cascaded Instability: A Lipschitz Continuity View on Image Restoration and Object Detection Synergy",
+        "summary": "To improve detection robustness in adverse conditions (e.g., haze and low\nlight), image restoration is commonly applied as a pre-processing step to\nenhance image quality for the detector. However, the functional mismatch\nbetween restoration and detection networks can introduce instability and hinder\neffective integration -- an issue that remains underexplored. We revisit this\nlimitation through the lens of Lipschitz continuity, analyzing the functional\ndifferences between restoration and detection networks in both the input space\nand the parameter space. Our analysis shows that restoration networks perform\nsmooth, continuous transformations, while object detectors operate with\ndiscontinuous decision boundaries, making them highly sensitive to minor\nperturbations. This mismatch introduces instability in traditional cascade\nframeworks, where even imperceptible noise from restoration is amplified during\ndetection, disrupting gradient flow and hindering optimization. To address\nthis, we propose Lipschitz-regularized object detection (LROD), a simple yet\neffective framework that integrates image restoration directly into the\ndetector's feature learning, harmonizing the Lipschitz continuity of both tasks\nduring training. We implement this framework as Lipschitz-regularized YOLO\n(LR-YOLO), extending seamlessly to existing YOLO detectors. Extensive\nexperiments on haze and low-light benchmarks demonstrate that LR-YOLO\nconsistently improves detection stability, optimization smoothness, and overall\naccuracy.",
+        "url": "http://arxiv.org/abs/2510.24232v1",
+        "published_date": "2025-10-28T09:41:42+00:00",
+        "updated_date": "2025-10-28T09:41:42+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qing Zhao",
+            "Weijian Deng",
+            "Pengxu Wei",
+            "ZiYi Dong",
+            "Hannan Lu",
+            "Xiangyang Ji",
+            "Liang Lin"
+        ],
+        "tldr": "This paper analyzes the instability caused by cascading image restoration and object detection networks due to differing Lipschitz continuity properties and proposes a Lipschitz-regularized object detection framework to address this issue, demonstrating improved performance on haze and low-light benchmarks.",
+        "tldr_zh": "该论文分析了由于不同的Lipschitz连续性导致图像修复和目标检测网络级联引起的不稳定性，并提出了一种Lipschitz正则化的目标检测框架来解决这个问题，并在雾霾和弱光基准测试中展示了改进的性能。",
+        "relevance_score": 6,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
