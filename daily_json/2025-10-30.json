@@ -1,0 +1,80 @@
+[
+    {
+        "title": "Hawk: Leveraging Spatial Context for Faster Autoregressive Text-to-Image Generation",
+        "summary": "Autoregressive (AR) image generation models are capable of producing\nhigh-fidelity images but often suffer from slow inference due to their\ninherently sequential, token-by-token decoding process. Speculative decoding,\nwhich employs a lightweight draft model to approximate the output of a larger\nAR model, has shown promise in accelerating text generation without\ncompromising quality. However, its application to image generation remains\nlargely underexplored. The challenges stem from a significantly larger sampling\nspace, which complicates the alignment between the draft and target model\noutputs, coupled with the inadequate use of the two-dimensional spatial\nstructure inherent in images, thereby limiting the modeling of local\ndependencies. To overcome these challenges, we introduce Hawk, a new approach\nthat harnesses the spatial structure of images to guide the speculative model\ntoward more accurate and efficient predictions. Experimental results on\nmultiple text-to-image benchmarks demonstrate a 1.71x speedup over standard AR\nmodels, while preserving both image fidelity and diversity.",
+        "url": "http://arxiv.org/abs/2510.25739v1",
+        "published_date": "2025-10-29T17:43:31+00:00",
+        "updated_date": "2025-10-29T17:43:31+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Zhi-Kai Chen",
+            "Jun-Peng Jiang",
+            "Han-Jia Ye",
+            "De-Chuan Zhan"
+        ],
+        "tldr": "The paper introduces Hawk, a novel approach to accelerate autoregressive text-to-image generation by leveraging spatial context in speculative decoding, achieving a 1.71x speedup while preserving image quality.",
+        "tldr_zh": "该论文介绍了 Hawk，一种通过在推测解码中利用空间上下文来加速自回归文本到图像生成的新方法，在保持图像质量的同时实现了 1.71 倍的加速。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Seeing Clearly and Deeply: An RGBD Imaging Approach with a Bio-inspired Monocentric Design",
+        "summary": "Achieving high-fidelity, compact RGBD imaging presents a dual challenge:\nconventional compact optics struggle with RGB sharpness across the entire\ndepth-of-field, while software-only Monocular Depth Estimation (MDE) is an\nill-posed problem reliant on unreliable semantic priors. While deep optics with\nelements like DOEs can encode depth, they introduce trade-offs in fabrication\ncomplexity and chromatic aberrations, compromising simplicity. To address this,\nwe first introduce a novel bio-inspired all-spherical monocentric lens, around\nwhich we build the Bionic Monocentric Imaging (BMI) framework, a holistic\nco-design. This optical design naturally encodes depth into its depth-varying\nPoint Spread Functions (PSFs) without requiring complex diffractive or freeform\nelements. We establish a rigorous physically-based forward model to generate a\nsynthetic dataset by precisely simulating the optical degradation process. This\nsimulation pipeline is co-designed with a dual-head, multi-scale reconstruction\nnetwork that employs a shared encoder to jointly recover a high-fidelity\nAll-in-Focus (AiF) image and a precise depth map from a single coded capture.\nExtensive experiments validate the state-of-the-art performance of the proposed\nframework. In depth estimation, the method attains an Abs Rel of 0.026 and an\nRMSE of 0.130, markedly outperforming leading software-only approaches and\nother deep optics systems. For image restoration, the system achieves an SSIM\nof 0.960 and a perceptual LPIPS score of 0.082, thereby confirming a superior\nbalance between image fidelity and depth accuracy. This study illustrates that\nthe integration of bio-inspired, fully spherical optics with a joint\nreconstruction algorithm constitutes an effective strategy for addressing the\nintrinsic challenges in high-performance compact RGBD imaging. Source code will\nbe publicly available at https://github.com/ZongxiYu-ZJU/BMI.",
+        "url": "http://arxiv.org/abs/2510.25314v1",
+        "published_date": "2025-10-29T09:27:38+00:00",
+        "updated_date": "2025-10-29T09:27:38+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO",
+            "eess.IV",
+            "physics.optics"
+        ],
+        "authors": [
+            "Zongxi Yu",
+            "Xiaolong Qian",
+            "Shaohua Gao",
+            "Qi Jiang",
+            "Yao Gao",
+            "Kailun Yang",
+            "Kaiwei Wang"
+        ],
+        "tldr": "This paper introduces a bio-inspired monocentric lens design and associated reconstruction network (BMI framework) for high-fidelity RGBD imaging, demonstrating state-of-the-art performance in depth estimation and image restoration.",
+        "tldr_zh": "本文介绍了一种受生物启发的单中心透镜设计和相关的重建网络（BMI框架），用于高保真RGBD成像，并在深度估计和图像恢复方面表现出最先进的性能。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Balanced conic rectified flow",
+        "summary": "Rectified flow is a generative model that learns smooth transport mappings\nbetween two distributions through an ordinary differential equation (ODE).\nUnlike diffusion-based generative models, which require costly numerical\nintegration of a generative ODE to sample images with state-of-the-art quality,\nrectified flow uses an iterative process called reflow to learn smooth and\nstraight ODE paths. This allows for relatively simple and efficient generation\nof high-quality images. However, rectified flow still faces several challenges.\n1) The reflow process requires a large number of generative pairs to preserve\nthe target distribution, leading to significant computational costs. 2) Since\nthe model is typically trained using only generated image pairs, its\nperformance heavily depends on the 1-rectified flow model, causing it to become\nbiased towards the generated data.\n  In this work, we experimentally expose the limitations of the original\nrectified flow and propose a novel approach that incorporates real images into\nthe training process. By preserving the ODE paths for real images, our method\neffectively reduces reliance on large amounts of generated data. Instead, we\ndemonstrate that the reflow process can be conducted efficiently using a much\nsmaller set of generated and real images. In CIFAR-10, we achieved\nsignificantly better FID scores, not only in one-step generation but also in\nfull-step simulations, while using only of the generative pairs compared to the\noriginal method. Furthermore, our approach induces straighter paths and avoids\nsaturation on generated images during reflow, leading to more robust ODE\nlearning while preserving the distribution of real images.",
+        "url": "http://arxiv.org/abs/2510.25229v1",
+        "published_date": "2025-10-29T07:06:01+00:00",
+        "updated_date": "2025-10-29T07:06:01+00:00",
+        "categories": [
+            "cs.CV",
+            "68T07, 68T45, 65C20",
+            "I.2.10; I.4.9; I.2.6"
+        ],
+        "authors": [
+            "Kim Shin Seong",
+            "Mingi Kwon",
+            "Jaeseok Jeong",
+            "Youngjung Uh"
+        ],
+        "tldr": "This paper introduces a novel approach to rectified flow by incorporating real images into the training process, reducing computational costs and improving image generation quality with straighter ODE paths.",
+        "tldr_zh": "本文提出了一种新的修正流方法，通过将真实图像融入训练过程，降低了计算成本，并通过更直的ODE路径提高了图像生成质量。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

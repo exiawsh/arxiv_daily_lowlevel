@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 21, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - October 30, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 21, 2025</p>
+            <p>October 30, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,35 +215,28 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Generation then Reconstruction: Accelerating Masked Autoregressive Models via Two-Stage Sampling</h2>
+            <h2 class="paper-title">Hawk: Leveraging Spatial Context for Faster Autoregressive Text-to-Image Generation</h2>
             
-            <p class="paper-summary">Masked Autoregressive (MAR) models promise better efficiency in visual
-generation than autoregressive (AR) models for the ability of parallel
-generation, yet their acceleration potential remains constrained by the
-modeling complexity of spatially correlated visual tokens in a single step. To
-address this limitation, we introduce Generation then Reconstruction (GtR), a
-training-free hierarchical sampling strategy that decomposes generation into
-two stages: structure generation establishing global semantic scaffolding,
-followed by detail reconstruction efficiently completing remaining tokens.
-Assuming that it is more difficult to create an image from scratch than to
-complement images based on a basic image framework, GtR is designed to achieve
-acceleration by computing the reconstruction stage quickly while maintaining
-the generation quality by computing the generation stage slowly. Moreover,
-observing that tokens on the details of an image often carry more semantic
-information than tokens in the salient regions, we further propose
-Frequency-Weighted Token Selection (FTS) to offer more computation budget to
-tokens on image details, which are localized based on the energy of high
-frequency information. Extensive experiments on ImageNet class-conditional and
-text-to-image generation demonstrate 3.72x speedup on MAR-H while maintaining
-comparable quality (e.g., FID: 1.59, IS: 304.4 vs. original 1.59, 299.1),
-substantially outperforming existing acceleration methods across various model
-scales and generation tasks. Our codes will be released in
-https://github.com/feihongyan1/GtR.</p>
+            <p class="paper-summary">Autoregressive (AR) image generation models are capable of producing
+high-fidelity images but often suffer from slow inference due to their
+inherently sequential, token-by-token decoding process. Speculative decoding,
+which employs a lightweight draft model to approximate the output of a larger
+AR model, has shown promise in accelerating text generation without
+compromising quality. However, its application to image generation remains
+largely underexplored. The challenges stem from a significantly larger sampling
+space, which complicates the alignment between the draft and target model
+outputs, coupled with the inadequate use of the two-dimensional spatial
+structure inherent in images, thereby limiting the modeling of local
+dependencies. To overcome these challenges, we introduce Hawk, a new approach
+that harnesses the spatial structure of images to guide the speculative model
+toward more accurate and efficient predictions. Experimental results on
+multiple text-to-image benchmarks demonstrate a 1.71x speedup over standard AR
+models, while preserving both image fidelity and diversity.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a two-stage sampling strategy (Generation then Reconstruction, GtR) to accelerate Masked Autoregressive models for image generation, achieving significant speedup while maintaining comparable image quality by focusing computational budget on image details.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Hawk, a novel approach to accelerate autoregressive text-to-image generation by leveraging spatial context in speculative decoding, achieving a 1.71x speedup while preserving image quality.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种两阶段采样策略（先生成后重建，GtR）来加速用于图像生成的掩码自回归模型。通过将计算预算集中在图像细节上，该方法在保持图像质量的同时实现了显著的加速。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 Hawk，一种通过在推测解码中利用空间上下文来加速自回归文本到图像生成的新方法，在保持图像质量的同时实现了 1.71 倍的加速。</p>
             
 
             
@@ -263,6 +256,124 @@ https://github.com/feihongyan1/GtR.</p>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.25739v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Zhi-Kai Chen, Jun-Peng Jiang, Han-Jia Ye, De-Chuan Zhan</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Seeing Clearly and Deeply: An RGBD Imaging Approach with a Bio-inspired Monocentric Design</h2>
+            
+            <p class="paper-summary">Achieving high-fidelity, compact RGBD imaging presents a dual challenge:
+conventional compact optics struggle with RGB sharpness across the entire
+depth-of-field, while software-only Monocular Depth Estimation (MDE) is an
+ill-posed problem reliant on unreliable semantic priors. While deep optics with
+elements like DOEs can encode depth, they introduce trade-offs in fabrication
+complexity and chromatic aberrations, compromising simplicity. To address this,
+we first introduce a novel bio-inspired all-spherical monocentric lens, around
+which we build the Bionic Monocentric Imaging (BMI) framework, a holistic
+co-design. This optical design naturally encodes depth into its depth-varying
+Point Spread Functions (PSFs) without requiring complex diffractive or freeform
+elements. We establish a rigorous physically-based forward model to generate a
+synthetic dataset by precisely simulating the optical degradation process. This
+simulation pipeline is co-designed with a dual-head, multi-scale reconstruction
+network that employs a shared encoder to jointly recover a high-fidelity
+All-in-Focus (AiF) image and a precise depth map from a single coded capture.
+Extensive experiments validate the state-of-the-art performance of the proposed
+framework. In depth estimation, the method attains an Abs Rel of 0.026 and an
+RMSE of 0.130, markedly outperforming leading software-only approaches and
+other deep optics systems. For image restoration, the system achieves an SSIM
+of 0.960 and a perceptual LPIPS score of 0.082, thereby confirming a superior
+balance between image fidelity and depth accuracy. This study illustrates that
+the integration of bio-inspired, fully spherical optics with a joint
+reconstruction algorithm constitutes an effective strategy for addressing the
+intrinsic challenges in high-performance compact RGBD imaging. Source code will
+be publicly available at https://github.com/ZongxiYu-ZJU/BMI.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a bio-inspired monocentric lens design and associated reconstruction network (BMI framework) for high-fidelity RGBD imaging, demonstrating state-of-the-art performance in depth estimation and image restoration.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种受生物启发的单中心透镜设计和相关的重建网络（BMI框架），用于高保真RGBD成像，并在深度估计和图像恢复方面表现出最先进的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -303,22 +414,22 @@ https://github.com/feihongyan1/GtR.</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17171v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.25314v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Feihong Yan, Peiru Wang, Yao Zhu, Kaiyu Pang, Qingyan Wei, Huiqi Li, Linfeng Zhang</p>
+            <p class="paper-authors">Authors: Zongxi Yu, Xiaolong Qian, Shaohua Gao, Qi Jiang, Yao Gao, Kailun Yang, Kaiwei Wang</p>
             
         </motion.div>
         
@@ -326,36 +437,40 @@ https://github.com/feihongyan1/GtR.</p>
             initial="{ opacity: 0, y: 50, scale: 0.9 }"
             whileInView="{ opacity: 1, y: 0, scale: 1 }"
             viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
+            transition="{ duration: 0.5, delay: 0.1, ease: 'easeOut' }"  
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CharDiff: A Diffusion Model with Character-Level Guidance for License Plate Image Restoration</h2>
+            <h2 class="paper-title">Balanced conic rectified flow</h2>
             
-            <p class="paper-summary">The significance of license plate image restoration goes beyond the
-preprocessing stage of License Plate Recognition (LPR) systems, as it also
-serves various purposes, including increasing evidential value, enhancing the
-clarity of visual interface, and facilitating further utilization of license
-plate images. We propose a novel diffusion-based framework with character-level
-guidance, CharDiff, which effectively restores and recognizes severely degraded
-license plate images captured under realistic conditions. CharDiff leverages
-fine-grained character-level priors extracted through external segmentation and
-Optical Character Recognition (OCR) modules tailored for low-quality license
-plate images. For precise and focused guidance, CharDiff incorporates a novel
-Character-guided Attention through Region-wise Masking (CHARM) module, which
-ensures that each character's guidance is restricted to its own region, thereby
-avoiding interference with other regions. In experiments, CharDiff
-significantly outperformed the baseline restoration models in both restoration
-quality and recognition accuracy, achieving a 28% relative reduction in CER on
-the Roboflow-LP dataset, compared to the best-performing baseline model. These
-results indicate that the structured character-guided conditioning effectively
-enhances the robustness of diffusion-based license plate restoration and
-recognition in practical deployment scenarios.</p>
+            <p class="paper-summary">Rectified flow is a generative model that learns smooth transport mappings
+between two distributions through an ordinary differential equation (ODE).
+Unlike diffusion-based generative models, which require costly numerical
+integration of a generative ODE to sample images with state-of-the-art quality,
+rectified flow uses an iterative process called reflow to learn smooth and
+straight ODE paths. This allows for relatively simple and efficient generation
+of high-quality images. However, rectified flow still faces several challenges.
+1) The reflow process requires a large number of generative pairs to preserve
+the target distribution, leading to significant computational costs. 2) Since
+the model is typically trained using only generated image pairs, its
+performance heavily depends on the 1-rectified flow model, causing it to become
+biased towards the generated data.
+  In this work, we experimentally expose the limitations of the original
+rectified flow and propose a novel approach that incorporates real images into
+the training process. By preserving the ODE paths for real images, our method
+effectively reduces reliance on large amounts of generated data. Instead, we
+demonstrate that the reflow process can be conducted efficiently using a much
+smaller set of generated and real images. In CIFAR-10, we achieved
+significantly better FID scores, not only in one-step generation but also in
+full-step simulations, while using only of the generative pairs compared to the
+original method. Furthermore, our approach induces straighter paths and avoids
+saturation on generated images during reflow, leading to more robust ODE
+learning while preserving the distribution of real images.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces CharDiff, a diffusion model for license plate image restoration that leverages character-level guidance to improve restoration quality and recognition accuracy, achieving a 28% CER reduction on the Roboflow-LP dataset.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel approach to rectified flow by incorporating real images into the training process, reducing computational costs and improving image generation quality with straighter ODE paths.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为CharDiff的扩散模型，用于车牌图像修复。该模型利用字符级指导来提高修复质量和识别精度，在Roboflow-LP数据集上实现了28%的CER降低。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新的修正流方法，通过将真实图像融入训练过程，降低了计算成本，并通过更直的ODE路径提高了图像生成质量。</p>
             
 
             
@@ -426,18 +541,18 @@ recognition in practical deployment scenarios.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17330v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.25229v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Gyuhwan Park, Kihyun Na, Injung Kim</p>
+            <p class="paper-authors">Authors: Kim Shin Seong, Mingi Kwon, Jaeseok Jeong, Youngjung Uh</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-30 03:41:01 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-30 03:43:37 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
