@@ -1,0 +1,152 @@
+[
+    {
+        "title": "ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching",
+        "summary": "Computational Super-Resolution (CSR) in fluorescence microscopy has, despite\nbeing an ill-posed problem, a long history. At its very core, CSR is about\nfinding a prior that can be used to extrapolate frequencies in a micrograph\nthat have never been imaged by the image-generating microscope. It stands to\nreason that, with the advent of better data-driven machine learning techniques,\nstronger prior can be learned and hence CSR can lead to better results. Here,\nwe present ResMatching, a novel CSR method that uses guided conditional flow\nmatching to learn such improved data-priors. We evaluate ResMatching on 4\ndiverse biological structures from the BioSR dataset and compare its results\nagainst 7 baselines. ResMatching consistently achieves competitive results,\ndemonstrating in all cases the best trade-off between data fidelity and\nperceptual realism. We observe that CSR using ResMatching is particularly\neffective in cases where a strong prior is hard to learn, e.g. when the given\nlow-resolution images contain a lot of noise. Additionally, we show that\nResMatching can be used to sample from an implicitly learned posterior\ndistribution and that this distribution is calibrated for all tested use-cases,\nenabling our method to deliver a pixel-wise data-uncertainty term that can\nguide future users to reject uncertain predictions.",
+        "url": "http://arxiv.org/abs/2510.26601v1",
+        "published_date": "2025-10-30T15:29:20+00:00",
+        "updated_date": "2025-10-30T15:29:20+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Anirban Ray",
+            "Vera Galinova",
+            "Florian Jug"
+        ],
+        "tldr": "The paper introduces ResMatching, a novel computational super-resolution method using guided conditional flow matching, which demonstrates competitive performance and robustness to noise in fluorescence microscopy images, while also providing data uncertainty estimates.",
+        "tldr_zh": "该论文介绍了一种名为 ResMatching 的新型计算超分辨率方法，它使用引导条件流匹配，在荧光显微镜图像中表现出具有竞争力的性能和噪声鲁棒性，同时还提供数据不确定性估计。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "EEG-Driven Image Reconstruction with Saliency-Guided Diffusion Models",
+        "summary": "Existing EEG-driven image reconstruction methods often overlook spatial\nattention mechanisms, limiting fidelity and semantic coherence. To address\nthis, we propose a dual-conditioning framework that combines EEG embeddings\nwith spatial saliency maps to enhance image generation. Our approach leverages\nthe Adaptive Thinking Mapper (ATM) for EEG feature extraction and fine-tunes\nStable Diffusion 2.1 via Low-Rank Adaptation (LoRA) to align neural signals\nwith visual semantics, while a ControlNet branch conditions generation on\nsaliency maps for spatial control. Evaluated on THINGS-EEG, our method achieves\na significant improvement in the quality of low- and high-level image features\nover existing approaches. Simultaneously, strongly aligning with human visual\nattention. The results demonstrate that attentional priors resolve EEG\nambiguities, enabling high-fidelity reconstructions with applications in\nmedical diagnostics and neuroadaptive interfaces, advancing neural decoding\nthrough efficient adaptation of pre-trained diffusion models.",
+        "url": "http://arxiv.org/abs/2510.26391v1",
+        "published_date": "2025-10-30T11:34:37+00:00",
+        "updated_date": "2025-10-30T11:34:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Igor Abramov",
+            "Ilya Makarov"
+        ],
+        "tldr": "This paper introduces a dual-conditioning framework for EEG-driven image reconstruction using EEG embeddings and spatial saliency maps with diffusion models, showing significant improvements in image quality and alignment with human visual attention.",
+        "tldr_zh": "本文提出了一种双重条件框架，利用脑电图嵌入和空间显著性图，结合扩散模型进行脑电图驱动的图像重建，并在图像质量和与人类视觉注意力的对齐方面取得了显著改进。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GLYPH-SR: Can We Achieve Both High-Quality Image Super-Resolution and High-Fidelity Text Recovery via VLM-guided Latent Diffusion Model?",
+        "summary": "Image super-resolution(SR) is fundamental to many vision system-from\nsurveillance and autonomy to document analysis and retail analytics-because\nrecovering high-frequency details, especially scene-text, enables reliable\ndownstream perception. Scene-text, i.e., text embedded in natural images such\nas signs, product labels, and storefronts, often carries the most actionable\ninformation; when characters are blurred or hallucinated, optical character\nrecognition(OCR) and subsequent decisions fail even if the rest of the image\nappears sharp. Yet previous SR research has often been tuned to distortion\n(PSNR/SSIM) or learned perceptual metrics (LIPIS, MANIQA, CLIP-IQA, MUSIQ) that\nare largely insensitive to character-level errors. Furthermore, studies that do\naddress text SR often focus on simplified benchmarks with isolated characters,\noverlooking the challenges of text within complex natural scenes. As a result,\nscene-text is effectively treated as generic texture. For SR to be effective in\npractical deployments, it is therefore essential to explicitly optimize for\nboth text legibility and perceptual quality. We present GLYPH-SR, a\nvision-language-guided diffusion framework that aims to achieve both objectives\njointly. GLYPH-SR utilizes a Text-SR Fusion ControlNet(TS-ControlNet) guided by\nOCR data, and a ping-pong scheduler that alternates between text- and\nscene-centric guidance. To enable targeted text restoration, we train these\ncomponents on a synthetic corpus while keeping the main SR branch frozen.\nAcross SVT, SCUT-CTW1500, and CUTE80 at x4, and x8, GLYPH-SR improves OCR F1 by\nup to +15.18 percentage points over diffusion/GAN baseline (SVT x8, OpenOCR)\nwhile maintaining competitive MANIQA, CLIP-IQA, and MUSIQ. GLYPH-SR is designed\nto satisfy both objectives simultaneously-high readability and high visual\nrealism-delivering SR that looks right and reds right.",
+        "url": "http://arxiv.org/abs/2510.26339v1",
+        "published_date": "2025-10-30T10:46:28+00:00",
+        "updated_date": "2025-10-30T10:46:28+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Mingyu Sung",
+            "Seungjae Ham",
+            "Kangwoo Kim",
+            "Yeokyoung Yoon",
+            "Sangseok Yun",
+            "Il-Min Kim",
+            "Jae-Mo Kang"
+        ],
+        "tldr": "The paper introduces GLYPH-SR, a vision-language-guided diffusion framework that improves both text legibility and perceptual quality in image super-resolution, achieving state-of-the-art OCR accuracy while maintaining visual realism.",
+        "tldr_zh": "该论文介绍了GLYPH-SR，一种视觉-语言引导的扩散框架，旨在提高图像超分辨率中的文本可读性和感知质量，在保持视觉真实感的同时，实现了最先进的OCR准确率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Dynamic VLM-Guided Negative Prompting for Diffusion Models",
+        "summary": "We propose a novel approach for dynamic negative prompting in diffusion\nmodels that leverages Vision-Language Models (VLMs) to adaptively generate\nnegative prompts during the denoising process. Unlike traditional Negative\nPrompting methods that use fixed negative prompts, our method generates\nintermediate image predictions at specific denoising steps and queries a VLM to\nproduce contextually appropriate negative prompts. We evaluate our approach on\nvarious benchmark datasets and demonstrate the trade-offs between negative\nguidance strength and text-image alignment.",
+        "url": "http://arxiv.org/abs/2510.26052v1",
+        "published_date": "2025-10-30T01:10:25+00:00",
+        "updated_date": "2025-10-30T01:10:25+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hoyeon Chang",
+            "Seungjin Kim",
+            "Yoonseok Choi"
+        ],
+        "tldr": "This paper introduces a dynamic negative prompting method for diffusion models that uses a Vision-Language Model (VLM) to generate contextually relevant negative prompts during the denoising process, improving text-image alignment.",
+        "tldr_zh": "该论文提出了一种动态负提示方法，利用视觉-语言模型（VLM）在去噪过程中生成与上下文相关的负提示，从而改善文本-图像对齐。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Generative Image Restoration and Super-Resolution using Physics-Informed Synthetic Data for Scanning Tunneling Microscopy",
+        "summary": "Scanning tunnelling microscopy (STM) enables atomic-resolution imaging and\natom manipulation, but its utility is often limited by tip degradation and slow\nserial data acquisition. Fabrication adds another layer of complexity since the\ntip is often subjected to large voltages, which may alter the shape of its\napex, requiring it to be conditioned. Here, we propose a machine learning (ML)\napproach for image repair and super-resolution to alleviate both challenges.\nUsing a dataset of only 36 pristine experimental images of Si(001):H, we\ndemonstrate that a physics-informed synthetic data generation pipeline can be\nused to train several state-of-the-art flow-matching and diffusion models.\nQuantitative evaluation with metrics such as the CLIP Maximum Mean Discrepancy\n(CMMD) score and structural similarity demonstrates that our models are able to\neffectively restore images and offer a two- to fourfold reduction in image\nacquisition time by accurately reconstructing images from sparsely sampled\ndata. Our framework has the potential to significantly increase STM\nexperimental throughput by offering a route to reducing the frequency of\ntip-conditioning procedures and to enhancing frame rates in existing high-speed\nSTM systems.",
+        "url": "http://arxiv.org/abs/2510.25921v1",
+        "published_date": "2025-10-29T19:50:34+00:00",
+        "updated_date": "2025-10-29T19:50:34+00:00",
+        "categories": [
+            "cs.CV",
+            "cond-mat.mtrl-sci"
+        ],
+        "authors": [
+            "Nikola L. Kolev",
+            "Tommaso Rodani",
+            "Neil J. Curson",
+            "Taylor J. Z. Stock",
+            "Alberto Cazzaniga"
+        ],
+        "tldr": "This paper presents a physics-informed machine learning approach using synthetic data to train generative models for STM image restoration and super-resolution, aiming to reduce acquisition time and tip-conditioning frequency.",
+        "tldr_zh": "本文提出了一种基于物理信息的机器学习方法，使用合成数据训练生成模型，用于扫描隧道显微镜 (STM) 图像的修复和超分辨率，旨在减少采集时间和探针调节频率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SEE4D: Pose-Free 4D Generation via Auto-Regressive Video Inpainting",
+        "summary": "Immersive applications call for synthesizing spatiotemporal 4D content from\ncasual videos without costly 3D supervision. Existing video-to-4D methods\ntypically rely on manually annotated camera poses, which are labor-intensive\nand brittle for in-the-wild footage. Recent warp-then-inpaint approaches\nmitigate the need for pose labels by warping input frames along a novel camera\ntrajectory and using an inpainting model to fill missing regions, thereby\ndepicting the 4D scene from diverse viewpoints. However, this\ntrajectory-to-trajectory formulation often entangles camera motion with scene\ndynamics and complicates both modeling and inference. We introduce SEE4D, a\npose-free, trajectory-to-camera framework that replaces explicit trajectory\nprediction with rendering to a bank of fixed virtual cameras, thereby\nseparating camera control from scene modeling. A view-conditional video\ninpainting model is trained to learn a robust geometry prior by denoising\nrealistically synthesized warped images and to inpaint occluded or missing\nregions across virtual viewpoints, eliminating the need for explicit 3D\nannotations. Building on this inpainting core, we design a spatiotemporal\nautoregressive inference pipeline that traverses virtual-camera splines and\nextends videos with overlapping windows, enabling coherent generation at\nbounded per-step complexity. We validate See4D on cross-view video generation\nand sparse reconstruction benchmarks. Across quantitative metrics and\nqualitative assessments, our method achieves superior generalization and\nimproved performance relative to pose- or trajectory-conditioned baselines,\nadvancing practical 4D world modeling from casual videos.",
+        "url": "http://arxiv.org/abs/2510.26796v1",
+        "published_date": "2025-10-30T17:59:39+00:00",
+        "updated_date": "2025-10-30T17:59:39+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.GR"
+        ],
+        "authors": [
+            "Dongyue Lu",
+            "Ao Liang",
+            "Tianxin Huang",
+            "Xiao Fu",
+            "Yuyang Zhao",
+            "Baorui Ma",
+            "Liang Pan",
+            "Wei Yin",
+            "Lingdong Kong",
+            "Wei Tsang Ooi",
+            "Ziwei Liu"
+        ],
+        "tldr": "SEE4D introduces a pose-free 4D generation framework using view-conditional video inpainting and spatiotemporal autoregressive inference, enabling 4D scene modeling from casual videos without 3D supervision.",
+        "tldr_zh": "SEE4D 提出了一种无需姿态的 4D 生成框架，它使用视角条件视频修复和时空自回归推理，从而能够从普通视频中进行 4D 场景建模，而无需 3D 监督。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
