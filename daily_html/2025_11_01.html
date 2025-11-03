@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 23, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - November 01, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 23, 2025</p>
+            <p>November 01, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,35 +215,31 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Predicting before Reconstruction: A generative prior framework for MRI acceleration</h2>
+            <h2 class="paper-title">DeblurSDI: Blind Image Deblurring Using Self-diffusion</h2>
             
-            <p class="paper-summary">Recent advancements in artificial intelligence have created transformative
-capabilities in image synthesis and generation, enabling diverse research
-fields to innovate at revolutionary speed and spectrum. In this study, we
-leverage this generative power to introduce a new paradigm for accelerating
-Magnetic Resonance Imaging (MRI), introducing a shift from image reconstruction
-to proactive predictive imaging. Despite being a cornerstone of modern patient
-care, MRI's lengthy acquisition times limit clinical throughput. Our novel
-framework addresses this challenge by first predicting a target contrast image,
-which then serves as a data-driven prior for reconstructing highly
-under-sampled data. This informative prior is predicted by a generative model
-conditioned on diverse data sources, such as other contrast images, previously
-scanned images, acquisition parameters, patient information. We demonstrate
-this approach with two key applications: (1) reconstructing FLAIR images using
-predictions from T1w and/or T2w scans, and (2) reconstructing T1w images using
-predictions from previously acquired T1w scans. The framework was evaluated on
-internal and multiple public datasets (total 14,921 scans; 1,051,904 slices),
-including multi-channel k-space data, for a range of high acceleration factors
-(x4, x8 and x12). The results demonstrate that our prediction-prior
-reconstruction method significantly outperforms other approaches, including
-those with alternative or no prior information. Through this framework we
-introduce a fundamental shift from image reconstruction towards a new paradigm
-of predictive imaging.</p>
+            <p class="paper-summary">Blind image deconvolution is a challenging ill-posed inverse problem, where
+both the latent sharp image and the blur kernel are unknown. Traditional
+methods often rely on handcrafted priors, while modern deep learning approaches
+typically require extensive pre-training on large external datasets, limiting
+their adaptability to real-world scenarios. In this work, we propose DeblurSDI,
+a zero-shot, self-supervised framework based on self-diffusion (SDI) that
+requires no prior training. DeblurSDI formulates blind deconvolution as an
+iterative reverse self-diffusion process that starts from pure noise and
+progressively refines the solution. At each step, two randomly-initialized
+neural networks are optimized continuously to refine the sharp image and the
+blur kernel. The optimization is guided by an objective function combining data
+consistency with a sparsity-promoting L1-norm for the kernel. A key innovation
+is our noise scheduling mechanism, which stabilizes the optimization and
+provides remarkable robustness to variations in blur kernel size. These allow
+DeblurSDI to dynamically learn an instance-specific prior tailored to the input
+image. Extensive experiments demonstrate that DeblurSDI consistently achieves
+superior performance, recovering sharp images and accurate kernels even in
+highly degraded scenarios.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel MRI acceleration framework that predicts target contrast images to use as priors for reconstructing under-sampled data, demonstrating improved performance over existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: DeblurSDI is a zero-shot, self-supervised image deblurring framework using self-diffusion and two continuously optimized networks, achieving superior performance without pre-training by dynamically learning instance-specific priors.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种新颖的MRI加速框架，该框架预测目标对比度图像，并将其用作重建欠采样数据的先验，从而证明了比现有方法更好的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: DeblurSDI是一个零样本、自监督的图像去模糊框架，它利用自扩散和两个持续优化的神经网络，通过动态学习特定于实例的先验，无需预训练即可实现卓越性能。</p>
             
 
             
@@ -253,8 +249,8 @@ of predictive imaging.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -314,11 +310,11 @@ of predictive imaging.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19472v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.27439v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Juhyung Park, Rokgi Hong, Roh-Eul Yoo, Jaehyeon Koo, Se Young Chun, Seung Hong Choi, Jongho Lee</p>
+            <p class="paper-authors">Authors: Yanlong Yang, Guanxiong Luo</p>
             
         </motion.div>
         
@@ -330,39 +326,29 @@ of predictive imaging.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">PCP-GAN: Property-Constrained Pore-scale image reconstruction via conditional Generative Adversarial Networks</h2>
+            <h2 class="paper-title">Versatile and Efficient Medical Image Super-Resolution Via Frequency-Gated Mamba</h2>
             
-            <p class="paper-summary">Obtaining truly representative pore-scale images that match bulk formation
-properties remains a fundamental challenge in subsurface characterization, as
-natural spatial heterogeneity causes extracted sub-images to deviate
-significantly from core-measured values. This challenge is compounded by data
-scarcity, where physical samples are only available at sparse well locations.
-This study presents a multi-conditional Generative Adversarial Network (cGAN)
-framework that generates representative pore-scale images with precisely
-controlled properties, addressing both the representativeness challenge and
-data availability constraints. The framework was trained on thin section
-samples from four depths (1879.50-1943.50 m) of a carbonate formation,
-simultaneously conditioning on porosity values and depth parameters within a
-single unified model. This approach captures both universal pore network
-principles and depth-specific geological characteristics, from grainstone
-fabrics with interparticle-intercrystalline porosity to crystalline textures
-with anhydrite inclusions. The model achieved exceptional porosity control
-(R^2=0.95) across all formations with mean absolute errors of 0.0099-0.0197.
-Morphological validation confirmed preservation of critical pore network
-characteristics including average pore radius, specific surface area, and
-tortuosity, with statistical differences remaining within acceptable geological
-tolerances. Most significantly, generated images demonstrated superior
-representativeness with dual-constraint errors of 1.9-11.3% compared to
-36.4-578% for randomly extracted real sub-images. This capability provides
-transformative tools for subsurface characterization, particularly valuable for
-carbon storage, geothermal energy, and groundwater management applications
-where knowing the representative morphology of the pore space is critical for
-implementing digital rock physics.</p>
+            <p class="paper-summary">Medical image super-resolution (SR) is essential for enhancing diagnostic
+accuracy while reducing acquisition cost and scanning time. However, modeling
+both long-range anatomical structures and fine-grained frequency details with
+low computational overhead remains challenging. We propose FGMamba, a novel
+frequency-aware gated state-space model that unifies global dependency modeling
+and fine-detail enhancement into a lightweight architecture. Our method
+introduces two key innovations: a Gated Attention-enhanced State-Space Module
+(GASM) that integrates efficient state-space modeling with dual-branch spatial
+and channel attention, and a Pyramid Frequency Fusion Module (PFFM) that
+captures high-frequency details across multiple resolutions via FFT-guided
+fusion. Extensive evaluations across five medical imaging modalities
+(Ultrasound, OCT, MRI, CT, and Endoscopic) demonstrate that FGMamba achieves
+superior PSNR/SSIM while maintaining a compact parameter footprint ($<$0.75M),
+outperforming CNN-based and Transformer-based SOTAs. Our results validate the
+effectiveness of frequency-aware state-space modeling for scalable and accurate
+medical image enhancement.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces PCP-GAN, a conditional GAN framework for generating representative pore-scale images with controlled properties, addressing the challenge of obtaining accurate pore-scale images in subsurface characterization. The model demonstrates superior representativeness compared to real sub-images.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes FGMamba, a frequency-aware gated state-space model for medical image super-resolution, achieving superior PSNR/SSIM with a small parameter footprint across various modalities.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为PCP-GAN的条件生成对抗网络框架，用于生成具有可控属性的代表性孔隙尺度图像，解决了地下表征中获取准确孔隙尺度图像的挑战。该模型相比于真实子图像展现出卓越的代表性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了FGMamba，一种频率感知的门控状态空间模型，用于医学图像超分辨率，在各种模态下以较小的参数规模实现了卓越的PSNR/SSIM。</p>
             
 
             
@@ -372,8 +358,8 @@ implementing digital rock physics.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -433,11 +419,11 @@ implementing digital rock physics.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19465v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.27296v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ali Sadeghkhani, Brandon Bennett, Masoud Babaei, Arash Rabbani</p>
+            <p class="paper-authors">Authors: Wenfeng Huang, Xiangyun Liao, Wei Cao, Wenjing Jia, Weixin Si</p>
             
         </motion.div>
         
@@ -449,29 +435,34 @@ implementing digital rock physics.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SCEESR: Semantic-Control Edge Enhancement for Diffusion-Based Super-Resolution</h2>
+            <h2 class="paper-title">H2-Cache: A Novel Hierarchical Dual-Stage Cache for High-Performance Acceleration of Generative Diffusion Models</h2>
             
-            <p class="paper-summary">Real-world image super-resolution (Real-ISR) must handle complex degradations
-and inherent reconstruction ambiguities. While generative models have improved
-perceptual quality, a key trade-off remains with computational cost. One-step
-diffusion models offer speed but often produce structural inaccuracies due to
-distillation artifacts. To address this, we propose a novel SR framework that
-enhances a one-step diffusion model using a ControlNet mechanism for semantic
-edge guidance. This integrates edge information to provide dynamic structural
-control during single-pass inference. We also introduce a hybrid loss combining
-L2, LPIPS, and an edge-aware AME loss to optimize for pixel accuracy,
-perceptual quality, and geometric precision. Experiments show our method
-effectively improves structural integrity and realism while maintaining the
-efficiency of one-step generation, achieving a superior balance between output
-quality and inference speed. The results of test datasets will be published at
-https://drive.google.com/drive/folders/1amddXQ5orIyjbxHgGpzqFHZ6KTolinJF?usp=drive_link
-and the related code will be published at
-https://github.com/ARBEZ-ZEBRA/SCEESR.</p>
+            <p class="paper-summary">Diffusion models have emerged as state-of-the-art in image generation, but
+their practical deployment is hindered by the significant computational cost of
+their iterative denoising process. While existing caching techniques can
+accelerate inference, they often create a challenging trade-off between speed
+and fidelity, suffering from quality degradation and high computational
+overhead. To address these limitations, we introduce H2-Cache, a novel
+hierarchical caching mechanism designed for modern generative diffusion model
+architectures. Our method is founded on the key insight that the denoising
+process can be functionally separated into a structure-defining stage and a
+detail-refining stage. H2-cache leverages this by employing a dual-threshold
+system, using independent thresholds to selectively cache each stage. To ensure
+the efficiency of our dual-check approach, we introduce pooled feature
+summarization (PFS), a lightweight technique for robust and fast similarity
+estimation. Extensive experiments on the Flux architecture demonstrate that
+H2-cache achieves significant acceleration (up to 5.08x) while maintaining
+image quality nearly identical to the baseline, quantitatively and
+qualitatively outperforming existing caching methods. Our work presents a
+robust and practical solution that effectively resolves the speed-quality
+dilemma, significantly lowering the barrier for the real-world application of
+high-fidelity diffusion models. Source code is available at
+https://github.com/Bluear7878/H2-cache-A-Hierarchical-Dual-Stage-Cache.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SCEESR, a novel super-resolution framework that enhances one-step diffusion models with semantic edge guidance using ControlNet, improving structural integrity and realism while maintaining efficiency.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces H2-Cache, a hierarchical caching mechanism for diffusion models that accelerates inference by separating the denoising process into structure-defining and detail-refining stages, achieving significant speedup with minimal quality degradation.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为SCEESR的新型超分辨率框架，该框架使用ControlNet通过语义边缘引导来增强单步扩散模型，从而在保持效率的同时，提高结构完整性和真实感。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为H2-Cache的分层缓存机制，用于加速扩散模型的推理过程。通过将去噪过程分为结构定义和细节细化两个阶段，该方法在显著提高速度的同时，最大限度地减少了图像质量的损失。</p>
             
 
             
@@ -481,8 +472,8 @@ https://github.com/ARBEZ-ZEBRA/SCEESR.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -505,8 +496,8 @@ https://github.com/ARBEZ-ZEBRA/SCEESR.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -542,11 +533,11 @@ https://github.com/ARBEZ-ZEBRA/SCEESR.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19272v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.27171v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yun Kai Zhuang</p>
+            <p class="paper-authors">Authors: Mingyu Sung, Il-Min Kim, Sangseok Yun, Jae-Mo Kang</p>
             
         </motion.div>
         
@@ -558,35 +549,28 @@ https://github.com/ARBEZ-ZEBRA/SCEESR.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Beyond sparse denoising in frames: minimax estimation with a scattering transform</h2>
+            <h2 class="paper-title">Generative diffusion modeling protocols for improving the Kikuchi pattern indexing in electron back-scatter diffraction</h2>
             
-            <p class="paper-summary">A considerable amount of research in harmonic analysis has been devoted to
-non-linear estimators of signals contaminated by additive Gaussian noise. They
-are implemented by thresholding coefficients in a frame, which provide a sparse
-signal representation, or by minimising their $\ell^1$ norm. However, sparse
-estimators in frames are not sufficiently rich to adapt to complex signal
-regularities. For cartoon images whose edges are piecewise $\bf C^\alpha$
-curves, wavelet, curvelet and Xlet frames are suboptimal if the Lipschitz
-exponent $\alpha \leq 2$ is an unknown parameter. Deep convolutional neural
-networks have recently obtained much better numerical results, which reach the
-minimax asymptotic bounds for all $\alpha$. Wavelet scattering coefficients
-have been introduced as simplified convolutional neural network models. They
-are computed by transforming the modulus of wavelet coefficients with a second
-wavelet transform. We introduce a denoising estimator by jointly minimising and
-maximising the $\ell^1$ norms of different subsets of scattering coefficients.
-We prove that these $\ell^1$ norms capture different types of geometric image
-regularity. Numerical experiments show that this denoising estimator reaches
-the minimax asymptotic bound for cartoon images for all Lipschitz exponents
-$\alpha \leq 2$. We state this numerical result as a mathematical conjecture.
-It provides a different harmonic analysis approach to suppress noise from
-signals, and to specify the geometric regularity of functions. It also opens a
-mathematical bridge between harmonic analysis and denoising estimators with
-deep convolutional network.</p>
+            <p class="paper-summary">Electron back-scatter diffraction (EBSD) has traditionally relied upon
+methods such as the Hough transform and dictionary Indexing to interpret
+diffraction patterns and extract crystallographic orientation. However, these
+methods encounter significant limitations, particularly when operating at high
+scanning speeds, where the exposure time per pattern is decreased beyond the
+operating sensitivity of CCD camera. Hence the signal to noise ratio decreases
+for the observed pattern which makes the pattern noisy, leading to reduced
+indexing accuracy. This research work aims to develop generative machine
+learning models for the post-processing or on-the-fly processing of Kikuchi
+patterns which are capable of restoring noisy EBSD patterns obtained at high
+scan speeds. These restored patterns can be used for the determination of
+crystal orientations to provide reliable indexing results. We compare the
+performance of such generative models in enhancing the quality of patterns
+captured at short exposure times (high scan speeds). An interesting observation
+is that the methodology is not data-hungry as typical machine learning methods.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a denoising estimator based on minimizing and maximizing the l1 norms of scattering coefficients, demonstrating it achieves minimax asymptotic bounds for cartoon images and bridging harmonic analysis with deep convolutional networks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores using generative diffusion models to restore noisy EBSD patterns acquired at high scan speeds, improving crystallographic orientation determination. The method is claimed not to be data-hungry.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种基于最小化和最大化散射系数的l1范数的去噪估计器，证明了它达到了卡通图像的极小极大渐近界限，并将调和分析与深度卷积网络联系起来。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文探讨了使用生成扩散模型来恢复在高速扫描下获得的噪声EBSD图谱，从而提高晶体学取向的确定。该方法据称不需要大量数据。</p>
             
 
             
@@ -596,8 +580,8 @@ deep convolutional network.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -612,8 +596,124 @@ deep convolutional network.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.26907v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Meghraj Prajapata, Alankar Alankar</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Phased DMD: Few-step Distribution Matching Distillation via Score Matching within Subintervals</h2>
+            
+            <p class="paper-summary">Distribution Matching Distillation (DMD) distills score-based generative
+models into efficient one-step generators, without requiring a one-to-one
+correspondence with the sampling trajectories of their teachers. However,
+limited model capacity causes one-step distilled models underperform on complex
+generative tasks, e.g., synthesizing intricate object motions in text-to-video
+generation. Directly extending DMD to multi-step distillation increases memory
+usage and computational depth, leading to instability and reduced efficiency.
+While prior works propose stochastic gradient truncation as a potential
+solution, we observe that it substantially reduces the generation diversity of
+multi-step distilled models, bringing it down to the level of their one-step
+counterparts. To address these limitations, we propose Phased DMD, a multi-step
+distillation framework that bridges the idea of phase-wise distillation with
+Mixture-of-Experts (MoE), reducing learning difficulty while enhancing model
+capacity. Phased DMD is built upon two key ideas: progressive distribution
+matching and score matching within subintervals. First, our model divides the
+SNR range into subintervals, progressively refining the model to higher SNR
+levels, to better capture complex distributions. Next, to ensure the training
+objective within each subinterval is accurate, we have conducted rigorous
+mathematical derivations. We validate Phased DMD by distilling state-of-the-art
+image and video generation models, including Qwen-Image (20B parameters) and
+Wan2.2 (28B parameters). Experimental results demonstrate that Phased DMD
+preserves output diversity better than DMD while retaining key generative
+capabilities. We will release our code and models.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Phased DMD, a multi-step knowledge distillation framework for score-based generative models that improves performance and diversity in complex generation tasks like text-to-video synthesis by using progressive distribution matching and score matching within subintervals.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了Phased DMD，一种用于基于分数的生成模型的多步知识蒸馏框架，通过使用渐进式分布匹配和子区间内的分数匹配，提高了文本到视频合成等复杂生成任务的性能和多样性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -657,18 +757,18 @@ deep convolutional network.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19612v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.27684v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Nathanaël Cuvelle--Magar, Stéphane Mallat</p>
+            <p class="paper-authors">Authors: Xiangyu Fan, Zesong Qiu, Zhuguanyu Wu, Fanzhou Wang, Zhiqian Lin, Tianxiang Ren, Dahua Lin, Ruihao Gong, Lei Yang</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-11-03 04:25:35 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-11-03 04:29:29 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

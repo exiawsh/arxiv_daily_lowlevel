@@ -1,0 +1,121 @@
+[
+    {
+        "title": "DeblurSDI: Blind Image Deblurring Using Self-diffusion",
+        "summary": "Blind image deconvolution is a challenging ill-posed inverse problem, where\nboth the latent sharp image and the blur kernel are unknown. Traditional\nmethods often rely on handcrafted priors, while modern deep learning approaches\ntypically require extensive pre-training on large external datasets, limiting\ntheir adaptability to real-world scenarios. In this work, we propose DeblurSDI,\na zero-shot, self-supervised framework based on self-diffusion (SDI) that\nrequires no prior training. DeblurSDI formulates blind deconvolution as an\niterative reverse self-diffusion process that starts from pure noise and\nprogressively refines the solution. At each step, two randomly-initialized\nneural networks are optimized continuously to refine the sharp image and the\nblur kernel. The optimization is guided by an objective function combining data\nconsistency with a sparsity-promoting L1-norm for the kernel. A key innovation\nis our noise scheduling mechanism, which stabilizes the optimization and\nprovides remarkable robustness to variations in blur kernel size. These allow\nDeblurSDI to dynamically learn an instance-specific prior tailored to the input\nimage. Extensive experiments demonstrate that DeblurSDI consistently achieves\nsuperior performance, recovering sharp images and accurate kernels even in\nhighly degraded scenarios.",
+        "url": "http://arxiv.org/abs/2510.27439v1",
+        "published_date": "2025-10-31T12:44:40+00:00",
+        "updated_date": "2025-10-31T12:44:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yanlong Yang",
+            "Guanxiong Luo"
+        ],
+        "tldr": "DeblurSDI is a zero-shot, self-supervised image deblurring framework using self-diffusion and two continuously optimized networks, achieving superior performance without pre-training by dynamically learning instance-specific priors.",
+        "tldr_zh": "DeblurSDI是一个零样本、自监督的图像去模糊框架，它利用自扩散和两个持续优化的神经网络，通过动态学习特定于实例的先验，无需预训练即可实现卓越性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Versatile and Efficient Medical Image Super-Resolution Via Frequency-Gated Mamba",
+        "summary": "Medical image super-resolution (SR) is essential for enhancing diagnostic\naccuracy while reducing acquisition cost and scanning time. However, modeling\nboth long-range anatomical structures and fine-grained frequency details with\nlow computational overhead remains challenging. We propose FGMamba, a novel\nfrequency-aware gated state-space model that unifies global dependency modeling\nand fine-detail enhancement into a lightweight architecture. Our method\nintroduces two key innovations: a Gated Attention-enhanced State-Space Module\n(GASM) that integrates efficient state-space modeling with dual-branch spatial\nand channel attention, and a Pyramid Frequency Fusion Module (PFFM) that\ncaptures high-frequency details across multiple resolutions via FFT-guided\nfusion. Extensive evaluations across five medical imaging modalities\n(Ultrasound, OCT, MRI, CT, and Endoscopic) demonstrate that FGMamba achieves\nsuperior PSNR/SSIM while maintaining a compact parameter footprint ($<$0.75M),\noutperforming CNN-based and Transformer-based SOTAs. Our results validate the\neffectiveness of frequency-aware state-space modeling for scalable and accurate\nmedical image enhancement.",
+        "url": "http://arxiv.org/abs/2510.27296v1",
+        "published_date": "2025-10-31T09:12:12+00:00",
+        "updated_date": "2025-10-31T09:12:12+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wenfeng Huang",
+            "Xiangyun Liao",
+            "Wei Cao",
+            "Wenjing Jia",
+            "Weixin Si"
+        ],
+        "tldr": "The paper proposes FGMamba, a frequency-aware gated state-space model for medical image super-resolution, achieving superior PSNR/SSIM with a small parameter footprint across various modalities.",
+        "tldr_zh": "该论文提出了FGMamba，一种频率感知的门控状态空间模型，用于医学图像超分辨率，在各种模态下以较小的参数规模实现了卓越的PSNR/SSIM。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "H2-Cache: A Novel Hierarchical Dual-Stage Cache for High-Performance Acceleration of Generative Diffusion Models",
+        "summary": "Diffusion models have emerged as state-of-the-art in image generation, but\ntheir practical deployment is hindered by the significant computational cost of\ntheir iterative denoising process. While existing caching techniques can\naccelerate inference, they often create a challenging trade-off between speed\nand fidelity, suffering from quality degradation and high computational\noverhead. To address these limitations, we introduce H2-Cache, a novel\nhierarchical caching mechanism designed for modern generative diffusion model\narchitectures. Our method is founded on the key insight that the denoising\nprocess can be functionally separated into a structure-defining stage and a\ndetail-refining stage. H2-cache leverages this by employing a dual-threshold\nsystem, using independent thresholds to selectively cache each stage. To ensure\nthe efficiency of our dual-check approach, we introduce pooled feature\nsummarization (PFS), a lightweight technique for robust and fast similarity\nestimation. Extensive experiments on the Flux architecture demonstrate that\nH2-cache achieves significant acceleration (up to 5.08x) while maintaining\nimage quality nearly identical to the baseline, quantitatively and\nqualitatively outperforming existing caching methods. Our work presents a\nrobust and practical solution that effectively resolves the speed-quality\ndilemma, significantly lowering the barrier for the real-world application of\nhigh-fidelity diffusion models. Source code is available at\nhttps://github.com/Bluear7878/H2-cache-A-Hierarchical-Dual-Stage-Cache.",
+        "url": "http://arxiv.org/abs/2510.27171v1",
+        "published_date": "2025-10-31T04:47:14+00:00",
+        "updated_date": "2025-10-31T04:47:14+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Mingyu Sung",
+            "Il-Min Kim",
+            "Sangseok Yun",
+            "Jae-Mo Kang"
+        ],
+        "tldr": "The paper introduces H2-Cache, a hierarchical caching mechanism for diffusion models that accelerates inference by separating the denoising process into structure-defining and detail-refining stages, achieving significant speedup with minimal quality degradation.",
+        "tldr_zh": "该论文介绍了一种名为H2-Cache的分层缓存机制，用于加速扩散模型的推理过程。通过将去噪过程分为结构定义和细节细化两个阶段，该方法在显著提高速度的同时，最大限度地减少了图像质量的损失。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Generative diffusion modeling protocols for improving the Kikuchi pattern indexing in electron back-scatter diffraction",
+        "summary": "Electron back-scatter diffraction (EBSD) has traditionally relied upon\nmethods such as the Hough transform and dictionary Indexing to interpret\ndiffraction patterns and extract crystallographic orientation. However, these\nmethods encounter significant limitations, particularly when operating at high\nscanning speeds, where the exposure time per pattern is decreased beyond the\noperating sensitivity of CCD camera. Hence the signal to noise ratio decreases\nfor the observed pattern which makes the pattern noisy, leading to reduced\nindexing accuracy. This research work aims to develop generative machine\nlearning models for the post-processing or on-the-fly processing of Kikuchi\npatterns which are capable of restoring noisy EBSD patterns obtained at high\nscan speeds. These restored patterns can be used for the determination of\ncrystal orientations to provide reliable indexing results. We compare the\nperformance of such generative models in enhancing the quality of patterns\ncaptured at short exposure times (high scan speeds). An interesting observation\nis that the methodology is not data-hungry as typical machine learning methods.",
+        "url": "http://arxiv.org/abs/2510.26907v1",
+        "published_date": "2025-10-30T18:14:58+00:00",
+        "updated_date": "2025-10-30T18:14:58+00:00",
+        "categories": [
+            "cond-mat.mtrl-sci",
+            "cs.CV"
+        ],
+        "authors": [
+            "Meghraj Prajapata",
+            "Alankar Alankar"
+        ],
+        "tldr": "This paper explores using generative diffusion models to restore noisy EBSD patterns acquired at high scan speeds, improving crystallographic orientation determination. The method is claimed not to be data-hungry.",
+        "tldr_zh": "本文探讨了使用生成扩散模型来恢复在高速扫描下获得的噪声EBSD图谱，从而提高晶体学取向的确定。该方法据称不需要大量数据。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Phased DMD: Few-step Distribution Matching Distillation via Score Matching within Subintervals",
+        "summary": "Distribution Matching Distillation (DMD) distills score-based generative\nmodels into efficient one-step generators, without requiring a one-to-one\ncorrespondence with the sampling trajectories of their teachers. However,\nlimited model capacity causes one-step distilled models underperform on complex\ngenerative tasks, e.g., synthesizing intricate object motions in text-to-video\ngeneration. Directly extending DMD to multi-step distillation increases memory\nusage and computational depth, leading to instability and reduced efficiency.\nWhile prior works propose stochastic gradient truncation as a potential\nsolution, we observe that it substantially reduces the generation diversity of\nmulti-step distilled models, bringing it down to the level of their one-step\ncounterparts. To address these limitations, we propose Phased DMD, a multi-step\ndistillation framework that bridges the idea of phase-wise distillation with\nMixture-of-Experts (MoE), reducing learning difficulty while enhancing model\ncapacity. Phased DMD is built upon two key ideas: progressive distribution\nmatching and score matching within subintervals. First, our model divides the\nSNR range into subintervals, progressively refining the model to higher SNR\nlevels, to better capture complex distributions. Next, to ensure the training\nobjective within each subinterval is accurate, we have conducted rigorous\nmathematical derivations. We validate Phased DMD by distilling state-of-the-art\nimage and video generation models, including Qwen-Image (20B parameters) and\nWan2.2 (28B parameters). Experimental results demonstrate that Phased DMD\npreserves output diversity better than DMD while retaining key generative\ncapabilities. We will release our code and models.",
+        "url": "http://arxiv.org/abs/2510.27684v1",
+        "published_date": "2025-10-31T17:55:10+00:00",
+        "updated_date": "2025-10-31T17:55:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiangyu Fan",
+            "Zesong Qiu",
+            "Zhuguanyu Wu",
+            "Fanzhou Wang",
+            "Zhiqian Lin",
+            "Tianxiang Ren",
+            "Dahua Lin",
+            "Ruihao Gong",
+            "Lei Yang"
+        ],
+        "tldr": "The paper introduces Phased DMD, a multi-step knowledge distillation framework for score-based generative models that improves performance and diversity in complex generation tasks like text-to-video synthesis by using progressive distribution matching and score matching within subintervals.",
+        "tldr_zh": "本文提出了Phased DMD，一种用于基于分数的生成模型的多步知识蒸馏框架，通过使用渐进式分布匹配和子区间内的分数匹配，提高了文本到视频合成等复杂生成任务的性能和多样性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
