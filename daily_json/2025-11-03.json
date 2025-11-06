@@ -1,0 +1,97 @@
+[
+    {
+        "title": "Outlier-Aware Post-Training Quantization for Image Super-Resolution",
+        "summary": "Quantization techniques, including quantization-aware training (QAT) and\npost-training quantization (PTQ), have become essential for inference\nacceleration of image super-resolution (SR) networks. Compared to QAT, PTQ has\ngarnered significant attention as it eliminates the need for ground truth and\nmodel retraining. However, existing PTQ methods for SR often fail to achieve\nsatisfactory performance as they overlook the impact of outliers in activation.\nOur empirical analysis reveals that these prevalent activation outliers are\nstrongly correlated with image color information, and directly removing them\nleads to significant performance degradation. Motivated by this, we propose a\ndual-region quantization strategy that partitions activations into an outlier\nregion and a dense region, applying uniform quantization to each region\nindependently to better balance bit-width allocation. Furthermore, we observe\nthat different network layers exhibit varying sensitivities to quantization,\nleading to different levels of performance degradation. To address this, we\nintroduce sensitivity-aware finetuning that encourages the model to focus more\non highly sensitive layers, further enhancing quantization performance.\nExtensive experiments demonstrate that our method outperforms existing PTQ\napproaches across various SR networks and datasets, while achieving performance\ncomparable to QAT methods in most scenarios with at least a 75 speedup.",
+        "url": "http://arxiv.org/abs/2511.00682v1",
+        "published_date": "2025-11-01T19:49:33+00:00",
+        "updated_date": "2025-11-01T19:49:33+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hailing Wang",
+            "jianglin Lu",
+            "Yitian Zhang",
+            "Yun Fu"
+        ],
+        "tldr": "This paper introduces an outlier-aware post-training quantization (PTQ) method for image super-resolution, using a dual-region quantization strategy and sensitivity-aware finetuning to improve performance and achieve QAT-comparable results with significant speedup.",
+        "tldr_zh": "本文提出了一种面向图像超分辨率的、感知离群点的训练后量化（PTQ）方法，该方法使用双区域量化策略和敏感度感知微调来提高性能，并在显著加速的情况下实现与QAT相当的结果。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MID: A Self-supervised Multimodal Iterative Denoising Framework",
+        "summary": "Data denoising is a persistent challenge across scientific and engineering\ndomains. Real-world data is frequently corrupted by complex, non-linear noise,\nrendering traditional rule-based denoising methods inadequate. To overcome\nthese obstacles, we propose a novel self-supervised multimodal iterative\ndenoising (MID) framework. MID models the collected noisy data as a state\nwithin a continuous process of non-linear noise accumulation. By iteratively\nintroducing further noise, MID learns two neural networks: one to estimate the\ncurrent noise step and another to predict and subtract the corresponding noise\nincrement. For complex non-linear contamination, MID employs a first-order\nTaylor expansion to locally linearize the noise process, enabling effective\niterative removal. Crucially, MID does not require paired clean-noisy datasets,\nas it learns noise characteristics directly from the noisy inputs. Experiments\nacross four classic computer vision tasks demonstrate MID's robustness,\nadaptability, and consistent state-of-the-art performance. Moreover, MID\nexhibits strong performance and adaptability in tasks within the biomedical and\nbioinformatics domains.",
+        "url": "http://arxiv.org/abs/2511.00997v1",
+        "published_date": "2025-11-02T16:13:52+00:00",
+        "updated_date": "2025-11-02T16:13:52+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chang Nie",
+            "Tianchen Deng",
+            "Zhe Liu",
+            "Hesheng Wang"
+        ],
+        "tldr": "The paper introduces MID, a self-supervised multimodal iterative denoising framework that learns to remove complex, non-linear noise from data by iteratively estimating and subtracting noise increments, achieving SOTA results across computer vision, biomedical, and bioinformatics tasks without requiring paired clean-noisy datasets.",
+        "tldr_zh": "该论文介绍了一种自监督多模态迭代去噪框架MID，通过迭代估计和减去噪声增量来学习从数据中去除复杂的非线性噪声，无需配对的干净-噪声数据集即可在计算机视觉、生物医学和生物信息学任务中实现SOTA结果。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Toward Better Optimization of Low-Dose CT Enhancement: A Critical Analysis of Loss Functions and Image Quality Assessment Metrics",
+        "summary": "Low-dose CT (LDCT) imaging is widely used to reduce radiation exposure to\nmitigate high exposure side effects, but often suffers from noise and artifacts\nthat affect diagnostic accuracy. To tackle this issue, deep learning models\nhave been developed to enhance LDCT images. Various loss functions have been\nemployed, including classical approaches such as Mean Square Error and\nadversarial losses, as well as customized loss functions(LFs) designed for\nspecific architectures. Although these models achieve remarkable performance in\nterms of PSNR and SSIM, these metrics are limited in their ability to reflect\nperceptual quality, especially for medical images. In this paper, we focus on\none of the most critical elements of DL-based architectures, namely the loss\nfunction. We conduct an objective analysis of the relevance of different loss\nfunctions for LDCT image quality enhancement and their consistency with image\nquality metrics. Our findings reveal inconsistencies between LFs and quality\nmetrics, and highlight the need of consideration of image quality metrics when\ndeveloping a new loss function for image quality enhancement.",
+        "url": "http://arxiv.org/abs/2511.00698v1",
+        "published_date": "2025-11-01T20:40:19+00:00",
+        "updated_date": "2025-11-01T20:40:19+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Taifour Yousra",
+            "Beghdadi Azeddine",
+            "Marie Luong",
+            "Zuheng Ming"
+        ],
+        "tldr": "This paper analyzes the effectiveness of various loss functions used in deep learning-based low-dose CT image enhancement, revealing inconsistencies between loss functions and image quality metrics, and emphasizing the importance of considering image quality metrics when designing new loss functions.",
+        "tldr_zh": "本文分析了深度学习在低剂量CT图像增强中使用的各种损失函数的有效性，揭示了损失函数与图像质量指标之间的不一致性，并强调了在设计新的损失函数时考虑图像质量指标的重要性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Evolve to Inspire: Novelty Search for Diverse Image Generation",
+        "summary": "Text-to-image diffusion models, while proficient at generating high-fidelity\nimages, often suffer from limited output diversity, hindering their application\nin exploratory and ideation tasks. Existing prompt optimization techniques\ntypically target aesthetic fitness or are ill-suited to the creative visual\ndomain. To address this shortcoming, we introduce WANDER, a novelty\nsearch-based approach to generating diverse sets of images from a single input\nprompt. WANDER operates directly on natural language prompts, employing a Large\nLanguage Model (LLM) for semantic evolution of diverse sets of images, and\nusing CLIP embeddings to quantify novelty. We additionally apply emitters to\nguide the search into distinct regions of the prompt space, and demonstrate\nthat they boost the diversity of the generated images. Empirical evaluations\nusing FLUX-DEV for generation and GPT-4o-mini for mutation demonstrate that\nWANDER significantly outperforms existing evolutionary prompt optimization\nbaselines in diversity metrics. Ablation studies confirm the efficacy of\nemitters.",
+        "url": "http://arxiv.org/abs/2511.00686v1",
+        "published_date": "2025-11-01T19:58:07+00:00",
+        "updated_date": "2025-11-01T19:58:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Alex Inch",
+            "Passawis Chaiyapattanaporn",
+            "Yuchen Zhu",
+            "Yuan Lu",
+            "Ting-Wen Ko",
+            "Davide Paglieri"
+        ],
+        "tldr": "The paper introduces WANDER, a novelty search-based approach using LLMs and CLIP embeddings for generating diverse images from a single text prompt, outperforming existing prompt optimization methods.",
+        "tldr_zh": "该论文介绍了一种名为WANDER的新方法，它基于新颖性搜索，使用LLM和CLIP嵌入，从单个文本提示生成多样化的图像，并且优于现有的提示优化方法。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

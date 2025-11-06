@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 28, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - November 03, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 28, 2025</p>
+            <p>November 03, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,31 +215,32 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">FARMER: Flow AutoRegressive Transformer over Pixels</h2>
+            <h2 class="paper-title">Outlier-Aware Post-Training Quantization for Image Super-Resolution</h2>
             
-            <p class="paper-summary">Directly modeling the explicit likelihood of the raw data distribution is key
-topic in the machine learning area, which achieves the scaling successes in
-Large Language Models by autoregressive modeling. However, continuous AR
-modeling over visual pixel data suffer from extremely long sequences and
-high-dimensional spaces. In this paper, we present FARMER, a novel end-to-end
-generative framework that unifies Normalizing Flows (NF) and Autoregressive
-(AR) models for tractable likelihood estimation and high-quality image
-synthesis directly from raw pixels. FARMER employs an invertible autoregressive
-flow to transform images into latent sequences, whose distribution is modeled
-implicitly by an autoregressive model. To address the redundancy and complexity
-in pixel-level modeling, we propose a self-supervised dimension reduction
-scheme that partitions NF latent channels into informative and redundant
-groups, enabling more effective and efficient AR modeling. Furthermore, we
-design a one-step distillation scheme to significantly accelerate inference
-speed and introduce a resampling-based classifier-free guidance algorithm to
-boost image generation quality. Extensive experiments demonstrate that FARMER
-achieves competitive performance compared to existing pixel-based generative
-models while providing exact likelihoods and scalable training.</p>
+            <p class="paper-summary">Quantization techniques, including quantization-aware training (QAT) and
+post-training quantization (PTQ), have become essential for inference
+acceleration of image super-resolution (SR) networks. Compared to QAT, PTQ has
+garnered significant attention as it eliminates the need for ground truth and
+model retraining. However, existing PTQ methods for SR often fail to achieve
+satisfactory performance as they overlook the impact of outliers in activation.
+Our empirical analysis reveals that these prevalent activation outliers are
+strongly correlated with image color information, and directly removing them
+leads to significant performance degradation. Motivated by this, we propose a
+dual-region quantization strategy that partitions activations into an outlier
+region and a dense region, applying uniform quantization to each region
+independently to better balance bit-width allocation. Furthermore, we observe
+that different network layers exhibit varying sensitivities to quantization,
+leading to different levels of performance degradation. To address this, we
+introduce sensitivity-aware finetuning that encourages the model to focus more
+on highly sensitive layers, further enhancing quantization performance.
+Extensive experiments demonstrate that our method outperforms existing PTQ
+approaches across various SR networks and datasets, while achieving performance
+comparable to QAT methods in most scenarios with at least a 75 speedup.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: FARMER combines Normalizing Flows and Autoregressive models for efficient, high-quality image generation directly from raw pixels, employing a dimension reduction scheme and distillation for improved speed and quality.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces an outlier-aware post-training quantization (PTQ) method for image super-resolution, using a dual-region quantization strategy and sensitivity-aware finetuning to improve performance and achieve QAT-comparable results with significant speedup.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: FARMER结合了归一化流和自回归模型，用于直接从原始像素进行高效、高质量的图像生成，并采用降维方案和蒸馏来提高速度和质量。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种面向图像超分辨率的、感知离群点的训练后量化（PTQ）方法，该方法使用双区域量化策略和敏感度感知微调来提高性能，并在显著加速的情况下实现与QAT相当的结果。</p>
             
 
             
@@ -249,13 +250,21 @@ models while providing exact likelihoods and scalable training.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
+                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
@@ -263,18 +272,10 @@ models while providing exact likelihoods and scalable training.</p>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -303,18 +304,18 @@ models while providing exact likelihoods and scalable training.</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.23588v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.00682v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Guangting Zheng, Qinyu Zhao, Tao Yang, Fei Xiao, Zhijie Lin, Jie Wu, Jiajun Deng, Yanyong Zhang, Rui Zhu</p>
+            <p class="paper-authors">Authors: Hailing Wang, jianglin Lu, Yitian Zhang, Yun Fu</p>
             
         </motion.div>
         
@@ -326,36 +327,29 @@ models while providing exact likelihoods and scalable training.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">An Efficient Remote Sensing Super Resolution Method Exploring Diffusion Priors and Multi-Modal Constraints for Crop Type Mapping</h2>
+            <h2 class="paper-title">MID: A Self-supervised Multimodal Iterative Denoising Framework</h2>
             
-            <p class="paper-summary">Super resolution offers a way to harness medium even lowresolution but
-historically valuable remote sensing image archives. Generative models,
-especially diffusion models, have recently been applied to remote sensing super
-resolution (RSSR), yet several challenges exist. First, diffusion models are
-effective but require expensive training from scratch resources and have slow
-inference speeds. Second, current methods have limited utilization of auxiliary
-information as real-world constraints to reconstruct scientifically realistic
-images. Finally, most current methods lack evaluation on downstream tasks. In
-this study, we present a efficient LSSR framework for RSSR, supported by a new
-multimodal dataset of paired 30 m Landsat 8 and 10 m Sentinel 2 imagery. Built
-on frozen pretrained Stable Diffusion, LSSR integrates crossmodal attention
-with auxiliary knowledge (Digital Elevation Model, land cover, month) and
-Synthetic Aperture Radar guidance, enhanced by adapters and a tailored Fourier
-NDVI loss to balance spatial details and spectral fidelity. Extensive
-experiments demonstrate that LSSR significantly improves crop boundary
-delineation and recovery, achieving state-of-the-art performance with Peak
-Signal-to-Noise Ratio/Structural Similarity Index Measure of 32.63/0.84 (RGB)
-and 23.99/0.78 (IR), and the lowest NDVI Mean Squared Error (0.042), while
-maintaining efficient inference (0.39 sec/image). Moreover, LSSR transfers
-effectively to NASA Harmonized Landsat and Sentinel (HLS) super resolution,
-yielding more reliable crop classification (F1: 0.86) than Sentinel-2 (F1:
-0.85). These results highlight the potential of RSSR to advance precision
-agriculture.</p>
+            <p class="paper-summary">Data denoising is a persistent challenge across scientific and engineering
+domains. Real-world data is frequently corrupted by complex, non-linear noise,
+rendering traditional rule-based denoising methods inadequate. To overcome
+these obstacles, we propose a novel self-supervised multimodal iterative
+denoising (MID) framework. MID models the collected noisy data as a state
+within a continuous process of non-linear noise accumulation. By iteratively
+introducing further noise, MID learns two neural networks: one to estimate the
+current noise step and another to predict and subtract the corresponding noise
+increment. For complex non-linear contamination, MID employs a first-order
+Taylor expansion to locally linearize the noise process, enabling effective
+iterative removal. Crucially, MID does not require paired clean-noisy datasets,
+as it learns noise characteristics directly from the noisy inputs. Experiments
+across four classic computer vision tasks demonstrate MID's robustness,
+adaptability, and consistent state-of-the-art performance. Moreover, MID
+exhibits strong performance and adaptability in tasks within the biomedical and
+bioinformatics domains.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces an efficient remote sensing super-resolution (RSSR) framework called LSSR, which leverages pretrained Stable Diffusion, multi-modal constraints, and task-specific loss functions to achieve state-of-the-art performance in crop type mapping with fast inference.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MID, a self-supervised multimodal iterative denoising framework that learns to remove complex, non-linear noise from data by iteratively estimating and subtracting noise increments, achieving SOTA results across computer vision, biomedical, and bioinformatics tasks without requiring paired clean-noisy datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种高效的遥感超分辨率（RSSR）框架LSSR，该框架利用预训练的Stable Diffusion模型、多模态约束和特定任务的损失函数，在作物类型映射方面实现了最先进的性能，并具有快速的推理速度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种自监督多模态迭代去噪框架MID，通过迭代估计和减去噪声增量来学习从数据中去除复杂的非线性噪声，无需配对的干净-噪声数据集即可在计算机视觉、生物医学和生物信息学任务中实现SOTA结果。</p>
             
 
             
@@ -365,8 +359,8 @@ agriculture.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -426,11 +420,11 @@ agriculture.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.23382v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.00997v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Songxi Yang, Tang Sui, Qunying Huang</p>
+            <p class="paper-authors">Authors: Chang Nie, Tianchen Deng, Zhe Liu, Hesheng Wang</p>
             
         </motion.div>
         
@@ -442,28 +436,28 @@ agriculture.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Adaptive Stochastic Coefficients for Accelerating Diffusion Sampling</h2>
+            <h2 class="paper-title">Toward Better Optimization of Low-Dose CT Enhancement: A Critical Analysis of Loss Functions and Image Quality Assessment Metrics</h2>
             
-            <p class="paper-summary">Diffusion-based generative processes, formulated as differential equation
-solving, frequently balance computational speed with sample quality. Our
-theoretical investigation of ODE- and SDE-based solvers reveals complementary
-weaknesses: ODE solvers accumulate irreducible gradient error along
-deterministic trajectories, while SDE methods suffer from amplified
-discretization errors when the step budget is limited. Building upon this
-insight, we introduce AdaSDE, a novel single-step SDE solver that aims to unify
-the efficiency of ODEs with the error resilience of SDEs. Specifically, we
-introduce a single per-step learnable coefficient, estimated via lightweight
-distillation, which dynamically regulates the error correction strength to
-accelerate diffusion sampling. Notably, our framework can be integrated with
-existing solvers to enhance their capabilities. Extensive experiments
-demonstrate state-of-the-art performance: at 5 NFE, AdaSDE achieves FID scores
-of 4.18 on CIFAR-10, 8.05 on FFHQ and 6.96 on LSUN Bedroom. Codes are available
-in https://github.com/WLU-wry02/AdaSDE.</p>
+            <p class="paper-summary">Low-dose CT (LDCT) imaging is widely used to reduce radiation exposure to
+mitigate high exposure side effects, but often suffers from noise and artifacts
+that affect diagnostic accuracy. To tackle this issue, deep learning models
+have been developed to enhance LDCT images. Various loss functions have been
+employed, including classical approaches such as Mean Square Error and
+adversarial losses, as well as customized loss functions(LFs) designed for
+specific architectures. Although these models achieve remarkable performance in
+terms of PSNR and SSIM, these metrics are limited in their ability to reflect
+perceptual quality, especially for medical images. In this paper, we focus on
+one of the most critical elements of DL-based architectures, namely the loss
+function. We conduct an objective analysis of the relevance of different loss
+functions for LDCT image quality enhancement and their consistency with image
+quality metrics. Our findings reveal inconsistencies between LFs and quality
+metrics, and highlight the need of consideration of image quality metrics when
+developing a new loss function for image quality enhancement.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces AdaSDE, a novel single-step SDE solver with a learnable coefficient to dynamically regulate error correction in diffusion models, achieving state-of-the-art FID scores at low NFEs.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper analyzes the effectiveness of various loss functions used in deep learning-based low-dose CT image enhancement, revealing inconsistencies between loss functions and image quality metrics, and emphasizing the importance of considering image quality metrics when designing new loss functions.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种新的单步SDE求解器AdaSDE，它具有可学习的系数，可以动态调节扩散模型中的误差校正，并在低NFE下实现了最先进的FID分数。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文分析了深度学习在低剂量CT图像增强中使用的各种损失函数的有效性，揭示了损失函数与图像质量指标之间的不一致性，并强调了在设计新的损失函数时考虑图像质量指标的重要性。</p>
             
 
             
@@ -481,8 +475,8 @@ in https://github.com/WLU-wry02/AdaSDE.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
                 </div>
                 
                 
@@ -497,8 +491,8 @@ in https://github.com/WLU-wry02/AdaSDE.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -523,22 +517,22 @@ in https://github.com/WLU-wry02/AdaSDE.</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.23285v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.00698v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ruoyu Wang, Beier Zhu, Junzhi Li, Liangyu Yuan, Chi Zhang</p>
+            <p class="paper-authors">Authors: Taifour Yousra, Beghdadi Azeddine, Marie Luong, Zuheng Ming</p>
             
         </motion.div>
         
@@ -550,31 +544,28 @@ in https://github.com/WLU-wry02/AdaSDE.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Residual Diffusion Bridge Model for Image Restoration</h2>
+            <h2 class="paper-title">Evolve to Inspire: Novelty Search for Diverse Image Generation</h2>
             
-            <p class="paper-summary">Diffusion bridge models establish probabilistic paths between arbitrary
-paired distributions and exhibit great potential for universal image
-restoration. Most existing methods merely treat them as simple variants of
-stochastic interpolants, lacking a unified analytical perspective. Besides,
-they indiscriminately reconstruct images through global noise injection and
-removal, inevitably distorting undegraded regions due to imperfect
-reconstruction. To address these challenges, we propose the Residual Diffusion
-Bridge Model (RDBM). Specifically, we theoretically reformulate the stochastic
-differential equations of generalized diffusion bridge and derive the
-analytical formulas of its forward and reverse processes. Crucially, we
-leverage the residuals from given distributions to modulate the noise injection
-and removal, enabling adaptive restoration of degraded regions while preserving
-intact others. Moreover, we unravel the fundamental mathematical essence of
-existing bridge models, all of which are special cases of RDBM and empirically
-demonstrate the optimality of our proposed models. Extensive experiments are
-conducted to demonstrate the state-of-the-art performance of our method both
-qualitatively and quantitatively across diverse image restoration tasks. Code
-is publicly available at https://github.com/MiliLab/RDBM.</p>
+            <p class="paper-summary">Text-to-image diffusion models, while proficient at generating high-fidelity
+images, often suffer from limited output diversity, hindering their application
+in exploratory and ideation tasks. Existing prompt optimization techniques
+typically target aesthetic fitness or are ill-suited to the creative visual
+domain. To address this shortcoming, we introduce WANDER, a novelty
+search-based approach to generating diverse sets of images from a single input
+prompt. WANDER operates directly on natural language prompts, employing a Large
+Language Model (LLM) for semantic evolution of diverse sets of images, and
+using CLIP embeddings to quantify novelty. We additionally apply emitters to
+guide the search into distinct regions of the prompt space, and demonstrate
+that they boost the diversity of the generated images. Empirical evaluations
+using FLUX-DEV for generation and GPT-4o-mini for mutation demonstrate that
+WANDER significantly outperforms existing evolutionary prompt optimization
+baselines in diversity metrics. Ablation studies confirm the efficacy of
+emitters.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Residual Diffusion Bridge Model (RDBM) for image restoration, which adaptively restores degraded regions by leveraging residuals and offers a unified analytical perspective on diffusion bridge models, achieving state-of-the-art performance.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces WANDER, a novelty search-based approach using LLMs and CLIP embeddings for generating diverse images from a single text prompt, outperforming existing prompt optimization methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了用于图像修复的残差扩散桥模型（RDBM），它通过利用残差自适应地修复退化区域，并为扩散桥模型提供了一个统一的分析视角，从而实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为WANDER的新方法，它基于新颖性搜索，使用LLM和CLIP嵌入，从单个文本提示生成多样化的图像，并且优于现有的提示优化方法。</p>
             
 
             
@@ -584,8 +575,8 @@ is publicly available at https://github.com/MiliLab/RDBM.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -600,16 +591,16 @@ is publicly available at https://github.com/MiliLab/RDBM.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -634,138 +625,29 @@ is publicly available at https://github.com/MiliLab/RDBM.</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.23116v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.00686v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Hebaixu Wang, Jing Zhang, Haoyang Chen, Haonan Guo, Di Wang, Jiayi Ma, Bo Du</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Nested AutoRegressive Models</h2>
-            
-            <p class="paper-summary">AutoRegressive (AR) models have demonstrated competitive performance in image
-generation, achieving results comparable to those of diffusion models. However,
-their token-by-token image generation mechanism remains computationally
-intensive and existing solutions such as VAR often lead to limited sample
-diversity. In this work, we propose a Nested AutoRegressive~(NestAR) model,
-which proposes nested AutoRegressive architectures in generating images. NestAR
-designs multi-scale modules in a hierarchical order. These different scaled
-modules are constructed in an AR architecture, where one larger-scale module is
-conditioned on outputs from its previous smaller-scale module. Within each
-module, NestAR uses another AR structure to generate ``patches'' of tokens. The
-proposed nested AR architecture reduces the overall complexity from
-$\mathcal{O}(n)$ to $\mathcal{O}(\log n)$ in generating $n$ image tokens, as
-well as increases image diversities. NestAR further incorporates flow matching
-loss to use continuous tokens, and develops objectives to coordinate these
-multi-scale modules in model training. NestAR achieves competitive image
-generation performance while significantly lowering computational cost.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces NestAR, a novel nested AutoRegressive model for image generation that aims to reduce computational complexity and increase sample diversity by using multi-scale modules and flow matching loss.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新的嵌套自回归模型NestAR，用于图像生成，旨在通过使用多尺度模块和流匹配损失来降低计算复杂度并增加样本多样性。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.23028v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Hongyu Wu, Xuhui Fan, Zhangkai Wu, Longbing Cao</p>
+            <p class="paper-authors">Authors: Alex Inch, Passawis Chaiyapattanaporn, Yuchen Zhu, Yuan Lu, Ting-Wen Ko, Davide Paglieri</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-11-06 02:41:41 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-11-06 02:46:11 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
