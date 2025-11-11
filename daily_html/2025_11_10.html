@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - October 29, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - November 10, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>October 29, 2025</p>
+            <p>November 10, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,30 +215,31 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Decoupled MeanFlow: Turning Flow Models into Flow Maps for Accelerated Sampling</h2>
+            <h2 class="paper-title">Test-Time Iterative Error Correction for Efficient Diffusion Models</h2>
             
-            <p class="paper-summary">Denoising generative models, such as diffusion and flow-based models, produce
-high-quality samples but require many denoising steps due to discretization
-error. Flow maps, which estimate the average velocity between timesteps,
-mitigate this error and enable faster sampling. However, their training
-typically demands architectural changes that limit compatibility with
-pretrained flow models. We introduce Decoupled MeanFlow, a simple decoding
-strategy that converts flow models into flow map models without architectural
-modifications. Our method conditions the final blocks of diffusion transformers
-on the subsequent timestep, allowing pretrained flow models to be directly
-repurposed as flow maps. Combined with enhanced training techniques, this
-design enables high-quality generation in as few as 1 to 4 steps. Notably, we
-find that training flow models and subsequently converting them is more
-efficient and effective than training flow maps from scratch. On ImageNet
-256x256 and 512x512, our models attain 1-step FID of 2.16 and 2.12,
-respectively, surpassing prior art by a large margin. Furthermore, we achieve
-FID of 1.51 and 1.68 when increasing the steps to 4, which nearly matches the
-performance of flow models while delivering over 100x faster inference.</p>
+            <p class="paper-summary">With the growing demand for high-quality image generation on
+resource-constrained devices, efficient diffusion models have received
+increasing attention. However, such models suffer from approximation errors
+introduced by efficiency techniques, which significantly degrade generation
+quality. Once deployed, these errors are difficult to correct, as modifying the
+model is typically infeasible in deployment environments. Through an analysis
+of error propagation across diffusion timesteps, we reveal that these
+approximation errors can accumulate exponentially, severely impairing output
+quality. Motivated by this insight, we propose Iterative Error Correction
+(IEC), a novel test-time method that mitigates inference-time errors by
+iteratively refining the model's output. IEC is theoretically proven to reduce
+error propagation from exponential to linear growth, without requiring any
+retraining or architectural changes. IEC can seamlessly integrate into the
+inference process of existing diffusion models, enabling a flexible trade-off
+between performance and efficiency. Extensive experiments show that IEC
+consistently improves generation quality across various datasets, efficiency
+techniques, and model architectures, establishing it as a practical and
+generalizable solution for test-time enhancement of efficient diffusion models.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Decoupled MeanFlow, a method to convert pretrained flow models into flow map models for accelerated sampling without architectural changes, achieving state-of-the-art FID scores with significantly fewer steps.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Iterative Error Correction (IEC), a test-time method to improve the generation quality of efficient diffusion models by mitigating inference-time errors without retraining or architectural changes.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了Decoupled MeanFlow，一种将预训练的Flow模型转换为Flow Map模型的方法，用于加速采样，无需架构修改，并以显著更少的步骤实现了最先进的FID分数。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种名为迭代误差校正（IEC）的测试时方法，通过减少推理时误差来提高高效扩散模型的生成质量，而无需重新训练或更改架构。</p>
             
 
             
@@ -256,8 +257,8 @@ performance of flow models while delivering over 100x faster inference.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -272,8 +273,8 @@ performance of flow models while delivering over 100x faster inference.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -302,18 +303,18 @@ performance of flow models while delivering over 100x faster inference.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.24474v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.06250v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Kyungmin Lee, Sihyun Yu, Jinwoo Shin</p>
+            <p class="paper-authors">Authors: Yunshan Zhong, Yanwei Qi, Yuxin Zhang</p>
             
         </motion.div>
         
@@ -325,31 +326,38 @@ performance of flow models while delivering over 100x faster inference.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MC-SJD : Maximal Coupling Speculative Jacobi Decoding for Autoregressive Visual Generation Acceleration</h2>
+            <h2 class="paper-title">Physics-Informed Image Restoration via Progressive PDE Integration</h2>
             
-            <p class="paper-summary">While autoregressive (AR) modeling has recently emerged as a new paradigm in
-visual generation, its practical adoption is severely constrained by the slow
-inference speed of per-token generation, which often requires thousands of
-steps to produce a single sample. To address this challenge, we propose MC-SJD,
-a training-free, lossless parallel decoding framework designed to accelerate AR
-visual generation by extending the recently introduced Speculative Jacobi
-Decoding (SJD). Although SJD shows strong potential for accelerating AR
-generation, we demonstrate that token instability across iterations
-significantly reduces the acceptance rate, a limitation that primarily arises
-from the independent sampling process used during draft token generation. To
-overcome this, we introduce MC-SJD, an information-theoretic approach based on
-coupling, which substantially accelerates standard SJD by maximizing the
-probability of sampling identical draft tokens across consecutive iterations,
-all while preserving its lossless property. Remarkably, this method requires
-only a single-line modification to the existing algorithm, yet achieves
-substantial performance gains, delivering up to a ~4.2x acceleration in image
-generation and ~13.3x acceleration in video generation compared to standard AR
-decoding, without any degradation in output quality.</p>
+            <p class="paper-summary">Motion blur, caused by relative movement between camera and scene during
+exposure, significantly degrades image quality and impairs downstream computer
+vision tasks such as object detection, tracking, and recognition in dynamic
+environments. While deep learning-based motion deblurring methods have achieved
+remarkable progress, existing approaches face fundamental challenges in
+capturing the long-range spatial dependencies inherent in motion blur patterns.
+Traditional convolutional methods rely on limited receptive fields and require
+extremely deep networks to model global spatial relationships. These
+limitations motivate the need for alternative approaches that incorporate
+physical priors to guide feature evolution during restoration. In this paper,
+we propose a progressive training framework that integrates physics-informed
+PDE dynamics into state-of-the-art restoration architectures. By leveraging
+advection-diffusion equations to model feature evolution, our approach
+naturally captures the directional flow characteristics of motion blur while
+enabling principled global spatial modeling. Our PDE-enhanced deblurring models
+achieve superior restoration quality with minimal overhead, adding only
+approximately 1\% to inference GMACs while providing consistent improvements in
+perceptual quality across multiple state-of-the-art architectures.
+Comprehensive experiments on standard motion deblurring benchmarks demonstrate
+that our physics-informed approach improves PSNR and SSIM significantly across
+four diverse architectures, including FFTformer, NAFNet, Restormer, and
+Stripformer. These results validate that incorporating mathematical physics
+principles through PDE-based global layers can enhance deep learning-based
+image restoration, establishing a promising direction for physics-informed
+neural network design in computer vision applications.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MC-SJD, a training-free, lossless parallel decoding framework that accelerates autoregressive visual generation by maximizing the probability of sampling identical draft tokens across consecutive iterations in Speculative Jacobi Decoding (SJD), achieving significant speedups in image and video generation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a physics-informed deep learning approach for motion deblurring, leveraging PDE-based feature evolution to capture long-range spatial dependencies and improve restoration quality with minimal computational overhead.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为MC-SJD的无训练、无损并行解码框架，通过最大化Speculative Jacobi Decoding (SJD)中连续迭代采样相同草稿token的概率来加速自回归视觉生成，并在图像和视频生成方面实现了显著的加速。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种物理信息驱动的深度学习方法，用于运动去模糊，通过基于PDE的特征演化来捕捉长程空间依赖关系，并以最小的计算开销提高恢复质量。</p>
             
 
             
@@ -359,8 +367,8 @@ decoding, without any degradation in output quality.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -383,8 +391,8 @@ decoding, without any degradation in output quality.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -420,11 +428,11 @@ decoding, without any degradation in output quality.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.24211v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.06244v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Junhyuk So, Hyunho Kook, Chaeyeon Jang, Eunhyeok Park</p>
+            <p class="paper-authors">Authors: Shamika Likhite, Santiago López-Tapia, Aggelos K. Katsaggelos</p>
             
         </motion.div>
         
@@ -436,28 +444,31 @@ decoding, without any degradation in output quality.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">ETC: training-free diffusion models acceleration with Error-aware Trend Consistency</h2>
+            <h2 class="paper-title">MambaOVSR: Multiscale Fusion with Global Motion Modeling for Chinese Opera Video Super-Resolution</h2>
             
-            <p class="paper-summary">Diffusion models have achieved remarkable generative quality but remain
-bottlenecked by costly iterative sampling. Recent training-free methods
-accelerate diffusion process by reusing model outputs. However, these methods
-ignore denoising trends and lack error control for model-specific tolerance,
-leading to trajectory deviations under multi-step reuse and exacerbating
-inconsistencies in the generated results. To address these issues, we introduce
-Error-aware Trend Consistency (ETC), a framework that (1) introduces a
-consistent trend predictor that leverages the smooth continuity of diffusion
-trajectories, projecting historical denoising patterns into stable future
-directions and progressively distributing them across multiple approximation
-steps to achieve acceleration without deviating; (2) proposes a model-specific
-error tolerance search mechanism that derives corrective thresholds by
-identifying transition points from volatile semantic planning to stable quality
-refinement. Experiments show that ETC achieves a 2.65x acceleration over FLUX
-with negligible (-0.074 SSIM score) degradation of consistency.</p>
+            <p class="paper-summary">Chinese opera is celebrated for preserving classical art. However, early
+filming equipment limitations have degraded videos of last-century performances
+by renowned artists (e.g., low frame rates and resolution), hindering archival
+efforts. Although space-time video super-resolution (STVSR) has advanced
+significantly, applying it directly to opera videos remains challenging. The
+scarcity of datasets impedes the recovery of high frequency details, and
+existing STVSR methods lack global modeling capabilities, compromising visual
+quality when handling opera's characteristic large motions. To address these
+challenges, we pioneer a large scale Chinese Opera Video Clip (COVC) dataset
+and propose the Mamba-based multiscale fusion network for space-time Opera
+Video Super-Resolution (MambaOVSR). Specifically, MambaOVSR involves three
+novel components: the Global Fusion Module (GFM) for motion modeling through a
+multiscale alternating scanning mechanism, and the Multiscale Synergistic Mamba
+Module (MSMM) for alignment across different sequence lengths. Additionally,
+our MambaVR block resolves feature artifacts and positional information loss
+during alignment. Experimental results on the COVC dataset show that MambaOVSR
+significantly outperforms the SOTA STVSR method by an average of 1.86 dB in
+terms of PSNR. Dataset and Code will be publicly released.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ETC, a training-free framework for accelerating diffusion models by predicting consistent trends and controlling errors based on model-specific tolerance, achieving 2.65x speedup with minimal consistency degradation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces MambaOVSR, a Mamba-based video super-resolution method tailored for Chinese opera videos, along with a new large-scale dataset (COVC). It addresses challenges related to low-resolution footage and large motions typical in opera performances, achieving superior results compared to state-of-the-art methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了ETC，一个无需训练的框架，通过预测一致的趋势并基于模型特定的容错性来控制误差，从而加速扩散模型，实现了2.65倍的加速，且一致性降级很小。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了 MambaOVSR，一种基于 Mamba 的视频超分辨率方法，专为中国戏曲视频设计，并发布了一个新的大规模数据集 (COVC)。它解决了戏曲表演中常见的低分辨率素材和大动作相关的挑战，与最先进的方法相比，取得了优异的成果。</p>
             
 
             
@@ -467,8 +478,8 @@ with negligible (-0.074 SSIM score) degradation of consistency.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -491,8 +502,8 @@ with negligible (-0.074 SSIM score) degradation of consistency.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -528,11 +539,11 @@ with negligible (-0.074 SSIM score) degradation of consistency.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.24129v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.06172v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jiajian Xie, Hubery Yin, Chen Li, Zhou Zhao, Shengyu Zhang</p>
+            <p class="paper-authors">Authors: Hua Chang, Xin Xu, Wei Liu, Wei Wang, Xin Yuan, Kui Jiang</p>
             
         </motion.div>
         
@@ -544,18 +555,31 @@ with negligible (-0.074 SSIM score) degradation of consistency.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Efficient Cost-and-Quality Controllable Arbitrary-scale Super-resolution with Fourier Constraints</h2>
+            <h2 class="paper-title">Latent Refinement via Flow Matching for Training-free Linear Inverse Problem Solving</h2>
             
-            <p class="paper-summary">Cost-and-Quality (CQ) controllability in arbitrary-scale super-resolution is
-crucial. Existing methods predict Fourier components one by one using a
-recurrent neural network. However, this approach leads to performance
-degradation and inefficiency due to independent prediction. This paper proposes
-predicting multiple components jointly to improve both quality and efficiency.</p>
+            <p class="paper-summary">Recent advances in inverse problem solving have increasingly adopted flow
+priors over diffusion models due to their ability to construct straight
+probability paths from noise to data, thereby enhancing efficiency in both
+training and inference. However, current flow-based inverse solvers face two
+primary limitations: (i) they operate directly in pixel space, which demands
+heavy computational resources for training and restricts scalability to
+high-resolution images, and (ii) they employ guidance strategies with
+prior-agnostic posterior covariances, which can weaken alignment with the
+generative trajectory and degrade posterior coverage. In this paper, we propose
+LFlow (Latent Refinement via Flows), a training-free framework for solving
+linear inverse problems via pretrained latent flow priors. LFlow leverages the
+efficiency of flow matching to perform ODE sampling in latent space along an
+optimal path. This latent formulation further allows us to introduce a
+theoretically grounded posterior covariance, derived from the optimal vector
+field, enabling effective flow guidance. Experimental results demonstrate that
+our proposed method outperforms state-of-the-art latent diffusion solvers in
+reconstruction quality across most tasks. The code will be publicly available
+at https://github.com/hosseinaskari-cs/LFlow .</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a new arbitrary-scale super-resolution method that jointly predicts Fourier components to improve quality and efficiency, addressing the limitations of existing recurrent neural network approaches.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces LFlow, a training-free framework for solving linear inverse problems using pretrained latent flow priors and an optimized posterior covariance, outperforming state-of-the-art latent diffusion solvers in reconstruction quality.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种新的任意尺度超分辨率方法，通过联合预测傅里叶分量来提高质量和效率，解决了现有循环神经网络方法的局限性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 LFlow，一个无需训练的框架，用于使用预训练的潜在流先验和优化的后验协方差来解决线性逆问题，在重建质量方面优于最先进的潜在扩散求解器。</p>
             
 
             
@@ -573,8 +597,8 @@ predicting multiple components jointly to improve both quality and efficiency.</
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -589,8 +613,8 @@ predicting multiple components jointly to improve both quality and efficiency.</
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -626,11 +650,11 @@ predicting multiple components jointly to improve both quality and efficiency.</
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.23978v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.06138v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Kazutoshi Akita, Norimichi Ukita</p>
+            <p class="paper-authors">Authors: Hossein Askari, Yadan Luo, Hongfu Sun, Fred Roosta</p>
             
         </motion.div>
         
@@ -642,33 +666,31 @@ predicting multiple components jointly to improve both quality and efficiency.</
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">RareFlow: Physics-Aware Flow-Matching for Cross-Sensor Super-Resolution of Rare-Earth Features</h2>
+            <h2 class="paper-title">LaneDiffusion: Improving Centerline Graph Learning via Prior Injected BEV Feature Generation</h2>
             
-            <p class="paper-summary">Super-resolution (SR) for remote sensing imagery often fails under
-out-of-distribution (OOD) conditions, such as rare geomorphic features captured
-by diverse sensors, producing visually plausible but physically inaccurate
-results. We present RareFlow, a physics-aware SR framework designed for OOD
-robustness. RareFlow's core is a dual-conditioning architecture. A Gated
-ControlNet preserves fine-grained geometric fidelity from the low-resolution
-input, while textual prompts provide semantic guidance for synthesizing complex
-features. To ensure physically sound outputs, we introduce a multifaceted loss
-function that enforces both spectral and radiometric consistency with sensor
-properties. Furthermore, the framework quantifies its own predictive
-uncertainty by employing a stochastic forward pass approach; the resulting
-output variance directly identifies unfamiliar inputs, mitigating feature
-hallucination. We validate RareFlow on a new, curated benchmark of multi-sensor
-satellite imagery. In blind evaluations, geophysical experts rated our model's
-outputs as approaching the fidelity of ground truth imagery, significantly
-outperforming state-of-the-art baselines. This qualitative superiority is
-corroborated by quantitative gains in perceptual metrics, including a nearly
-40\% reduction in FID. RareFlow provides a robust framework for high-fidelity
-synthesis in data-scarce scientific domains and offers a new paradigm for
-controlled generation under severe domain shift.</p>
+            <p class="paper-summary">Centerline graphs, crucial for path planning in autonomous driving, are
+traditionally learned using deterministic methods. However, these methods often
+lack spatial reasoning and struggle with occluded or invisible centerlines.
+Generative approaches, despite their potential, remain underexplored in this
+domain. We introduce LaneDiffusion, a novel generative paradigm for centerline
+graph learning. LaneDiffusion innovatively employs diffusion models to generate
+lane centerline priors at the Bird's Eye View (BEV) feature level, instead of
+directly predicting vectorized centerlines. Our method integrates a Lane Prior
+Injection Module (LPIM) and a Lane Prior Diffusion Module (LPDM) to effectively
+construct diffusion targets and manage the diffusion process. Furthermore,
+vectorized centerlines and topologies are then decoded from these
+prior-injected BEV features. Extensive evaluations on the nuScenes and
+Argoverse2 datasets demonstrate that LaneDiffusion significantly outperforms
+existing methods, achieving improvements of 4.2%, 4.6%, 4.7%, 6.4% and 1.8% on
+fine-grained point-level metrics (GEO F1, TOPO F1, JTOPO F1, APLS and SDA) and
+2.3%, 6.4%, 6.8% and 2.1% on segment-level metrics (IoU, mAP_cf, DET_l and
+TOP_ll). These results establish state-of-the-art performance in centerline
+graph learning, offering new insights into generative models for this task.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: RareFlow is a physics-aware super-resolution framework for remote sensing imagery that addresses out-of-distribution robustness by incorporating a dual-conditioning architecture, a multifaceted loss function, and uncertainty quantification, demonstrably outperforming state-of-the-art methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: LaneDiffusion is a novel generative method using diffusion models to generate lane centerline priors at the BEV feature level, achieving state-of-the-art performance on centerline graph learning tasks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: RareFlow 是一种针对遥感图像的物理感知超分辨率框架，通过结合双重条件架构、多方面损失函数和不确定性量化来解决分布外鲁棒性问题，并且已经证明优于目前最先进的方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: LaneDiffusion 是一种新的生成方法，使用扩散模型在鸟瞰视图（BEV）特征级别生成车道中心线先验，在中心线图学习任务上实现了最先进的性能。</p>
             
 
             
@@ -678,16 +700,16 @@ controlled generation under severe domain shift.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(2/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -696,120 +718,6 @@ controlled generation under severe domain shift.</p>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.23816v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Forouzan Fallah, Wenwen Li, Chia-Yu Hsu, Hyunho Lee, Yezhou Yang</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Delving into Cascaded Instability: A Lipschitz Continuity View on Image Restoration and Object Detection Synergy</h2>
-            
-            <p class="paper-summary">To improve detection robustness in adverse conditions (e.g., haze and low
-light), image restoration is commonly applied as a pre-processing step to
-enhance image quality for the detector. However, the functional mismatch
-between restoration and detection networks can introduce instability and hinder
-effective integration -- an issue that remains underexplored. We revisit this
-limitation through the lens of Lipschitz continuity, analyzing the functional
-differences between restoration and detection networks in both the input space
-and the parameter space. Our analysis shows that restoration networks perform
-smooth, continuous transformations, while object detectors operate with
-discontinuous decision boundaries, making them highly sensitive to minor
-perturbations. This mismatch introduces instability in traditional cascade
-frameworks, where even imperceptible noise from restoration is amplified during
-detection, disrupting gradient flow and hindering optimization. To address
-this, we propose Lipschitz-regularized object detection (LROD), a simple yet
-effective framework that integrates image restoration directly into the
-detector's feature learning, harmonizing the Lipschitz continuity of both tasks
-during training. We implement this framework as Lipschitz-regularized YOLO
-(LR-YOLO), extending seamlessly to existing YOLO detectors. Extensive
-experiments on haze and low-light benchmarks demonstrate that LR-YOLO
-consistently improves detection stability, optimization smoothness, and overall
-accuracy.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper analyzes the instability caused by cascading image restoration and object detection networks due to differing Lipschitz continuity properties and proposes a Lipschitz-regularized object detection framework to address this issue, demonstrating improved performance on haze and low-light benchmarks.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文分析了由于不同的Lipschitz连续性导致图像修复和目标检测网络级联引起的不稳定性，并提出了一种Lipschitz正则化的目标检测框架来解决这个问题，并在雾霾和弱光基准测试中展示了改进的性能。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -828,10 +736,6 @@ accuracy.</p>
             <div class="paper-rating">
                 <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
                 
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
                 
                     
                         <i class="fas fa-star"></i>
@@ -849,22 +753,26 @@ accuracy.</p>
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(5/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.24232v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.06272v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Qing Zhao, Weijian Deng, Pengxu Wei, ZiYi Dong, Hannan Lu, Xiangyang Ji, Liang Lin</p>
+            <p class="paper-authors">Authors: Zijie Wang, Weiming Zhang, Wei Zhang, Xiao Tan, Hongxing Liu, Yaowei Wang, Guanbin Li</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-11-11 03:43:49 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-11-11 03:45:41 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

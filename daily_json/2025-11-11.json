@@ -1,0 +1,112 @@
+[
+    {
+        "title": "GEWDiff: Geometric Enhanced Wavelet-based Diffusion Model for Hyperspectral Image Super-resolution",
+        "summary": "Improving the quality of hyperspectral images (HSIs), such as through\nsuper-resolution, is a crucial research area. However, generative modeling for\nHSIs presents several challenges. Due to their high spectral dimensionality,\nHSIs are too memory-intensive for direct input into conventional diffusion\nmodels. Furthermore, general generative models lack an understanding of the\ntopological and geometric structures of ground objects in remote sensing\nimagery. In addition, most diffusion models optimize loss functions at the\nnoise level, leading to a non-intuitive convergence behavior and suboptimal\ngeneration quality for complex data. To address these challenges, we propose a\nGeometric Enhanced Wavelet-based Diffusion Model (GEWDiff), a novel framework\nfor reconstructing hyperspectral images at 4-times super-resolution. A\nwavelet-based encoder-decoder is introduced that efficiently compresses HSIs\ninto a latent space while preserving spectral-spatial information. To avoid\ndistortion during generation, we incorporate a geometry-enhanced diffusion\nprocess that preserves the geometric features. Furthermore, a multi-level loss\nfunction was designed to guide the diffusion process, promoting stable\nconvergence and improved reconstruction fidelity. Our model demonstrated\nstate-of-the-art results across multiple dimensions, including fidelity,\nspectral accuracy, visual realism, and clarity.",
+        "url": "http://arxiv.org/abs/2511.07103v1",
+        "published_date": "2025-11-10T13:44:16+00:00",
+        "updated_date": "2025-11-10T13:44:16+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Sirui Wang",
+            "Jiang He",
+            "Natàlia Blasco Andreo",
+            "Xiao Xiang Zhu"
+        ],
+        "tldr": "The paper introduces GEWDiff, a novel wavelet-based diffusion model with geometric enhancements and a multi-level loss function, for 4x hyperspectral image super-resolution, achieving state-of-the-art results.",
+        "tldr_zh": "该论文提出了GEWDiff，一种新型的基于小波的扩散模型，具有几何增强和多级损失函数，用于4倍高光谱图像超分辨率，并取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Integrating Reweighted Least Squares with Plug-and-Play Diffusion Priors for Noisy Image Restoration",
+        "summary": "Existing plug-and-play image restoration methods typically employ\noff-the-shelf Gaussian denoisers as proximal operators within classical\noptimization frameworks based on variable splitting. Recently, denoisers\ninduced by generative priors have been successfully integrated into regularized\noptimization methods for image restoration under Gaussian noise. However, their\napplication to non-Gaussian noise--such as impulse noise--remains largely\nunexplored. In this paper, we propose a plug-and-play image restoration\nframework based on generative diffusion priors for robust removal of general\nnoise types, including impulse noise. Within the maximum a posteriori (MAP)\nestimation framework, the data fidelity term is adapted to the specific noise\nmodel. Departing from the conventional least-squares loss used for Gaussian\nnoise, we introduce a generalized Gaussian scale mixture-based loss, which\napproximates a wide range of noise distributions and leads to an $\\ell_q$-norm\n($0<q\\leq2$) fidelity term. This optimization problem is addressed using an\niteratively reweighted least squares (IRLS) approach, wherein the proximal step\ninvolving the generative prior is efficiently performed via a diffusion-based\ndenoiser. Experimental results on benchmark datasets demonstrate that the\nproposed method effectively removes non-Gaussian impulse noise and achieves\nsuperior restoration performance.",
+        "url": "http://arxiv.org/abs/2511.06823v1",
+        "published_date": "2025-11-10T08:11:20+00:00",
+        "updated_date": "2025-11-10T08:11:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ji Li",
+            "Chao Wang"
+        ],
+        "tldr": "This paper proposes a plug-and-play image restoration method using diffusion priors and iteratively reweighted least squares for handling non-Gaussian noise, specifically impulse noise, achieving superior performance compared to existing methods.",
+        "tldr_zh": "该论文提出了一种即插即用图像恢复方法，使用扩散先验和迭代重加权最小二乘法来处理非高斯噪声，特别是脉冲噪声，与现有方法相比实现了更优越的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Image Restoration via Primal Dual Hybrid Gradient and Flow Generative Model",
+        "summary": "Regularized optimization has been a classical approach to solving imaging\ninverse problems, where the regularization term enforces desirable properties\nof the unknown image. Recently, the integration of flow matching generative\nmodels into image restoration has garnered significant attention, owing to\ntheir powerful prior modeling capabilities. In this work, we incorporate such\ngenerative priors into a Plug-and-Play (PnP) framework based on proximal\nsplitting, where the proximal operator associated with the regularizer is\nreplaced by a time-dependent denoiser derived from the generative model. While\nexisting PnP methods have achieved notable success in inverse problems with\nsmooth squared $\\ell_2$ data fidelity--typically associated with Gaussian\nnoise--their applicability to more general data fidelity terms remains\nunderexplored. To address this, we propose a general and efficient PnP\nalgorithm inspired by the primal-dual hybrid gradient (PDHG) method. Our\napproach is computationally efficient, memory-friendly, and accommodates a wide\nrange of fidelity terms. In particular, it supports both $\\ell_1$ and $\\ell_2$\nnorm-based losses, enabling robustness to non-Gaussian noise types such as\nPoisson and impulse noise. We validate our method on several image restoration\ntasks, including denoising, super-resolution, deblurring, and inpainting, and\ndemonstrate that $\\ell_1$ and $\\ell_2$ fidelity terms outperform the\nconventional squared $\\ell_2$ loss in the presence of non-Gaussian noise.",
+        "url": "http://arxiv.org/abs/2511.06748v1",
+        "published_date": "2025-11-10T06:26:36+00:00",
+        "updated_date": "2025-11-10T06:26:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ji Li",
+            "Chao Wang"
+        ],
+        "tldr": "This paper introduces a primal-dual hybrid gradient (PDHG)-based Plug-and-Play (PnP) algorithm incorporating flow matching generative models for image restoration, which is robust to non-Gaussian noise by supporting $\\ell_1$ and $\\ell_2$ fidelity terms.",
+        "tldr_zh": "本文提出了一种基于原始-对偶混合梯度 (PDHG) 的即插即用 (PnP) 算法，该算法结合了流动匹配生成模型用于图像恢复，并通过支持 $\\ell_1$ 和 $\\ell_2$ 逼真度项对非高斯噪声具有鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SinSEMI: A One-Shot Image Generation Model and Data-Efficient Evaluation Framework for Semiconductor Inspection Equipment",
+        "summary": "In the early stages of semiconductor equipment development, obtaining large\nquantities of raw optical images poses a significant challenge. This data\nscarcity hinder the advancement of AI-powered solutions in semiconductor\nmanufacturing. To address this challenge, we introduce SinSEMI, a novel\none-shot learning approach that generates diverse and highly realistic images\nfrom single optical image. SinSEMI employs a multi-scale flow-based model\nenhanced with LPIPS (Learned Perceptual Image Patch Similarity) energy guidance\nduring sampling, ensuring both perceptual realism and output variety. We also\nintroduce a comprehensive evaluation framework tailored for this application,\nwhich enables a thorough assessment using just two reference images. Through\nthe evaluation against multiple one-shot generation techniques, we demonstrate\nSinSEMI's superior performance in visual quality, quantitative measures, and\ndownstream tasks. Our experimental results demonstrate that SinSEMI-generated\nimages achieve both high fidelity and meaningful diversity, making them\nsuitable as training data for semiconductor AI applications.",
+        "url": "http://arxiv.org/abs/2511.06740v1",
+        "published_date": "2025-11-10T06:01:10+00:00",
+        "updated_date": "2025-11-10T06:01:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "ChunLiang Wu",
+            "Xiaochun Li"
+        ],
+        "tldr": "The paper introduces SinSEMI, a one-shot image generation model for semiconductor inspection using a multi-scale flow-based approach with LPIPS guidance, and a data-efficient evaluation framework, demonstrating superior performance compared to other one-shot methods.",
+        "tldr_zh": "该论文介绍了SinSEMI，一种用于半导体检测的单样本图像生成模型，它使用具有LPIPS引导的多尺度流动模型，以及一种数据高效的评估框架，证明其性能优于其他单样本方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VAEVQ: Enhancing Discrete Visual Tokenization through Variational Modeling",
+        "summary": "Vector quantization (VQ) transforms continuous image features into discrete\nrepresentations, providing compressed, tokenized inputs for generative models.\nHowever, VQ-based frameworks suffer from several issues, such as non-smooth\nlatent spaces, weak alignment between representations before and after\nquantization, and poor coherence between the continuous and discrete domains.\nThese issues lead to unstable codeword learning and underutilized codebooks,\nultimately degrading the performance of both reconstruction and downstream\ngeneration tasks. To this end, we propose VAEVQ, which comprises three key\ncomponents: (1) Variational Latent Quantization (VLQ), replacing the AE with a\nVAE for quantization to leverage its structured and smooth latent space,\nthereby facilitating more effective codeword activation; (2) Representation\nCoherence Strategy (RCS), adaptively modulating the alignment strength between\npre- and post-quantization features to enhance consistency and prevent\noverfitting to noise; and (3) Distribution Consistency Regularization (DCR),\naligning the entire codebook distribution with the continuous latent\ndistribution to improve utilization. Extensive experiments on two benchmark\ndatasets demonstrate that VAEVQ outperforms state-of-the-art methods.",
+        "url": "http://arxiv.org/abs/2511.06863v1",
+        "published_date": "2025-11-10T09:07:23+00:00",
+        "updated_date": "2025-11-10T09:07:23+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sicheng Yang",
+            "Xing Hu",
+            "Qiang Wu",
+            "Dawei Yang"
+        ],
+        "tldr": "The paper introduces VAEVQ, a method enhancing discrete visual tokenization using a Variational Autoencoder (VAE) framework and regularization techniques to improve codeword learning and codebook utilization, leading to state-of-the-art performance in image tasks.",
+        "tldr_zh": "该论文介绍了VAEVQ，一种通过使用变分自动编码器（VAE）框架和正则化技术来增强离散视觉标记化的方法，以提高码字学习和码本利用率，从而在图像任务中实现最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
