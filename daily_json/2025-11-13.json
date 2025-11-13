@@ -1,0 +1,122 @@
+[
+    {
+        "title": "From Structure to Detail: Hierarchical Distillation for Efficient Diffusion Model",
+        "summary": "The inference latency of diffusion models remains a critical barrier to their real-time application. While trajectory-based and distribution-based step distillation methods offer solutions, they present a fundamental trade-off. Trajectory-based methods preserve global structure but act as a \"lossy compressor\", sacrificing high-frequency details. Conversely, distribution-based methods can achieve higher fidelity but often suffer from mode collapse and unstable training. This paper recasts them from independent paradigms into synergistic components within our novel Hierarchical Distillation (HD) framework. We leverage trajectory distillation not as a final generator, but to establish a structural ``sketch\", providing a near-optimal initialization for the subsequent distribution-based refinement stage. This strategy yields an ideal initial distribution that enhances the ceiling of overall performance. To further improve quality, we introduce and refine the adversarial training process. We find standard discriminator structures are ineffective at refining an already high-quality generator. To overcome this, we introduce the Adaptive Weighted Discriminator (AWD), tailored for the HD pipeline. By dynamically allocating token weights, AWD focuses on local imperfections, enabling efficient detail refinement. Our approach demonstrates state-of-the-art performance across diverse tasks. On ImageNet $256\\times256$, our single-step model achieves an FID of 2.26, rivaling its 250-step teacher. It also achieves promising results on the high-resolution text-to-image MJHQ benchmark, proving its generalizability. Our method establishes a robust new paradigm for high-fidelity, single-step diffusion models.",
+        "url": "http://arxiv.org/abs/2511.08930v1",
+        "published_date": "2025-11-12T03:12:06+00:00",
+        "updated_date": "2025-11-13T01:18:51+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hanbo Cheng",
+            "Peng Wang",
+            "Kaixiang Lei",
+            "Qi Li",
+            "Zhen Zou",
+            "Pengfei Hu",
+            "Jun Du"
+        ],
+        "tldr": "This paper introduces Hierarchical Distillation (HD), a novel framework that combines trajectory and distribution distillation for efficient, high-fidelity, single-step diffusion models, achieving state-of-the-art results on image generation tasks.",
+        "tldr_zh": "本文提出了一种新颖的层级蒸馏（HD）框架，该框架结合了轨迹和分布蒸馏，以实现高效、高保真度的单步扩散模型，并在图像生成任务上取得了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FSampler: Training Free Acceleration of Diffusion Sampling via Epsilon Extrapolation",
+        "summary": "FSampler is a training free, sampler agnostic execution layer that accelerates diffusion sampling by reducing the number of function evaluations (NFE). FSampler maintains a short history of denoising signals (epsilon) from recent real model calls and extrapolates the next epsilon using finite difference predictors at second order, third order, or fourth order, falling back to lower order when history is insufficient. On selected steps the predicted epsilon substitutes the model call while keeping each sampler's update rule unchanged. Predicted epsilons are validated for finiteness and magnitude; a learning stabilizer rescales predictions on skipped steps to correct drift, and an optional gradient estimation stabilizer compensates local curvature. Protected windows, periodic anchors, and a cap on consecutive skips bound deviation over the trajectory. Operating at the sampler level, FSampler integrates with Euler/DDIM, DPM++ 2M/2S, LMS/AB2, and RES family exponential multistep methods and drops into standard workflows. FLUX.1 dev, Qwen Image, and Wan 2.2, FSampler reduces time by 8 to 22% and model calls by 15 to 25% at high fidelity (Structural Similarity Index (SSIM) 0.95 to 0.99), without altering sampler formulas. With an aggressive adaptive gate, reductions can reach 45 to 50% fewer model calls at lower fidelity (SSIM 0.73 to 0.74).",
+        "url": "http://arxiv.org/abs/2511.09180v1",
+        "published_date": "2025-11-12T10:21:25+00:00",
+        "updated_date": "2025-11-13T01:37:49+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Michael A. Vladimir"
+        ],
+        "tldr": "FSampler is a training-free method that accelerates diffusion sampling by extrapolating denoising signals, achieving significant reductions in computation time and model calls while maintaining high image fidelity.",
+        "tldr_zh": "FSampler是一种无需训练的方法，通过外推去噪信号来加速扩散采样，在保持高图像质量的同时，显著减少计算时间和模型调用次数。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Rethinking generative image pretraining: How far are we from scaling up next-pixel prediction?",
+        "summary": "This paper investigates the scaling properties of autoregressive next-pixel prediction, a simple, end-to-end yet under-explored framework for unified vision models. Starting with images at resolutions of 32x32, we train a family of Transformers using IsoFlops profiles across compute budgets up to 7e19 FLOPs and evaluate three distinct target metrics: next-pixel prediction objective, ImageNet classification accuracy, and generation quality measured by Fr'echet Distance. First, optimal scaling strategy is critically task-dependent. At a fixed 32x32 resolution alone, the optimal scaling properties for image classification and image generation diverge, where generation optimal setup requires the data size grow three to five times faster than for the classification optimal setup. Second, as image resolution increases, the optimal scaling strategy indicates that the model size must grow much faster than data size. Surprisingly, by projecting our findings, we discover that the primary bottleneck is compute rather than the amount of training data. As compute continues to grow four to five times annually, we forecast the feasibility of pixel-by-pixel modeling of images within the next five years.",
+        "url": "http://arxiv.org/abs/2511.08704v1",
+        "published_date": "2025-11-11T19:11:02+00:00",
+        "updated_date": "2025-11-13T01:02:57+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Xinchen Yan",
+            "Chen Liang",
+            "Lijun Yu",
+            "Adams Wei Yu",
+            "Yifeng Lu",
+            "Quoc V. Le"
+        ],
+        "tldr": "This paper explores the scaling properties of next-pixel prediction for unified vision models, finding that optimal scaling strategies depend on the task and image resolution, and that compute will likely be the limiting factor in scaling up this approach.",
+        "tldr_zh": "本文探讨了用于统一视觉模型的下一像素预测的缩放特性，发现最佳缩放策略取决于任务和图像分辨率，并且计算能力可能是扩展这种方法的主要限制因素。",
+        "relevance_score": 7,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Augment to Augment: Diverse Augmentations Enable Competitive Ultra-Low-Field MRI Enhancement",
+        "summary": "Ultra-low-field (ULF) MRI promises broader accessibility but suffers from low signal-to-noise ratio (SNR), reduced spatial resolution, and contrasts that deviate from high-field standards. Imageto- image translation can map ULF images to a high-field appearance, yet efficacy is limited by scarce paired training data. Working within the ULF-EnC challenge constraints (50 paired 3D volumes; no external data), we study how task-adapted data augmentations impact a standard deep model for ULF image enhancement. We show that strong, diverse augmentations, including auxiliary tasks on high-field data, substantially improve fidelity. Our submission ranked third by brain-masked SSIM on the public validation leaderboard and fourth by the official score on the final test leaderboard. Code is available at https://github.com/fzimmermann89/low-field-enhancement.",
+        "url": "http://arxiv.org/abs/2511.09366v1",
+        "published_date": "2025-11-12T14:27:08+00:00",
+        "updated_date": "2025-11-13T01:49:41+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV",
+            "physics.med-ph"
+        ],
+        "authors": [
+            "Felix F Zimmermann"
+        ],
+        "tldr": "This paper explores the use of strong and diverse data augmentations, including auxiliary tasks using high-field data, to improve the fidelity of ULF MRI image enhancement, achieving competitive results in the ULF-EnC challenge.",
+        "tldr_zh": "本文探讨了使用强大的、多样化的数据增强方法，包括使用高场数据的辅助任务，以提高ULF MRI图像增强的保真度，并在ULF-EnC挑战赛中取得了有竞争力的结果。",
+        "relevance_score": 7,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "FGM-HD: Boosting Generation Diversity of Fractal Generative Models through Hausdorff Dimension Induction",
+        "summary": "Improving the diversity of generated results while maintaining high visual quality remains a significant challenge in image generation tasks. Fractal Generative Models (FGMs) are efficient in generating high-quality images, but their inherent self-similarity limits the diversity of output images. To address this issue, we propose a novel approach based on the Hausdorff Dimension (HD), a widely recognized concept in fractal geometry used to quantify structural complexity, which aids in enhancing the diversity of generated outputs. To incorporate HD into FGM, we propose a learnable HD estimation method that predicts HD directly from image embeddings, addressing computational cost concerns. However, simply introducing HD into a hybrid loss is insufficient to enhance diversity in FGMs due to: 1) degradation of image quality, and 2) limited improvement in generation diversity. To this end, during training, we adopt an HD-based loss with a monotonic momentum-driven scheduling strategy to progressively optimize the hyperparameters, obtaining optimal diversity without sacrificing visual quality. Moreover, during inference, we employ HD-guided rejection sampling to select geometrically richer outputs. Extensive experiments on the ImageNet dataset demonstrate that our FGM-HD framework yields a 39\\% improvement in output diversity compared to vanilla FGMs, while preserving comparable image quality. To our knowledge, this is the very first work introducing HD into FGM. Our method effectively enhances the diversity of generated outputs while offering a principled theoretical contribution to FGM development.",
+        "url": "http://arxiv.org/abs/2511.08945v1",
+        "published_date": "2025-11-12T03:45:15+00:00",
+        "updated_date": "2025-11-13T01:20:28+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Haowei Zhang",
+            "Yuanpei Zhao",
+            "Jizhe Zhou",
+            "Mao Li"
+        ],
+        "tldr": "The paper introduces a novel method, FGM-HD, to improve the diversity of images generated by Fractal Generative Models (FGMs) by incorporating Hausdorff Dimension (HD) and using HD-guided rejection sampling during inference, showing a 39% improvement in diversity while maintaining image quality.",
+        "tldr_zh": "该论文介绍了一种名为FGM-HD的新方法，通过引入Hausdorff维度（HD）并在推理过程中使用HD引导的拒绝采样，来提高分形生成模型（FGM）生成的图像的多样性，在保持图像质量的同时，多样性提高了39%。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
