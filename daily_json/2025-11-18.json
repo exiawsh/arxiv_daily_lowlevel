@@ -1,0 +1,192 @@
+[
+    {
+        "title": "HDW-SR: High-Frequency Guided Diffusion Model based on Wavelet Decomposition for Image Super-Resolution",
+        "summary": "Diffusion-based methods have shown great promise in single image super-resolution (SISR); however, existing approaches often produce blurred fine details due to insufficient guidance in the high-frequency domain. To address this issue, we propose a High-Frequency Guided Diffusion Network based on Wavelet Decomposition (HDW-SR), which replaces the conventional U-Net backbone in diffusion frameworks. Specifically, we perform diffusion only on the residual map, allowing the network to focus more effectively on high-frequency information restoration. We then introduce wavelet-based downsampling in place of standard CNN downsampling to achieve multi-scale frequency decomposition, enabling sparse cross-attention between the high-frequency subbands of the pre-super-resolved image and the low-frequency subbands of the diffused image for explicit high-frequency guidance. Moreover, a Dynamic Thresholding Block (DTB) is designed to refine high-frequency selection during the sparse attention process. During upsampling, the invertibility of the wavelet transform ensures low-loss feature reconstruction. Experiments on both synthetic and real-world datasets demonstrate that HDW-SR achieves competitive super-resolution performance, excelling particularly in recovering fine-grained image details. The code will be available after acceptance.",
+        "url": "http://arxiv.org/abs/2511.13175v1",
+        "published_date": "2025-11-17T09:25:26+00:00",
+        "updated_date": "2025-11-17T09:25:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chao Yang",
+            "Boqian Zhang",
+            "Jinghao Xu",
+            "Guang Jiang"
+        ],
+        "tldr": "This paper proposes a wavelet decomposition-based diffusion model (HDW-SR) for image super-resolution, focusing on restoring high-frequency details by guiding the diffusion process with wavelet subbands and sparse cross-attention.",
+        "tldr_zh": "该论文提出了一种基于小波分解的扩散模型（HDW-SR）用于图像超分辨率，侧重于通过小波子带和稀疏交叉注意力引导扩散过程，从而恢复高频细节。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "VVS: Accelerating Speculative Decoding for Visual Autoregressive Generation via Partial Verification Skipping",
+        "summary": "Visual autoregressive (AR) generation models have demonstrated strong potential for image generation, yet their next-token-prediction paradigm introduces considerable inference latency. Although speculative decoding (SD) has been proven effective for accelerating visual AR models, its \"draft one step, then verify one step\" paradigm prevents a direct reduction of the forward passes, thus restricting acceleration potential. Motivated by the visual token interchangeability, we for the first time to explore verification skipping in the SD process of visual AR model generation to explicitly cut the number of target model forward passes, thereby reducing inference latency. Based on an analysis of the drafting stage's characteristics, we observe that verification redundancy and stale feature reusability are key factors to retain generation quality and speedup for verification-free steps. Inspired by these two observations, we propose a novel SD framework VVS to accelerate visual AR generation via partial verification skipping, which integrates three complementary modules: (1) a verification-free token selector with dynamical truncation, (2) token-level feature caching and reuse, and (3) fine-grained skipped step scheduling. Consequently, VVS reduces the number of target model forward passes by a factor of $2.8\\times$ relative to vanilla AR decoding while maintaining competitive generation quality, offering a superior speed-quality trade-off over conventional SD frameworks and revealing strong potential to reshape the SD paradigm.",
+        "url": "http://arxiv.org/abs/2511.13587v1",
+        "published_date": "2025-11-17T16:50:58+00:00",
+        "updated_date": "2025-11-17T16:50:58+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Haotian Dong",
+            "Ye Li",
+            "Rongwei Lu",
+            "Chen Tang",
+            "Shu-Tao Xia",
+            "Zhi Wang"
+        ],
+        "tldr": "The paper introduces VVS, a novel speculative decoding framework for visual autoregressive generation that accelerates inference by selectively skipping verification steps, achieving a 2.8x speedup while maintaining competitive generation quality.",
+        "tldr_zh": "该论文介绍了一种名为VVS的新型推测解码框架，用于视觉自回归生成，通过选择性地跳过验证步骤来加速推理，在保持竞争性生成质量的同时实现了2.8倍的加速。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning Implicit Neural Degradation Representation for Unpaired Image Dehazing",
+        "summary": "Image dehazing is an important task in the field of computer vision, aiming at restoring clear and detail-rich visual content from haze-affected images. However, when dealing with complex scenes, existing methods often struggle to strike a balance between fine-grained feature representation of inhomogeneous haze distribution and global consistency modeling. Furthermore, to better learn the common degenerate representation of haze in spatial variations, we propose an unsupervised dehaze method for implicit neural degradation representation. Firstly, inspired by the Kolmogorov-Arnold representation theorem, we propose a mechanism combining the channel-independent and channel-dependent mechanisms, which efficiently enhances the ability to learn from nonlinear dependencies. which in turn achieves good visual perception in complex scenes. Moreover, we design an implicit neural representation to model haze degradation as a continuous function to eliminate redundant information and the dependence on explicit feature extraction and physical models. To further learn the implicit representation of the haze features, we also designed a dense residual enhancement module from it to eliminate redundant information. This achieves high-quality image restoration. Experimental results show that our method achieves competitive dehaze performance on various public and real-world datasets. This project code will be available at https://github.com/Fan-pixel/NeDR-Dehaze.",
+        "url": "http://arxiv.org/abs/2511.13110v1",
+        "published_date": "2025-11-17T08:07:48+00:00",
+        "updated_date": "2025-11-17T08:07:48+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuaibin Fan",
+            "Senming Zhong",
+            "Wenchao Yan",
+            "Minglong Xue"
+        ],
+        "tldr": "This paper introduces an unsupervised image dehazing method using implicit neural representation to model haze degradation as a continuous function, achieving competitive performance on various datasets.",
+        "tldr_zh": "本文提出了一种基于隐式神经表达的无监督图像去雾方法，将雾霾退化建模为连续函数，并在各种数据集上取得了有竞争力的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Low-Level Dataset Distillation for Medical Image Enhancement",
+        "summary": "Medical image enhancement is clinically valuable, but existing methods require large-scale datasets to learn complex pixel-level mappings. However, the substantial training and storage costs associated with these datasets hinder their practical deployment. While dataset distillation (DD) can alleviate these burdens, existing methods mainly target high-level tasks, where multiple samples share the same label. This many-to-one mapping allows distilled data to capture shared semantics and achieve information compression. In contrast, low-level tasks involve a many-to-many mapping that requires pixel-level fidelity, making low-level DD an underdetermined problem, as a small distilled dataset cannot fully constrain the dense pixel-level mappings. To address this, we propose the first low-level DD method for medical image enhancement. We first leverage anatomical similarities across patients to construct the shared anatomical prior based on a representative patient, which serves as the initialization for the distilled data of different patients. This prior is then personalized for each patient using a Structure-Preserving Personalized Generation (SPG) module, which integrates patient-specific anatomical information into the distilled dataset while preserving pixel-level fidelity. For different low-level tasks, the distilled data is used to construct task-specific high- and low-quality training pairs. Patient-specific knowledge is injected into the distilled data by aligning the gradients computed from networks trained on the distilled pairs with those from the corresponding patient's raw data. Notably, downstream users cannot access raw patient data. Instead, only a distilled dataset containing abstract training information is shared, which excludes patient-specific details and thus preserves privacy.",
+        "url": "http://arxiv.org/abs/2511.13106v1",
+        "published_date": "2025-11-17T08:05:07+00:00",
+        "updated_date": "2025-11-17T08:05:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Fengzhi Xu",
+            "Ziyuan Yang",
+            "Mengyu Sun",
+            "Joey Tianyi Zhou",
+            "Yi Zhang"
+        ],
+        "tldr": "This paper introduces a novel low-level dataset distillation method for medical image enhancement that leverages anatomical priors and a structure-preserving personalized generation module to create compact, privacy-preserving datasets.",
+        "tldr_zh": "本文提出了一种用于医学图像增强的新型低级数据集蒸馏方法，该方法利用解剖先验和结构保持的个性化生成模块来创建紧凑的、保护隐私的数据集。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Functional Mean Flow in Hilbert Space",
+        "summary": "We present Functional Mean Flow (FMF) as a one-step generative model defined in infinite-dimensional Hilbert space. FMF extends the one-step Mean Flow framework to functional domains by providing a theoretical formulation for Functional Flow Matching and a practical implementation for efficient training and sampling. We also introduce an $x_1$-prediction variant that improves stability over the original $u$-prediction form. The resulting framework is a practical one-step Flow Matching method applicable to a wide range of functional data generation tasks such as time series, images, PDEs, and 3D geometry.",
+        "url": "http://arxiv.org/abs/2511.12898v1",
+        "published_date": "2025-11-17T02:38:28+00:00",
+        "updated_date": "2025-11-17T02:38:28+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhiqi Li",
+            "Yuchen Sun",
+            "Greg Turk",
+            "Bo Zhu"
+        ],
+        "tldr": "The paper introduces Functional Mean Flow (FMF), a one-step generative model in Hilbert space, extending Mean Flow to functional domains. It proposes a stable $x_1$-prediction variant applicable to various functional data generation tasks.",
+        "tldr_zh": "该论文介绍了功能均值流（FMF），一种在希尔伯特空间中的单步生成模型，将均值流扩展到功能域。它提出了一种稳定的$x_1$预测变体，适用于各种功能数据生成任务。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "ActVAR: Activating Mixtures of Weights and Tokens for Efficient Visual Autoregressive Generation",
+        "summary": "Visual Autoregressive (VAR) models enable efficient image generation via next-scale prediction but face escalating computational costs as sequence length grows. Existing static pruning methods degrade performance by permanently removing weights or tokens, disrupting pretrained dependencies. To address this, we propose ActVAR, a dynamic activation framework that introduces dual sparsity across model weights and token sequences to enhance efficiency without sacrificing capacity. ActVAR decomposes feedforward networks (FFNs) into lightweight expert sub-networks and employs a learnable router to dynamically select token-specific expert subsets based on content. Simultaneously, a gated token selector identifies high-update-potential tokens for computation while reconstructing unselected tokens to preserve global context and sequence alignment. Training employs a two-stage knowledge distillation strategy, where the original VAR model supervises the learning of routing and gating policies to align with pretrained knowledge. Experiments on the ImageNet $256\\times 256$ benchmark demonstrate that ActVAR achieves up to $21.2\\%$ FLOPs reduction with minimal performance degradation.",
+        "url": "http://arxiv.org/abs/2511.12893v1",
+        "published_date": "2025-11-17T02:28:06+00:00",
+        "updated_date": "2025-11-17T02:28:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kaixin Zhang",
+            "Ruiqing Yang",
+            "Yuan Zhang",
+            "Shan You",
+            "Tao Huang"
+        ],
+        "tldr": "ActVAR introduces a dynamic activation framework for visual autoregressive models, achieving FLOPs reduction by selectively activating weights and tokens, while preserving performance through knowledge distillation.",
+        "tldr_zh": "ActVAR 提出了一种用于视觉自回归模型的动态激活框架，通过选择性地激活权重和token来减少 FLOPs，并通过知识蒸馏保持性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "BrainNormalizer: Anatomy-Informed Pseudo-Healthy Brain Reconstruction from Tumor MRI via Edge-Guided ControlNet",
+        "summary": "Brain tumors are among the most clinically significant neurological diseases and remain a major cause of morbidity and mortality due to their aggressive growth and structural heterogeneity. As tumors expand, they induce substantial anatomical deformation that disrupts both local tissue organization and global brain architecture, complicating diagnosis, treatment planning, and surgical navigation. Yet a subject-specific reference of how the brain would appear without tumor-induced changes is fundamentally unobtainable in clinical practice. We present BrainNormalizer, an anatomy-informed diffusion framework that reconstructs pseudo-healthy MRIs directly from tumorous scans by conditioning the generative process on boundary cues extracted from the subject's own anatomy. This boundary-guided conditioning enables anatomically plausible pseudo-healthy reconstruction without requiring paired non-tumorous and tumorous scans. BrainNormalizer employs a two-stage training strategy. The pretrained diffusion model is first adapted through inpainting-based fine-tuning on tumorous and non-tumorous scans. Next, an edge-map-guided ControlNet branch is trained to inject fine-grained anatomical contours into the frozen decoder while preserving learned priors. During inference, a deliberate misalignment strategy pairs tumorous inputs with non-tumorous prompts and mirrored contralateral edge maps, leveraging hemispheric correspondence to guide reconstruction. On the BraTS2020 dataset, BrainNormalizer achieves strong quantitative performance and qualitatively produces anatomically plausible reconstructions in tumor-affected regions while retaining overall structural coherence. BrainNormalizer provides clinically reliable anatomical references for treatment planning and supports new research directions in counterfactual modeling and tumor-induced deformation analysis.",
+        "url": "http://arxiv.org/abs/2511.12853v1",
+        "published_date": "2025-11-17T00:48:30+00:00",
+        "updated_date": "2025-11-17T00:48:30+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Min Gu Kwak",
+            "Yeonju Lee",
+            "Hairong Wang",
+            "Jing Li"
+        ],
+        "tldr": "BrainNormalizer is a diffusion-based framework that reconstructs pseudo-healthy brain MRIs from tumorous scans using boundary cues from the subject's anatomy, offering a reference for treatment planning and tumor analysis.",
+        "tldr_zh": "BrainNormalizer是一个基于扩散的框架，它使用来自受试者解剖结构的边界线索，从肿瘤扫描中重建伪健康脑部MRI，为治疗计划和肿瘤分析提供参考。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Improving the Generalisation of Learned Reconstruction Frameworks",
+        "summary": "Ensuring proper generalization is a critical challenge in applying data-driven methods for solving inverse problems in imaging, as neural networks reconstructing an image must perform well across varied datasets and acquisition geometries. In X-ray Computed Tomography (CT), convolutional neural networks (CNNs) are widely used to filter the projection data but are ill-suited for this task as they apply grid-based convolutions to the sinogram, which inherently lies on a line manifold, not a regular grid. The CNNs, unaware of the geometry, are implicitly tied to it and require an excessive amount of parameters as they must infer the relations between measurements from the data rather than from prior information.\n  The contribution of this paper is twofold. First, we introduce a graph data structure to represent CT acquisition geometries and tomographic data, providing a detailed explanation of the graph's structure for circular, cone-beam geometries. Second, we propose GLM, a hybrid neural network architecture that leverages both graph and grid convolutions to process tomographic data.\n  We demonstrate that GLM outperforms CNNs when performance is quantified in terms of structural similarity and peak signal-to-noise ratio, despite the fact that GLM uses only a fraction of the trainable parameters. Compared to CNNs, GLM also requires significantly less training time and memory, and its memory requirements scale better. Crucially, GLM demonstrates robust generalization to unseen variations in the acquisition geometry, like when training only on fully sampled CT data and then testing on sparse-view CT data.",
+        "url": "http://arxiv.org/abs/2511.12730v1",
+        "published_date": "2025-11-16T18:57:13+00:00",
+        "updated_date": "2025-11-16T18:57:13+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "authors": [
+            "Emilien Valat",
+            "Ozan Öktem"
+        ],
+        "tldr": "This paper introduces a graph-based neural network (GLM) for CT image reconstruction that generalizes better to unseen acquisition geometries compared to CNNs, while using fewer parameters and less training time.",
+        "tldr_zh": "本文介绍了一种基于图神经网络（GLM）的CT图像重建方法，与卷积神经网络相比，该方法能更好地推广到未知的采集几何结构，同时使用更少的参数和更短的训练时间。",
+        "relevance_score": 5,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 6
+    }
+]
