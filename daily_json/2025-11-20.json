@@ -1,0 +1,172 @@
+[
+    {
+        "title": "Learning to Expand Images for Efficient Visual Autoregressive Modeling",
+        "summary": "Autoregressive models have recently shown great promise in visual generation by leveraging discrete token sequences akin to language modeling. However, existing approaches often suffer from inefficiency, either due to token-by-token decoding or the complexity of multi-scale representations. In this work, we introduce Expanding Autoregressive Representation (EAR), a novel generation paradigm that emulates the human visual system's center-outward perception pattern. EAR unfolds image tokens in a spiral order from the center and progressively expands outward, preserving spatial continuity and enabling efficient parallel decoding. To further enhance flexibility and speed, we propose a length-adaptive decoding strategy that dynamically adjusts the number of tokens predicted at each step. This biologically inspired design not only reduces computational cost but also improves generation quality by aligning the generation order with perceptual relevance. Extensive experiments on ImageNet demonstrate that EAR achieves state-of-the-art trade-offs between fidelity and efficiency on single-scale autoregressive models, setting a new direction for scalable and cognitively aligned autoregressive image generation.",
+        "url": "http://arxiv.org/abs/2511.15499v1",
+        "published_date": "2025-11-19T14:55:07+00:00",
+        "updated_date": "2025-11-19T14:55:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ruiqing Yang",
+            "Kaixin Zhang",
+            "Zheng Zhang",
+            "Shan You",
+            "Tao Huang"
+        ],
+        "tldr": "This paper introduces a novel autoregressive image generation method, EAR, which uses a center-outward spiral decoding order and length-adaptive decoding to improve efficiency and fidelity. It shows state-of-the-art performance on ImageNet.",
+        "tldr_zh": "该论文介绍了一种新的自回归图像生成方法，EAR，它采用中心向外的螺旋解码顺序和长度自适应解码，以提高效率和保真度。它在ImageNet上展示了最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SplitFlux: Learning to Decouple Content and Style from a Single Image",
+        "summary": "Disentangling image content and style is essential for customized image generation. Existing SDXL-based methods struggle to achieve high-quality results, while the recently proposed Flux model fails to achieve effective content-style separation due to its underexplored characteristics. To address these challenges, we conduct a systematic analysis of Flux and make two key observations: (1) Single Dream Blocks are essential for image generation; and (2) Early single stream blocks mainly control content, whereas later blocks govern style. Based on these insights, we propose SplitFlux, which disentangles content and style by fine-tuning the single dream blocks via LoRA, enabling the disentangled content to be re-embedded into new contexts. It includes two key components: (1) Rank-Constrained Adaptation. To preserve content identity and structure, we compress the rank and amplify the magnitude of updates within specific blocks, preventing content leakage into style blocks. (2) Visual-Gated LoRA. We split the content LoRA into two branches with different ranks, guided by image saliency. The high-rank branch preserves primary subject information, while the low-rank branch encodes residual details, mitigating content overfitting and enabling seamless re-embedding. Extensive experiments demonstrate that SplitFlux consistently outperforms state-of-the-art methods, achieving superior content preservation and stylization quality across diverse scenarios.",
+        "url": "http://arxiv.org/abs/2511.15258v1",
+        "published_date": "2025-11-19T09:22:24+00:00",
+        "updated_date": "2025-11-19T09:22:24+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yitong Yang",
+            "Yinglin Wang",
+            "Changshuo Wang",
+            "Yongjun Zhang",
+            "Ziyang Chen",
+            "Shuting He"
+        ],
+        "tldr": "The paper introduces SplitFlux, a method for disentangling content and style in images using a modified Flux model with LoRA, demonstrating improved content preservation and stylization compared to existing methods.",
+        "tldr_zh": "该论文介绍了SplitFlux，一种使用改进的Flux模型和LoRA来分离图像内容和风格的方法，与现有方法相比，展示了更好的内容保留和风格化效果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Hyperspectral Super-Resolution with Inter-Image Variability via Degradation-based Low-Rank and Residual Fusion Method",
+        "summary": "The fusion of hyperspectral image (HSI) with multispectral image (MSI) provides an effective way to enhance the spatial resolution of HSI. However, due to different acquisition conditions, there may exist spectral variability and spatially localized changes between HSI and MSI, referred to as inter-image variability, which can significantly affect the fusion performance. Existing methods typically handle inter-image variability by applying direct transformations to the images themselves, which can exacerbate the ill-posedness of the fusion model. To address this challenge, we propose a Degradation-based Low-Rank and Residual Fusion (DLRRF) model. First, we model the spectral variability as change in the spectral degradation operator. Second, to recover the lost spatial details caused by spatially localized changes, we decompose the target HSI into low rank and residual components, where the latter is used to capture the lost details. By exploiting the spectral correlation within the images, we perform dimensionality reduction on both components. Additionally, we introduce an implicit regularizer to utilize the spatial prior information from the images. The proposed DLRRF model is solved using the Proximal Alternating Optimization (PAO) algorithm within a Plug-and-Play (PnP) framework, where the subproblem regarding implicit regularizer is addressed by an external denoiser. We further provide a comprehensive convergence analysis of the algorithm. Finally, extensive numerical experiments demonstrate that DLRRF achieves superior performance in fusing HSI and MSI with inter-image variability.",
+        "url": "http://arxiv.org/abs/2511.15052v1",
+        "published_date": "2025-11-19T02:45:31+00:00",
+        "updated_date": "2025-11-19T02:45:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yue Wen",
+            "Kunjing Yang",
+            "Minru Bai"
+        ],
+        "tldr": "This paper introduces a Degradation-based Low-Rank and Residual Fusion (DLRRF) model for hyperspectral super-resolution that addresses spectral and spatial variability between HSI and MSI images, showing superior performance in numerical experiments.",
+        "tldr_zh": "该论文提出了一种基于降解的低秩和残差融合（DLRRF）模型，用于高光谱超分辨率，解决了HSI和MSI图像之间的光谱和空间变异性问题，并在数值实验中表现出优越的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UniGen-1.5: Enhancing Image Generation and Editing through Reward Unification in Reinforcement Learning",
+        "summary": "We present UniGen-1.5, a unified multimodal large language model (MLLM) for advanced image understanding, generation and editing. Building upon UniGen, we comprehensively enhance the model architecture and training pipeline to strengthen the image understanding and generation capabilities while unlocking strong image editing ability. Especially, we propose a unified Reinforcement Learning (RL) strategy that improves both image generation and image editing jointly via shared reward models. To further enhance image editing performance, we propose a light Edit Instruction Alignment stage that significantly improves the editing instruction comprehension that is essential for the success of the RL training. Experimental results show that UniGen-1.5 demonstrates competitive understanding and generation performance. Specifically, UniGen-1.5 achieves 0.89 and 4.31 overall scores on GenEval and ImgEdit that surpass the state-of-the-art models such as BAGEL and reaching performance comparable to proprietary models such as GPT-Image-1.",
+        "url": "http://arxiv.org/abs/2511.14760v1",
+        "published_date": "2025-11-18T18:59:30+00:00",
+        "updated_date": "2025-11-18T18:59:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Rui Tian",
+            "Mingfei Gao",
+            "Haiming Gang",
+            "Jiasen Lu",
+            "Zhe Gan",
+            "Yinfei Yang",
+            "Zuxuan Wu",
+            "Afshin Dehghan"
+        ],
+        "tldr": "UniGen-1.5 is a unified MLLM that improves image understanding, generation, and editing by using a unified reinforcement learning strategy and an edit instruction alignment stage, achieving performance comparable to state-of-the-art models.",
+        "tldr_zh": "UniGen-1.5是一个统一的多模态大语言模型，通过统一的强化学习策略和编辑指令对齐阶段改进了图像理解、生成和编辑，实现了与最先进模型相当的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Zero-shot Synthetic Video Realism Enhancement via Structure-aware Denoising",
+        "summary": "We propose an approach to enhancing synthetic video realism, which can re-render synthetic videos from a simulator in photorealistic fashion. Our realism enhancement approach is a zero-shot framework that focuses on preserving the multi-level structures from synthetic videos into the enhanced one in both spatial and temporal domains, built upon a diffusion video foundational model without further fine-tuning. Specifically, we incorporate an effective modification to have the generation/denoising process conditioned on estimated structure-aware information from the synthetic video, such as depth maps, semantic maps, and edge maps, by an auxiliary model, rather than extracting the information from a simulator. This guidance ensures that the enhanced videos are consistent with the original synthetic video at both the structural and semantic levels. Our approach is a simple yet general and powerful approach to enhancing synthetic video realism: we show that our approach outperforms existing baselines in structural consistency with the original video while maintaining state-of-the-art photorealism quality in our experiments.",
+        "url": "http://arxiv.org/abs/2511.14719v1",
+        "published_date": "2025-11-18T18:06:29+00:00",
+        "updated_date": "2025-11-18T18:06:29+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yifan Wang",
+            "Liya Ji",
+            "Zhanghan Ke",
+            "Harry Yang",
+            "Ser-Nam Lim",
+            "Qifeng Chen"
+        ],
+        "tldr": "This paper presents a zero-shot approach to enhance synthetic video realism by conditioning a diffusion model on structure-aware information extracted from the synthetic video, ensuring consistency while achieving photorealism.",
+        "tldr_zh": "该论文提出了一种零样本方法，通过将扩散模型与从合成视频中提取的结构感知信息相结合来增强合成视频的真实感，在实现照片级真实感的同时确保一致性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "HULFSynth : An INR based Super-Resolution and Ultra Low-Field MRI Synthesis via Contrast factor estimation",
+        "summary": "We present an unsupervised single image bidirectional Magnetic Resonance Image (MRI) synthesizer that synthesizes an Ultra-Low Field (ULF) like image from a High-Field (HF) magnitude image and vice-versa. Unlike existing MRI synthesis models, our approach is inspired by the physics that drives contrast changes between HF and ULF MRIs. Our forward model simulates a HF to ULF transformation by estimating the tissue-type Signal-to-Noise ratio (SNR) values based on target contrast values. For the Super-Resolution task, we used an Implicit Neural Representation (INR) network to synthesize HF image by simultaneously predicting tissue-type segmentations and image intensity without observed HF data. The proposed method is evaluated using synthetic ULF-like data from generated from standard 3T T$_1$-weighted images for qualitative assessments and paired 3T-64mT T$_1$-weighted images for validation experiments. WM-GM contrast improved by 52% in synthetic ULF-like images and 37% in 64mT images. Sensitivity experiments demonstrated the robustness of our forward model to variations in target contrast, noise and initial seeding.",
+        "url": "http://arxiv.org/abs/2511.14897v1",
+        "published_date": "2025-11-18T20:36:24+00:00",
+        "updated_date": "2025-11-18T20:36:24+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Pranav Indrakanti",
+            "Ivor Simpson"
+        ],
+        "tldr": "This paper introduces an unsupervised method, HULFSynth, for bidirectional MRI synthesis between high-field and ultra-low-field images, incorporating physics-inspired contrast factor estimation and implicit neural representations for super-resolution.",
+        "tldr_zh": "本文介绍了一种无监督方法HULFSynth，用于高场和超低场MRI图像之间的双向合成，该方法结合了受物理启发的对比度因子估计和用于超分辨率的隐式神经表示。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Image Denoising Using Transformed L1 (TL1) Regularization via ADMM",
+        "summary": "Total variation (TV) regularization is a classical tool for image denoising, but its convex $\\ell_1$ formulation often leads to staircase artifacts and loss of contrast. To address these issues, we introduce the Transformed $\\ell_1$ (TL1) regularizer applied to image gradients. In particular, we develop a TL1-regularized denoising model and solve it using the Alternating Direction Method of Multipliers (ADMM), featuring a closed-form TL1 proximal operator and an FFT-based image update under periodic boundary conditions. Experimental results demonstrate that our approach achieves superior denoising performance, effectively suppressing noise while preserving edges and enhancing image contrast.",
+        "url": "http://arxiv.org/abs/2511.15060v1",
+        "published_date": "2025-11-19T03:06:03+00:00",
+        "updated_date": "2025-11-19T03:06:03+00:00",
+        "categories": [
+            "eess.IV",
+            "cs.CV",
+            "math.OC"
+        ],
+        "authors": [
+            "Nabiha Choudhury",
+            "Jianqing Jia",
+            "Yifei Lou"
+        ],
+        "tldr": "This paper introduces a Transformed L1 (TL1) regularization method for image denoising, solved using ADMM, claiming to improve denoising performance by reducing staircase artifacts and enhancing contrast compared to traditional Total Variation methods.",
+        "tldr_zh": "本文提出了一种用于图像去噪的变换L1 (TL1)正则化方法，使用ADMM求解。该方法声称与传统的全变分方法相比，能够通过减少阶梯伪影和增强对比度来提高去噪性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 6,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 6
+    }
+]
