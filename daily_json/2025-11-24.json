@@ -1,0 +1,230 @@
+[
+    {
+        "title": "NAF: Zero-Shot Feature Upsampling via Neighborhood Attention Filtering",
+        "summary": "Vision Foundation Models (VFMs) extract spatially downsampled representations, posing challenges for pixel-level tasks. Existing upsampling approaches face a fundamental trade-off: classical filters are fast and broadly applicable but rely on fixed forms, while modern upsamplers achieve superior accuracy through learnable, VFM-specific forms at the cost of retraining for each VFM. We introduce Neighborhood Attention Filtering (NAF), which bridges this gap by learning adaptive spatial-and-content weights through Cross-Scale Neighborhood Attention and Rotary Position Embeddings (RoPE), guided solely by the high-resolution input image. NAF operates zero-shot: it upsamples features from any VFM without retraining, making it the first VFM-agnostic architecture to outperform VFM-specific upsamplers and achieve state-of-the-art performance across multiple downstream tasks. It maintains high efficiency, scaling to 2K feature maps and reconstructing intermediate-resolution maps at 18 FPS. Beyond feature upsampling, NAF demonstrates strong performance on image restoration, highlighting its versatility. Code and checkpoints are available at https://github.com/valeoai/NAF.",
+        "url": "http://arxiv.org/abs/2511.18452v1",
+        "published_date": "2025-11-23T13:43:52+00:00",
+        "updated_date": "2025-11-23T13:43:52+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Loick Chambon",
+            "Paul Couairon",
+            "Eloi Zablocki",
+            "Alexandre Boulch",
+            "Nicolas Thome",
+            "Matthieu Cord"
+        ],
+        "tldr": "This paper introduces Neighborhood Attention Filtering (NAF), a zero-shot feature upsampling method applicable to various Vision Foundation Models (VFMs) without retraining, achieving state-of-the-art performance and high efficiency.",
+        "tldr_zh": "本文介绍了一种名为邻域注意力滤波（NAF）的零样本特征上采样方法，该方法适用于各种视觉基础模型（VFM）而无需重新训练，实现了最先进的性能和高效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Robust Posterior Diffusion-based Sampling via Adaptive Guidance Scale",
+        "summary": "Diffusion models have recently emerged as powerful generative priors for solving inverse problems, achieving state-of-the-art results across various imaging tasks. A central challenge in this setting lies in balancing the contribution of the prior with the data fidelity term: overly aggressive likelihood updates may introduce artifacts, while conservative updates can slow convergence or yield suboptimal reconstructions. In this work, we propose an adaptive likelihood step-size strategy to guide the diffusion process for inverse-problem formulations. Specifically, we develop an observation-dependent weighting scheme based on the agreement between two different approximations of the intractable intermediate likelihood gradients, that adapts naturally to the diffusion schedule, time re-spacing, and injected stochasticity. The resulting approach, Adaptive Posterior diffusion Sampling (AdaPS), is hyperparameter-free and improves reconstruction quality across diverse imaging tasks - including super-resolution, Gaussian deblurring, and motion deblurring - on CelebA-HQ and ImageNet-256 validation sets. AdaPS consistently surpasses existing diffusion-based baselines in perceptual quality with minimal or no loss in distortion, without any task-specific tuning. Extensive ablation studies further demonstrate its robustness to the number of diffusion steps, observation noise levels, and varying stochasticity.",
+        "url": "http://arxiv.org/abs/2511.18471v1",
+        "published_date": "2025-11-23T14:37:59+00:00",
+        "updated_date": "2025-11-23T14:37:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Liav Hen",
+            "Tom Tirer",
+            "Raja Giryes",
+            "Shady Abu-Hussein"
+        ],
+        "tldr": "The paper proposes an adaptive weighting scheme for diffusion models in inverse problems to improve reconstruction quality across various imaging tasks without task-specific tuning, outperforming existing methods.",
+        "tldr_zh": "该论文提出了一种自适应权重方案，用于逆问题中的扩散模型，以提高各种成像任务的重建质量，无需针对特定任务的调整，并且优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MagicWand: A Universal Agent for Generation and Evaluation Aligned with User Preference",
+        "summary": "Recent advances in AIGC (Artificial Intelligence Generated Content) models have enabled significant progress in image and video generation. However, users still struggle to obtain content that aligns with their preferences due to the difficulty of crafting detailed prompts and the lack of mechanisms to retain their preferences. To address these challenges, we construct \\textbf{UniPrefer-100K}, a large-scale dataset comprising images, videos, and associated text that describes the styles users tend to prefer. Based on UniPrefer-100K, we propose \\textbf{MagicWand}, a universal generation and evaluation agent that enhances prompts based on user preferences, leverages advanced generation models for high-quality content, and applies preference-aligned evaluation and refinement. In addition, we introduce \\textbf{UniPreferBench}, the first large-scale benchmark with over 120K annotations for assessing user preference alignment across diverse AIGC tasks. Experiments on UniPreferBench demonstrate that MagicWand consistently generates content and evaluations that are well aligned with user preferences across a wide range of scenarios.",
+        "url": "http://arxiv.org/abs/2511.18352v1",
+        "published_date": "2025-11-23T08:59:47+00:00",
+        "updated_date": "2025-11-23T08:59:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zitong Xu",
+            "Dake Shen",
+            "Yaosong Du",
+            "Kexiang Hao",
+            "Jinghan Huang",
+            "Xiande Huang"
+        ],
+        "tldr": "The paper introduces MagicWand, a universal agent for AIGC that generates and evaluates content aligned with user preferences, using a new dataset (UniPrefer-100K) and benchmark (UniPreferBench). It enhances prompts, uses advanced generation models, and refines content based on user preference.",
+        "tldr_zh": "该论文介绍了MagicWand，一个通用AIGC代理，利用新的数据集（UniPrefer-100K）和基准（UniPreferBench），生成和评估与用户偏好对齐的内容。它增强提示词，使用先进的生成模型，并根据用户偏好改进内容。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Uni-DAD: Unified Distillation and Adaptation of Diffusion Models for Few-step Few-shot Image Generation",
+        "summary": "Diffusion models (DMs) produce high-quality images, yet their sampling remains costly when adapted to new domains. Distilled DMs are faster but typically remain confined within their teacher's domain. Thus, fast and high-quality generation for novel domains relies on two-stage training pipelines: Adapt-then-Distill or Distill-then-Adapt. However, both add design complexity and suffer from degraded quality or diversity. We introduce Uni-DAD, a single-stage pipeline that unifies distillation and adaptation of DMs. It couples two signals during training: (i) a dual-domain distribution-matching distillation objective that guides the student toward the distributions of the source teacher and a target teacher, and (ii) a multi-head generative adversarial network (GAN) loss that encourages target realism across multiple feature scales. The source domain distillation preserves diverse source knowledge, while the multi-head GAN stabilizes training and reduces overfitting, especially in few-shot regimes. The inclusion of a target teacher facilitates adaptation to more structurally distant domains. We perform evaluations on a variety of datasets for few-shot image generation (FSIG) and subject-driven personalization (SDP). Uni-DAD delivers higher quality than state-of-the-art (SoTA) adaptation methods even with less than 4 sampling steps, and outperforms two-stage training pipelines in both quality and diversity.",
+        "url": "http://arxiv.org/abs/2511.18281v1",
+        "published_date": "2025-11-23T04:22:42+00:00",
+        "updated_date": "2025-11-23T04:22:42+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yara Bahram",
+            "Melodie Desbos",
+            "Mohammadhadi Shateri",
+            "Eric Granger"
+        ],
+        "tldr": "The paper introduces Uni-DAD, a unified distillation and adaptation pipeline for diffusion models that enables fast and high-quality few-shot image generation by combining dual-domain distillation and a multi-head GAN loss.",
+        "tldr_zh": "该论文介绍了一种名为Uni-DAD的扩散模型统一蒸馏和适配流程，通过结合双域蒸馏和多头GAN损失，实现快速高质量的少样本图像生成。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Generating Synthetic Human Blastocyst Images for In-Vitro Fertilization Blastocyst Grading",
+        "summary": "The success of in vitro fertilization (IVF) at many clinics relies on the accurate morphological assessment of day 5 blastocysts, a process that is often subjective and inconsistent. While artificial intelligence can help standardize this evaluation, models require large, diverse, and balanced datasets, which are often unavailable due to data scarcity, natural class imbalance, and privacy constraints. Existing generative embryo models can mitigate these issues but face several limitations, such as poor image quality, small training datasets, non-robust evaluation, and lack of clinically relevant image generation for effective data augmentation. Here, we present the Diffusion Based Imaging Model for Artificial Blastocysts (DIA) framework, a set of latent diffusion models trained to generate high-fidelity, novel day 5 blastocyst images. Our models provide granular control by conditioning on Gardner-based morphological categories and z-axis focal depth. We rigorously evaluated the models using FID, a memorization metric, an embryologist Turing test, and three downstream classification tasks. Our results show that DIA models generate realistic images that embryologists could not reliably distinguish from real images. Most importantly, we demonstrated clear clinical value. Augmenting an imbalanced dataset with synthetic images significantly improved classification accuracy (p < 0.05). Also, adding synthetic images to an already large, balanced dataset yielded statistically significant performance gains, and synthetic data could replace up to 40% of real data in some cases without a statistically significant loss in accuracy. DIA provides a robust solution for mitigating data scarcity and class imbalance in embryo datasets. By generating novel, high-fidelity, and controllable synthetic images, our models can improve the performance, fairness, and standardization of AI embryo assessment tools.",
+        "url": "http://arxiv.org/abs/2511.18204v1",
+        "published_date": "2025-11-22T22:27:01+00:00",
+        "updated_date": "2025-11-22T22:27:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Pavan Narahari",
+            "Suraj Rajendran",
+            "Lorena Bori",
+            "Jonas E. Malmsten",
+            "Qiansheng Zhan",
+            "Zev Rosenwaks",
+            "Nikica Zaninovic",
+            "Iman Hajirasouliha"
+        ],
+        "tldr": "The paper introduces DIA, a diffusion-based model for generating synthetic human blastocyst images for IVF, showing improved AI embryo assessment through data augmentation and addressing data scarcity and class imbalance.",
+        "tldr_zh": "该论文介绍了DIA，一种基于扩散模型的合成人类囊胚图像生成方法，用于体外受精（IVF），通过数据增强改进AI胚胎评估，并解决数据稀缺和类别不平衡问题。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Early Lung Cancer Diagnosis from Virtual Follow-up LDCT Generation via Correlational Autoencoder and Latent Flow Matching",
+        "summary": "Lung cancer is one of the most commonly diagnosed cancers, and early diagnosis is critical because the survival rate declines sharply once the disease progresses to advanced stages. However, achieving an early diagnosis remains challenging, particularly in distinguishing subtle early signals of malignancy from those of benign conditions. In clinical practice, a patient with a high risk may need to undergo an initial baseline and several annual follow-up examinations (e.g., CT scans) before receiving a definitive diagnosis, which can result in missing the optimal treatment. Recently, Artificial Intelligence (AI) methods have been increasingly used for early diagnosis of lung cancer, but most existing algorithms focus on radiomic features extraction from single early-stage CT scans. Inspired by recent advances in diffusion models for image generation, this paper proposes a generative method, named CorrFlowNet, which creates a virtual, one-year follow-up CT scan after the initial baseline scan. This virtual follow-up would allow for an early detection of malignant/benign nodules, reducing the need to wait for clinical follow-ups. During training, our approach employs a correlational autoencoder to encode both early baseline and follow-up CT images into a latent space that captures the dynamics of nodule progression as well as the correlations between them, followed by a flow matching algorithm on the latent space with a neural ordinary differential equation. An auxiliary classifier is used to further enhance the diagnostic accuracy. Evaluations on a real clinical dataset show our method can significantly improve downstream lung nodule risk assessment compared with existing baseline models. Moreover, its diagnostic accuracy is comparable with real clinical CT follow-ups, highlighting its potential to improve cancer diagnosis.",
+        "url": "http://arxiv.org/abs/2511.18185v1",
+        "published_date": "2025-11-22T20:40:05+00:00",
+        "updated_date": "2025-11-22T20:40:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yutong Wu",
+            "Yifan Wang",
+            "Qining Zhang",
+            "Chuan Zhou",
+            "Lei Ying"
+        ],
+        "tldr": "This paper proposes a generative model (CorrFlowNet) that creates virtual follow-up CT scans from initial baseline scans to enable earlier lung cancer diagnosis using a correlational autoencoder and latent flow matching, achieving comparable accuracy to real clinical follow-ups.",
+        "tldr_zh": "本文提出了一种生成模型（CorrFlowNet），该模型通过初始基线扫描创建虚拟的后续CT扫描，从而利用相关自编码器和潜在流匹配实现更早的肺癌诊断，并达到与真实临床随访相当的准确度。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UnfoldLDM: Deep Unfolding-based Blind Image Restoration with Latent Diffusion Priors",
+        "summary": "Deep unfolding networks (DUNs) combine the interpretability of model-based methods with the learning ability of deep networks, yet remain limited for blind image restoration (BIR). Existing DUNs suffer from: (1) \\textbf{Degradation-specific dependency}, as their optimization frameworks are tied to a known degradation model, making them unsuitable for BIR tasks; and (2) \\textbf{Over-smoothing bias}, resulting from the direct feeding of gradient descent outputs, dominated by low-frequency content, into the proximal term, suppressing fine textures. To overcome these issues, we propose UnfoldLDM to integrate DUNs with latent diffusion model (LDM) for BIR. In each stage, UnfoldLDM employs a multi-granularity degradation-aware (MGDA) module as the gradient descent step. MGDA models BIR as an unknown degradation estimation problem and estimates both the holistic degradation matrix and its decomposed forms, enabling robust degradation removal. For the proximal step, we design a degradation-resistant LDM (DR-LDM) to extract compact degradation-invariant priors from the MGDA output. Guided by this prior, an over-smoothing correction transformer (OCFormer) explicitly recovers high-frequency components and enhances texture details. This unique combination ensures the final result is degradation-free and visually rich. Experiments show that our UnfoldLDM achieves a leading place on various BIR tasks and benefits downstream tasks. Moreover, our design is compatible with existing DUN-based methods, serving as a plug-and-play framework. Code will be released.",
+        "url": "http://arxiv.org/abs/2511.18152v1",
+        "published_date": "2025-11-22T18:44:01+00:00",
+        "updated_date": "2025-11-22T18:44:01+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Chunming He",
+            "Rihan Zhang",
+            "Zheng Chen",
+            "Bowen Yang",
+            "CHengyu Fang",
+            "Yunlong Lin",
+            "Fengyang Xiao",
+            "Sina Farsiu"
+        ],
+        "tldr": "The paper proposes UnfoldLDM, a novel deep unfolding network for blind image restoration that integrates latent diffusion models with a multi-granularity degradation-aware module and a degradation-resistant LDM, achieving state-of-the-art results on various tasks.",
+        "tldr_zh": "该论文提出了UnfoldLDM，一种用于盲图像恢复的新型深度展开网络，它集成了潜在扩散模型、多粒度退化感知模块和抗退化LDM，在各种任务上实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MammothModa2: A Unified AR-Diffusion Framework for Multimodal Understanding and Generation",
+        "summary": "Unified multimodal models aim to integrate understanding and generation within a single framework, yet bridging the gap between discrete semantic reasoning and high-fidelity visual synthesis remains challenging. We present MammothModa2 (Mammoth2), a unified autoregressive-diffusion (AR-Diffusion) framework designed to effectively couple autoregressive semantic planning with diffusion-based generation. Mammoth2 adopts a serial design: an AR path equipped with generation experts performs global semantic modeling over discrete tokens, while a single-stream Diffusion Transformer (DiT) decoder handles high-fidelity image synthesis. A carefully designed AR-Diffusion feature alignment module combines multi-layer feature aggregation, unified condition encoding, and in-context conditioning to stably align AR's representations with the diffusion decoder's continuous latents. Mammoth2 is trained end-to-end with joint Next-Token Prediction and Flow Matching objectives, followed by supervised fine-tuning and reinforcement learning over both generation and editing. With roughly 60M supervised generation samples and no reliance on pre-trained generators, Mammoth2 delivers strong text-to-image and instruction-based editing performance on public benchmarks, achieving 0.87 on GenEval, 87.2 on DPGBench, and 4.06 on ImgEdit, while remaining competitive with understanding-only backbones (e.g., Qwen3-VL-8B) on multimodal understanding tasks. These results suggest that a carefully coupled AR-Diffusion architecture can provide high-fidelity generation and editing while maintaining strong multimodal comprehension within a single, parameter- and data-efficient model.",
+        "url": "http://arxiv.org/abs/2511.18262v1",
+        "published_date": "2025-11-23T03:25:39+00:00",
+        "updated_date": "2025-11-23T03:25:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tao Shen",
+            "Xin Wan",
+            "Taicai Chen",
+            "Rui Zhang",
+            "Junwen Pan",
+            "Dawei Lu",
+            "Fanding Lei",
+            "Zhilin Lu",
+            "Yunfei Yang",
+            "Chen Cheng",
+            "Qi She",
+            "Chang Liu",
+            "Zhenbang Sun"
+        ],
+        "tldr": "MammothModa2 is a unified autoregressive-diffusion framework for multimodal understanding and generation, achieving strong text-to-image and instruction-based editing performance while remaining competitive on multimodal understanding tasks.",
+        "tldr_zh": "MammothModa2是一个统一的自回归扩散框架，用于多模态理解和生成，在文本到图像和基于指令的编辑方面表现出色，同时在多模态理解任务方面也具有竞争力。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Parallel qMRI Reconstruction from 4x Accelerated Acquisitions",
+        "summary": "Magnetic Resonance Imaging (MRI) acquisitions require extensive scan times, limiting patient throughput and increasing susceptibility to motion artifacts. Accelerated parallel MRI techniques reduce acquisition time by undersampling k-space data, but require robust reconstruction methods to recover high-quality images. Traditional approaches like SENSE require both undersampled k-space data and pre-computed coil sensitivity maps. We propose an end-to-end deep learning framework that jointly estimates coil sensitivity maps and reconstructs images from only undersampled k-space measurements at 4x acceleration. Our two-module architecture consists of a Coil Sensitivity Map (CSM) estimation module and a U-Net-based MRI reconstruction module. We evaluate our method on multi-coil brain MRI data from 10 subjects with 8 echoes each, using 2x SENSE reconstructions as ground truth. Our approach produces visually smoother reconstructions compared to conventional SENSE output, achieving comparable visual quality despite lower PSNR/SSIM metrics. We identify key challenges including spatial misalignment between different acceleration factors and propose future directions for improved reconstruction quality.",
+        "url": "http://arxiv.org/abs/2511.18232v1",
+        "published_date": "2025-11-23T00:45:05+00:00",
+        "updated_date": "2025-11-23T00:45:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mingi Kang"
+        ],
+        "tldr": "This paper presents a deep learning framework for parallel MRI reconstruction at 4x acceleration, jointly estimating coil sensitivity maps and reconstructing images from undersampled k-space data. While the quantitative metrics are not superior, the visual results are promising.",
+        "tldr_zh": "本文提出了一种用于4倍加速并行MRI重建的深度学习框架，该框架可以联合估计线圈灵敏度图并从欠采样的k空间数据重建图像。 虽然定量指标并不优越，但视觉效果很有前景。",
+        "relevance_score": 7,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 6,
+        "overall_priority_score": 7
+    }
+]
