@@ -1,0 +1,371 @@
+[
+    {
+        "title": "DiP: Taming Diffusion Models in Pixel Space",
+        "summary": "Diffusion models face a fundamental trade-off between generation quality and computational efficiency. Latent Diffusion Models (LDMs) offer an efficient solution but suffer from potential information loss and non-end-to-end training. In contrast, existing pixel space models bypass VAEs but are computationally prohibitive for high-resolution synthesis. To resolve this dilemma, we propose DiP, an efficient pixel space diffusion framework. DiP decouples generation into a global and a local stage: a Diffusion Transformer (DiT) backbone operates on large patches for efficient global structure construction, while a co-trained lightweight Patch Detailer Head leverages contextual features to restore fine-grained local details. This synergistic design achieves computational efficiency comparable to LDMs without relying on a VAE. DiP is accomplished with up to 10$\\times$ faster inference speeds than previous method while increasing the total number of parameters by only 0.3%, and achieves an 1.90 FID score on ImageNet 256$\\times$256.",
+        "url": "http://arxiv.org/abs/2511.18822v1",
+        "published_date": "2025-11-24T06:55:49+00:00",
+        "updated_date": "2025-11-24T06:55:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhennan Chen",
+            "Junwei Zhu",
+            "Xu Chen",
+            "Jiangning Zhang",
+            "Xiaobin Hu",
+            "Hanzhen Zhao",
+            "Chengjie Wang",
+            "Jian Yang",
+            "Ying Tai"
+        ],
+        "tldr": "The paper introduces DiP, an efficient pixel space diffusion framework that decouples global structure construction and local detail restoration, achieving faster inference speeds and competitive FID scores compared to Latent Diffusion Models without using VAEs.",
+        "tldr_zh": "该论文介绍了一种高效的像素空间扩散框架DiP，它将全局结构构建和局部细节恢复分离，与潜在扩散模型相比，实现了更快的推理速度和具有竞争力的FID分数，且无需使用VAE。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DeCo: Frequency-Decoupled Pixel Diffusion for End-to-End Image Generation",
+        "summary": "Pixel diffusion aims to generate images directly in pixel space in an end-to-end fashion. This approach avoids the limitations of VAE in the two-stage latent diffusion, offering higher model capacity. Existing pixel diffusion models suffer from slow training and inference, as they usually model both high-frequency signals and low-frequency semantics within a single diffusion transformer (DiT). To pursue a more efficient pixel diffusion paradigm, we propose the frequency-DeCoupled pixel diffusion framework. With the intuition to decouple the generation of high and low frequency components, we leverage a lightweight pixel decoder to generate high-frequency details conditioned on semantic guidance from the DiT. This thus frees the DiT to specialize in modeling low-frequency semantics. In addition, we introduce a frequency-aware flow-matching loss that emphasizes visually salient frequencies while suppressing insignificant ones. Extensive experiments show that DeCo achieves superior performance among pixel diffusion models, attaining FID of 1.62 (256x256) and 2.22 (512x512) on ImageNet, closing the gap with latent diffusion methods. Furthermore, our pretrained text-to-image model achieves a leading overall score of 0.86 on GenEval in system-level comparison. Codes are publicly available at https://github.com/Zehong-Ma/DeCo.",
+        "url": "http://arxiv.org/abs/2511.19365v1",
+        "published_date": "2025-11-24T17:59:06+00:00",
+        "updated_date": "2025-11-24T17:59:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zehong Ma",
+            "Longhui Wei",
+            "Shuai Wang",
+            "Shiliang Zhang",
+            "Qi Tian"
+        ],
+        "tldr": "The paper introduces DeCo, a frequency-decoupled pixel diffusion framework that improves training and inference efficiency in pixel diffusion models by separating high-frequency detail generation from low-frequency semantic modeling. It achieves state-of-the-art results among pixel diffusion models.",
+        "tldr_zh": "该论文介绍了DeCo，一种频率解耦的像素扩散框架，通过将高频细节生成与低频语义建模分离，提高了像素扩散模型的训练和推理效率。 在像素扩散模型中实现了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "BideDPO: Conditional Image Generation with Simultaneous Text and Condition Alignment",
+        "summary": "Conditional image generation enhances text-to-image synthesis with structural, spatial, or stylistic priors, but current methods face challenges in handling conflicts between sources. These include 1) input-level conflicts, where the conditioning image contradicts the text prompt, and 2) model-bias conflicts, where generative biases disrupt alignment even when conditions match the text. Addressing these conflicts requires nuanced solutions, which standard supervised fine-tuning struggles to provide. Preference-based optimization techniques like Direct Preference Optimization (DPO) show promise but are limited by gradient entanglement between text and condition signals and lack disentangled training data for multi-constraint tasks. To overcome this, we propose a bidirectionally decoupled DPO framework (BideDPO). Our method creates two disentangled preference pairs-one for the condition and one for the text-to reduce gradient entanglement. The influence of pairs is managed using an Adaptive Loss Balancing strategy for balanced optimization. We introduce an automated data pipeline to sample model outputs and generate conflict-aware data. This process is embedded in an iterative optimization strategy that refines both the model and the data. We construct a DualAlign benchmark to evaluate conflict resolution between text and condition. Experiments show BideDPO significantly improves text success rates (e.g., +35%) and condition adherence. We also validate our approach using the COCO dataset. Project Pages: https://limuloo.github.io/BideDPO/.",
+        "url": "http://arxiv.org/abs/2511.19268v1",
+        "published_date": "2025-11-24T16:20:11+00:00",
+        "updated_date": "2025-11-24T16:20:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dewei Zhou",
+            "Mingwei Li",
+            "Zongxin Yang",
+            "Yu Lu",
+            "Yunqiu Xu",
+            "Zhizhong Wang",
+            "Zeyi Huang",
+            "Yi Yang"
+        ],
+        "tldr": "BideDPO introduces a bidirectionally decoupled Direct Preference Optimization framework to improve conditional image generation by addressing conflicts between text prompts and conditioning images, using disentangled preference pairs and an adaptive loss balancing strategy.",
+        "tldr_zh": "BideDPO引入了一种双向解耦的直接偏好优化框架，通过使用解耦的偏好对和自适应损失平衡策略，解决了条件图像生成中文本提示和条件图像之间的冲突，从而改善条件图像生成效果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Test-Time Preference Optimization for Image Restoration",
+        "summary": "Image restoration (IR) models are typically trained to recover high-quality images using L1 or LPIPS loss. To handle diverse unknown degradations, zero-shot IR methods have also been introduced. However, existing pre-trained and zero-shot IR approaches often fail to align with human preferences, resulting in restored images that may not be favored. This highlights the critical need to enhance restoration quality and adapt flexibly to various image restoration tasks or backbones without requiring model retraining and ideally without labor-intensive preference data collection. In this paper, we propose the first Test-Time Preference Optimization (TTPO) paradigm for image restoration, which enhances perceptual quality, generates preference data on-the-fly, and is compatible with any IR model backbone. Specifically, we design a training-free, three-stage pipeline: (i) generate candidate preference images online using diffusion inversion and denoising based on the initially restored image; (ii) select preferred and dispreferred images using automated preference-aligned metrics or human feedback; and (iii) use the selected preference images as reward signals to guide the diffusion denoising process, optimizing the restored image to better align with human preferences. Extensive experiments across various image restoration tasks and models demonstrate the effectiveness and flexibility of the proposed pipeline.",
+        "url": "http://arxiv.org/abs/2511.19169v1",
+        "published_date": "2025-11-24T14:32:27+00:00",
+        "updated_date": "2025-11-24T14:32:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bingchen Li",
+            "Xin Li",
+            "Jiaqi Xu",
+            "Jiaming Guo",
+            "Wenbo Li",
+            "Renjing Pei",
+            "Zhibo Chen"
+        ],
+        "tldr": "The paper introduces a Test-Time Preference Optimization (TTPO) paradigm for image restoration that improves perceptual quality by generating preference data on-the-fly and guiding diffusion denoising, without retraining the model or requiring extensive preference data collection.",
+        "tldr_zh": "本文提出了一种图像恢复的测试时偏好优化（TTPO）范例，通过动态生成偏好数据并引导扩散去噪来提高感知质量，无需重新训练模型或收集大量偏好数据。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "3M-TI: High-Quality Mobile Thermal Imaging via Calibration-free Multi-Camera Cross-Modal Diffusion",
+        "summary": "The miniaturization of thermal sensors for mobile platforms inherently limits their spatial resolution and textural fidelity, leading to blurry and less informative images. Existing thermal super-resolution (SR) methods can be grouped into single-image and RGB-guided approaches: the former struggles to recover fine structures from limited information, while the latter relies on accurate and laborious cross-camera calibration, which hinders practical deployment and robustness. Here, we propose 3M-TI, a calibration-free Multi-camera cross-Modality diffusion framework for Mobile Thermal Imaging. At its core, 3M-TI integrates a cross-modal self-attention module (CSM) into the diffusion UNet, replacing the original self-attention layers to adaptively align thermal and RGB features throughout the denoising process, without requiring explicit camera calibration. This design enables the diffusion network to leverage its generative prior to enhance spatial resolution, structural fidelity, and texture detail in the super-resolved thermal images. Extensive evaluations on real-world mobile thermal cameras and public benchmarks validate our superior performance, achieving state-of-the-art results in both visual quality and quantitative metrics. More importantly, the thermal images enhanced by 3M-TI lead to substantial gains in critical downstream tasks like object detection and segmentation, underscoring its practical value for robust mobile thermal perception systems. More materials: https://github.com/work-submit/3MTI.",
+        "url": "http://arxiv.org/abs/2511.19117v1",
+        "published_date": "2025-11-24T13:48:47+00:00",
+        "updated_date": "2025-11-24T13:48:47+00:00",
+        "categories": [
+            "cs.CV",
+            "physics.optics"
+        ],
+        "authors": [
+            "Minchong Chen",
+            "Xiaoyun Yuan",
+            "Junzhe Wan",
+            "Jianing Zhang",
+            "Jun Zhang"
+        ],
+        "tldr": "The paper introduces 3M-TI, a novel calibration-free multi-camera cross-modal diffusion framework for mobile thermal image super-resolution that leverages RGB images to enhance thermal image quality without explicit camera calibration, demonstrating improved performance in downstream tasks.",
+        "tldr_zh": "该论文介绍了3M-TI，一种新颖的免校准多相机跨模态扩散框架，用于移动热图像超分辨率，利用RGB图像来提高热图像质量，无需显式相机校准，并在下游任务中表现出改进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Understanding, Accelerating, and Improving MeanFlow Training",
+        "summary": "MeanFlow promises high-quality generative modeling in few steps, by jointly learning instantaneous and average velocity fields. Yet, the underlying training dynamics remain unclear. We analyze the interaction between the two velocities and find: (i) well-established instantaneous velocity is a prerequisite for learning average velocity; (ii) learning of instantaneous velocity benefits from average velocity when the temporal gap is small, but degrades as the gap increases; and (iii) task-affinity analysis indicates that smooth learning of large-gap average velocities, essential for one-step generation, depends on the prior formation of accurate instantaneous and small-gap average velocities. Guided by these observations, we design an effective training scheme that accelerates the formation of instantaneous velocity, then shifts emphasis from short- to long-interval average velocity. Our enhanced MeanFlow training yields faster convergence and significantly better few-step generation: With the same DiT-XL backbone, our method reaches an impressive FID of 2.87 on 1-NFE ImageNet 256x256, compared to 3.43 for the conventional MeanFlow baseline. Alternatively, our method matches the performance of the MeanFlow baseline with 2.5x shorter training time, or with a smaller DiT-L backbone.",
+        "url": "http://arxiv.org/abs/2511.19065v1",
+        "published_date": "2025-11-24T12:59:27+00:00",
+        "updated_date": "2025-11-24T12:59:27+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Jin-Young Kim",
+            "Hyojun Go",
+            "Lea Bogensperger",
+            "Julius Erbach",
+            "Nikolai Kalischek",
+            "Federico Tombari",
+            "Konrad Schindler",
+            "Dominik Narnhofer"
+        ],
+        "tldr": "This paper analyzes the training dynamics of MeanFlow, a few-step generative model, and proposes an improved training scheme that achieves faster convergence and better few-step image generation performance.",
+        "tldr_zh": "该论文分析了MeanFlow（一种小步数生成模型）的训练动态，并提出了一种改进的训练方案，实现了更快的收敛速度和更好的小步数图像生成性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MFmamba: A Multi-function Network for Panchromatic Image Resolution Restoration Based on State-Space Model",
+        "summary": "Remote sensing images are becoming increasingly widespread in military, earth resource exploration. Because of the limitation of a single sensor, we can obtain high spatial resolution grayscale panchromatic (PAN) images and low spatial resolution color multispectral (MS) images. Therefore, an important issue is to obtain a color image with high spatial resolution when there is only a PAN image at the input. The existing methods improve spatial resolution using super-resolution (SR) technology and spectral recovery using colorization technology. However, the SR technique cannot improve the spectral resolution, and the colorization technique cannot improve the spatial resolution. Moreover, the pansharpening method needs two registered inputs and can not achieve SR. As a result, an integrated approach is expected. To solve the above problems, we designed a novel multi-function model (MFmamba) to realize the tasks of SR, spectral recovery, joint SR and spectral recovery through three different inputs. Firstly, MFmamba utilizes UNet++ as the backbone, and a Mamba Upsample Block (MUB) is combined with UNet++. Secondly, a Dual Pool Attention (DPA) is designed to replace the skip connection in UNet++. Finally, a Multi-scale Hybrid Cross Block (MHCB) is proposed for initial feature extraction. Many experiments show that MFmamba is competitive in evaluation metrics and visual results and performs well in the three tasks when only the input PAN image is used.",
+        "url": "http://arxiv.org/abs/2511.18888v1",
+        "published_date": "2025-11-24T08:44:04+00:00",
+        "updated_date": "2025-11-24T08:44:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qian Jiang",
+            "Qianqian Wang",
+            "Xin Jin",
+            "Michal Wozniak",
+            "Shaowen Yao",
+            "Wei Zhou"
+        ],
+        "tldr": "The paper introduces MFmamba, a novel multi-function network using Mamba state-space models for panchromatic image resolution restoration, achieving super-resolution, spectral recovery, and joint tasks with a single PAN image input.",
+        "tldr_zh": "该论文介绍了一种名为MFmamba的新型多功能网络，该网络使用Mamba状态空间模型进行全色图像分辨率恢复，通过单个PAN图像输入实现超分辨率、光谱恢复和联合任务。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FVAR: Visual Autoregressive Modeling via Next Focus Prediction",
+        "summary": "Visual autoregressive models achieve remarkable generation quality through next-scale predictions across multi-scale token pyramids. However, the conventional method uses uniform scale downsampling to build these pyramids, leading to aliasing artifacts that compromise fine details and introduce unwanted jaggies and moiré patterns. To tackle this issue, we present \\textbf{FVAR}, which reframes the paradigm from \\emph{next-scale prediction} to \\emph{next-focus prediction}, mimicking the natural process of camera focusing from blur to clarity. Our approach introduces three key innovations: \\textbf{1) Next-Focus Prediction Paradigm} that transforms multi-scale autoregression by progressively reducing blur rather than simply downsampling; \\textbf{2) Progressive Refocusing Pyramid Construction} that uses physics-consistent defocus kernels to build clean, alias-free multi-scale representations; and \\textbf{3) High-Frequency Residual Learning} that employs a specialized residual teacher network to effectively incorporate alias information during training while maintaining deployment simplicity. Specifically, we construct optical low-pass views using defocus point spread function (PSF) kernels with decreasing radius, creating smooth blur-to-clarity transitions that eliminate aliasing at its source. To further enhance detail generation, we introduce a High-Frequency Residual Teacher that learns from both clean structure and alias residuals, distilling this knowledge to a vanilla VAR deployment network for seamless inference. Extensive experiments on ImageNet demonstrate that FVAR substantially reduces aliasing artifacts, improves fine detail preservation, and enhances text readability, achieving superior performance with perfect compatibility to existing VAR frameworks.",
+        "url": "http://arxiv.org/abs/2511.18838v1",
+        "published_date": "2025-11-24T07:19:04+00:00",
+        "updated_date": "2025-11-24T07:19:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaofan Li",
+            "Chenming Wu",
+            "Yanpeng Sun",
+            "Jiaming Zhou",
+            "Delin Qu",
+            "Yansong Qu",
+            "Weihao Bo",
+            "Haibao Yu",
+            "Dingkang Liang"
+        ],
+        "tldr": "The paper introduces FVAR, a visual autoregressive model that addresses aliasing artifacts in image generation by using a progressive refocusing pyramid construction and high-frequency residual learning, leading to improved image quality and detail preservation.",
+        "tldr_zh": "该论文介绍了FVAR，一种视觉自回归模型，通过使用渐进式重新聚焦金字塔构建和高频残差学习来解决图像生成中的混叠伪影，从而提高图像质量和细节保留。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FlowSteer: Guiding Few-Step Image Synthesis with Authentic Trajectories",
+        "summary": "With the success of flow matching in visual generation, sampling efficiency remains a critical bottleneck for its practical application. Among flow models' accelerating methods, ReFlow has been somehow overlooked although it has theoretical consistency with flow matching. This is primarily due to its suboptimal performance in practical scenarios compared to consistency distillation and score distillation. In this work, we investigate this issue within the ReFlow framework and propose FlowSteer, a method unlocks the potential of ReFlow-based distillation by guiding the student along teacher's authentic generation trajectories. We first identify that Piecewised ReFlow's performance is hampered by a critical distribution mismatch during the training and propose Online Trajectory Alignment(OTA) to resolve it. Then, we introduce a adversarial distillation objective applied directly on the ODE trajectory, improving the student's adherence to the teacher's generation trajectory. Furthermore, we find and fix a previously undiscovered flaw in the widely-used FlowMatchEulerDiscreteScheduler that largely degrades few-step inference quality. Our experiment result on SD3 demonstrates our method's efficacy.",
+        "url": "http://arxiv.org/abs/2511.18834v1",
+        "published_date": "2025-11-24T07:13:23+00:00",
+        "updated_date": "2025-11-24T07:13:23+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Lei Ke",
+            "Hubery Yin",
+            "Gongye Liu",
+            "Zhengyao Lv",
+            "Jingcai Guo",
+            "Chen Li",
+            "Wenhan Luo",
+            "Yujiu Yang",
+            "Jing Lyu"
+        ],
+        "tldr": "The paper introduces FlowSteer, a method that improves the sampling efficiency of flow matching models by guiding the student model along the teacher's authentic generation trajectories within the ReFlow framework. It addresses distribution mismatch issues and improves trajectory adherence, demonstrating efficacy on SD3.",
+        "tldr_zh": "该论文介绍了 FlowSteer，一种通过在 ReFlow 框架内引导学生模型沿着教师模型的真实生成轨迹来提高 flow matching 模型采样效率的方法。它解决了分布不匹配问题并提高了轨迹依从性，并在 SD3 上证明了其有效性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "STCDiT: Spatio-Temporally Consistent Diffusion Transformer for High-Quality Video Super-Resolution",
+        "summary": "We present STCDiT, a video super-resolution framework built upon a pre-trained video diffusion model, aiming to restore structurally faithful and temporally stable videos from degraded inputs, even under complex camera motions. The main challenges lie in maintaining temporal stability during reconstruction and preserving structural fidelity during generation. To address these challenges, we first develop a motion-aware VAE reconstruction method that performs segment-wise reconstruction, with each segment clip exhibiting uniform motion characteristic, thereby effectively handling videos with complex camera motions. Moreover, we observe that the first-frame latent extracted by the VAE encoder in each clip, termed the anchor-frame latent, remains unaffected by temporal compression and retains richer spatial structural information than subsequent frame latents. We further develop an anchor-frame guidance approach that leverages structural information from anchor frames to constrain the generation process and improve structural fidelity of video features. Coupling these two designs enables the video diffusion model to achieve high-quality video super-resolution. Extensive experiments show that STCDiT outperforms state-of-the-art methods in terms of structural fidelity and temporal consistency.",
+        "url": "http://arxiv.org/abs/2511.18786v1",
+        "published_date": "2025-11-24T05:37:23+00:00",
+        "updated_date": "2025-11-24T05:37:23+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Junyang Chen",
+            "Jiangxin Dong",
+            "Long Sun",
+            "Yixin Yang",
+            "Jinshan Pan"
+        ],
+        "tldr": "STCDiT is a video super-resolution framework using a pre-trained video diffusion model with motion-aware VAE reconstruction and anchor-frame guidance to improve temporal stability and structural fidelity, outperforming existing methods.",
+        "tldr_zh": "STCDiT 是一种视频超分辨率框架，它利用预训练的视频扩散模型，结合运动感知的VAE重建和锚帧引导，以提高时间稳定性和结构保真度，并且优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Neural Geometry Image-Based Representations with Optimal Transport (OT)",
+        "summary": "Neural representations for 3D meshes are emerging as an effective solution for compact storage and efficient processing. Existing methods often rely on neural overfitting, where a coarse mesh is stored and progressively refined through multiple decoder networks. While this can restore high-quality surfaces, it is computationally expensive due to successive decoding passes and the irregular structure of mesh data. In contrast, images have a regular structure that enables powerful super-resolution and restoration frameworks, but applying these advantages to meshes is difficult because their irregular connectivity demands complex encoder-decoder architectures. Our key insight is that a geometry image-based representation transforms irregular meshes into a regular image grid, making efficient image-based neural processing directly applicable. Building on this idea, we introduce our neural geometry image-based representation, which is decoder-free, storage-efficient, and naturally suited for neural processing. It stores a low-resolution geometry-image mipmap of the surface, from which high-quality meshes are restored in a single forward pass. To construct geometry images, we leverage Optimal Transport (OT), which resolves oversampling in flat regions and undersampling in feature-rich regions, and enables continuous levels of detail (LoD) through geometry-image mipmapping. Experimental results demonstrate state-of-the-art storage efficiency and restoration accuracy, measured by compression ratio (CR), Chamfer distance (CD), and Hausdorff distance (HD).",
+        "url": "http://arxiv.org/abs/2511.18679v1",
+        "published_date": "2025-11-24T01:43:19+00:00",
+        "updated_date": "2025-11-24T01:43:19+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiang Gao",
+            "Yuanpeng Liu",
+            "Xinmu Wang",
+            "Jiazhi Li",
+            "Minghao Guo",
+            "Yu Guo",
+            "Xiyun Song",
+            "Heather Yu",
+            "Zhiqiang Lao",
+            "Xianfeng David Gu"
+        ],
+        "tldr": "This paper introduces a novel neural geometry image-based representation using Optimal Transport for efficient 3D mesh storage and restoration, achieving state-of-the-art performance in compression and accuracy with a single forward pass.",
+        "tldr_zh": "本文介绍了一种新的基于神经几何图像的表示方法，该方法利用最优传输来实现高效的3D网格存储和恢复。该方法通过一次前向传播即可实现最先进的压缩和精度性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Zero-Reference Joint Low-Light Enhancement and Deblurring via Visual Autoregressive Modeling with VLM-Derived Modulation",
+        "summary": "Real-world dark images commonly exhibit not only low visibility and contrast but also complex noise and blur, posing significant restoration challenges. Existing methods often rely on paired data or fail to model dynamic illumination and blur characteristics, leading to poor generalization. To tackle this, we propose a generative framework based on visual autoregressive (VAR) modeling, guided by perceptual priors from the vision-language model (VLM). Specifically, to supply informative conditioning cues for VAR models, we deploy an adaptive curve estimation scheme to modulate the diverse illumination based on VLM-derived visibility scores. In addition, we integrate dynamic and spatial-frequency-aware Rotary Positional Encodings (SF-RoPE) into VAR to enhance its ability to model structures degraded by blur. Furthermore, we propose a recursive phase-domain modulation strategy that mitigates blur-induced artifacts in the phase domain via bounded iterative refinement guided by VLM-assessed blur scores. Our framework is fully unsupervised and achieves state-of-the-art performance on benchmark datasets.",
+        "url": "http://arxiv.org/abs/2511.18591v1",
+        "published_date": "2025-11-23T19:08:45+00:00",
+        "updated_date": "2025-11-23T19:08:45+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wei Dong",
+            "Han Zhou",
+            "Junwei Lin",
+            "Jun Chen"
+        ],
+        "tldr": "This paper introduces an unsupervised generative framework for joint low-light enhancement and deblurring using visual autoregressive modeling, guided by vision-language model priors, achieving state-of-the-art performance.",
+        "tldr_zh": "本文提出了一种基于视觉自回归建模的无监督生成框架，利用视觉-语言模型先验进行联合弱光增强和去模糊，并在基准数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning What to Trust: Bayesian Prior-Guided Optimization for Visual Generation",
+        "summary": "Group Relative Policy Optimization (GRPO) has emerged as an effective and lightweight framework for post-training visual generative models. However, its performance is fundamentally limited by the ambiguity of textual visual correspondence: a single prompt may validly describe diverse visual outputs, and a single image or video may support multiple equally correct interpretations. This many to many relationship leads reward models to generate uncertain and weakly discriminative signals, causing GRPO to underutilize reliable feedback and overfit noisy ones. We introduce Bayesian Prior-Guided Optimization (BPGO), a novel extension of GRPO that explicitly models reward uncertainty through a semantic prior anchor. BPGO adaptively modulates optimization trust at two levels: inter-group Bayesian trust allocation emphasizes updates from groups consistent with the prior while down-weighting ambiguous ones, and intra-group prior-anchored renormalization sharpens sample distinctions by expanding confident deviations and compressing uncertain scores. Across both image and video generation tasks, BPGO delivers consistently stronger semantic alignment, enhanced perceptual fidelity, and faster convergence than standard GRPO and recent variants.",
+        "url": "http://arxiv.org/abs/2511.18919v1",
+        "published_date": "2025-11-24T09:29:30+00:00",
+        "updated_date": "2025-11-24T09:29:30+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Ruiying Liu",
+            "Yuanzhi Liang",
+            "Haibin Huang",
+            "Tianshu Yu",
+            "Chi Zhang"
+        ],
+        "tldr": "This paper introduces Bayesian Prior-Guided Optimization (BPGO), an extension of GRPO for visual generation that addresses the ambiguity of textual visual correspondence by modeling reward uncertainty using a semantic prior, leading to improved semantic alignment and perceptual fidelity.",
+        "tldr_zh": "本文介绍了贝叶斯先验引导优化（BPGO），它是GRPO的扩展，用于视觉生成，通过使用语义先验对奖励不确定性进行建模，解决了文本视觉对应关系的模糊性，从而提高了语义对齐和感知保真度。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Seeing What Matters: Visual Preference Policy Optimization for Visual Generation",
+        "summary": "Reinforcement learning (RL) has become a powerful tool for post-training visual generative models, with Group Relative Policy Optimization (GRPO) increasingly used to align generators with human preferences. However, existing GRPO pipelines rely on a single scalar reward per sample, treating each image or video as a holistic entity and ignoring the rich spatial and temporal structure of visual content. This coarse supervision hinders the correction of localized artifacts and the modeling of fine-grained perceptual cues. We introduce Visual Preference Policy Optimization (ViPO), a GRPO variant that lifts scalar feedback into structured, pixel-level advantages. ViPO employs a Perceptual Structuring Module that uses pretrained vision backbones to construct spatially and temporally aware advantage maps, redistributing optimization pressure toward perceptually important regions while preserving the stability of standard GRPO. Across both image and video benchmarks, ViPO consistently outperforms vanilla GRPO, improving in-domain alignment with human-preference rewards and enhancing generalization on out-of-domain evaluations. The method is architecture-agnostic, lightweight, and fully compatible with existing GRPO training pipelines, providing a more expressive and informative learning signal for visual generation.",
+        "url": "http://arxiv.org/abs/2511.18719v1",
+        "published_date": "2025-11-24T03:21:17+00:00",
+        "updated_date": "2025-11-24T03:21:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziqi Ni",
+            "Yuanzhi Liang",
+            "Rui Li",
+            "Yi Zhou",
+            "Haibing Huang",
+            "Chi Zhang",
+            "Xuelong Li"
+        ],
+        "tldr": "The paper introduces Visual Preference Policy Optimization (ViPO), a reinforcement learning method that uses pixel-level advantages to improve visual generative models by focusing on perceptually important regions, outperforming standard GRPO.",
+        "tldr_zh": "该论文介绍了视觉偏好策略优化 (ViPO)，一种强化学习方法，通过使用像素级优势来改进视觉生成模型，重点关注感知上重要的区域，优于标准 GRPO。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

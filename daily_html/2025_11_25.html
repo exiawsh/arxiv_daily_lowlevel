@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - November 19, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - November 25, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>November 19, 2025</p>
+            <p>November 25, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">InstantViR: Real-Time Video Inverse Problem Solver with Distilled Diffusion Prior</h2>
+            <h2 class="paper-title">DiP: Taming Diffusion Models in Pixel Space</h2>
             
-            <p class="paper-summary">Video inverse problems are fundamental to streaming, telepresence, and AR/VR, where high perceptual quality must coexist with tight latency constraints. Diffusion-based priors currently deliver state-of-the-art reconstructions, but existing approaches either adapt image diffusion models with ad hoc temporal regularizers - leading to temporal artifacts - or rely on native video diffusion models whose iterative posterior sampling is far too slow for real-time use. We introduce InstantViR, an amortized inference framework for ultra-fast video reconstruction powered by a pre-trained video diffusion prior. We distill a powerful bidirectional video diffusion model (teacher) into a causal autoregressive student that maps a degraded video directly to its restored version in a single forward pass, inheriting the teacher's strong temporal modeling while completely removing iterative test-time optimization. The distillation is prior-driven: it only requires the teacher diffusion model and known degradation operators, and does not rely on externally paired clean/noisy video data. To further boost throughput, we replace the video-diffusion backbone VAE with a high-efficiency LeanVAE via an innovative teacher-space regularized distillation scheme, enabling low-latency latent-space processing. Across streaming random inpainting, Gaussian deblurring and super-resolution, InstantViR matches or surpasses the reconstruction quality of diffusion-based baselines while running at over 35 FPS on NVIDIA A100 GPUs, achieving up to 100 times speedups over iterative video diffusion solvers. These results show that diffusion-based video reconstruction is compatible with real-time, interactive, editable, streaming scenarios, turning high-quality video restoration into a practical component of modern vision systems.</p>
+            <p class="paper-summary">Diffusion models face a fundamental trade-off between generation quality and computational efficiency. Latent Diffusion Models (LDMs) offer an efficient solution but suffer from potential information loss and non-end-to-end training. In contrast, existing pixel space models bypass VAEs but are computationally prohibitive for high-resolution synthesis. To resolve this dilemma, we propose DiP, an efficient pixel space diffusion framework. DiP decouples generation into a global and a local stage: a Diffusion Transformer (DiT) backbone operates on large patches for efficient global structure construction, while a co-trained lightweight Patch Detailer Head leverages contextual features to restore fine-grained local details. This synergistic design achieves computational efficiency comparable to LDMs without relying on a VAE. DiP is accomplished with up to 10$\times$ faster inference speeds than previous method while increasing the total number of parameters by only 0.3%, and achieves an 1.90 FID score on ImageNet 256$\times$256.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: InstantViR distills a video diffusion model into a fast, single-pass autoregressive network for real-time video restoration, achieving state-of-the-art quality with significant speedups.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DiP, an efficient pixel space diffusion framework that decouples global structure construction and local detail restoration, achieving faster inference speeds and competitive FID scores compared to Latent Diffusion Models without using VAEs.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: InstantViR将视频扩散模型提炼成一个快速的单程自回归网络，用于实时视频修复，在显著提速的同时实现了最先进的质量。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种高效的像素空间扩散框架DiP，它将全局结构构建和局部细节恢复分离，与潜在扩散模型相比，实现了更快的推理速度和具有竞争力的FID分数，且无需使用VAE。</p>
             
 
             
@@ -256,8 +256,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -293,11 +293,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14208v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.18822v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Weimin Bai, Suzhe Xu, Yiwei Ren, Jinhua Hao, Ming Sun, Wenzheng Chen, He Sun</p>
+            <p class="paper-authors">Authors: Zhennan Chen, Junwei Zhu, Xu Chen, Jiangning Zhang, Xiaobin Hu, Hanzhen Zhao, Chengjie Wang, Jian Yang, Ying Tai</p>
             
         </motion.div>
         
@@ -309,14 +309,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">A Generative Data Framework with Authentic Supervision for Underwater Image Restoration and Enhancement</h2>
+            <h2 class="paper-title">DeCo: Frequency-Decoupled Pixel Diffusion for End-to-End Image Generation</h2>
             
-            <p class="paper-summary">Underwater image restoration and enhancement are crucial for correcting color distortion and restoring image details, thereby establishing a fundamental basis for subsequent underwater visual tasks. However, current deep learning methodologies in this area are frequently constrained by the scarcity of high-quality paired datasets. Since it is difficult to obtain pristine reference labels in underwater scenes, existing benchmarks often rely on manually selected results from enhancement algorithms, providing debatable reference images that lack globally consistent color and authentic supervision. This limits the model's capabilities in color restoration, image enhancement, and generalization. To overcome this limitation, we propose using in-air natural images as unambiguous reference targets and translating them into underwater-degraded versions, thereby constructing synthetic datasets that provide authentic supervision signals for model learning. Specifically, we establish a generative data framework based on unpaired image-to-image translation, producing a large-scale dataset that covers 6 representative underwater degradation types. The framework constructs synthetic datasets with precise ground-truth labels, which facilitate the learning of an accurate mapping from degraded underwater images to their pristine scene appearances. Extensive quantitative and qualitative experiments across 6 representative network architectures and 3 independent test sets show that models trained on our synthetic data achieve comparable or superior color restoration and generalization performance to those trained on existing benchmarks. This research provides a reliable and scalable data-driven solution for underwater image restoration and enhancement. The generated dataset is publicly available at: https://github.com/yftian2025/SynUIEDatasets.git.</p>
+            <p class="paper-summary">Pixel diffusion aims to generate images directly in pixel space in an end-to-end fashion. This approach avoids the limitations of VAE in the two-stage latent diffusion, offering higher model capacity. Existing pixel diffusion models suffer from slow training and inference, as they usually model both high-frequency signals and low-frequency semantics within a single diffusion transformer (DiT). To pursue a more efficient pixel diffusion paradigm, we propose the frequency-DeCoupled pixel diffusion framework. With the intuition to decouple the generation of high and low frequency components, we leverage a lightweight pixel decoder to generate high-frequency details conditioned on semantic guidance from the DiT. This thus frees the DiT to specialize in modeling low-frequency semantics. In addition, we introduce a frequency-aware flow-matching loss that emphasizes visually salient frequencies while suppressing insignificant ones. Extensive experiments show that DeCo achieves superior performance among pixel diffusion models, attaining FID of 1.62 (256x256) and 2.22 (512x512) on ImageNet, closing the gap with latent diffusion methods. Furthermore, our pretrained text-to-image model achieves a leading overall score of 0.86 on GenEval in system-level comparison. Codes are publicly available at https://github.com/Zehong-Ma/DeCo.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a generative data framework for creating synthetic underwater image datasets with authentic supervision, addressing the lack of high-quality paired data for training underwater image restoration and enhancement models. Models trained on the generated dataset demonstrate comparable or superior performance to those trained on existing benchmarks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DeCo, a frequency-decoupled pixel diffusion framework that improves training and inference efficiency in pixel diffusion models by separating high-frequency detail generation from low-frequency semantic modeling. It achieves state-of-the-art results among pixel diffusion models.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种生成式数据框架，用于创建具有真实监督的合成水下图像数据集，解决了缺乏高质量配对数据来训练水下图像恢复和增强模型的问题。在生成的数据集上训练的模型表现出与在现有基准上训练的模型相当或更好的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DeCo，一种频率解耦的像素扩散框架，通过将高频细节生成与低频语义建模分离，提高了像素扩散模型的训练和推理效率。 在像素扩散模型中实现了最先进的结果。</p>
             
 
             
@@ -334,8 +334,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -387,11 +387,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14521v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.19365v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yufeng Tian, Yifan Chen, Zhe Sun, Libang Chen, Mingyu Dou, Jijun Lu, Ye Zheng, Xuelong Li</p>
+            <p class="paper-authors">Authors: Zehong Ma, Longhui Wei, Shuai Wang, Shiliang Zhang, Qi Tian</p>
             
         </motion.div>
         
@@ -403,14 +403,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Segmentation-Aware Latent Diffusion for Satellite Image Super-Resolution: Enabling Smallholder Farm Boundary Delineation</h2>
+            <h2 class="paper-title">BideDPO: Conditional Image Generation with Simultaneous Text and Condition Alignment</h2>
             
-            <p class="paper-summary">Delineating farm boundaries through segmentation of satellite images is a fundamental step in many agricultural applications. The task is particularly challenging for smallholder farms, where accurate delineation requires the use of high resolution (HR) imagery which are available only at low revisit frequencies (e.g., annually). To support more frequent (sub-) seasonal monitoring, HR images could be combined as references (ref) with low resolution (LR) images -- having higher revisit frequency (e.g., weekly) -- using reference-based super-resolution (Ref-SR) methods. However, current Ref-SR methods optimize perceptual quality and smooth over crucial features needed for downstream tasks, and are unable to meet the large scale-factor requirements for this task. Further, previous two-step approaches of SR followed by segmentation do not effectively utilize diverse satellite sources as inputs. We address these problems through a new approach, $\textbf{SEED-SR}$, which uses a combination of conditional latent diffusion models and large-scale multi-spectral, multi-source geo-spatial foundation models. Our key innovation is to bypass the explicit SR task in the pixel space and instead perform SR in a segmentation-aware latent space. This unique approach enables us to generate segmentation maps at an unprecedented 20$\times$ scale factor, and rigorous experiments on two large, real datasets demonstrate up to $\textbf{25.5}$ and $\textbf{12.9}$ relative improvement in instance and semantic segmentation metrics respectively over approaches based on state-of-the-art Ref-SR methods.</p>
+            <p class="paper-summary">Conditional image generation enhances text-to-image synthesis with structural, spatial, or stylistic priors, but current methods face challenges in handling conflicts between sources. These include 1) input-level conflicts, where the conditioning image contradicts the text prompt, and 2) model-bias conflicts, where generative biases disrupt alignment even when conditions match the text. Addressing these conflicts requires nuanced solutions, which standard supervised fine-tuning struggles to provide. Preference-based optimization techniques like Direct Preference Optimization (DPO) show promise but are limited by gradient entanglement between text and condition signals and lack disentangled training data for multi-constraint tasks. To overcome this, we propose a bidirectionally decoupled DPO framework (BideDPO). Our method creates two disentangled preference pairs-one for the condition and one for the text-to reduce gradient entanglement. The influence of pairs is managed using an Adaptive Loss Balancing strategy for balanced optimization. We introduce an automated data pipeline to sample model outputs and generate conflict-aware data. This process is embedded in an iterative optimization strategy that refines both the model and the data. We construct a DualAlign benchmark to evaluate conflict resolution between text and condition. Experiments show BideDPO significantly improves text success rates (e.g., +35%) and condition adherence. We also validate our approach using the COCO dataset. Project Pages: https://limuloo.github.io/BideDPO/.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SEED-SR, a segmentation-aware latent diffusion model for satellite image super-resolution, enabling high-resolution farm boundary delineation from low-resolution images, achieving significant improvements in segmentation metrics at a 20x scale factor.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: BideDPO introduces a bidirectionally decoupled Direct Preference Optimization framework to improve conditional image generation by addressing conflicts between text prompts and conditioning images, using disentangled preference pairs and an adaptive loss balancing strategy.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为SEED-SR的分割感知潜在扩散模型，用于卫星图像超分辨率，能够从低分辨率图像中实现高分辨率的农场边界划分，并在20倍的尺度因子下，在分割指标上取得了显著的改进。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: BideDPO引入了一种双向解耦的直接偏好优化框架，通过使用解耦的偏好对和自适应损失平衡策略，解决了条件图像生成中文本提示和条件图像之间的冲突，从而改善条件图像生成效果。</p>
             
 
             
@@ -420,8 +420,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -444,8 +444,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -481,11 +481,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14481v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.19268v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Aditi Agarwal, Anjali Jain, Nikita Saxena, Ishan Deshpande, Michal Kazmierski, Abigail Annkah, Nadav Sherman, Karthikeyan Shanmugam, Alok Talekar, Vaibhav Rajan</p>
+            <p class="paper-authors">Authors: Dewei Zhou, Mingwei Li, Zongxin Yang, Yu Lu, Yunqiu Xu, Zhizhong Wang, Zeyi Huang, Yi Yang</p>
             
         </motion.div>
         
@@ -497,14 +497,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Measurement-Constrained Sampling for Text-Prompted Blind Face Restoration</h2>
+            <h2 class="paper-title">Test-Time Preference Optimization for Image Restoration</h2>
             
-            <p class="paper-summary">Blind face restoration (BFR) may correspond to multiple plausible high-quality (HQ) reconstructions under extremely low-quality (LQ) inputs. However, existing methods typically produce deterministic results, struggling to capture this one-to-many nature. In this paper, we propose a Measurement-Constrained Sampling (MCS) approach that enables diverse LQ face reconstructions conditioned on different textual prompts. Specifically, we formulate BFR as a measurement-constrained generative task by constructing an inverse problem through controlled degradations of coarse restorations, which allows posterior-guided sampling within text-to-image diffusion. Measurement constraints include both Forward Measurement, which ensures results align with input structures, and Reverse Measurement, which produces projection spaces, ensuring that the solution can align with various prompts. Experiments show that our MCS can generate prompt-aligned results and outperforms existing BFR methods. Codes will be released after acceptance.</p>
+            <p class="paper-summary">Image restoration (IR) models are typically trained to recover high-quality images using L1 or LPIPS loss. To handle diverse unknown degradations, zero-shot IR methods have also been introduced. However, existing pre-trained and zero-shot IR approaches often fail to align with human preferences, resulting in restored images that may not be favored. This highlights the critical need to enhance restoration quality and adapt flexibly to various image restoration tasks or backbones without requiring model retraining and ideally without labor-intensive preference data collection. In this paper, we propose the first Test-Time Preference Optimization (TTPO) paradigm for image restoration, which enhances perceptual quality, generates preference data on-the-fly, and is compatible with any IR model backbone. Specifically, we design a training-free, three-stage pipeline: (i) generate candidate preference images online using diffusion inversion and denoising based on the initially restored image; (ii) select preferred and dispreferred images using automated preference-aligned metrics or human feedback; and (iii) use the selected preference images as reward signals to guide the diffusion denoising process, optimizing the restored image to better align with human preferences. Extensive experiments across various image restoration tasks and models demonstrate the effectiveness and flexibility of the proposed pipeline.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Measurement-Constrained Sampling (MCS) for text-prompted blind face restoration, enabling diverse high-quality reconstructions from low-quality inputs by integrating forward and reverse measurement constraints within a text-to-image diffusion framework.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a Test-Time Preference Optimization (TTPO) paradigm for image restoration that improves perceptual quality by generating preference data on-the-fly and guiding diffusion denoising, without retraining the model or requiring extensive preference data collection.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了测量约束采样(MCS)，用于文本提示的盲人脸恢复，通过在文本到图像扩散框架中集成正向和反向测量约束，从而能够从低质量输入中生成多样的高质量重建。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种图像恢复的测试时偏好优化（TTPO）范例，通过动态生成偏好数据并引导扩散去噪来提高感知质量，无需重新训练模型或收集大量偏好数据。</p>
             
 
             
@@ -575,11 +575,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14213v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.19169v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Wenjie Li, Yulun Zhang, Guangwei Gao, Heng Guo, Zhanyu Ma</p>
+            <p class="paper-authors">Authors: Bingchen Li, Xin Li, Jiaqi Xu, Jiaming Guo, Wenbo Li, Renjing Pei, Zhibo Chen</p>
             
         </motion.div>
         
@@ -591,14 +591,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">GloTok: Global Perspective Tokenizer for Image Reconstruction and Generation</h2>
+            <h2 class="paper-title">3M-TI: High-Quality Mobile Thermal Imaging via Calibration-free Multi-Camera Cross-Modal Diffusion</h2>
             
-            <p class="paper-summary">Existing state-of-the-art image tokenization methods leverage diverse semantic features from pre-trained vision models for additional supervision, to expand the distribution of latent representations and thereby improve the quality of image reconstruction and generation. These methods employ a locally supervised approach for semantic supervision, which limits the uniformity of semantic distribution. However, VA-VAE proves that a more uniform feature distribution yields better generation performance. In this work, we introduce a Global Perspective Tokenizer (GloTok), which utilizes global relational information to model a more uniform semantic distribution of tokenized features. Specifically, a codebook-wise histogram relation learning method is proposed to transfer the semantics, which are modeled by pre-trained models on the entire dataset, to the semantic codebook. Then, we design a residual learning module that recovers the fine-grained details to minimize the reconstruction error caused by quantization. Through the above design, GloTok delivers more uniformly distributed semantic latent representations, which facilitates the training of autoregressive (AR) models for generating high-quality images without requiring direct access to pre-trained models during the training process. Experiments on the standard ImageNet-1k benchmark clearly show that our proposed method achieves state-of-the-art reconstruction performance and generation quality.</p>
+            <p class="paper-summary">The miniaturization of thermal sensors for mobile platforms inherently limits their spatial resolution and textural fidelity, leading to blurry and less informative images. Existing thermal super-resolution (SR) methods can be grouped into single-image and RGB-guided approaches: the former struggles to recover fine structures from limited information, while the latter relies on accurate and laborious cross-camera calibration, which hinders practical deployment and robustness. Here, we propose 3M-TI, a calibration-free Multi-camera cross-Modality diffusion framework for Mobile Thermal Imaging. At its core, 3M-TI integrates a cross-modal self-attention module (CSM) into the diffusion UNet, replacing the original self-attention layers to adaptively align thermal and RGB features throughout the denoising process, without requiring explicit camera calibration. This design enables the diffusion network to leverage its generative prior to enhance spatial resolution, structural fidelity, and texture detail in the super-resolved thermal images. Extensive evaluations on real-world mobile thermal cameras and public benchmarks validate our superior performance, achieving state-of-the-art results in both visual quality and quantitative metrics. More importantly, the thermal images enhanced by 3M-TI lead to substantial gains in critical downstream tasks like object detection and segmentation, underscoring its practical value for robust mobile thermal perception systems. More materials: https://github.com/work-submit/3MTI.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces GloTok, a novel image tokenizer that utilizes global relational information to create more uniform semantic latent representations, achieving state-of-the-art image reconstruction and generation performance without needing direct access to pre-trained models during training.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces 3M-TI, a novel calibration-free multi-camera cross-modal diffusion framework for mobile thermal image super-resolution that leverages RGB images to enhance thermal image quality without explicit camera calibration, demonstrating improved performance in downstream tasks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为GloTok的新型图像标记器，它利用全局关系信息来创建更均匀的语义潜在表示，从而实现最先进的图像重建和生成性能，且在训练过程中无需直接访问预训练模型。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了3M-TI，一种新颖的免校准多相机跨模态扩散框架，用于移动热图像超分辨率，利用RGB图像来提高热图像质量，无需显式相机校准，并在下游任务中表现出改进的性能。</p>
             
 
             
@@ -608,8 +608,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -632,8 +632,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -669,11 +669,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14184v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.19117v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xuan Zhao, Zhongyu Zhang, Yuge Huang, Yuxi Mi, Guodong Mu, Shouhong Ding, Jun Wang, Rizen Guo, Shuigeng Zhou</p>
+            <p class="paper-authors">Authors: Minchong Chen, Xiaoyun Yuan, Junzhe Wan, Jianing Zhang, Jun Zhang</p>
             
         </motion.div>
         
@@ -685,14 +685,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">UniSER: A Foundation Model for Unified Soft Effects Removal</h2>
+            <h2 class="paper-title">Understanding, Accelerating, and Improving MeanFlow Training</h2>
             
-            <p class="paper-summary">Digital images are often degraded by soft effects such as lens flare, haze, shadows, and reflections, which reduce aesthetics even though the underlying pixels remain partially visible. The prevailing works address these degradations in isolation, developing highly specialized, specialist models that lack scalability and fail to exploit the shared underlying essences of these restoration problems. While specialist models are limited, recent large-scale pretrained generalist models offer powerful, text-driven image editing capabilities. while recent general-purpose systems (e.g., GPT-4o, Flux Kontext, Nano Banana) require detailed prompts and often fail to achieve robust removal on these fine-grained tasks or preserve identity of the scene. Leveraging the common essence of soft effects, i.e., semi-transparent occlusions, we introduce a foundational versatile model UniSER, capable of addressing diverse degradations caused by soft effects within a single framework. Our methodology centers on curating a massive 3.8M-pair dataset to ensure robustness and generalization, which includes novel, physically-plausible data to fill critical gaps in public benchmarks, and a tailored training pipeline that fine-tunes a Diffusion Transformer to learn robust restoration priors from this diverse data, integrating fine-grained mask and strength controls. This synergistic approach allows UniSER to significantly outperform both specialist and generalist models, achieving robust, high-fidelity restoration in the wild.</p>
+            <p class="paper-summary">MeanFlow promises high-quality generative modeling in few steps, by jointly learning instantaneous and average velocity fields. Yet, the underlying training dynamics remain unclear. We analyze the interaction between the two velocities and find: (i) well-established instantaneous velocity is a prerequisite for learning average velocity; (ii) learning of instantaneous velocity benefits from average velocity when the temporal gap is small, but degrades as the gap increases; and (iii) task-affinity analysis indicates that smooth learning of large-gap average velocities, essential for one-step generation, depends on the prior formation of accurate instantaneous and small-gap average velocities. Guided by these observations, we design an effective training scheme that accelerates the formation of instantaneous velocity, then shifts emphasis from short- to long-interval average velocity. Our enhanced MeanFlow training yields faster convergence and significantly better few-step generation: With the same DiT-XL backbone, our method reaches an impressive FID of 2.87 on 1-NFE ImageNet 256x256, compared to 3.43 for the conventional MeanFlow baseline. Alternatively, our method matches the performance of the MeanFlow baseline with 2.5x shorter training time, or with a smaller DiT-L backbone.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniSER, a foundation model for unified removal of soft effects (lens flare, haze, etc.) in images, trained on a large dataset with a diffusion transformer architecture, outperforming specialized and generalist models.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper analyzes the training dynamics of MeanFlow, a few-step generative model, and proposes an improved training scheme that achieves faster convergence and better few-step image generation performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍UniSER，一个用于统一去除图像中柔和效果（如镜头光晕、雾霾等）的基础模型，它在一个大型数据集上使用扩散transformer架构进行训练，性能优于专业模型和通用模型。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文分析了MeanFlow（一种小步数生成模型）的训练动态，并提出了一种改进的训练方案，实现了更快的收敛速度和更好的小步数图像生成性能。</p>
             
 
             
@@ -702,8 +702,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -763,11 +763,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14183v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.19065v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jingdong Zhang, Lingzhi Zhang, Qing Liu, Mang Tik Chiu, Connelly Barnes, Yizhou Wang, Haoran You, Xiaoyang Liu, Yuqian Zhou, Zhe Lin, Eli Shechtman, Sohrab Amirghodsi, Xin Li, Wenping Wang, Xiaohang Zhan</p>
+            <p class="paper-authors">Authors: Jin-Young Kim, Hyojun Go, Lea Bogensperger, Julius Erbach, Nikolai Kalischek, Federico Tombari, Konrad Schindler, Dominik Narnhofer</p>
             
         </motion.div>
         
@@ -779,14 +779,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">FAPE-IR: Frequency-Aware Planning and Execution Framework for All-in-One Image Restoration</h2>
+            <h2 class="paper-title">MFmamba: A Multi-function Network for Panchromatic Image Resolution Restoration Based on State-Space Model</h2>
             
-            <p class="paper-summary">All-in-One Image Restoration (AIO-IR) aims to develop a unified model that can handle multiple degradations under complex conditions. However, existing methods often rely on task-specific designs or latent routing strategies, making it hard to adapt to real-world scenarios with various degradations. We propose FAPE-IR, a Frequency-Aware Planning and Execution framework for image restoration. It uses a frozen Multimodal Large Language Model (MLLM) as a planner to analyze degraded images and generate concise, frequency-aware restoration plans. These plans guide a LoRA-based Mixture-of-Experts (LoRA-MoE) module within a diffusion-based executor, which dynamically selects high- or low-frequency experts, complemented by frequency features of the input image. To further improve restoration quality and reduce artifacts, we introduce adversarial training and a frequency regularization loss. By coupling semantic planning with frequency-based restoration, FAPE-IR offers a unified and interpretable solution for all-in-one image restoration. Extensive experiments show that FAPE-IR achieves state-of-the-art performance across seven restoration tasks and exhibits strong zero-shot generalization under mixed degradations.</p>
+            <p class="paper-summary">Remote sensing images are becoming increasingly widespread in military, earth resource exploration. Because of the limitation of a single sensor, we can obtain high spatial resolution grayscale panchromatic (PAN) images and low spatial resolution color multispectral (MS) images. Therefore, an important issue is to obtain a color image with high spatial resolution when there is only a PAN image at the input. The existing methods improve spatial resolution using super-resolution (SR) technology and spectral recovery using colorization technology. However, the SR technique cannot improve the spectral resolution, and the colorization technique cannot improve the spatial resolution. Moreover, the pansharpening method needs two registered inputs and can not achieve SR. As a result, an integrated approach is expected. To solve the above problems, we designed a novel multi-function model (MFmamba) to realize the tasks of SR, spectral recovery, joint SR and spectral recovery through three different inputs. Firstly, MFmamba utilizes UNet++ as the backbone, and a Mamba Upsample Block (MUB) is combined with UNet++. Secondly, a Dual Pool Attention (DPA) is designed to replace the skip connection in UNet++. Finally, a Multi-scale Hybrid Cross Block (MHCB) is proposed for initial feature extraction. Many experiments show that MFmamba is competitive in evaluation metrics and visual results and performs well in the three tasks when only the input PAN image is used.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces FAPE-IR, a frequency-aware planning and execution framework for all-in-one image restoration, using a frozen MLLM planner and a LoRA-MoE executor, achieving SOTA performance and strong zero-shot generalization.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MFmamba, a novel multi-function network using Mamba state-space models for panchromatic image resolution restoration, achieving super-resolution, spectral recovery, and joint tasks with a single PAN image input.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了FAPE-IR，一个用于一体化图像恢复的频率感知规划和执行框架，采用冻结的MLLM规划器和LoRA-MoE执行器，实现了SOTA性能和强大的零样本泛化能力。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为MFmamba的新型多功能网络，该网络使用Mamba状态空间模型进行全色图像分辨率恢复，通过单个PAN图像输入实现超分辨率、光谱恢复和联合任务。</p>
             
 
             
@@ -812,16 +812,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -857,11 +857,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14099v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.18888v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jingren Liu, Shuning Xu, Qirui Yang, Yun Wang, Xiangyu Chen, Zhong Ji</p>
+            <p class="paper-authors">Authors: Qian Jiang, Qianqian Wang, Xin Jin, Michal Wozniak, Shaowen Yao, Wei Zhou</p>
             
         </motion.div>
         
@@ -873,14 +873,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Flood-LDM: Generalizable Latent Diffusion Models for rapid and accurate zero-shot High-Resolution Flood Mapping</h2>
+            <h2 class="paper-title">FVAR: Visual Autoregressive Modeling via Next Focus Prediction</h2>
             
-            <p class="paper-summary">Flood prediction is critical for emergency planning and response to mitigate human and economic losses. Traditional physics-based hydrodynamic models generate high-resolution flood maps using numerical methods requiring fine-grid discretization; which are computationally intensive and impractical for real-time large-scale applications. While recent studies have applied convolutional neural networks for flood map super-resolution with good accuracy and speed, they suffer from limited generalizability to unseen areas. In this paper, we propose a novel approach that leverages latent diffusion models to perform super-resolution on coarse-grid flood maps, with the objective of achieving the accuracy of fine-grid flood maps while significantly reducing inference time. Experimental results demonstrate that latent diffusion models substantially decrease the computational time required to produce high-fidelity flood maps without compromising on accuracy, enabling their use in real-time flood risk management. Moreover, diffusion models exhibit superior generalizability across different physical locations, with transfer learning further accelerating adaptation to new geographic regions. Our approach also incorporates physics-informed inputs, addressing the common limitation of black-box behavior in machine learning, thereby enhancing interpretability. Code is available at https://github.com/neosunhan/flood-diff.</p>
+            <p class="paper-summary">Visual autoregressive models achieve remarkable generation quality through next-scale predictions across multi-scale token pyramids. However, the conventional method uses uniform scale downsampling to build these pyramids, leading to aliasing artifacts that compromise fine details and introduce unwanted jaggies and moiré patterns. To tackle this issue, we present \textbf{FVAR}, which reframes the paradigm from \emph{next-scale prediction} to \emph{next-focus prediction}, mimicking the natural process of camera focusing from blur to clarity. Our approach introduces three key innovations: \textbf{1) Next-Focus Prediction Paradigm} that transforms multi-scale autoregression by progressively reducing blur rather than simply downsampling; \textbf{2) Progressive Refocusing Pyramid Construction} that uses physics-consistent defocus kernels to build clean, alias-free multi-scale representations; and \textbf{3) High-Frequency Residual Learning} that employs a specialized residual teacher network to effectively incorporate alias information during training while maintaining deployment simplicity. Specifically, we construct optical low-pass views using defocus point spread function (PSF) kernels with decreasing radius, creating smooth blur-to-clarity transitions that eliminate aliasing at its source. To further enhance detail generation, we introduce a High-Frequency Residual Teacher that learns from both clean structure and alias residuals, distilling this knowledge to a vanilla VAR deployment network for seamless inference. Extensive experiments on ImageNet demonstrate that FVAR substantially reduces aliasing artifacts, improves fine detail preservation, and enhances text readability, achieving superior performance with perfect compatibility to existing VAR frameworks.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Flood-LDM, a latent diffusion model for generating high-resolution flood maps from coarse-grid data, achieving accuracy comparable to fine-grid simulations with significantly reduced computational time and improved generalizability.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces FVAR, a visual autoregressive model that addresses aliasing artifacts in image generation by using a progressive refocusing pyramid construction and high-frequency residual learning, leading to improved image quality and detail preservation.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍 Flood-LDM，一种用于从粗网格数据生成高分辨率洪水图的潜在扩散模型，其精度与细网格模拟相当，同时显著减少了计算时间并提高了泛化能力。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了FVAR，一种视觉自回归模型，通过使用渐进式重新聚焦金字塔构建和高频残差学习来解决图像生成中的混叠伪影，从而提高图像质量和细节保留。</p>
             
 
             
@@ -890,16 +890,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -951,11 +951,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14033v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.18838v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Sun Han Neo, Sachith Seneviratne, Herath Mudiyanselage Viraj Vidura Herath, Abhishek Saha, Sanka Rasnayaka, Lucy Amanda Marshall</p>
+            <p class="paper-authors">Authors: Xiaofan Li, Chenming Wu, Yanpeng Sun, Jiaming Zhou, Delin Qu, Yansong Qu, Weihao Bo, Haibao Yu, Dingkang Liang</p>
             
         </motion.div>
         
@@ -967,14 +967,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CD-DPE: Dual-Prompt Expert Network based on Convolutional Dictionary Feature Decoupling for Multi-Contrast MRI Super-Resolution</h2>
+            <h2 class="paper-title">FlowSteer: Guiding Few-Step Image Synthesis with Authentic Trajectories</h2>
             
-            <p class="paper-summary">Multi-contrast magnetic resonance imaging (MRI) super-resolution intends to reconstruct high-resolution (HR) images from low-resolution (LR) scans by leveraging structural information present in HR reference images acquired with different contrasts. This technique enhances anatomical detail and soft tissue differentiation, which is vital for early diagnosis and clinical decision-making. However, inherent contrasts disparities between modalities pose fundamental challenges in effectively utilizing reference image textures to guide target image reconstruction, often resulting in suboptimal feature integration. To address this issue, we propose a dual-prompt expert network based on a convolutional dictionary feature decoupling (CD-DPE) strategy for multi-contrast MRI super-resolution. Specifically, we introduce an iterative convolutional dictionary feature decoupling module (CD-FDM) to separate features into cross-contrast and intra-contrast components, thereby reducing redundancy and interference. To fully integrate these features, a novel dual-prompt feature fusion expert module (DP-FFEM) is proposed. This module uses a frequency prompt to guide the selection of relevant reference features for incorporation into the target image, while an adaptive routing prompt determines the optimal method for fusing reference and target features to enhance reconstruction quality. Extensive experiments on public multi-contrast MRI datasets demonstrate that CD-DPE outperforms state-of-the-art methods in reconstructing fine details. Additionally, experiments on unseen datasets demonstrated that CD-DPE exhibits strong generalization capabilities.</p>
+            <p class="paper-summary">With the success of flow matching in visual generation, sampling efficiency remains a critical bottleneck for its practical application. Among flow models' accelerating methods, ReFlow has been somehow overlooked although it has theoretical consistency with flow matching. This is primarily due to its suboptimal performance in practical scenarios compared to consistency distillation and score distillation. In this work, we investigate this issue within the ReFlow framework and propose FlowSteer, a method unlocks the potential of ReFlow-based distillation by guiding the student along teacher's authentic generation trajectories. We first identify that Piecewised ReFlow's performance is hampered by a critical distribution mismatch during the training and propose Online Trajectory Alignment(OTA) to resolve it. Then, we introduce a adversarial distillation objective applied directly on the ODE trajectory, improving the student's adherence to the teacher's generation trajectory. Furthermore, we find and fix a previously undiscovered flaw in the widely-used FlowMatchEulerDiscreteScheduler that largely degrades few-step inference quality. Our experiment result on SD3 demonstrates our method's efficacy.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a novel dual-prompt expert network (CD-DPE) with convolutional dictionary feature decoupling for multi-contrast MRI super-resolution, demonstrating superior performance and generalization on public datasets.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces FlowSteer, a method that improves the sampling efficiency of flow matching models by guiding the student model along the teacher's authentic generation trajectories within the ReFlow framework. It addresses distribution mismatch issues and improves trajectory adherence, demonstrating efficacy on SD3.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种新的双提示专家网络（CD-DPE），采用卷积字典特征解耦方法，用于多对比度MRI超分辨率重建，并在公共数据集上展示了卓越的性能和泛化能力。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 FlowSteer，一种通过在 ReFlow 框架内引导学生模型沿着教师模型的真实生成轨迹来提高 flow matching 模型采样效率的方法。它解决了分布不匹配问题并提高了轨迹依从性，并在 SD3 上证明了其有效性。</p>
             
 
             
@@ -1000,8 +1000,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1045,11 +1045,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14014v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.18834v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xianming Gu, Lihui Wang, Ying Cao, Zeyu Deng, Yingfeng Ou, Guodong Hu, Yi Chen</p>
+            <p class="paper-authors">Authors: Lei Ke, Hubery Yin, Gongye Liu, Zhengyao Lv, Jingcai Guo, Chen Li, Wenhan Luo, Yujiu Yang, Jing Lyu</p>
             
         </motion.div>
         
@@ -1061,14 +1061,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Back to Basics: Let Denoising Generative Models Denoise</h2>
+            <h2 class="paper-title">STCDiT: Spatio-Temporally Consistent Diffusion Transformer for High-Quality Video Super-Resolution</h2>
             
-            <p class="paper-summary">Today's denoising diffusion models do not "denoise" in the classical sense, i.e., they do not directly predict clean images. Rather, the neural networks predict noise or a noised quantity. In this paper, we suggest that predicting clean data and predicting noised quantities are fundamentally different. According to the manifold assumption, natural data should lie on a low-dimensional manifold, whereas noised quantities do not. With this assumption, we advocate for models that directly predict clean data, which allows apparently under-capacity networks to operate effectively in very high-dimensional spaces. We show that simple, large-patch Transformers on pixels can be strong generative models: using no tokenizer, no pre-training, and no extra loss. Our approach is conceptually nothing more than "$\textbf{Just image Transformers}$", or $\textbf{JiT}$, as we call it. We report competitive results using JiT with large patch sizes of 16 and 32 on ImageNet at resolutions of 256 and 512, where predicting high-dimensional noised quantities can fail catastrophically. With our networks mapping back to the basics of the manifold, our research goes back to basics and pursues a self-contained paradigm for Transformer-based diffusion on raw natural data.</p>
+            <p class="paper-summary">We present STCDiT, a video super-resolution framework built upon a pre-trained video diffusion model, aiming to restore structurally faithful and temporally stable videos from degraded inputs, even under complex camera motions. The main challenges lie in maintaining temporal stability during reconstruction and preserving structural fidelity during generation. To address these challenges, we first develop a motion-aware VAE reconstruction method that performs segment-wise reconstruction, with each segment clip exhibiting uniform motion characteristic, thereby effectively handling videos with complex camera motions. Moreover, we observe that the first-frame latent extracted by the VAE encoder in each clip, termed the anchor-frame latent, remains unaffected by temporal compression and retains richer spatial structural information than subsequent frame latents. We further develop an anchor-frame guidance approach that leverages structural information from anchor frames to constrain the generation process and improve structural fidelity of video features. Coupling these two designs enables the video diffusion model to achieve high-quality video super-resolution. Extensive experiments show that STCDiT outperforms state-of-the-art methods in terms of structural fidelity and temporal consistency.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a denoising diffusion model that directly predicts clean images using large-patch Transformers, demonstrating competitive performance on ImageNet without tokenizers or pre-training.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: STCDiT is a video super-resolution framework using a pre-trained video diffusion model with motion-aware VAE reconstruction and anchor-frame guidance to improve temporal stability and structural fidelity, outperforming existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种去噪扩散模型，该模型直接使用大块Transformer预测干净图像，并在ImageNet上展示了具有竞争力的性能，无需分词器或预训练。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: STCDiT 是一种视频超分辨率框架，它利用预训练的视频扩散模型，结合运动感知的VAE重建和锚帧引导，以提高时间稳定性和结构保真度，并且优于现有方法。</p>
             
 
             
@@ -1078,16 +1078,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1139,11 +1139,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.13720v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.18786v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Tianhong Li, Kaiming He</p>
+            <p class="paper-authors">Authors: Junyang Chen, Jiangxin Dong, Long Sun, Yixin Yang, Jinshan Pan</p>
             
         </motion.div>
         
@@ -1155,14 +1155,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">D-PerceptCT: Deep Perceptual Enhancement for Low-Dose CT Images</h2>
+            <h2 class="paper-title">Neural Geometry Image-Based Representations with Optimal Transport (OT)</h2>
             
-            <p class="paper-summary">Low Dose Computed Tomography (LDCT) is widely used as an imaging solution to aid diagnosis and other clinical tasks. However, this comes at the price of a deterioration in image quality due to the low dose of radiation used to reduce the risk of secondary cancer development. While some efficient methods have been proposed to enhance LDCT quality, many overestimate noise and perform excessive smoothing, leading to a loss of critical details. In this paper, we introduce D-PerceptCT, a novel architecture inspired by key principles of the Human Visual System (HVS) to enhance LDCT images. The objective is to guide the model to enhance or preserve perceptually relevant features, thereby providing radiologists with CT images where critical anatomical structures and fine pathological details are perceptu- ally visible. D-PerceptCT consists of two main blocks: 1) a Visual Dual-path Extractor (ViDex), which integrates semantic priors from a pretrained DINOv2 model with local spatial features, allowing the network to incorporate semantic-awareness during enhancement; (2) a Global-Local State-Space block that captures long-range information and multiscale features to preserve the important structures and fine details for diagnosis. In addition, we propose a novel deep perceptual loss, designated as the Deep Perceptual Relevancy Loss Function (DPRLF), which is inspired by human contrast sensitivity, to further emphasize perceptually important features. Extensive experiments on the Mayo2016 dataset demonstrate the effectiveness of D-PerceptCT method for LDCT enhancement, showing better preservation of structural and textural information within LDCT images compared to SOTA methods.</p>
+            <p class="paper-summary">Neural representations for 3D meshes are emerging as an effective solution for compact storage and efficient processing. Existing methods often rely on neural overfitting, where a coarse mesh is stored and progressively refined through multiple decoder networks. While this can restore high-quality surfaces, it is computationally expensive due to successive decoding passes and the irregular structure of mesh data. In contrast, images have a regular structure that enables powerful super-resolution and restoration frameworks, but applying these advantages to meshes is difficult because their irregular connectivity demands complex encoder-decoder architectures. Our key insight is that a geometry image-based representation transforms irregular meshes into a regular image grid, making efficient image-based neural processing directly applicable. Building on this idea, we introduce our neural geometry image-based representation, which is decoder-free, storage-efficient, and naturally suited for neural processing. It stores a low-resolution geometry-image mipmap of the surface, from which high-quality meshes are restored in a single forward pass. To construct geometry images, we leverage Optimal Transport (OT), which resolves oversampling in flat regions and undersampling in feature-rich regions, and enables continuous levels of detail (LoD) through geometry-image mipmapping. Experimental results demonstrate state-of-the-art storage efficiency and restoration accuracy, measured by compression ratio (CR), Chamfer distance (CD), and Hausdorff distance (HD).</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces D-PerceptCT, a novel deep learning architecture for enhancing low-dose CT images, incorporating human visual system principles and a new perceptual loss function to improve image quality while preserving critical details.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel neural geometry image-based representation using Optimal Transport for efficient 3D mesh storage and restoration, achieving state-of-the-art performance in compression and accuracy with a single forward pass.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为D-PerceptCT的新型深度学习架构，用于增强低剂量CT图像。该架构结合了人类视觉系统原理和新的感知损失函数，旨在提高图像质量，同时保留关键细节。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种新的基于神经几何图像的表示方法，该方法利用最优传输来实现高效的3D网格存储和恢复。该方法通过一次前向传播即可实现最先进的压缩和精度性能。</p>
             
 
             
@@ -1172,8 +1172,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -1196,8 +1196,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -1222,22 +1222,22 @@
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14518v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.18679v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Taifour Yousra Nabila, Azeddine Beghdadi, Marie Luong, Zuheng Ming, Habib Zaidi, Faouzi Alaya Cheikh</p>
+            <p class="paper-authors">Authors: Xiang Gao, Yuanpeng Liu, Xinmu Wang, Jiazhi Li, Minghao Guo, Yu Guo, Xiyun Song, Heather Yu, Zhiqiang Lao, Xianfeng David Gu</p>
             
         </motion.div>
         
@@ -1249,14 +1249,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Gaussian Splatting-based Low-Rank Tensor Representation for Multi-Dimensional Image Recovery</h2>
+            <h2 class="paper-title">Zero-Reference Joint Low-Light Enhancement and Deblurring via Visual Autoregressive Modeling with VLM-Derived Modulation</h2>
             
-            <p class="paper-summary">Tensor singular value decomposition (t-SVD) is a promising tool for multi-dimensional image representation, which decomposes a multi-dimensional image into a latent tensor and an accompanying transform matrix. However, two critical limitations of t-SVD methods persist: (1) the approximation of the latent tensor (e.g., tensor factorizations) is coarse and fails to accurately capture spatial local high-frequency information; (2) The transform matrix is composed of fixed basis atoms (e.g., complex exponential atoms in DFT and cosine atoms in DCT) and cannot precisely capture local high-frequency information along the mode-3 fibers. To address these two limitations, we propose a Gaussian Splatting-based Low-rank tensor Representation (GSLR) framework, which compactly and continuously represents multi-dimensional images. Specifically, we leverage tailored 2D Gaussian splatting and 1D Gaussian splatting to generate the latent tensor and transform matrix, respectively. The 2D and 1D Gaussian splatting are indispensable and complementary under this representation framework, which enjoys a powerful representation capability, especially for local high-frequency information. To evaluate the representation ability of the proposed GSLR, we develop an unsupervised GSLR-based multi-dimensional image recovery model. Extensive experiments on multi-dimensional image recovery demonstrate that GSLR consistently outperforms state-of-the-art methods, particularly in capturing local high-frequency information.</p>
+            <p class="paper-summary">Real-world dark images commonly exhibit not only low visibility and contrast but also complex noise and blur, posing significant restoration challenges. Existing methods often rely on paired data or fail to model dynamic illumination and blur characteristics, leading to poor generalization. To tackle this, we propose a generative framework based on visual autoregressive (VAR) modeling, guided by perceptual priors from the vision-language model (VLM). Specifically, to supply informative conditioning cues for VAR models, we deploy an adaptive curve estimation scheme to modulate the diverse illumination based on VLM-derived visibility scores. In addition, we integrate dynamic and spatial-frequency-aware Rotary Positional Encodings (SF-RoPE) into VAR to enhance its ability to model structures degraded by blur. Furthermore, we propose a recursive phase-domain modulation strategy that mitigates blur-induced artifacts in the phase domain via bounded iterative refinement guided by VLM-assessed blur scores. Our framework is fully unsupervised and achieves state-of-the-art performance on benchmark datasets.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a Gaussian Splatting-based Low-rank tensor Representation (GSLR) framework for multi-dimensional image recovery, addressing limitations of t-SVD in capturing local high-frequency information using tailored 2D and 1D Gaussian splatting. Experiments demonstrate its superior performance compared to state-of-the-art methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces an unsupervised generative framework for joint low-light enhancement and deblurring using visual autoregressive modeling, guided by vision-language model priors, achieving state-of-the-art performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种基于高斯溅射的低秩张量表示（GSLR）框架，用于多维图像恢复，利用定制的2D和1D高斯溅射解决t-SVD在捕获局部高频信息方面的局限性。实验表明，该方法优于现有技术。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种基于视觉自回归建模的无监督生成框架，利用视觉-语言模型先验进行联合弱光增强和去模糊，并在基准数据集上实现了最先进的性能。</p>
             
 
             
@@ -1266,8 +1266,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -1282,16 +1282,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -1316,22 +1316,22 @@
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14270v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.18591v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yiming Zeng, Xi-Le Zhao, Wei-Hao Wu, Teng-Yu Ji, Chao Wang</p>
+            <p class="paper-authors">Authors: Wei Dong, Han Zhou, Junwei Lin, Jun Chen</p>
             
         </motion.div>
         
@@ -1343,14 +1343,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Semantic Context Matters: Improving Conditioning for Autoregressive Models</h2>
+            <h2 class="paper-title">Learning What to Trust: Bayesian Prior-Guided Optimization for Visual Generation</h2>
             
-            <p class="paper-summary">Recently, autoregressive (AR) models have shown strong potential in image generation, offering better scalability and easier integration with unified multi-modal systems compared to diffusion-based methods. However, extending AR models to general image editing remains challenging due to weak and inefficient conditioning, often leading to poor instruction adherence and visual artifacts. To address this, we propose SCAR, a Semantic-Context-driven method for Autoregressive models. SCAR introduces two key components: Compressed Semantic Prefilling, which encodes high-level semantics into a compact and efficient prefix, and Semantic Alignment Guidance, which aligns the last visual hidden states with target semantics during autoregressive decoding to enhance instruction fidelity. Unlike decoding-stage injection methods, SCAR builds upon the flexibility and generality of vector-quantized-based prefilling while overcoming its semantic limitations and high cost. It generalizes across both next-token and next-set AR paradigms with minimal architectural changes. SCAR achieves superior visual fidelity and semantic alignment on both instruction editing and controllable generation benchmarks, outperforming prior AR-based methods while maintaining controllability. All code will be released.</p>
+            <p class="paper-summary">Group Relative Policy Optimization (GRPO) has emerged as an effective and lightweight framework for post-training visual generative models. However, its performance is fundamentally limited by the ambiguity of textual visual correspondence: a single prompt may validly describe diverse visual outputs, and a single image or video may support multiple equally correct interpretations. This many to many relationship leads reward models to generate uncertain and weakly discriminative signals, causing GRPO to underutilize reliable feedback and overfit noisy ones. We introduce Bayesian Prior-Guided Optimization (BPGO), a novel extension of GRPO that explicitly models reward uncertainty through a semantic prior anchor. BPGO adaptively modulates optimization trust at two levels: inter-group Bayesian trust allocation emphasizes updates from groups consistent with the prior while down-weighting ambiguous ones, and intra-group prior-anchored renormalization sharpens sample distinctions by expanding confident deviations and compressing uncertain scores. Across both image and video generation tasks, BPGO delivers consistently stronger semantic alignment, enhanced perceptual fidelity, and faster convergence than standard GRPO and recent variants.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SCAR, a method to improve instruction adherence and visual fidelity in autoregressive image generation models by enhancing semantic conditioning through compressed semantic prefilling and semantic alignment guidance.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Bayesian Prior-Guided Optimization (BPGO), an extension of GRPO for visual generation that addresses the ambiguity of textual visual correspondence by modeling reward uncertainty using a semantic prior, leading to improved semantic alignment and perceptual fidelity.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了SCAR，一种通过压缩语义预填充和语义对齐指导来增强语义条件，从而提高自回归图像生成模型中指令遵循和视觉保真度的方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了贝叶斯先验引导优化（BPGO），它是GRPO的扩展，用于视觉生成，通过使用语义先验对奖励不确定性进行建模，解决了文本视觉对应关系的模糊性，从而提高了语义对齐和感知保真度。</p>
             
 
             
@@ -1376,8 +1376,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1421,11 +1421,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14063v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.18919v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Dongyang Jin, Ryan Xu, Jianhao Zeng, Rui Lan, Yancheng Bai, Lei Sun, Xiangxiang Chu</p>
+            <p class="paper-authors">Authors: Ruiying Liu, Yuanzhi Liang, Haibin Huang, Tianshu Yu, Chi Zhang</p>
             
         </motion.div>
         
@@ -1437,14 +1437,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">FashionMAC: Deformation-Free Fashion Image Generation with Fine-Grained Model Appearance Customization</h2>
+            <h2 class="paper-title">Seeing What Matters: Visual Preference Policy Optimization for Visual Generation</h2>
             
-            <p class="paper-summary">Garment-centric fashion image generation aims to synthesize realistic and controllable human models dressing a given garment, which has attracted growing interest due to its practical applications in e-commerce. The key challenges of the task lie in two aspects: (1) faithfully preserving the garment details, and (2) gaining fine-grained controllability over the model's appearance. Existing methods typically require performing garment deformation in the generation process, which often leads to garment texture distortions. Also, they fail to control the fine-grained attributes of the generated models, due to the lack of specifically designed mechanisms. To address these issues, we propose FashionMAC, a novel diffusion-based deformation-free framework that achieves high-quality and controllable fashion showcase image generation. The core idea of our framework is to eliminate the need for performing garment deformation and directly outpaint the garment segmented from a dressed person, which enables faithful preservation of the intricate garment details. Moreover, we propose a novel region-adaptive decoupled attention (RADA) mechanism along with a chained mask injection strategy to achieve fine-grained appearance controllability over the synthesized human models. Specifically, RADA adaptively predicts the generated regions for each fine-grained text attribute and enforces the text attribute to focus on the predicted regions by a chained mask injection strategy, significantly enhancing the visual fidelity and the controllability. Extensive experiments validate the superior performance of our framework compared to existing state-of-the-art methods.</p>
+            <p class="paper-summary">Reinforcement learning (RL) has become a powerful tool for post-training visual generative models, with Group Relative Policy Optimization (GRPO) increasingly used to align generators with human preferences. However, existing GRPO pipelines rely on a single scalar reward per sample, treating each image or video as a holistic entity and ignoring the rich spatial and temporal structure of visual content. This coarse supervision hinders the correction of localized artifacts and the modeling of fine-grained perceptual cues. We introduce Visual Preference Policy Optimization (ViPO), a GRPO variant that lifts scalar feedback into structured, pixel-level advantages. ViPO employs a Perceptual Structuring Module that uses pretrained vision backbones to construct spatially and temporally aware advantage maps, redistributing optimization pressure toward perceptually important regions while preserving the stability of standard GRPO. Across both image and video benchmarks, ViPO consistently outperforms vanilla GRPO, improving in-domain alignment with human-preference rewards and enhancing generalization on out-of-domain evaluations. The method is architecture-agnostic, lightweight, and fully compatible with existing GRPO training pipelines, providing a more expressive and informative learning signal for visual generation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: FashionMAC is a diffusion-based framework for generating realistic fashion images with fine-grained appearance control, eliminating garment deformation to preserve detail and using region-adaptive decoupled attention for attribute control.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Visual Preference Policy Optimization (ViPO), a reinforcement learning method that uses pixel-level advantages to improve visual generative models by focusing on perceptually important regions, outperforming standard GRPO.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: FashionMAC是一个基于扩散模型的框架，用于生成具有精细外观控制的逼真时尚图像，通过消除服装变形来保留细节，并使用区域自适应解耦注意力机制来实现属性控制。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了视觉偏好策略优化 (ViPO)，一种强化学习方法，通过使用像素级优势来改进视觉生成模型，重点关注感知上重要的区域，优于标准 GRPO。</p>
             
 
             
@@ -1515,18 +1515,18 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.14031v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.18719v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Rong Zhang, Jinxiao Li, Jingnan Wang, Zhiwen Zuo, Jianfeng Dong, Wei Li, Chi Wang, Weiwei Xu, Xun Wang</p>
+            <p class="paper-authors">Authors: Ziqi Ni, Yuanzhi Liang, Rui Li, Yi Zhou, Haibing Huang, Chi Zhang, Xuelong Li</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-11-25 03:46:46 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-11-25 03:52:09 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
