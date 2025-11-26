@@ -1,0 +1,415 @@
+[
+    {
+        "title": "FREE: Uncertainty-Aware Autoregression for Parallel Diffusion Transformers",
+        "summary": "Diffusion Transformers (DiTs) achieve state-of-the-art generation quality but require long sequential denoising trajectories, leading to high inference latency. Recent speculative inference methods enable lossless parallel sampling in U-Net-based diffusion models via a drafter-verifier scheme, but their acceleration is limited on DiTs due to insufficient draft accuracy during verification. To address this limitation, we analyze the DiTs' feature dynamics and find the features of the final transformer layer (top-block) exhibit strong temporal consistency and rich semantic abstraction. Based on this insight, we propose FREE, a novel framework that employs a lightweight drafter to perform feature-level autoregression with parallel verification, guaranteeing lossless acceleration with theoretical and empirical support. Meanwhile, prediction variance (uncertainty) of DiTs naturally increases in later denoising steps, reducing acceptance rates under speculative sampling. To mitigate this effect, we further introduce an uncertainty-guided relaxation strategy, forming FREE (relax), which dynamically adjusts the acceptance probability in response to uncertainty levels. Experiments on ImageNet-$512^2$ show that FREE achieves up to $1.86 \\times$ acceleration, and FREE (relax) further reaches $2.25 \\times$ speedup while maintaining high perceptual and quantitative fidelity in generation quality.",
+        "url": "http://arxiv.org/abs/2511.20390v1",
+        "published_date": "2025-11-25T15:12:10+00:00",
+        "updated_date": "2025-11-25T15:12:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xinwan Wen",
+            "Bowen Li",
+            "Jiajun Luo",
+            "Ye Li",
+            "Zhi Wang"
+        ],
+        "tldr": "This paper introduces FREE, a novel framework for accelerating Diffusion Transformers by using a feature-level autoregressive drafter and uncertainty-guided relaxation, achieving significant speedups in image generation while maintaining quality.",
+        "tldr_zh": "本文提出了一种名为FREE的新框架，通过使用特征级自回归drafter和不确定性引导的松弛来加速扩散Transformer，在保持图像质量的同时，实现了图像生成方面的显著加速。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "The Image as Its Own Reward: Reinforcement Learning with Adversarial Reward for Image Generation",
+        "summary": "A reliable reward function is essential for reinforcement learning (RL) in image generation. Most current RL approaches depend on pre-trained preference models that output scalar rewards to approximate human preferences. However, these rewards often fail to capture human perception and are vulnerable to reward hacking, where higher scores do not correspond to better images. To address this, we introduce Adv-GRPO, an RL framework with an adversarial reward that iteratively updates both the reward model and the generator. The reward model is supervised using reference images as positive samples and can largely avoid being hacked. Unlike KL regularization that constrains parameter updates, our learned reward directly guides the generator through its visual outputs, leading to higher-quality images. Moreover, while optimizing existing reward functions can alleviate reward hacking, their inherent biases remain. For instance, PickScore may degrade image quality, whereas OCR-based rewards often reduce aesthetic fidelity. To address this, we take the image itself as a reward, using reference images and vision foundation models (e.g., DINO) to provide rich visual rewards. These dense visual signals, instead of a single scalar, lead to consistent gains across image quality, aesthetics, and task-specific metrics. Finally, we show that combining reference samples with foundation-model rewards enables distribution transfer and flexible style customization. In human evaluation, our method outperforms Flow-GRPO and SD3, achieving 70.0% and 72.4% win rates in image quality and aesthetics, respectively. Code and models have been released.",
+        "url": "http://arxiv.org/abs/2511.20256v1",
+        "published_date": "2025-11-25T12:35:57+00:00",
+        "updated_date": "2025-11-25T12:35:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Weijia Mao",
+            "Hao Chen",
+            "Zhenheng Yang",
+            "Mike Zheng Shou"
+        ],
+        "tldr": "The paper introduces Adv-GRPO, a reinforcement learning framework for image generation that uses an adversarial reward model based on reference images and vision foundation models, leading to higher-quality images and flexible style customization.",
+        "tldr_zh": "该论文介绍了一种名为Adv-GRPO的图像生成强化学习框架，它使用基于参考图像和视觉基础模型的对抗性奖励模型，从而生成更高质量的图像并实现灵活的风格定制。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OmniAlpha: A Sequence-to-Sequence Framework for Unified Multi-Task RGBA Generation",
+        "summary": "Generative models have excelled in RGB synthesis, but real-world applications require RGBA manipulation. This has led to a fragmented landscape: specialized, single-task models handle alpha but lack versatility, while unified multi-task frameworks are confined to the RGB domain. To bridge this critical gap, we propose OmniAlpha, the first unified, multi-task generative framework for sequence-to-sequence RGBA image generation and editing. Its architecture features MSRoPE-BiL, a novel RoPE method with a bi-directionally extendable layer axis for its Diffusion Transformer (DiT) backbone, enabling the concurrent processing of multiple input and target RGBA layers. To power this framework, we introduce AlphaLayers, a new dataset of 1,000 high-quality, multi-layer triplets, built via a novel automated synthesis and filter pipeline. Jointly training OmniAlpha on this dataset across a comprehensive suite of 21 diverse tasks, extensive experiments demonstrate that our unified approach consistently outperforms strong, specialized baselines. Most notably, OmniAlpha achieves a dramatic 84.8% relative reduction in SAD for mask-free matting on AIM-500 and wins over 90% of human preferences in layer-conditioned completion. Our work proves that a unified, multi-task model can learn a superior shared representation for RGBA, paving the way for more powerful, layer-aware generative systems.",
+        "url": "http://arxiv.org/abs/2511.20211v1",
+        "published_date": "2025-11-25T11:34:51+00:00",
+        "updated_date": "2025-11-25T11:34:51+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hao Yu",
+            "Jiabo Zhan",
+            "Zile Wang",
+            "Jinglin Wang",
+            "Huaisong Zhang",
+            "Hongyu Li",
+            "Xinrui Chen",
+            "Yongxian Wei",
+            "Chun Yuan"
+        ],
+        "tldr": "The paper introduces OmniAlpha, a unified sequence-to-sequence framework for multi-task RGBA image generation and editing, outperforming specialized baselines across 21 diverse tasks using a novel architecture and dataset.",
+        "tldr_zh": "该论文介绍了一种统一的序列到序列框架OmniAlpha，用于多任务RGBA图像生成和编辑。通过一种新型架构和数据集，该框架在21个不同的任务中优于专业化的基线模型。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Restora-Flow: Mask-Guided Image Restoration with Flow Matching",
+        "summary": "Flow matching has emerged as a promising generative approach that addresses the lengthy sampling times associated with state-of-the-art diffusion models and enables a more flexible trajectory design, while maintaining high-quality image generation. This capability makes it suitable as a generative prior for image restoration tasks. Although current methods leveraging flow models have shown promising results in restoration, some still suffer from long processing times or produce over-smoothed results. To address these challenges, we introduce Restora-Flow, a training-free method that guides flow matching sampling by a degradation mask and incorporates a trajectory correction mechanism to enforce consistency with degraded inputs. We evaluate our approach on both natural and medical datasets across several image restoration tasks involving a mask-based degradation, i.e., inpainting, super-resolution and denoising. We show superior perceptual quality and processing time compared to diffusion and flow matching-based reference methods.",
+        "url": "http://arxiv.org/abs/2511.20152v1",
+        "published_date": "2025-11-25T10:22:26+00:00",
+        "updated_date": "2025-11-25T10:22:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Arnela Hadzic",
+            "Franz Thaler",
+            "Lea Bogensperger",
+            "Simon Johannes Joham",
+            "Martin Urschler"
+        ],
+        "tldr": "Restora-Flow is a training-free, mask-guided image restoration method using flow matching, which achieves faster processing times and better perceptual quality compared to existing diffusion and flow matching techniques on tasks like inpainting, super-resolution, and denoising.",
+        "tldr_zh": "Restora-Flow是一种无需训练的、使用流匹配的掩码引导图像修复方法。相比现有的扩散模型和流匹配技术，它在图像修复、超分辨率和去噪等任务上实现了更快的处理速度和更好的感知质量。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "History-Augmented Contrastive Meta-Learning for Unsupervised Blind Super-Resolution of Planetary Remote Sensing Images",
+        "summary": "Planetary remote sensing images are affected by diverse and unknown degradations caused by imaging environments and hardware constraints. These factors limit image quality and hinder supervised blind super-resolution due to the lack of ground-truth images. This work presents History-Augmented Contrastive Blind Super-Resolution (HACBSR), an unsupervised framework for blind super-resolution that operates without ground-truth images and external kernel priors. HACBSR comprises two components: (1) a contrastive kernel sampling mechanism with kernel similarity control to mitigate distribution bias from Gaussian sampling, and (2) a history-augmented contrastive learning that uses historical models to generate negative samples to enable less greedy optimization and to induce strong convexity without ground-truth. A convergence analysis of the history-augmented contrastive learning is given in the Appendix. To support evaluation in planetary applications, we introduce Ceres-50, a dataset with diverse geological features simulated degradation patterns. Experiments show that HACBSR achieves competitive performance compared with state-of-the-art unsupervised methods across multiple upscaling factors. The code is available at https://github.com/2333repeat/HACBSR, and the dataset is available at https://github.com/2333repeat/Ceres-50.",
+        "url": "http://arxiv.org/abs/2511.20045v1",
+        "published_date": "2025-11-25T08:13:15+00:00",
+        "updated_date": "2025-11-25T08:13:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Huijia Zhao",
+            "Jie Lu",
+            "Yunqing Jiang",
+            "Xiao-Ping Lu",
+            "Kaichang Di"
+        ],
+        "tldr": "The paper introduces HACBSR, an unsupervised blind super-resolution framework for planetary remote sensing images, utilizing contrastive learning and a novel dataset Ceres-50 to achieve competitive performance without ground truth data.",
+        "tldr_zh": "该论文介绍了一种用于行星遥感图像的无监督盲超分辨率框架HACBSR，它利用对比学习和新的数据集Ceres-50，在没有真实数据的情况下实现了有竞争力的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OmniRefiner: Reinforcement-Guided Local Diffusion Refinement",
+        "summary": "Reference-guided image generation has progressed rapidly, yet current diffusion models still struggle to preserve fine-grained visual details when refining a generated image using a reference. This limitation arises because VAE-based latent compression inherently discards subtle texture information, causing identity- and attribute-specific cues to vanish. Moreover, post-editing approaches that amplify local details based on existing methods often produce results inconsistent with the original image in terms of lighting, texture, or shape. To address this, we introduce \\ourMthd{}, a detail-aware refinement framework that performs two consecutive stages of reference-driven correction to enhance pixel-level consistency. We first adapt a single-image diffusion editor by fine-tuning it to jointly ingest the draft image and the reference image, enabling globally coherent refinement while maintaining structural fidelity. We then apply reinforcement learning to further strengthen localized editing capability, explicitly optimizing for detail accuracy and semantic consistency. Extensive experiments demonstrate that \\ourMthd{} significantly improves reference alignment and fine-grained detail preservation, producing faithful and visually coherent edits that surpass both open-source and commercial models on challenging reference-guided restoration benchmarks.",
+        "url": "http://arxiv.org/abs/2511.19990v1",
+        "published_date": "2025-11-25T06:57:49+00:00",
+        "updated_date": "2025-11-25T06:57:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yaoli Liu",
+            "Ziheng Ouyang",
+            "Shengtao Lou",
+            "Yiren Song"
+        ],
+        "tldr": "The paper introduces OmniRefiner, a two-stage framework using fine-tuned diffusion models and reinforcement learning to improve fine-grained detail preservation and consistency in reference-guided image generation, addressing limitations of VAE-based latent compression.",
+        "tldr_zh": "该论文介绍了OmniRefiner，一个两阶段框架，使用微调的扩散模型和强化学习来提高参考引导图像生成中细粒度细节的保留和一致性，解决了VAE潜在压缩的局限性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SONIC: Spectral Optimization of Noise for Inpainting with Consistency",
+        "summary": "We propose a novel training-free method for inpainting with off-the-shelf text-to-image models. While guidance-based methods in theory allow generic models to be used for inverse problems such as inpainting, in practice, their effectiveness is limited, leading to the necessity of specialized inpainting-specific models. In this work, we argue that the missing ingredient for training-free inpainting is the optimization (guidance) of the initial seed noise. We propose to optimize the initial seed noise to approximately match the unmasked parts of the data - with as few as a few tens of optimization steps. We then apply conventional training-free inpainting methods on top of our optimized initial seed noise. Critically, we propose two core ideas to effectively implement this idea: (i) to avoid the costly unrolling required to relate the initial noise and the generated outcome, we perform linear approximation; and (ii) to stabilize the optimization, we optimize the initial seed noise in the spectral domain. We demonstrate the effectiveness of our method on various inpainting tasks, outperforming the state of the art. Project page: https://ubc-vision.github.io/sonic/",
+        "url": "http://arxiv.org/abs/2511.19985v1",
+        "published_date": "2025-11-25T06:53:48+00:00",
+        "updated_date": "2025-11-25T06:53:48+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Seungyeon Baek",
+            "Erqun Dong",
+            "Shadan Namazifard",
+            "Mark J. Matthews",
+            "Kwang Moo Yi"
+        ],
+        "tldr": "The paper introduces SONIC, a training-free inpainting method that optimizes the initial seed noise in the spectral domain to improve consistency with unmasked regions when using off-the-shelf text-to-image models, outperforming existing methods.",
+        "tldr_zh": "本文介绍了一种名为 SONIC 的免训练图像修复方法，该方法通过在频谱域中优化初始种子噪声，在使用现成的文本到图像模型时，能够提高与未遮罩区域的一致性，并且优于现有方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Scale Where It Matters: Training-Free Localized Scaling for Diffusion Models",
+        "summary": "Diffusion models have become the dominant paradigm in text-to-image generation, and test-time scaling (TTS) further improves quality by allocating more computation during inference. However, existing TTS methods operate at the full-image level, overlooking the fact that image quality is often spatially heterogeneous. This leads to unnecessary computation on already satisfactory regions and insufficient correction of localized defects. In this paper, we explore a new direction - Localized TTS - that adaptively resamples defective regions while preserving high-quality regions, thereby substantially reducing the search space. This paradigm poses two central challenges: accurately localizing defects and maintaining global consistency. We propose LoTTS, the first fully training-free framework for localized TTS. For defect localization, LoTTS contrasts cross- and self-attention signals under quality-aware prompts (e.g., high-quality vs. low-quality) to identify defective regions, and then refines them into coherent masks. For consistency, LoTTS perturbs only defective regions and denoises them locally, ensuring that corrections remain confined while the rest of the image remains undisturbed. Extensive experiments on SD2.1, SDXL, and FLUX demonstrate that LoTTS achieves state-of-the-art performance: it consistently improves both local quality and global fidelity, while reducing GPU cost by 2-4x compared to Best-of-N sampling. These findings establish localized TTS as a promising new direction for scaling diffusion models at inference time.",
+        "url": "http://arxiv.org/abs/2511.19917v1",
+        "published_date": "2025-11-25T04:53:03+00:00",
+        "updated_date": "2025-11-25T04:53:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qin Ren",
+            "Yufei Wang",
+            "Lanqing Guo",
+            "Wen Zhang",
+            "Zhiwen Fan",
+            "Chenyu You"
+        ],
+        "tldr": "The paper introduces LoTTS, a training-free localized test-time scaling method for diffusion models that adaptively resamples defective image regions, improving quality and reducing computational cost.",
+        "tldr_zh": "该论文介绍了一种名为LoTTS的无训练局部测试时缩放方法，用于扩散模型，该方法自适应地重新采样有缺陷的图像区域，从而提高质量并降低计算成本。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Terminal Velocity Matching",
+        "summary": "We propose Terminal Velocity Matching (TVM), a generalization of flow matching that enables high-fidelity one- and few-step generative modeling. TVM models the transition between any two diffusion timesteps and regularizes its behavior at its terminal time rather than at the initial time. We prove that TVM provides an upper bound on the $2$-Wasserstein distance between data and model distributions when the model is Lipschitz continuous. However, since Diffusion Transformers lack this property, we introduce minimal architectural changes that achieve stable, single-stage training. To make TVM efficient in practice, we develop a fused attention kernel that supports backward passes on Jacobian-Vector Products, which scale well with transformer architectures. On ImageNet-256x256, TVM achieves 3.29 FID with a single function evaluation (NFE) and 1.99 FID with 4 NFEs. It similarly achieves 4.32 1-NFE FID and 2.94 4-NFE FID on ImageNet-512x512, representing state-of-the-art performance for one/few-step models from scratch.",
+        "url": "http://arxiv.org/abs/2511.19797v1",
+        "published_date": "2025-11-24T23:55:45+00:00",
+        "updated_date": "2025-11-24T23:55:45+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV",
+            "stat.ML"
+        ],
+        "authors": [
+            "Linqi Zhou",
+            "Mathias Parger",
+            "Ayaan Haque",
+            "Jiaming Song"
+        ],
+        "tldr": "The paper introduces Terminal Velocity Matching (TVM), a generalization of flow matching for high-fidelity one/few-step image generation, achieving state-of-the-art FID scores on ImageNet using a modified Diffusion Transformer architecture and a fused attention kernel.",
+        "tldr_zh": "该论文介绍了终端速度匹配（TVM），这是一种用于高保真单步/少步图像生成的流动匹配的推广，通过改进的扩散Transformer架构和融合的注意力内核，在ImageNet上实现了最先进的FID分数。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "One Attention, One Scale: Phase-Aligned Rotary Positional Embeddings for Mixed-Resolution Diffusion Transformer",
+        "summary": "We identify a core failure mode that occurs when using the usual linear interpolation on rotary positional embeddings (RoPE) for mixed-resolution denoising with Diffusion Transformers. When tokens from different spatial grids are mixed, the attention mechanism collapses. The issue is structural. Linear coordinate remapping forces a single attention head to compare RoPE phases sampled at incompatible rates, creating phase aliasing that destabilizes the score landscape. Pretrained DiTs are especially brittle-many heads exhibit extremely sharp, periodic phase selectivity-so even tiny cross-rate inconsistencies reliably cause blur, artifacts, or full collapse.\n  To this end, our main contribution is Cross-Resolution Phase-Aligned Attention (CRPA), a training-free drop-in fix that eliminates this failure at its source. CRPA modifies only the RoPE index map for each attention call: all Q/K positions are expressed on the query's stride so that equal physical distances always induce identical phase increments. This restores the precise phase patterns that DiTs rely on. CRPA is fully compatible with pretrained DiTs, stabilizes all heads and layers uniformly. We demonstrate that CRPA enables high-fidelity and efficient mixed-resolution generation, outperforming previous state-of-the-art methods on image and video generation.",
+        "url": "http://arxiv.org/abs/2511.19778v1",
+        "published_date": "2025-11-24T23:10:15+00:00",
+        "updated_date": "2025-11-24T23:10:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haoyu Wu",
+            "Jingyi Xu",
+            "Qiaomu Miao",
+            "Dimitris Samaras",
+            "Hieu Le"
+        ],
+        "tldr": "The paper introduces Cross-Resolution Phase-Aligned Attention (CRPA), a training-free fix for RoPE in Diffusion Transformers to address the attention collapse issue in mixed-resolution denoising, enabling high-fidelity generation.",
+        "tldr_zh": "本文介绍了一种名为交叉分辨率相位对齐注意力（CRPA）的免训练修复方法，用于解决扩散Transformer中RoPE在混合分辨率去噪时出现的注意力崩溃问题，从而实现高保真生成。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Breaking the Likelihood-Quality Trade-off in Diffusion Models by Merging Pretrained Experts",
+        "summary": "Diffusion models for image generation often exhibit a trade-off between perceptual sample quality and data likelihood: training objectives emphasizing high-noise denoising steps yield realistic images but poor likelihoods, whereas likelihood-oriented training overweights low-noise steps and harms visual fidelity. We introduce a simple plug-and-play sampling method that combines two pretrained diffusion experts by switching between them along the denoising trajectory. Specifically, we apply an image-quality expert at high noise levels to shape global structure, then switch to a likelihood expert at low noise levels to refine pixel statistics. The approach requires no retraining or fine-tuning -- only the choice of an intermediate switching step. On CIFAR-10 and ImageNet32, the merged model consistently matches or outperforms its base components, improving or preserving both likelihood and sample quality relative to each expert alone. These results demonstrate that expert switching across noise levels is an effective way to break the likelihood-quality trade-off in image diffusion models.",
+        "url": "http://arxiv.org/abs/2511.19434v1",
+        "published_date": "2025-11-24T18:59:53+00:00",
+        "updated_date": "2025-11-24T18:59:53+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "stat.ML"
+        ],
+        "authors": [
+            "Yasin Esfandiari",
+            "Stefan Bauer",
+            "Sebastian U. Stich",
+            "Andrea Dittadi"
+        ],
+        "tldr": "The paper proposes a plug-and-play sampling method for diffusion models that combines two pretrained experts (one for image quality and one for likelihood) by switching between them at a certain noise level, breaking the likelihood-quality trade-off without retraining.",
+        "tldr_zh": "该论文提出了一种即插即用的扩散模型采样方法，通过在特定噪声水平下切换两个预训练的专家模型（一个用于图像质量，一个用于似然性），从而打破了似然性-质量的权衡，且无需重新训练。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Flow Map Distillation Without Data",
+        "summary": "State-of-the-art flow models achieve remarkable quality but require slow, iterative sampling. To accelerate this, flow maps can be distilled from pre-trained teachers, a procedure that conventionally requires sampling from an external dataset. We argue that this data-dependency introduces a fundamental risk of Teacher-Data Mismatch, as a static dataset may provide an incomplete or even misaligned representation of the teacher's full generative capabilities. This leads us to question whether this reliance on data is truly necessary for successful flow map distillation. In this work, we explore a data-free alternative that samples only from the prior distribution, a distribution the teacher is guaranteed to follow by construction, thereby circumventing the mismatch risk entirely. To demonstrate the practical viability of this philosophy, we introduce a principled framework that learns to predict the teacher's sampling path while actively correcting for its own compounding errors to ensure high fidelity. Our approach surpasses all data-based counterparts and establishes a new state-of-the-art by a significant margin. Specifically, distilling from SiT-XL/2+REPA, our method reaches an impressive FID of 1.45 on ImageNet 256x256, and 1.49 on ImageNet 512x512, both with only 1 sampling step. We hope our work establishes a more robust paradigm for accelerating generative models and motivates the broader adoption of flow map distillation without data.",
+        "url": "http://arxiv.org/abs/2511.19428v1",
+        "published_date": "2025-11-24T18:58:55+00:00",
+        "updated_date": "2025-11-24T18:58:55+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Shangyuan Tong",
+            "Nanye Ma",
+            "Saining Xie",
+            "Tommi Jaakkola"
+        ],
+        "tldr": "This paper presents a data-free approach to flow map distillation for accelerating generative models, achieving state-of-the-art FID scores on ImageNet by sampling directly from the prior distribution, thus avoiding the teacher-data mismatch problem.",
+        "tldr_zh": "该论文提出了一种数据无关的流图蒸馏方法，用于加速生成模型。通过直接从先验分布中采样，该方法在ImageNet上实现了最先进的FID分数，从而避免了教师-数据不匹配的问题。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Image-Free Timestep Distillation via Continuous-Time Consistency with Trajectory-Sampled Pairs",
+        "summary": "Timestep distillation is an effective approach for improving the generation efficiency of diffusion models. The Consistency Model (CM), as a trajectory-based framework, demonstrates significant potential due to its strong theoretical foundation and high-quality few-step generation. Nevertheless, current continuous-time consistency distillation methods still rely heavily on training data and computational resources, hindering their deployment in resource-constrained scenarios and limiting their scalability to diverse domains. To address this issue, we propose Trajectory-Backward Consistency Model (TBCM), which eliminates the dependence on external training data by extracting latent representations directly from the teacher model's generation trajectory. Unlike conventional methods that require VAE encoding and large-scale datasets, our self-contained distillation paradigm significantly improves both efficiency and simplicity. Moreover, the trajectory-extracted samples naturally bridge the distribution gap between training and inference, thereby enabling more effective knowledge transfer. Empirically, TBCM achieves 6.52 FID and 28.08 CLIP scores on MJHQ-30k under one-step generation, while reducing training time by approximately 40% compared to Sana-Sprint and saving a substantial amount of GPU memory, demonstrating superior efficiency without sacrificing quality. We further reveal the diffusion-generation space discrepancy in continuous-time consistency distillation and analyze how sampling strategies affect distillation performance, offering insights for future distillation research. GitHub Link: https://github.com/hustvl/TBCM.",
+        "url": "http://arxiv.org/abs/2511.20410v1",
+        "published_date": "2025-11-25T15:36:20+00:00",
+        "updated_date": "2025-11-25T15:36:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bao Tang",
+            "Shuai Zhang",
+            "Yueting Zhu",
+            "Jijun Xiang",
+            "Xin Yang",
+            "Li Yu",
+            "Wenyu Liu",
+            "Xinggang Wang"
+        ],
+        "tldr": "The paper introduces Trajectory-Backward Consistency Model (TBCM) for efficient diffusion model distillation by extracting latent representations from the teacher model's trajectory, eliminating the need for external training data and improving generation efficiency.",
+        "tldr_zh": "该论文介绍了轨迹反向一致性模型（TBCM），通过从教师模型的轨迹中提取潜在表示来实现高效的扩散模型蒸馏，无需外部训练数据并提高了生成效率。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "PromptMoG: Enhancing Diversity in Long-Prompt Image Generation via Prompt Embedding Mixture-of-Gaussian Sampling",
+        "summary": "Recent advances in text-to-image (T2I) generation have achieved remarkable visual outcomes through large-scale rectified flow models. However, how these models behave under long prompts remains underexplored. Long prompts encode rich content, spatial, and stylistic information that enhances fidelity but often suppresses diversity, leading to repetitive and less creative outputs. In this work, we systematically study this fidelity-diversity dilemma and reveal that state-of-the-art models exhibit a clear drop in diversity as prompt length increases. To enable consistent evaluation, we introduce LPD-Bench, a benchmark designed for assessing both fidelity and diversity in long-prompt generation. Building on our analysis, we develop a theoretical framework that increases sampling entropy through prompt reformulation and propose a training-free method, PromptMoG, which samples prompt embeddings from a Mixture-of-Gaussians in the embedding space to enhance diversity while preserving semantics. Extensive experiments on four state-of-the-art models, SD3.5-Large, Flux.1-Krea-Dev, CogView4, and Qwen-Image, demonstrate that PromptMoG consistently improves long-prompt generation diversity without semantic drifting.",
+        "url": "http://arxiv.org/abs/2511.20251v1",
+        "published_date": "2025-11-25T12:25:41+00:00",
+        "updated_date": "2025-11-25T12:25:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bo-Kai Ruan",
+            "Teng-Fang Hsiao",
+            "Ling Lo",
+            "Yi-Lun Wu",
+            "Hong-Han Shuai"
+        ],
+        "tldr": "This paper addresses the fidelity-diversity trade-off in long-prompt text-to-image generation by proposing PromptMoG, a training-free method that samples prompt embeddings from a Mixture-of-Gaussians to enhance diversity while preserving semantics. They also introduce LPD-Bench for evaluating long-prompt generation.",
+        "tldr_zh": "该论文通过提出 PromptMoG 解决了长文本提示图像生成中的保真度与多样性之间的权衡问题。PromptMoG 是一种免训练方法，它从高斯混合模型中采样提示嵌入，以增强多样性并保留语义。他们还引入了 LPD-Bench 用于评估长提示生成。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "HistoSpeckle-Net: Mutual Information-Guided Deep Learning for high-fidelity reconstruction of complex OrganAMNIST images via perturbed Multimode Fibers",
+        "summary": "Existing deep learning methods in multimode fiber (MMF) imaging often focus on simpler datasets, limiting their applicability to complex, real-world imaging tasks. These models are typically data-intensive, a challenge that becomes more pronounced when dealing with diverse and complex images. In this work, we propose HistoSpeckle-Net, a deep learning architecture designed to reconstruct structurally rich medical images from MMF speckles. To build a clinically relevant dataset, we develop an optical setup that couples laser light through a spatial light modulator (SLM) into an MMF, capturing output speckle patterns corresponding to input OrganAMNIST images. Unlike previous MMF imaging approaches, which have not considered the underlying statistics of speckles and reconstructed images, we introduce a distribution-aware learning strategy. We employ a histogram-based mutual information loss to enhance model robustness and reduce reliance on large datasets. Our model includes a histogram computation unit that estimates smooth marginal and joint histograms for calculating mutual information loss. It also incorporates a unique Three-Scale Feature Refinement Module, which leads to multiscale Structural Similarity Index Measure (SSIM) loss computation. Together, these two loss functions enhance both the structural fidelity and statistical alignment of the reconstructed images. Our experiments on the complex OrganAMNIST dataset demonstrate that HistoSpeckle-Net achieves higher fidelity than baseline models such as U-Net and Pix2Pix. It gives superior performance even with limited training samples and across varying fiber bending conditions. By effectively reconstructing complex anatomical features with reduced data and under fiber perturbations, HistoSpeckle-Net brings MMF imaging closer to practical deployment in real-world clinical environments.",
+        "url": "http://arxiv.org/abs/2511.20245v1",
+        "published_date": "2025-11-25T12:20:50+00:00",
+        "updated_date": "2025-11-25T12:20:50+00:00",
+        "categories": [
+            "cs.CV",
+            "physics.optics"
+        ],
+        "authors": [
+            "Jawaria Maqbool",
+            "M. Imran Cheema"
+        ],
+        "tldr": "The paper introduces HistoSpeckle-Net, a deep learning architecture for high-fidelity reconstruction of complex medical images from multimode fiber speckles using a novel histogram-based mutual information loss and a Three-Scale Feature Refinement Module, demonstrating superior performance on the OrganAMNIST dataset even with limited data and fiber perturbations.",
+        "tldr_zh": "该论文介绍了 HistoSpeckle-Net，一种深度学习架构，用于从多模光纤散斑中高保真重建复杂的医学图像。它采用了基于直方图的互信息损失和三尺度特征精细化模块，并在 OrganAMNIST 数据集上展示了优异的性能，即使在数据有限和光纤扰动的情况下也是如此。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Robust 3D Brain MRI Inpainting with Random Masking Augmentation",
+        "summary": "The ASNR-MICCAI BraTS-Inpainting Challenge was established to mitigate dataset biases that limit deep learning models in the quantitative analysis of brain tumor MRI. This paper details our submission to the 2025 challenge, a novel deep learning framework for synthesizing healthy tissue in 3D scans. The core of our method is a U-Net architecture trained to inpaint synthetically corrupted regions, enhanced with a random masking augmentation strategy to improve generalization. Quantitative evaluation confirmed the efficacy of our approach, yielding an SSIM of 0.873$\\pm$0.004, a PSNR of 24.996$\\pm$4.694, and an MSE of 0.005$\\pm$0.087 on the validation set. On the final online test set, our method achieved an SSIM of 0.919$\\pm$0.088, a PSNR of 26.932$\\pm$5.057, and an RMSE of 0.052$\\pm$0.026. This performance secured first place in the BraTS-Inpainting 2025 challenge and surpassed the winning solutions from the 2023 and 2024 competitions on the official leaderboard.",
+        "url": "http://arxiv.org/abs/2511.20202v1",
+        "published_date": "2025-11-25T11:26:10+00:00",
+        "updated_date": "2025-11-25T11:26:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Juexin Zhang",
+            "Ying Weng",
+            "Ke Chen"
+        ],
+        "tldr": "This paper presents a U-Net based deep learning framework with random masking augmentation for 3D brain MRI inpainting, which achieved first place in the BraTS-Inpainting 2025 challenge.",
+        "tldr_zh": "本文提出了一种基于U-Net的深度学习框架，采用随机掩码增强方法进行3D脑部MRI修复，并在BraTS-Inpainting 2025挑战赛中获得第一名。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "In-Video Instructions: Visual Signals as Generative Control",
+        "summary": "Large-scale video generative models have recently demonstrated strong visual capabilities, enabling the prediction of future frames that adhere to the logical and physical cues in the current observation. In this work, we investigate whether such capabilities can be harnessed for controllable image-to-video generation by interpreting visual signals embedded within the frames as instructions, a paradigm we term In-Video Instruction. In contrast to prompt-based control, which provides textual descriptions that are inherently global and coarse, In-Video Instruction encodes user guidance directly into the visual domain through elements such as overlaid text, arrows, or trajectories. This enables explicit, spatial-aware, and unambiguous correspondences between visual subjects and their intended actions by assigning distinct instructions to different objects. Extensive experiments on three state-of-the-art generators, including Veo 3.1, Kling 2.5, and Wan 2.2, show that video models can reliably interpret and execute such visually embedded instructions, particularly in complex multi-object scenarios.",
+        "url": "http://arxiv.org/abs/2511.19401v1",
+        "published_date": "2025-11-24T18:38:45+00:00",
+        "updated_date": "2025-11-24T18:38:45+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Gongfan Fang",
+            "Xinyin Ma",
+            "Xinchao Wang"
+        ],
+        "tldr": "The paper explores controllable video generation by embedding visual instructions (e.g., arrows, text) directly into frames, allowing for spatially-aware guidance of state-of-the-art video generators.",
+        "tldr_zh": "该论文探索了一种可控的视频生成方法，通过将视觉指令（例如，箭头、文字）直接嵌入到帧中，从而实现对最先进的视频生成器的空间感知引导。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
