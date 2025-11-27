@@ -1,0 +1,229 @@
+[
+    {
+        "title": "DiverseVAR: Balancing Diversity and Quality of Next-Scale Visual Autoregressive Models",
+        "summary": "We introduce DiverseVAR, a framework that enhances the diversity of text-conditioned visual autoregressive models (VAR) at test time without requiring retraining, fine-tuning, or substantial computational overhead. While VAR models have recently emerged as strong competitors to diffusion and flow models for image generation, they suffer from a critical limitation in diversity, often producing nearly identical images even for simple prompts. This issue has largely gone unnoticed amid the predominant focus on image quality. We address this limitation at test time in two stages. First, inspired by diversity enhancement techniques in diffusion models, we propose injecting noise into the text embedding. This introduces a trade-off between diversity and image quality: as diversity increases, the image quality sharply declines. To preserve quality, we propose scale-travel: a novel latent refinement technique inspired by time-travel strategies in diffusion models. Specifically, we use a multi-scale autoencoder to extract coarse-scale tokens that enable us to resume generation at intermediate stages. Extensive experiments show that combining text-embedding noise injection with our scale-travel refinement significantly enhances diversity while minimizing image-quality degradation, achieving a new Pareto frontier in the diversity-quality trade-off.",
+        "url": "http://arxiv.org/abs/2511.21415v1",
+        "published_date": "2025-11-26T14:06:52+00:00",
+        "updated_date": "2025-11-26T14:06:52+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mingue Park",
+            "Prin Phunyaphibarn",
+            "Phillip Y. Lee",
+            "Minhyuk Sung"
+        ],
+        "tldr": "DiverseVAR introduces a novel test-time method to improve the diversity of visual autoregressive models by injecting noise into text embeddings and using a multi-scale autoencoder for quality refinement, achieving a better diversity-quality trade-off without retraining.",
+        "tldr_zh": "DiverseVAR 提出了一种新的测试时方法，通过将噪声注入文本嵌入并使用多尺度自编码器进行质量改进，来提高视觉自回归模型的多样性，从而在不重新训练的情况下实现更好的多样性-质量权衡。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DeepRFTv2: Kernel-level Learning for Image Deblurring",
+        "summary": "It is well-known that if a network aims to learn how to deblur, it should understand the blur process. Blurring is naturally caused by the convolution of the sharp image with the blur kernel. Thus, allowing the network to learn the blur process in the kernel-level can significantly improve the image deblurring performance. But, current deep networks are still at the pixel-level learning stage, either performing end-to-end pixel-level restoration or stage-wise pseudo kernel-level restoration, failing to enable the deblur model to understand the essence of the blur. To this end, we propose Fourier Kernel Estimator (FKE), which considers the activation operation in Fourier space and converts the convolution problem in the spatial domain to a multiplication problem in Fourier space. Our FKE, jointly optimized with the deblur model, enables the network to learn the kernel-level blur process with low complexity and without any additional supervision. Furthermore, we change the convolution object of the kernel from ``image\" to network extracted ``feature\", whose rich semantic and structural information is more suitable to blur process learning. With the convolution of the feature and the estimated kernel, our model can learn the essence of blur in kernel-level. To further improve the efficiency of feature extraction, we design a decoupled multi-scale architecture with multiple hierarchical sub-unets with a reversible strategy, which allows better multi-scale encoding and decoding in low training memory. Extensive experiments indicate that our method achieves state-of-the-art motion deblurring results and show potential for handling other kernel-related problems. Analysis also shows our kernel estimator is able to learn physically meaningful kernels. The code will be available at https://github.com/DeepMed-Lab-ECNU/Single-Image-Deblur.",
+        "url": "http://arxiv.org/abs/2511.21132v1",
+        "published_date": "2025-11-26T07:30:41+00:00",
+        "updated_date": "2025-11-26T07:30:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xintian Mao",
+            "Haofei Song",
+            "Yin-Nian Liu",
+            "Qingli Li",
+            "Yan Wang"
+        ],
+        "tldr": "The paper introduces a novel image deblurring method, DeepRFTv2, which uses a Fourier Kernel Estimator (FKE) to learn the blur process at the kernel level, operating on network-extracted features and employing a decoupled multi-scale architecture for improved efficiency.",
+        "tldr_zh": "该论文提出了一种新的图像去模糊方法DeepRFTv2，它使用傅里叶核估计器（FKE）在核级别学习模糊过程，对网络提取的特征进行操作，并采用解耦的多尺度架构来提高效率。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PG-ControlNet: A Physics-Guided ControlNet for Generative Spatially Varying Image Deblurring",
+        "summary": "Spatially varying image deblurring remains a fundamentally ill-posed problem, especially when degradations arise from complex mixtures of motion and other forms of blur under significant noise. State-of-the-art learning-based approaches generally fall into two paradigms: model-based deep unrolling methods that enforce physical constraints by modeling the degradations, but often produce over-smoothed, artifact-laden textures, and generative models that achieve superior perceptual quality yet hallucinate details due to weak physical constraints. In this paper, we propose a novel framework that uniquely reconciles these paradigms by taming a powerful generative prior with explicit, dense physical constraints. Rather than oversimplifying the degradation field, we model it as a dense continuum of high-dimensional compressed kernels, ensuring that minute variations in motion and other degradation patterns are captured. We leverage this rich descriptor field to condition a ControlNet architecture, strongly guiding the diffusion sampling process. Extensive experiments demonstrate that our method effectively bridges the gap between physical accuracy and perceptual realism, outperforming state-of-the-art model-based methods as well as generative baselines in challenging, severely blurred scenarios.",
+        "url": "http://arxiv.org/abs/2511.21043v1",
+        "published_date": "2025-11-26T04:19:51+00:00",
+        "updated_date": "2025-11-26T04:19:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hakki Motorcu",
+            "Mujdat Cetin"
+        ],
+        "tldr": "This paper introduces PG-ControlNet, a novel approach for spatially varying image deblurring that combines physics-based modeling with generative diffusion models conditioned on a dense kernel field to achieve both physical accuracy and perceptual realism.",
+        "tldr_zh": "本文介绍了PG-ControlNet，一种新颖的空变图像去模糊方法，它结合了基于物理的建模和生成扩散模型，并以密集的核场为条件，以实现物理精度和感知真实感。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "A deep learning model to reduce agent dose for contrast-enhanced MRI of the cerebellopontine angle cistern",
+        "summary": "Objectives: To evaluate a deep learning (DL) model for reducing the agent dose of contrast-enhanced T1-weighted MRI (T1ce) of the cerebellopontine angle (CPA) cistern. Materials and methods: In this multi-center retrospective study, T1 and T1ce of vestibular schwannoma (VS) patients were used to simulate low-dose T1ce with varying reductions of contrast agent dose. DL models were trained to restore standard-dose T1ce from the low-dose simulation. The image quality and segmentation performance of the DL-restored T1ce were evaluated. A head and neck radiologist was asked to rate DL-restored images in multiple aspects, including image quality and diagnostic characterization. Results: 203 MRI studies from 72 VS patients (mean age, 58.51 \\pm 14.73, 39 men) were evaluated. As the input dose increased, the structural similarity index measure of the restored T1ce increased from 0.639 \\pm 0.113 to 0.993 \\pm 0.009, and the peak signal-to-noise ratio increased from 21.6 \\pm 3.73 dB to 41.4 \\pm 4.84 dB. At 10% input dose, using DL-restored T1ce for segmentation improved the Dice from 0.673 to 0.734, the 95% Hausdorff distance from 2.38 mm to 2.07 mm, and the average surface distance from 1.00 mm to 0.59 mm. Both DL-restored T1ce from 10% and 30% input doses showed excellent images, with the latter being considered more informative. Conclusion: The DL model improved the image quality of low-dose MRI of the CPA cistern, which makes lesion detection and diagnostic characterization possible with 10% - 30% of the standard dose.",
+        "url": "http://arxiv.org/abs/2511.20926v1",
+        "published_date": "2025-11-25T23:40:43+00:00",
+        "updated_date": "2025-11-25T23:40:43+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yunjie Chen",
+            "Rianne A. Weber",
+            "Olaf M. Neve",
+            "Stephan R. Romeijn",
+            "Erik F. Hensen",
+            "Jelmer M. Wolterink",
+            "Qian Tao",
+            "Marius Staring",
+            "Berit M. Verbist"
+        ],
+        "tldr": "This paper presents a deep learning model to restore the image quality of contrast-enhanced MRI of the cerebellopontine angle cistern with significantly reduced contrast agent dose (10%-30% of standard dose), enabling lesion detection and diagnostic characterization.",
+        "tldr_zh": "本文提出了一种深度学习模型，用于恢复以显著降低造影剂剂量（标准剂量的10%-30%）的脑桥小脑角池的对比增强MRI图像质量，从而实现病灶检测和诊断特征。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PixelDiT: Pixel Diffusion Transformers for Image Generation",
+        "summary": "Latent-space modeling has been the standard for Diffusion Transformers (DiTs). However, it relies on a two-stage pipeline where the pretrained autoencoder introduces lossy reconstruction, leading to error accumulation while hindering joint optimization. To address these issues, we propose PixelDiT, a single-stage, end-to-end model that eliminates the need for the autoencoder and learns the diffusion process directly in the pixel space. PixelDiT adopts a fully transformer-based architecture shaped by a dual-level design: a patch-level DiT that captures global semantics and a pixel-level DiT that refines texture details, enabling efficient training of a pixel-space diffusion model while preserving fine details. Our analysis reveals that effective pixel-level token modeling is essential to the success of pixel diffusion. PixelDiT achieves 1.61 FID on ImageNet 256x256, surpassing existing pixel generative models by a large margin. We further extend PixelDiT to text-to-image generation and pretrain it at the 1024x1024 resolution in pixel space. It achieves 0.74 on GenEval and 83.5 on DPG-bench, approaching the best latent diffusion models.",
+        "url": "http://arxiv.org/abs/2511.20645v1",
+        "published_date": "2025-11-25T18:59:25+00:00",
+        "updated_date": "2025-11-25T18:59:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yongsheng Yu",
+            "Wei Xiong",
+            "Weili Nie",
+            "Yichen Sheng",
+            "Shiqiu Liu",
+            "Jiebo Luo"
+        ],
+        "tldr": "The paper introduces PixelDiT, a single-stage, end-to-end diffusion transformer for image generation that operates directly in pixel space, achieving state-of-the-art results compared to existing pixel generative models.",
+        "tldr_zh": "该论文介绍了 PixelDiT，一种单阶段、端到端的图像生成扩散 Transformer，直接在像素空间中操作，与现有的像素生成模型相比，实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "The Consistency Critic: Correcting Inconsistencies in Generated Images via Reference-Guided Attentive Alignment",
+        "summary": "Previous works have explored various customized generation tasks given a reference image, but they still face limitations in generating consistent fine-grained details. In this paper, our aim is to solve the inconsistency problem of generated images by applying a reference-guided post-editing approach and present our ImageCritic. We first construct a dataset of reference-degraded-target triplets obtained via VLM-based selection and explicit degradation, which effectively simulates the common inaccuracies or inconsistencies observed in existing generation models. Furthermore, building on a thorough examination of the model's attention mechanisms and intrinsic representations, we accordingly devise an attention alignment loss and a detail encoder to precisely rectify inconsistencies. ImageCritic can be integrated into an agent framework to automatically detect inconsistencies and correct them with multi-round and local editing in complex scenarios. Extensive experiments demonstrate that ImageCritic can effectively resolve detail-related issues in various customized generation scenarios, providing significant improvements over existing methods.",
+        "url": "http://arxiv.org/abs/2511.20614v1",
+        "published_date": "2025-11-25T18:40:25+00:00",
+        "updated_date": "2025-11-25T18:40:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziheng Ouyang",
+            "Yiren Song",
+            "Yaoli Liu",
+            "Shihao Zhu",
+            "Qibin Hou",
+            "Ming-Ming Cheng",
+            "Mike Zheng Shou"
+        ],
+        "tldr": "The paper introduces ImageCritic, a reference-guided post-editing approach to correct inconsistencies in generated images, using a VLM-constructed dataset and attention alignment loss.",
+        "tldr_zh": "该论文介绍了一种名为ImageCritic的参考引导后编辑方法，通过VLM构建的数据集和注意力对齐损失来纠正生成图像中的不一致性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DINO-Tok: Adapting DINO for Visual Tokenizers",
+        "summary": "Recent advances in visual generation have highlighted the rise of Latent Generative Models (LGMs), which rely on effective visual tokenizers to bridge pixels and semantics. However, existing tokenizers are typically trained from scratch and struggle to balance semantic representation and reconstruction fidelity, particularly in high-dimensional latent spaces. In this work, we introduce DINO-Tok, a DINO-based visual tokenizer that unifies hierarchical representations into an information-complete latent space. By integrating shallow features that retain fine-grained details with deep features encoding global semantics, DINO-Tok effectively bridges pretrained representations and visual generation. We further analyze the challenges of vector quantization (VQ) in this high-dimensional space, where key information is often lost and codebook collapse occurs. We thus propose a global PCA reweighting mechanism to stabilize VQ and preserve essential information across dimensions. On ImageNet 256$\\times$256, DINO-Tok achieves state-of-the-art reconstruction performance, reaching 28.54 PSNR for autoencoding and 23.98 PSNR for VQ-based modeling, significantly outperforming prior tokenizers and comparable to billion-level data trained models (such as Hunyuan and Wan). These results demonstrate that adapting powerful pretrained vision models like DINO for tokenization enables semantically aligned and high-fidelity latent representations, enabling next-generation visual generative models. Code will be publicly available at https://github.com/MKJia/DINO-Tok.",
+        "url": "http://arxiv.org/abs/2511.20565v1",
+        "published_date": "2025-11-25T18:00:00+00:00",
+        "updated_date": "2025-11-25T18:00:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mingkai Jia",
+            "Mingxiao Li",
+            "Liaoyuan Fan",
+            "Tianxing Shi",
+            "Jiaxin Guo",
+            "Zeming Li",
+            "Xiaoyang Guo",
+            "Xiao-Xiao Long",
+            "Qian Zhang",
+            "Ping Tan",
+            "Wei Yin"
+        ],
+        "tldr": "The paper introduces DINO-Tok, a DINO-based visual tokenizer that leverages hierarchical representations and PCA reweighting to achieve state-of-the-art reconstruction performance in visual generation, outperforming existing tokenizers.",
+        "tldr_zh": "该论文介绍了 DINO-Tok，一种基于 DINO 的视觉标记器，它利用分层表示和 PCA 重新加权，在视觉生成方面实现了最先进的重建性能，优于现有的标记器。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation",
+        "summary": "Recent visual autoregressive (AR) models have shown promising capabilities in text-to-image generation, operating in a manner similar to large language models. While test-time computation scaling has brought remarkable success in enabling reasoning-enhanced outputs for challenging natural language tasks, its adaptation to visual AR models remains unexplored and poses unique challenges. Naively applying test-time scaling strategies such as Best-of-N can be suboptimal: they consume full-length computation on erroneous generation trajectories, while the raster-scan decoding scheme lacks a blueprint of the entire canvas, limiting scaling benefits as only a few prompt-aligned candidates are generated. To address these, we introduce GridAR, a test-time scaling framework designed to elicit the best possible results from visual AR models. GridAR employs a grid-partitioned progressive generation scheme in which multiple partial candidates for the same position are generated within a canvas, infeasible ones are pruned early, and viable ones are fixed as anchors to guide subsequent decoding. Coupled with this, we present a layout-specified prompt reformulation strategy that inspects partial views to infer a feasible layout for satisfying the prompt. The reformulated prompt then guides subsequent image generation to mitigate the blueprint deficiency. Together, GridAR achieves higher-quality results under limited test-time scaling: with N=4, it even outperforms Best-of-N (N=8) by 14.4% on T2I-CompBench++ while reducing cost by 25.6%. It also generalizes to autoregressive image editing, showing comparable edit quality and a 13.9% gain in semantic preservation on PIE-Bench over larger-N baselines.",
+        "url": "http://arxiv.org/abs/2511.21185v1",
+        "published_date": "2025-11-26T09:01:13+00:00",
+        "updated_date": "2025-11-26T09:01:13+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Joonhyung Park",
+            "Hyeongwon Jang",
+            "Joowon Kim",
+            "Eunho Yang"
+        ],
+        "tldr": "The paper introduces GridAR, a novel test-time scaling framework for autoregressive image generation that improves quality and reduces computational cost by using a grid-partitioned progressive generation scheme and layout-specified prompt reformulation.",
+        "tldr_zh": "该论文介绍了一种名为GridAR的新型自回归图像生成测试时缩放框架，通过使用网格划分的渐进生成方案和布局指定的提示重构，提高了质量并降低了计算成本。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "GaINeR: Geometry-Aware Implicit Network Representation",
+        "summary": "Implicit Neural Representations (INRs) have become an essential tool for modeling continuous 2D images, enabling high-fidelity reconstruction, super-resolution, and compression. Popular architectures such as SIREN, WIRE, and FINER demonstrate the potential of INR for capturing fine-grained image details. However, traditional INRs often lack explicit geometric structure and have limited capabilities for local editing or integration with physical simulation, restricting their applicability in dynamic or interactive settings. To address these limitations, we propose GaINeR: Geometry-Aware Implicit Network Representation, a novel framework for 2D images that combines trainable Gaussian distributions with a neural network-based INR. For a given image coordinate, the model retrieves the K nearest Gaussians, aggregates distance-weighted embeddings, and predicts the RGB value via a neural network. This design enables continuous image representation, interpretable geometric structure, and flexible local editing, providing a foundation for physically aware and interactive image manipulation. The official implementation of our method is publicly available at https://github.com/WJakubowska/GaINeR.",
+        "url": "http://arxiv.org/abs/2511.20924v1",
+        "published_date": "2025-11-25T23:37:54+00:00",
+        "updated_date": "2025-11-25T23:37:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Weronika Jakubowska",
+            "Mikołaj Zieliński",
+            "Rafał Tobiasz",
+            "Krzysztof Byrski",
+            "Maciej Zięba",
+            "Dominik Belter",
+            "Przemysław Spurek"
+        ],
+        "tldr": "GaINeR introduces a geometry-aware implicit neural representation using Gaussian distributions to enable local editing and integration with physical simulations for 2D images, addressing limitations of traditional INRs.",
+        "tldr_zh": "GaINeR 引入了一种几何感知隐式神经表示，它使用高斯分布来实现二维图像的局部编辑并与物理模拟集成，从而解决了传统 INR 的局限性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
