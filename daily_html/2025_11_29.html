@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - November 27, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - November 29, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>November 27, 2025</p>
+            <p>November 29, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DiverseVAR: Balancing Diversity and Quality of Next-Scale Visual Autoregressive Models</h2>
+            <h2 class="paper-title">Z-Image: An Efficient Image Generation Foundation Model with Single-Stream Diffusion Transformer</h2>
             
-            <p class="paper-summary">We introduce DiverseVAR, a framework that enhances the diversity of text-conditioned visual autoregressive models (VAR) at test time without requiring retraining, fine-tuning, or substantial computational overhead. While VAR models have recently emerged as strong competitors to diffusion and flow models for image generation, they suffer from a critical limitation in diversity, often producing nearly identical images even for simple prompts. This issue has largely gone unnoticed amid the predominant focus on image quality. We address this limitation at test time in two stages. First, inspired by diversity enhancement techniques in diffusion models, we propose injecting noise into the text embedding. This introduces a trade-off between diversity and image quality: as diversity increases, the image quality sharply declines. To preserve quality, we propose scale-travel: a novel latent refinement technique inspired by time-travel strategies in diffusion models. Specifically, we use a multi-scale autoencoder to extract coarse-scale tokens that enable us to resume generation at intermediate stages. Extensive experiments show that combining text-embedding noise injection with our scale-travel refinement significantly enhances diversity while minimizing image-quality degradation, achieving a new Pareto frontier in the diversity-quality trade-off.</p>
+            <p class="paper-summary">The landscape of high-performance image generation models is currently dominated by proprietary systems, such as Nano Banana Pro and Seedream 4.0. Leading open-source alternatives, including Qwen-Image, Hunyuan-Image-3.0 and FLUX.2, are characterized by massive parameter counts (20B to 80B), making them impractical for inference, and fine-tuning on consumer-grade hardware. To address this gap, we propose Z-Image, an efficient 6B-parameter foundation generative model built upon a Scalable Single-Stream Diffusion Transformer (S3-DiT) architecture that challenges the "scale-at-all-costs" paradigm. By systematically optimizing the entire model lifecycle -- from a curated data infrastructure to a streamlined training curriculum -- we complete the full training workflow in just 314K H800 GPU hours (approx. $630K). Our few-step distillation scheme with reward post-training further yields Z-Image-Turbo, offering both sub-second inference latency on an enterprise-grade H800 GPU and compatibility with consumer-grade hardware (<16GB VRAM). Additionally, our omni-pre-training paradigm also enables efficient training of Z-Image-Edit, an editing model with impressive instruction-following capabilities. Both qualitative and quantitative experiments demonstrate that our model achieves performance comparable to or surpassing that of leading competitors across various dimensions. Most notably, Z-Image exhibits exceptional capabilities in photorealistic image generation and bilingual text rendering, delivering results that rival top-tier commercial models, thereby demonstrating that state-of-the-art results are achievable with significantly reduced computational overhead. We publicly release our code, weights, and online demo to foster the development of accessible, budget-friendly, yet state-of-the-art generative models.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: DiverseVAR introduces a novel test-time method to improve the diversity of visual autoregressive models by injecting noise into text embeddings and using a multi-scale autoencoder for quality refinement, achieving a better diversity-quality trade-off without retraining.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: Z-Image is a 6B-parameter efficient image generation model that achieves comparable or superior performance to larger models while significantly reducing computational costs and enabling fine-tuning on consumer hardware.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: DiverseVAR 提出了一种新的测试时方法，通过将噪声注入文本嵌入并使用多尺度自编码器进行质量改进，来提高视觉自回归模型的多样性，从而在不重新训练的情况下实现更好的多样性-质量权衡。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: Z-Image是一个60亿参数的高效图像生成模型，它在显著降低计算成本并在消费级硬件上进行微调的同时，实现了与更大模型相当甚至更优越的性能。</p>
             
 
             
@@ -232,16 +232,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -256,8 +256,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -286,18 +286,18 @@
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.21415v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.22699v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Mingue Park, Prin Phunyaphibarn, Phillip Y. Lee, Minhyuk Sung</p>
+            <p class="paper-authors">Authors: Z-Image Team, Huanqia Cai, Sihan Cao, Ruoyi Du, Peng Gao, Steven Hoi, Shijie Huang, Zhaohui Hou, Dengyang Jiang, Xin Jin, Liangchen Li, Zhen Li, Zhong-Yu Li, David Liu, Dongyang Liu, Junhan Shi, Qilong Wu, Feng Yu, Chi Zhang, Shifeng Zhang, Shilin Zhou</p>
             
         </motion.div>
         
@@ -309,14 +309,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DeepRFTv2: Kernel-level Learning for Image Deblurring</h2>
+            <h2 class="paper-title">Markovian Scale Prediction: A New Era of Visual Autoregressive Generation</h2>
             
-            <p class="paper-summary">It is well-known that if a network aims to learn how to deblur, it should understand the blur process. Blurring is naturally caused by the convolution of the sharp image with the blur kernel. Thus, allowing the network to learn the blur process in the kernel-level can significantly improve the image deblurring performance. But, current deep networks are still at the pixel-level learning stage, either performing end-to-end pixel-level restoration or stage-wise pseudo kernel-level restoration, failing to enable the deblur model to understand the essence of the blur. To this end, we propose Fourier Kernel Estimator (FKE), which considers the activation operation in Fourier space and converts the convolution problem in the spatial domain to a multiplication problem in Fourier space. Our FKE, jointly optimized with the deblur model, enables the network to learn the kernel-level blur process with low complexity and without any additional supervision. Furthermore, we change the convolution object of the kernel from ``image" to network extracted ``feature", whose rich semantic and structural information is more suitable to blur process learning. With the convolution of the feature and the estimated kernel, our model can learn the essence of blur in kernel-level. To further improve the efficiency of feature extraction, we design a decoupled multi-scale architecture with multiple hierarchical sub-unets with a reversible strategy, which allows better multi-scale encoding and decoding in low training memory. Extensive experiments indicate that our method achieves state-of-the-art motion deblurring results and show potential for handling other kernel-related problems. Analysis also shows our kernel estimator is able to learn physically meaningful kernels. The code will be available at https://github.com/DeepMed-Lab-ECNU/Single-Image-Deblur.</p>
+            <p class="paper-summary">Visual AutoRegressive modeling (VAR) based on next-scale prediction has revitalized autoregressive visual generation. Although its full-context dependency, i.e., modeling all previous scales for next-scale prediction, facilitates more stable and comprehensive representation learning by leveraging complete information flow, the resulting computational inefficiency and substantial overhead severely hinder VAR's practicality and scalability. This motivates us to develop a new VAR model with better performance and efficiency without full-context dependency. To address this, we reformulate VAR as a non-full-context Markov process, proposing Markov-VAR. It is achieved via Markovian Scale Prediction: we treat each scale as a Markov state and introduce a sliding window that compresses certain previous scales into a compact history vector to compensate for historical information loss owing to non-full-context dependency. Integrating the history vector with the Markov state yields a representative dynamic state that evolves under a Markov process. Extensive experiments demonstrate that Markov-VAR is extremely simple yet highly effective: Compared to VAR on ImageNet, Markov-VAR reduces FID by 10.5% (256 $\times$ 256) and decreases peak memory consumption by 83.8% (1024 $\times$ 1024). We believe that Markov-VAR can serve as a foundation for future research on visual autoregressive generation and other downstream tasks.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a novel image deblurring method, DeepRFTv2, which uses a Fourier Kernel Estimator (FKE) to learn the blur process at the kernel level, operating on network-extracted features and employing a decoupled multi-scale architecture for improved efficiency.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Markov-VAR, a more efficient Visual AutoRegressive model using Markovian Scale Prediction to reduce computational overhead and memory consumption compared to standard VAR, while achieving better performance on ImageNet.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种新的图像去模糊方法DeepRFTv2，它使用傅里叶核估计器（FKE）在核级别学习模糊过程，对网络提取的特征进行操作，并采用解耦的多尺度架构来提高效率。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 Markov-VAR，这是一种更高效的视觉自回归模型，它使用马尔可夫尺度预测来减少计算开销和内存消耗，与标准 VAR 相比，在 ImageNet 上实现了更好的性能。</p>
             
 
             
@@ -387,11 +387,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.21132v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.23334v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xintian Mao, Haofei Song, Yin-Nian Liu, Qingli Li, Yan Wang</p>
+            <p class="paper-authors">Authors: Yu Zhang, Jingyi Liu, Yiwei Shi, Qi Zhang, Duoqian Miao, Changwei Wang, Longbing Cao</p>
             
         </motion.div>
         
@@ -403,14 +403,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">PG-ControlNet: A Physics-Guided ControlNet for Generative Spatially Varying Image Deblurring</h2>
+            <h2 class="paper-title">Simultaneous Image Quality Improvement and Artefacts Correction in Accelerated MRI</h2>
             
-            <p class="paper-summary">Spatially varying image deblurring remains a fundamentally ill-posed problem, especially when degradations arise from complex mixtures of motion and other forms of blur under significant noise. State-of-the-art learning-based approaches generally fall into two paradigms: model-based deep unrolling methods that enforce physical constraints by modeling the degradations, but often produce over-smoothed, artifact-laden textures, and generative models that achieve superior perceptual quality yet hallucinate details due to weak physical constraints. In this paper, we propose a novel framework that uniquely reconciles these paradigms by taming a powerful generative prior with explicit, dense physical constraints. Rather than oversimplifying the degradation field, we model it as a dense continuum of high-dimensional compressed kernels, ensuring that minute variations in motion and other degradation patterns are captured. We leverage this rich descriptor field to condition a ControlNet architecture, strongly guiding the diffusion sampling process. Extensive experiments demonstrate that our method effectively bridges the gap between physical accuracy and perceptual realism, outperforming state-of-the-art model-based methods as well as generative baselines in challenging, severely blurred scenarios.</p>
+            <p class="paper-summary">MR data are acquired in the frequency domain, known as k-space. Acquiring high-quality and high-resolution MR images can be time-consuming, posing a significant challenge when multiple sequences providing complementary contrast information are needed or when the patient is unable to remain in the scanner for an extended period of time. Reducing k-space measurements is a strategy to speed up acquisition, but often leads to reduced quality in reconstructed images. Additionally, in real-world MRI, both under-sampled and full-sampled images are prone to artefacts, and correcting these artefacts is crucial for maintaining diagnostic accuracy. Deep learning methods have been proposed to restore image quality from under-sampled data, while others focused on the correction of artefacts that result from the noise or motion. No approach has however been proposed so far that addresses both acceleration and artefacts correction, limiting the performance of these models when these degradation factors occur simultaneously. To address this gap, we present a method for recovering high-quality images from under-sampled data with simultaneously correction for noise and motion artefact called USArt (Under-Sampling and Artifact correction model). Customized for 2D brain anatomical images acquired with Cartesian sampling, USArt employs a dual sub-model approach. The results demonstrate remarkable increase of signal-to-noise ratio (SNR) and contrast in the images restored. Various under-sampling strategies and degradation levels were explored, with the gradient under-sampling strategy yielding the best outcomes. We achieved up to 5x acceleration and simultaneously artefacts correction without significant degradation, showcasing the model's robustness in real-world settings.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces PG-ControlNet, a novel approach for spatially varying image deblurring that combines physics-based modeling with generative diffusion models conditioned on a dense kernel field to achieve both physical accuracy and perceptual realism.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces USArt, a deep learning model that simultaneously improves image quality and corrects artifacts in accelerated MRI, specifically tailored for 2D brain anatomical images with Cartesian sampling, achieving up to 5x acceleration.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了PG-ControlNet，一种新颖的空变图像去模糊方法，它结合了基于物理的建模和生成扩散模型，并以密集的核场为条件，以实现物理精度和感知真实感。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为USArt的深度学习模型，该模型可以同时提高加速MRI的图像质量并校正伪影，特别是针对采用笛卡尔采样的2D脑部解剖图像，实现了高达5倍的加速。</p>
             
 
             
@@ -420,16 +420,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -481,11 +481,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.21043v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.23274v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Hakki Motorcu, Mujdat Cetin</p>
+            <p class="paper-authors">Authors: Georgia Kanli, Daniele Perlo, Selma Boudissa, Radovan Jirik, Olivier Keunen</p>
             
         </motion.div>
         
@@ -497,14 +497,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">A deep learning model to reduce agent dose for contrast-enhanced MRI of the cerebellopontine angle cistern</h2>
+            <h2 class="paper-title">db-SP: Accelerating Sparse Attention for Visual Generative Models with Dual-Balanced Sequence Parallelism</h2>
             
-            <p class="paper-summary">Objectives: To evaluate a deep learning (DL) model for reducing the agent dose of contrast-enhanced T1-weighted MRI (T1ce) of the cerebellopontine angle (CPA) cistern. Materials and methods: In this multi-center retrospective study, T1 and T1ce of vestibular schwannoma (VS) patients were used to simulate low-dose T1ce with varying reductions of contrast agent dose. DL models were trained to restore standard-dose T1ce from the low-dose simulation. The image quality and segmentation performance of the DL-restored T1ce were evaluated. A head and neck radiologist was asked to rate DL-restored images in multiple aspects, including image quality and diagnostic characterization. Results: 203 MRI studies from 72 VS patients (mean age, 58.51 \pm 14.73, 39 men) were evaluated. As the input dose increased, the structural similarity index measure of the restored T1ce increased from 0.639 \pm 0.113 to 0.993 \pm 0.009, and the peak signal-to-noise ratio increased from 21.6 \pm 3.73 dB to 41.4 \pm 4.84 dB. At 10% input dose, using DL-restored T1ce for segmentation improved the Dice from 0.673 to 0.734, the 95% Hausdorff distance from 2.38 mm to 2.07 mm, and the average surface distance from 1.00 mm to 0.59 mm. Both DL-restored T1ce from 10% and 30% input doses showed excellent images, with the latter being considered more informative. Conclusion: The DL model improved the image quality of low-dose MRI of the CPA cistern, which makes lesion detection and diagnostic characterization possible with 10% - 30% of the standard dose.</p>
+            <p class="paper-summary">Scaling Diffusion Transformer (DiT) inference via sequence parallelism is critical for reducing latency in visual generation, but is severely hampered by workload imbalance when applied to models employing block-wise sparse attention. The imbalance stems from the inherent variation in sparsity across attention heads and the irregular distribution of dense blocks within the sparse mask, when sequence parallelism is applied along the head dimension (as in Ulysses) or the block dimension (as in Ring Attention). In this paper, we formalize a sparse imbalance ratio to quantify the imbalance, and propose db-SP, a sparsity-aware sequence parallelism technique that tackles the challenge. db-SP contains a dual-level partitioning approach that achieves near-perfect workload balance at both the head and block levels with negligible overhead. Furthermore, to handle the evolving sparsity patterns across denoising steps and layers, db-SP dynamically determines the parallel degrees for the head and block dimensions at runtime. Experimental results demonstrate that db-SP delivers an end-to-end speedup of 1.25x and an attention-specific speedup of 1.40x over state-of-the-art sequence parallel methods on average. Code is available at https://github.com/thu-nics/db-SP.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a deep learning model to restore the image quality of contrast-enhanced MRI of the cerebellopontine angle cistern with significantly reduced contrast agent dose (10%-30% of standard dose), enabling lesion detection and diagnostic characterization.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces db-SP, a sparsity-aware sequence parallelism technique for accelerating sparse attention in visual generative models, achieving improved performance compared to existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种深度学习模型，用于恢复以显著降低造影剂剂量（标准剂量的10%-30%）的脑桥小脑角池的对比增强MRI图像质量，从而实现病灶检测和诊断特征。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了db-SP，一种稀疏感知序列并行技术，用于加速视觉生成模型中的稀疏注意力机制，并实现了比现有方法更好的性能。</p>
             
 
             
@@ -514,16 +514,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -575,11 +575,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.20926v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.23113v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yunjie Chen, Rianne A. Weber, Olaf M. Neve, Stephan R. Romeijn, Erik F. Hensen, Jelmer M. Wolterink, Qian Tao, Marius Staring, Berit M. Verbist</p>
+            <p class="paper-authors">Authors: Siqi Chen, Ke Hong, Tianchen Zhao, Ruiqi Xie, Zhenhua Zhu, Xudong Zhang, Yu Wang</p>
             
         </motion.div>
         
@@ -591,14 +591,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">PixelDiT: Pixel Diffusion Transformers for Image Generation</h2>
+            <h2 class="paper-title">DenoiseGS: Gaussian Reconstruction Model for Burst Denoising</h2>
             
-            <p class="paper-summary">Latent-space modeling has been the standard for Diffusion Transformers (DiTs). However, it relies on a two-stage pipeline where the pretrained autoencoder introduces lossy reconstruction, leading to error accumulation while hindering joint optimization. To address these issues, we propose PixelDiT, a single-stage, end-to-end model that eliminates the need for the autoencoder and learns the diffusion process directly in the pixel space. PixelDiT adopts a fully transformer-based architecture shaped by a dual-level design: a patch-level DiT that captures global semantics and a pixel-level DiT that refines texture details, enabling efficient training of a pixel-space diffusion model while preserving fine details. Our analysis reveals that effective pixel-level token modeling is essential to the success of pixel diffusion. PixelDiT achieves 1.61 FID on ImageNet 256x256, surpassing existing pixel generative models by a large margin. We further extend PixelDiT to text-to-image generation and pretrain it at the 1024x1024 resolution in pixel space. It achieves 0.74 on GenEval and 83.5 on DPG-bench, approaching the best latent diffusion models.</p>
+            <p class="paper-summary">Burst denoising methods are crucial for enhancing images captured on handheld devices, but they often struggle with large motion or suffer from prohibitive computational costs. In this paper, we propose DenoiseGS, the first framework to leverage the efficiency of 3D Gaussian Splatting for burst denoising. Our approach addresses two key challenges when applying feedforward Gaussian reconsturction model to noisy inputs: the degradation of Gaussian point clouds and the loss of fine details. To this end, we propose a Gaussian self-consistency (GSC) loss, which regularizes the geometry predicted from noisy inputs with high-quality Gaussian point clouds. These point clouds are generated from clean inputs by the same model that we are training, thereby alleviating potential bias or domain gaps. Additionally, we introduce a log-weighted frequency (LWF) loss to strengthen supervision within the spectral domain, effectively preserving fine-grained details. The LWF loss adaptively weights frequency discrepancies in a logarithmic manner, emphasizing challenging high-frequency details. Extensive experiments demonstrate that DenoiseGS significantly exceeds the state-of-the-art NeRF-based methods on both burst denoising and novel view synthesis under noisy conditions, while achieving \textbf{250$\times$} faster inference speed. Code and models are released at https://github.com/yscheng04/DenoiseGS.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces PixelDiT, a single-stage, end-to-end diffusion transformer for image generation that operates directly in pixel space, achieving state-of-the-art results compared to existing pixel generative models.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: DenoiseGS introduces a 3D Gaussian Splatting-based framework for burst denoising, achieving significant speed improvements and state-of-the-art performance by using a Gaussian self-consistency loss and a log-weighted frequency loss.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 PixelDiT，一种单阶段、端到端的图像生成扩散 Transformer，直接在像素空间中操作，与现有的像素生成模型相比，实现了最先进的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: DenoiseGS 提出了一个基于 3D Gaussian Splatting 的 burst 降噪框架，通过使用 Gaussian 自洽性损失和对数加权频率损失，显著提高了速度并实现了最先进的性能。</p>
             
 
             
@@ -608,24 +608,24 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -669,11 +669,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.20645v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.22939v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yongsheng Yu, Wei Xiong, Weili Nie, Yichen Sheng, Shiqiu Liu, Jiebo Luo</p>
+            <p class="paper-authors">Authors: Yongsen Cheng, Yuanhao Cai, Yulun Zhang</p>
             
         </motion.div>
         
@@ -685,14 +685,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">The Consistency Critic: Correcting Inconsistencies in Generated Images via Reference-Guided Attentive Alignment</h2>
+            <h2 class="paper-title">MammoRGB: Dual-View Mammogram Synthesis Using Denoising Diffusion Probabilistic Models</h2>
             
-            <p class="paper-summary">Previous works have explored various customized generation tasks given a reference image, but they still face limitations in generating consistent fine-grained details. In this paper, our aim is to solve the inconsistency problem of generated images by applying a reference-guided post-editing approach and present our ImageCritic. We first construct a dataset of reference-degraded-target triplets obtained via VLM-based selection and explicit degradation, which effectively simulates the common inaccuracies or inconsistencies observed in existing generation models. Furthermore, building on a thorough examination of the model's attention mechanisms and intrinsic representations, we accordingly devise an attention alignment loss and a detail encoder to precisely rectify inconsistencies. ImageCritic can be integrated into an agent framework to automatically detect inconsistencies and correct them with multi-round and local editing in complex scenarios. Extensive experiments demonstrate that ImageCritic can effectively resolve detail-related issues in various customized generation scenarios, providing significant improvements over existing methods.</p>
+            <p class="paper-summary">Purpose: This study aims to develop and evaluate a three channel denoising diffusion probabilistic model (DDPM) for synthesizing single breast dual view mammograms and to assess the impact of channel representations on image fidelity and cross view consistency. Materials and Methods: A pretrained three channel DDPM, sourced from Hugging Face, was fine tuned on a private dataset of 11020 screening mammograms to generate paired craniocaudal (CC) and mediolateral oblique (MLO) views. Three third channel encodings of the CC and MLO views were evaluated: sum, absolute difference, and zero channel. Each model produced 500 synthetic image pairs. Quantitative assessment involved breast mask segmentation using Intersection over Union (IoU) and Dice Similarity Coefficient (DSC), with distributional comparisons against 2500 real pairs using Earth Movers Distance (EMD) and Kolmogorov Smirnov (KS) tests. Qualitative evaluation included a visual Turing test by a non expert radiologist to assess cross view consistency and artifacts. Results: Synthetic mammograms showed IoU and DSC distributions comparable to real images, with EMD and KS values (0.020 and 0.077 respectively). Models using sum or absolute difference encodings outperformed others in IoU and DSC (p < 0.001), though distributions remained broadly similar. Generated CC and MLO views maintained cross view consistency, with 6 to 8 percent of synthetic images exhibiting artifacts consistent with those in the training data. Conclusion: Three channel DDPMs can generate realistic and anatomically consistent dual view mammograms with promising applications in dataset augmentation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ImageCritic, a reference-guided post-editing approach to correct inconsistencies in generated images, using a VLM-constructed dataset and attention alignment loss.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores the use of a three-channel denoising diffusion probabilistic model (DDPM) to synthesize dual-view mammograms, demonstrating realistic and anatomically consistent results for potential dataset augmentation.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为ImageCritic的参考引导后编辑方法，通过VLM构建的数据集和注意力对齐损失来纠正生成图像中的不一致性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文探讨了使用三通道去噪扩散概率模型 (DDPM) 来合成双视图乳房X光片，展示了逼真且解剖学上一致的结果，可用于潜在的数据集增强。</p>
             
 
             
@@ -726,8 +726,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -763,11 +763,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.20614v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.22759v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ziheng Ouyang, Yiren Song, Yaoli Liu, Shihao Zhu, Qibin Hou, Ming-Ming Cheng, Mike Zheng Shou</p>
+            <p class="paper-authors">Authors: Jorge Alberto Garza-Abdala, Gerardo A. Fumagal-González, Daly Avendano, Servando Cardona, Sadam Hussain, Eduardo de Avila-Armenta, Jasiel H. Toscano-Martínez, Diana S. M. Rosales Gurmendi, Alma A. Pedro-Pérez, Jose Gerardo Tamez-Pena</p>
             
         </motion.div>
         
@@ -779,14 +779,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DINO-Tok: Adapting DINO for Visual Tokenizers</h2>
+            <h2 class="paper-title">VQRAE: Representation Quantization Autoencoders for Multimodal Understanding, Generation and Reconstruction</h2>
             
-            <p class="paper-summary">Recent advances in visual generation have highlighted the rise of Latent Generative Models (LGMs), which rely on effective visual tokenizers to bridge pixels and semantics. However, existing tokenizers are typically trained from scratch and struggle to balance semantic representation and reconstruction fidelity, particularly in high-dimensional latent spaces. In this work, we introduce DINO-Tok, a DINO-based visual tokenizer that unifies hierarchical representations into an information-complete latent space. By integrating shallow features that retain fine-grained details with deep features encoding global semantics, DINO-Tok effectively bridges pretrained representations and visual generation. We further analyze the challenges of vector quantization (VQ) in this high-dimensional space, where key information is often lost and codebook collapse occurs. We thus propose a global PCA reweighting mechanism to stabilize VQ and preserve essential information across dimensions. On ImageNet 256$\times$256, DINO-Tok achieves state-of-the-art reconstruction performance, reaching 28.54 PSNR for autoencoding and 23.98 PSNR for VQ-based modeling, significantly outperforming prior tokenizers and comparable to billion-level data trained models (such as Hunyuan and Wan). These results demonstrate that adapting powerful pretrained vision models like DINO for tokenization enables semantically aligned and high-fidelity latent representations, enabling next-generation visual generative models. Code will be publicly available at https://github.com/MKJia/DINO-Tok.</p>
+            <p class="paper-summary">Unifying multimodal understanding, generation and reconstruction representation in a single tokenizer remains a key challenge in building unified models. Previous research predominantly attempts to address this in a dual encoder paradigm, e.g., utilizing the separate encoders for understanding and generation respectively or balancing semantic representations and low-level features with contrastive loss. In this paper, we propose VQRAE, a Vector Quantization version of Representation AutoEncoders, which pioneers the first exploration in unified representation to produce Continuous semantic features for image understanding and Discrete tokens for visual generation within a unified tokenizer. Specifically, we build upon pretrained vision foundation models with a symmetric ViT decoder and adopt a two-stage training strategy: first, it freezes the encoder and learns a high-dimensional semantic VQ codebook with pixel reconstruction objective; then jointly optimizes the encoder with self-distillation constraints. This design enables negligible semantic information for maintaining the ability of multimodal understanding, discrete tokens that are compatible for generation and fine-grained reconstruction. Besides, we identify the intriguing property in quantizing semantic encoders that rely on high-dimensional codebook in contrast to the previous common practice of low-dimensional codebook in image reconstruction. The semantic VQ codebook can achieve a 100% utilization ratio at a dimension of 1536. VQRAE presents competitive performance on several benchmarks of visual understanding, generation and reconstruction with promising scaling property in the autoregressive paradigm for its discrete merits.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DINO-Tok, a DINO-based visual tokenizer that leverages hierarchical representations and PCA reweighting to achieve state-of-the-art reconstruction performance in visual generation, outperforming existing tokenizers.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces VQRAE, a novel Vector Quantization Representation Autoencoder that unifies multimodal understanding, generation, and reconstruction within a single tokenizer, achieving competitive performance on various benchmarks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 DINO-Tok，一种基于 DINO 的视觉标记器，它利用分层表示和 PCA 重新加权，在视觉生成方面实现了最先进的重建性能，优于现有的标记器。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了VQRAE，一种新型的向量量化表示自编码器，它在单个tokenizer中统一了多模态理解、生成和重建，并在各种基准测试中取得了具有竞争力的性能。</p>
             
 
             
@@ -796,8 +796,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -846,22 +846,22 @@
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.20565v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.23386v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Mingkai Jia, Mingxiao Li, Liaoyuan Fan, Tianxing Shi, Jiaxin Guo, Zeming Li, Xiaoyang Guo, Xiao-Xiao Long, Qian Zhang, Ping Tan, Wei Yin</p>
+            <p class="paper-authors">Authors: Sinan Du, Jiahao Guo, Bo Li, Shuhao Cui, Zhengzhuo Xu, Yifu Luo, Yongxian Wei, Kun Gai, Xinggang Wang, Kai Wu, Chun Yuan</p>
             
         </motion.div>
         
@@ -873,14 +873,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation</h2>
+            <h2 class="paper-title">Flow Straighter and Faster: Efficient One-Step Generative Modeling via MeanFlow on Rectified Trajectories</h2>
             
-            <p class="paper-summary">Recent visual autoregressive (AR) models have shown promising capabilities in text-to-image generation, operating in a manner similar to large language models. While test-time computation scaling has brought remarkable success in enabling reasoning-enhanced outputs for challenging natural language tasks, its adaptation to visual AR models remains unexplored and poses unique challenges. Naively applying test-time scaling strategies such as Best-of-N can be suboptimal: they consume full-length computation on erroneous generation trajectories, while the raster-scan decoding scheme lacks a blueprint of the entire canvas, limiting scaling benefits as only a few prompt-aligned candidates are generated. To address these, we introduce GridAR, a test-time scaling framework designed to elicit the best possible results from visual AR models. GridAR employs a grid-partitioned progressive generation scheme in which multiple partial candidates for the same position are generated within a canvas, infeasible ones are pruned early, and viable ones are fixed as anchors to guide subsequent decoding. Coupled with this, we present a layout-specified prompt reformulation strategy that inspects partial views to infer a feasible layout for satisfying the prompt. The reformulated prompt then guides subsequent image generation to mitigate the blueprint deficiency. Together, GridAR achieves higher-quality results under limited test-time scaling: with N=4, it even outperforms Best-of-N (N=8) by 14.4% on T2I-CompBench++ while reducing cost by 25.6%. It also generalizes to autoregressive image editing, showing comparable edit quality and a 13.9% gain in semantic preservation on PIE-Bench over larger-N baselines.</p>
+            <p class="paper-summary">Flow-based generative models have recently demonstrated strong performance, yet sampling typically relies on expensive numerical integration of ordinary differential equations (ODEs). Rectified Flow enables one-step sampling by learning nearly straight probability paths, but achieving such straightness requires multiple computationally intensive reflow iterations. MeanFlow achieves one-step generation by directly modeling the average velocity over time; however, when trained on highly curved flows, it suffers from slow convergence and noisy supervision. To address these limitations, we propose Rectified MeanFlow, a framework that models the mean velocity field along the rectified trajectory using only a single reflow step. This eliminates the need for perfectly straightened trajectories while enabling efficient training. Furthermore, we introduce a simple yet effective truncation heuristic that aims to reduce residual curvature and further improve performance. Extensive experiments on ImageNet at 64, 256, and 512 resolutions show that Re-MeanFlow consistently outperforms prior one-step flow distillation and Rectified Flow methods in both sample quality and training efficiency. Code is available at https://github.com/Xinxi-Zhang/Re-MeanFlow.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces GridAR, a novel test-time scaling framework for autoregressive image generation that improves quality and reduces computational cost by using a grid-partitioned progressive generation scheme and layout-specified prompt reformulation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Rectified MeanFlow, a novel approach to one-step generative modeling that combines the benefits of Rectified Flow and MeanFlow, achieving improved sample quality and training efficiency, particularly on high-resolution ImageNet datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为GridAR的新型自回归图像生成测试时缩放框架，通过使用网格划分的渐进生成方案和布局指定的提示重构，提高了质量并降低了计算成本。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为 Rectified MeanFlow 的新颖的单步生成模型方法，它结合了 Rectified Flow 和 MeanFlow 的优点，从而提高了样本质量和训练效率，尤其是在高分辨率 ImageNet 数据集上。</p>
             
 
             
@@ -951,11 +951,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.21185v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.23342v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Joonhyung Park, Hyeongwon Jang, Joowon Kim, Eunho Yang</p>
+            <p class="paper-authors">Authors: Xinxi Zhang, Shiwei Tan, Quang Nguyen, Quan Dao, Ligong Han, Xiaoxiao He, Tunyu Zhang, Alen Mrdovic, Dimitris Metaxas</p>
             
         </motion.div>
         
@@ -967,14 +967,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">GaINeR: Geometry-Aware Implicit Network Representation</h2>
+            <h2 class="paper-title">DNA-Prior: Unsupervised Denoise Anything via Dual-Domain Prior</h2>
             
-            <p class="paper-summary">Implicit Neural Representations (INRs) have become an essential tool for modeling continuous 2D images, enabling high-fidelity reconstruction, super-resolution, and compression. Popular architectures such as SIREN, WIRE, and FINER demonstrate the potential of INR for capturing fine-grained image details. However, traditional INRs often lack explicit geometric structure and have limited capabilities for local editing or integration with physical simulation, restricting their applicability in dynamic or interactive settings. To address these limitations, we propose GaINeR: Geometry-Aware Implicit Network Representation, a novel framework for 2D images that combines trainable Gaussian distributions with a neural network-based INR. For a given image coordinate, the model retrieves the K nearest Gaussians, aggregates distance-weighted embeddings, and predicts the RGB value via a neural network. This design enables continuous image representation, interpretable geometric structure, and flexible local editing, providing a foundation for physically aware and interactive image manipulation. The official implementation of our method is publicly available at https://github.com/WJakubowska/GaINeR.</p>
+            <p class="paper-summary">Medical imaging pipelines critically rely on robust denoising to stabilise downstream tasks such as segmentation and reconstruction. However, many existing denoisers depend on large annotated datasets or supervised learning, which restricts their usability in clinical environments with heterogeneous modalities and limited ground-truth data. To address this limitation, we introduce DNA-Prior, a universal unsupervised denoising framework that reconstructs clean images directly from corrupted observations through a mathematically principled hybrid prior. DNA-Prior integrates (i) an implicit architectural prior, enforced through a deep network parameterisation, with (ii) an explicit spectral-spatial prior composed of a frequency-domain fidelity term and a spatial regularisation functional. This dual-domain formulation yields a well-structured optimisation problem that jointly preserves global frequency characteristics and local anatomical structure, without requiring any external training data or modality-specific tuning. Experiments across multiple modalities show that DNA achieves consistent noise suppression and structural preservation under diverse noise conditions.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: GaINeR introduces a geometry-aware implicit neural representation using Gaussian distributions to enable local editing and integration with physical simulations for 2D images, addressing limitations of traditional INRs.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DNA-Prior, an unsupervised denoising framework for medical images that uses a hybrid prior combining implicit architectural and explicit spectral-spatial constraints, achieving denoising without training data or modality-specific tuning.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: GaINeR 引入了一种几何感知隐式神经表示，它使用高斯分布来实现二维图像的局部编辑并与物理模拟集成，从而解决了传统 INR 的局限性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为DNA-Prior的无监督医学图像去噪框架，该框架使用混合先验，结合了隐式架构先验和显式频谱-空间约束，无需训练数据或特定模态调整即可实现去噪。</p>
             
 
             
@@ -1045,18 +1045,112 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.20924v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.23124v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Weronika Jakubowska, Mikołaj Zieliński, Rafał Tobiasz, Krzysztof Byrski, Maciej Zięba, Dominik Belter, Przemysław Spurek</p>
+            <p class="paper-authors">Authors: Yanqi Cheng, Chun-Wun Cheng, Jim Denholm, Thiago Lima, Javier A. Montoya-Zegarra, Richard Goodwin, Carola-Bibiane Schönlieb, Angelica I Aviles-Rivero</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.45, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Guiding Visual Autoregressive Models through Spectrum Weakening</h2>
+            
+            <p class="paper-summary">Classifier-free guidance (CFG) has become a widely adopted and practical approach for enhancing generation quality and improving condition alignment. Recent studies have explored guidance mechanisms for unconditional generation, yet these approaches remain fundamentally tied to assumptions specific to diffusion models. In this work, we propose a spectrum-weakening framework for visual autoregressive (AR) models. This method works without the need for re-training, specific conditions, or any architectural modifications. It achieves this by constructing a controllable weak model in the spectral domain. We theoretically show that invertible spectral transformations preserve information, while selectively retaining only a subset of spectrum introduces controlled information reduction. Based on this insight, we perform spectrum selection along the channel dimension of internal representations, which avoids the structural constraints imposed by diffusion models. We further introduce two spectrum renormalization strategies that ensures numerical stability during the weakening process. Extensive experiments were conducted on both discrete and continuous AR models, with text or class conditioning. The results demonstrate that our method enables high-quality unconditional generation while maintaining strong prompt alignment for conditional generation.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a spectrum-weakening framework for visual autoregressive models that enhances generation quality and condition alignment without retraining or architectural modifications by controlling information reduction in the spectral domain.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于视觉自回归模型的频谱弱化框架，通过在频谱域中控制信息减少，无需重新训练或修改架构即可提高生成质量和条件对齐。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2511.22991v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Chaoyang Wang, Tianmeng Yang, Jingdong Wang, Yunhai Tong</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-12-01 03:05:36 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-12-01 03:09:02 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
