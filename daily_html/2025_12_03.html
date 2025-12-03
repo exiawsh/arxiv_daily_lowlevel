@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - November 24, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - December 03, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>November 24, 2025</p>
+            <p>December 03, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">NAF: Zero-Shot Feature Upsampling via Neighborhood Attention Filtering</h2>
+            <h2 class="paper-title">Glance: Accelerating Diffusion Models with 1 Sample</h2>
             
-            <p class="paper-summary">Vision Foundation Models (VFMs) extract spatially downsampled representations, posing challenges for pixel-level tasks. Existing upsampling approaches face a fundamental trade-off: classical filters are fast and broadly applicable but rely on fixed forms, while modern upsamplers achieve superior accuracy through learnable, VFM-specific forms at the cost of retraining for each VFM. We introduce Neighborhood Attention Filtering (NAF), which bridges this gap by learning adaptive spatial-and-content weights through Cross-Scale Neighborhood Attention and Rotary Position Embeddings (RoPE), guided solely by the high-resolution input image. NAF operates zero-shot: it upsamples features from any VFM without retraining, making it the first VFM-agnostic architecture to outperform VFM-specific upsamplers and achieve state-of-the-art performance across multiple downstream tasks. It maintains high efficiency, scaling to 2K feature maps and reconstructing intermediate-resolution maps at 18 FPS. Beyond feature upsampling, NAF demonstrates strong performance on image restoration, highlighting its versatility. Code and checkpoints are available at https://github.com/valeoai/NAF.</p>
+            <p class="paper-summary">Diffusion models have achieved remarkable success in image generation, yet their deployment remains constrained by the heavy computational cost and the need for numerous inference steps. Previous efforts on fewer-step distillation attempt to skip redundant steps by training compact student models, yet they often suffer from heavy retraining costs and degraded generalization. In this work, we take a different perspective: we accelerate smartly, not evenly, applying smaller speedups to early semantic stages and larger ones to later redundant phases. We instantiate this phase-aware strategy with two experts that specialize in slow and fast denoising phases. Surprisingly, instead of investing massive effort in retraining student models, we find that simply equipping the base model with lightweight LoRA adapters achieves both efficient acceleration and strong generalization. We refer to these two adapters as Slow-LoRA and Fast-LoRA. Through extensive experiments, our method achieves up to 5 acceleration over the base model while maintaining comparable visual quality across diverse benchmarks. Remarkably, the LoRA experts are trained with only 1 samples on a single V100 within one hour, yet the resulting models generalize strongly on unseen prompts.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Neighborhood Attention Filtering (NAF), a zero-shot feature upsampling method applicable to various Vision Foundation Models (VFMs) without retraining, achieving state-of-the-art performance and high efficiency.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Glance, a method to accelerate diffusion models by strategically applying different speedups to different denoising phases using lightweight LoRA adapters, achieving significant acceleration with minimal training and strong generalization.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为邻域注意力滤波（NAF）的零样本特征上采样方法，该方法适用于各种视觉基础模型（VFM）而无需重新训练，实现了最先进的性能和高效率。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 Glance，一种加速扩散模型的方法，通过使用轻量级 LoRA 适配器有策略地将不同的加速应用于不同的去噪阶段，从而以最少的训练和强大的泛化能力实现显着的加速。</p>
             
 
             
@@ -240,16 +240,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -293,11 +293,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.18452v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.02899v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Loick Chambon, Paul Couairon, Eloi Zablocki, Alexandre Boulch, Nicolas Thome, Matthieu Cord</p>
+            <p class="paper-authors">Authors: Zhuobai Dong, Rui Zhao, Songjie Wu, Junchao Yi, Linjie Li, Zhengyuan Yang, Lijuan Wang, Alex Jinpeng Wang</p>
             
         </motion.div>
         
@@ -309,14 +309,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Robust Posterior Diffusion-based Sampling via Adaptive Guidance Scale</h2>
+            <h2 class="paper-title">Progressive Image Restoration via Text-Conditioned Video Generation</h2>
             
-            <p class="paper-summary">Diffusion models have recently emerged as powerful generative priors for solving inverse problems, achieving state-of-the-art results across various imaging tasks. A central challenge in this setting lies in balancing the contribution of the prior with the data fidelity term: overly aggressive likelihood updates may introduce artifacts, while conservative updates can slow convergence or yield suboptimal reconstructions. In this work, we propose an adaptive likelihood step-size strategy to guide the diffusion process for inverse-problem formulations. Specifically, we develop an observation-dependent weighting scheme based on the agreement between two different approximations of the intractable intermediate likelihood gradients, that adapts naturally to the diffusion schedule, time re-spacing, and injected stochasticity. The resulting approach, Adaptive Posterior diffusion Sampling (AdaPS), is hyperparameter-free and improves reconstruction quality across diverse imaging tasks - including super-resolution, Gaussian deblurring, and motion deblurring - on CelebA-HQ and ImageNet-256 validation sets. AdaPS consistently surpasses existing diffusion-based baselines in perceptual quality with minimal or no loss in distortion, without any task-specific tuning. Extensive ablation studies further demonstrate its robustness to the number of diffusion steps, observation noise levels, and varying stochasticity.</p>
+            <p class="paper-summary">Recent text-to-video models have demonstrated strong temporal generation capabilities, yet their potential for image restoration remains underexplored. In this work, we repurpose CogVideo for progressive visual restoration tasks by fine-tuning it to generate restoration trajectories rather than natural video motion. Specifically, we construct synthetic datasets for super-resolution, deblurring, and low-light enhancement, where each sample depicts a gradual transition from degraded to clean frames. Two prompting strategies are compared: a uniform text prompt shared across all samples, and a scene-specific prompting scheme generated via LLaVA multi-modal LLM and refined with ChatGPT. Our fine-tuned model learns to associate temporal progression with restoration quality, producing sequences that improve perceptual metrics such as PSNR, SSIM, and LPIPS across frames. Extensive experiments show that CogVideo effectively restores spatial detail and illumination consistency while maintaining temporal coherence. Moreover, the model generalizes to real-world scenarios on the ReLoBlur dataset without additional training, demonstrating strong zero-shot robustness and interpretability through temporal restoration.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes an adaptive weighting scheme for diffusion models in inverse problems to improve reconstruction quality across various imaging tasks without task-specific tuning, outperforming existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper repurposes a text-to-video model (CogVideo) for progressive image restoration by fine-tuning it on synthetic datasets and using text prompts to guide restoration trajectories, achieving good results in super-resolution, deblurring, and low-light enhancement.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种自适应权重方案，用于逆问题中的扩散模型，以提高各种成像任务的重建质量，无需针对特定任务的调整，并且优于现有方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文通过微调CogVideo文本到视频模型，并利用文本提示指导恢复轨迹，将其重新用于渐进式图像恢复任务。该方法在超分辨率、去模糊和低光增强方面取得了良好的效果。</p>
             
 
             
@@ -326,8 +326,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
                 </div>
                 
                 
@@ -380,18 +380,18 @@
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.18471v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.02273v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Liav Hen, Tom Tirer, Raja Giryes, Shady Abu-Hussein</p>
+            <p class="paper-authors">Authors: Peng Kang, Xijun Wang, Yu Yuan</p>
             
         </motion.div>
         
@@ -403,14 +403,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MagicWand: A Universal Agent for Generation and Evaluation Aligned with User Preference</h2>
+            <h2 class="paper-title">PGP-DiffSR: Phase-Guided Progressive Pruning for Efficient Diffusion-based Image Super-Resolution</h2>
             
-            <p class="paper-summary">Recent advances in AIGC (Artificial Intelligence Generated Content) models have enabled significant progress in image and video generation. However, users still struggle to obtain content that aligns with their preferences due to the difficulty of crafting detailed prompts and the lack of mechanisms to retain their preferences. To address these challenges, we construct \textbf{UniPrefer-100K}, a large-scale dataset comprising images, videos, and associated text that describes the styles users tend to prefer. Based on UniPrefer-100K, we propose \textbf{MagicWand}, a universal generation and evaluation agent that enhances prompts based on user preferences, leverages advanced generation models for high-quality content, and applies preference-aligned evaluation and refinement. In addition, we introduce \textbf{UniPreferBench}, the first large-scale benchmark with over 120K annotations for assessing user preference alignment across diverse AIGC tasks. Experiments on UniPreferBench demonstrate that MagicWand consistently generates content and evaluations that are well aligned with user preferences across a wide range of scenarios.</p>
+            <p class="paper-summary">Although diffusion-based models have achieved impressive results in image super-resolution, they often rely on large-scale backbones such as Stable Diffusion XL (SDXL) and Diffusion Transformers (DiT), which lead to excessive computational and memory costs during training and inference. To address this issue, we develop a lightweight diffusion method, PGP-DiffSR, by removing redundant information from diffusion models under the guidance of the phase information of inputs for efficient image super-resolution. We first identify the intra-block redundancy within the diffusion backbone and propose a progressive pruning approach that removes redundant blocks while reserving restoration capability. We note that the phase information of the restored images produced by the pruned diffusion model is not well estimated. To solve this problem, we propose a phase-exchange adapter module that explores the phase information of the inputs to guide the pruned diffusion model for better restoration performance. We formulate the progressive pruning approach and the phase-exchange adapter module into a unified model. Extensive experiments demonstrate that our method achieves competitive restoration quality while significantly reducing computational load and memory consumption. The code is available at https://github.com/yzb1997/PGP-DiffSR.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MagicWand, a universal agent for AIGC that generates and evaluates content aligned with user preferences, using a new dataset (UniPrefer-100K) and benchmark (UniPreferBench). It enhances prompts, uses advanced generation models, and refines content based on user preference.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: PGP-DiffSR introduces a phase-guided progressive pruning method to reduce the computational cost of diffusion-based image super-resolution models, achieving competitive performance with significantly reduced resources.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了MagicWand，一个通用AIGC代理，利用新的数据集（UniPrefer-100K）和基准（UniPreferBench），生成和评估与用户偏好对齐的内容。它增强提示词，使用先进的生成模型，并根据用户偏好改进内容。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: PGP-DiffSR提出了一种相位引导的渐进式剪枝方法，以降低基于扩散的图像超分辨率模型的计算成本，并在显著减少资源的情况下实现具有竞争力的性能。</p>
             
 
             
@@ -420,8 +420,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -481,11 +481,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.18352v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.02681v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zitong Xu, Dake Shen, Yaosong Du, Kexiang Hao, Jinghan Huang, Xiande Huang</p>
+            <p class="paper-authors">Authors: Zhongbao Yang, Jiangxin Dong, Yazhou Yao, Jinhui Tang, Jinshan Pan</p>
             
         </motion.div>
         
@@ -497,14 +497,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Uni-DAD: Unified Distillation and Adaptation of Diffusion Models for Few-step Few-shot Image Generation</h2>
+            <h2 class="paper-title">OmniPerson: Unified Identity-Preserving Pedestrian Generation</h2>
             
-            <p class="paper-summary">Diffusion models (DMs) produce high-quality images, yet their sampling remains costly when adapted to new domains. Distilled DMs are faster but typically remain confined within their teacher's domain. Thus, fast and high-quality generation for novel domains relies on two-stage training pipelines: Adapt-then-Distill or Distill-then-Adapt. However, both add design complexity and suffer from degraded quality or diversity. We introduce Uni-DAD, a single-stage pipeline that unifies distillation and adaptation of DMs. It couples two signals during training: (i) a dual-domain distribution-matching distillation objective that guides the student toward the distributions of the source teacher and a target teacher, and (ii) a multi-head generative adversarial network (GAN) loss that encourages target realism across multiple feature scales. The source domain distillation preserves diverse source knowledge, while the multi-head GAN stabilizes training and reduces overfitting, especially in few-shot regimes. The inclusion of a target teacher facilitates adaptation to more structurally distant domains. We perform evaluations on a variety of datasets for few-shot image generation (FSIG) and subject-driven personalization (SDP). Uni-DAD delivers higher quality than state-of-the-art (SoTA) adaptation methods even with less than 4 sampling steps, and outperforms two-stage training pipelines in both quality and diversity.</p>
+            <p class="paper-summary">Person re-identification (ReID) suffers from a lack of large-scale high-quality training data due to challenges in data privacy and annotation costs. While previous approaches have explored pedestrian generation for data augmentation, they often fail to ensure identity consistency and suffer from insufficient controllability, thereby limiting their effectiveness in dataset augmentation. To address this, We introduce OmniPerson, the first unified identity-preserving pedestrian generation pipeline for visible/infrared image/video ReID tasks. Our contributions are threefold: 1) We proposed OmniPerson, a unified generation model, offering holistic and fine-grained control over all key pedestrian attributes. Supporting RGB/IR modality image/video generation with any number of reference images, two kinds of person poses, and text. Also including RGB-to-IR transfer and image super-resolution abilities.2) We designed Multi-Refer Fuser for robust identity preservation with any number of reference images as input, making OmniPerson could distill a unified identity from a set of multi-view reference images, ensuring our generated pedestrians achieve high-fidelity pedestrian generation.3) We introduce PersonSyn, the first large-scale dataset for multi-reference, controllable pedestrian generation, and present its automated curation pipeline which transforms public, ID-only ReID benchmarks into a richly annotated resource with the dense, multi-modal supervision required for this task. Experimental results demonstrate that OmniPerson achieves SoTA in pedestrian generation, excelling in both visual fidelity and identity consistency. Furthermore, augmenting existing datasets with our generated data consistently improves the performance of ReID models. We will open-source the full codebase, pretrained model, and the PersonSyn dataset.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Uni-DAD, a unified distillation and adaptation pipeline for diffusion models that enables fast and high-quality few-shot image generation by combining dual-domain distillation and a multi-head GAN loss.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces OmniPerson, a unified pedestrian generation pipeline that preserves identity and offers fine-grained control over pedestrian attributes, addressing the lack of high-quality training data for person re-identification tasks. They also introduce a new large-scale dataset, PersonSyn.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为Uni-DAD的扩散模型统一蒸馏和适配流程，通过结合双域蒸馏和多头GAN损失，实现快速高质量的少样本图像生成。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了OmniPerson，一个统一的行人生成流程，可以保持身份并对行人属性进行细粒度控制，解决了行人重识别任务中缺乏高质量训练数据的问题。他们还引入了一个新的大规模数据集PersonSyn。</p>
             
 
             
@@ -530,8 +530,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -575,11 +575,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.18281v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.02554v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yara Bahram, Melodie Desbos, Mohammadhadi Shateri, Eric Granger</p>
+            <p class="paper-authors">Authors: Changxiao Ma, Chao Yuan, Xincheng Shi, Yuzhuo Ma, Yongfei Zhang, Longkun Zhou, Yujia Zhang, Shangze Li, Yifan Xu</p>
             
         </motion.div>
         
@@ -591,14 +591,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Generating Synthetic Human Blastocyst Images for In-Vitro Fertilization Blastocyst Grading</h2>
+            <h2 class="paper-title">Two-Stage Vision Transformer for Image Restoration: Colorization Pretraining + Residual Upsampling</h2>
             
-            <p class="paper-summary">The success of in vitro fertilization (IVF) at many clinics relies on the accurate morphological assessment of day 5 blastocysts, a process that is often subjective and inconsistent. While artificial intelligence can help standardize this evaluation, models require large, diverse, and balanced datasets, which are often unavailable due to data scarcity, natural class imbalance, and privacy constraints. Existing generative embryo models can mitigate these issues but face several limitations, such as poor image quality, small training datasets, non-robust evaluation, and lack of clinically relevant image generation for effective data augmentation. Here, we present the Diffusion Based Imaging Model for Artificial Blastocysts (DIA) framework, a set of latent diffusion models trained to generate high-fidelity, novel day 5 blastocyst images. Our models provide granular control by conditioning on Gardner-based morphological categories and z-axis focal depth. We rigorously evaluated the models using FID, a memorization metric, an embryologist Turing test, and three downstream classification tasks. Our results show that DIA models generate realistic images that embryologists could not reliably distinguish from real images. Most importantly, we demonstrated clear clinical value. Augmenting an imbalanced dataset with synthetic images significantly improved classification accuracy (p < 0.05). Also, adding synthetic images to an already large, balanced dataset yielded statistically significant performance gains, and synthetic data could replace up to 40% of real data in some cases without a statistically significant loss in accuracy. DIA provides a robust solution for mitigating data scarcity and class imbalance in embryo datasets. By generating novel, high-fidelity, and controllable synthetic images, our models can improve the performance, fairness, and standardization of AI embryo assessment tools.</p>
+            <p class="paper-summary">In computer vision, Single Image Super-Resolution (SISR) is still a difficult problem. We present ViT-SR, a new technique to improve the performance of a Vision Transformer (ViT) employing a two-stage training strategy. In our method, the model learns rich, generalizable visual representations from the data itself through a self-supervised pretraining phase on a colourization task. The pre-trained model is then adjusted for 4x super-resolution. By predicting the addition of a high-frequency residual image to an initial bicubic interpolation, this design simplifies residual learning. ViT-SR, trained and evaluated on the DIV2K benchmark dataset, achieves an impressive SSIM of 0.712 and PSNR of 22.90 dB. These results demonstrate the efficacy of our two-stage approach and highlight the potential of self-supervised pre-training for complex image restoration tasks. Further improvements may be possible with larger ViT architectures or alternative pretext tasks.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DIA, a diffusion-based model for generating synthetic human blastocyst images for IVF, showing improved AI embryo assessment through data augmentation and addressing data scarcity and class imbalance.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents ViT-SR, a two-stage Vision Transformer approach for single image super-resolution (SISR). It uses colorization pretraining for better feature extraction and residual learning with upsampling to achieve promising results on the DIV2K dataset.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DIA，一种基于扩散模型的合成人类囊胚图像生成方法，用于体外受精（IVF），通过数据增强改进AI胚胎评估，并解决数据稀缺和类别不平衡问题。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于单图像超分辨率(SISR)的两阶段视觉Transformer方法ViT-SR。它采用着色预训练来提取更好的特征，并使用残差学习和上采样在DIV2K数据集上取得了有希望的结果。</p>
             
 
             
@@ -608,32 +608,32 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -669,11 +669,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.18204v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.02512v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Pavan Narahari, Suraj Rajendran, Lorena Bori, Jonas E. Malmsten, Qiansheng Zhan, Zev Rosenwaks, Nikica Zaninovic, Iman Hajirasouliha</p>
+            <p class="paper-authors">Authors: Aditya Chaudhary, Prachet Dev Singh, Ankit Jha</p>
             
         </motion.div>
         
@@ -685,14 +685,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Early Lung Cancer Diagnosis from Virtual Follow-up LDCT Generation via Correlational Autoencoder and Latent Flow Matching</h2>
+            <h2 class="paper-title">SplatSuRe: Selective Super-Resolution for Multi-view Consistent 3D Gaussian Splatting</h2>
             
-            <p class="paper-summary">Lung cancer is one of the most commonly diagnosed cancers, and early diagnosis is critical because the survival rate declines sharply once the disease progresses to advanced stages. However, achieving an early diagnosis remains challenging, particularly in distinguishing subtle early signals of malignancy from those of benign conditions. In clinical practice, a patient with a high risk may need to undergo an initial baseline and several annual follow-up examinations (e.g., CT scans) before receiving a definitive diagnosis, which can result in missing the optimal treatment. Recently, Artificial Intelligence (AI) methods have been increasingly used for early diagnosis of lung cancer, but most existing algorithms focus on radiomic features extraction from single early-stage CT scans. Inspired by recent advances in diffusion models for image generation, this paper proposes a generative method, named CorrFlowNet, which creates a virtual, one-year follow-up CT scan after the initial baseline scan. This virtual follow-up would allow for an early detection of malignant/benign nodules, reducing the need to wait for clinical follow-ups. During training, our approach employs a correlational autoencoder to encode both early baseline and follow-up CT images into a latent space that captures the dynamics of nodule progression as well as the correlations between them, followed by a flow matching algorithm on the latent space with a neural ordinary differential equation. An auxiliary classifier is used to further enhance the diagnostic accuracy. Evaluations on a real clinical dataset show our method can significantly improve downstream lung nodule risk assessment compared with existing baseline models. Moreover, its diagnostic accuracy is comparable with real clinical CT follow-ups, highlighting its potential to improve cancer diagnosis.</p>
+            <p class="paper-summary">3D Gaussian Splatting (3DGS) enables high-quality novel view synthesis, motivating interest in generating higher-resolution renders than those available during training. A natural strategy is to apply super-resolution (SR) to low-resolution (LR) input views, but independently enhancing each image introduces multi-view inconsistencies, leading to blurry renders. Prior methods attempt to mitigate these inconsistencies through learned neural components, temporally consistent video priors, or joint optimization on LR and SR views, but all uniformly apply SR across every image. In contrast, our key insight is that close-up LR views may contain high-frequency information for regions also captured in more distant views, and that we can use the camera pose relative to scene geometry to inform where to add SR content. Building from this insight, we propose SplatSuRe, a method that selectively applies SR content only in undersampled regions lacking high-frequency supervision, yielding sharper and more consistent results. Across Tanks & Temples, Deep Blending and Mip-NeRF 360, our approach surpasses baselines in both fidelity and perceptual quality. Notably, our gains are most significant in localized foreground regions where higher detail is desired.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a generative model (CorrFlowNet) that creates virtual follow-up CT scans from initial baseline scans to enable earlier lung cancer diagnosis using a correlational autoencoder and latent flow matching, achieving comparable accuracy to real clinical follow-ups.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SplatSuRe, a selective super-resolution method for 3D Gaussian Splatting that applies SR only in undersampled regions to improve multi-view consistency and rendering quality, especially in localized foreground regions.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种生成模型（CorrFlowNet），该模型通过初始基线扫描创建虚拟的后续CT扫描，从而利用相关自编码器和潜在流匹配实现更早的肺癌诊断，并达到与真实临床随访相当的准确度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了SplatSuRe，一种用于3D高斯溅射的选择性超分辨率方法，它仅在欠采样区域应用超分辨率，以提高多视角一致性和渲染质量，尤其是在局部前景区域。</p>
             
 
             
@@ -702,16 +702,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -726,8 +726,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -763,11 +763,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.18185v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.02172v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yutong Wu, Yifan Wang, Qining Zhang, Chuan Zhou, Lei Ying</p>
+            <p class="paper-authors">Authors: Pranav Asthana, Alex Hanson, Allen Tu, Tom Goldstein, Matthias Zwicker, Amitabh Varshney</p>
             
         </motion.div>
         
@@ -779,14 +779,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">UnfoldLDM: Deep Unfolding-based Blind Image Restoration with Latent Diffusion Priors</h2>
+            <h2 class="paper-title">DiverseAR: Boosting Diversity in Bitwise Autoregressive Image Generation</h2>
             
-            <p class="paper-summary">Deep unfolding networks (DUNs) combine the interpretability of model-based methods with the learning ability of deep networks, yet remain limited for blind image restoration (BIR). Existing DUNs suffer from: (1) \textbf{Degradation-specific dependency}, as their optimization frameworks are tied to a known degradation model, making them unsuitable for BIR tasks; and (2) \textbf{Over-smoothing bias}, resulting from the direct feeding of gradient descent outputs, dominated by low-frequency content, into the proximal term, suppressing fine textures. To overcome these issues, we propose UnfoldLDM to integrate DUNs with latent diffusion model (LDM) for BIR. In each stage, UnfoldLDM employs a multi-granularity degradation-aware (MGDA) module as the gradient descent step. MGDA models BIR as an unknown degradation estimation problem and estimates both the holistic degradation matrix and its decomposed forms, enabling robust degradation removal. For the proximal step, we design a degradation-resistant LDM (DR-LDM) to extract compact degradation-invariant priors from the MGDA output. Guided by this prior, an over-smoothing correction transformer (OCFormer) explicitly recovers high-frequency components and enhances texture details. This unique combination ensures the final result is degradation-free and visually rich. Experiments show that our UnfoldLDM achieves a leading place on various BIR tasks and benefits downstream tasks. Moreover, our design is compatible with existing DUN-based methods, serving as a plug-and-play framework. Code will be released.</p>
+            <p class="paper-summary">In this paper, we investigate the underexplored challenge of sample diversity in autoregressive (AR) generative models with bitwise visual tokenizers. We first analyze the factors that limit diversity in bitwise AR models and identify two key issues: (1) the binary classification nature of bitwise modeling, which restricts the prediction space, and (2) the overly sharp logits distribution, which causes sampling collapse and reduces diversity. Building on these insights, we propose DiverseAR, a principled and effective method that enhances image diversity without sacrificing visual quality. Specifically, we introduce an adaptive logits distribution scaling mechanism that dynamically adjusts the sharpness of the binary output distribution during sampling, resulting in smoother predictions and greater diversity. To mitigate potential fidelity loss caused by distribution smoothing, we further develop an energy-based generation path search algorithm that avoids sampling low-confidence tokens, thereby preserving high visual quality. Extensive experiments demonstrate that DiverseAR substantially improves sample diversity in bitwise autoregressive image generation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes UnfoldLDM, a novel deep unfolding network for blind image restoration that integrates latent diffusion models with a multi-granularity degradation-aware module and a degradation-resistant LDM, achieving state-of-the-art results on various tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes DiverseAR, a method to improve sample diversity in bitwise autoregressive image generation by addressing issues of limited prediction space and overly sharp logits distributions. It introduces adaptive logits scaling and an energy-based generation path search to enhance diversity without sacrificing image quality.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了UnfoldLDM，一种用于盲图像恢复的新型深度展开网络，它集成了潜在扩散模型、多粒度退化感知模块和抗退化LDM，在各种任务上实现了最先进的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了DiverseAR，一种通过解决预测空间有限和logits分布过于尖锐的问题来提高逐位自回归图像生成中样本多样性的方法。它引入了自适应logits缩放和基于能量的生成路径搜索，以增强多样性而不牺牲图像质量。</p>
             
 
             
@@ -796,8 +796,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -812,16 +812,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -846,22 +846,22 @@
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.18152v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.02931v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Chunming He, Rihan Zhang, Zheng Chen, Bowen Yang, CHengyu Fang, Yunlong Lin, Fengyang Xiao, Sina Farsiu</p>
+            <p class="paper-authors">Authors: Ying Yang, Zhengyao Lv, Tianlin Pan, Haofan Wang, Binxin Yang, Hubery Yin, Chen Li, Chenyang Si</p>
             
         </motion.div>
         
@@ -873,14 +873,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MammothModa2: A Unified AR-Diffusion Framework for Multimodal Understanding and Generation</h2>
+            <h2 class="paper-title">SpriteHand: Real-Time Versatile Hand-Object Interaction with Autoregressive Video Generation</h2>
             
-            <p class="paper-summary">Unified multimodal models aim to integrate understanding and generation within a single framework, yet bridging the gap between discrete semantic reasoning and high-fidelity visual synthesis remains challenging. We present MammothModa2 (Mammoth2), a unified autoregressive-diffusion (AR-Diffusion) framework designed to effectively couple autoregressive semantic planning with diffusion-based generation. Mammoth2 adopts a serial design: an AR path equipped with generation experts performs global semantic modeling over discrete tokens, while a single-stream Diffusion Transformer (DiT) decoder handles high-fidelity image synthesis. A carefully designed AR-Diffusion feature alignment module combines multi-layer feature aggregation, unified condition encoding, and in-context conditioning to stably align AR's representations with the diffusion decoder's continuous latents. Mammoth2 is trained end-to-end with joint Next-Token Prediction and Flow Matching objectives, followed by supervised fine-tuning and reinforcement learning over both generation and editing. With roughly 60M supervised generation samples and no reliance on pre-trained generators, Mammoth2 delivers strong text-to-image and instruction-based editing performance on public benchmarks, achieving 0.87 on GenEval, 87.2 on DPGBench, and 4.06 on ImgEdit, while remaining competitive with understanding-only backbones (e.g., Qwen3-VL-8B) on multimodal understanding tasks. These results suggest that a carefully coupled AR-Diffusion architecture can provide high-fidelity generation and editing while maintaining strong multimodal comprehension within a single, parameter- and data-efficient model.</p>
+            <p class="paper-summary">Modeling and synthesizing complex hand-object interactions remains a significant challenge, even for state-of-the-art physics engines. Conventional simulation-based approaches rely on explicitly defined rigid object models and pre-scripted hand gestures, making them inadequate for capturing dynamic interactions with non-rigid or articulated entities such as deformable fabrics, elastic materials, hinge-based structures, furry surfaces, or even living creatures. In this paper, we present SpriteHand, an autoregressive video generation framework for real-time synthesis of versatile hand-object interaction videos across a wide range of object types and motion patterns. SpriteHand takes as input a static object image and a video stream in which the hands are imagined to interact with the virtual object embedded in a real-world scene, and generates corresponding hand-object interaction effects in real time. Our model employs a causal inference architecture for autoregressive generation and leverages a hybrid post-training approach to enhance visual realism and temporal coherence. Our 1.3B model supports real-time streaming generation at around 18 FPS and 640x368 resolution, with an approximate 150 ms latency on a single NVIDIA RTX 5090 GPU, and more than a minute of continuous output. Experiments demonstrate superior visual quality, physical plausibility, and interaction fidelity compared to both generative and engine-based baselines.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: MammothModa2 is a unified autoregressive-diffusion framework for multimodal understanding and generation, achieving strong text-to-image and instruction-based editing performance while remaining competitive on multimodal understanding tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SpriteHand introduces an autoregressive video generation framework for real-time synthesis of hand-object interaction videos, addressing limitations of traditional physics engines with deformable objects and achieving real-time performance with high visual quality.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: MammothModa2是一个统一的自回归扩散框架，用于多模态理解和生成，在文本到图像和基于指令的编辑方面表现出色，同时在多模态理解任务方面也具有竞争力。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SpriteHand 提出了一种自回归视频生成框架，用于实时合成手部与物体交互的视频，解决了传统物理引擎在处理可变形物体方面的局限性，并以高质量的视觉效果实现了实时性能。</p>
             
 
             
@@ -890,8 +890,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
                 </div>
                 
                 
@@ -951,112 +951,18 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2511.18262v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.01960v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Tao Shen, Xin Wan, Taicai Chen, Rui Zhang, Junwen Pan, Dawei Lu, Fanding Lei, Zhilin Lu, Yunfei Yang, Chen Cheng, Qi She, Chang Liu, Zhenbang Sun</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.4, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Parallel qMRI Reconstruction from 4x Accelerated Acquisitions</h2>
-            
-            <p class="paper-summary">Magnetic Resonance Imaging (MRI) acquisitions require extensive scan times, limiting patient throughput and increasing susceptibility to motion artifacts. Accelerated parallel MRI techniques reduce acquisition time by undersampling k-space data, but require robust reconstruction methods to recover high-quality images. Traditional approaches like SENSE require both undersampled k-space data and pre-computed coil sensitivity maps. We propose an end-to-end deep learning framework that jointly estimates coil sensitivity maps and reconstructs images from only undersampled k-space measurements at 4x acceleration. Our two-module architecture consists of a Coil Sensitivity Map (CSM) estimation module and a U-Net-based MRI reconstruction module. We evaluate our method on multi-coil brain MRI data from 10 subjects with 8 echoes each, using 2x SENSE reconstructions as ground truth. Our approach produces visually smoother reconstructions compared to conventional SENSE output, achieving comparable visual quality despite lower PSNR/SSIM metrics. We identify key challenges including spatial misalignment between different acceleration factors and propose future directions for improved reconstruction quality.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a deep learning framework for parallel MRI reconstruction at 4x acceleration, jointly estimating coil sensitivity maps and reconstructing images from undersampled k-space data. While the quantitative metrics are not superior, the visual results are promising.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于4倍加速并行MRI重建的深度学习框架，该框架可以联合估计线圈灵敏度图并从欠采样的k空间数据重建图像。 虽然定量指标并不优越，但视觉效果很有前景。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2511.18232v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Mingi Kang</p>
+            <p class="paper-authors">Authors: Zisu Li, Hengye Lyu, Jiaxin Shi, Yufeng Zeng, Mingming Fan, Hanwang Zhang, Chen Liang</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-12-03 02:44:42 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-12-03 02:48:44 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
