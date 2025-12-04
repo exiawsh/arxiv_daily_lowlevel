@@ -1,0 +1,144 @@
+[
+    {
+        "title": "Beyond the Ground Truth: Enhanced Supervision for Image Restoration",
+        "summary": "Deep learning-based image restoration has achieved significant success. However, when addressing real-world degradations, model performance is limited by the quality of ground-truth images in datasets due to practical constraints in data acquisition. To address this limitation, we propose a novel framework that enhances existing ground truth images to provide higher-quality supervision for real-world restoration. Our framework generates perceptually enhanced ground truth images using super-resolution by incorporating adaptive frequency masks, which are learned by a conditional frequency mask generator. These masks guide the optimal fusion of frequency components from the original ground truth and its super-resolved variants, yielding enhanced ground truth images. This frequency-domain mixup preserves the semantic consistency of the original content while selectively enriching perceptual details, preventing hallucinated artifacts that could compromise fidelity. The enhanced ground truth images are used to train a lightweight output refinement network that can be seamlessly integrated with existing restoration models. Extensive experiments demonstrate that our approach consistently improves the quality of restored images. We further validate the effectiveness of both supervision enhancement and output refinement through user studies. Code is available at https://github.com/dhryougit/Beyond-the-Ground-Truth.",
+        "url": "http://arxiv.org/abs/2512.03932v1",
+        "published_date": "2025-12-03T16:30:32+00:00",
+        "updated_date": "2025-12-03T16:30:32+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Donghun Ryou",
+            "Inju Ha",
+            "Sanghyeok Chu",
+            "Bohyung Han"
+        ],
+        "tldr": "The paper introduces a novel framework to enhance ground truth images for image restoration by adaptively fusing frequency components from original and super-resolved versions, which are then used to train a refinement network.",
+        "tldr_zh": "该论文提出了一种新颖的框架，通过自适应地融合原始图像和超分辨率图像的频率分量来增强图像恢复的ground truth，然后用增强后的ground truth来训练一个精细化网络。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "BlurDM: A Blur Diffusion Model for Image Deblurring",
+        "summary": "Diffusion models show promise for dynamic scene deblurring; however, existing studies often fail to leverage the intrinsic nature of the blurring process within diffusion models, limiting their full potential. To address it, we present a Blur Diffusion Model (BlurDM), which seamlessly integrates the blur formation process into diffusion for image deblurring. Observing that motion blur stems from continuous exposure, BlurDM implicitly models the blur formation process through a dual-diffusion forward scheme, diffusing both noise and blur onto a sharp image. During the reverse generation process, we derive a dual denoising and deblurring formulation, enabling BlurDM to recover the sharp image by simultaneously denoising and deblurring, given pure Gaussian noise conditioned on the blurred image as input. Additionally, to efficiently integrate BlurDM into deblurring networks, we perform BlurDM in the latent space, forming a flexible prior generation network for deblurring. Extensive experiments demonstrate that BlurDM significantly and consistently enhances existing deblurring methods on four benchmark datasets. The source code is available at https://github.com/Jin-Ting-He/BlurDM.",
+        "url": "http://arxiv.org/abs/2512.03979v1",
+        "published_date": "2025-12-03T17:10:44+00:00",
+        "updated_date": "2025-12-03T17:10:44+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Jin-Ting He",
+            "Fu-Jen Tsai",
+            "Yan-Tsung Peng",
+            "Min-Hung Chen",
+            "Chia-Wen Lin",
+            "Yen-Yu Lin"
+        ],
+        "tldr": "The paper introduces BlurDM, a novel diffusion model that explicitly incorporates the blur formation process for image deblurring by simultaneously denoising and deblurring within a dual-diffusion framework.",
+        "tldr_zh": "该论文介绍了 BlurDM，一种新颖的扩散模型，通过在双重扩散框架内同时去噪和去模糊，显式地将模糊形成过程纳入图像去模糊中。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Traffic Image Restoration under Adverse Weather via Frequency-Aware Mamba",
+        "summary": "Traffic image restoration under adverse weather conditions remains a critical challenge for intelligent transportation systems. Existing methods primarily focus on spatial-domain modeling but neglect frequency-domain priors. Although the emerging Mamba architecture excels at long-range dependency modeling through patch-wise correlation analysis, its potential for frequency-domain feature extraction remains unexplored. To address this, we propose Frequency-Aware Mamba (FAMamba), a novel framework that integrates frequency guidance with sequence modeling for efficient image restoration. Our architecture consists of two key components: (1) a Dual-Branch Feature Extraction Block (DFEB) that enhances local-global interaction via bidirectional 2D frequency-adaptive scanning, dynamically adjusting traversal paths based on sub-band texture distributions; and (2) a Prior-Guided Block (PGB) that refines texture details through wavelet-based high-frequency residual learning, enabling high-quality image reconstruction with precise details. Meanwhile, we design a novel Adaptive Frequency Scanning Mechanism (AFSM) for the Mamba architecture, which enables the Mamba to achieve frequency-domain scanning across distinct subgraphs, thereby fully leveraging the texture distribution characteristics inherent in subgraph structures. Extensive experiments demonstrate the efficiency and effectiveness of FAMamba.",
+        "url": "http://arxiv.org/abs/2512.03852v1",
+        "published_date": "2025-12-03T14:50:20+00:00",
+        "updated_date": "2025-12-03T14:50:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Liwen Pan",
+            "Longguang Wang",
+            "Guangwei Gao",
+            "Jun Wang",
+            "Jun Shi",
+            "Juncheng Li"
+        ],
+        "tldr": "The paper introduces Frequency-Aware Mamba (FAMamba), a novel framework for traffic image restoration under adverse weather, integrating frequency guidance with sequence modeling using a modified Mamba architecture to enhance performance by considering frequency-domain priors.",
+        "tldr_zh": "该论文介绍了频率感知Mamba (FAMamba)，一种用于恶劣天气下交通图像恢复的新框架，它将频率指导与序列建模相结合，使用改进的Mamba架构，通过考虑频域先验来提高性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LSRS: Latent Scale Rejection Sampling for Visual Autoregressive Modeling",
+        "summary": "Visual Autoregressive (VAR) modeling approach for image generation proposes autoregressive processing across hierarchical scales, decoding multiple tokens per scale in parallel. This method achieves high-quality generation while accelerating synthesis. However, parallel token sampling within a scale may lead to structural errors, resulting in suboptimal generated images. To mitigate this, we propose Latent Scale Rejection Sampling (LSRS), a method that progressively refines token maps in the latent scale during inference to enhance VAR models. Our method uses a lightweight scoring model to evaluate multiple candidate token maps sampled at each scale, selecting the high-quality map to guide subsequent scale generation. By prioritizing early scales critical for structural coherence, LSRS effectively mitigates autoregressive error accumulation while maintaining computational efficiency. Experiments demonstrate that LSRS significantly improves VAR's generation quality with minimal additional computational overhead. For the VAR-d30 model, LSRS increases the inference time by merely 1% while reducing its FID score from 1.95 to 1.78. When the inference time is increased by 15%, the FID score can be further reduced to 1.66. LSRS offers an efficient test-time scaling solution for enhancing VAR-based generation.",
+        "url": "http://arxiv.org/abs/2512.03796v1",
+        "published_date": "2025-12-03T13:44:30+00:00",
+        "updated_date": "2025-12-03T13:44:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hong-Kai Zheng",
+            "Piji Li"
+        ],
+        "tldr": "The paper introduces Latent Scale Rejection Sampling (LSRS), a method to improve the generation quality of Visual Autoregressive (VAR) models by refining token maps at latent scales using a lightweight scoring model, showing significant FID score improvements with minimal overhead.",
+        "tldr_zh": "该论文介绍了潜在尺度拒绝采样（LSRS），这是一种通过使用轻量级评分模型细化潜在尺度上的令牌映射来提高视觉自回归（VAR）模型生成质量的方法，在极小的开销下显著改善了FID分数。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PixPerfect: Seamless Latent Diffusion Local Editing with Discriminative Pixel-Space Refinement",
+        "summary": "Latent Diffusion Models (LDMs) have markedly advanced the quality of image inpainting and local editing. However, the inherent latent compression often introduces pixel-level inconsistencies, such as chromatic shifts, texture mismatches, and visible seams along editing boundaries. Existing remedies, including background-conditioned latent decoding and pixel-space harmonization, usually fail to fully eliminate these artifacts in practice and do not generalize well across different latent representations or tasks. We introduce PixPerfect, a pixel-level refinement framework that delivers seamless, high-fidelity local edits across diverse LDM architectures and tasks. PixPerfect leverages (i) a differentiable discriminative pixel space that amplifies and suppresses subtle color and texture discrepancies, (ii) a comprehensive artifact simulation pipeline that exposes the refiner to realistic local editing artifacts during training, and (iii) a direct pixel-space refinement scheme that ensures broad applicability across diverse latent representations and tasks. Extensive experiments on inpainting, object removal, and insertion benchmarks demonstrate that PixPerfect substantially enhances perceptual fidelity and downstream editing performance, establishing a new standard for robust and high-fidelity localized image editing.",
+        "url": "http://arxiv.org/abs/2512.03247v1",
+        "published_date": "2025-12-02T21:35:57+00:00",
+        "updated_date": "2025-12-02T21:35:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haitian Zheng",
+            "Yuan Yao",
+            "Yongsheng Yu",
+            "Yuqian Zhou",
+            "Jiebo Luo",
+            "Zhe Lin"
+        ],
+        "tldr": "PixPerfect is a pixel-level refinement framework that reduces inconsistencies and artifacts in local image editing tasks using Latent Diffusion Models by using a differentiable discriminative pixel space, artifact simulation, and direct pixel-space refinement.",
+        "tldr_zh": "PixPerfect是一个像素级优化框架，它通过使用可微判别像素空间、伪像模拟和直接像素空间优化来减少潜在扩散模型在局部图像编辑任务中的不一致性和伪像。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "2-Shots in the Dark: Low-Light Denoising with Minimal Data Acquisition",
+        "summary": "Raw images taken in low-light conditions are very noisy due to low photon count and sensor noise. Learning-based denoisers have the potential to reconstruct high-quality images. For training, however, these denoisers require large paired datasets of clean and noisy images, which are difficult to collect. Noise synthesis is an alternative to large-scale data acquisition: given a clean image, we can synthesize a realistic noisy counterpart. In this work, we propose a general and practical noise synthesis method that requires only one single noisy image and one single dark frame per ISO setting. We represent signal-dependent noise with a Poisson distribution and introduce a Fourier-domain spectral sampling algorithm to accurately model signal-independent noise. The latter generates diverse noise realizations that maintain the spatial and statistical properties of real sensor noise. As opposed to competing approaches, our method neither relies on simplified parametric models nor on large sets of clean-noisy image pairs. Our synthesis method is not only accurate and practical, it also leads to state-of-the-art performances on multiple low-light denoising benchmarks.",
+        "url": "http://arxiv.org/abs/2512.03245v1",
+        "published_date": "2025-12-02T21:32:31+00:00",
+        "updated_date": "2025-12-02T21:32:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Liying Lu",
+            "Raphaël Achddou",
+            "Sabine Süsstrunk"
+        ],
+        "tldr": "This paper proposes a novel low-light image denoising method that requires minimal data acquisition (only one noisy image and one dark frame per ISO setting) by using a new noise synthesis approach based on Poisson distribution and Fourier-domain spectral sampling, achieving state-of-the-art performance.",
+        "tldr_zh": "该论文提出了一种新颖的弱光图像去噪方法，该方法只需要最少的数据采集（每个 ISO 设置只需一个噪声图像和一个暗帧），通过使用基于泊松分布和傅里叶域频谱采样的新噪声合成方法，实现了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
