@@ -1,0 +1,230 @@
+[
+    {
+        "title": "OmniScaleSR: Unleashing Scale-Controlled Diffusion Prior for Faithful and Realistic Arbitrary-Scale Image Super-Resolution",
+        "summary": "Arbitrary-scale super-resolution (ASSR) overcomes the limitation of traditional super-resolution (SR) methods that operate only at fixed scales (e.g., 4x), enabling a single model to handle arbitrary magnification. Most existing ASSR approaches rely on implicit neural representation (INR), but its regression-driven feature extraction and aggregation intrinsically limit the ability to synthesize fine details, leading to low realism. Recent diffusion-based realistic image super-resolution (Real-ISR) models leverage powerful pre-trained diffusion priors and show impressive results at the 4x setting. We observe that they can also achieve ASSR because the diffusion prior implicitly adapts to scale by encouraging high-realism generation. However, without explicit scale control, the diffusion process cannot be properly adjusted for different magnification levels, resulting in excessive hallucination or blurry outputs, especially under ultra-high scales. To address these issues, we propose OmniScaleSR, a diffusion-based realistic arbitrary-scale SR framework designed to achieve both high fidelity and high realism. We introduce explicit, diffusion-native scale control mechanisms that work synergistically with implicit scale adaptation, enabling scale-aware and content-aware modulation of the diffusion process. In addition, we incorporate multi-domain fidelity enhancement designs to further improve reconstruction accuracy. Extensive experiments on bicubic degradation benchmarks and real-world datasets show that OmniScaleSR surpasses state-of-the-art methods in both fidelity and perceptual realism, with particularly strong performance at large magnification factors. Code will be released at https://github.com/chaixinning/OmniScaleSR.",
+        "url": "http://arxiv.org/abs/2512.04699v1",
+        "published_date": "2025-12-04T11:50:17+00:00",
+        "updated_date": "2025-12-04T11:50:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xinning Chai",
+            "Zhengxue Cheng",
+            "Yuhong Zhang",
+            "Hengsheng Zhang",
+            "Yingsheng Qin",
+            "Yucai Yang",
+            "Rong Xie",
+            "Li Song"
+        ],
+        "tldr": "OmniScaleSR is a diffusion-based arbitrary-scale super-resolution framework with explicit scale control mechanisms and multi-domain fidelity enhancement, achieving state-of-the-art performance in both fidelity and realism, especially at large magnification factors.",
+        "tldr_zh": "OmniScaleSR是一个基于扩散模型的任意尺度超分辨率框架，具有显式的尺度控制机制和多域保真度增强功能，在保真度和真实感方面均实现了最先进的性能，尤其是在大放大倍数下。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Plug-and-Play Image Restoration with Flow Matching: A Continuous Viewpoint",
+        "summary": "Flow matching-based generative models have been integrated into the plug-and-play image restoration framework, and the resulting plug-and-play flow matching (PnP-Flow) model has achieved some remarkable empirical success for image restoration. However, the theoretical understanding of PnP-Flow lags its empirical success. In this paper, we derive a continuous limit for PnP-Flow, resulting in a stochastic differential equation (SDE) surrogate model of PnP-Flow. The SDE model provides two particular insights to improve PnP-Flow for image restoration: (1) It enables us to quantify the error for image restoration, informing us to improve step scheduling and regularize the Lipschitz constant of the neural network-parameterized vector field for error reduction. (2) It informs us to accelerate off-the-shelf PnP-Flow models via extrapolation, resulting in a rescaled version of the proposed SDE model. We validate the efficacy of the SDE-informed improved PnP-Flow using several benchmark tasks, including image denoising, deblurring, super-resolution, and inpainting. Numerical results show that our method significantly outperforms the baseline PnP-Flow and other state-of-the-art approaches, achieving superior performance across evaluation metrics.",
+        "url": "http://arxiv.org/abs/2512.04283v1",
+        "published_date": "2025-12-03T21:50:36+00:00",
+        "updated_date": "2025-12-03T21:50:36+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Fan Jia",
+            "Yuhao Huang",
+            "Shih-Hsin Wang",
+            "Cristina Garcia-Cardona",
+            "Andrea L. Bertozzi",
+            "Bao Wang"
+        ],
+        "tldr": "This paper provides a theoretical analysis of Plug-and-Play Flow Matching (PnP-Flow) by deriving a continuous SDE limit, which informs improvements in step scheduling, regularization, and acceleration, leading to state-of-the-art performance in image restoration tasks.",
+        "tldr_zh": "本文通过推导连续SDE极限，对即插即用流匹配 (PnP-Flow) 进行了理论分析，从而改进了步长调度、正则化和加速，最终在图像修复任务中实现了最先进的性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Semantics Lead the Way: Harmonizing Semantic and Texture Modeling with Asynchronous Latent Diffusion",
+        "summary": "Latent Diffusion Models (LDMs) inherently follow a coarse-to-fine generation process, where high-level semantic structure is generated slightly earlier than fine-grained texture. This indicates the preceding semantics potentially benefit texture generation by providing a semantic anchor. Recent advances have integrated semantic priors from pretrained visual encoders to further enhance LDMs, yet they still denoise semantic and VAE-encoded texture synchronously, neglecting such ordering. Observing these, we propose Semantic-First Diffusion (SFD), a latent diffusion paradigm that explicitly prioritizes semantic formation. SFD first constructs composite latents by combining a compact semantic latent, which is extracted from a pretrained visual encoder via a dedicated Semantic VAE, with the texture latent. The core of SFD is to denoise the semantic and texture latents asynchronously using separate noise schedules: semantics precede textures by a temporal offset, providing clearer high-level guidance for texture refinement and enabling natural coarse-to-fine generation. On ImageNet 256x256 with guidance, SFD achieves FID 1.06 (LightningDiT-XL) and FID 1.04 (1.0B LightningDiT-XXL), while achieving up to 100x faster convergence than the original DiT. SFD also improves existing methods like ReDi and VA-VAE, demonstrating the effectiveness of asynchronous, semantics-led modeling. Project page and code: https://yuemingpan.github.io/SFD.github.io/.",
+        "url": "http://arxiv.org/abs/2512.04926v1",
+        "published_date": "2025-12-04T15:57:27+00:00",
+        "updated_date": "2025-12-04T15:57:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yueming Pan",
+            "Ruoyu Feng",
+            "Qi Dai",
+            "Yuqi Wang",
+            "Wenfeng Lin",
+            "Mingyu Guo",
+            "Chong Luo",
+            "Nanning Zheng"
+        ],
+        "tldr": "The paper introduces Semantic-First Diffusion (SFD), a latent diffusion paradigm that prioritizes semantic formation by asynchronously denoising semantic and texture latents, achieving state-of-the-art FID scores and faster convergence on ImageNet.",
+        "tldr_zh": "该论文介绍了语义优先扩散（SFD），一种通过异步去噪语义和纹理潜在变量来优先考虑语义形成的潜在扩散范例，在ImageNet上实现了最先进的FID分数和更快的收敛速度。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Autoregressive Image Generation Needs Only a Few Lines of Cached Tokens",
+        "summary": "Autoregressive (AR) visual generation has emerged as a powerful paradigm for image and multimodal synthesis, owing to its scalability and generality. However, existing AR image generation suffers from severe memory bottlenecks due to the need to cache all previously generated visual tokens during decoding, leading to both high storage requirements and low throughput. In this paper, we introduce \\textbf{LineAR}, a novel, training-free progressive key-value (KV) cache compression pipeline for autoregressive image generation. By fully exploiting the intrinsic characteristics of visual attention, LineAR manages the cache at the line level using a 2D view, preserving the visual dependency regions while progressively evicting less-informative tokens that are harmless for subsequent line generation, guided by inter-line attention. LineAR enables efficient autoregressive (AR) image generation by utilizing only a few lines of cache, achieving both memory savings and throughput speedup, while maintaining or even improving generation quality. Extensive experiments across six autoregressive image generation models, including class-conditional and text-to-image generation, validate its effectiveness and generality. LineAR improves ImageNet FID from 2.77 to 2.68 and COCO FID from 23.85 to 22.86 on LlamaGen-XL and Janus-Pro-1B, while retaining only 1/6 KV cache. It also improves DPG on Lumina-mGPT-768 with just 1/8 KV cache. Additionally, LineAR achieves significant memory and throughput gains, including up to 67.61% memory reduction and 7.57x speedup on LlamaGen-XL, and 39.66% memory reduction and 5.62x speedup on Janus-Pro-7B.",
+        "url": "http://arxiv.org/abs/2512.04857v1",
+        "published_date": "2025-12-04T14:41:21+00:00",
+        "updated_date": "2025-12-04T14:41:21+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziran Qin",
+            "Youru Lv",
+            "Mingbao Lin",
+            "Zeren Zhang",
+            "Chanfan Gan",
+            "Tieyuan Chen",
+            "Weiyao Lin"
+        ],
+        "tldr": "The paper introduces LineAR, a training-free KV cache compression pipeline for autoregressive image generation that significantly reduces memory usage and increases throughput by caching only a few lines of tokens, while maintaining or improving image quality.",
+        "tldr_zh": "该论文介绍了一种名为LineAR的免训练KV缓存压缩流水线，用于自回归图像生成，通过仅缓存几行tokens，显著降低内存使用并提高吞吐量，同时保持或提高图像质量。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UltraImage: Rethinking Resolution Extrapolation in Image Diffusion Transformers",
+        "summary": "Recent image diffusion transformers achieve high-fidelity generation, but struggle to generate images beyond these scales, suffering from content repetition and quality degradation. In this work, we present UltraImage, a principled framework that addresses both issues. Through frequency-wise analysis of positional embeddings, we identify that repetition arises from the periodicity of the dominant frequency, whose period aligns with the training resolution. We introduce a recursive dominant frequency correction to constrain it within a single period after extrapolation. Furthermore, we find that quality degradation stems from diluted attention and thus propose entropy-guided adaptive attention concentration, which assigns higher focus factors to sharpen local attention for fine detail and lower ones to global attention patterns to preserve structural consistency. Experiments show that UltraImage consistently outperforms prior methods on Qwen-Image and Flux (around 4K) across three generation scenarios, reducing repetition and improving visual fidelity. Moreover, UltraImage can generate images up to 6K*6K without low-resolution guidance from a training resolution of 1328p, demonstrating its extreme extrapolation capability. Project page is available at \\href{https://thu-ml.github.io/ultraimage.github.io/}{https://thu-ml.github.io/ultraimage.github.io/}.",
+        "url": "http://arxiv.org/abs/2512.04504v1",
+        "published_date": "2025-12-04T06:24:04+00:00",
+        "updated_date": "2025-12-04T06:24:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Min Zhao",
+            "Bokai Yan",
+            "Xue Yang",
+            "Hongzhou Zhu",
+            "Jintao Zhang",
+            "Shilong Liu",
+            "Chongxuan Li",
+            "Jun Zhu"
+        ],
+        "tldr": "UltraImage addresses the limitations of image diffusion transformers in high-resolution image generation by mitigating repetition and quality degradation through frequency correction and adaptive attention, enabling extrapolation to resolutions beyond training data.",
+        "tldr_zh": "UltraImage通过频率校正和自适应注意力机制解决了图像扩散Transformer在高分辨率图像生成中的局限性，减轻了重复和质量下降的问题，实现了超出训练数据分辨率的推断。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Not All Birds Look The Same: Identity-Preserving Generation For Birds",
+        "summary": "Since the advent of controllable image generation, increasingly rich modes of control have enabled greater customization and accessibility for everyday users. Zero-shot, identity-preserving models such as Insert Anything and OminiControl now support applications like virtual try-on without requiring additional fine-tuning. While these models may be fitting for humans and rigid everyday objects, they still have limitations for non-rigid or fine-grained categories. These domains often lack accessible, high-quality data -- especially videos or multi-view observations of the same subject -- making them difficult both to evaluate and to improve upon. Yet, such domains are essential for moving beyond content creation toward applications that demand accuracy and fine detail. Birds are an excellent domain for this task: they exhibit high diversity, require fine-grained cues for identification, and come in a wide variety of poses. We introduce the NABirds Look-Alikes (NABLA) dataset, consisting of 4,759 expert-curated image pairs. Together with 1,073 pairs collected from multi-image observations on iNaturalist and a small set of videos, this forms a benchmark for evaluating identity-preserving generation of birds. We show that state-of-the-art baselines fail to maintain identity on this dataset, and we demonstrate that training on images grouped by species, age, and sex -- used as a proxy for identity -- substantially improves performance on both seen and unseen species.",
+        "url": "http://arxiv.org/abs/2512.04485v1",
+        "published_date": "2025-12-04T05:39:12+00:00",
+        "updated_date": "2025-12-04T05:39:12+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Aaron Sun",
+            "Oindrila Saha",
+            "Subhransu Maji"
+        ],
+        "tldr": "This paper introduces NABLA, a new dataset for evaluating identity-preserving image generation of birds, highlighting the limitations of current state-of-the-art methods in maintaining identity in fine-grained categories and proposing a training strategy to improve performance.",
+        "tldr_zh": "本文介绍了 NABLA 数据集，用于评估鸟类图像的身份保持生成能力，强调了当前最先进方法在细粒度类别中保持身份方面的局限性，并提出了一种训练策略来提高性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FMA-Net++: Motion- and Exposure-Aware Real-World Joint Video Super-Resolution and Deblurring",
+        "summary": "Real-world video restoration is plagued by complex degradations from motion coupled with dynamically varying exposure - a key challenge largely overlooked by prior works and a common artifact of auto-exposure or low-light capture. We present FMA-Net++, a framework for joint video super-resolution and deblurring that explicitly models this coupled effect of motion and dynamically varying exposure. FMA-Net++ adopts a sequence-level architecture built from Hierarchical Refinement with Bidirectional Propagation blocks, enabling parallel, long-range temporal modeling. Within each block, an Exposure Time-aware Modulation layer conditions features on per-frame exposure, which in turn drives an exposure-aware Flow-Guided Dynamic Filtering module to infer motion- and exposure-aware degradation kernels. FMA-Net++ decouples degradation learning from restoration: the former predicts exposure- and motion-aware priors to guide the latter, improving both accuracy and efficiency. To evaluate under realistic capture conditions, we introduce REDS-ME (multi-exposure) and REDS-RE (random-exposure) benchmarks. Trained solely on synthetic data, FMA-Net++ achieves state-of-the-art accuracy and temporal consistency on our new benchmarks and GoPro, outperforming recent methods in both restoration quality and inference speed, and generalizes well to challenging real-world videos.",
+        "url": "http://arxiv.org/abs/2512.04390v1",
+        "published_date": "2025-12-04T02:23:52+00:00",
+        "updated_date": "2025-12-04T02:23:52+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Geunhyuk Youk",
+            "Jihyong Oh",
+            "Munchurl Kim"
+        ],
+        "tldr": "FMA-Net++ addresses joint video super-resolution and deblurring in real-world scenarios by explicitly modeling motion and dynamically varying exposure, introducing new benchmarks (REDS-ME, REDS-RE) and achieving state-of-the-art results.",
+        "tldr_zh": "FMA-Net++通过显式建模运动和动态变化的曝光来解决真实场景中的联合视频超分辨率和去模糊问题，引入了新的基准(REDS-ME, REDS-RE)并取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning Single-Image Super-Resolution in the JPEG Compressed Domain",
+        "summary": "Deep learning models have grown increasingly complex, with input data sizes scaling accordingly. Despite substantial advances in specialized deep learning hardware, data loading continues to be a major bottleneck that limits training and inference speed. To address this challenge, we propose training models directly on encoded JPEG features, reducing the computational overhead associated with full JPEG decoding and significantly improving data loading efficiency. While prior works have focused on recognition tasks, we investigate the effectiveness of this approach for the restoration task of single-image super-resolution (SISR). We present a lightweight super-resolution pipeline that operates on JPEG discrete cosine transform (DCT) coefficients in the frequency domain. Our pipeline achieves a 2.6x speedup in data loading and a 2.5x speedup in training, while preserving visual quality comparable to standard SISR approaches.",
+        "url": "http://arxiv.org/abs/2512.04284v1",
+        "published_date": "2025-12-03T21:51:57+00:00",
+        "updated_date": "2025-12-03T21:51:57+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Sruthi Srinivasan",
+            "Elham Shakibapour",
+            "Rajy Rawther",
+            "Mehdi Saeedi"
+        ],
+        "tldr": "This paper proposes training single-image super-resolution (SISR) models directly on JPEG DCT coefficients to improve data loading and training speed, achieving comparable visual quality with significant speedups.",
+        "tldr_zh": "本文提出直接在 JPEG DCT 系数上训练单图像超分辨率 (SISR) 模型，以提高数据加载和训练速度，在显著加速的同时实现了可比的视觉质量。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SimFlow: Simplified and End-to-End Training of Latent Normalizing Flows",
+        "summary": "Normalizing Flows (NFs) learn invertible mappings between the data and a Gaussian distribution. Prior works usually suffer from two limitations. First, they add random noise to training samples or VAE latents as data augmentation, introducing complex pipelines including extra noising and denoising steps. Second, they use a pretrained and frozen VAE encoder, resulting in suboptimal reconstruction and generation quality. In this paper, we find that the two issues can be solved in a very simple way: just fixing the variance (which would otherwise be predicted by the VAE encoder) to a constant (e.g., 0.5). On the one hand, this method allows the encoder to output a broader distribution of tokens and the decoder to learn to reconstruct clean images from the augmented token distribution, avoiding additional noise or denoising design. On the other hand, fixed variance simplifies the VAE evidence lower bound, making it stable to train an NF with a VAE jointly. On the ImageNet $256 \\times 256$ generation task, our model SimFlow obtains a gFID score of 2.15, outperforming the state-of-the-art method STARFlow (gFID 2.40). Moreover, SimFlow can be seamlessly integrated with the end-to-end representation alignment (REPA-E) method and achieves an improved gFID of 1.91, setting a new state of the art among NFs.",
+        "url": "http://arxiv.org/abs/2512.04084v1",
+        "published_date": "2025-12-03T18:59:57+00:00",
+        "updated_date": "2025-12-03T18:59:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qinyu Zhao",
+            "Guangting Zheng",
+            "Tao Yang",
+            "Rui Zhu",
+            "Xingjian Leng",
+            "Stephen Gould",
+            "Liang Zheng"
+        ],
+        "tldr": "SimFlow simplifies and improves latent normalizing flows by fixing the variance in the VAE encoder, achieving state-of-the-art image generation results on ImageNet.",
+        "tldr_zh": "SimFlow通过固定VAE编码器中的方差，简化并改进了潜在归一化流，在ImageNet上实现了最先进的图像生成结果。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
