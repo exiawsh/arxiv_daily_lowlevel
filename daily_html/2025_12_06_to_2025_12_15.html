@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - December 03, 2025</title>
+    <title>ArXiv CS.CV Papers (Image/Video Generation) - December 06, 2025 - December 15, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,8 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>December 03, 2025</p>
+            <p>10 days: December 15, 2025 - December 06, 2025</p>
+            <p>Total: 7 papers</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +216,18 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Glance: Accelerating Diffusion Models with 1 Sample</h2>
+            <h2 class="paper-title">Group Diffusion: Enhancing Image Generation by Unlocking Cross-Sample Collaboration</h2>
             
-            <p class="paper-summary">Diffusion models have achieved remarkable success in image generation, yet their deployment remains constrained by the heavy computational cost and the need for numerous inference steps. Previous efforts on fewer-step distillation attempt to skip redundant steps by training compact student models, yet they often suffer from heavy retraining costs and degraded generalization. In this work, we take a different perspective: we accelerate smartly, not evenly, applying smaller speedups to early semantic stages and larger ones to later redundant phases. We instantiate this phase-aware strategy with two experts that specialize in slow and fast denoising phases. Surprisingly, instead of investing massive effort in retraining student models, we find that simply equipping the base model with lightweight LoRA adapters achieves both efficient acceleration and strong generalization. We refer to these two adapters as Slow-LoRA and Fast-LoRA. Through extensive experiments, our method achieves up to 5 acceleration over the base model while maintaining comparable visual quality across diverse benchmarks. Remarkably, the LoRA experts are trained with only 1 samples on a single V100 within one hour, yet the resulting models generalize strongly on unseen prompts.</p>
+            <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 0.5rem; font-style: italic;">
+                <i class="fas fa-calendar-alt"></i> December 13, 2025
+            </p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Glance, a method to accelerate diffusion models by strategically applying different speedups to different denoising phases using lightweight LoRA adapters, achieving significant acceleration with minimal training and strong generalization.</p>
+            <p class="paper-summary">In this work, we explore an untapped signal in diffusion model inference. While all previous methods generate images independently at inference, we instead ask if samples can be generated collaboratively. We propose Group Diffusion, unlocking the attention mechanism to be shared across images, rather than limited to just the patches within an image. This enables images to be jointly denoised at inference time, learning both intra and inter-image correspondence. We observe a clear scaling effect - larger group sizes yield stronger cross-sample attention and better generation quality. Furthermore, we introduce a qualitative measure to capture this behavior and show that its strength closely correlates with FID. Built on standard diffusion transformers, our GroupDiff achieves up to 32.2% FID improvement on ImageNet-256x256. Our work reveals cross-sample inference as an effective, previously unexplored mechanism for generative modeling.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Group Diffusion, a novel approach to image generation that allows images to be jointly denoised by sharing the attention mechanism across samples during inference, leading to significant FID improvements.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 Glance，一种加速扩散模型的方法，通过使用轻量级 LoRA 适配器有策略地将不同的加速应用于不同的去噪阶段，从而以最少的训练和强大的泛化能力实现显着的加速。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 Group Diffusion，一种新颖的图像生成方法，它允许通过在推理期间跨样本共享注意力机制来联合去噪图像，从而显著提高 FID。</p>
             
 
             
@@ -240,16 +245,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -293,11 +298,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.02899v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.10954v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhuobai Dong, Rui Zhao, Songjie Wu, Junchao Yi, Linjie Li, Zhengyuan Yang, Lijuan Wang, Alex Jinpeng Wang</p>
+            <p class="paper-authors">Authors: Sicheng Mo, Thao Nguyen, Richard Zhang, Nick Kolkin, Siddharth Srinivasan Iyer, Eli Shechtman, Krishna Kumar Singh, Yong Jae Lee, Bolei Zhou, Yuheng Li</p>
             
         </motion.div>
         
@@ -309,14 +314,18 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Progressive Image Restoration via Text-Conditioned Video Generation</h2>
+            <h2 class="paper-title">No Cache Left Idle: Accelerating diffusion model via Extreme-slimming Caching</h2>
             
-            <p class="paper-summary">Recent text-to-video models have demonstrated strong temporal generation capabilities, yet their potential for image restoration remains underexplored. In this work, we repurpose CogVideo for progressive visual restoration tasks by fine-tuning it to generate restoration trajectories rather than natural video motion. Specifically, we construct synthetic datasets for super-resolution, deblurring, and low-light enhancement, where each sample depicts a gradual transition from degraded to clean frames. Two prompting strategies are compared: a uniform text prompt shared across all samples, and a scene-specific prompting scheme generated via LLaVA multi-modal LLM and refined with ChatGPT. Our fine-tuned model learns to associate temporal progression with restoration quality, producing sequences that improve perceptual metrics such as PSNR, SSIM, and LPIPS across frames. Extensive experiments show that CogVideo effectively restores spatial detail and illumination consistency while maintaining temporal coherence. Moreover, the model generalizes to real-world scenarios on the ReLoBlur dataset without additional training, demonstrating strong zero-shot robustness and interpretability through temporal restoration.</p>
+            <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 0.5rem; font-style: italic;">
+                <i class="fas fa-calendar-alt"></i> December 15, 2025
+            </p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper repurposes a text-to-video model (CogVideo) for progressive image restoration by fine-tuning it on synthetic datasets and using text prompts to guide restoration trajectories, achieving good results in super-resolution, deblurring, and low-light enhancement.</p>
+            <p class="paper-summary">Diffusion models achieve remarkable generative quality, but computational overhead scales with step count, model depth, and sequence length. Feature caching is effective since adjacent timesteps yield highly similar features. However, an inherent trade-off remains: aggressive timestep reuse offers large speedups but can easily cross the critical line, hurting fidelity, while block- or token-level reuse is safer but yields limited computational savings. We present X-Slim (eXtreme-Slimming Caching), a training-free, cache-based accelerator that, to our knowledge, is the first unified framework to exploit cacheable redundancy across timesteps, structure (blocks), and space (tokens). Rather than simply mixing levels, X-Slim introduces a dual-threshold controller that turns caching into a push-then-polish process: it first pushes reuse at the timestep level up to an early-warning line, then switches to lightweight block- and token-level refresh to polish the remaining redundancy, and triggers full inference once the critical line is crossed to reset accumulated error. At each level, context-aware indicators decide when and where to cache. Across diverse tasks, X-Slim advances the speed-quality frontier. On FLUX.1-dev and HunyuanVideo, it reduces latency by up to 4.97x and 3.52x with minimal perceptual loss. On DiT-XL/2, it reaches 3.13x acceleration and improves FID by 2.42 over prior methods.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces X-Slim, a novel caching framework for accelerating diffusion models by exploiting redundancy across timesteps, blocks, and tokens, achieving significant speedups with minimal fidelity loss and even FID improvements in some cases.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文通过微调CogVideo文本到视频模型，并利用文本提示指导恢复轨迹，将其重新用于渐进式图像恢复任务。该方法在超分辨率、去模糊和低光增强方面取得了良好的效果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为 X-Slim 的新型缓存框架，通过利用时间步、块和 token 之间的冗余来加速扩散模型，在保证极小保真度损失的情况下实现了显著的加速，并且在某些情况下甚至提高了 FID。</p>
             
 
             
@@ -326,24 +335,24 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -380,18 +389,18 @@
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.02273v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.12604v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Peng Kang, Xijun Wang, Yu Yuan</p>
+            <p class="paper-authors">Authors: Tingyan Wen, Haoyu Li, Yihuang Chen, Xing Zhou, Lifei Zhu, Xueqian Wang</p>
             
         </motion.div>
         
@@ -403,14 +412,18 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">PGP-DiffSR: Phase-Guided Progressive Pruning for Efficient Diffusion-based Image Super-Resolution</h2>
+            <h2 class="paper-title">ClusIR: Towards Cluster-Guided All-in-One Image Restoration</h2>
             
-            <p class="paper-summary">Although diffusion-based models have achieved impressive results in image super-resolution, they often rely on large-scale backbones such as Stable Diffusion XL (SDXL) and Diffusion Transformers (DiT), which lead to excessive computational and memory costs during training and inference. To address this issue, we develop a lightweight diffusion method, PGP-DiffSR, by removing redundant information from diffusion models under the guidance of the phase information of inputs for efficient image super-resolution. We first identify the intra-block redundancy within the diffusion backbone and propose a progressive pruning approach that removes redundant blocks while reserving restoration capability. We note that the phase information of the restored images produced by the pruned diffusion model is not well estimated. To solve this problem, we propose a phase-exchange adapter module that explores the phase information of the inputs to guide the pruned diffusion model for better restoration performance. We formulate the progressive pruning approach and the phase-exchange adapter module into a unified model. Extensive experiments demonstrate that our method achieves competitive restoration quality while significantly reducing computational load and memory consumption. The code is available at https://github.com/yzb1997/PGP-DiffSR.</p>
+            <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 0.5rem; font-style: italic;">
+                <i class="fas fa-calendar-alt"></i> December 13, 2025
+            </p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: PGP-DiffSR introduces a phase-guided progressive pruning method to reduce the computational cost of diffusion-based image super-resolution models, achieving competitive performance with significantly reduced resources.</p>
+            <p class="paper-summary">All-in-One Image Restoration (AiOIR) aims to recover high-quality images from diverse degradations within a unified framework. However, existing methods often fail to explicitly model degradation types and struggle to adapt their restoration behavior to complex or mixed degradations. To address these issues, we propose ClusIR, a Cluster-Guided Image Restoration framework that explicitly models degradation semantics through learnable clustering and propagates cluster-aware cues across spatial and frequency domains for adaptive restoration. Specifically, ClusIR comprises two key components: a Probabilistic Cluster-Guided Routing Mechanism (PCGRM) and a Degradation-Aware Frequency Modulation Module (DAFMM). The proposed PCGRM disentangles degradation recognition from expert activation, enabling discriminative degradation perception and stable expert routing. Meanwhile, DAFMM leverages the cluster-guided priors to perform adaptive frequency decomposition and targeted modulation, collaboratively refining structural and textural representations for higher restoration fidelity. The cluster-guided synergy seamlessly bridges semantic cues with frequency-domain modulation, empowering ClusIR to attain remarkable restoration results across a wide range of degradations. Extensive experiments on diverse benchmarks validate that ClusIR reaches competitive performance under several scenarios.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ClusIR, a novel All-in-One Image Restoration framework that uses cluster-guided degradation semantics to improve restoration performance across various degradation types by adaptively modulating spatial and frequency domains.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: PGP-DiffSR提出了一种相位引导的渐进式剪枝方法，以降低基于扩散的图像超分辨率模型的计算成本，并在显著减少资源的情况下实现具有竞争力的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了ClusIR，一种新颖的All-in-One图像修复框架，它利用聚类引导的退化语义来提高各种退化类型的修复性能，通过自适应地调节空间和频率域。</p>
             
 
             
@@ -481,11 +494,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.02681v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.10948v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhongbao Yang, Jiangxin Dong, Yazhou Yao, Jinhui Tang, Jinshan Pan</p>
+            <p class="paper-authors">Authors: Shengkai Hu, Jiaqi Ma, Jun Wan, Wenwen Min, Yongcheng Jing, Lefei Zhang, Dacheng Tao</p>
             
         </motion.div>
         
@@ -497,14 +510,18 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">OmniPerson: Unified Identity-Preserving Pedestrian Generation</h2>
+            <h2 class="paper-title">DraCo: Draft as CoT for Text-to-Image Preview and Rare Concept Generation</h2>
             
-            <p class="paper-summary">Person re-identification (ReID) suffers from a lack of large-scale high-quality training data due to challenges in data privacy and annotation costs. While previous approaches have explored pedestrian generation for data augmentation, they often fail to ensure identity consistency and suffer from insufficient controllability, thereby limiting their effectiveness in dataset augmentation. To address this, We introduce OmniPerson, the first unified identity-preserving pedestrian generation pipeline for visible/infrared image/video ReID tasks. Our contributions are threefold: 1) We proposed OmniPerson, a unified generation model, offering holistic and fine-grained control over all key pedestrian attributes. Supporting RGB/IR modality image/video generation with any number of reference images, two kinds of person poses, and text. Also including RGB-to-IR transfer and image super-resolution abilities.2) We designed Multi-Refer Fuser for robust identity preservation with any number of reference images as input, making OmniPerson could distill a unified identity from a set of multi-view reference images, ensuring our generated pedestrians achieve high-fidelity pedestrian generation.3) We introduce PersonSyn, the first large-scale dataset for multi-reference, controllable pedestrian generation, and present its automated curation pipeline which transforms public, ID-only ReID benchmarks into a richly annotated resource with the dense, multi-modal supervision required for this task. Experimental results demonstrate that OmniPerson achieves SoTA in pedestrian generation, excelling in both visual fidelity and identity consistency. Furthermore, augmenting existing datasets with our generated data consistently improves the performance of ReID models. We will open-source the full codebase, pretrained model, and the PersonSyn dataset.</p>
+            <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 0.5rem; font-style: italic;">
+                <i class="fas fa-calendar-alt"></i> December 06, 2025
+            </p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces OmniPerson, a unified pedestrian generation pipeline that preserves identity and offers fine-grained control over pedestrian attributes, addressing the lack of high-quality training data for person re-identification tasks. They also introduce a new large-scale dataset, PersonSyn.</p>
+            <p class="paper-summary">Recent unified multimodal large language models (MLLMs) have shown impressive capabilities, incorporating chain-of-thought (CoT) reasoning for enhanced text-to-image generation. However, existing approaches remain limited, either treating the model merely as a standalone generator or relying on abstract textual planning. To this end, we propose Draft-as-CoT (DraCo), a novel interleaved reasoning paradigm that fully leverages both textual and visual contents in CoT for better planning and verification. Our method first generates a low-resolution draft image as preview, providing more concrete and structural visual planning and guidance. Then, we employ the model's inherent understanding capability to verify potential semantic misalignments between the draft and input prompt, and performs refinement through selective corrections with super-resolution. In this way, our approach addresses two fundamental challenges: the coarse-grained nature of textual planning and the difficulty in generating rare attribute combinations. To support training, we curate DraCo-240K, aiming to enhance three atomic capabilities spanning general correction, instance manipulation, and layout reorganization. Supported by DraCo-CFG, a specialized classifier-free guidance (CFG) strategy for interleaved reasoning, DraCo achieves a tremendous increase on GenEval (+8%), Imagine-Bench (+0.91), and GenEval++ (+3%), significantly outperforming direct generation and other generation methods empowered by CoT.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DraCo, a novel chain-of-thought (CoT) method for text-to-image generation that uses a low-resolution draft image as visual guidance for iterative refinement, addressing issues of coarse textual planning and rare concept generation. It significantly outperforms existing CoT methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了OmniPerson，一个统一的行人生成流程，可以保持身份并对行人属性进行细粒度控制，解决了行人重识别任务中缺乏高质量训练数据的问题。他们还引入了一个新的大规模数据集PersonSyn。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DraCo，一种新颖的用于文本到图像生成的思维链（CoT）方法，它使用低分辨率的草图图像作为视觉指导进行迭代细化，解决了粗糙的文本规划和稀有概念生成的问题。它明显优于现有的CoT方法。</p>
             
 
             
@@ -514,16 +531,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -575,11 +592,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.02554v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.05112v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Changxiao Ma, Chao Yuan, Xincheng Shi, Yuzhuo Ma, Yongfei Zhang, Longkun Zhou, Yujia Zhang, Shangze Li, Yifan Xu</p>
+            <p class="paper-authors">Authors: Dongzhi Jiang, Renrui Zhang, Haodong Li, Zhuofan Zong, Ziyu Guo, Jun He, Claire Guo, Junyan Ye, Rongyao Fang, Weijia Li, Rui Liu, Hongsheng Li</p>
             
         </motion.div>
         
@@ -591,14 +608,18 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Two-Stage Vision Transformer for Image Restoration: Colorization Pretraining + Residual Upsampling</h2>
+            <h2 class="paper-title">NeuralRemaster: Phase-Preserving Diffusion for Structure-Aligned Generation</h2>
             
-            <p class="paper-summary">In computer vision, Single Image Super-Resolution (SISR) is still a difficult problem. We present ViT-SR, a new technique to improve the performance of a Vision Transformer (ViT) employing a two-stage training strategy. In our method, the model learns rich, generalizable visual representations from the data itself through a self-supervised pretraining phase on a colourization task. The pre-trained model is then adjusted for 4x super-resolution. By predicting the addition of a high-frequency residual image to an initial bicubic interpolation, this design simplifies residual learning. ViT-SR, trained and evaluated on the DIV2K benchmark dataset, achieves an impressive SSIM of 0.712 and PSNR of 22.90 dB. These results demonstrate the efficacy of our two-stage approach and highlight the potential of self-supervised pre-training for complex image restoration tasks. Further improvements may be possible with larger ViT architectures or alternative pretext tasks.</p>
+            <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 0.5rem; font-style: italic;">
+                <i class="fas fa-calendar-alt"></i> December 06, 2025
+            </p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents ViT-SR, a two-stage Vision Transformer approach for single image super-resolution (SISR). It uses colorization pretraining for better feature extraction and residual learning with upsampling to achieve promising results on the DIV2K dataset.</p>
+            <p class="paper-summary">Standard diffusion corrupts data using Gaussian noise whose Fourier coefficients have random magnitudes and random phases. While effective for unconditional or text-to-image generation, corrupting phase components destroys spatial structure, making it ill-suited for tasks requiring geometric consistency, such as re-rendering, simulation enhancement, and image-to-image translation. We introduce Phase-Preserving Diffusion φ-PD, a model-agnostic reformulation of the diffusion process that preserves input phase while randomizing magnitude, enabling structure-aligned generation without architectural changes or additional parameters. We further propose Frequency-Selective Structured (FSS) noise, which provides continuous control over structural rigidity via a single frequency-cutoff parameter. φ-PD adds no inference-time cost and is compatible with any diffusion model for images or videos. Across photorealistic and stylized re-rendering, as well as sim-to-real enhancement for driving planners, φ-PD produces controllable, spatially aligned results. When applied to the CARLA simulator, φ-PD improves CARLA-to-Waymo planner performance by 50\%. The method is complementary to existing conditioning approaches and broadly applicable to image-to-image and video-to-video generation. Videos, additional examples, and code are available on our \href{https://yuzeng-at-tri.github.io/ppd-page/}{project page}.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Phase-Preserving Diffusion (φ-PD), a novel diffusion model that preserves input phase information, enabling structure-aligned image generation for tasks requiring geometric consistency without architectural changes or extra parameters, and demonstrates its effectiveness in re-rendering and sim-to-real enhancement.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于单图像超分辨率(SISR)的两阶段视觉Transformer方法ViT-SR。它采用着色预训练来提取更好的特征，并使用残差学习和上采样在DIV2K数据集上取得了有希望的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新的相位保持扩散（φ-PD）模型，该模型保留了输入相位信息，从而实现了结构对齐的图像生成，适用于需要几何一致性的任务，无需架构更改或额外参数，并展示了其在重渲染和模拟到真实增强方面的有效性。</p>
             
 
             
@@ -608,16 +629,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -632,8 +653,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -669,11 +690,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.02512v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.05106v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Aditya Chaudhary, Prachet Dev Singh, Ankit Jha</p>
+            <p class="paper-authors">Authors: Yu Zeng, Charles Ochoa, Mingyuan Zhou, Vishal M. Patel, Vitor Guizilini, Rowan McAllister</p>
             
         </motion.div>
         
@@ -685,14 +706,18 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SplatSuRe: Selective Super-Resolution for Multi-view Consistent 3D Gaussian Splatting</h2>
+            <h2 class="paper-title">EvoIR: Towards All-in-One Image Restoration via Evolutionary Frequency Modulation</h2>
             
-            <p class="paper-summary">3D Gaussian Splatting (3DGS) enables high-quality novel view synthesis, motivating interest in generating higher-resolution renders than those available during training. A natural strategy is to apply super-resolution (SR) to low-resolution (LR) input views, but independently enhancing each image introduces multi-view inconsistencies, leading to blurry renders. Prior methods attempt to mitigate these inconsistencies through learned neural components, temporally consistent video priors, or joint optimization on LR and SR views, but all uniformly apply SR across every image. In contrast, our key insight is that close-up LR views may contain high-frequency information for regions also captured in more distant views, and that we can use the camera pose relative to scene geometry to inform where to add SR content. Building from this insight, we propose SplatSuRe, a method that selectively applies SR content only in undersampled regions lacking high-frequency supervision, yielding sharper and more consistent results. Across Tanks & Temples, Deep Blending and Mip-NeRF 360, our approach surpasses baselines in both fidelity and perceptual quality. Notably, our gains are most significant in localized foreground regions where higher detail is desired.</p>
+            <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 0.5rem; font-style: italic;">
+                <i class="fas fa-calendar-alt"></i> December 06, 2025
+            </p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SplatSuRe, a selective super-resolution method for 3D Gaussian Splatting that applies SR only in undersampled regions to improve multi-view consistency and rendering quality, especially in localized foreground regions.</p>
+            <p class="paper-summary">All-in-One Image Restoration (AiOIR) tasks often involve diverse degradation that require robust and versatile strategies. However, most existing approaches typically lack explicit frequency modeling and rely on fixed or heuristic optimization schedules, which limit the generalization across heterogeneous degradation. To address these limitations, we propose EvoIR, an AiOIR-specific framework that introduces evolutionary frequency modulation for dynamic and adaptive image restoration. Specifically, EvoIR employs the Frequency-Modulated Module (FMM) that decomposes features into high- and low-frequency branches in an explicit manner and adaptively modulates them to enhance both structural fidelity and fine-grained details. Central to EvoIR, an Evolutionary Optimization Strategy (EOS) iteratively adjusts frequency-aware objectives through a population-based evolutionary process, dynamically balancing structural accuracy and perceptual fidelity. Its evolutionary guidance further mitigates gradient conflicts across degradation and accelerates convergence. By synergizing FMM and EOS, EvoIR yields greater improvements than using either component alone, underscoring their complementary roles. Extensive experiments on multiple benchmarks demonstrate that EvoIR outperforms state-of-the-art AiOIR methods.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces EvoIR, an All-in-One Image Restoration framework that uses evolutionary frequency modulation to dynamically adapt to diverse degradations, outperforming existing methods on multiple benchmarks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了SplatSuRe，一种用于3D高斯溅射的选择性超分辨率方法，它仅在欠采样区域应用超分辨率，以提高多视角一致性和渲染质量，尤其是在局部前景区域。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了EvoIR，一个全能图像恢复框架，它使用进化频率调制来动态适应各种退化，并在多个基准测试中优于现有方法。</p>
             
 
             
@@ -763,11 +788,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.02172v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.05104v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Pranav Asthana, Alex Hanson, Allen Tu, Tom Goldstein, Matthias Zwicker, Amitabh Varshney</p>
+            <p class="paper-authors">Authors: Jiaqi Ma, Shengkai Hu, Jun Wan, Jiaxing Huang, Lefei Zhang, Salman Khan</p>
             
         </motion.div>
         
@@ -779,108 +804,18 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DiverseAR: Boosting Diversity in Bitwise Autoregressive Image Generation</h2>
+            <h2 class="paper-title">GenieDrive: Towards Physics-Aware Driving World Model with 4D Occupancy Guided Video Generation</h2>
             
-            <p class="paper-summary">In this paper, we investigate the underexplored challenge of sample diversity in autoregressive (AR) generative models with bitwise visual tokenizers. We first analyze the factors that limit diversity in bitwise AR models and identify two key issues: (1) the binary classification nature of bitwise modeling, which restricts the prediction space, and (2) the overly sharp logits distribution, which causes sampling collapse and reduces diversity. Building on these insights, we propose DiverseAR, a principled and effective method that enhances image diversity without sacrificing visual quality. Specifically, we introduce an adaptive logits distribution scaling mechanism that dynamically adjusts the sharpness of the binary output distribution during sampling, resulting in smoother predictions and greater diversity. To mitigate potential fidelity loss caused by distribution smoothing, we further develop an energy-based generation path search algorithm that avoids sampling low-confidence tokens, thereby preserving high visual quality. Extensive experiments demonstrate that DiverseAR substantially improves sample diversity in bitwise autoregressive image generation.</p>
+            <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 0.5rem; font-style: italic;">
+                <i class="fas fa-calendar-alt"></i> December 15, 2025
+            </p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes DiverseAR, a method to improve sample diversity in bitwise autoregressive image generation by addressing issues of limited prediction space and overly sharp logits distributions. It introduces adaptive logits scaling and an energy-based generation path search to enhance diversity without sacrificing image quality.</p>
+            <p class="paper-summary">Physics-aware driving world model is essential for drive planning, out-of-distribution data synthesis, and closed-loop evaluation. However, existing methods often rely on a single diffusion model to directly map driving actions to videos, which makes learning difficult and leads to physically inconsistent outputs. To overcome these challenges, we propose GenieDrive, a novel framework designed for physics-aware driving video generation. Our approach starts by generating 4D occupancy, which serves as a physics-informed foundation for subsequent video generation. 4D occupancy contains rich physical information, including high-resolution 3D structures and dynamics. To facilitate effective compression of such high-resolution occupancy, we propose a VAE that encodes occupancy into a latent tri-plane representation, reducing the latent size to only 58% of that used in previous methods. We further introduce Mutual Control Attention (MCA) to accurately model the influence of control on occupancy evolution, and we jointly train the VAE and the subsequent prediction module in an end-to-end manner to maximize forecasting accuracy. Together, these designs yield a 7.2% improvement in forecasting mIoU at an inference speed of 41 FPS, while using only 3.47 M parameters. Additionally, a Normalized Multi-View Attention is introduced in the video generation model to generate multi-view driving videos with guidance from our 4D occupancy, significantly improving video quality with a 20.7% reduction in FVD. Experiments demonstrate that GenieDrive enables highly controllable, multi-view consistent, and physics-aware driving video generation.</p>
             
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了DiverseAR，一种通过解决预测空间有限和logits分布过于尖锐的问题来提高逐位自回归图像生成中样本多样性的方法。它引入了自适应logits缩放和基于能量的生成路径搜索，以增强多样性而不牺牲图像质量。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
+            <p class="paper-tldr"><strong>TLDR</strong>: GenieDrive is a physics-aware driving video generation framework using 4D occupancy and a VAE with Mutual Control Attention for improved forecasting accuracy and video quality, achieving better performance with fewer parameters.</p>
             
             
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2512.02931v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Ying Yang, Zhengyao Lv, Tianlin Pan, Haofan Wang, Binxin Yang, Hubery Yin, Chen Li, Chenyang Si</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.35000000000000003, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">SpriteHand: Real-Time Versatile Hand-Object Interaction with Autoregressive Video Generation</h2>
-            
-            <p class="paper-summary">Modeling and synthesizing complex hand-object interactions remains a significant challenge, even for state-of-the-art physics engines. Conventional simulation-based approaches rely on explicitly defined rigid object models and pre-scripted hand gestures, making them inadequate for capturing dynamic interactions with non-rigid or articulated entities such as deformable fabrics, elastic materials, hinge-based structures, furry surfaces, or even living creatures. In this paper, we present SpriteHand, an autoregressive video generation framework for real-time synthesis of versatile hand-object interaction videos across a wide range of object types and motion patterns. SpriteHand takes as input a static object image and a video stream in which the hands are imagined to interact with the virtual object embedded in a real-world scene, and generates corresponding hand-object interaction effects in real time. Our model employs a causal inference architecture for autoregressive generation and leverages a hybrid post-training approach to enhance visual realism and temporal coherence. Our 1.3B model supports real-time streaming generation at around 18 FPS and 640x368 resolution, with an approximate 150 ms latency on a single NVIDIA RTX 5090 GPU, and more than a minute of continuous output. Experiments demonstrate superior visual quality, physical plausibility, and interaction fidelity compared to both generative and engine-based baselines.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: SpriteHand introduces an autoregressive video generation framework for real-time synthesis of hand-object interaction videos, addressing limitations of traditional physics engines with deformable objects and achieving real-time performance with high visual quality.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: SpriteHand 提出了一种自回归视频生成框架，用于实时合成手部与物体交互的视频，解决了传统物理引擎在处理可变形物体方面的局限性，并以高质量的视觉效果实现了实时性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: GenieDrive是一个物理感知的驾驶视频生成框架，它使用4D占用和带有互控注意力的VAE，以提高预测精度和视频质量，并以更少的参数实现了更好的性能。</p>
             
 
             
@@ -906,8 +841,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -951,18 +886,18 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.01960v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.12751v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zisu Li, Hengye Lyu, Jiaxin Shi, Yufeng Zeng, Mingming Fan, Hanwang Zhang, Chen Liang</p>
+            <p class="paper-authors">Authors: Zhenya Yang, Zhe Liu, Yuxiang Lu, Liping Hou, Chenxuan Miao, Siyi Peng, Bailan Feng, Xiang Bai, Hengshuang Zhao</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-12-16 02:50:43 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-12-16 02:51:53 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
