@@ -1,0 +1,107 @@
+[
+    {
+        "title": "RecTok: Reconstruction Distillation along Rectified Flow",
+        "summary": "Visual tokenizers play a crucial role in diffusion models. The dimensionality of latent space governs both reconstruction fidelity and the semantic expressiveness of the latent feature. However, a fundamental trade-off is inherent between dimensionality and generation quality, constraining existing methods to low-dimensional latent spaces. Although recent works have leveraged vision foundation models to enrich the semantics of visual tokenizers and accelerate convergence, high-dimensional tokenizers still underperform their low-dimensional counterparts. In this work, we propose RecTok, which overcomes the limitations of high-dimensional visual tokenizers through two key innovations: flow semantic distillation and reconstruction--alignment distillation. Our key insight is to make the forward flow in flow matching semantically rich, which serves as the training space of diffusion transformers, rather than focusing on the latent space as in previous works. Specifically, our method distills the semantic information in VFMs into the forward flow trajectories in flow matching. And we further enhance the semantics by introducing a masked feature reconstruction loss. Our RecTok achieves superior image reconstruction, generation quality, and discriminative performance. It achieves state-of-the-art results on the gFID-50K under both with and without classifier-free guidance settings, while maintaining a semantically rich latent space structure. Furthermore, as the latent dimensionality increases, we observe consistent improvements. Code and model are available at https://shi-qingyu.github.io/rectok.github.io.",
+        "url": "http://arxiv.org/abs/2512.13421v1",
+        "published_date": "2025-12-15T15:14:20+00:00",
+        "updated_date": "2025-12-15T15:14:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qingyu Shi",
+            "Size Wu",
+            "Jinbin Bai",
+            "Kaidong Yu",
+            "Yujing Wang",
+            "Yunhai Tong",
+            "Xiangtai Li",
+            "Xuelong Li"
+        ],
+        "tldr": "The paper introduces RecTok, a novel visual tokenizer that overcomes the limitations of high-dimensional latent spaces in diffusion models by using flow semantic distillation and reconstruction-alignment distillation, achieving state-of-the-art image reconstruction and generation results.",
+        "tldr_zh": "该论文介绍了RecTok，一种新型视觉分词器，通过使用流语义蒸馏和重构对齐蒸馏，克服了扩散模型中高维潜在空间的局限性，实现了最先进的图像重构和生成结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LINA: Learning INterventions Adaptively for Physical Alignment and Generalization in Diffusion Models",
+        "summary": "Diffusion models (DMs) have achieved remarkable success in image and video generation. However, they still struggle with (1) physical alignment and (2) out-of-distribution (OOD) instruction following. We argue that these issues stem from the models' failure to learn causal directions and to disentangle causal factors for novel recombination. We introduce the Causal Scene Graph (CSG) and the Physical Alignment Probe (PAP) dataset to enable diagnostic interventions. This analysis yields three key insights. First, DMs struggle with multi-hop reasoning for elements not explicitly determined in the prompt. Second, the prompt embedding contains disentangled representations for texture and physics. Third, visual causal structure is disproportionately established during the initial, computationally limited denoising steps. Based on these findings, we introduce LINA (Learning INterventions Adaptively), a novel framework that learns to predict prompt-specific interventions, which employs (1) targeted guidance in the prompt and visual latent spaces, and (2) a reallocated, causality-aware denoising schedule. Our approach enforces both physical alignment and OOD instruction following in image and video DMs, achieving state-of-the-art performance on challenging causal generation tasks and the Winoground dataset. Our project page is at https://opencausalab.github.io/LINA.",
+        "url": "http://arxiv.org/abs/2512.13290v1",
+        "published_date": "2025-12-15T12:59:59+00:00",
+        "updated_date": "2025-12-15T12:59:59+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Shu Yu",
+            "Chaochao Lu"
+        ],
+        "tldr": "The paper introduces LINA, a framework for improving physical alignment and out-of-distribution instruction following in diffusion models by learning prompt-specific interventions based on causal analysis and targeted guidance during the denoising process.",
+        "tldr_zh": "该论文介绍了LINA，一个通过学习基于因果分析的prompt特定干预，并针对去噪过程中的特定指导，来提高扩散模型中物理对齐和分布外指令跟随能力的框架。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Diffusion-Based Restoration for Multi-Modal 3D Object Detection in Adverse Weather",
+        "summary": "Multi-modal 3D object detection is important for reliable perception in robotics and autonomous driving. However, its effectiveness remains limited under adverse weather conditions due to weather-induced distortions and misalignment between different data modalities. In this work, we propose DiffFusion, a novel framework designed to enhance robustness in challenging weather through diffusion-based restoration and adaptive cross-modal fusion. Our key insight is that diffusion models possess strong capabilities for denoising and generating data that can adapt to various weather conditions. Building on this, DiffFusion introduces Diffusion-IR restoring images degraded by weather effects and Point Cloud Restoration (PCR) compensating for corrupted LiDAR data using image object cues. To tackle misalignments between two modalities, we develop Bidirectional Adaptive Fusion and Alignment Module (BAFAM). It enables dynamic multi-modal fusion and bidirectional bird's-eye view (BEV) alignment to maintain consistent spatial correspondence. Extensive experiments on three public datasets show that DiffFusion achieves state-of-the-art robustness under adverse weather while preserving strong clean-data performance. Zero-shot results on the real-world DENSE dataset further validate its generalization. The implementation of our DiffFusion will be released as open-source.",
+        "url": "http://arxiv.org/abs/2512.13107v1",
+        "published_date": "2025-12-15T09:03:46+00:00",
+        "updated_date": "2025-12-15T09:03:46+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zhijian He",
+            "Feifei Liu",
+            "Yuwei Li",
+            "Zhanpeng Liu",
+            "Jintao Cheng",
+            "Xieyuanli Chen",
+            "Xiaoyu Tang"
+        ],
+        "tldr": "The paper introduces DiffFusion, a diffusion-based framework for robust multi-modal 3D object detection in adverse weather, using diffusion for data restoration and an adaptive fusion module for cross-modal alignment. It achieves state-of-the-art performance and demonstrates generalization ability.",
+        "tldr_zh": "该论文提出了DiffFusion，一个基于扩散模型的框架，用于在恶劣天气下实现鲁棒的多模态3D物体检测。它利用扩散模型进行数据修复，并采用自适应融合模块进行跨模态对齐，实现了最先进的性能并展示了泛化能力。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Qonvolution: Towards Learning High-Frequency Signals with Queried Convolution",
+        "summary": "Accurately learning high-frequency signals is a challenge in computer vision and graphics, as neural networks often struggle with these signals due to spectral bias or optimization difficulties. While current techniques like Fourier encodings have made great strides in improving performance, there remains scope for improvement when presented with high-frequency information. This paper introduces Queried-Convolutions (Qonvolutions), a simple yet powerful modification using the neighborhood properties of convolution. Qonvolution convolves a low-frequency signal with queries (such as coordinates) to enhance the learning of intricate high-frequency signals. We empirically demonstrate that Qonvolutions enhance performance across a variety of high-frequency learning tasks crucial to both the computer vision and graphics communities, including 1D regression, 2D super-resolution, 2D image regression, and novel view synthesis (NVS). In particular, by combining Gaussian splatting with Qonvolutions for NVS, we showcase state-of-the-art performance on real-world complex scenes, even outperforming powerful radiance field models on image quality.",
+        "url": "http://arxiv.org/abs/2512.12898v1",
+        "published_date": "2025-12-15T00:46:09+00:00",
+        "updated_date": "2025-12-15T00:46:09+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.GR",
+            "cs.LG"
+        ],
+        "authors": [
+            "Abhinav Kumar",
+            "Tristan Aumentado-Armstrong",
+            "Lazar Valkov",
+            "Gopal Sharma",
+            "Alex Levinshtein",
+            "Radek Grzeszczuk",
+            "Suren Kumar"
+        ],
+        "tldr": "The paper introduces \"Qonvolutions,\" a modified convolution operation using queries to improve learning high-frequency signals, demonstrating SOTA performance on tasks like super-resolution and novel view synthesis.",
+        "tldr_zh": "该论文介绍了“Qonvolutions”，一种使用查询来改进高频信号学习的改进卷积操作，并在超分辨率和新视角合成等任务上展示了SOTA性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
