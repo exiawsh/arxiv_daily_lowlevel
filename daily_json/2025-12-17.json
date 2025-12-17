@@ -1,0 +1,197 @@
+[
+    {
+        "title": "OUSAC: Optimized Guidance Scheduling with Adaptive Caching for DiT Acceleration",
+        "summary": "Diffusion models have emerged as the dominant paradigm for high-quality image generation, yet their computational expense remains substantial due to iterative denoising. Classifier-Free Guidance (CFG) significantly enhances generation quality and controllability but doubles the computation by requiring both conditional and unconditional forward passes at every timestep. We present OUSAC (Optimized gUidance Scheduling with Adaptive Caching), a framework that accelerates diffusion transformers (DiT) through systematic optimization. Our key insight is that variable guidance scales enable sparse computation: adjusting scales at certain timesteps can compensate for skipping CFG at others, enabling both fewer total sampling steps and fewer CFG steps while maintaining quality. However, variable guidance patterns introduce denoising deviations that undermine standard caching methods, which assume constant CFG scales across steps. Moreover, different transformer blocks are affected at different levels under dynamic conditions. This paper develops a two-stage approach leveraging these insights. Stage-1 employs evolutionary algorithms to jointly optimize which timesteps to skip and what guidance scale to use, eliminating up to 82% of unconditional passes. Stage-2 introduces adaptive rank allocation that tailors calibration efforts per transformer block, maintaining caching effectiveness under variable guidance. Experiments demonstrate that OUSAC significantly outperforms state-of-the-art acceleration methods, achieving 53% computational savings with 15% quality improvement on DiT-XL/2 (ImageNet 512x512), 60% savings with 16.1% improvement on PixArt-alpha (MSCOCO), and 5x speedup on FLUX while improving CLIP Score over the 50-step baseline.",
+        "url": "http://arxiv.org/abs/2512.14096v1",
+        "published_date": "2025-12-16T05:11:54+00:00",
+        "updated_date": "2025-12-16T05:11:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ruitong Sun",
+            "Tianze Yang",
+            "Wei Niu",
+            "Jin Sun"
+        ],
+        "tldr": "The paper introduces OUSAC, a framework that accelerates Diffusion Transformers (DiT) by optimizing guidance scheduling and adaptive caching, achieving significant computational savings and quality improvements in image generation.",
+        "tldr_zh": "该论文介绍了OUSAC，一个通过优化指导调度和自适应缓存来加速扩散Transformer（DiT）的框架，从而在图像生成中实现了显著的计算节省和质量提升。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Bridging Fidelity-Reality with Controllable One-Step Diffusion for Image Super-Resolution",
+        "summary": "Recent diffusion-based one-step methods have shown remarkable progress in the field of image super-resolution, yet they remain constrained by three critical limitations: (1) inferior fidelity performance caused by the information loss from compression encoding of low-quality (LQ) inputs; (2) insufficient region-discriminative activation of generative priors; (3) misalignment between text prompts and their corresponding semantic regions. To address these limitations, we propose CODSR, a controllable one-step diffusion network for image super-resolution. First, we propose an LQ-guided feature modulation module that leverages original uncompressed information from LQ inputs to provide high-fidelity conditioning for the diffusion process. We then develop a region-adaptive generative prior activation method to effectively enhance perceptual richness without sacrificing local structural fidelity. Finally, we employ a text-matching guidance strategy to fully harness the conditioning potential of text prompts. Extensive experiments demonstrate that CODSR achieves superior perceptual quality and competitive fidelity compared with state-of-the-art methods with efficient one-step inference.",
+        "url": "http://arxiv.org/abs/2512.14061v1",
+        "published_date": "2025-12-16T03:56:02+00:00",
+        "updated_date": "2025-12-16T03:56:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hao Chen",
+            "Junyang Chen",
+            "Jinshan Pan",
+            "Jiangxin Dong"
+        ],
+        "tldr": "The paper introduces CODSR, a controllable one-step diffusion network for image super-resolution that addresses limitations in fidelity, generative prior activation, and text prompt alignment, achieving superior perceptual quality and competitive fidelity with efficient inference.",
+        "tldr_zh": "该论文提出了 CODSR，一种可控的单步扩散网络，用于图像超分辨率，解决了保真度、生成先验激活和文本提示对齐方面的局限性，通过高效的单步推理实现了卓越的感知质量和具有竞争力的保真度。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "TAT: Task-Adaptive Transformer for All-in-One Medical Image Restoration",
+        "summary": "Medical image restoration (MedIR) aims to recover high-quality medical images from their low-quality counterparts. Recent advancements in MedIR have focused on All-in-One models capable of simultaneously addressing multiple different MedIR tasks. However, due to significant differences in both modality and degradation types, using a shared model for these diverse tasks requires careful consideration of two critical inter-task relationships: task interference, which occurs when conflicting gradient update directions arise across tasks on the same parameter, and task imbalance, which refers to uneven optimization caused by varying learning difficulties inherent to each task. To address these challenges, we propose a task-adaptive Transformer (TAT), a novel framework that dynamically adapts to different tasks through two key innovations. First, a task-adaptive weight generation strategy is introduced to mitigate task interference by generating task-specific weight parameters for each task, thereby eliminating potential gradient conflicts on shared weight parameters. Second, a task-adaptive loss balancing strategy is introduced to dynamically adjust loss weights based on task-specific learning difficulties, preventing task domination or undertraining. Extensive experiments demonstrate that our proposed TAT achieves state-of-the-art performance in three MedIR tasks--PET synthesis, CT denoising, and MRI super-resolution--both in task-specific and All-in-One settings. Code is available at https://github.com/Yaziwel/TAT.",
+        "url": "http://arxiv.org/abs/2512.14550v1",
+        "published_date": "2025-12-16T16:25:47+00:00",
+        "updated_date": "2025-12-16T16:25:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhiwen Yang",
+            "Jiaju Zhang",
+            "Yang Yi",
+            "Jian Liang",
+            "Bingzheng Wei",
+            "Yan Xu"
+        ],
+        "tldr": "The paper introduces a task-adaptive Transformer (TAT) for all-in-one medical image restoration, addressing task interference and imbalance through task-specific weight generation and loss balancing, achieving state-of-the-art results on PET synthesis, CT denoising, and MRI super-resolution.",
+        "tldr_zh": "该论文介绍了一种用于一体化医学图像修复的任务自适应Transformer (TAT)，通过任务特定的权重生成和损失平衡来解决任务干扰和不平衡问题，并在PET合成、CT降噪和MRI超分辨率方面取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Sparse-LaViDa: Sparse Multimodal Discrete Diffusion Language Models",
+        "summary": "Masked Discrete Diffusion Models (MDMs) have achieved strong performance across a wide range of multimodal tasks, including image understanding, generation, and editing. However, their inference speed remains suboptimal due to the need to repeatedly process redundant masked tokens at every sampling step. In this work, we propose Sparse-LaViDa, a novel modeling framework that dynamically truncates unnecessary masked tokens at each inference step to accelerate MDM sampling. To preserve generation quality, we introduce specialized register tokens that serve as compact representations for the truncated tokens. Furthermore, to ensure consistency between training and inference, we design a specialized attention mask that faithfully matches the truncated sampling procedure during training. Built upon the state-of-the-art unified MDM LaViDa-O, Sparse-LaViDa achieves up to a 2x speedup across diverse tasks including text-to-image generation, image editing, and mathematical reasoning, while maintaining generation quality.",
+        "url": "http://arxiv.org/abs/2512.14008v1",
+        "published_date": "2025-12-16T02:06:06+00:00",
+        "updated_date": "2025-12-16T02:06:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shufan Li",
+            "Jiuxiang Gu",
+            "Kangning Liu",
+            "Zhe Lin",
+            "Zijun Wei",
+            "Aditya Grover",
+            "Jason Kuen"
+        ],
+        "tldr": "Sparse-LaViDa accelerates masked discrete diffusion models by dynamically truncating redundant masked tokens during inference, achieving a 2x speedup while maintaining generation quality across various multimodal tasks.",
+        "tldr_zh": "Sparse-LaViDa 通过在推理过程中动态截断冗余的掩码 tokens 来加速掩码离散扩散模型，在保持多种多模态任务生成质量的同时，实现了高达 2 倍的加速。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Coarse-to-Fine Hierarchical Alignment for UAV-based Human Detection using Diffusion Models",
+        "summary": "Training object detectors demands extensive, task-specific annotations, yet this requirement becomes impractical in UAV-based human detection due to constantly shifting target distributions and the scarcity of labeled images. As a remedy, synthetic simulators are adopted to generate annotated data, with a low annotation cost. However, the domain gap between synthetic and real images hinders the model from being effectively applied to the target domain. Accordingly, we introduce Coarse-to-Fine Hierarchical Alignment (CFHA), a three-stage diffusion-based framework designed to transform synthetic data for UAV-based human detection, narrowing the domain gap while preserving the original synthetic labels. CFHA explicitly decouples global style and local content domain discrepancies and bridges those gaps using three modules: (1) Global Style Transfer -- a diffusion model aligns color, illumination, and texture statistics of synthetic images to the realistic style, using only a small real reference set; (2) Local Refinement -- a super-resolution diffusion model is used to facilitate fine-grained and photorealistic details for the small objects, such as human instances, preserving shape and boundary integrity; (3) Hallucination Removal -- a module that filters out human instances whose visual attributes do not align with real-world data to make the human appearance closer to the target distribution. Extensive experiments on public UAV Sim2Real detection benchmarks demonstrate that our methods significantly improve the detection accuracy compared to the non-transformed baselines. Specifically, our method achieves up to $+14.1$ improvement of mAP50 on Semantic-Drone benchmark. Ablation studies confirm the complementary roles of the global and local stages and highlight the importance of hierarchical alignment. The code is released at \\href{https://github.com/liwd190019/CFHA}{this url}.",
+        "url": "http://arxiv.org/abs/2512.13869v1",
+        "published_date": "2025-12-15T19:57:36+00:00",
+        "updated_date": "2025-12-15T19:57:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wenda Li",
+            "Meng Wu",
+            "Sungmin Eum",
+            "Heesung Kwon",
+            "Qing Qu"
+        ],
+        "tldr": "The paper introduces a Coarse-to-Fine Hierarchical Alignment (CFHA) framework using diffusion models to address the domain gap between synthetic and real images for UAV-based human detection, significantly improving detection accuracy.",
+        "tldr_zh": "本文提出了一种基于扩散模型的粗到细分层对齐（CFHA）框架，用于解决无人机人体检测中合成图像和真实图像之间的域差距，从而显著提高检测精度。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Towards Scalable Pre-training of Visual Tokenizers for Generation",
+        "summary": "The quality of the latent space in visual tokenizers (e.g., VAEs) is crucial for modern generative models. However, the standard reconstruction-based training paradigm produces a latent space that is biased towards low-level information, leading to a foundation flaw: better pixel-level accuracy does not lead to higher-quality generation. This implies that pouring extensive compute into visual tokenizer pre-training translates poorly to improved performance in generation. We identify this as the ``pre-training scaling problem`` and suggest a necessary shift: to be effective for generation, a latent space must concisely represent high-level semantics. We present VTP, a unified visual tokenizer pre-training framework, pioneering the joint optimization of image-text contrastive, self-supervised, and reconstruction losses. Our large-scale study reveals two principal findings: (1) understanding is a key driver of generation, and (2) much better scaling properties, where generative performance scales effectively with compute, parameters, and data allocated to the pretraining of the visual tokenizer. After large-scale pre-training, our tokenizer delivers a competitive profile (78.2 zero-shot accuracy and 0.36 rFID on ImageNet) and 4.1 times faster convergence on generation compared to advanced distillation methods. More importantly, it scales effectively: without modifying standard DiT training specs, solely investing more FLOPS in pretraining VTP achieves 65.8\\% FID improvement in downstream generation, while conventional autoencoder stagnates very early at 1/10 FLOPS. Our pre-trained models are available at https://github.com/MiniMax-AI/VTP.",
+        "url": "http://arxiv.org/abs/2512.13687v1",
+        "published_date": "2025-12-15T18:59:54+00:00",
+        "updated_date": "2025-12-15T18:59:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jingfeng Yao",
+            "Yuda Song",
+            "Yucong Zhou",
+            "Xinggang Wang"
+        ],
+        "tldr": "The paper introduces VTP, a visual tokenizer pre-training framework that jointly optimizes image-text contrastive, self-supervised, and reconstruction losses, addressing the 'pre-training scaling problem' in visual tokenizers for generative models, leading to better scaling properties and improved generation performance.",
+        "tldr_zh": "该论文介绍了VTP，一个视觉标记器预训练框架，它联合优化图像-文本对比、自监督和重建损失，解决了生成模型中视觉标记器的“预训练缩放问题”，从而实现更好的缩放特性和改进的生成性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SS4D: Native 4D Generative Model via Structured Spacetime Latents",
+        "summary": "We present SS4D, a native 4D generative model that synthesizes dynamic 3D objects directly from monocular video. Unlike prior approaches that construct 4D representations by optimizing over 3D or video generative models, we train a generator directly on 4D data, achieving high fidelity, temporal coherence, and structural consistency. At the core of our method is a compressed set of structured spacetime latents. Specifically, (1) To address the scarcity of 4D training data, we build on a pre-trained single-image-to-3D model, preserving strong spatial consistency. (2) Temporal consistency is enforced by introducing dedicated temporal layers that reason across frames. (3) To support efficient training and inference over long video sequences, we compress the latent sequence along the temporal axis using factorized 4D convolutions and temporal downsampling blocks. In addition, we employ a carefully designed training strategy to enhance robustness against occlusion",
+        "url": "http://arxiv.org/abs/2512.14284v1",
+        "published_date": "2025-12-16T10:45:06+00:00",
+        "updated_date": "2025-12-16T10:45:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhibing Li",
+            "Mengchen Zhang",
+            "Tong Wu",
+            "Jing Tan",
+            "Jiaqi Wang",
+            "Dahua Lin"
+        ],
+        "tldr": "The paper introduces SS4D, a novel 4D generative model that directly synthesizes dynamic 3D objects from monocular video using structured spacetime latents, addressing temporal coherence and structural consistency challenges.",
+        "tldr_zh": "该论文介绍了SS4D，一种新颖的4D生成模型，它使用结构化的时空潜在变量直接从单目视频合成动态3D对象，解决了时间连贯性和结构一致性的挑战。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Establishing Stochastic Object Models from Noisy Data via Ambient Measurement-Integrated Diffusion",
+        "summary": "Task-based measures of image quality (IQ) are critical for evaluating medical imaging systems, which must account for randomness including anatomical variability. Stochastic object models (SOMs) provide a statistical description of such variability, but conventional mathematical SOMs fail to capture realistic anatomy, while data-driven approaches typically require clean data rarely available in clinical tasks. To address this challenge, we propose AMID, an unsupervised Ambient Measurement-Integrated Diffusion with noise decoupling, which establishes clean SOMs directly from noisy measurements. AMID introduces a measurement-integrated strategy aligning measurement noise with the diffusion trajectory, and explicitly models coupling between measurement and diffusion noise across steps, an ambient loss is thus designed base on it to learn clean SOMs. Experiments on real CT and mammography datasets show that AMID outperforms existing methods in generation fidelity and yields more reliable task-based IQ evaluation, demonstrating its potential for unsupervised medical imaging analysis.",
+        "url": "http://arxiv.org/abs/2512.14187v1",
+        "published_date": "2025-12-16T08:33:08+00:00",
+        "updated_date": "2025-12-16T08:33:08+00:00",
+        "categories": [
+            "cs.GR",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jianwei Sun",
+            "Xiaoning Lei",
+            "Wenhao Cai",
+            "Xichen Xu",
+            "Yanshu Wang",
+            "Hu Gao"
+        ],
+        "tldr": "The paper introduces AMID, an unsupervised method using diffusion models to generate clean stochastic object models (SOMs) from noisy medical imaging data, enabling more reliable task-based image quality evaluation.",
+        "tldr_zh": "该论文介绍了一种名为AMID的无监督方法，它利用扩散模型从噪声医学图像数据中生成清晰的随机对象模型（SOM），从而实现更可靠的基于任务的图像质量评估。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 7,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
