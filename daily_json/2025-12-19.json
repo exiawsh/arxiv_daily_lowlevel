@@ -1,0 +1,178 @@
+[
+    {
+        "title": "Yuan-TecSwin: A text conditioned Diffusion model with Swin-transformer blocks",
+        "summary": "Diffusion models have shown remarkable capacity in image synthesis based on their U-shaped architecture and convolutional neural networks (CNN) as basic blocks. The locality of the convolution operation in CNN may limit the model's ability to understand long-range semantic information. To address this issue, we propose Yuan-TecSwin, a text-conditioned diffusion model with Swin-transformer in this work. The Swin-transformer blocks take the place of CNN blocks in the encoder and decoder, to improve the non-local modeling ability in feature extraction and image restoration. The text-image alignment is improved with a well-chosen text encoder, effective utilization of text embedding, and careful design in the incorporation of text condition. Using an adapted time step to search in different diffusion stages, inference performance is further improved by 10%. Yuan-TecSwin achieves the state-of-the-art FID score of 1.37 on ImageNet generation benchmark, without any additional models at different denoising stages. In a side-by-side comparison, we find it difficult for human interviewees to tell the model-generated images from the human-painted ones.",
+        "url": "http://arxiv.org/abs/2512.16586v1",
+        "published_date": "2025-12-18T14:32:06+00:00",
+        "updated_date": "2025-12-18T14:32:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Shaohua Wu",
+            "Tong Yu",
+            "Shenling Wang",
+            "Xudong Zhao"
+        ],
+        "tldr": "This paper introduces Yuan-TecSwin, a text-conditioned diffusion model that replaces CNN blocks with Swin-transformer blocks to improve long-range semantic understanding and achieves state-of-the-art FID on ImageNet generation.",
+        "tldr_zh": "该论文介绍了 Yuan-TecSwin，一种文本条件扩散模型，用 Swin-transformer 块取代 CNN 块，以提高长程语义理解能力，并在 ImageNet 生成上实现了最先进的 FID。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "REGLUE Your Latents with Global and Local Semantics for Entangled Diffusion",
+        "summary": "Latent diffusion models (LDMs) achieve state-of-the-art image synthesis, yet their reconstruction-style denoising objective provides only indirect semantic supervision: high-level semantics emerge slowly, requiring longer training and limiting sample quality. Recent works inject semantics from Vision Foundation Models (VFMs) either externally via representation alignment or internally by jointly modeling only a narrow slice of VFM features inside the diffusion process, under-utilizing the rich, nonlinear, multi-layer spatial semantics available. We introduce REGLUE (Representation Entanglement with Global-Local Unified Encoding), a unified latent diffusion framework that jointly models (i) VAE image latents, (ii) compact local (patch-level) VFM semantics, and (iii) a global (image-level) [CLS] token within a single SiT backbone. A lightweight convolutional semantic compressor nonlinearly aggregates multi-layer VFM features into a low-dimensional, spatially structured representation, which is entangled with the VAE latents in the diffusion process. An external alignment loss further regularizes internal representations toward frozen VFM targets. On ImageNet 256x256, REGLUE consistently improves FID and accelerates convergence over SiT-B/2 and SiT-XL/2 baselines, as well as over REPA, ReDi, and REG. Extensive experiments show that (a) spatial VFM semantics are crucial, (b) non-linear compression is key to unlocking their full benefit, and (c) global tokens and external alignment act as complementary, lightweight enhancements within our global-local-latent joint modeling framework. The code is available at https://github.com/giorgospets/reglue .",
+        "url": "http://arxiv.org/abs/2512.16636v1",
+        "published_date": "2025-12-18T15:10:42+00:00",
+        "updated_date": "2025-12-18T15:10:42+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Giorgos Petsangourakis",
+            "Christos Sgouropoulos",
+            "Bill Psomas",
+            "Theodoros Giannakopoulos",
+            "Giorgos Sfikas",
+            "Ioannis Kakogeorgiou"
+        ],
+        "tldr": "The paper introduces REGLUE, a latent diffusion framework that improves image synthesis by jointly modeling VAE latents with local and global semantics extracted from Vision Foundation Models, leading to better FID and faster convergence on ImageNet.",
+        "tldr_zh": "该论文介绍了REGLUE，一种潜在扩散框架，通过联合建模VAE潜在变量与从视觉基础模型中提取的局部和全局语义来改进图像合成，从而在ImageNet上获得更好的FID和更快的收敛。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "StageVAR: Stage-Aware Acceleration for Visual Autoregressive Models",
+        "summary": "Visual Autoregressive (VAR) modeling departs from the next-token prediction paradigm of traditional Autoregressive (AR) models through next-scale prediction, enabling high-quality image generation. However, the VAR paradigm suffers from sharply increased computational complexity and running time at large-scale steps. Although existing acceleration methods reduce runtime for large-scale steps, but rely on manual step selection and overlook the varying importance of different stages in the generation process. To address this challenge, we present StageVAR, a systematic study and stage-aware acceleration framework for VAR models. Our analysis shows that early steps are critical for preserving semantic and structural consistency and should remain intact, while later steps mainly refine details and can be pruned or approximated for acceleration. Building on these insights, StageVAR introduces a plug-and-play acceleration strategy that exploits semantic irrelevance and low-rank properties in late-stage computations, without requiring additional training. Our proposed StageVAR achieves up to 3.4x speedup with only a 0.01 drop on GenEval and a 0.26 decrease on DPG, consistently outperforming existing acceleration baselines. These results highlight stage-aware design as a powerful principle for efficient visual autoregressive image generation.",
+        "url": "http://arxiv.org/abs/2512.16483v1",
+        "published_date": "2025-12-18T12:51:19+00:00",
+        "updated_date": "2025-12-18T12:51:19+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Senmao Li",
+            "Kai Wang",
+            "Salman Khan",
+            "Fahad Shahbaz Khan",
+            "Jian Yang",
+            "Yaxing Wang"
+        ],
+        "tldr": "The paper introduces StageVAR, a stage-aware acceleration framework for Visual Autoregressive models that selectively accelerates later stages of the generation process, achieving significant speedup with minimal quality degradation.",
+        "tldr_zh": "该论文介绍了StageVAR，一个视觉自回归模型的阶段感知加速框架，通过选择性地加速生成过程的后期阶段，以最小的质量损失实现了显著的加速。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LaverNet: Lightweight All-in-one Video Restoration via Selective Propagation",
+        "summary": "Recent studies have explored all-in-one video restoration, which handles multiple degradations with a unified model. However, these approaches still face two challenges when dealing with time-varying degradations. First, the degradation can dominate temporal modeling, confusing the model to focus on artifacts rather than the video content. Second, current methods typically rely on large models to handle all-in-one restoration, concealing those underlying difficulties. To address these challenges, we propose a lightweight all-in-one video restoration network, LaverNet, with only 362K parameters. To mitigate the impact of degradations on temporal modeling, we introduce a novel propagation mechanism that selectively transmits only degradation-agnostic features across frames. Through LaverNet, we demonstrate that strong all-in-one restoration can be achieved with a compact network. Despite its small size, less than 1\\% of the parameters of existing models, LaverNet achieves comparable, even superior performance across benchmarks.",
+        "url": "http://arxiv.org/abs/2512.16313v1",
+        "published_date": "2025-12-18T08:54:00+00:00",
+        "updated_date": "2025-12-18T08:54:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haiyu Zhao",
+            "Yiwen Shan",
+            "Yuanbiao Gou",
+            "Xi Peng"
+        ],
+        "tldr": "LaverNet is a lightweight (362K parameters) all-in-one video restoration network that selectively propagates degradation-agnostic features to improve temporal modeling, achieving comparable or superior performance to larger models.",
+        "tldr_zh": "LaverNet是一个轻量级的（362K参数）一体化视频修复网络，它选择性地传播与退化无关的特征，以改善时间建模，从而实现了与大型模型相当甚至更好的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Pixel Super-Resolved Fluorescence Lifetime Imaging Using Deep Learning",
+        "summary": "Fluorescence lifetime imaging microscopy (FLIM) is a powerful quantitative technique that provides metabolic and molecular contrast, offering strong translational potential for label-free, real-time diagnostics. However, its clinical adoption remains limited by long pixel dwell times and low signal-to-noise ratio (SNR), which impose a stricter resolution-speed trade-off than conventional optical imaging approaches. Here, we introduce FLIM_PSR_k, a deep learning-based multi-channel pixel super-resolution (PSR) framework that reconstructs high-resolution FLIM images from data acquired with up to a 5-fold increased pixel size. The model is trained using the conditional generative adversarial network (cGAN) framework, which, compared to diffusion model-based alternatives, delivers a more robust PSR reconstruction with substantially shorter inference times, a crucial advantage for practical deployment. FLIM_PSR_k not only enables faster image acquisition but can also alleviate SNR limitations in autofluorescence-based FLIM. Blind testing on held-out patient-derived tumor tissue samples demonstrates that FLIM_PSR_k reliably achieves a super-resolution factor of k = 5, resulting in a 25-fold increase in the space-bandwidth product of the output images and revealing fine architectural features lost in lower-resolution inputs, with statistically significant improvements across various image quality metrics. By increasing FLIM's effective spatial resolution, FLIM_PSR_k advances lifetime imaging toward faster, higher-resolution, and hardware-flexible implementations compatible with low-numerical-aperture and miniaturized platforms, better positioning FLIM for translational applications.",
+        "url": "http://arxiv.org/abs/2512.16266v1",
+        "published_date": "2025-12-18T07:28:10+00:00",
+        "updated_date": "2025-12-18T07:28:10+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "physics.med-ph",
+            "physics.optics"
+        ],
+        "authors": [
+            "Paloma Casteleiro Costa",
+            "Parnian Ghapandar Kashani",
+            "Xuhui Liu",
+            "Alexander Chen",
+            "Ary Portes",
+            "Julien Bec",
+            "Laura Marcu",
+            "Aydogan Ozcan"
+        ],
+        "tldr": "The paper introduces FLIM_PSR_k, a cGAN-based deep learning framework for pixel super-resolution in fluorescence lifetime imaging microscopy (FLIM), achieving a 5x resolution increase and faster acquisition times, which is suitable for translational applications.",
+        "tldr_zh": "该论文介绍了一种基于cGAN的深度学习框架FLIM_PSR_k，用于荧光寿命成像显微镜(FLIM)中的像素超分辨率，实现了5倍分辨率的提升和更快的采集时间，适用于转化应用。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Task-Oriented Data Synthesis and Control-Rectify Sampling for Remote Sensing Semantic Segmentation",
+        "summary": "With the rapid progress of controllable generation, training data synthesis has become a promising way to expand labeled datasets and alleviate manual annotation in remote sensing (RS). However, the complexity of semantic mask control and the uncertainty of sampling quality often limit the utility of synthetic data in downstream semantic segmentation tasks. To address these challenges, we propose a task-oriented data synthesis framework (TODSynth), including a Multimodal Diffusion Transformer (MM-DiT) with unified triple attention and a plug-and-play sampling strategy guided by task feedback. Built upon the powerful DiT-based generative foundation model, we systematically evaluate different control schemes, showing that a text-image-mask joint attention scheme combined with full fine-tuning of the image and mask branches significantly enhances the effectiveness of RS semantic segmentation data synthesis, particularly in few-shot and complex-scene scenarios. Furthermore, we propose a control-rectify flow matching (CRFM) method, which dynamically adjusts sampling directions guided by semantic loss during the early high-plasticity stage, mitigating the instability of generated images and bridging the gap between synthetic data and downstream segmentation tasks. Extensive experiments demonstrate that our approach consistently outperforms state-of-the-art controllable generation methods, producing more stable and task-oriented synthetic data for RS semantic segmentation.",
+        "url": "http://arxiv.org/abs/2512.16740v1",
+        "published_date": "2025-12-18T16:37:39+00:00",
+        "updated_date": "2025-12-18T16:37:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yunkai Yang",
+            "Yudong Zhang",
+            "Kunquan Zhang",
+            "Jinxiao Zhang",
+            "Xinying Chen",
+            "Haohuan Fu",
+            "Runmin Dong"
+        ],
+        "tldr": "The paper introduces a task-oriented data synthesis framework (TODSynth) using a Multimodal Diffusion Transformer and a control-rectify flow matching method to generate high-quality, task-specific synthetic data for remote sensing semantic segmentation, improving performance in downstream tasks, particularly in few-shot scenarios.",
+        "tldr_zh": "本文介绍了一种面向任务的数据合成框架（TODSynth），该框架使用多模态扩散Transformer和控制校正流匹配方法，为遥感语义分割生成高质量、特定于任务的合成数据，从而提高下游任务的性能，尤其是在少样本场景中。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "SoFlow: Solution Flow Models for One-Step Generative Modeling",
+        "summary": "The multi-step denoising process in diffusion and Flow Matching models causes major efficiency issues, which motivates research on few-step generation. We present Solution Flow Models (SoFlow), a framework for one-step generation from scratch. By analyzing the relationship between the velocity function and the solution function of the velocity ordinary differential equation (ODE), we propose a Flow Matching loss and a solution consistency loss to train our models. The Flow Matching loss allows our models to provide estimated velocity fields for Classifier-Free Guidance (CFG) during training, which improves generation performance. Notably, our consistency loss does not require the calculation of the Jacobian-vector product (JVP), a common requirement in recent works that is not well-optimized in deep learning frameworks like PyTorch. Experimental results indicate that, when trained from scratch using the same Diffusion Transformer (DiT) architecture and an equal number of training epochs, our models achieve better FID-50K scores than MeanFlow models on the ImageNet 256x256 dataset.",
+        "url": "http://arxiv.org/abs/2512.15657v1",
+        "published_date": "2025-12-17T18:10:17+00:00",
+        "updated_date": "2025-12-17T18:10:17+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianze Luo",
+            "Haotian Yuan",
+            "Zhuang Liu"
+        ],
+        "tldr": "The paper introduces Solution Flow Models (SoFlow) for one-step image generation, addressing efficiency issues in multi-step diffusion and Flow Matching models with a novel Flow Matching loss and solution consistency loss. It achieves better FID scores than MeanFlow on ImageNet 256x256 using DiT.",
+        "tldr_zh": "该论文提出了Solution Flow Models (SoFlow)，用于单步图像生成，通过新的Flow Matching损失和解一致性损失解决了多步扩散和Flow Matching模型中的效率问题。使用DiT在ImageNet 256x256上实现了比MeanFlow更好的FID分数。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
