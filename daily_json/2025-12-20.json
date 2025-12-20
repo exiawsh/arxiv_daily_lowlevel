@@ -1,0 +1,54 @@
+[
+    {
+        "title": "SFTok: Bridging the Performance Gap in Discrete Tokenizers",
+        "summary": "Recent advances in multimodal models highlight the pivotal role of image tokenization in high-resolution image generation. By compressing images into compact latent representations, tokenizers enable generative models to operate in lower-dimensional spaces, thereby improving computational efficiency and reducing complexity. Discrete tokenizers naturally align with the autoregressive paradigm but still lag behind continuous ones, limiting their adoption in multimodal systems. To address this, we propose \\textbf{SFTok}, a discrete tokenizer that incorporates a multi-step iterative mechanism for precise reconstruction. By integrating \\textbf{self-forcing guided visual reconstruction} and \\textbf{debias-and-fitting training strategy}, SFTok resolves the training-inference inconsistency in multi-step process, significantly enhancing image reconstruction quality. At a high compression rate of only 64 tokens per image, SFTok achieves state-of-the-art reconstruction quality on ImageNet (rFID = 1.21) and demonstrates exceptional performance in class-to-image generation tasks (gFID = 2.29).",
+        "url": "http://arxiv.org/abs/2512.16910v1",
+        "published_date": "2025-12-18T18:59:04+00:00",
+        "updated_date": "2025-12-18T18:59:04+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Qihang Rao",
+            "Borui Zhang",
+            "Wenzhao Zheng",
+            "Jie Zhou",
+            "Jiwen Lu"
+        ],
+        "tldr": "The paper introduces SFTok, a novel discrete image tokenizer with a multi-step iterative reconstruction mechanism that achieves state-of-the-art results on ImageNet and class-to-image generation, aiming to bridge the performance gap between discrete and continuous tokenizers.",
+        "tldr_zh": "该论文介绍了 SFTok，一种新的离散图像标记器，具有多步迭代重建机制，在 ImageNet 和类到图像生成方面取得了最先进的结果，旨在弥合离散和连续标记器之间的性能差距。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Next-Embedding Prediction Makes Strong Vision Learners",
+        "summary": "Inspired by the success of generative pretraining in natural language, we ask whether the same principles can yield strong self-supervised visual learners. Instead of training models to output features for downstream use, we train them to generate embeddings to perform predictive tasks directly. This work explores such a shift from learning representations to learning models. Specifically, models learn to predict future patch embeddings conditioned on past ones, using causal masking and stop gradient, which we refer to as Next-Embedding Predictive Autoregression (NEPA). We demonstrate that a simple Transformer pretrained on ImageNet-1k with next embedding prediction as its sole learning objective is effective - no pixel reconstruction, discrete tokens, contrastive loss, or task-specific heads. This formulation retains architectural simplicity and scalability, without requiring additional design complexity. NEPA achieves strong results across tasks, attaining 83.8% and 85.3% top-1 accuracy on ImageNet-1K with ViT-B and ViT-L backbones after fine-tuning, and transferring effectively to semantic segmentation on ADE20K. We believe generative pretraining from embeddings provides a simple, scalable, and potentially modality-agnostic alternative to visual self-supervised learning.",
+        "url": "http://arxiv.org/abs/2512.16922v1",
+        "published_date": "2025-12-18T18:59:58+00:00",
+        "updated_date": "2025-12-18T18:59:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sihan Xu",
+            "Ziqiao Ma",
+            "Wenhao Chai",
+            "Xuweiyi Chen",
+            "Weiyang Jin",
+            "Joyce Chai",
+            "Saining Xie",
+            "Stella X. Yu"
+        ],
+        "tldr": "The paper introduces Next-Embedding Predictive Autoregression (NEPA), a generative pretraining method for vision that predicts future patch embeddings, achieving strong ImageNet and ADE20K results without complex objectives.",
+        "tldr_zh": "该论文介绍了Next-Embedding Predictive Autoregression (NEPA)，一种用于视觉的生成式预训练方法，它预测未来的patch embeddings，并在ImageNet和ADE20K上取得了良好的效果，而无需复杂的目标函数。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
