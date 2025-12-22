@@ -1,0 +1,58 @@
+[
+    {
+        "title": "Both Semantics and Reconstruction Matter: Making Representation Encoders Ready for Text-to-Image Generation and Editing",
+        "summary": "Modern Latent Diffusion Models (LDMs) typically operate in low-level Variational Autoencoder (VAE) latent spaces that are primarily optimized for pixel-level reconstruction. To unify vision generation and understanding, a burgeoning trend is to adopt high-dimensional features from representation encoders as generative latents. However, we empirically identify two fundamental obstacles in this paradigm: (1) the discriminative feature space lacks compact regularization, making diffusion models prone to off-manifold latents that lead to inaccurate object structures; and (2) the encoder's inherently weak pixel-level reconstruction hinders the generator from learning accurate fine-grained geometry and texture. In this paper, we propose a systematic framework to adapt understanding-oriented encoder features for generative tasks. We introduce a semantic-pixel reconstruction objective to regularize the latent space, enabling the compression of both semantic information and fine-grained details into a highly compact representation (96 channels with 16x16 spatial downsampling). This design ensures that the latent space remains semantically rich and achieves state-of-the-art image reconstruction, while remaining compact enough for accurate generation. Leveraging this representation, we design a unified Text-to-Image (T2I) and image editing model. Benchmarking against various feature spaces, we demonstrate that our approach achieves state-of-the-art reconstruction, faster convergence, and substantial performance gains in both T2I and editing tasks, validating that representation encoders can be effectively adapted into robust generative components.",
+        "url": "http://arxiv.org/abs/2512.17909v1",
+        "published_date": "2025-12-19T18:59:57+00:00",
+        "updated_date": "2025-12-19T18:59:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shilong Zhang",
+            "He Zhang",
+            "Zhifei Zhang",
+            "Chongjian Ge",
+            "Shuchen Xue",
+            "Shaoteng Liu",
+            "Mengwei Ren",
+            "Soo Ye Kim",
+            "Yuqian Zhou",
+            "Qing Liu",
+            "Daniil Pakhomov",
+            "Kai Zhang",
+            "Zhe Lin",
+            "Ping Luo"
+        ],
+        "tldr": "This paper introduces a framework to adapt representation encoders for text-to-image generation and editing by addressing issues of lacking regularization and weak pixel-level reconstruction, achieving state-of-the-art results in reconstruction, convergence speed, and generation performance.",
+        "tldr_zh": "该论文提出了一个框架，通过解决缺乏正则化和弱像素级重建的问题，来调整表示编码器以用于文本到图像的生成和编辑，在重建、收敛速度和生成性能方面实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "InSPECT: Invariant Spectral Features Preservation of Diffusion Models",
+        "summary": "Modern diffusion models (DMs) have achieved state-of-the-art image generation. However, the fundamental design choice of diffusing data all the way to white noise and then reconstructing it leads to an extremely difficult and computationally intractable prediction task. To overcome this limitation, we propose InSPECT (Invariant Spectral Feature-Preserving Diffusion Model), a novel diffusion model that keeps invariant spectral features during both the forward and backward processes. At the end of the forward process, the Fourier coefficients smoothly converge to a specified random noise, enabling features preservation while maintaining diversity and randomness. By preserving invariant features, InSPECT demonstrates enhanced visual diversity, faster convergence rate, and a smoother diffusion process. Experiments on CIFAR-10, Celeb-A, and LSUN demonstrate that InSPECT achieves on average a 39.23% reduction in FID and 45.80% improvement in IS against DDPM for 10K iterations under specified parameter settings, which demonstrates the significant advantages of preserving invariant features: achieving superior generation quality and diversity, while enhancing computational efficiency and enabling faster convergence rate. To the best of our knowledge, this is the first attempt to analyze and preserve invariant spectral features in diffusion models.",
+        "url": "http://arxiv.org/abs/2512.17873v1",
+        "published_date": "2025-12-19T18:24:02+00:00",
+        "updated_date": "2025-12-19T18:24:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Baohua Yan",
+            "Qingyuan Liu",
+            "Jennifer Kava",
+            "Xuan Di"
+        ],
+        "tldr": "The paper introduces InSPECT, a novel diffusion model that preserves invariant spectral features during the forward and backward processes, leading to improved generation quality, diversity, and computational efficiency compared to DDPM.",
+        "tldr_zh": "该论文介绍了一种名为InSPECT的新型扩散模型，它在正向和反向过程中保留不变的频谱特征，从而与DDPM相比，提高了生成质量、多样性和计算效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    }
+]
