@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - December 18, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - December 22, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>December 18, 2025</p>
+            <p>December 22, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MVGSR: Multi-View Consistent 3D Gaussian Super-Resolution via Epipolar Guidance</h2>
+            <h2 class="paper-title">SimpleCall: A Lightweight Image Restoration Agent in Label-Free Environments with MLLM Perceptual Feedback</h2>
             
-            <p class="paper-summary">Scenes reconstructed by 3D Gaussian Splatting (3DGS) trained on low-resolution (LR) images are unsuitable for high-resolution (HR) rendering. Consequently, a 3DGS super-resolution (SR) method is needed to bridge LR inputs and HR rendering. Early 3DGS SR methods rely on single-image SR networks, which lack cross-view consistency and fail to fuse complementary information across views. More recent video-based SR approaches attempt to address this limitation but require strictly sequential frames, limiting their applicability to unstructured multi-view datasets. In this work, we introduce Multi-View Consistent 3D Gaussian Splatting Super-Resolution (MVGSR), a framework that focuses on integrating multi-view information for 3DGS rendering with high-frequency details and enhanced consistency. We first propose an Auxiliary View Selection Method based on camera poses, making our method adaptable for arbitrarily organized multi-view datasets without the need of temporal continuity or data reordering. Furthermore, we introduce, for the first time, an epipolar-constrained multi-view attention mechanism into 3DGS SR, which serves as the core of our proposed multi-view SR network. This design enables the model to selectively aggregate consistent information from auxiliary views, enhancing the geometric consistency and detail fidelity of 3DGS representations. Extensive experiments demonstrate that our method achieves state-of-the-art performance on both object-centric and scene-level 3DGS SR benchmarks.</p>
+            <p class="paper-summary">Complex image restoration aims to recover high-quality images from inputs affected by multiple degradations such as blur, noise, rain, and compression artifacts. Recent restoration agents, powered by vision-language models and large language models, offer promising restoration capabilities but suffer from significant efficiency bottlenecks due to reflection, rollback, and iterative tool searching. Moreover, their performance heavily depends on degradation recognition models that require extensive annotations for training, limiting their applicability in label-free environments. To address these limitations, we propose a policy optimization-based restoration framework that learns an lightweight agent to determine tool-calling sequences. The agent operates in a sequential decision process, selecting the most appropriate restoration operation at each step to maximize final image quality. To enable training within label-free environments, we introduce a novel reward mechanism driven by multimodal large language models, which act as human-aligned evaluator and provide perceptual feedback for policy improvement. Once trained, our agent executes a deterministic restoration plans without redundant tool invocations, significantly accelerating inference while maintaining high restoration quality. Extensive experiments show that despite using no supervision, our method matches SOTA performance on full-reference metrics and surpasses existing approaches on no-reference metrics across diverse degradation scenarios.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces MVGSR, a multi-view consistent super-resolution method for 3D Gaussian Splatting that leverages epipolar constraints and auxiliary view selection to improve detail fidelity and geometric consistency in unstructured multi-view datasets.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a lightweight image restoration agent trained via policy optimization and MLLM-based reward in label-free environments, achieving SOTA performance without requiring extensive annotated data.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了MVGSR，一种多视角一致的3D高斯溅射超分辨率方法，利用极线约束和辅助视图选择来提高非结构化多视角数据集中细节的保真度和几何一致性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种轻量级的图像修复代理，该代理通过策略优化和基于MLLM的奖励在无标签环境下进行训练，无需大量标注数据即可实现SOTA性能。</p>
             
 
             
@@ -286,18 +286,18 @@
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.15048v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.18599v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Kaizhe Zhang, Shinan Chen, Qian Zhao, Weizhan Zhang, Caixia Yan, Yudeng Xin</p>
+            <p class="paper-authors">Authors: Jianglin Lu, Yuanwei Wu, Ziyi Zhao, Hongcheng Wang, Felix Jimenez, Abrar Majeedi, Yun Fu</p>
             
         </motion.div>
         
@@ -309,14 +309,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Spherical Leech Quantization for Visual Tokenization and Generation</h2>
+            <h2 class="paper-title">MaskFocus: Focusing Policy Optimization on Critical Steps for Masked Image Generation</h2>
             
-            <p class="paper-summary">Non-parametric quantization has received much attention due to its efficiency on parameters and scalability to a large codebook. In this paper, we present a unified formulation of different non-parametric quantization methods through the lens of lattice coding. The geometry of lattice codes explains the necessity of auxiliary loss terms when training auto-encoders with certain existing lookup-free quantization variants such as BSQ. As a step forward, we explore a few possible candidates, including random lattices, generalized Fibonacci lattices, and densest sphere packing lattices. Among all, we find the Leech lattice-based quantization method, which is dubbed as Spherical Leech Quantization ($Λ_{24}$-SQ), leads to both a simplified training recipe and an improved reconstruction-compression tradeoff thanks to its high symmetry and even distribution on the hypersphere. In image tokenization and compression tasks, this quantization approach achieves better reconstruction quality across all metrics than BSQ, the best prior art, while consuming slightly fewer bits. The improvement also extends to state-of-the-art auto-regressive image generation frameworks.</p>
+            <p class="paper-summary">Reinforcement learning (RL) has demonstrated significant potential for post-training language models and autoregressive visual generative models, but adapting RL to masked generative models remains challenging. The core factor is that policy optimization requires accounting for the probability likelihood of each step due to its multi-step and iterative refinement process. This reliance on entire sampling trajectories introduces high computational cost, whereas natively optimizing random steps often yields suboptimal results. In this paper, we present MaskFocus, a novel RL framework that achieves effective policy optimization for masked generative models by focusing on critical steps. Specifically, we determine the step-level information gain by measuring the similarity between the intermediate images at each sampling step and the final generated image. Crucially, we leverage this to identify the most critical and valuable steps and execute focused policy optimization on them. Furthermore, we design a dynamic routing sampling mechanism based on entropy to encourage the model to explore more valuable masking strategies for samples with low entropy. Extensive experiments on multiple Text-to-Image benchmarks validate the effectiveness of our method.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Spherical Leech Quantization ($Λ_{24}$-SQ), a novel quantization method based on the Leech lattice, for improved image tokenization, compression, and generation, achieving better performance than BSQ with fewer bits.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MaskFocus, a reinforcement learning framework for masked image generation that focuses policy optimization on critical steps identified by measuring information gain between intermediate and final images, along with a dynamic routing sampling mechanism.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了球形李奇量化 ($Λ_{24}$-SQ)，一种基于李奇格子的新型量化方法，用于改进图像标记化、压缩和生成，与 BSQ 相比，以更少的比特实现了更好的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为MaskFocus的强化学习框架，用于掩码图像生成。该框架通过测量中间图像和最终图像之间的信息增益来识别关键步骤，并将策略优化集中在这些关键步骤上，同时还设计了一个动态路由采样机制。</p>
             
 
             
@@ -334,16 +334,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -387,11 +387,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.14697v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.18766v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yue Zhao, Hanwen Jiang, Zhenlin Xu, Chutong Yang, Ehsan Adeli, Philipp Krähenbühl</p>
+            <p class="paper-authors">Authors: Guohui Zhang, Hu Yu, Xiaoxiao Ma, Yaning Pan, Hang Xu, Feng Zhao</p>
             
         </motion.div>
         
@@ -403,14 +403,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Qwen-Image-Layered: Towards Inherent Editability via Layer Decomposition</h2>
+            <h2 class="paper-title">Rectification Reimagined: A Unified Mamba Model for Image Correction and Rectangling with Prompts</h2>
             
-            <p class="paper-summary">Recent visual generative models often struggle with consistency during image editing due to the entangled nature of raster images, where all visual content is fused into a single canvas. In contrast, professional design tools employ layered representations, allowing isolated edits while preserving consistency. Motivated by this, we propose \textbf{Qwen-Image-Layered}, an end-to-end diffusion model that decomposes a single RGB image into multiple semantically disentangled RGBA layers, enabling \textbf{inherent editability}, where each RGBA layer can be independently manipulated without affecting other content. To support variable-length decomposition, we introduce three key components: (1) an RGBA-VAE to unify the latent representations of RGB and RGBA images; (2) a VLD-MMDiT (Variable Layers Decomposition MMDiT) architecture capable of decomposing a variable number of image layers; and (3) a Multi-stage Training strategy to adapt a pretrained image generation model into a multilayer image decomposer. Furthermore, to address the scarcity of high-quality multilayer training images, we build a pipeline to extract and annotate multilayer images from Photoshop documents (PSD). Experiments demonstrate that our method significantly surpasses existing approaches in decomposition quality and establishes a new paradigm for consistent image editing. Our code and models are released on \href{https://github.com/QwenLM/Qwen-Image-Layered}{https://github.com/QwenLM/Qwen-Image-Layered}</p>
+            <p class="paper-summary">Image correction and rectangling are valuable tasks in practical photography systems such as smartphones. Recent remarkable advancements in deep learning have undeniably brought about substantial performance improvements in these fields. Nevertheless, existing methods mainly rely on task-specific architectures. This significantly restricts their generalization ability and effective application across a wide range of different tasks. In this paper, we introduce the Unified Rectification Framework (UniRect), a comprehensive approach that addresses these practical tasks from a consistent distortion rectification perspective. Our approach incorporates various task-specific inverse problems into a general distortion model by simulating different types of lenses. To handle diverse distortions, UniRect adopts one task-agnostic rectification framework with a dual-component structure: a {Deformation Module}, which utilizes a novel Residual Progressive Thin-Plate Spline (RP-TPS) model to address complex geometric deformations, and a subsequent Restoration Module, which employs Residual Mamba Blocks (RMBs) to counteract the degradation caused by the deformation process and enhance the fidelity of the output image. Moreover, a Sparse Mixture-of-Experts (SMoEs) structure is designed to circumvent heavy task competition in multi-task learning due to varying distortions. Extensive experiments demonstrate that our models have achieved state-of-the-art performance compared with other up-to-date methods.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Qwen-Image-Layered, a diffusion model that decomposes images into semantically disentangled RGBA layers for inherent editability, addressing consistency issues in image editing. They also provide a method for generating multilayer training data.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a unified framework (UniRect) using a Mamba-based architecture for image correction and rectangling, addressing various distortions with a task-agnostic approach.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 Qwen-Image-Layered，一种将图像分解为语义分离的 RGBA 图层的扩散模型，以实现固有的可编辑性，从而解决图像编辑中的一致性问题。他们还提供了一种生成多层训练数据的方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一个统一的框架（UniRect），使用基于Mamba的架构进行图像校正和矩形化，通过与任务无关的方法解决各种失真。</p>
             
 
             
@@ -481,112 +481,18 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.15603v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.18718v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Shengming Yin, Zekai Zhang, Zecheng Tang, Kaiyuan Gao, Xiao Xu, Kun Yan, Jiahao Li, Yilei Chen, Yuxiang Chen, Heung-Yeung Shum, Lionel M. Ni, Jingren Zhou, Junyang Lin, Chenfei Wu</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Is Nano Banana Pro a Low-Level Vision All-Rounder? A Comprehensive Evaluation on 14 Tasks and 40 Datasets</h2>
-            
-            <p class="paper-summary">The rapid evolution of text-to-image generation models has revolutionized visual content creation. While commercial products like Nano Banana Pro have garnered significant attention, their potential as generalist solvers for traditional low-level vision challenges remains largely underexplored. In this study, we investigate the critical question: Is Nano Banana Pro a Low-Level Vision All-Rounder? We conducted a comprehensive zero-shot evaluation across 14 distinct low-level tasks spanning 40 diverse datasets. By utilizing simple textual prompts without fine-tuning, we benchmarked Nano Banana Pro against state-of-the-art specialist models. Our extensive analysis reveals a distinct performance dichotomy: while \textbf{Nano Banana Pro demonstrates superior subjective visual quality}, often hallucinating plausible high-frequency details that surpass specialist models, it lags behind in traditional reference-based quantitative metrics. We attribute this discrepancy to the inherent stochasticity of generative models, which struggle to maintain the strict pixel-level consistency required by conventional metrics. This report identifies Nano Banana Pro as a capable zero-shot contender for low-level vision tasks, while highlighting that achieving the high fidelity of domain specialists remains a significant hurdle.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper evaluates Nano Banana Pro, a text-to-image model, on low-level vision tasks, finding it excels in subjective visual quality but lags in quantitative metrics due to inherent stochasticity.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文评估了文本到图像模型Nano Banana Pro在低级视觉任务中的表现，发现它在主观视觉质量方面表现出色，但由于固有的随机性，在定量指标方面表现落后。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2512.15110v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Jialong Zuo, Haoyou Deng, Hanyu Zhou, Jiaxin Zhu, Yicheng Zhang, Yiwei Zhang, Yongxin Yan, Kaixing Huang, Weisen Chen, Yongtai Deng, Rui Jin, Nong Sang, Changxin Gao</p>
+            <p class="paper-authors">Authors: Linwei Qiu, Gongzhe Li, Xiaozhe Zhang, Qinlin Sun, Fengying Xie</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-12-23 02:52:45 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-12-23 02:53:56 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
