@@ -1,0 +1,133 @@
+[
+    {
+        "title": "Efficient Vision Mamba for MRI Super-Resolution via Hybrid Selective Scanning",
+        "summary": "Background: High-resolution MRI is critical for diagnosis, but long acquisition times limit clinical use. Super-resolution (SR) can enhance resolution post-scan, yet existing deep learning methods face fidelity-efficiency trade-offs. Purpose: To develop a computationally efficient and accurate deep learning framework for MRI SR that preserves anatomical detail for clinical integration. Materials and Methods: We propose a novel SR framework combining multi-head selective state-space models (MHSSM) with a lightweight channel MLP. The model uses 2D patch extraction with hybrid scanning to capture long-range dependencies. Each MambaFormer block integrates MHSSM, depthwise convolutions, and gated channel mixing. Evaluation used 7T brain T1 MP2RAGE maps (n=142) and 1.5T prostate T2w MRI (n=334). Comparisons included Bicubic interpolation, GANs (CycleGAN, Pix2pix, SPSR), transformers (SwinIR), Mamba (MambaIR), and diffusion models (I2SB, Res-SRDiff). Results: Our model achieved superior performance with exceptional efficiency. For 7T brain data: SSIM=0.951+-0.021, PSNR=26.90+-1.41 dB, LPIPS=0.076+-0.022, GMSD=0.083+-0.017, significantly outperforming all baselines (p<0.001). For prostate data: SSIM=0.770+-0.049, PSNR=27.15+-2.19 dB, LPIPS=0.190+-0.095, GMSD=0.087+-0.013. The framework used only 0.9M parameters and 57 GFLOPs, reducing parameters by 99.8% and computation by 97.5% versus Res-SRDiff, while outperforming SwinIR and MambaIR in accuracy and efficiency. Conclusion: The proposed framework provides an efficient, accurate MRI SR solution, delivering enhanced anatomical detail across datasets. Its low computational demand and state-of-the-art performance show strong potential for clinical translation.",
+        "url": "http://arxiv.org/abs/2512.19676v1",
+        "published_date": "2025-12-22T18:53:13+00:00",
+        "updated_date": "2025-12-22T18:53:13+00:00",
+        "categories": [
+            "cs.CV",
+            "physics.med-ph"
+        ],
+        "authors": [
+            "Mojtaba Safari",
+            "Shansong Wang",
+            "Vanessa L Wildman",
+            "Mingzhe Hu",
+            "Zach Eidex",
+            "Chih-Wei Chang",
+            "Erik H Middlebrooks",
+            "Richard L. J Qiu",
+            "Pretesh Patel",
+            "Ashesh B. Jania",
+            "Hui Mao",
+            "Zhen Tian",
+            "Xiaofeng Yang"
+        ],
+        "tldr": "This paper introduces an efficient MRI super-resolution framework using a hybrid scanning vision Mamba architecture, achieving state-of-the-art performance with significantly reduced computational cost compared to existing methods. It demonstrates high potential for clinical translation.",
+        "tldr_zh": "本文介绍了一种高效的 MRI 超分辨率框架，该框架采用混合扫描 Vision Mamba 架构，与现有方法相比，实现了最先进的性能，并显著降低了计算成本。它展示了很高的临床转化潜力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Degradation-Aware Metric Prompting for Hyperspectral Image Restoration",
+        "summary": "Unified hyperspectral image (HSI) restoration aims to recover various degraded HSIs using a single model, offering great practical value. However, existing methods often depend on explicit degradation priors (e.g., degradation labels) as prompts to guide restoration, which are difficult to obtain due to complex and mixed degradations in real-world scenarios. To address this challenge, we propose a Degradation-Aware Metric Prompting (DAMP) framework. Instead of relying on predefined degradation priors, we design spatial-spectral degradation metrics to continuously quantify multi-dimensional degradations, serving as Degradation Prompts (DP). These DP enable the model to capture cross-task similarities in degradation distributions and enhance shared feature learning. Furthermore, we introduce a Spatial-Spectral Adaptive Module (SSAM) that dynamically modulates spatial and spectral feature extraction through learnable parameters. By integrating SSAM as experts within a Mixture-of-Experts architecture, and using DP as the gating router, the framework enables adaptive, efficient, and robust restoration under diverse, mixed, or unseen degradations. Extensive experiments on natural and remote sensing HSI datasets show that DAMP achieves state-of-the-art performance and demonstrates exceptional generalization capability. Code is publicly available at https://github.com/MiliLab/DAMP.",
+        "url": "http://arxiv.org/abs/2512.20251v1",
+        "published_date": "2025-12-23T11:05:36+00:00",
+        "updated_date": "2025-12-23T11:05:36+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Binfeng Wang",
+            "Di Wang",
+            "Haonan Guo",
+            "Ying Fu",
+            "Jing Zhang"
+        ],
+        "tldr": "The paper proposes a Degradation-Aware Metric Prompting (DAMP) framework for unified hyperspectral image restoration, using spatial-spectral degradation metrics as prompts instead of explicit degradation priors, achieving state-of-the-art performance and generalization.",
+        "tldr_zh": "该论文提出了一个用于统一高光谱图像恢复的退化感知度量提示 (DAMP) 框架，使用空间-光谱退化指标作为提示，而不是显式的退化先验，实现了最先进的性能和泛化能力。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VA-$π$: Variational Policy Alignment for Pixel-Aware Autoregressive Generation",
+        "summary": "Autoregressive (AR) visual generation relies on tokenizers to map images to and from discrete sequences. However, tokenizers are trained to reconstruct clean images from ground-truth tokens, while AR generators are optimized only for token likelihood. This misalignment leads to generated token sequences that may decode into low-quality images, without direct supervision from the pixel space. We propose VA-$π$, a lightweight post-training framework that directly optimizes AR models with a principled pixel-space objective. VA-$π$ formulates the generator-tokenizer alignment as a variational optimization, deriving an evidence lower bound (ELBO) that unifies pixel reconstruction and autoregressive modeling. To optimize under the discrete token space, VA-$π$ introduces a reinforcement-based alignment strategy that treats the AR generator as a policy, uses pixel-space reconstruction quality as its intrinsic reward. The reward is measured by how well the predicted token sequences can reconstruct the original image under teacher forcing, giving the model direct pixel-level guidance without expensive free-running sampling. The regularization term of the ELBO serves as a natural regularizer, maintaining distributional consistency of tokens. VA-$π$ enables rapid adaptation of existing AR generators, without neither tokenizer retraining nor external reward models. With only 1% ImageNet-1K data and 25 minutes of tuning, it reduces FID from 14.36 to 7.65 and improves IS from 86.55 to 116.70 on LlamaGen-XXL, while also yielding notable gains in the text-to-image task on GenEval for both visual generation model (LlamaGen: from 0.306 to 0.339) and unified multi-modal model (Janus-Pro: from 0.725 to 0.744). Code is available at https://github.com/Lil-Shake/VA-Pi.",
+        "url": "http://arxiv.org/abs/2512.19680v1",
+        "published_date": "2025-12-22T18:54:30+00:00",
+        "updated_date": "2025-12-22T18:54:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xinyao Liao",
+            "Qiyuan He",
+            "Kai Xu",
+            "Xiaoye Qu",
+            "Yicong Li",
+            "Wei Wei",
+            "Angela Yao"
+        ],
+        "tldr": "The paper introduces VA-$π$, a post-training framework that aligns autoregressive image generators with pixel-space objectives via variational optimization and reinforcement learning, improving image quality without tokenizer retraining.",
+        "tldr_zh": "该论文提出了VA-$π$，一个后训练框架，通过变分优化和强化学习将自回归图像生成器与像素空间目标对齐，从而提高图像质量，且无需重新训练tokenizer。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Generative diffusion models for agricultural AI: plant image generation, indoor-to-outdoor translation, and expert preference alignment",
+        "summary": "The success of agricultural artificial intelligence depends heavily on large, diverse, and high-quality plant image datasets, yet collecting such data in real field conditions is costly, labor intensive, and seasonally constrained. This paper investigates diffusion-based generative modeling to address these challenges through plant image synthesis, indoor-to-outdoor translation, and expert preference aligned fine tuning. First, a Stable Diffusion model is fine tuned on captioned indoor and outdoor plant imagery to generate realistic, text conditioned images of canola and soybean. Evaluation using Inception Score, Frechet Inception Distance, and downstream phenotype classification shows that synthetic images effectively augment training data and improve accuracy. Second, we bridge the gap between high resolution indoor datasets and limited outdoor imagery using DreamBooth-based text inversion and image guided diffusion, generating translated images that enhance weed detection and classification with YOLOv8. Finally, a preference guided fine tuning framework trains a reward model on expert scores and applies reward weighted updates to produce more stable and expert aligned outputs. Together, these components demonstrate a practical pathway toward data efficient generative pipelines for agricultural AI.",
+        "url": "http://arxiv.org/abs/2512.19632v1",
+        "published_date": "2025-12-22T18:07:08+00:00",
+        "updated_date": "2025-12-22T18:07:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Da Tan",
+            "Michael Beck",
+            "Christopher P. Bidinosti",
+            "Robert H. Gulden",
+            "Christopher J. Henry"
+        ],
+        "tldr": "This paper uses diffusion models to generate synthetic plant images, perform indoor-to-outdoor image translation, and align image generation with expert preferences, aiming to improve agricultural AI datasets and downstream task performance.",
+        "tldr_zh": "该论文利用扩散模型生成合成植物图像，执行室内到室外的图像转换，并将图像生成与专家偏好对齐，旨在改进农业AI数据集并提升下游任务的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SE360: Semantic Edit in 360$^\\circ$ Panoramas via Hierarchical Data Construction",
+        "summary": "While instruction-based image editing is emerging, extending it to 360$^\\circ$ panoramas introduces additional challenges. Existing methods often produce implausible results in both equirectangular projections (ERP) and perspective views. To address these limitations, we propose SE360, a novel framework for multi-condition guided object editing in 360$^\\circ$ panoramas. At its core is a novel coarse-to-fine autonomous data generation pipeline without manual intervention. This pipeline leverages a Vision-Language Model (VLM) and adaptive projection adjustment for hierarchical analysis, ensuring the holistic segmentation of objects and their physical context. The resulting data pairs are both semantically meaningful and geometrically consistent, even when sourced from unlabeled panoramas. Furthermore, we introduce a cost-effective, two-stage data refinement strategy to improve data realism and mitigate model overfitting to erase artifacts. Based on the constructed dataset, we train a Transformer-based diffusion model to allow flexible object editing guided by text, mask, or reference image in 360$^\\circ$ panoramas. Our experiments demonstrate that our method outperforms existing methods in both visual quality and semantic accuracy.",
+        "url": "http://arxiv.org/abs/2512.19943v1",
+        "published_date": "2025-12-23T00:24:46+00:00",
+        "updated_date": "2025-12-23T00:24:46+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haoyi Zhong",
+            "Fang-Lue Zhang",
+            "Andrew Chalmers",
+            "Taehyun Rhee"
+        ],
+        "tldr": "The paper introduces SE360, a framework for semantically editing 360° panoramas using a novel autonomous data generation pipeline and a Transformer-based diffusion model, outperforming existing methods in visual quality and semantic accuracy.",
+        "tldr_zh": "该论文介绍了SE360，一个用于语义编辑360°全景图的框架，它使用一种新颖的自主数据生成流水线和一个基于Transformer的扩散模型，在视觉质量和语义准确性方面优于现有方法。",
+        "relevance_score": 4,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 6,
+        "overall_priority_score": 6
+    }
+]
