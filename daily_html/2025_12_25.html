@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - December 18, 2025</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - December 25, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>December 18, 2025</p>
+            <p>December 25, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MVGSR: Multi-View Consistent 3D Gaussian Super-Resolution via Epipolar Guidance</h2>
+            <h2 class="paper-title">GriDiT: Factorized Grid-Based Diffusion for Efficient Long Image Sequence Generation</h2>
             
-            <p class="paper-summary">Scenes reconstructed by 3D Gaussian Splatting (3DGS) trained on low-resolution (LR) images are unsuitable for high-resolution (HR) rendering. Consequently, a 3DGS super-resolution (SR) method is needed to bridge LR inputs and HR rendering. Early 3DGS SR methods rely on single-image SR networks, which lack cross-view consistency and fail to fuse complementary information across views. More recent video-based SR approaches attempt to address this limitation but require strictly sequential frames, limiting their applicability to unstructured multi-view datasets. In this work, we introduce Multi-View Consistent 3D Gaussian Splatting Super-Resolution (MVGSR), a framework that focuses on integrating multi-view information for 3DGS rendering with high-frequency details and enhanced consistency. We first propose an Auxiliary View Selection Method based on camera poses, making our method adaptable for arbitrarily organized multi-view datasets without the need of temporal continuity or data reordering. Furthermore, we introduce, for the first time, an epipolar-constrained multi-view attention mechanism into 3DGS SR, which serves as the core of our proposed multi-view SR network. This design enables the model to selectively aggregate consistent information from auxiliary views, enhancing the geometric consistency and detail fidelity of 3DGS representations. Extensive experiments demonstrate that our method achieves state-of-the-art performance on both object-centric and scene-level 3DGS SR benchmarks.</p>
+            <p class="paper-summary">Modern deep learning methods typically treat image sequences as large tensors of sequentially stacked frames. However, is this straightforward representation ideal given the current state-of-the-art (SoTA)? In this work, we address this question in the context of generative models and aim to devise a more effective way of modeling image sequence data. Observing the inefficiencies and bottlenecks of current SoTA image sequence generation methods, we showcase that rather than working with large tensors, we can improve the generation process by factorizing it into first generating the coarse sequence at low resolution and then refining the individual frames at high resolution. We train a generative model solely on grid images comprising subsampled frames. Yet, we learn to generate image sequences, using the strong self-attention mechanism of the Diffusion Transformer (DiT) to capture correlations between frames. In effect, our formulation extends a 2D image generator to operate as a low-resolution 3D image-sequence generator without introducing any architectural modifications. Subsequently, we super-resolve each frame individually to add the sequence-independent high-resolution details. This approach offers several advantages and can overcome key limitations of the SoTA in this domain. Compared to existing image sequence generation models, our method achieves superior synthesis quality and improved coherence across sequences. It also delivers high-fidelity generation of arbitrary-length sequences and increased efficiency in inference time and training data usage. Furthermore, our straightforward formulation enables our method to generalize effectively across diverse data domains, which typically require additional priors and supervision to model in a generative context. Our method consistently outperforms SoTA in quality and inference speed (at least twice-as-fast) across datasets.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces MVGSR, a multi-view consistent super-resolution method for 3D Gaussian Splatting that leverages epipolar constraints and auxiliary view selection to improve detail fidelity and geometric consistency in unstructured multi-view datasets.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces GriDiT, a method for efficient long image sequence generation that factorizes the process into coarse low-resolution generation followed by individual high-resolution frame refinement, achieving improved quality, speed, and generalization.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了MVGSR，一种多视角一致的3D高斯溅射超分辨率方法，利用极线约束和辅助视图选择来提高非结构化多视角数据集中细节的保真度和几何一致性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 GriDiT，一种高效的长图像序列生成方法，它将生成过程分解为粗糙的低分辨率生成，然后进行单个高分辨率帧细化，从而提高了质量、速度和泛化能力。</p>
             
 
             
@@ -232,24 +232,24 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
+                    <span class="rating-label">Novelty:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -293,11 +293,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.15048v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.21276v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Kaizhe Zhang, Shinan Chen, Qian Zhao, Weizhan Zhang, Caixia Yan, Yudeng Xin</p>
+            <p class="paper-authors">Authors: Snehal Singh Tomar, Alexandros Graikos, Arjun Krishna, Dimitris Samaras, Klaus Mueller</p>
             
         </motion.div>
         
@@ -309,14 +309,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Spherical Leech Quantization for Visual Tokenization and Generation</h2>
+            <h2 class="paper-title">Beyond Pixel Simulation: Pathology Image Generation via Diagnostic Semantic Tokens and Prototype Control</h2>
             
-            <p class="paper-summary">Non-parametric quantization has received much attention due to its efficiency on parameters and scalability to a large codebook. In this paper, we present a unified formulation of different non-parametric quantization methods through the lens of lattice coding. The geometry of lattice codes explains the necessity of auxiliary loss terms when training auto-encoders with certain existing lookup-free quantization variants such as BSQ. As a step forward, we explore a few possible candidates, including random lattices, generalized Fibonacci lattices, and densest sphere packing lattices. Among all, we find the Leech lattice-based quantization method, which is dubbed as Spherical Leech Quantization ($Λ_{24}$-SQ), leads to both a simplified training recipe and an improved reconstruction-compression tradeoff thanks to its high symmetry and even distribution on the hypersphere. In image tokenization and compression tasks, this quantization approach achieves better reconstruction quality across all metrics than BSQ, the best prior art, while consuming slightly fewer bits. The improvement also extends to state-of-the-art auto-regressive image generation frameworks.</p>
+            <p class="paper-summary">In computational pathology, understanding and generation have evolved along disparate paths: advanced understanding models already exhibit diagnostic-level competence, whereas generative models largely simulate pixels. Progress remains hindered by three coupled factors: the scarcity of large, high-quality image-text corpora; the lack of precise, fine-grained semantic control, which forces reliance on non-semantic cues; and terminological heterogeneity, where diverse phrasings for the same diagnostic concept impede reliable text conditioning. We introduce UniPath, a semantics-driven pathology image generation framework that leverages mature diagnostic understanding to enable controllable generation. UniPath implements Multi-Stream Control: a Raw-Text stream; a High-Level Semantics stream that uses learnable queries to a frozen pathology MLLM to distill paraphrase-robust Diagnostic Semantic Tokens and to expand prompts into diagnosis-aware attribute bundles; and a Prototype stream that affords component-level morphological control via a prototype bank. On the data front, we curate a 2.65M image-text corpus and a finely annotated, high-quality 68K subset to alleviate data scarcity. For a comprehensive assessment, we establish a four-tier evaluation hierarchy tailored to pathology. Extensive experiments demonstrate UniPath's SOTA performance, including a Patho-FID of 80.9 (51% better than the second-best) and fine-grained semantic control achieving 98.7% of the real-image. The meticulously curated datasets, complete source code, and pre-trained model weights developed in this study will be made openly accessible to the public.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Spherical Leech Quantization ($Λ_{24}$-SQ), a novel quantization method based on the Leech lattice, for improved image tokenization, compression, and generation, achieving better performance than BSQ with fewer bits.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniPath, a novel framework for controllable pathology image generation using diagnostic semantic tokens and prototype control, achieving state-of-the-art performance and fine-grained semantic control with a newly curated large-scale dataset.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了球形李奇量化 ($Λ_{24}$-SQ)，一种基于李奇格子的新型量化方法，用于改进图像标记化、压缩和生成，与 BSQ 相比，以更少的比特实现了更好的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一个名为UniPath的新型框架，用于通过诊断语义令牌和原型控制实现可控的病理图像生成，通过新策划的大规模数据集实现了最先进的性能和细粒度的语义控制。</p>
             
 
             
@@ -326,8 +326,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -350,8 +350,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -387,11 +387,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.14697v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.21058v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yue Zhao, Hanwen Jiang, Zhenlin Xu, Chutong Yang, Ehsan Adeli, Philipp Krähenbühl</p>
+            <p class="paper-authors">Authors: Minghao Han, YiChen Liu, Yizhou Liu, Zizhi Chen, Jingqun Tang, Xuecheng Wu, Dingkang Yang, Lihua Zhang</p>
             
         </motion.div>
         
@@ -403,14 +403,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Qwen-Image-Layered: Towards Inherent Editability via Layer Decomposition</h2>
+            <h2 class="paper-title">Multi-Attribute guided Thermal Face Image Translation based on Latent Diffusion Model</h2>
             
-            <p class="paper-summary">Recent visual generative models often struggle with consistency during image editing due to the entangled nature of raster images, where all visual content is fused into a single canvas. In contrast, professional design tools employ layered representations, allowing isolated edits while preserving consistency. Motivated by this, we propose \textbf{Qwen-Image-Layered}, an end-to-end diffusion model that decomposes a single RGB image into multiple semantically disentangled RGBA layers, enabling \textbf{inherent editability}, where each RGBA layer can be independently manipulated without affecting other content. To support variable-length decomposition, we introduce three key components: (1) an RGBA-VAE to unify the latent representations of RGB and RGBA images; (2) a VLD-MMDiT (Variable Layers Decomposition MMDiT) architecture capable of decomposing a variable number of image layers; and (3) a Multi-stage Training strategy to adapt a pretrained image generation model into a multilayer image decomposer. Furthermore, to address the scarcity of high-quality multilayer training images, we build a pipeline to extract and annotate multilayer images from Photoshop documents (PSD). Experiments demonstrate that our method significantly surpasses existing approaches in decomposition quality and establishes a new paradigm for consistent image editing. Our code and models are released on \href{https://github.com/QwenLM/Qwen-Image-Layered}{https://github.com/QwenLM/Qwen-Image-Layered}</p>
+            <p class="paper-summary">Modern surveillance systems increasingly rely on multi-wavelength sensors and deep neural networks to recognize faces in infrared images captured at night. However, most facial recognition models are trained on visible light datasets, leading to substantial performance degradation on infrared inputs due to significant domain shifts. Early feature-based methods for infrared face recognition proved ineffective, prompting researchers to adopt generative approaches that convert infrared images into visible light images for improved recognition. This paradigm, known as Heterogeneous Face Recognition (HFR), faces challenges such as model and modality discrepancies, leading to distortion and feature loss in generated images. To address these limitations, this paper introduces a novel latent diffusion-based model designed to generate high-quality visible face images from thermal inputs while preserving critical identity features. A multi-attribute classifier is incorporated to extract key facial attributes from visible images, mitigating feature loss during infrared-to-visible image restoration. Additionally, we propose the Self-attn Mamba module, which enhances global modeling of cross-modal features and significantly improves inference speed. Experimental results on two benchmark datasets demonstrate the superiority of our approach, achieving state-of-the-art performance in both image quality and identity preservation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Qwen-Image-Layered, a diffusion model that decomposes images into semantically disentangled RGBA layers for inherent editability, addressing consistency issues in image editing. They also provide a method for generating multilayer training data.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper presents a novel latent diffusion model for thermal face image translation into visible light, incorporating a multi-attribute classifier and a Self-attn Mamba module to improve image quality, identity preservation, and inference speed, achieving state-of-the-art results.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 Qwen-Image-Layered，一种将图像分解为语义分离的 RGBA 图层的扩散模型，以实现固有的可编辑性，从而解决图像编辑中的一致性问题。他们还提供了一种生成多层训练数据的方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种新颖的潜在扩散模型，用于将热成像人脸图像转换为可见光图像，该模型结合了多属性分类器和自注意力Mamba模块，以提高图像质量、身份保持和推理速度，并实现了最先进的结果。</p>
             
 
             
@@ -420,8 +420,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -444,8 +444,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -470,22 +470,22 @@
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.15603v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.21032v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Shengming Yin, Zekai Zhang, Zecheng Tang, Kaiyuan Gao, Xiao Xu, Kun Yan, Jiahao Li, Yilei Chen, Yuxiang Chen, Heung-Yeung Shum, Lionel M. Ni, Jingren Zhou, Junyang Lin, Chenfei Wu</p>
+            <p class="paper-authors">Authors: Mingshu Cai, Osamu Yoshie, Yuya Ieiri</p>
             
         </motion.div>
         
@@ -497,14 +497,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Is Nano Banana Pro a Low-Level Vision All-Rounder? A Comprehensive Evaluation on 14 Tasks and 40 Datasets</h2>
+            <h2 class="paper-title">A Turn Toward Better Alignment: Few-Shot Generative Adaptation with Equivariant Feature Rotation</h2>
             
-            <p class="paper-summary">The rapid evolution of text-to-image generation models has revolutionized visual content creation. While commercial products like Nano Banana Pro have garnered significant attention, their potential as generalist solvers for traditional low-level vision challenges remains largely underexplored. In this study, we investigate the critical question: Is Nano Banana Pro a Low-Level Vision All-Rounder? We conducted a comprehensive zero-shot evaluation across 14 distinct low-level tasks spanning 40 diverse datasets. By utilizing simple textual prompts without fine-tuning, we benchmarked Nano Banana Pro against state-of-the-art specialist models. Our extensive analysis reveals a distinct performance dichotomy: while \textbf{Nano Banana Pro demonstrates superior subjective visual quality}, often hallucinating plausible high-frequency details that surpass specialist models, it lags behind in traditional reference-based quantitative metrics. We attribute this discrepancy to the inherent stochasticity of generative models, which struggle to maintain the strict pixel-level consistency required by conventional metrics. This report identifies Nano Banana Pro as a capable zero-shot contender for low-level vision tasks, while highlighting that achieving the high fidelity of domain specialists remains a significant hurdle.</p>
+            <p class="paper-summary">Few-shot image generation aims to effectively adapt a source generative model to a target domain using very few training images. Most existing approaches introduce consistency constraints-typically through instance-level or distribution-level loss functions-to directly align the distribution patterns of source and target domains within their respective latent spaces. However, these strategies often fall short: overly strict constraints can amplify the negative effects of the domain gap, leading to distorted or uninformative content, while overly relaxed constraints may fail to leverage the source domain effectively. This limitation primarily stems from the inherent discrepancy in the underlying distribution structures of the source and target domains. The scarcity of target samples further compounds this issue by hindering accurate estimation of the target domain's distribution. To overcome these limitations, we propose Equivariant Feature Rotation (EFR), a novel adaptation strategy that aligns source and target domains at two complementary levels within a self-rotated proxy feature space. Specifically, we perform adaptive rotations within a parameterized Lie Group to transform both source and target features into an equivariant proxy space, where alignment is conducted. These learnable rotation matrices serve to bridge the domain gap by preserving intra-domain structural information without distortion, while the alignment optimization facilitates effective knowledge transfer from the source to the target domain. Comprehensive experiments on a variety of commonly used datasets demonstrate that our method significantly enhances the generative performance within the targeted domain.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper evaluates Nano Banana Pro, a text-to-image model, on low-level vision tasks, finding it excels in subjective visual quality but lags in quantitative metrics due to inherent stochasticity.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Equivariant Feature Rotation (EFR), a novel few-shot image generation adaptation method that aligns source and target domains in a self-rotated proxy feature space using learnable Lie Group rotations to bridge the domain gap, resulting in improved generative performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文评估了文本到图像模型Nano Banana Pro在低级视觉任务中的表现，发现它在主观视觉质量方面表现出色，但由于固有的随机性，在定量指标方面表现落后。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种名为等变特征旋转（EFR）的新型少样本图像生成自适应方法。该方法使用可学习的李群旋转，在自旋转代理特征空间中对齐源域和目标域，以弥合域间差距，从而提高生成性能。</p>
             
 
             
@@ -514,16 +514,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -538,8 +538,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -575,18 +575,18 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2512.15110v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2512.21174v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jialong Zuo, Haoyou Deng, Hanyu Zhou, Jiaxin Zhu, Yicheng Zhang, Yiwei Zhang, Yongxin Yan, Kaixing Huang, Weisen Chen, Yongtai Deng, Rui Jin, Nong Sang, Changxin Gao</p>
+            <p class="paper-authors">Authors: Chenghao Xu, Qi Liu, Jiexi Yan, Muli Yang, Cheng Deng</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-12-25 02:53:02 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-12-25 02:54:48 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

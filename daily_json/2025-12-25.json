@@ -1,0 +1,99 @@
+[
+    {
+        "title": "GriDiT: Factorized Grid-Based Diffusion for Efficient Long Image Sequence Generation",
+        "summary": "Modern deep learning methods typically treat image sequences as large tensors of sequentially stacked frames. However, is this straightforward representation ideal given the current state-of-the-art (SoTA)? In this work, we address this question in the context of generative models and aim to devise a more effective way of modeling image sequence data. Observing the inefficiencies and bottlenecks of current SoTA image sequence generation methods, we showcase that rather than working with large tensors, we can improve the generation process by factorizing it into first generating the coarse sequence at low resolution and then refining the individual frames at high resolution. We train a generative model solely on grid images comprising subsampled frames. Yet, we learn to generate image sequences, using the strong self-attention mechanism of the Diffusion Transformer (DiT) to capture correlations between frames. In effect, our formulation extends a 2D image generator to operate as a low-resolution 3D image-sequence generator without introducing any architectural modifications. Subsequently, we super-resolve each frame individually to add the sequence-independent high-resolution details. This approach offers several advantages and can overcome key limitations of the SoTA in this domain. Compared to existing image sequence generation models, our method achieves superior synthesis quality and improved coherence across sequences. It also delivers high-fidelity generation of arbitrary-length sequences and increased efficiency in inference time and training data usage. Furthermore, our straightforward formulation enables our method to generalize effectively across diverse data domains, which typically require additional priors and supervision to model in a generative context. Our method consistently outperforms SoTA in quality and inference speed (at least twice-as-fast) across datasets.",
+        "url": "http://arxiv.org/abs/2512.21276v1",
+        "published_date": "2025-12-24T16:46:04+00:00",
+        "updated_date": "2025-12-24T16:46:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Snehal Singh Tomar",
+            "Alexandros Graikos",
+            "Arjun Krishna",
+            "Dimitris Samaras",
+            "Klaus Mueller"
+        ],
+        "tldr": "The paper introduces GriDiT, a method for efficient long image sequence generation that factorizes the process into coarse low-resolution generation followed by individual high-resolution frame refinement, achieving improved quality, speed, and generalization.",
+        "tldr_zh": "该论文介绍了 GriDiT，一种高效的长图像序列生成方法，它将生成过程分解为粗糙的低分辨率生成，然后进行单个高分辨率帧细化，从而提高了质量、速度和泛化能力。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Beyond Pixel Simulation: Pathology Image Generation via Diagnostic Semantic Tokens and Prototype Control",
+        "summary": "In computational pathology, understanding and generation have evolved along disparate paths: advanced understanding models already exhibit diagnostic-level competence, whereas generative models largely simulate pixels. Progress remains hindered by three coupled factors: the scarcity of large, high-quality image-text corpora; the lack of precise, fine-grained semantic control, which forces reliance on non-semantic cues; and terminological heterogeneity, where diverse phrasings for the same diagnostic concept impede reliable text conditioning. We introduce UniPath, a semantics-driven pathology image generation framework that leverages mature diagnostic understanding to enable controllable generation. UniPath implements Multi-Stream Control: a Raw-Text stream; a High-Level Semantics stream that uses learnable queries to a frozen pathology MLLM to distill paraphrase-robust Diagnostic Semantic Tokens and to expand prompts into diagnosis-aware attribute bundles; and a Prototype stream that affords component-level morphological control via a prototype bank. On the data front, we curate a 2.65M image-text corpus and a finely annotated, high-quality 68K subset to alleviate data scarcity. For a comprehensive assessment, we establish a four-tier evaluation hierarchy tailored to pathology. Extensive experiments demonstrate UniPath's SOTA performance, including a Patho-FID of 80.9 (51% better than the second-best) and fine-grained semantic control achieving 98.7% of the real-image. The meticulously curated datasets, complete source code, and pre-trained model weights developed in this study will be made openly accessible to the public.",
+        "url": "http://arxiv.org/abs/2512.21058v1",
+        "published_date": "2025-12-24T08:52:08+00:00",
+        "updated_date": "2025-12-24T08:52:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Minghao Han",
+            "YiChen Liu",
+            "Yizhou Liu",
+            "Zizhi Chen",
+            "Jingqun Tang",
+            "Xuecheng Wu",
+            "Dingkang Yang",
+            "Lihua Zhang"
+        ],
+        "tldr": "The paper introduces UniPath, a novel framework for controllable pathology image generation using diagnostic semantic tokens and prototype control, achieving state-of-the-art performance and fine-grained semantic control with a newly curated large-scale dataset.",
+        "tldr_zh": "该论文介绍了一个名为UniPath的新型框架，用于通过诊断语义令牌和原型控制实现可控的病理图像生成，通过新策划的大规模数据集实现了最先进的性能和细粒度的语义控制。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Multi-Attribute guided Thermal Face Image Translation based on Latent Diffusion Model",
+        "summary": "Modern surveillance systems increasingly rely on multi-wavelength sensors and deep neural networks to recognize faces in infrared images captured at night. However, most facial recognition models are trained on visible light datasets, leading to substantial performance degradation on infrared inputs due to significant domain shifts. Early feature-based methods for infrared face recognition proved ineffective, prompting researchers to adopt generative approaches that convert infrared images into visible light images for improved recognition. This paradigm, known as Heterogeneous Face Recognition (HFR), faces challenges such as model and modality discrepancies, leading to distortion and feature loss in generated images. To address these limitations, this paper introduces a novel latent diffusion-based model designed to generate high-quality visible face images from thermal inputs while preserving critical identity features. A multi-attribute classifier is incorporated to extract key facial attributes from visible images, mitigating feature loss during infrared-to-visible image restoration. Additionally, we propose the Self-attn Mamba module, which enhances global modeling of cross-modal features and significantly improves inference speed. Experimental results on two benchmark datasets demonstrate the superiority of our approach, achieving state-of-the-art performance in both image quality and identity preservation.",
+        "url": "http://arxiv.org/abs/2512.21032v1",
+        "published_date": "2025-12-24T07:55:54+00:00",
+        "updated_date": "2025-12-24T07:55:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mingshu Cai",
+            "Osamu Yoshie",
+            "Yuya Ieiri"
+        ],
+        "tldr": "The paper presents a novel latent diffusion model for thermal face image translation into visible light, incorporating a multi-attribute classifier and a Self-attn Mamba module to improve image quality, identity preservation, and inference speed, achieving state-of-the-art results.",
+        "tldr_zh": "该论文提出了一种新颖的潜在扩散模型，用于将热成像人脸图像转换为可见光图像，该模型结合了多属性分类器和自注意力Mamba模块，以提高图像质量、身份保持和推理速度，并实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "A Turn Toward Better Alignment: Few-Shot Generative Adaptation with Equivariant Feature Rotation",
+        "summary": "Few-shot image generation aims to effectively adapt a source generative model to a target domain using very few training images. Most existing approaches introduce consistency constraints-typically through instance-level or distribution-level loss functions-to directly align the distribution patterns of source and target domains within their respective latent spaces. However, these strategies often fall short: overly strict constraints can amplify the negative effects of the domain gap, leading to distorted or uninformative content, while overly relaxed constraints may fail to leverage the source domain effectively. This limitation primarily stems from the inherent discrepancy in the underlying distribution structures of the source and target domains. The scarcity of target samples further compounds this issue by hindering accurate estimation of the target domain's distribution. To overcome these limitations, we propose Equivariant Feature Rotation (EFR), a novel adaptation strategy that aligns source and target domains at two complementary levels within a self-rotated proxy feature space. Specifically, we perform adaptive rotations within a parameterized Lie Group to transform both source and target features into an equivariant proxy space, where alignment is conducted. These learnable rotation matrices serve to bridge the domain gap by preserving intra-domain structural information without distortion, while the alignment optimization facilitates effective knowledge transfer from the source to the target domain. Comprehensive experiments on a variety of commonly used datasets demonstrate that our method significantly enhances the generative performance within the targeted domain.",
+        "url": "http://arxiv.org/abs/2512.21174v1",
+        "published_date": "2025-12-24T13:48:22+00:00",
+        "updated_date": "2025-12-24T13:48:22+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chenghao Xu",
+            "Qi Liu",
+            "Jiexi Yan",
+            "Muli Yang",
+            "Cheng Deng"
+        ],
+        "tldr": "This paper introduces Equivariant Feature Rotation (EFR), a novel few-shot image generation adaptation method that aligns source and target domains in a self-rotated proxy feature space using learnable Lie Group rotations to bridge the domain gap, resulting in improved generative performance.",
+        "tldr_zh": "本文提出了一种名为等变特征旋转（EFR）的新型少样本图像生成自适应方法。该方法使用可学习的李群旋转，在自旋转代理特征空间中对齐源域和目标域，以弥合域间差距，从而提高生成性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
