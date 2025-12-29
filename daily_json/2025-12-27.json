@@ -1,0 +1,104 @@
+[
+    {
+        "title": "DPAR: Dynamic Patchification for Efficient Autoregressive Visual Generation",
+        "summary": "Decoder-only autoregressive image generation typically relies on fixed-length tokenization schemes whose token counts grow quadratically with resolution, substantially increasing the computational and memory demands of attention. We present DPAR, a novel decoder-only autoregressive model that dynamically aggregates image tokens into a variable number of patches for efficient image generation. Our work is the first to demonstrate that next-token prediction entropy from a lightweight and unsupervised autoregressive model provides a reliable criterion for merging tokens into larger patches based on information content. DPAR makes minimal modifications to the standard decoder architecture, ensuring compatibility with multimodal generation frameworks and allocating more compute to generation of high-information image regions. Further, we demonstrate that training with dynamically sized patches yields representations that are robust to patch boundaries, allowing DPAR to scale to larger patch sizes at inference. DPAR reduces token count by 1.81x and 2.06x on Imagenet 256 and 384 generation resolution respectively, leading to a reduction of up to 40% FLOPs in training costs. Further, our method exhibits faster convergence and improves FID by up to 27.1% relative to baseline models.",
+        "url": "http://arxiv.org/abs/2512.21867v1",
+        "published_date": "2025-12-26T05:03:47+00:00",
+        "updated_date": "2025-12-26T05:03:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Divyansh Srivastava",
+            "Akshay Mehra",
+            "Pranav Maneriker",
+            "Debopam Sanyal",
+            "Vishnu Raj",
+            "Vijay Kamarshi",
+            "Fan Du",
+            "Joshua Kimball"
+        ],
+        "tldr": "The paper introduces DPAR, a decoder-only autoregressive image generation model that dynamically aggregates image tokens into variable-sized patches, reducing computational cost and improving image quality, particularly by focusing compute on high-information regions.",
+        "tldr_zh": "该论文介绍了一种名为DPAR的仅解码器自回归图像生成模型，该模型能够动态地将图像标记聚合为可变大小的补丁，从而降低计算成本并提高图像质量，尤其是在专注于高信息区域的计算方面。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Diffusion Posterior Sampling for Super-Resolution under Gaussian Measurement Noise",
+        "summary": "This report studies diffusion posterior sampling (DPS) for single-image super-resolution (SISR) under a known degradation model. We implement a likelihood-guided sampling procedure that combines an unconditional diffusion prior with gradient-based conditioning to enforce measurement consistency for $4\\times$ super-resolution with additive Gaussian noise. We evaluate posterior sampling (PS) conditioning across guidance scales and noise levels, using PSNR and SSIM as fidelity metrics and a combined selection score $(\\mathrm{PSNR}/40)+\\mathrm{SSIM}$. Our ablation shows that moderate guidance improves reconstruction quality, with the best configuration achieved at PS scale $0.95$ and noise standard deviation $σ=0.01$ (score $1.45231$). Qualitative results confirm that the selected PS setting restores sharper edges and more coherent facial details compared to the downsampled inputs, while alternative conditioning strategies (e.g., MCG and PS-annealed) exhibit different texture fidelity trade-offs. These findings highlight the importance of balancing diffusion priors and measurement-gradient strength to obtain stable, high-quality reconstructions without retraining the diffusion model for each operator.",
+        "url": "http://arxiv.org/abs/2512.21797v1",
+        "published_date": "2025-12-25T22:22:53+00:00",
+        "updated_date": "2025-12-25T22:22:53+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Abu Hanif Muhammad Syarubany"
+        ],
+        "tldr": "This paper explores Diffusion Posterior Sampling (DPS) for single-image super-resolution with Gaussian noise, finding that a balance between diffusion priors and measurement-gradient strength yields high-quality reconstructions without retraining.",
+        "tldr_zh": "本文研究了在已知退化模型下，使用扩散后验采样（DPS）进行单图像超分辨率重建的方法。研究发现平衡扩散先验和测量梯度强度能够在不针对每个算子重新训练扩散模型的情况下，获得高质量的重建结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "InstructMoLE: Instruction-Guided Mixture of Low-rank Experts for Multi-Conditional Image Generation",
+        "summary": "Parameter-Efficient Fine-Tuning of Diffusion Transformers (DiTs) for diverse, multi-conditional tasks often suffers from task interference when using monolithic adapters like LoRA. The Mixture of Low-rank Experts (MoLE) architecture offers a modular solution, but its potential is usually limited by routing policies that operate at a token level. Such local routing can conflict with the global nature of user instructions, leading to artifacts like spatial fragmentation and semantic drift in complex image generation tasks. To address these limitations, we introduce InstructMoLE, a novel framework that employs an Instruction-Guided Mixture of Low-Rank Experts. Instead of per-token routing, InstructMoLE utilizes a global routing signal, Instruction-Guided Routing (IGR), derived from the user's comprehensive instruction. This ensures that a single, coherently chosen expert council is applied uniformly across all input tokens, preserving the global semantics and structural integrity of the generation process. To complement this, we introduce an output-space orthogonality loss, which promotes expert functional diversity and mitigates representational collapse. Extensive experiments demonstrate that InstructMoLE significantly outperforms existing LoRA adapters and MoLE variants across challenging multi-conditional generation benchmarks. Our work presents a robust and generalizable framework for instruction-driven fine-tuning of generative models, enabling superior compositional control and fidelity to user intent.",
+        "url": "http://arxiv.org/abs/2512.21788v1",
+        "published_date": "2025-12-25T21:37:12+00:00",
+        "updated_date": "2025-12-25T21:37:12+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Jinqi Xiao",
+            "Qing Yan",
+            "Liming Jiang",
+            "Zichuan Liu",
+            "Hao Kang",
+            "Shen Sang",
+            "Tiancheng Zhi",
+            "Jing Liu",
+            "Cheng Yang",
+            "Xin Lu",
+            "Bo Yuan"
+        ],
+        "tldr": "The paper introduces InstructMoLE, a novel approach for parameter-efficient fine-tuning of Diffusion Transformers using an instruction-guided routing mechanism within a Mixture of Low-rank Experts framework, leading to improved multi-conditional image generation.",
+        "tldr_zh": "该论文介绍了InstructMoLE，一种新颖的参数高效微调扩散变换器的方法，它在低秩专家混合框架中使用指令引导的路由机制，从而改进了多条件图像生成。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Fast Inference of Visual Autoregressive Model with Adjacency-Adaptive Dynamical Draft Trees",
+        "summary": "Autoregressive (AR) image models achieve diffusion-level quality but suffer from sequential inference, requiring approximately 2,000 steps for a 576x576 image. Speculative decoding with draft trees accelerates LLMs yet underperforms on visual AR models due to spatially varying token prediction difficulty. We identify a key obstacle in applying speculative decoding to visual AR models: inconsistent acceptance rates across draft trees due to varying prediction difficulties in different image regions. We propose Adjacency-Adaptive Dynamical Draft Trees (ADT-Tree), an adjacency-adaptive dynamic draft tree that dynamically adjusts draft tree depth and width by leveraging adjacent token states and prior acceptance rates. ADT-Tree initializes via horizontal adjacency, then refines depth/width via bisectional adaptation, yielding deeper trees in simple regions and wider trees in complex ones. The empirical evaluations on MS-COCO 2017 and PartiPrompts demonstrate that ADT-Tree achieves speedups of 3.13xand 3.05x, respectively. Moreover, it integrates seamlessly with relaxed sampling methods such as LANTERN, enabling further acceleration. Code is available at https://github.com/Haodong-Lei-Ray/ADT-Tree.",
+        "url": "http://arxiv.org/abs/2512.21857v1",
+        "published_date": "2025-12-26T04:45:49+00:00",
+        "updated_date": "2025-12-26T04:45:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haodong Lei",
+            "Hongsong Wang",
+            "Xin Geng",
+            "Liang Wang",
+            "Pan Zhou"
+        ],
+        "tldr": "This paper introduces Adjacency-Adaptive Dynamical Draft Trees (ADT-Tree) to accelerate inference in visual autoregressive models by dynamically adjusting draft tree depth and width based on adjacent token states and acceptance rates, achieving significant speedups on image generation tasks.",
+        "tldr_zh": "本文介绍了邻接自适应动态草图树 (ADT-Tree)，通过基于相邻 token 状态和接受率动态调整草图树的深度和宽度，来加速视觉自回归模型中的推理，并在图像生成任务上实现了显著的加速。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
