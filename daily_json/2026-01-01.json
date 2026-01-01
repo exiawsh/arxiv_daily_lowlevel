@@ -1,0 +1,129 @@
+[
+    {
+        "title": "ProDM: Synthetic Reality-driven Property-aware Progressive Diffusion Model for Coronary Calcium Motion Correction in Non-gated Chest CT",
+        "summary": "Coronary artery calcium (CAC) scoring from chest CT is a well-established tool to stratify and refine clinical cardiovascular disease risk estimation. CAC quantification relies on the accurate delineation of calcified lesions, but is oftentimes affected by artifacts introduced by cardiac and respiratory motion. ECG-gated cardiac CTs substantially reduce motion artifacts, but their use in population screening and routine imaging remains limited due to gating requirements and lack of insurance coverage. Although identification of incidental CAC from non-gated chest CT is increasingly considered for it offers an accessible and widely available alternative, this modality is limited by more severe motion artifacts. We present ProDM (Property-aware Progressive Correction Diffusion Model), a generative diffusion framework that restores motion-free calcified lesions from non-gated CTs. ProDM introduces three key components: (1) a CAC motion simulation data engine that synthesizes realistic non-gated acquisitions with diverse motion trajectories directly from cardiac-gated CTs, enabling supervised training without paired data; (2) a property-aware learning strategy incorporating calcium-specific priors through a differentiable calcium consistency loss to preserve lesion integrity; and (3) a progressive correction scheme that reduces artifacts gradually across diffusion steps to enhance stability and calcium fidelity. Experiments on real patient datasets show that ProDM significantly improves CAC scoring accuracy, spatial lesion fidelity, and risk stratification performance compared with several baselines. A reader study on real non-gated scans further confirms that ProDM suppresses motion artifacts and improves clinical usability. These findings highlight the potential of progressive, property-aware frameworks for reliable CAC quantification from routine chest CT imaging.",
+        "url": "http://arxiv.org/abs/2512.24948v1",
+        "published_date": "2025-12-31T16:29:05+00:00",
+        "updated_date": "2025-12-31T16:29:05+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Xinran Gong",
+            "Gorkem Durak",
+            "Halil Ertugrul Aktas",
+            "Vedat Cicek",
+            "Jinkui Hao",
+            "Ulas Bagci",
+            "Nilay S. Shah",
+            "Bo Zhou"
+        ],
+        "tldr": "The paper introduces ProDM, a diffusion model for correcting motion artifacts in non-gated chest CT scans to improve coronary artery calcium scoring, using synthetic data generation and property-aware learning.",
+        "tldr_zh": "该论文介绍了ProDM，一种用于校正非门控胸部CT扫描中运动伪影的扩散模型，通过合成数据生成和属性感知学习来提高冠状动脉钙化评分。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "HaineiFRDM: Explore Diffusion to Restore Defects in Fast-Movement Films",
+        "summary": "Existing open-source film restoration methods show limited performance compared to commercial methods due to training with low-quality synthetic data and employing noisy optical flows. In addition, high-resolution films have not been explored by the open-source methods.We propose HaineiFRDM(Film Restoration Diffusion Model), a film restoration framework, to explore diffusion model's powerful content-understanding ability to help human expert better restore indistinguishable film defects.Specifically, we employ a patch-wise training and testing strategy to make restoring high-resolution films on one 24GB-VRAMR GPU possible and design a position-aware Global Prompt and Frame Fusion Modules.Also, we introduce a global-local frequency module to reconstruct consistent textures among different patches. Besides, we firstly restore a low-resolution result and use it as global residual to mitigate blocky artifacts caused by patching process.Furthermore, we construct a film restoration dataset that contains restored real-degraded films and realistic synthetic data.Comprehensive experimental results conclusively demonstrate the superiority of our model in defect restoration ability over existing open-source methods. Code and the dataset will be released.",
+        "url": "http://arxiv.org/abs/2512.24946v1",
+        "published_date": "2025-12-31T16:18:07+00:00",
+        "updated_date": "2025-12-31T16:18:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.MM"
+        ],
+        "authors": [
+            "Rongji Xun",
+            "Junjie Yuan",
+            "Zhongjie Wang"
+        ],
+        "tldr": "The paper introduces HaineiFRDM, a diffusion model-based film restoration framework that addresses limitations of existing open-source methods by using patch-wise training, novel modules, frequency reconstruction, and a new dataset, demonstrating superior defect restoration performance.",
+        "tldr_zh": "该论文介绍了HaineiFRDM，一个基于扩散模型的电影修复框架，通过使用分块训练、新颖的模块、频率重建和一个新的数据集，解决了现有开源方法的局限性，并展示了卓越的缺陷修复性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Sequential to Spatial: Reordering Autoregression for Efficient Visual Generation",
+        "summary": "Inspired by the remarkable success of autoregressive models in language modeling, this paradigm has been widely adopted in visual generation. However, the sequential token-by-token decoding mechanism inherent in traditional autoregressive models leads to low inference efficiency.In this paper, we propose RadAR, an efficient and parallelizable framework designed to accelerate autoregressive visual generation while preserving its representational capacity. Our approach is motivated by the observation that visual tokens exhibit strong local dependencies and spatial correlations with their neighbors--a property not fully exploited in standard raster-scan decoding orders. Specifically, we organize the generation process around a radial topology: an initial token is selected as the starting point, and all other tokens are systematically grouped into multiple concentric rings according to their spatial distances from this center. Generation then proceeds in a ring-wise manner, from inner to outer regions, enabling the parallel prediction of all tokens within the same ring. This design not only preserves the structural locality and spatial coherence of visual scenes but also substantially increases parallelization. Furthermore, to address the risk of inconsistent predictions arising from simultaneous token generation with limited context, we introduce a nested attention mechanism. This mechanism dynamically refines implausible outputs during the forward pass, thereby mitigating error accumulation and preventing model collapse. By integrating radial parallel prediction with dynamic output correction, RadAR significantly improves generation efficiency.",
+        "url": "http://arxiv.org/abs/2512.24639v1",
+        "published_date": "2025-12-31T05:24:07+00:00",
+        "updated_date": "2025-12-31T05:24:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Siyang Wang",
+            "Hanting Li",
+            "Wei Li",
+            "Jie Hu",
+            "Xinghao Chen",
+            "Feng Zhao"
+        ],
+        "tldr": "The paper introduces RadAR, a novel autoregressive visual generation framework that leverages a radial topology and nested attention mechanism to improve generation efficiency through parallel token prediction while maintaining spatial coherence.",
+        "tldr_zh": "该论文介绍了RadAR，一种新颖的自回归视觉生成框架，它利用径向拓扑和嵌套注意力机制，通过并行token预测来提高生成效率，同时保持空间一致性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "F2IDiff: Real-world Image Super-resolution using Feature to Image Diffusion Foundation Model",
+        "summary": "With the advent of Generative AI, Single Image Super-Resolution (SISR) quality has seen substantial improvement, as the strong priors learned by Text-2-Image Diffusion (T2IDiff) Foundation Models (FM) can bridge the gap between High-Resolution (HR) and Low-Resolution (LR) images. However, flagship smartphone cameras have been slow to adopt generative models because strong generation can lead to undesirable hallucinations. For substantially degraded LR images, as seen in academia, strong generation is required and hallucinations are more tolerable because of the wide gap between LR and HR images. In contrast, in consumer photography, the LR image has substantially higher fidelity, requiring only minimal hallucination-free generation. We hypothesize that generation in SISR is controlled by the stringency and richness of the FM's conditioning feature. First, text features are high level features, which often cannot describe subtle textures in an image. Additionally, Smartphone LR images are at least $12MP$, whereas SISR networks built on T2IDiff FM are designed to perform inference on much smaller images ($<1MP$). As a result, SISR inference has to be performed on small patches, which often cannot be accurately described by text feature. To address these shortcomings, we introduce an SISR network built on a FM with lower-level feature conditioning, specifically DINOv2 features, which we call a Feature-to-Image Diffusion (F2IDiff) Foundation Model (FM). Lower level features provide stricter conditioning while being rich descriptors of even small patches.",
+        "url": "http://arxiv.org/abs/2512.24473v1",
+        "published_date": "2025-12-30T21:37:35+00:00",
+        "updated_date": "2025-12-30T21:37:35+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "eess.IV"
+        ],
+        "authors": [
+            "Devendra K. Jangid",
+            "Ripon K. Saha",
+            "Dilshan Godaliyadda",
+            "Jing Li",
+            "Seok-Jun Lee",
+            "Hamid R. Sheikh"
+        ],
+        "tldr": "The paper introduces F2IDiff, a Feature-to-Image Diffusion model using DINOv2 features for real-world image super-resolution, addressing the limitations of Text-to-Image Diffusion models when dealing with high-fidelity smartphone images.",
+        "tldr_zh": "该论文介绍了F2IDiff，一种使用DINOv2特征的特征到图像扩散模型，用于真实世界的图像超分辨率，解决了文本到图像扩散模型在处理高保真智能手机图像时的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Nonlinear Noise2Noise for Efficient Monte Carlo Denoiser Training",
+        "summary": "The Noise2Noise method allows for training machine learning-based denoisers with pairs of input and target images where both the input and target can be noisy. This removes the need for training with clean target images, which can be difficult to obtain. However, Noise2Noise training has a major limitation: nonlinear functions applied to the noisy targets will skew the results. This bias occurs because the nonlinearity makes the expected value of the noisy targets different from the clean target image. Since nonlinear functions are common in image processing, avoiding them limits the types of preprocessing that can be performed on the noisy targets. Our main insight is that certain nonlinear functions can be applied to the noisy targets without adding significant bias to the results. We develop a theoretical framework for analyzing the effects of these nonlinearities, and describe a class of nonlinear functions with minimal bias.\n  We demonstrate our method on the denoising of high dynamic range (HDR) images produced by Monte Carlo rendering. Noise2Noise training can have trouble with HDR images, where the training process is overwhelmed by outliers and performs poorly. We consider a commonly used method of addressing these training issues: applying a nonlinear tone mapping function to the model output and target images to reduce their dynamic range. This method was previously thought to be incompatible with Noise2Noise training because of the nonlinearities involved. We show that certain combinations of loss functions and tone mapping functions can reduce the effect of outliers while introducing minimal bias. We apply our method to an existing machine learning-based Monte Carlo denoiser, where the original implementation was trained with high-sample count reference images. Our results approach those of the original implementation, but are produced using only noisy training data.",
+        "url": "http://arxiv.org/abs/2512.24794v1",
+        "published_date": "2025-12-31T11:30:38+00:00",
+        "updated_date": "2025-12-31T11:30:38+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.GR",
+            "cs.LG"
+        ],
+        "authors": [
+            "Andrew Tinits",
+            "Stephen Mann"
+        ],
+        "tldr": "This paper introduces a modified Noise2Noise training method that allows for the use of certain nonlinear functions on noisy target images, overcoming a limitation of the original Noise2Noise approach and enabling its application to HDR image denoising with tone mapping.",
+        "tldr_zh": "本文提出了一种改进的 Noise2Noise 训练方法，允许对噪声目标图像使用某些非线性函数，克服了原始 Noise2Noise 方法的局限性，并使其能够应用于具有色调映射的 HDR 图像去噪。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
