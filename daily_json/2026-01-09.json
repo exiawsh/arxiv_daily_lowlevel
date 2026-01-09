@@ -1,0 +1,117 @@
+[
+    {
+        "title": "Multi-Scale Local Speculative Decoding for Image Generation",
+        "summary": "Autoregressive (AR) models have achieved remarkable success in image synthesis, yet their sequential nature imposes significant latency constraints. Speculative Decoding offers a promising avenue for acceleration, but existing approaches are limited by token-level ambiguity and lack of spatial awareness. In this work, we introduce Multi-Scale Local Speculative Decoding (MuLo-SD), a novel framework that combines multi-resolution drafting with spatially informed verification to accelerate AR image generation. Our method leverages a low-resolution drafter paired with learned up-samplers to propose candidate image tokens, which are then verified in parallel by a high-resolution target model. Crucially, we incorporate a local rejection and resampling mechanism, enabling efficient correction of draft errors by focusing on spatial neighborhoods rather than raster-scan resampling after the first rejection. We demonstrate that MuLo-SD achieves substantial speedups - up to $\\mathbf{1.7\\times}$ - outperforming strong speculative decoding baselines such as EAGLE-2 and LANTERN in terms of acceleration, while maintaining comparable semantic alignment and perceptual quality. These results are validated using GenEval, DPG-Bench, and FID/HPSv2 on the MS-COCO 5k validation split. Extensive ablations highlight the impact of up-sampling design, probability pooling, and local rejection and resampling with neighborhood expansion. Our approach sets a new state-of-the-art in speculative decoding for image synthesis, bridging the gap between efficiency and fidelity.",
+        "url": "http://arxiv.org/abs/2601.05149v1",
+        "published_date": "2026-01-08T17:39:35+00:00",
+        "updated_date": "2026-01-08T17:39:35+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Elia Peruzzo",
+            "Guillaume Sautière",
+            "Amirhossein Habibian"
+        ],
+        "tldr": "The paper introduces Multi-Scale Local Speculative Decoding (MuLo-SD) to accelerate autoregressive image generation by combining multi-resolution drafting and spatially informed verification, achieving significant speedups while maintaining image quality.",
+        "tldr_zh": "该论文介绍了多尺度局部推测解码 (MuLo-SD)，通过结合多分辨率草图绘制和空间信息验证来加速自回归图像生成，从而在保持图像质量的同时实现显著加速。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Measurement-Consistent Langevin Corrector: A Remedy for Latent Diffusion Inverse Solvers",
+        "summary": "With recent advances in generative models, diffusion models have emerged as powerful priors for solving inverse problems in each domain. Since Latent Diffusion Models (LDMs) provide generic priors, several studies have explored their potential as domain-agnostic zero-shot inverse solvers. Despite these efforts, existing latent diffusion inverse solvers suffer from their instability, exhibiting undesirable artifacts and degraded quality. In this work, we first identify the instability as a discrepancy between the solver's and true reverse diffusion dynamics, and show that reducing this gap stabilizes the solver. Building on this, we introduce Measurement-Consistent Langevin Corrector (MCLC), a theoretically grounded plug-and-play correction module that remedies the LDM-based inverse solvers through measurement-consistent Langevin updates. Compared to prior approaches that rely on linear manifold assumptions, which often do not hold in latent space, MCLC operates without this assumption, leading to more stable and reliable behavior. We experimentally demonstrate the effectiveness of MCLC and its compatibility with existing solvers across diverse image restoration tasks. Additionally, we analyze blob artifacts and offer insights into their underlying causes. We highlight that MCLC is a key step toward more robust zero-shot inverse problem solvers.",
+        "url": "http://arxiv.org/abs/2601.04791v1",
+        "published_date": "2026-01-08T10:15:35+00:00",
+        "updated_date": "2026-01-08T10:15:35+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Lee Hyoseok",
+            "Sohwi Lim",
+            "Eunju Cha",
+            "Tae-Hyun Oh"
+        ],
+        "tldr": "This paper introduces Measurement-Consistent Langevin Corrector (MCLC), a plug-and-play module for stabilizing latent diffusion inverse solvers by reducing the discrepancy between the solver and true reverse diffusion dynamics, leading to more robust zero-shot image restoration.",
+        "tldr_zh": "本文介绍了测量一致朗之万校正器 (MCLC)，这是一个即插即用模块，通过减少求解器和真实反向扩散动力学之间的差异来稳定潜在扩散逆求解器，从而实现更强大的零样本图像恢复。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "HATIR: Heat-Aware Diffusion for Turbulent Infrared Video Super-Resolution",
+        "summary": "Infrared video has been of great interest in visual tasks under challenging environments, but often suffers from severe atmospheric turbulence and compression degradation. Existing video super-resolution (VSR) methods either neglect the inherent modality gap between infrared and visible images or fail to restore turbulence-induced distortions. Directly cascading turbulence mitigation (TM) algorithms with VSR methods leads to error propagation and accumulation due to the decoupled modeling of degradation between turbulence and resolution. We introduce HATIR, a Heat-Aware Diffusion for Turbulent InfraRed Video Super-Resolution, which injects heat-aware deformation priors into the diffusion sampling path to jointly model the inverse process of turbulent degradation and structural detail loss. Specifically, HATIR constructs a Phasor-Guided Flow Estimator, rooted in the physical principle that thermally active regions exhibit consistent phasor responses over time, enabling reliable turbulence-aware flow to guide the reverse diffusion process. To ensure the fidelity of structural recovery under nonuniform distortions, a Turbulence-Aware Decoder is proposed to selectively suppress unstable temporal cues and enhance edge-aware feature aggregation via turbulence gating and structure-aware attention. We built FLIR-IVSR, the first dataset for turbulent infrared VSR, comprising paired LR-HR sequences from a FLIR T1050sc camera (1024 X 768) spanning 640 diverse scenes with varying camera and object motion conditions. This encourages future research in infrared VSR. Project page: https://github.com/JZ0606/HATIR",
+        "url": "http://arxiv.org/abs/2601.04682v1",
+        "published_date": "2026-01-08T07:49:02+00:00",
+        "updated_date": "2026-01-08T07:49:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yang Zou",
+            "Xingyue Zhu",
+            "Kaiqi Han",
+            "Jun Ma",
+            "Xingyuan Li",
+            "Zhiying Jiang",
+            "Jinyuan Liu"
+        ],
+        "tldr": "The paper introduces HATIR, a heat-aware diffusion model for infrared video super-resolution that addresses turbulence and modality gaps by jointly modeling degradation and structural detail loss using a phasor-guided flow estimator and a turbulence-aware decoder. They also present a new FLIR-IVSR dataset.",
+        "tldr_zh": "该论文介绍了HATIR，一种热感知扩散模型，用于红外视频超分辨率，它通过使用相位器引导的流量估计器和湍流感知解码器，联合建模退化和结构细节损失，从而解决湍流和模态差距。他们还提出了一个新的FLIR-IVSR数据集。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "3D Conditional Image Synthesis of Left Atrial LGE MRI from Composite Semantic Masks",
+        "summary": "Segmentation of the left atrial (LA) wall and endocardium from late gadolinium-enhanced (LGE) MRI is essential for quantifying atrial fibrosis in patients with atrial fibrillation. The development of accurate machine learning-based segmentation models remains challenging due to the limited availability of data and the complexity of anatomical structures. In this work, we investigate 3D conditional generative models as potential solution for augmenting scarce LGE training data and improving LA segmentation performance. We develop a pipeline to synthesize high-fidelity 3D LGE MRI volumes from composite semantic label maps combining anatomical expert annotations with unsupervised tissue clusters, using three 3D conditional generators (Pix2Pix GAN, SPADE-GAN, and SPADE-LDM). The synthetic images are evaluated for realism and their impact on downstream LA segmentation. SPADE-LDM generates the most realistic and structurally accurate images, achieving an FID of 4.063 and surpassing GAN models, which have FIDs of 40.821 and 7.652 for Pix2Pix and SPADE-GAN, respectively. When augmented with synthetic LGE images, the Dice score for LA cavity segmentation with a 3D U-Net model improved from 0.908 to 0.936, showing a statistically significant improvement (p < 0.05) over the baseline.These findings demonstrate the potential of label-conditioned 3D synthesis to enhance the segmentation of under-represented cardiac structures.",
+        "url": "http://arxiv.org/abs/2601.04588v1",
+        "published_date": "2026-01-08T04:35:40+00:00",
+        "updated_date": "2026-01-08T04:35:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yusri Al-Sanaani",
+            "Rebecca Thornhill",
+            "Sreeraman Rajan"
+        ],
+        "tldr": "This paper explores 3D conditional generative models for synthesizing LGE MRI volumes from semantic label maps to augment training data and improve LA segmentation, demonstrating significant improvements in segmentation accuracy using SPADE-LDM for data augmentation.",
+        "tldr_zh": "本文探索了3D条件生成模型，用于从语义标签图中合成LGE MRI卷，以扩充训练数据并提高LA分割效果。结果表明，使用SPADE-LDM进行数据增强可显著提高分割精度。",
+        "relevance_score": 7,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Integrated Framework for Selecting and Enhancing Ancient Marathi Inscription Images from Stone, Metal Plate, and Paper Documents",
+        "summary": "Ancient script images often suffer from severe background noise, low contrast, and degradation caused by aging and environmental effects. In many cases, the foreground text and background exhibit similar visual characteristics, making the inscriptions difficult to read. The primary objective of image enhancement is to improve the readability of such degraded ancient images. This paper presents an image enhancement approach based on binarization and complementary preprocessing techniques for removing stains and enhancing unclear ancient text. The proposed methods are evaluated on different types of ancient scripts, including inscriptions on stone, metal plates, and historical documents. Experimental results show that the proposed approach achieves classification accuracies of 55.7%, 62%, and 65.6% for stone, metal plate, and document scripts, respectively, using the K-Nearest Neighbor (K-NN) classifier. Using the Support Vector Machine (SVM) classifier, accuracies of 53.2%, 59.5%, and 67.8% are obtained. The results demonstrate the effectiveness of the proposed enhancement method in improving the readability of ancient Marathi inscription images.",
+        "url": "http://arxiv.org/abs/2601.04800v1",
+        "published_date": "2026-01-08T10:30:59+00:00",
+        "updated_date": "2026-01-08T10:30:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bapu D. Chendage",
+            "Rajivkumar S. Mente"
+        ],
+        "tldr": "This paper presents an image enhancement method based on binarization and preprocessing techniques to improve the readability of ancient Marathi inscription images on stone, metal, and paper. The method is evaluated using K-NN and SVM classifiers, achieving accuracies ranging from 53.2% to 67.8%.",
+        "tldr_zh": "本文提出了一种基于二值化和预处理技术的图像增强方法，旨在提高古代马拉地语碑刻图像（包括石刻、金属板和纸质文献）的可读性。该方法使用 K-NN 和 SVM 分类器进行评估，准确率范围为 53.2% 至 67.8%。",
+        "relevance_score": 3,
+        "novelty_claim_score": 4,
+        "clarity_score": 8,
+        "potential_impact_score": 5,
+        "overall_priority_score": 4
+    }
+]
