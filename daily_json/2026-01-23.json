@@ -1,0 +1,133 @@
+[
+    {
+        "title": "PMPBench: A Paired Multi-Modal Pan-Cancer Benchmark for Medical Image Synthesis",
+        "summary": "Contrast medium plays a pivotal role in radiological imaging, as it amplifies lesion conspicuity and improves detection for the diagnosis of tumor-related diseases. However, depending on the patient's health condition or the medical resources available, the use of contrast medium is not always feasible. Recent work has explored AI-based image translation to synthesize contrast-enhanced images directly from non-contrast scans, aims to reduce side effects and streamlines clinical workflows. Progress in this direction has been constrained by data limitations: (1) existing public datasets focus almost exclusively on brain-related paired MR modalities; (2) other collections include partially paired data but suffer from missing modalities/timestamps and imperfect spatial alignment; (3) explicit labeling of CT vs. CTC or DCE phases is often absent; (4) substantial resources remain private. To bridge this gap, we introduce the first public, fully paired, pan-cancer medical imaging dataset spanning 11 human organs. The MR data include complete dynamic contrast-enhanced (DCE) sequences covering all three phases (DCE1-DCE3), while the CT data provide paired non-contrast and contrast-enhanced acquisitions (CTC). The dataset is curated for anatomical correspondence, enabling rigorous evaluation of 1-to-1, N-to-1, and N-to-N translation settings (e.g., predicting DCE phases from non-contrast inputs). Built upon this resource, we establish a comprehensive benchmark. We report results from representative baselines of contemporary image-to-image translation. We release the dataset and benchmark to catalyze research on safe, effective contrast synthesis, with direct relevance to multi-organ oncology imaging workflows. Our code and dataset are publicly available at https://github.com/YifanChen02/PMPBench.",
+        "url": "http://arxiv.org/abs/2601.15884v1",
+        "published_date": "2026-01-22T11:58:37+00:00",
+        "updated_date": "2026-01-22T11:58:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yifan Chen",
+            "Fei Yin",
+            "Hao Chen",
+            "Jia Wu",
+            "Chao Li"
+        ],
+        "tldr": "The paper introduces PMPBench, a new public, fully paired, pan-cancer medical imaging dataset and benchmark for contrast-enhanced image synthesis from non-contrast scans, aiming to improve cancer diagnosis and reduce the need for contrast medium.",
+        "tldr_zh": "该论文介绍了PMPBench，这是一个新的公共、完全配对的泛癌医学图像数据集和基准，用于从非对比扫描合成对比增强图像，旨在改善癌症诊断并减少对造影剂的需求。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Uncertainty-guided Generation of Dark-field Radiographs",
+        "summary": "X-ray dark-field radiography provides complementary diagnostic information to conventional attenuation imaging by visualizing microstructural tissue changes through small-angle scattering. However, the limited availability of such data poses challenges for developing robust deep learning models. In this work, we present the first framework for generating dark-field images directly from standard attenuation chest X-rays using an Uncertainty-Guided Progressive Generative Adversarial Network. The model incorporates both aleatoric and epistemic uncertainty to improve interpretability and reliability. Experiments demonstrate high structural fidelity of the generated images, with consistent improvement of quantitative metrics across stages. Furthermore, out-of-distribution evaluation confirms that the proposed model generalizes well. Our results indicate that uncertainty-guided generative modeling enables realistic dark-field image synthesis and provides a reliable foundation for future clinical applications.",
+        "url": "http://arxiv.org/abs/2601.15859v1",
+        "published_date": "2026-01-22T11:07:19+00:00",
+        "updated_date": "2026-01-22T11:07:19+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Lina Felsner",
+            "Henriette Bast",
+            "Tina Dorosti",
+            "Florian Schaff",
+            "Franz Pfeiffer",
+            "Daniela Pfeiffer",
+            "Julia Schnabel"
+        ],
+        "tldr": "This paper introduces an uncertainty-guided GAN framework for generating dark-field radiographs from standard chest X-rays, addressing the scarcity of dark-field data for training deep learning models. The model shows promise in producing realistic images with good generalization.",
+        "tldr_zh": "本文介绍了一种不确定性引导的 GAN 框架，用于从标准胸部 X 射线生成暗场射线照片，解决了训练深度学习模型时暗场数据稀缺的问题。该模型在生成具有良好泛化能力的逼真图像方面显示出前景。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Iterative Refinement Improves Compositional Image Generation",
+        "summary": "Text-to-image (T2I) models have achieved remarkable progress, yet they continue to struggle with complex prompts that require simultaneously handling multiple objects, relations, and attributes. Existing inference-time strategies, such as parallel sampling with verifiers or simply increasing denoising steps, can improve prompt alignment but remain inadequate for richly compositional settings where many constraints must be satisfied. Inspired by the success of chain-of-thought reasoning in large language models, we propose an iterative test-time strategy in which a T2I model progressively refines its generations across multiple steps, guided by feedback from a vision-language model as the critic in the loop. Our approach is simple, requires no external tools or priors, and can be flexibly applied to a wide range of image generators and vision-language models. Empirically, we demonstrate consistent gains on image generation across benchmarks: a 16.9% improvement in all-correct rate on ConceptMix (k=7), a 13.8% improvement on T2I-CompBench (3D-Spatial category) and a 12.5% improvement on Visual Jenga scene decomposition compared to compute-matched parallel sampling. Beyond quantitative gains, iterative refinement produces more faithful generations by decomposing complex prompts into sequential corrections, with human evaluators preferring our method 58.7% of the time over 41.3% for the parallel baseline. Together, these findings highlight iterative self-correction as a broadly applicable principle for compositional image generation. Results and visualizations are available at https://iterative-img-gen.github.io/",
+        "url": "http://arxiv.org/abs/2601.15286v1",
+        "published_date": "2026-01-21T18:59:40+00:00",
+        "updated_date": "2026-01-21T18:59:40+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Shantanu Jaiswal",
+            "Mihir Prabhudesai",
+            "Nikash Bhardwaj",
+            "Zheyang Qin",
+            "Amir Zadeh",
+            "Chuan Li",
+            "Katerina Fragkiadaki",
+            "Deepak Pathak"
+        ],
+        "tldr": "The paper introduces an iterative refinement strategy for text-to-image models, using a vision-language model as a critic to progressively improve the generation of images from complex prompts, demonstrating significant gains in compositional image generation benchmarks.",
+        "tldr_zh": "该论文提出了一种迭代优化策略，用于文本到图像模型，使用视觉-语言模型作为评论器，逐步改进从复杂提示中生成的图像，并在组合图像生成基准测试中展示了显著的收益。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Consistency-Regularized GAN for Few-Shot SAR Target Recognition",
+        "summary": "Few-shot recognition in synthetic aperture radar (SAR) imagery remains a critical bottleneck for real-world applications due to extreme data scarcity. A promising strategy involves synthesizing a large dataset with a generative adversarial network (GAN), pre-training a model via self-supervised learning (SSL), and then fine-tuning on the few labeled samples. However, this approach faces a fundamental paradox: conventional GANs themselves require abundant data for stable training, contradicting the premise of few-shot learning. To resolve this, we propose the consistency-regularized generative adversarial network (Cr-GAN), a novel framework designed to synthesize diverse, high-fidelity samples even when trained under these severe data limitations. Cr-GAN introduces a dual-branch discriminator that decouples adversarial training from representation learning. This architecture enables a channel-wise feature interpolation strategy to create novel latent features, complemented by a dual-domain cycle consistency mechanism that ensures semantic integrity. Our Cr-GAN framework is adaptable to various GAN architectures, and its synthesized data effectively boosts multiple SSL algorithms. Extensive experiments on the MSTAR and SRSDD datasets validate our approach, with Cr-GAN achieving a highly competitive accuracy of 71.21% and 51.64%, respectively, in the 8-shot setting, significantly outperforming leading baselines, while requiring only ~5 of the parameters of state-of-the-art diffusion models. Code is available at: https://github.com/yikuizhai/Cr-GAN.",
+        "url": "http://arxiv.org/abs/2601.15681v1",
+        "published_date": "2026-01-22T06:02:39+00:00",
+        "updated_date": "2026-01-22T06:02:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yikui Zhai",
+            "Shikuang Liu",
+            "Wenlve Zhou",
+            "Hongsheng Zhang",
+            "Zhiheng Zhou",
+            "Xiaolin Tian",
+            "C. L. Philip Chen"
+        ],
+        "tldr": "The paper introduces a Consistency-Regularized GAN (Cr-GAN) to address the challenge of few-shot SAR target recognition by synthesizing high-fidelity data. It outperforms existing methods while using significantly fewer parameters than diffusion models.",
+        "tldr_zh": "该论文介绍了一种一致性正则化 GAN (Cr-GAN)，通过合成高保真数据来解决小样本 SAR 目标识别的挑战。该方法优于现有方法，同时使用的参数比扩散模型少得多。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Seeing through Light and Darkness: Sensor-Physics Grounded Deblurring HDR NeRF from Single-Exposure Images and Events",
+        "summary": "Novel view synthesis from low dynamic range (LDR) blurry images, which are common in the wild, struggles to recover high dynamic range (HDR) and sharp 3D representations in extreme lighting conditions. Although existing methods employ event data to address this issue, they ignore the sensor-physics mismatches between the camera output and physical world radiance, resulting in suboptimal HDR and deblurring results. To cope with this problem, we propose a unified sensor-physics grounded NeRF framework for sharp HDR novel view synthesis from single-exposure blurry LDR images and corresponding events. We employ NeRF to directly represent the actual radiance of the 3D scene in the HDR domain and model raw HDR scene rays hitting the sensor pixels as in the physical world. A pixel-wise RGB mapping field is introduced to align the above rendered pixel values with the sensor-recorded LDR pixel values of the input images. A novel event mapping field is also designed to bridge the physical scene dynamics and actual event sensor output. The two mapping fields are jointly optimized with the NeRF network, leveraging the spatial and temporal dynamic information in events to enhance the sharp HDR 3D representation learning. Experiments on the collected and public datasets demonstrate that our method can achieve state-of-the-art deblurring HDR novel view synthesis results with single-exposure blurry LDR images and corresponding events.",
+        "url": "http://arxiv.org/abs/2601.15475v1",
+        "published_date": "2026-01-21T21:25:58+00:00",
+        "updated_date": "2026-01-21T21:25:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yunshan Qi",
+            "Lin Zhu",
+            "Nan Bao",
+            "Yifan Zhao",
+            "Jia Li"
+        ],
+        "tldr": "This paper presents a sensor-physics grounded NeRF framework using single-exposure blurry LDR images and event data for sharp HDR novel view synthesis, addressing limitations of existing methods by explicitly modeling sensor characteristics.",
+        "tldr_zh": "本文提出了一种基于传感器物理特性的NeRF框架，该框架使用单次曝光模糊的LDR图像和事件数据进行清晰的HDR新视角合成，通过显式地对传感器特性建模，解决了现有方法的局限性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
