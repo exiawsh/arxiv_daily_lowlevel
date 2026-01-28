@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Bridging Information Asymmetry: A Hierarchical Framework for Deterministic Blind Face Restoration",
+        "summary": "Blind face restoration remains a persistent challenge due to the inherent ill-posedness of reconstructing holistic structures from severely constrained observations. Current generative approaches, while capable of synthesizing realistic textures, often suffer from information asymmetry -- the intrinsic disparity between the information-sparse low quality inputs and the information-dense high quality outputs. This imbalance leads to a one-to-many mapping, where insufficient constraints result in stochastic uncertainty and hallucinatory artifacts. To bridge this gap, we present \\textbf{Pref-Restore}, a hierarchical framework that integrates discrete semantic logic with continuous texture generation to achieve deterministic, preference-aligned restoration. Our methodology fundamentally addresses this information disparity through two complementary strategies: (1) Augmenting Input Density: We employ an auto-regressive integrator to reformulate textual instructions into dense latent queries, injecting high-level semantic stability to constrain the degraded signals; (2) Pruning Output Distribution: We pioneer the integration of on-policy reinforcement learning directly into the diffusion restoration loop. By transforming human preferences into differentiable constraints, we explicitly penalize stochastic deviations, thereby sharpening the posterior distribution toward the desired high-fidelity outcomes. Extensive experiments demonstrate that Pref-Restore achieves state-of-the-art performance across synthetic and real-world benchmarks. Furthermore, empirical analysis confirms that our preference-aligned strategy significantly reduces solution entropy, establishing a robust pathway toward reliable and deterministic blind restoration.",
+        "url": "http://arxiv.org/abs/2601.19506v1",
+        "published_date": "2026-01-27T11:50:31+00:00",
+        "updated_date": "2026-01-27T11:50:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhengjian Yao",
+            "Jiakui Hu",
+            "Kaiwen Li",
+            "Hangzhou He",
+            "Xinliang Zhang",
+            "Shuang Zeng",
+            "Lei Zhu",
+            "Yanye Lu"
+        ],
+        "tldr": "The paper introduces Pref-Restore, a hierarchical framework for deterministic blind face restoration that addresses information asymmetry by augmenting input density with textual instructions and pruning output distribution using reinforcement learning based on human preferences.",
+        "tldr_zh": "该论文介绍了一种名为Pref-Restore的层级框架，用于确定性的盲人脸修复。该框架通过使用文本指令增加输入密度，并利用基于人类偏好的强化学习剪枝输出分布来解决信息不对称问题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Cortex-Grounded Diffusion Models for Brain Image Generation",
+        "summary": "Synthetic neuroimaging data can mitigate critical limitations of real-world datasets, including the scarcity of rare phenotypes, domain shifts across scanners, and insufficient longitudinal coverage. However, existing generative models largely rely on weak conditioning signals, such as labels or text, which lack anatomical grounding and often produce biologically implausible outputs. To this end, we introduce Cor2Vox, a cortex-grounded generative framework for brain magnetic resonance image (MRI) synthesis that ties image generation to continuous structural priors of the cerebral cortex. It leverages high-resolution cortical surfaces to guide a 3D shape-to-image Brownian bridge diffusion process, enabling topologically faithful synthesis and precise control over underlying anatomies. To support the generation of new, realistic brain shapes, we developed a large-scale statistical shape model of cortical morphology derived from over 33,000 UK Biobank scans. We validated the fidelity of Cor2Vox based on traditional image quality metrics, advanced cortical surface reconstruction, and whole-brain segmentation quality, outperforming many baseline methods. Across three applications, namely (i) anatomically consistent synthesis, (ii) simulation of progressive gray matter atrophy, and (iii) harmonization of in-house frontotemporal dementia scans with public datasets, Cor2Vox preserved fine-grained cortical morphology at the sub-voxel level, exhibiting remarkable robustness to variations in cortical geometry and disease phenotype without retraining.",
+        "url": "http://arxiv.org/abs/2601.19498v1",
+        "published_date": "2026-01-27T11:34:43+00:00",
+        "updated_date": "2026-01-27T11:34:43+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Fabian Bongratz",
+            "Yitong Li",
+            "Sama Elbaroudy",
+            "Christian Wachinger"
+        ],
+        "tldr": "This paper introduces Cor2Vox, a cortex-grounded diffusion model for generating realistic brain MRI images by leveraging cortical surface priors, demonstrating improved anatomical fidelity and robustness compared to existing methods.",
+        "tldr_zh": "该论文介绍了Cor2Vox，一种基于皮层结构的扩散模型，通过利用皮层表面先验知识生成逼真的脑部MRI图像，与现有方法相比，展现出更好的解剖学保真度和鲁棒性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Entropy-Guided k-Guard Sampling for Long-Horizon Autoregressive Video Generation",
+        "summary": "Autoregressive (AR) architectures have achieved significant successes in LLMs, inspiring explorations for video generation. In LLMs, top-p/top-k sampling strategies work exceptionally well: language tokens have high semantic density and low redundancy, so a fixed size of token candidates already strikes a balance between semantic accuracy and generation diversity. In contrast, video tokens have low semantic density and high spatio-temporal redundancy. This mismatch makes static top-k/top-p strategies ineffective for video decoders: they either introduce unnecessary randomness for low-uncertainty regions (static backgrounds) or get stuck in early errors for high-uncertainty regions (foreground objects). Prediction errors will accumulate as more frames are generated and eventually severely degrade long-horizon quality. To address this, we propose Entropy-Guided k-Guard (ENkG) sampling, a simple yet effective strategy that adapts sampling to token-wise dispersion, quantified by the entropy of each token's predicted distribution. ENkG uses adaptive token candidate sizes: for low-entropy regions, it employs fewer candidates to suppress redundant noise and preserve structural integrity; for high-entropy regions, it uses more candidates to mitigate error compounding. ENkG is model-agnostic, training-free, and adds negligible overhead. Experiments demonstrate consistent improvements in perceptual quality and structural stability compared to static top-k/top-p strategies.",
+        "url": "http://arxiv.org/abs/2601.19488v1",
+        "published_date": "2026-01-27T11:19:53+00:00",
+        "updated_date": "2026-01-27T11:19:53+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yizhao Han",
+            "Tianxing Shi",
+            "Zhao Wang",
+            "Zifan Xu",
+            "Zhiyuan Pu",
+            "Mingxiao Li",
+            "Qian Zhang",
+            "Wei Yin",
+            "Xiao-Xiao Long"
+        ],
+        "tldr": "The paper introduces Entropy-Guided k-Guard (ENkG) sampling for long-horizon autoregressive video generation, which dynamically adjusts the number of token candidates based on entropy to improve perceptual quality and structural stability.",
+        "tldr_zh": "该论文介绍了用于长程自回归视频生成的熵引导k-Guard（ENkG）采样方法，该方法基于熵动态调整token候选数量，以提高感知质量和结构稳定性。",
+        "relevance_score": 6,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

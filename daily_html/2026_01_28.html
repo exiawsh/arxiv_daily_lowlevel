@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - January 21, 2026</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - January 28, 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>January 21, 2026</p>
+            <p>January 28, 2026</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Likelihood-Separable Diffusion Inference for Multi-Image MRI Super-Resolution</h2>
+            <h2 class="paper-title">Bridging Information Asymmetry: A Hierarchical Framework for Deterministic Blind Face Restoration</h2>
             
-            <p class="paper-summary">Diffusion models are the current state-of-the-art for solving inverse problems in imaging. Their impressive generative capability allows them to approximate sampling from a prior distribution, which alongside a known likelihood function permits posterior sampling without retraining the model. While recent methods have made strides in advancing the accuracy of posterior sampling, the majority focuses on single-image inverse problems. However, for modalities such as magnetic resonance imaging (MRI), it is common to acquire multiple complementary measurements, each low-resolution along a different axis. In this work, we generalize common diffusion-based inverse single-image problem solvers for multi-image super-resolution (MISR) MRI. We show that the DPS likelihood correction allows an exactly-separable gradient decomposition across independently acquired measurements, enabling MISR without constructing a joint operator, modifying the diffusion model, or increasing network function evaluations. We derive MISR versions of DPS, DMAP, DPPS, and diffusion-based PnP/ADMM, and demonstrate substantial gains over SISR across $4\times/8\times/16\times$ anisotropic degradations. Our results achieve state-of-the-art super-resolution of anisotropic MRI volumes and, critically, enable reconstruction of near-isotropic anatomy from routine 2D multi-slice acquisitions, which are otherwise highly degraded in orthogonal views.</p>
+            <p class="paper-summary">Blind face restoration remains a persistent challenge due to the inherent ill-posedness of reconstructing holistic structures from severely constrained observations. Current generative approaches, while capable of synthesizing realistic textures, often suffer from information asymmetry -- the intrinsic disparity between the information-sparse low quality inputs and the information-dense high quality outputs. This imbalance leads to a one-to-many mapping, where insufficient constraints result in stochastic uncertainty and hallucinatory artifacts. To bridge this gap, we present \textbf{Pref-Restore}, a hierarchical framework that integrates discrete semantic logic with continuous texture generation to achieve deterministic, preference-aligned restoration. Our methodology fundamentally addresses this information disparity through two complementary strategies: (1) Augmenting Input Density: We employ an auto-regressive integrator to reformulate textual instructions into dense latent queries, injecting high-level semantic stability to constrain the degraded signals; (2) Pruning Output Distribution: We pioneer the integration of on-policy reinforcement learning directly into the diffusion restoration loop. By transforming human preferences into differentiable constraints, we explicitly penalize stochastic deviations, thereby sharpening the posterior distribution toward the desired high-fidelity outcomes. Extensive experiments demonstrate that Pref-Restore achieves state-of-the-art performance across synthetic and real-world benchmarks. Furthermore, empirical analysis confirms that our preference-aligned strategy significantly reduces solution entropy, establishing a robust pathway toward reliable and deterministic blind restoration.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper generalizes diffusion-based single-image super-resolution methods to the multi-image super-resolution problem in MRI, achieving state-of-the-art results and enabling reconstruction of near-isotropic anatomy from routine 2D multi-slice acquisitions.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Pref-Restore, a hierarchical framework for deterministic blind face restoration that addresses information asymmetry by augmenting input density with textual instructions and pruning output distribution using reinforcement learning based on human preferences.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文将基于扩散的单图像超分辨率方法推广到MRI中的多图像超分辨率问题，实现了最先进的结果，并能够从常规的2D多层切片采集重建近乎各向同性的解剖结构。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为Pref-Restore的层级框架，用于确定性的盲人脸修复。该框架通过使用文本指令增加输入密度，并利用基于人类偏好的强化学习剪枝输出分布来解决信息不对称问题。</p>
             
 
             
@@ -293,11 +293,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2601.14030v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2601.19506v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Samuel W. Remedios, Zhangxing Bian, Shuwen Wei, Aaron Carass, Jerry L. Prince, Blake E. Dewey</p>
+            <p class="paper-authors">Authors: Zhengjian Yao, Jiakui Hu, Kaiwen Li, Hangzhou He, Xinliang Zhang, Shuang Zeng, Lei Zhu, Yanye Lu</p>
             
         </motion.div>
         
@@ -309,14 +309,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SHARE: A Fully Unsupervised Framework for Single Hyperspectral Image Restoration</h2>
+            <h2 class="paper-title">Cortex-Grounded Diffusion Models for Brain Image Generation</h2>
             
-            <p class="paper-summary">Hyperspectral image (HSI) restoration is a fundamental challenge in computational imaging and computer vision. It involves ill-posed inverse problems, such as inpainting and super-resolution. Although deep learning methods have transformed the field through data-driven learning, their effectiveness hinges on access to meticulously curated ground-truth datasets. This fundamentally restricts their applicability in real-world scenarios where such data is unavailable. This paper presents SHARE (Single Hyperspectral Image Restoration with Equivariance), a fully unsupervised framework that unifies geometric equivariance principles with low-rank spectral modelling to eliminate the need for ground truth. SHARE's core concept is to exploit the intrinsic invariance of hyperspectral structures under differentiable geometric transformations (e.g. rotations and scaling) to derive self-supervision signals through equivariance consistency constraints. Our novel Dynamic Adaptive Spectral Attention (DASA) module further enhances this paradigm shift by explicitly encoding the global low-rank property of HSI and adaptively refining local spectral-spatial correlations through learnable attention mechanisms. Extensive experiments on HSI inpainting and super-resolution tasks demonstrate the effectiveness of SHARE. Our method outperforms many state-of-the-art unsupervised approaches and achieves performance comparable to that of supervised methods. We hope that our approach will shed new light on HSI restoration and broader scientific imaging scenarios. The code will be released at https://github.com/xuwayyy/SHARE.</p>
+            <p class="paper-summary">Synthetic neuroimaging data can mitigate critical limitations of real-world datasets, including the scarcity of rare phenotypes, domain shifts across scanners, and insufficient longitudinal coverage. However, existing generative models largely rely on weak conditioning signals, such as labels or text, which lack anatomical grounding and often produce biologically implausible outputs. To this end, we introduce Cor2Vox, a cortex-grounded generative framework for brain magnetic resonance image (MRI) synthesis that ties image generation to continuous structural priors of the cerebral cortex. It leverages high-resolution cortical surfaces to guide a 3D shape-to-image Brownian bridge diffusion process, enabling topologically faithful synthesis and precise control over underlying anatomies. To support the generation of new, realistic brain shapes, we developed a large-scale statistical shape model of cortical morphology derived from over 33,000 UK Biobank scans. We validated the fidelity of Cor2Vox based on traditional image quality metrics, advanced cortical surface reconstruction, and whole-brain segmentation quality, outperforming many baseline methods. Across three applications, namely (i) anatomically consistent synthesis, (ii) simulation of progressive gray matter atrophy, and (iii) harmonization of in-house frontotemporal dementia scans with public datasets, Cor2Vox preserved fine-grained cortical morphology at the sub-voxel level, exhibiting remarkable robustness to variations in cortical geometry and disease phenotype without retraining.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SHARE, a fully unsupervised framework for hyperspectral image restoration tasks like inpainting and super-resolution, leveraging geometric equivariance and low-rank spectral modeling to eliminate the need for ground truth data.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Cor2Vox, a cortex-grounded diffusion model for generating realistic brain MRI images by leveraging cortical surface priors, demonstrating improved anatomical fidelity and robustness compared to existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为SHARE的完全无监督的超光谱图像恢复框架，用于修复和超分辨率等任务。它利用几何等变性和低秩光谱建模，无需ground truth数据。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了Cor2Vox，一种基于皮层结构的扩散模型，通过利用皮层表面先验知识生成逼真的脑部MRI图像，与现有方法相比，展现出更好的解剖学保真度和鲁棒性。</p>
             
 
             
@@ -326,8 +326,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -387,11 +387,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2601.13987v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2601.19498v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jiangwei Xie, Zhang Wen, Mike Davies, Dongdong Chen</p>
+            <p class="paper-authors">Authors: Fabian Bongratz, Yitong Li, Sama Elbaroudy, Christian Wachinger</p>
             
         </motion.div>
         
@@ -403,108 +403,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Dynamic Differential Linear Attention: Enhancing Linear Diffusion Transformer for High-Quality Image Generation</h2>
+            <h2 class="paper-title">Entropy-Guided k-Guard Sampling for Long-Horizon Autoregressive Video Generation</h2>
             
-            <p class="paper-summary">Diffusion transformers (DiTs) have emerged as a powerful architecture for high-fidelity image generation, yet the quadratic cost of self-attention poses a major scalability bottleneck. To address this, linear attention mechanisms have been adopted to reduce computational cost; unfortunately, the resulting linear diffusion transformers (LiTs) models often come at the expense of generative performance, frequently producing over-smoothed attention weights that limit expressiveness. In this work, we introduce Dynamic Differential Linear Attention (DyDiLA), a novel linear attention formulation that enhances the effectiveness of LiTs by mitigating the oversmoothing issue and improving generation quality. Specifically, the novelty of DyDiLA lies in three key designs: (i) dynamic projection module, which facilitates the decoupling of token representations by learning with dynamically assigned knowledge; (ii) dynamic measure kernel, which provides a better similarity measurement to capture fine-grained semantic distinctions between tokens by dynamically assigning kernel functions for token processing; and (iii) token differential operator, which enables more robust query-to-key retrieval by calculating the differences between the tokens and their corresponding information redundancy produced by dynamic measure kernel. To capitalize on DyDiLA, we introduce a refined LiT, termed DyDi-LiT, that systematically incorporates our advancements. Extensive experiments show that DyDi-LiT consistently outperforms current state-of-the-art (SOTA) models across multiple metrics, underscoring its strong practical potential.</p>
+            <p class="paper-summary">Autoregressive (AR) architectures have achieved significant successes in LLMs, inspiring explorations for video generation. In LLMs, top-p/top-k sampling strategies work exceptionally well: language tokens have high semantic density and low redundancy, so a fixed size of token candidates already strikes a balance between semantic accuracy and generation diversity. In contrast, video tokens have low semantic density and high spatio-temporal redundancy. This mismatch makes static top-k/top-p strategies ineffective for video decoders: they either introduce unnecessary randomness for low-uncertainty regions (static backgrounds) or get stuck in early errors for high-uncertainty regions (foreground objects). Prediction errors will accumulate as more frames are generated and eventually severely degrade long-horizon quality. To address this, we propose Entropy-Guided k-Guard (ENkG) sampling, a simple yet effective strategy that adapts sampling to token-wise dispersion, quantified by the entropy of each token's predicted distribution. ENkG uses adaptive token candidate sizes: for low-entropy regions, it employs fewer candidates to suppress redundant noise and preserve structural integrity; for high-entropy regions, it uses more candidates to mitigate error compounding. ENkG is model-agnostic, training-free, and adds negligible overhead. Experiments demonstrate consistent improvements in perceptual quality and structural stability compared to static top-k/top-p strategies.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Dynamic Differential Linear Attention (DyDiLA) to improve linear diffusion transformers (LiTs) for high-quality image generation by addressing the oversmoothing issue in linear attention. The resulting DyDi-LiT model outperforms state-of-the-art models.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了动态差分线性注意力（DyDiLA），通过解决线性注意力中的过度平滑问题，改进了线性扩散变换器（LiTs），从而实现高质量的图像生成。由此产生的 DyDi-LiT 模型优于当前最先进的模型。</p>
-            
-
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Entropy-Guided k-Guard (ENkG) sampling for long-horizon autoregressive video generation, which dynamically adjusts the number of token candidates based on entropy to improve perceptual quality and structural stability.</p>
             
             
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2601.13683v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Boyuan Cao, Xingbo Yao, Chenhui Wang, Jiaxin Ye, Yujie Wei, Hongming Shan</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">ASBA: A-line State Space Model and B-line Attention for Sparse Optical Doppler Tomography Reconstruction</h2>
-            
-            <p class="paper-summary">Optical Doppler Tomography (ODT) is an emerging blood flow analysis technique. A 2D ODT image (B-scan) is generated by sequentially acquiring 1D depth-resolved raw A-scans (A-line) along the lateral axis (B-line), followed by Doppler phase-subtraction analysis. To ensure high-fidelity B-scan images, current practices rely on dense sampling, which prolongs scanning time, increases storage demands, and limits the capture of rapid blood flow dynamics. Recent studies have explored sparse sampling of raw A-scans to alleviate these limitations, but their effectiveness is hindered by the conservative sampling rates and the uniform modeling of flow and background signals. In this study, we introduce a novel blood flow-aware network, named ASBA (A-line ROI State space model and B-line phase Attention), to reconstruct ODT images from highly sparsely sampled raw A-scans. Specifically, we propose an A-line ROI state space model to extract sparsely distributed flow features along the A-line, and a B-line phase attention to capture long-range flow signals along each B-line based on phase difference. Moreover, we introduce a flow-aware weighted loss function that encourages the network to prioritize the accurate reconstruction of flow signals. Extensive experiments on real animal data demonstrate that the proposed approach clearly outperforms existing state-of-the-art reconstruction methods.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ASBA, a novel deep learning method utilizing A-line state space models and B-line attention to reconstruct high-fidelity Optical Doppler Tomography (ODT) images from sparsely sampled raw data, outperforming existing methods.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为ASBA的新型深度学习方法，该方法利用A线状态空间模型和B线注意力，从稀疏采样的原始数据中重建高保真光学多普勒断层扫描（ODT）图像，优于现有方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了用于长程自回归视频生成的熵引导k-Guard（ENkG）采样方法，该方法基于熵动态调整token候选数量，以提高感知质量和结构稳定性。</p>
             
 
             
@@ -514,16 +420,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(4/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -564,29 +470,29 @@
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2601.14165v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2601.19488v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhenghong Li, Wensheng Cheng, Congwu Du, Yingtian Pan, Zhaozheng Yin, Haibin Ling</p>
+            <p class="paper-authors">Authors: Yizhao Han, Tianxing Shi, Zhao Wang, Zifan Xu, Zhiyuan Pu, Mingxiao Li, Qian Zhang, Wei Yin, Xiao-Xiao Long</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2026-01-28 03:00:50 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2026-01-28 03:02:49 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
