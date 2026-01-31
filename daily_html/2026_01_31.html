@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - January 26, 2026</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - January 31, 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>January 26, 2026</p>
+            <p>January 31, 2026</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Implicit Neural Representation-Based Continuous Single Image Super Resolution: An Empirical Study</h2>
+            <h2 class="paper-title">One-step Latent-free Image Generation with Pixel Mean Flows</h2>
             
-            <p class="paper-summary">Implicit neural representation (INR) has become the standard approach for arbitrary-scale image super-resolution (ASSR). To date, no empirical study has systematically examined the effectiveness of existing methods, nor investigated the effects of different training recipes, such as scaling laws, objective design, and optimization strategies. A rigorous empirical analysis is essential not only for benchmarking performance and revealing true gains but also for establishing the current state of ASSR, identifying saturation limits, and highlighting promising directions. We fill this gap by comparing existing techniques across diverse settings and presenting aggregated performance results on multiple image quality metrics. We contribute a unified framework and code repository to facilitate reproducible comparisons. Furthermore, we investigate the impact of carefully controlled training configurations on perceptual image quality and examine a new loss function that penalizes intensity variations while preserving edges, textures, and finer details during training. We conclude the following key insights that have been previously overlooked: (1) Recent, more complex INR methods provide only marginal improvements over earlier methods. (2) Model performance is strongly correlated to training configurations, a factor overlooked in prior works. (3) The proposed loss enhances texture fidelity across architectures, emphasizing the role of objective design for targeted perceptual gains. (4) Scaling laws apply to INR-based ASSR, confirming predictable gains with increased model complexity and data diversity.</p>
+            <p class="paper-summary">Modern diffusion/flow-based models for image generation typically exhibit two core characteristics: (i) using multi-step sampling, and (ii) operating in a latent space. Recent advances have made encouraging progress on each aspect individually, paving the way toward one-step diffusion/flow without latents. In this work, we take a further step towards this goal and propose "pixel MeanFlow" (pMF). Our core guideline is to formulate the network output space and the loss space separately. The network target is designed to be on a presumed low-dimensional image manifold (i.e., x-prediction), while the loss is defined via MeanFlow in the velocity space. We introduce a simple transformation between the image manifold and the average velocity field. In experiments, pMF achieves strong results for one-step latent-free generation on ImageNet at 256x256 resolution (2.22 FID) and 512x512 resolution (2.48 FID), filling a key missing piece in this regime. We hope that our study will further advance the boundaries of diffusion/flow-based generative models.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents an empirical study of INR-based single image super-resolution, comparing existing methods, analyzing the impact of training configurations, and proposing a new loss function for enhanced texture fidelity. It reveals insights about marginal gains of complex methods and the importance of training configurations.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces "pixel MeanFlow" (pMF), a novel one-step, latent-free image generation method achieving competitive FID scores on ImageNet, bridging a gap in diffusion/flow-based generative models.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文对基于隐式神经表示的单图像超分辨率技术进行了实证研究，比较了现有方法，分析了训练配置的影响，并提出了一种新的损失函数以增强纹理保真度。 它揭示了复杂方法带来的边际收益以及训练配置的重要性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了“像素均值流”(pMF)，一种新颖的单步、无潜在空间的图像生成方法，在ImageNet上取得了具有竞争力的FID分数，弥补了扩散/流生成模型中的一个空白。</p>
             
 
             
@@ -232,32 +232,32 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
+                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -293,112 +293,18 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2601.17723v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2601.22158v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Tayyab Nasir, Daochang Liu, Ajmal Mian</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Training-Free Text-to-Image Compositional Food Generation via Prompt Grafting</h2>
-            
-            <p class="paper-summary">Real-world meal images often contain multiple food items, making reliable compositional food image generation important for applications such as image-based dietary assessment, where multi-food data augmentation is needed, and recipe visualization. However, modern text-to-image diffusion models struggle to generate accurate multi-food images due to object entanglement, where adjacent foods (e.g., rice and soup) fuse together because many foods do not have clear boundaries. To address this challenge, we introduce Prompt Grafting (PG), a training-free framework that combines explicit spatial cues in text with implicit layout guidance during sampling. PG runs a two-stage process where a layout prompt first establishes distinct regions and the target prompt is grafted once layout formation stabilizes. The framework enables food entanglement control: users can specify which food items should remain separated or be intentionally mixed by editing the arrangement of layouts. Across two food datasets, our method significantly improves the presence of target objects and provides qualitative evidence of controllable separation.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Prompt Grafting (PG), a training-free method to improve compositional food image generation by addressing object entanglement in text-to-image diffusion models, enabling control over food separation and mixing.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为Prompt Grafting (PG)的免训练方法，通过解决文本到图像扩散模型中的对象纠缠问题，改进了组合食物图像的生成，从而能够控制食物的分离和混合。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2601.17666v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Xinyue Pan, Yuhao Chen, Fengqing Zhu</p>
+            <p class="paper-authors">Authors: Yiyang Lu, Susie Lu, Qiao Sun, Hanhong Zhao, Zhicheng Jiang, Xianbang Wang, Tianhong Li, Zhengyang Geng, Kaiming He</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2026-01-31 03:19:52 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2026-01-31 03:20:14 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
