@@ -1,0 +1,128 @@
+[
+    {
+        "title": "Leveraging Latent Vector Prediction for Localized Control in Image Generation via Diffusion Models",
+        "summary": "Diffusion models emerged as a leading approach in text-to-image generation, producing high-quality images from textual descriptions. However, attempting to achieve detailed control to get a desired image solely through text remains a laborious trial-and-error endeavor. Recent methods have introduced image-level controls alongside with text prompts, using prior images to extract conditional information such as edges, segmentation and depth maps. While effective, these methods apply conditions uniformly across the entire image, limiting localized control. In this paper, we propose a novel methodology to enable precise local control over user-defined regions of an image, while leaving to the diffusion model the task of autonomously generating the remaining areas according to the original prompt. Our approach introduces a new training framework that incorporates masking features and an additional loss term, which leverages the prediction of the initial latent vector at any diffusion step to enhance the correspondence between the current step and the final sample in the latent space. Extensive experiments demonstrate that our method effectively synthesizes high-quality images with controlled local conditions.",
+        "url": "http://arxiv.org/abs/2602.01991v1",
+        "published_date": "2026-02-02T11:47:48+00:00",
+        "updated_date": "2026-02-02T11:47:48+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Pablo Domingo-Gregorio",
+            "Javier Ruiz-Hidalgo"
+        ],
+        "tldr": "This paper introduces a novel method for localized control in image generation using diffusion models by predicting latent vectors and incorporating masking features, enabling precise manipulation of specific image regions.",
+        "tldr_zh": "本文介绍了一种新颖的方法，通过预测潜在向量并结合掩蔽特征，在扩散模型的图像生成中实现局部控制，从而能够精确地操纵特定的图像区域。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Trust but Verify: Adaptive Conditioning for Reference-Based Diffusion Super-Resolution via Implicit Reference Correlation Modeling",
+        "summary": "Recent works have explored reference-based super-resolution (RefSR) to mitigate hallucinations in diffusion-based image restoration. A key challenge is that real-world degradations make correspondences between low-quality (LQ) inputs and reference (Ref) images unreliable, requiring adaptive control of reference usage. Existing methods either ignore LQ-Ref correlations or rely on brittle explicit matching, leading to over-reliance on misleading references or under-utilization of valuable cues. To address this, we propose Ada-RefSR, a single-step diffusion framework guided by a \"Trust but Verify\" principle: reference information is leveraged when reliable and suppressed otherwise. Its core component, Adaptive Implicit Correlation Gating (AICG), employs learnable summary tokens to distill dominant reference patterns and capture implicit correlations with LQ features. Integrated into the attention backbone, AICG provides lightweight, adaptive regulation of reference guidance, serving as a built-in safeguard against erroneous fusion. Experiments on multiple datasets demonstrate that Ada-RefSR achieves a strong balance of fidelity, naturalness, and efficiency, while remaining robust under varying reference alignment.",
+        "url": "http://arxiv.org/abs/2602.01864v1",
+        "published_date": "2026-02-02T09:34:57+00:00",
+        "updated_date": "2026-02-02T09:34:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuan Wang",
+            "Yuhao Wan",
+            "Siming Zheng",
+            "Bo Li",
+            "Qibin Hou",
+            "Peng-Tao Jiang"
+        ],
+        "tldr": "The paper introduces Ada-RefSR, a diffusion-based reference super-resolution method that adaptively controls reference usage via implicit correlation modeling to improve fidelity and robustness in real-world scenarios.",
+        "tldr_zh": "该论文介绍了 Ada-RefSR，一种基于扩散的参考图像超分辨率方法，通过隐式相关性建模自适应地控制参考图像的使用，从而提高真实场景中的保真度和鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Physics Informed Generative AI Enabling Labour Free Segmentation For Microscopy Analysis",
+        "summary": "Semantic segmentation of microscopy images is a critical task for high-throughput materials characterisation, yet its automation is severely constrained by the prohibitive cost, subjectivity, and scarcity of expert-annotated data. While physics-based simulations offer a scalable alternative to manual labelling, models trained on such data historically fail to generalise due to a significant domain gap, lacking the complex textures, noise patterns, and imaging artefacts inherent to experimental data. This paper introduces a novel framework for labour-free segmentation that successfully bridges this simulation-to-reality gap. Our pipeline leverages phase-field simulations to generate an abundant source of microstructural morphologies with perfect, intrinsically-derived ground-truth masks. We then employ a Cycle-Consistent Generative Adversarial Network (CycleGAN) for unpaired image-to-image translation, transforming the clean simulations into a large-scale dataset of high-fidelity, realistic SEM images. A U-Net model, trained exclusively on this synthetic data, demonstrated remarkable generalisation when deployed on unseen experimental images, achieving a mean Boundary F1-Score of 0.90 and an Intersection over Union (IOU) of 0.88. Comprehensive validation using t-SNE feature-space projection and Shannon entropy analysis confirms that our synthetic images are statistically and featurally indistinguishable from the real data manifold. By completely decoupling model training from manual annotation, our generative framework transforms a data-scarce problem into one of data abundance, providing a robust and fully automated solution to accelerate materials discovery and analysis.",
+        "url": "http://arxiv.org/abs/2602.01710v1",
+        "published_date": "2026-02-02T06:36:06+00:00",
+        "updated_date": "2026-02-02T06:36:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cond-mat.mtrl-sci",
+            "cs.AI"
+        ],
+        "authors": [
+            "Salma Zahran",
+            "Zhou Ao",
+            "Zhengyang Zhang",
+            "Chen Chi",
+            "Chenchen Yuan",
+            "Yanming Wang"
+        ],
+        "tldr": "The paper presents a physics-informed generative AI framework using CycleGAN to generate realistic SEM images from phase-field simulations for training a U-Net for semantic segmentation, effectively addressing the data scarcity issue in microscopy analysis.",
+        "tldr_zh": "本文提出了一种基于物理信息的生成式人工智能框架，利用CycleGAN从相场模拟生成逼真的SEM图像，用于训练U-Net进行语义分割，有效解决了显微镜分析中的数据稀缺问题。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Token Pruning for In-Context Generation in Diffusion Transformers",
+        "summary": "In-context generation significantly enhances Diffusion Transformers (DiTs) by enabling controllable image-to-image generation through reference examples. However, the resulting input concatenation drastically increases sequence length, creating a substantial computational bottleneck. Existing token reduction techniques, primarily tailored for text-to-image synthesis, fall short in this paradigm as they apply uniform reduction strategies, overlooking the inherent role asymmetry between reference contexts and target latents across spatial, temporal, and functional dimensions. To bridge this gap, we introduce ToPi, a training-free token pruning framework tailored for in-context generation in DiTs. Specifically, ToPi utilizes offline calibration-driven sensitivity analysis to identify pivotal attention layers, serving as a robust proxy for redundancy estimation. Leveraging these layers, we derive a novel influence metric to quantify the contribution of each context token for selective pruning, coupled with a temporal update strategy that adapts to the evolving diffusion trajectory. Empirical evaluations demonstrate that ToPi can achieve over 30\\% speedup in inference while maintaining structural fidelity and visual consistency across complex image generation tasks.",
+        "url": "http://arxiv.org/abs/2602.01609v1",
+        "published_date": "2026-02-02T03:54:32+00:00",
+        "updated_date": "2026-02-02T03:54:32+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Junqing Lin",
+            "Xingyu Zheng",
+            "Pei Cheng",
+            "Bin Fu",
+            "Jingwei Sun",
+            "Guangzhong Sun"
+        ],
+        "tldr": "This paper introduces ToPi, a training-free token pruning framework for in-context image generation using Diffusion Transformers, achieving significant speedup by selectively pruning context tokens based on their influence, while maintaining image quality.",
+        "tldr_zh": "本文介绍了一种名为ToPi的免训练token剪枝框架，用于扩散Transformer的上下文图像生成。通过选择性地剪枝上下文token，该框架能够在保持图像质量的同时显著提高速度。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Combined Flicker-banding and Moire Removal for Screen-Captured Images",
+        "summary": "Capturing display screens with mobile devices has become increasingly common, yet the resulting images often suffer from severe degradations caused by the coexistence of moiré patterns and flicker-banding, leading to significant visual quality degradation. Due to the strong coupling of these two artifacts in real imaging processes, existing methods designed for single degradations fail to generalize to such compound scenarios. In this paper, we present the first systematic study on joint removal of moiré patterns and flicker-banding in screen-captured images, and propose a unified restoration framework, named CLEAR. To support this task, we construct a large-scale dataset containing both moiré patterns and flicker-banding, and introduce an ISP-based flicker simulation pipeline to stabilize model training and expand the degradation distribution. Furthermore, we design a frequency-domain decomposition and re-composition module together with a trajectory alignment loss to enhance the modeling of compound artifacts. Extensive experiments demonstrate that the proposed method consistently. outperforms existing image restoration approaches across multiple evaluation metrics, validating its effectiveness in complex real-world scenarios.",
+        "url": "http://arxiv.org/abs/2602.01559v1",
+        "published_date": "2026-02-02T02:53:41+00:00",
+        "updated_date": "2026-02-02T02:53:41+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Libo Zhu",
+            "Zihan Zhou",
+            "Zhiyi Zhou",
+            "Yiyang Qu",
+            "Weihang Zhang",
+            "Keyu Shi",
+            "Yifan Fu",
+            "Yulun Zhang"
+        ],
+        "tldr": "This paper introduces CLEAR, a novel framework for jointly removing moiré patterns and flicker-banding artifacts from screen-captured images. It includes a new dataset, a flicker simulation pipeline, and a frequency-domain decomposition module.",
+        "tldr_zh": "本文介绍了CLEAR，一种用于联合去除屏幕捕获图像中莫尔条纹和闪烁带伪影的新框架。它包括一个新的数据集、一个闪烁模拟管道和一个频域分解模块。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

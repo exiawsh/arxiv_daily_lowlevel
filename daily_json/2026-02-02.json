@@ -1,0 +1,156 @@
+[
+    {
+        "title": "Q-DiT4SR: Exploration of Detail-Preserving Diffusion Transformer Quantization for Real-World Image Super-Resolution",
+        "summary": "Recently, Diffusion Transformers (DiTs) have emerged in Real-World Image Super-Resolution (Real-ISR) to generate high-quality textures, yet their heavy inference burden hinders real-world deployment. While Post-Training Quantization (PTQ) is a promising solution for acceleration, existing methods in super-resolution mostly focus on U-Net architectures, whereas generic DiT quantization is typically designed for text-to-image tasks. Directly applying these methods to DiT-based super-resolution models leads to severe degradation of local textures. Therefore, we propose Q-DiT4SR, the first PTQ framework specifically tailored for DiT-based Real-ISR. We propose H-SVD, a hierarchical SVD that integrates a global low-rank branch with a local block-wise rank-1 branch under a matched parameter budget. We further propose Variance-aware Spatio-Temporal Mixed Precision: VaSMP allocates cross-layer weight bit-widths in a data-free manner based on rate-distortion theory, while VaTMP schedules intra-layer activation precision across diffusion timesteps via dynamic programming (DP) with minimal calibration. Experiments on multiple real-world datasets demonstrate that our Q-DiT4SR achieves SOTA performance under both W4A6 and W4A4 settings. Notably, the W4A4 quantization configuration reduces model size by 5.8$\\times$ and computational operations by over 60$\\times$. Our code and models will be available at https://github.com/xunzhang1128/Q-DiT4SR.",
+        "url": "http://arxiv.org/abs/2602.01273v1",
+        "published_date": "2026-02-01T15:07:59+00:00",
+        "updated_date": "2026-02-01T15:07:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xun Zhang",
+            "Kaicheng Yang",
+            "Hongliang Lu",
+            "Haotong Qin",
+            "Yong Guo",
+            "Yulun Zhang"
+        ],
+        "tldr": "The paper introduces Q-DiT4SR, a post-training quantization framework specifically designed for Diffusion Transformer-based Real-World Image Super-Resolution, achieving state-of-the-art performance with significant model size and computational operation reductions.",
+        "tldr_zh": "该论文介绍了Q-DiT4SR，一个专门为基于扩散Transformer的真实世界图像超分辨率设计的训练后量化框架，在显著减少模型大小和计算量的同时，实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Improving Robustness of Vision-Language-Action Models by Restoring Corrupted Visual Inputs",
+        "summary": "Vision-Language-Action (VLA) models have emerged as a dominant paradigm for generalist robotic manipulation, unifying perception and control within a single end-to-end architecture. However, despite their success in controlled environments, reliable real-world deployment is severely hindered by their fragility to visual disturbances. While existing literature extensively addresses physical occlusions caused by scene geometry, a critical mode remains largely unexplored: image corruptions. These sensor-level artifacts, ranging from electronic noise and dead pixels to lens contaminants, directly compromise the integrity of the visual signal prior to interpretation. In this work, we quantify this vulnerability, demonstrating that state-of-the-art VLAs such as $π_{0.5}$ and SmolVLA, suffer catastrophic performance degradation, dropping from 90\\% success rates to as low as 2\\%, under common signal artifacts. To mitigate this, we introduce the Corruption Restoration Transformer (CRT), a plug-and-play and model-agnostic vision transformer designed to immunize VLA models against sensor disturbances. Leveraging an adversarial training objective, CRT restores clean observations from corrupted inputs without requiring computationally expensive fine-tuning of the underlying model. Extensive experiments across the LIBERO and Meta-World benchmarks demonstrate that CRT effectively recovers lost performance, enabling VLAs to maintain near-baseline success rates, even under severe visual corruption.",
+        "url": "http://arxiv.org/abs/2602.01158v1",
+        "published_date": "2026-02-01T11:09:08+00:00",
+        "updated_date": "2026-02-01T11:09:08+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Daniel Yezid Guarnizo Orjuela",
+            "Leonardo Scappatura",
+            "Veronica Di Gennaro",
+            "Riccardo Andrea Izzo",
+            "Gianluca Bardaro",
+            "Matteo Matteucci"
+        ],
+        "tldr": "This paper introduces the Corruption Restoration Transformer (CRT), a plug-and-play module to improve the robustness of Vision-Language-Action (VLA) models against image corruptions, demonstrating significant performance recovery in robotics benchmarks.",
+        "tldr_zh": "本文介绍了Corruption Restoration Transformer (CRT)，一个即插即用的模块，用于提高视觉-语言-动作(VLA)模型对图像损坏的鲁棒性，并在机器人基准测试中展示了显著的性能恢复。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PISA: Piecewise Sparse Attention Is Wiser for Efficient Diffusion Transformers",
+        "summary": "Diffusion Transformers are fundamental for video and image generation, but their efficiency is bottlenecked by the quadratic complexity of attention. While block sparse attention accelerates computation by attending only critical key-value blocks, it suffers from degradation at high sparsity by discarding context. In this work, we discover that attention scores of non-critical blocks exhibit distributional stability, allowing them to be approximated accurately and efficiently rather than discarded, which is essentially important for sparse attention design. Motivated by this key insight, we propose PISA, a training-free Piecewise Sparse Attention that covers the full attention span with sub-quadratic complexity. Unlike the conventional keep-or-drop paradigm that directly drop the non-critical block information, PISA introduces a novel exact-or-approximate strategy: it maintains exact computation for critical blocks while efficiently approximating the remainder through block-wise Taylor expansion. This design allows PISA to serve as a faithful proxy to full attention, effectively bridging the gap between speed and quality. Experimental results demonstrate that PISA achieves 1.91 times and 2.57 times speedups on Wan2.1-14B and Hunyuan-Video, respectively, while consistently maintaining the highest quality among sparse attention methods. Notably, even for image generation on FLUX, PISA achieves a 1.2 times acceleration without compromising visual quality. Code is available at: https://github.com/xie-lab-ml/piecewise-sparse-attention.",
+        "url": "http://arxiv.org/abs/2602.01077v1",
+        "published_date": "2026-02-01T07:47:06+00:00",
+        "updated_date": "2026-02-01T07:47:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haopeng Li",
+            "Shitong Shao",
+            "Wenliang Zhong",
+            "Zikai Zhou",
+            "Lichen Bai",
+            "Hui Xiong",
+            "Zeke Xie"
+        ],
+        "tldr": "This paper introduces PISA, a novel piecewise sparse attention mechanism for diffusion transformers that approximates non-critical attention blocks using Taylor expansion, achieving significant speedups in image and video generation while maintaining quality.",
+        "tldr_zh": "本文介绍了 PISA，一种新颖的分段稀疏注意力机制，用于扩散 Transformer。它使用泰勒展开来近似非关键注意力块，在图像和视频生成中实现了显著的加速，同时保持了质量。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DIAMOND: Directed Inference for Artifact Mitigation in Flow Matching Models",
+        "summary": "Despite impressive results from recent text-to-image models like FLUX, visual and anatomical artifacts remain a significant hurdle for practical and professional use. Existing methods for artifact reduction, typically work in a post-hoc manner, consequently failing to intervene effectively during the core image formation process. Notably, current techniques require problematic and invasive modifications to the model weights, or depend on a computationally expensive and time-consuming process of regional refinement. To address these limitations, we propose DIAMOND, a training-free method that applies trajectory correction to mitigate artifacts during inference. By reconstructing an estimate of the clean sample at every step of the generative trajectory, DIAMOND actively steers the generation process away from latent states that lead to artifacts. Furthermore, we extend the proposed method to standard Diffusion Models, demonstrating that DIAMOND provides a robust, zero-shot path to high-fidelity, artifact-free image synthesis without the need for additional training or weight modifications in modern generative architectures. Code is available at https://gmum.github.io/DIAMOND/",
+        "url": "http://arxiv.org/abs/2602.00883v1",
+        "published_date": "2026-01-31T20:08:46+00:00",
+        "updated_date": "2026-01-31T20:08:46+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Alicja Polowczyk",
+            "Agnieszka Polowczyk",
+            "Piotr Borycki",
+            "Joanna Waczyńska",
+            "Jacek Tabor",
+            "Przemysław Spurek"
+        ],
+        "tldr": "The paper introduces DIAMOND, a training-free inference method for Flow Matching and Diffusion Models that mitigates visual artifacts by actively steering the generative process away from artifact-prone latent states through trajectory correction.",
+        "tldr_zh": "本文介绍了一种名为DIAMOND的免训练推理方法，用于流程匹配和扩散模型，通过轨迹校正主动引导生成过程远离容易产生伪影的潜在状态，从而减轻视觉伪影。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Adaptive Visual Autoregressive Acceleration via Dual-Linkage Entropy Analysis",
+        "summary": "Visual AutoRegressive modeling (VAR) suffers from substantial computational cost due to the massive token count involved. Failing to account for the continuous evolution of modeling dynamics, existing VAR token reduction methods face three key limitations: heuristic stage partition, non-adaptive schedules, and limited acceleration scope, thereby leaving significant acceleration potential untapped. Since entropy variation intrinsically reflects the transition of predictive uncertainty, it offers a principled measure to capture modeling dynamics evolution. Therefore, we propose NOVA, a training-free token reduction acceleration framework for VAR models via entropy analysis. NOVA adaptively determines the acceleration activation scale during inference by online identifying the inflection point of scale entropy growth. Through scale-linkage and layer-linkage ratio adjustment, NOVA dynamically computes distinct token reduction ratios for each scale and layer, pruning low-entropy tokens while reusing the cache derived from the residuals at the prior scale to accelerate inference and maintain generation quality. Extensive experiments and analyses validate NOVA as a simple yet effective training-free acceleration framework.",
+        "url": "http://arxiv.org/abs/2602.01345v1",
+        "published_date": "2026-02-01T17:29:42+00:00",
+        "updated_date": "2026-02-01T17:29:42+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yu Zhang",
+            "Jingyi Liu",
+            "Feng Liu",
+            "Duoqian Miao",
+            "Qi Zhang",
+            "Kexue Fu",
+            "Changwei Wang",
+            "Longbing Cao"
+        ],
+        "tldr": "The paper introduces NOVA, a training-free token reduction framework for Visual AutoRegressive models that adaptively accelerates inference by analyzing entropy variation to dynamically prune low-entropy tokens while maintaining generation quality.",
+        "tldr_zh": "该论文介绍了一种名为NOVA的免训练视觉自回归模型token减少框架，通过分析熵变化自适应地加速推理，动态地修剪低熵token，同时保持生成质量。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 7,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Gradient-Aligned Calibration for Post-Training Quantization of Diffusion Models",
+        "summary": "Diffusion models have shown remarkable performance in image synthesis by progressively estimating a smooth transition from a Gaussian distribution of noise to a real image. Unfortunately, their practical deployment is limited by slow inference speed, high memory usage, and the computational demands of the noise estimation process. Post-training quantization (PTQ) emerges as a promising solution to accelerate sampling and reduce memory overhead for diffusion models. Existing PTQ methods for diffusion models typically apply uniform weights to calibration samples across timesteps, which is sub-optimal since data at different timesteps may contribute differently to the diffusion process. Additionally, due to varying activation distributions and gradients across timesteps, a uniform quantization approach is sub-optimal. Each timestep requires a different gradient direction for optimal quantization, and treating them equally can lead to conflicting gradients that degrade performance. In this paper, we propose a novel PTQ method that addresses these challenges by assigning appropriate weights to calibration samples. Specifically, our approach learns to assign optimal weights to calibration samples to align the quantized model's gradients across timesteps, facilitating the quantization process. Extensive experiments on CIFAR-10, LSUN-Bedrooms, and ImageNet demonstrate the superiority of our method compared to other PTQ methods for diffusion models.",
+        "url": "http://arxiv.org/abs/2602.01289v1",
+        "published_date": "2026-02-01T15:45:07+00:00",
+        "updated_date": "2026-02-01T15:45:07+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Dung Anh Hoang",
+            "Cuong Pham anh Trung Le",
+            "Jianfei Cai",
+            "Toan Do"
+        ],
+        "tldr": "This paper introduces a novel post-training quantization (PTQ) method for diffusion models that optimizes calibration sample weights across timesteps by aligning gradients, leading to improved quantization performance. This is achieved without needing to retrain the diffusion model.",
+        "tldr_zh": "本文提出了一种用于扩散模型的新型训练后量化 (PTQ) 方法，该方法通过对齐梯度来优化跨时间步的校准样本权重，从而提高量化性能。这是在不需要重新训练扩散模型的情况下实现的。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
