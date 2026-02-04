@@ -1,0 +1,279 @@
+[
+    {
+        "title": "Tiled Prompts: Overcoming Prompt Underspecification in Image and Video Super-Resolution",
+        "summary": "Text-conditioned diffusion models have advanced image and video super-resolution by using prompts as semantic priors, but modern super-resolution pipelines typically rely on latent tiling to scale to high resolutions, where a single global caption causes prompt underspecification. A coarse global prompt often misses localized details (prompt sparsity) and provides locally irrelevant guidance (prompt misguidance) that can be amplified by classifier-free guidance. We propose Tiled Prompts, a unified framework for image and video super-resolution that generates a tile-specific prompt for each latent tile and performs super-resolution under locally text-conditioned posteriors, providing high-information guidance that resolves prompt underspecification with minimal overhead. Experiments on high resolution real-world images and videos show consistent gains in perceptual quality and text alignment, while reducing hallucinations and tile-level artifacts relative to global-prompt baselines.",
+        "url": "http://arxiv.org/abs/2602.03342v1",
+        "published_date": "2026-02-03T10:09:27+00:00",
+        "updated_date": "2026-02-03T10:09:27+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Bryan Sangwoo Kim",
+            "Jonghyun Park",
+            "Jong Chul Ye"
+        ],
+        "tldr": "The paper introduces \"Tiled Prompts,\" a method to improve text-conditioned image and video super-resolution by generating tile-specific prompts, addressing prompt underspecification issues common in high-resolution scenarios and leading to improved perceptual quality and text alignment.",
+        "tldr_zh": "该论文介绍了“Tiled Prompts”方法，通过生成特定瓦片的提示来改进文本条件下的图像和视频超分辨率，解决了高分辨率场景中常见的提示欠规范问题，并提高了感知质量和文本对齐。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "SLIM-Diff: Shared Latent Image-Mask Diffusion with Lp loss for Data-Scarce Epilepsy FLAIR MRI",
+        "summary": "Focal cortical dysplasia (FCD) lesions in epilepsy FLAIR MRI are subtle and scarce, making joint image--mask generative modeling prone to instability and memorization. We propose SLIM-Diff, a compact joint diffusion model whose main contributions are (i) a single shared-bottleneck U-Net that enforces tight coupling between anatomy and lesion geometry from a 2-channel image+mask representation, and (ii) loss-geometry tuning via a tunable $L_p$ objective. As an internal baseline, we include the canonical DDPM-style objective ($ε$-prediction with $L_2$ loss) and isolate the effect of prediction parameterization and $L_p$ geometry under a matched setup. Experiments show that $x_0$-prediction is consistently the strongest choice for joint synthesis, and that fractional sub-quadratic penalties ($L_{1.5}$) improve image fidelity while $L_2$ better preserves lesion mask morphology. Our code and model weights are available in https://github.com/MarioPasc/slim-diff",
+        "url": "http://arxiv.org/abs/2602.03372v1",
+        "published_date": "2026-02-03T10:48:57+00:00",
+        "updated_date": "2026-02-03T10:48:57+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Mario Pascual-González",
+            "Ariadna Jiménez-Partinen",
+            "R. M. Luque-Baena",
+            "Fátima Nagib-Raya",
+            "Ezequiel López-Rubio"
+        ],
+        "tldr": "SLIM-Diff is a joint diffusion model for generating epilepsy FLAIR MRI images and lesion masks in data-scarce scenarios, using a shared-bottleneck U-Net and tunable Lp loss to improve image fidelity and lesion morphology.",
+        "tldr_zh": "SLIM-Diff 是一种联合扩散模型，用于在数据稀缺的情况下生成癫痫 FLAIR MRI 图像和病灶掩模，它使用共享瓶颈 U-Net 和可调 Lp 损失来提高图像保真度和病灶形态。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VIRAL: Visual In-Context Reasoning via Analogy in Diffusion Transformers",
+        "summary": "Replicating In-Context Learning (ICL) in computer vision remains challenging due to task heterogeneity. We propose \\textbf{VIRAL}, a framework that elicits visual reasoning from a pre-trained image editing model by formulating ICL as conditional generation via visual analogy ($x_s : x_t :: x_q : y_q$). We adapt a frozen Diffusion Transformer (DiT) using role-aware multi-image conditioning and introduce a Mixture-of-Experts LoRA to mitigate gradient interference across diverse tasks. Additionally, to bridge the gaps in current visual context datasets, we curate a large-scale dataset spanning perception, restoration, and editing. Experiments demonstrate that VIRAL outperforms existing methods, validating that a unified V-ICL paradigm can handle the majority of visual tasks, including open-domain editing. Our code is available at https://anonymous.4open.science/r/VIRAL-744A",
+        "url": "http://arxiv.org/abs/2602.03210v1",
+        "published_date": "2026-02-03T07:27:23+00:00",
+        "updated_date": "2026-02-03T07:27:23+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhiwen Li",
+            "Zhongjie Duan",
+            "Jinyan Ye",
+            "Cen Chen",
+            "Daoyuan Chen",
+            "Yaliang Li",
+            "Yingda Chen"
+        ],
+        "tldr": "The paper introduces VIRAL, a framework for visual in-context learning (V-ICL) using a Diffusion Transformer and visual analogy, achieving strong performance across various visual tasks including open-domain editing, aided by a newly curated large-scale dataset.",
+        "tldr_zh": "该论文介绍了VIRAL，一个使用扩散变换器和视觉类比的视觉上下文学习（V-ICL）框架，通过一个新构建的大规模数据集，在包括开放域编辑在内的各种视觉任务中实现了强大的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LSGQuant: Layer-Sensitivity Guided Quantization for One-Step Diffusion Real-World Video Super-Resolution",
+        "summary": "One-Step Diffusion Models have demonstrated promising capability and fast inference in video super-resolution (VSR) for real-world. Nevertheless, the substantial model size and high computational cost of Diffusion Transformers (DiTs) limit downstream applications. While low-bit quantization is a common approach for model compression, the effectiveness of quantized models is challenged by the high dynamic range of input latent and diverse layer behaviors. To deal with these challenges, we introduce LSGQuant, a layer-sensitivity guided quantizing approach for one-step diffusion-based real-world VSR. Our method incorporates a Dynamic Range Adaptive Quantizer (DRAQ) to fit video token activations. Furthermore, we estimate layer sensitivity and implement a Variance-Oriented Layer Training Strategy (VOLTS) by analyzing layer-wise statistics in calibration. We also introduce Quantization-Aware Optimization (QAO) to jointly refine the quantized branch and a retained high-precision branch. Extensive experiments demonstrate that our method has nearly performance to origin model with full-precision and significantly exceeds existing quantization techniques. Code is available at: https://github.com/zhengchen1999/LSGQuant.",
+        "url": "http://arxiv.org/abs/2602.03182v1",
+        "published_date": "2026-02-03T06:53:19+00:00",
+        "updated_date": "2026-02-03T06:53:19+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianxing Wu",
+            "Zheng Chen",
+            "Cirou Xu",
+            "Bowen Chai",
+            "Yong Guo",
+            "Yutong Liu",
+            "Linghe Kong",
+            "Yulun Zhang"
+        ],
+        "tldr": "This paper introduces LSGQuant, a layer-sensitivity guided quantization method for one-step diffusion-based real-world video super-resolution that achieves near full-precision performance with low-bit quantization.",
+        "tldr_zh": "本文介绍了LSGQuant，一种层敏感性引导的量化方法，用于基于一步扩散的真实世界视频超分辨率，该方法以低比特量化实现了接近全精度的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "HP-GAN: Harnessing pretrained networks for GAN improvement with FakeTwins and discriminator consistency",
+        "summary": "Generative Adversarial Networks (GANs) have made significant progress in enhancing the quality of image synthesis. Recent methods frequently leverage pretrained networks to calculate perceptual losses or utilize pretrained feature spaces. In this paper, we extend the capabilities of pretrained networks by incorporating innovative self-supervised learning techniques and enforcing consistency between discriminators during GAN training. Our proposed method, named HP-GAN, effectively exploits neural network priors through two primary strategies: FakeTwins and discriminator consistency. FakeTwins leverages pretrained networks as encoders to compute a self-supervised loss and applies this through the generated images to train the generator, thereby enabling the generation of more diverse and high quality images. Additionally, we introduce a consistency mechanism between discriminators that evaluate feature maps extracted from Convolutional Neural Network (CNN) and Vision Transformer (ViT) feature networks. Discriminator consistency promotes coherent learning among discriminators and enhances training robustness by aligning their assessments of image quality. Our extensive evaluation across seventeen datasets-including scenarios with large, small, and limited data, and covering a variety of image domains-demonstrates that HP-GAN consistently outperforms current state-of-the-art methods in terms of Fréchet Inception Distance (FID), achieving significant improvements in image diversity and quality. Code is available at: https://github.com/higun2/HP-GAN.",
+        "url": "http://arxiv.org/abs/2602.03039v1",
+        "published_date": "2026-02-03T03:05:45+00:00",
+        "updated_date": "2026-02-03T03:05:45+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Geonhui Son",
+            "Jeong Ryong Lee",
+            "Dosik Hwang"
+        ],
+        "tldr": "HP-GAN improves image generation quality and diversity by using pretrained networks for self-supervised learning with FakeTwins and enforcing consistency between CNN and ViT discriminators, achieving state-of-the-art FID scores across diverse datasets.",
+        "tldr_zh": "HP-GAN通过利用预训练网络，结合FakeTwins自监督学习以及强化CNN和ViT判别器之间的一致性，提升了图像生成的质量和多样性，并在多个数据集上实现了当前最优的FID分数。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UniReason 1.0: A Unified Reasoning Framework for World Knowledge Aligned Image Generation and Editing",
+        "summary": "Unified multimodal models often struggle with complex synthesis tasks that demand deep reasoning, and typically treat text-to-image generation and image editing as isolated capabilities rather than interconnected reasoning steps. To address this, we propose UniReason, a unified framework that harmonizes these two tasks through a dual reasoning paradigm. We formulate generation as world knowledge-enhanced planning to inject implicit constraints, and leverage editing capabilities for fine-grained visual refinement to further correct visual errors via self-reflection. This approach unifies generation and editing within a shared representation, mirroring the human cognitive process of planning followed by refinement. We support this framework by systematically constructing a large-scale reasoning-centric dataset (~300k samples) covering five major knowledge domains (e.g., cultural commonsense, physics, etc.) for planning, alongside an agent-generated corpus for visual self-correction. Extensive experiments demonstrate that UniReason achieves advanced performance on reasoning-intensive benchmarks such as WISE, KrisBench and UniREditBench, while maintaining superior general synthesis capabilities.",
+        "url": "http://arxiv.org/abs/2602.02437v1",
+        "published_date": "2026-02-02T18:34:35+00:00",
+        "updated_date": "2026-02-02T18:34:35+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Dianyi Wang",
+            "Chaofan Ma",
+            "Feng Han",
+            "Size Wu",
+            "Wei Song",
+            "Yibin Wang",
+            "Zhixiong Zhang",
+            "Tianhang Wang",
+            "Siyuan Wang",
+            "Zhongyu Wei",
+            "Jiaqi Wang"
+        ],
+        "tldr": "UniReason is a unified framework for image generation and editing that uses a dual reasoning paradigm (world knowledge-enhanced planning and visual refinement) and a large-scale reasoning-centric dataset to achieve state-of-the-art performance on reasoning-intensive benchmarks.",
+        "tldr_zh": "UniReason 是一个统一的图像生成和编辑框架，它使用双重推理范式（世界知识增强的规划和视觉细化）和一个大型的以推理为中心的数据集，在推理密集型基准测试中实现了最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Test-Time Conditioning with Representation-Aligned Visual Features",
+        "summary": "While representation alignment with self-supervised models has been shown to improve diffusion model training, its potential for enhancing inference-time conditioning remains largely unexplored. We introduce Representation-Aligned Guidance (REPA-G), a framework that leverages these aligned representations, with rich semantic properties, to enable test-time conditioning from features in generation. By optimizing a similarity objective (the potential) at inference, we steer the denoising process toward a conditioned representation extracted from a pre-trained feature extractor. Our method provides versatile control at multiple scales, ranging from fine-grained texture matching via single patches to broad semantic guidance using global image feature tokens. We further extend this to multi-concept composition, allowing for the faithful combination of distinct concepts. REPA-G operates entirely at inference time, offering a flexible and precise alternative to often ambiguous text prompts or coarse class labels. We theoretically justify how this guidance enables sampling from the potential-induced tilted distribution. Quantitative results on ImageNet and COCO demonstrate that our approach achieves high-quality, diverse generations. Code is available at https://github.com/valeoai/REPA-G.",
+        "url": "http://arxiv.org/abs/2602.03753v1",
+        "published_date": "2026-02-03T17:15:03+00:00",
+        "updated_date": "2026-02-03T17:15:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Nicolas Sereyjol-Garros",
+            "Ellington Kirby",
+            "Victor Letzelter",
+            "Victor Besnier",
+            "Nermin Samet"
+        ],
+        "tldr": "The paper introduces Representation-Aligned Guidance (REPA-G), a novel inference-time conditioning method for diffusion models using features from self-supervised models, enabling versatile and precise control over image generation without relying on text prompts.",
+        "tldr_zh": "该论文介绍了 Representation-Aligned Guidance (REPA-G)，一种新颖的推理时条件控制方法，它利用自监督模型中的特征来控制扩散模型，从而实现对图像生成的多功能和精确控制，而无需依赖文本提示。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Invisible Clean-Label Backdoor Attacks for Generative Data Augmentation",
+        "summary": "With the rapid advancement of image generative models, generative data augmentation has become an effective way to enrich training images, especially when only small-scale datasets are available. At the same time, in practical applications, generative data augmentation can be vulnerable to clean-label backdoor attacks, which aim to bypass human inspection. However, based on theoretical analysis and preliminary experiments, we observe that directly applying existing pixel-level clean-label backdoor attack methods (e.g., COMBAT) to generated images results in low attack success rates. This motivates us to move beyond pixel-level triggers and focus instead on the latent feature level. To this end, we propose InvLBA, an invisible clean-label backdoor attack method for generative data augmentation by latent perturbation. We theoretically prove that the generalization of the clean accuracy and attack success rates of InvLBA can be guaranteed. Experiments on multiple datasets show that our method improves the attack success rate by 46.43% on average, with almost no reduction in clean accuracy and high robustness against SOTA defense methods.",
+        "url": "http://arxiv.org/abs/2602.03316v1",
+        "published_date": "2026-02-03T09:46:37+00:00",
+        "updated_date": "2026-02-03T09:46:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ting Xiang",
+            "Jinhui Zhao",
+            "Changjian Chen",
+            "Zhuo Tang"
+        ],
+        "tldr": "The paper proposes InvLBA, a novel invisible clean-label backdoor attack method targeting generative data augmentation, which operates in the latent feature space to achieve higher attack success rates and robustness compared to existing pixel-level approaches.",
+        "tldr_zh": "该论文提出了一种名为InvLBA的新型隐形清洁标签后门攻击方法，针对生成数据增强，该方法在潜在特征空间中操作，与现有的像素级方法相比，实现了更高的攻击成功率和鲁棒性。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Spectral Evolution Search: Efficient Inference-Time Scaling for Reward-Aligned Image Generation",
+        "summary": "Inference-time scaling offers a versatile paradigm for aligning visual generative models with downstream objectives without parameter updates. However, existing approaches that optimize the high-dimensional initial noise suffer from severe inefficiency, as many search directions exert negligible influence on the final generation. We show that this inefficiency is closely related to a spectral bias in generative dynamics: model sensitivity to initial perturbations diminishes rapidly as frequency increases. Building on this insight, we propose Spectral Evolution Search (SES), a plug-and-play framework for initial noise optimization that executes gradient-free evolutionary search within a low-frequency subspace. Theoretically, we derive the Spectral Scaling Prediction from perturbation propagation dynamics, which explains the systematic differences in the impact of perturbations across frequencies. Extensive experiments demonstrate that SES significantly advances the Pareto frontier of generation quality versus computational cost, consistently outperforming strong baselines under equivalent budgets.",
+        "url": "http://arxiv.org/abs/2602.03208v1",
+        "published_date": "2026-02-03T07:19:39+00:00",
+        "updated_date": "2026-02-03T07:19:39+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jinyan Ye",
+            "Zhongjie Duan",
+            "Zhiwen Li",
+            "Cen Chen",
+            "Daoyuan Chen",
+            "Yaliang Li",
+            "Yingda Chen"
+        ],
+        "tldr": "The paper introduces Spectral Evolution Search (SES), a method for efficient inference-time optimization of initial noise in image generation by focusing on low-frequency subspaces, leading to improved generation quality and reduced computational cost.",
+        "tldr_zh": "该论文介绍了频谱进化搜索（SES），一种通过专注于低频子空间来有效优化图像生成中初始噪声的推理时间方法，从而提高生成质量并降低计算成本。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "BinaryDemoire: Moiré-Aware Binarization for Image Demoiréing",
+        "summary": "Image demoiréing aims to remove structured moiré artifacts in recaptured imagery, where degradations are highly frequency-dependent and vary across scales and directions. While recent deep networks achieve high-quality restoration, their full-precision designs remain costly for deployment. Binarization offers an extreme compression regime by quantizing both activations and weights to 1-bit. Yet, it has been rarely studied for demoiréing and performs poorly when naively applied. In this work, we propose BinaryDemoire, a binarized demoiréing framework that explicitly accommodates the frequency structure of moiré degradations. First, we introduce a moiré-aware binary gate (MABG) that extracts lightweight frequency descriptors together with activation statistics. It predicts channel-wise gating coefficients to condition the aggregation of binary convolution responses. Second, we design a shuffle-grouped residual adapter (SGRA) that performs structured sparse shortcut alignment. It further integrates interleaved mixing to promote information exchange across different channel partitions. Extensive experiments on four benchmarks demonstrate that the proposed BinaryDemoire surpasses current binarization methods. Code: https://github.com/zhengchen1999/BinaryDemoire.",
+        "url": "http://arxiv.org/abs/2602.03176v1",
+        "published_date": "2026-02-03T06:45:10+00:00",
+        "updated_date": "2026-02-03T06:45:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zheng Chen",
+            "Zhi Yang",
+            "Xiaoyang Liu",
+            "Weihang Zhang",
+            "Mengfan Wang",
+            "Yifan Fu",
+            "Linghe Kong",
+            "Yulun Zhang"
+        ],
+        "tldr": "This paper proposes BinaryDemoire, a binarized image demoiréing framework, using moiré-aware binary gates and shuffle-grouped residual adapters to achieve efficient and effective moiré artifact removal in resource-constrained settings.",
+        "tldr_zh": "本文提出了BinaryDemoire，一个二值化的图像去摩尔纹框架。该框架利用摩尔纹感知的二值门和shuffle分组的残差适配器，旨在资源受限的环境中实现高效且有效的摩尔纹伪影去除。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "ConsisDrive: Identity-Preserving Driving World Models for Video Generation by Instance Mask",
+        "summary": "Autonomous driving relies on robust models trained on large-scale, high-quality multi-view driving videos. Although world models provide a cost-effective solution for generating realistic driving data, they often suffer from identity drift, where the same object changes its appearance or category across frames due to the absence of instance-level temporal constraints. We introduce ConsisDrive, an identity-preserving driving world model designed to enforce temporal consistency at the instance level. Our framework incorporates two key components: (1) Instance-Masked Attention, which applies instance identity masks and trajectory masks within attention blocks to ensure that visual tokens interact only with their corresponding instance features across spatial and temporal dimensions, thereby preserving object identity consistency; and (2) Instance-Masked Loss, which adaptively emphasizes foreground regions with probabilistic instance masking, reducing background noise while maintaining overall scene fidelity. By integrating these mechanisms, ConsisDrive achieves state-of-the-art driving video generation quality and demonstrates significant improvements in downstream autonomous driving tasks on the nuScenes dataset. Our project page is https://shanpoyang654.github.io/ConsisDrive/page.html.",
+        "url": "http://arxiv.org/abs/2602.03213v1",
+        "published_date": "2026-02-03T07:28:44+00:00",
+        "updated_date": "2026-02-03T07:28:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhuoran Yang",
+            "Yanyong Zhang"
+        ],
+        "tldr": "ConsisDrive is a driving world model that generates more temporally consistent driving videos by using instance-masked attention and loss to prevent identity drift.",
+        "tldr_zh": "ConsisDrive是一个驾驶世界模型，它通过使用实例掩码的注意力和损失来防止身份漂移，从而生成时间上更一致的驾驶视频。",
+        "relevance_score": 5,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 6
+    }
+]
