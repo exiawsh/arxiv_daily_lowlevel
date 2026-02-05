@@ -1,0 +1,247 @@
+[
+    {
+        "title": "SparVAR: Exploring Sparsity in Visual AutoRegressive Modeling for Training-Free Acceleration",
+        "summary": "Visual AutoRegressive (VAR) modeling has garnered significant attention for its innovative next-scale prediction paradigm. However, mainstream VAR paradigms attend to all tokens across historical scales at each autoregressive step. As the next scale resolution grows, the computational complexity of attention increases quartically with resolution, causing substantial latency. Prior accelerations often skip high-resolution scales, which speeds up inference but discards high-frequency details and harms image quality. To address these problems, we present SparVAR, a training-free acceleration framework that exploits three properties of VAR attention: (i) strong attention sinks, (ii) cross-scale activation similarity, and (iii) pronounced locality. Specifically, we dynamically predict the sparse attention pattern of later high-resolution scales from a sparse decision scale, and construct scale self-similar sparse attention via an efficient index-mapping mechanism, enabling high-efficiency sparse attention computation at large scales. Furthermore, we propose cross-scale local sparse attention and implement an efficient block-wise sparse kernel, which achieves $\\mathbf{> 5\\times}$ faster forward speed than FlashAttention. Extensive experiments demonstrate that the proposed SparseVAR can reduce the generation time of an 8B model producing $1024\\times1024$ high-resolution images to the 1s, without skipping the last scales. Compared with the VAR baseline accelerated by FlashAttention, our method achieves a $\\mathbf{1.57\\times}$ speed-up while preserving almost all high-frequency details. When combined with existing scale-skipping strategies, SparseVAR attains up to a $\\mathbf{2.28\\times}$ acceleration, while maintaining competitive visual generation quality. Code is available at https://github.com/CAS-CLab/SparVAR.",
+        "url": "http://arxiv.org/abs/2602.04361v1",
+        "published_date": "2026-02-04T09:34:06+00:00",
+        "updated_date": "2026-02-04T09:34:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Zekun Li",
+            "Ning Wang",
+            "Tongxin Bai",
+            "Changwang Mei",
+            "Peisong Wang",
+            "Shuang Qiu",
+            "Jian Cheng"
+        ],
+        "tldr": "The paper introduces SparVAR, a training-free acceleration framework for Visual AutoRegressive modeling that leverages sparsity in attention mechanisms to significantly reduce computational cost while preserving image quality, achieving >5x speedup compared to FlashAttention.",
+        "tldr_zh": "该论文提出 SparVAR，一种视觉自回归模型的免训练加速框架，通过利用注意力机制中的稀疏性来显著降低计算成本，同时保持图像质量，与 FlashAttention 相比实现了超过 5 倍的加速。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Continuous Degradation Modeling via Latent Flow Matching for Real-World Super-Resolution",
+        "summary": "While deep learning-based super-resolution (SR) methods have shown impressive outcomes with synthetic degradation scenarios such as bicubic downsampling, they frequently struggle to perform well on real-world images that feature complex, nonlinear degradations like noise, blur, and compression artifacts. Recent efforts to address this issue have involved the painstaking compilation of real low-resolution (LR) and high-resolution (HR) image pairs, usually limited to several specific downscaling factors. To address these challenges, our work introduces a novel framework capable of synthesizing authentic LR images from a single HR image by leveraging the latent degradation space with flow matching. Our approach generates LR images with realistic artifacts at unseen degradation levels, which facilitates the creation of large-scale, real-world SR training datasets. Comprehensive quantitative and qualitative assessments verify that our synthetic LR images accurately replicate real-world degradations. Furthermore, both traditional and arbitrary-scale SR models trained using our datasets consistently yield much better HR outcomes.",
+        "url": "http://arxiv.org/abs/2602.04193v1",
+        "published_date": "2026-02-04T04:16:38+00:00",
+        "updated_date": "2026-02-04T04:16:38+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hyeonjae Kim",
+            "Dongjin Kim",
+            "Eugene Jin",
+            "Tae Hyun Kim"
+        ],
+        "tldr": "This paper proposes a novel framework using latent flow matching to synthesize realistic low-resolution images with diverse degradations from high-resolution images, improving real-world super-resolution training.",
+        "tldr_zh": "本文提出了一种新的框架，利用潜在流匹配从高分辨率图像合成具有多样退化的真实低分辨率图像，从而改进了真实世界的超分辨率训练。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "X2HDR: HDR Image Generation in a Perceptually Uniform Space",
+        "summary": "High-dynamic-range (HDR) formats and displays are becoming increasingly prevalent, yet state-of-the-art image generators (e.g., Stable Diffusion and FLUX) typically remain limited to low-dynamic-range (LDR) output due to the lack of large-scale HDR training data. In this work, we show that existing pretrained diffusion models can be easily adapted to HDR generation without retraining from scratch. A key challenge is that HDR images are natively represented in linear RGB, whose intensity and color statistics differ substantially from those of sRGB-encoded LDR images. This gap, however, can be effectively bridged by converting HDR inputs into perceptually uniform encodings (e.g., using PU21 or PQ). Empirically, we find that LDR-pretrained variational autoencoders (VAEs) reconstruct PU21-encoded HDR inputs with fidelity comparable to LDR data, whereas linear RGB inputs cause severe degradations. Motivated by this finding, we describe an efficient adaptation strategy that freezes the VAE and finetunes only the denoiser via low-rank adaptation in a perceptually uniform space. This results in a unified computational method that supports both text-to-HDR synthesis and single-image RAW-to-HDR reconstruction. Experiments demonstrate that our perceptually encoded adaptation consistently improves perceptual fidelity, text-image alignment, and effective dynamic range, relative to previous techniques.",
+        "url": "http://arxiv.org/abs/2602.04814v1",
+        "published_date": "2026-02-04T17:59:51+00:00",
+        "updated_date": "2026-02-04T17:59:51+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.GR"
+        ],
+        "authors": [
+            "Ronghuan Wu",
+            "Wanchao Su",
+            "Kede Ma",
+            "Jing Liao",
+            "Rafał K. Mantiuk"
+        ],
+        "tldr": "The paper presents X2HDR, a method for adapting LDR-pretrained diffusion models to HDR image generation by operating in a perceptually uniform space, achieving improved fidelity and dynamic range without retraining the entire model.",
+        "tldr_zh": "该论文提出了X2HDR，一种通过在感知均匀空间中操作，将LDR预训练的扩散模型适配于HDR图像生成的方法，无需从头开始重新训练整个模型，即可实现更高的保真度和动态范围。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Generative Modeling via Drifting",
+        "summary": "Generative modeling can be formulated as learning a mapping f such that its pushforward distribution matches the data distribution. The pushforward behavior can be carried out iteratively at inference time, for example in diffusion and flow-based models. In this paper, we propose a new paradigm called Drifting Models, which evolve the pushforward distribution during training and naturally admit one-step inference. We introduce a drifting field that governs the sample movement and achieves equilibrium when the distributions match. This leads to a training objective that allows the neural network optimizer to evolve the distribution. In experiments, our one-step generator achieves state-of-the-art results on ImageNet at 256 x 256 resolution, with an FID of 1.54 in latent space and 1.61 in pixel space. We hope that our work opens up new opportunities for high-quality one-step generation.",
+        "url": "http://arxiv.org/abs/2602.04770v1",
+        "published_date": "2026-02-04T17:06:49+00:00",
+        "updated_date": "2026-02-04T17:06:49+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "authors": [
+            "Mingyang Deng",
+            "He Li",
+            "Tianhong Li",
+            "Yilun Du",
+            "Kaiming He"
+        ],
+        "tldr": "The paper introduces \"Drifting Models\", a new generative modeling paradigm that evolves the pushforward distribution during training, allowing for high-quality, one-step image generation, achieving state-of-the-art FID scores on ImageNet at 256x256 resolution.",
+        "tldr_zh": "该论文介绍了一种新的生成模型范式“漂移模型”，它在训练过程中演化前推分布，从而实现高质量的单步图像生成，并在 256x256 分辨率的 ImageNet 上实现了最先进的 FID 分数。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Understanding Degradation with Vision Language Model",
+        "summary": "Understanding visual degradations is a critical yet challenging problem in computer vision. While recent Vision-Language Models (VLMs) excel at qualitative description, they often fall short in understanding the parametric physics underlying image degradations. In this work, we redefine degradation understanding as a hierarchical structured prediction task, necessitating the concurrent estimation of degradation types, parameter keys, and their continuous physical values. Although these sub-tasks operate in disparate spaces, we prove that they can be unified under one autoregressive next-token prediction paradigm, whose error is bounded by the value-space quantization grid. Building on this insight, we introduce DU-VLM, a multimodal chain-of-thought model trained with supervised fine-tuning and reinforcement learning using structured rewards. Furthermore, we show that DU-VLM can serve as a zero-shot controller for pre-trained diffusion models, enabling high-fidelity image restoration without fine-tuning the generative backbone. We also introduce \\textbf{DU-110k}, a large-scale dataset comprising 110,000 clean-degraded pairs with grounded physical annotations. Extensive experiments demonstrate that our approach significantly outperforms generalist baselines in both accuracy and robustness, exhibiting generalization to unseen distributions.",
+        "url": "http://arxiv.org/abs/2602.04565v1",
+        "published_date": "2026-02-04T13:51:15+00:00",
+        "updated_date": "2026-02-04T13:51:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Guanzhou Lan",
+            "Chenyi Liao",
+            "Yuqi Yang",
+            "Qianli Ma",
+            "Zhigang Wang",
+            "Dong Wang",
+            "Bin Zhao",
+            "Xuelong Li"
+        ],
+        "tldr": "This paper introduces DU-VLM, a Vision-Language Model for understanding and predicting image degradations, and demonstrates its use as a zero-shot controller for image restoration using pre-trained diffusion models, along with a new large-scale degradation dataset, DU-110k.",
+        "tldr_zh": "本文介绍了DU-VLM，一种用于理解和预测图像退化的视觉语言模型，并展示了它作为零样本控制器，利用预训练的扩散模型进行图像恢复的应用，同时还提供了一个新的大规模退化数据集DU-110k。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Nix and Fix: Targeting 1000x Compression of 3D Gaussian Splatting with Diffusion Models",
+        "summary": "3D Gaussian Splatting (3DGS) revolutionized novel view rendering. Instead of inferring from dense spatial points, as implicit representations do, 3DGS uses sparse Gaussians. This enables real-time performance but increases space requirements, hindering applications such as immersive communication. 3DGS compression emerged as a field aimed at alleviating this issue. While impressive progress has been made, at low rates, compression introduces artifacts that degrade visual quality significantly. We introduce NiFi, a method for extreme 3DGS compression through restoration via artifact-aware, diffusion-based one-step distillation. We show that our method achieves state-of-the-art perceptual quality at extremely low rates, down to 0.1 MB, and towards 1000x rate improvement over 3DGS at comparable perceptual performance. The code will be open-sourced upon acceptance.",
+        "url": "http://arxiv.org/abs/2602.04549v1",
+        "published_date": "2026-02-04T13:39:00+00:00",
+        "updated_date": "2026-02-04T13:39:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Cem Eteke",
+            "Enzo Tartaglione"
+        ],
+        "tldr": "This paper presents NiFi, a diffusion-based method for extreme compression of 3D Gaussian Splatting (3DGS) models, achieving state-of-the-art perceptual quality at very low bitrates, enabling near 1000x compression.",
+        "tldr_zh": "本文提出了一种基于扩散模型的NiFi方法，用于对3D高斯溅射(3DGS)模型进行极限压缩，在极低比特率下实现最先进的感知质量，从而实现接近1000倍的压缩。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LCUDiff: Latent Capacity Upgrade Diffusion for Faithful Human Body Restoration",
+        "summary": "Existing methods for restoring degraded human-centric images often struggle with insufficient fidelity, particularly in human body restoration (HBR). Recent diffusion-based restoration methods commonly adapt pre-trained text-to-image diffusion models, where the variational autoencoder (VAE) can significantly bottleneck restoration fidelity. We propose LCUDiff, a stable one-step framework that upgrades a pre-trained latent diffusion model from the 4-channel latent space to the 16-channel latent space. For VAE fine-tuning, channel splitting distillation (CSD) is used to keep the first four channels aligned with pre-trained priors while allocating the additional channels to effectively encode high-frequency details. We further design prior-preserving adaptation (PPA) to smoothly bridge the mismatch between 4-channel diffusion backbones and the higher-dimensional 16-channel latent. In addition, we propose a decoder router (DeR) for per-sample decoder routing using restoration-quality score annotations, which improves visual quality across diverse conditions. Experiments on synthetic and real-world datasets show competitive results with higher fidelity and fewer artifacts under mild degradations, while preserving one-step efficiency. The code and model will be at https://github.com/gobunu/LCUDiff.",
+        "url": "http://arxiv.org/abs/2602.04406v1",
+        "published_date": "2026-02-04T10:37:46+00:00",
+        "updated_date": "2026-02-04T10:37:46+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jue Gong",
+            "Zihan Zhou",
+            "Jingkai Wang",
+            "Shu Li",
+            "Libo Liu",
+            "Jianliang Lan",
+            "Yulun Zhang"
+        ],
+        "tldr": "LCUDiff improves human body restoration fidelity in diffusion models by upgrading the latent space dimensionality and introducing channel splitting distillation, prior-preserving adaptation, and a decoder router for enhanced detail encoding and quality.",
+        "tldr_zh": "LCUDiff 通过升级潜在空间维度，引入通道分离蒸馏、先验保持适应和解码器路由来提高扩散模型中人体恢复的保真度，从而增强细节编码和质量。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Progressive Checkerboards for Autoregressive Multiscale Image Generation",
+        "summary": "A key challenge in autoregressive image generation is to efficiently sample independent locations in parallel, while still modeling mutual dependencies with serial conditioning. Some recent works have addressed this by conditioning between scales in a multiscale pyramid. Others have looked at parallelizing samples in a single image using regular partitions or randomized orders. In this work we examine a flexible, fixed ordering based on progressive checkerboards for multiscale autoregressive image generation. Our ordering draws samples in parallel from evenly spaced regions at each scale, maintaining full balance in all levels of a quadtree subdivision at each step. This enables effective conditioning both between and within scales. Intriguingly, we find evidence that in our balanced setting, a wide range of scale-up factors lead to similar results, so long as the total number of serial steps is constant. On class-conditional ImageNet, our method achieves competitive performance compared to recent state-of-the-art autoregressive systems with like model capacity, using fewer sampling steps.",
+        "url": "http://arxiv.org/abs/2602.03811v1",
+        "published_date": "2026-02-03T18:15:27+00:00",
+        "updated_date": "2026-02-03T18:15:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "David Eigen"
+        ],
+        "tldr": "This paper introduces a novel 'progressive checkerboard' sampling method for parallelizing autoregressive image generation across multiple scales, achieving competitive performance on ImageNet with fewer sampling steps.",
+        "tldr_zh": "本文提出了一种新颖的“渐进式棋盘”采样方法，用于在多个尺度上并行化自回归图像生成，并在ImageNet上以更少的采样步骤实现了具有竞争力的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "An Improved Boosted DC Algorithm for Nonsmooth Functions with Applications in Image Recovery",
+        "summary": "We propose a new approach to perform the boosted difference of convex functions algorithm (BDCA) on non-smooth and non-convex problems involving the difference of convex (DC) functions. The recently proposed BDCA uses an extrapolation step from the point computed by the classical DC algorithm (DCA) via a line search procedure in a descent direction to get an additional decrease of the objective function and accelerate the convergence of DCA. However, when the first function in DC decomposition is non-smooth, the direction computed by BDCA can be ascent and a monotone line search cannot be performed. In this work, we proposed a monotone improved boosted difference of convex functions algorithm (IBDCA) for certain types of non-smooth DC programs, namely those that can be formulated as the difference of a possibly non-smooth function and a smooth one. We show that any cluster point of the sequence generated by IBDCA is a critical point of the problem under consideration and that the corresponding objective value is monotonically decreasing and convergent. We also present the global convergence and the convergent rate under the Kurdyka-Lojasiewicz property. The applications of IBDCA in image recovery show the effectiveness of our proposed method. The corresponding numerical experiments demonstrate that our IBDCA outperforms DCA and other state-of-the-art DC methods in both computational time and number of iterations.",
+        "url": "http://arxiv.org/abs/2602.04237v1",
+        "published_date": "2026-02-04T05:54:28+00:00",
+        "updated_date": "2026-02-04T05:54:28+00:00",
+        "categories": [
+            "math.OC",
+            "cs.CV"
+        ],
+        "authors": [
+            "ZeYu Li",
+            "Te Qi",
+            "TieYong Zeng"
+        ],
+        "tldr": "The paper introduces an improved boosted difference of convex functions algorithm (IBDCA) for non-smooth DC programs, demonstrating its effectiveness in image recovery through numerical experiments and showing its outperformance compared to existing DC methods.",
+        "tldr_zh": "该论文提出了一种改进的 boosted 差分凸函数算法（IBDCA），用于解决非光滑 DC 程序问题，并通过数值实验证明了其在图像恢复中的有效性，并优于现有的 DC 方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Artifact Removal and Image Restoration in AFM:A Structured Mask-Guided Directional Inpainting Approach",
+        "summary": "Atomic Force Microscopy (AFM) enables high-resolution surface imaging at the nanoscale, yet the output is often degraded by artifacts introduced by environmental noise, scanning imperfections, and tip-sample interactions. To address this challenge, a lightweight and fully automated framework for artifact detection and restoration in AFM image analysis is presented. The pipeline begins with a classification model that determines whether an AFM image contains artifacts. If necessary, a lightweight semantic segmentation network, custom-designed and trained on AFM data, is applied to generate precise artifact masks. These masks are adaptively expanded based on their structural orientation and then inpainted using a directional neighbor-based interpolation strategy to preserve 3D surface continuity. A localized Gaussian smoothing operation is then applied for seamless restoration. The system is integrated into a user-friendly GUI that supports real-time parameter adjustments and batch processing. Experimental results demonstrate the effective artifact removal while preserving nanoscale structural details, providing a robust, geometry-aware solution for high-fidelity AFM data interpretation.",
+        "url": "http://arxiv.org/abs/2602.04051v1",
+        "published_date": "2026-02-03T22:37:22+00:00",
+        "updated_date": "2026-02-03T22:37:22+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Juntao Zhang",
+            "Angona Biswas",
+            "Jaydeep Rade",
+            "Charchit Shukla",
+            "Juan Ren",
+            "Anwesha Sarkar",
+            "Adarsh Krishnamurthy",
+            "Aditya Balu"
+        ],
+        "tldr": "This paper presents an automated artifact removal pipeline for Atomic Force Microscopy (AFM) images, using semantic segmentation and directional inpainting to preserve nanoscale details. The system includes a GUI for real-time parameter adjustment and batch processing.",
+        "tldr_zh": "本文提出了一种用于原子力显微镜(AFM)图像的自动伪影去除流程，该流程使用语义分割和方向性修复来保留纳米尺度细节。该系统包括一个GUI，用于实时参数调整和批量处理。",
+        "relevance_score": 6,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
