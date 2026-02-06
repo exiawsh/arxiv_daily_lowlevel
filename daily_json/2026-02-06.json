@@ -1,0 +1,122 @@
+[
+    {
+        "title": "Shiva-DiT: Residual-Based Differentiable Top-$k$ Selection for Efficient Diffusion Transformers",
+        "summary": "Diffusion Transformers (DiTs) incur prohibitive computational costs due to the quadratic scaling of self-attention. Existing pruning methods fail to simultaneously satisfy differentiability, efficiency, and the strict static budgets required for hardware overhead. To address this, we propose Shiva-DiT, which effectively reconciles these conflicting requirements via Residual-Based Differentiable Top-$k$ Selection. By leveraging a residual-aware straight-through estimator, our method enforces deterministic token counts for static compilation while preserving end-to-end learnability through residual gradient estimation. Furthermore, we introduce a Context-Aware Router and Adaptive Ratio Policy to autonomously learn an adaptive pruning schedule. Experiments on mainstream models, including SD3.5, demonstrate that Shiva-DiT establishes a new Pareto frontier, achieving a 1.54$\\times$ wall-clock speedup with superior fidelity compared to existing baselines, effectively eliminating ragged tensor overheads.",
+        "url": "http://arxiv.org/abs/2602.05605v1",
+        "published_date": "2026-02-05T12:42:22+00:00",
+        "updated_date": "2026-02-05T12:42:22+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiaji Zhang",
+            "Hailiang Zhao",
+            "Guoxuan Zhu",
+            "Ruichao Sun",
+            "Jiaju Wu",
+            "Xinkui Zhao",
+            "Hanlin Tang",
+            "Weiyi Lu",
+            "Kan Liu",
+            "Tao Lan",
+            "Lin Qu",
+            "Shuiguang Deng"
+        ],
+        "tldr": "Shiva-DiT introduces a differentiable top-k selection method for efficient Diffusion Transformers, achieving significant speedups and improved fidelity by addressing the limitations of existing pruning techniques in terms of differentiability, efficiency, and hardware compatibility.",
+        "tldr_zh": "Shiva-DiT 提出了一种用于高效扩散 Transformer 的可微 Top-k 选择方法，通过解决现有剪枝技术在可微性、效率和硬件兼容性方面的局限性，实现了显著的加速和改进的保真度。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SSG: Scaled Spatial Guidance for Multi-Scale Visual Autoregressive Generation",
+        "summary": "Visual autoregressive (VAR) models generate images through next-scale prediction, naturally achieving coarse-to-fine, fast, high-fidelity synthesis mirroring human perception. In practice, this hierarchy can drift at inference time, as limited capacity and accumulated error cause the model to deviate from its coarse-to-fine nature. We revisit this limitation from an information-theoretic perspective and deduce that ensuring each scale contributes high-frequency content not explained by earlier scales mitigates the train-inference discrepancy. With this insight, we propose Scaled Spatial Guidance (SSG), training-free, inference-time guidance that steers generation toward the intended hierarchy while maintaining global coherence. SSG emphasizes target high-frequency signals, defined as the semantic residual, isolated from a coarser prior. To obtain this prior, we leverage a principled frequency-domain procedure, Discrete Spatial Enhancement (DSE), which is devised to sharpen and better isolate the semantic residual through frequency-aware construction. SSG applies broadly across VAR models leveraging discrete visual tokens, regardless of tokenization design or conditioning modality. Experiments demonstrate SSG yields consistent gains in fidelity and diversity while preserving low latency, revealing untapped efficiency in coarse-to-fine image generation. Code is available at https://github.com/Youngwoo-git/SSG.",
+        "url": "http://arxiv.org/abs/2602.05534v1",
+        "published_date": "2026-02-05T10:48:58+00:00",
+        "updated_date": "2026-02-05T10:48:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Youngwoo Shin",
+            "Jiwan Hur",
+            "Junmo Kim"
+        ],
+        "tldr": "The paper introduces Scaled Spatial Guidance (SSG), a training-free, inference-time method to improve the fidelity and diversity of visual autoregressive image generation by ensuring each scale contributes unique high-frequency content, addressing train-inference discrepancies.",
+        "tldr_zh": "该论文介绍了一种名为Scaled Spatial Guidance (SSG)的无需训练的推理时方法，通过确保每个尺度贡献独特的高频内容来提高视觉自回归图像生成的保真度和多样性，从而解决了训练-推理差异。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LOBSTgER-enhance: an underwater image enhancement pipeline",
+        "summary": "Underwater photography presents significant inherent challenges including reduced contrast, spatial blur, and wavelength-dependent color distortions. These effects can obscure the vibrancy of marine life and awareness photographers in particular are often challenged with heavy post-processing pipelines to correct for these distortions.\n  We develop an image-to-image pipeline that learns to reverse underwater degradations by introducing a synthetic corruption pipeline and learning to reverse its effects with diffusion-based generation. Training and evaluation are performed on a small high-quality dataset of awareness photography images by Keith Ellenbogen. The proposed methodology achieves high perceptual consistency and strong generalization in synthesizing 512x768 images using a model of ~11M parameters after training from scratch on ~2.5k images.",
+        "url": "http://arxiv.org/abs/2602.05163v1",
+        "published_date": "2026-02-05T00:29:04+00:00",
+        "updated_date": "2026-02-05T00:29:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Andreas Mentzelopoulos",
+            "Keith Ellenbogen"
+        ],
+        "tldr": "The paper introduces an image-to-image pipeline using diffusion models to reverse underwater image degradations, trained on a small dataset of awareness photography. It claims high perceptual consistency and generalization.",
+        "tldr_zh": "该论文介绍了一种使用扩散模型的图像到图像流水线，用于逆转水下图像的退化，并在一个小型的意识摄影数据集上进行训练。 该方法声称具有高感知一致性和泛化能力。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Laminating Representation Autoencoders for Efficient Diffusion",
+        "summary": "Recent work has shown that diffusion models can generate high-quality images by operating directly on SSL patch features rather than pixel-space latents. However, the dense patch grids from encoders like DINOv2 contain significant redundancy, making diffusion needlessly expensive. We introduce FlatDINO, a variational autoencoder that compresses this representation into a one-dimensional sequence of just 32 continuous tokens -an 8x reduction in sequence length and 48x compression in total dimensionality. On ImageNet 256x256, a DiT-XL trained on FlatDINO latents achieves a gFID of 1.80 with classifier-free guidance while requiring 8x fewer FLOPs per forward pass and up to 4.5x fewer FLOPs per training step compared to diffusion on uncompressed DINOv2 features. These are preliminary results and this work is in progress.",
+        "url": "http://arxiv.org/abs/2602.04873v1",
+        "published_date": "2026-02-04T18:57:33+00:00",
+        "updated_date": "2026-02-04T18:57:33+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ramón Calvo-González",
+            "François Fleuret"
+        ],
+        "tldr": "The paper introduces FlatDINO, a variational autoencoder that compresses DINOv2 patch features for efficient diffusion, achieving significant FLOPs reduction while maintaining high image quality on ImageNet.",
+        "tldr_zh": "该论文介绍了FlatDINO，一种变分自编码器，可以压缩DINOv2 patch特征以实现高效扩散，在ImageNet上保持高质量图像的同时显著减少FLOPs。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LD-SLRO: Latent Diffusion Structured Light for 3-D Reconstruction of Highly Reflective Objects",
+        "summary": "Fringe projection profilometry-based 3-D reconstruction of objects with high reflectivity and low surface roughness remains a significant challenge. When measuring such glossy surfaces, specular reflection and indirect illumination often lead to severe distortion or loss of the projected fringe patterns. To address these issues, we propose a latent diffusion-based structured light for reflective objects (LD-SLRO). Phase-shifted fringe images captured from highly reflective surfaces are first encoded to extract latent representations that capture surface reflectance characteristics. These latent features are then used as conditional inputs to a latent diffusion model, which probabilistically suppresses reflection-induced artifacts and recover lost fringe information, yielding high-quality fringe images. The proposed components, including the specular reflection encoder, time-variant channel affine layer, and attention modules, further improve fringe restoration quality. In addition, LD-SLRO provides high flexibility in configuring the input and output fringe sets. Experimental results demonstrate that the proposed method improves both fringe quality and 3-D reconstruction accuracy over state-of-the-art methods, reducing the average root-mean-squared error from 1.8176 mm to 0.9619 mm.",
+        "url": "http://arxiv.org/abs/2602.05434v1",
+        "published_date": "2026-02-05T08:24:38+00:00",
+        "updated_date": "2026-02-05T08:24:38+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sanghoon Jeon",
+            "Gihyun Jung",
+            "Suhyeon Ka",
+            "Jae-Sang Hyun"
+        ],
+        "tldr": "The paper introduces LD-SLRO, a latent diffusion model-based approach for restoring fringe patterns in 3D reconstruction of highly reflective objects, demonstrating improved accuracy compared to state-of-the-art methods.",
+        "tldr_zh": "该论文介绍了LD-SLRO，一种基于潜在扩散模型的结构光方法，用于恢复高反射物体的三维重建中的条纹图案，与现有技术相比，精度更高。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

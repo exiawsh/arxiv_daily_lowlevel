@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - February 02, 2026</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - February 06, 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>February 02, 2026</p>
+            <p>February 06, 2026</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Q-DiT4SR: Exploration of Detail-Preserving Diffusion Transformer Quantization for Real-World Image Super-Resolution</h2>
+            <h2 class="paper-title">Shiva-DiT: Residual-Based Differentiable Top-$k$ Selection for Efficient Diffusion Transformers</h2>
             
-            <p class="paper-summary">Recently, Diffusion Transformers (DiTs) have emerged in Real-World Image Super-Resolution (Real-ISR) to generate high-quality textures, yet their heavy inference burden hinders real-world deployment. While Post-Training Quantization (PTQ) is a promising solution for acceleration, existing methods in super-resolution mostly focus on U-Net architectures, whereas generic DiT quantization is typically designed for text-to-image tasks. Directly applying these methods to DiT-based super-resolution models leads to severe degradation of local textures. Therefore, we propose Q-DiT4SR, the first PTQ framework specifically tailored for DiT-based Real-ISR. We propose H-SVD, a hierarchical SVD that integrates a global low-rank branch with a local block-wise rank-1 branch under a matched parameter budget. We further propose Variance-aware Spatio-Temporal Mixed Precision: VaSMP allocates cross-layer weight bit-widths in a data-free manner based on rate-distortion theory, while VaTMP schedules intra-layer activation precision across diffusion timesteps via dynamic programming (DP) with minimal calibration. Experiments on multiple real-world datasets demonstrate that our Q-DiT4SR achieves SOTA performance under both W4A6 and W4A4 settings. Notably, the W4A4 quantization configuration reduces model size by 5.8$\times$ and computational operations by over 60$\times$. Our code and models will be available at https://github.com/xunzhang1128/Q-DiT4SR.</p>
+            <p class="paper-summary">Diffusion Transformers (DiTs) incur prohibitive computational costs due to the quadratic scaling of self-attention. Existing pruning methods fail to simultaneously satisfy differentiability, efficiency, and the strict static budgets required for hardware overhead. To address this, we propose Shiva-DiT, which effectively reconciles these conflicting requirements via Residual-Based Differentiable Top-$k$ Selection. By leveraging a residual-aware straight-through estimator, our method enforces deterministic token counts for static compilation while preserving end-to-end learnability through residual gradient estimation. Furthermore, we introduce a Context-Aware Router and Adaptive Ratio Policy to autonomously learn an adaptive pruning schedule. Experiments on mainstream models, including SD3.5, demonstrate that Shiva-DiT establishes a new Pareto frontier, achieving a 1.54$\times$ wall-clock speedup with superior fidelity compared to existing baselines, effectively eliminating ragged tensor overheads.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Q-DiT4SR, a post-training quantization framework specifically designed for Diffusion Transformer-based Real-World Image Super-Resolution, achieving state-of-the-art performance with significant model size and computational operation reductions.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: Shiva-DiT introduces a differentiable top-k selection method for efficient Diffusion Transformers, achieving significant speedups and improved fidelity by addressing the limitations of existing pruning techniques in terms of differentiability, efficiency, and hardware compatibility.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了Q-DiT4SR，一个专门为基于扩散Transformer的真实世界图像超分辨率设计的训练后量化框架，在显著减少模型大小和计算量的同时，实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: Shiva-DiT 提出了一种用于高效扩散 Transformer 的可微 Top-k 选择方法，通过解决现有剪枝技术在可微性、效率和硬件兼容性方面的局限性，实现了显著的加速和改进的保真度。</p>
             
 
             
@@ -232,8 +232,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -293,11 +293,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.01273v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.05605v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xun Zhang, Kaicheng Yang, Hongliang Lu, Haotong Qin, Yong Guo, Yulun Zhang</p>
+            <p class="paper-authors">Authors: Jiaji Zhang, Hailiang Zhao, Guoxuan Zhu, Ruichao Sun, Jiaju Wu, Xinkui Zhao, Hanlin Tang, Weiyi Lu, Kan Liu, Tao Lan, Lin Qu, Shuiguang Deng</p>
             
         </motion.div>
         
@@ -309,14 +309,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Improving Robustness of Vision-Language-Action Models by Restoring Corrupted Visual Inputs</h2>
+            <h2 class="paper-title">SSG: Scaled Spatial Guidance for Multi-Scale Visual Autoregressive Generation</h2>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) models have emerged as a dominant paradigm for generalist robotic manipulation, unifying perception and control within a single end-to-end architecture. However, despite their success in controlled environments, reliable real-world deployment is severely hindered by their fragility to visual disturbances. While existing literature extensively addresses physical occlusions caused by scene geometry, a critical mode remains largely unexplored: image corruptions. These sensor-level artifacts, ranging from electronic noise and dead pixels to lens contaminants, directly compromise the integrity of the visual signal prior to interpretation. In this work, we quantify this vulnerability, demonstrating that state-of-the-art VLAs such as $π_{0.5}$ and SmolVLA, suffer catastrophic performance degradation, dropping from 90\% success rates to as low as 2\%, under common signal artifacts. To mitigate this, we introduce the Corruption Restoration Transformer (CRT), a plug-and-play and model-agnostic vision transformer designed to immunize VLA models against sensor disturbances. Leveraging an adversarial training objective, CRT restores clean observations from corrupted inputs without requiring computationally expensive fine-tuning of the underlying model. Extensive experiments across the LIBERO and Meta-World benchmarks demonstrate that CRT effectively recovers lost performance, enabling VLAs to maintain near-baseline success rates, even under severe visual corruption.</p>
+            <p class="paper-summary">Visual autoregressive (VAR) models generate images through next-scale prediction, naturally achieving coarse-to-fine, fast, high-fidelity synthesis mirroring human perception. In practice, this hierarchy can drift at inference time, as limited capacity and accumulated error cause the model to deviate from its coarse-to-fine nature. We revisit this limitation from an information-theoretic perspective and deduce that ensuring each scale contributes high-frequency content not explained by earlier scales mitigates the train-inference discrepancy. With this insight, we propose Scaled Spatial Guidance (SSG), training-free, inference-time guidance that steers generation toward the intended hierarchy while maintaining global coherence. SSG emphasizes target high-frequency signals, defined as the semantic residual, isolated from a coarser prior. To obtain this prior, we leverage a principled frequency-domain procedure, Discrete Spatial Enhancement (DSE), which is devised to sharpen and better isolate the semantic residual through frequency-aware construction. SSG applies broadly across VAR models leveraging discrete visual tokens, regardless of tokenization design or conditioning modality. Experiments demonstrate SSG yields consistent gains in fidelity and diversity while preserving low latency, revealing untapped efficiency in coarse-to-fine image generation. Code is available at https://github.com/Youngwoo-git/SSG.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces the Corruption Restoration Transformer (CRT), a plug-and-play module to improve the robustness of Vision-Language-Action (VLA) models against image corruptions, demonstrating significant performance recovery in robotics benchmarks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Scaled Spatial Guidance (SSG), a training-free, inference-time method to improve the fidelity and diversity of visual autoregressive image generation by ensuring each scale contributes unique high-frequency content, addressing train-inference discrepancies.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了Corruption Restoration Transformer (CRT)，一个即插即用的模块，用于提高视觉-语言-动作(VLA)模型对图像损坏的鲁棒性，并在机器人基准测试中展示了显著的性能恢复。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为Scaled Spatial Guidance (SSG)的无需训练的推理时方法，通过确保每个尺度贡献独特的高频内容来提高视觉自回归图像生成的保真度和多样性，从而解决了训练-推理差异。</p>
             
 
             
@@ -326,8 +326,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -350,8 +350,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -387,11 +387,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.01158v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.05534v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Daniel Yezid Guarnizo Orjuela, Leonardo Scappatura, Veronica Di Gennaro, Riccardo Andrea Izzo, Gianluca Bardaro, Matteo Matteucci</p>
+            <p class="paper-authors">Authors: Youngwoo Shin, Jiwan Hur, Junmo Kim</p>
             
         </motion.div>
         
@@ -403,14 +403,15 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">PISA: Piecewise Sparse Attention Is Wiser for Efficient Diffusion Transformers</h2>
+            <h2 class="paper-title">LOBSTgER-enhance: an underwater image enhancement pipeline</h2>
             
-            <p class="paper-summary">Diffusion Transformers are fundamental for video and image generation, but their efficiency is bottlenecked by the quadratic complexity of attention. While block sparse attention accelerates computation by attending only critical key-value blocks, it suffers from degradation at high sparsity by discarding context. In this work, we discover that attention scores of non-critical blocks exhibit distributional stability, allowing them to be approximated accurately and efficiently rather than discarded, which is essentially important for sparse attention design. Motivated by this key insight, we propose PISA, a training-free Piecewise Sparse Attention that covers the full attention span with sub-quadratic complexity. Unlike the conventional keep-or-drop paradigm that directly drop the non-critical block information, PISA introduces a novel exact-or-approximate strategy: it maintains exact computation for critical blocks while efficiently approximating the remainder through block-wise Taylor expansion. This design allows PISA to serve as a faithful proxy to full attention, effectively bridging the gap between speed and quality. Experimental results demonstrate that PISA achieves 1.91 times and 2.57 times speedups on Wan2.1-14B and Hunyuan-Video, respectively, while consistently maintaining the highest quality among sparse attention methods. Notably, even for image generation on FLUX, PISA achieves a 1.2 times acceleration without compromising visual quality. Code is available at: https://github.com/xie-lab-ml/piecewise-sparse-attention.</p>
+            <p class="paper-summary">Underwater photography presents significant inherent challenges including reduced contrast, spatial blur, and wavelength-dependent color distortions. These effects can obscure the vibrancy of marine life and awareness photographers in particular are often challenged with heavy post-processing pipelines to correct for these distortions.
+  We develop an image-to-image pipeline that learns to reverse underwater degradations by introducing a synthetic corruption pipeline and learning to reverse its effects with diffusion-based generation. Training and evaluation are performed on a small high-quality dataset of awareness photography images by Keith Ellenbogen. The proposed methodology achieves high perceptual consistency and strong generalization in synthesizing 512x768 images using a model of ~11M parameters after training from scratch on ~2.5k images.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces PISA, a novel piecewise sparse attention mechanism for diffusion transformers that approximates non-critical attention blocks using Taylor expansion, achieving significant speedups in image and video generation while maintaining quality.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces an image-to-image pipeline using diffusion models to reverse underwater image degradations, trained on a small dataset of awareness photography. It claims high perceptual consistency and generalization.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了 PISA，一种新颖的分段稀疏注意力机制，用于扩散 Transformer。它使用泰勒展开来近似非关键注意力块，在图像和视频生成中实现了显著的加速，同时保持了质量。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种使用扩散模型的图像到图像流水线，用于逆转水下图像的退化，并在一个小型的意识摄影数据集上进行训练。 该方法声称具有高感知一致性和泛化能力。</p>
             
 
             
@@ -428,8 +429,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -444,8 +445,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -481,11 +482,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.01077v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.05163v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Haopeng Li, Shitong Shao, Wenliang Zhong, Zikai Zhou, Lichen Bai, Hui Xiong, Zeke Xie</p>
+            <p class="paper-authors">Authors: Andreas Mentzelopoulos, Keith Ellenbogen</p>
             
         </motion.div>
         
@@ -497,14 +498,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DIAMOND: Directed Inference for Artifact Mitigation in Flow Matching Models</h2>
+            <h2 class="paper-title">Laminating Representation Autoencoders for Efficient Diffusion</h2>
             
-            <p class="paper-summary">Despite impressive results from recent text-to-image models like FLUX, visual and anatomical artifacts remain a significant hurdle for practical and professional use. Existing methods for artifact reduction, typically work in a post-hoc manner, consequently failing to intervene effectively during the core image formation process. Notably, current techniques require problematic and invasive modifications to the model weights, or depend on a computationally expensive and time-consuming process of regional refinement. To address these limitations, we propose DIAMOND, a training-free method that applies trajectory correction to mitigate artifacts during inference. By reconstructing an estimate of the clean sample at every step of the generative trajectory, DIAMOND actively steers the generation process away from latent states that lead to artifacts. Furthermore, we extend the proposed method to standard Diffusion Models, demonstrating that DIAMOND provides a robust, zero-shot path to high-fidelity, artifact-free image synthesis without the need for additional training or weight modifications in modern generative architectures. Code is available at https://gmum.github.io/DIAMOND/</p>
+            <p class="paper-summary">Recent work has shown that diffusion models can generate high-quality images by operating directly on SSL patch features rather than pixel-space latents. However, the dense patch grids from encoders like DINOv2 contain significant redundancy, making diffusion needlessly expensive. We introduce FlatDINO, a variational autoencoder that compresses this representation into a one-dimensional sequence of just 32 continuous tokens -an 8x reduction in sequence length and 48x compression in total dimensionality. On ImageNet 256x256, a DiT-XL trained on FlatDINO latents achieves a gFID of 1.80 with classifier-free guidance while requiring 8x fewer FLOPs per forward pass and up to 4.5x fewer FLOPs per training step compared to diffusion on uncompressed DINOv2 features. These are preliminary results and this work is in progress.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DIAMOND, a training-free inference method for Flow Matching and Diffusion Models that mitigates visual artifacts by actively steering the generative process away from artifact-prone latent states through trajectory correction.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces FlatDINO, a variational autoencoder that compresses DINOv2 patch features for efficient diffusion, achieving significant FLOPs reduction while maintaining high image quality on ImageNet.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为DIAMOND的免训练推理方法，用于流程匹配和扩散模型，通过轨迹校正主动引导生成过程远离容易产生伪影的潜在状态，从而减轻视觉伪影。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了FlatDINO，一种变分自编码器，可以压缩DINOv2 patch特征以实现高效扩散，在ImageNet上保持高质量图像的同时显著减少FLOPs。</p>
             
 
             
@@ -530,8 +531,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -575,11 +576,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.00883v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.04873v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Alicja Polowczyk, Agnieszka Polowczyk, Piotr Borycki, Joanna Waczyńska, Jacek Tabor, Przemysław Spurek</p>
+            <p class="paper-authors">Authors: Ramón Calvo-González, François Fleuret</p>
             
         </motion.div>
         
@@ -591,108 +592,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Adaptive Visual Autoregressive Acceleration via Dual-Linkage Entropy Analysis</h2>
+            <h2 class="paper-title">LD-SLRO: Latent Diffusion Structured Light for 3-D Reconstruction of Highly Reflective Objects</h2>
             
-            <p class="paper-summary">Visual AutoRegressive modeling (VAR) suffers from substantial computational cost due to the massive token count involved. Failing to account for the continuous evolution of modeling dynamics, existing VAR token reduction methods face three key limitations: heuristic stage partition, non-adaptive schedules, and limited acceleration scope, thereby leaving significant acceleration potential untapped. Since entropy variation intrinsically reflects the transition of predictive uncertainty, it offers a principled measure to capture modeling dynamics evolution. Therefore, we propose NOVA, a training-free token reduction acceleration framework for VAR models via entropy analysis. NOVA adaptively determines the acceleration activation scale during inference by online identifying the inflection point of scale entropy growth. Through scale-linkage and layer-linkage ratio adjustment, NOVA dynamically computes distinct token reduction ratios for each scale and layer, pruning low-entropy tokens while reusing the cache derived from the residuals at the prior scale to accelerate inference and maintain generation quality. Extensive experiments and analyses validate NOVA as a simple yet effective training-free acceleration framework.</p>
+            <p class="paper-summary">Fringe projection profilometry-based 3-D reconstruction of objects with high reflectivity and low surface roughness remains a significant challenge. When measuring such glossy surfaces, specular reflection and indirect illumination often lead to severe distortion or loss of the projected fringe patterns. To address these issues, we propose a latent diffusion-based structured light for reflective objects (LD-SLRO). Phase-shifted fringe images captured from highly reflective surfaces are first encoded to extract latent representations that capture surface reflectance characteristics. These latent features are then used as conditional inputs to a latent diffusion model, which probabilistically suppresses reflection-induced artifacts and recover lost fringe information, yielding high-quality fringe images. The proposed components, including the specular reflection encoder, time-variant channel affine layer, and attention modules, further improve fringe restoration quality. In addition, LD-SLRO provides high flexibility in configuring the input and output fringe sets. Experimental results demonstrate that the proposed method improves both fringe quality and 3-D reconstruction accuracy over state-of-the-art methods, reducing the average root-mean-squared error from 1.8176 mm to 0.9619 mm.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces NOVA, a training-free token reduction framework for Visual AutoRegressive models that adaptively accelerates inference by analyzing entropy variation to dynamically prune low-entropy tokens while maintaining generation quality.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为NOVA的免训练视觉自回归模型token减少框架，通过分析熵变化自适应地加速推理，动态地修剪低熵token，同时保持生成质量。</p>
-            
-
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces LD-SLRO, a latent diffusion model-based approach for restoring fringe patterns in 3D reconstruction of highly reflective objects, demonstrating improved accuracy compared to state-of-the-art methods.</p>
             
             
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2602.01345v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yu Zhang, Jingyi Liu, Feng Liu, Duoqian Miao, Qi Zhang, Kexue Fu, Changwei Wang, Longbing Cao</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Gradient-Aligned Calibration for Post-Training Quantization of Diffusion Models</h2>
-            
-            <p class="paper-summary">Diffusion models have shown remarkable performance in image synthesis by progressively estimating a smooth transition from a Gaussian distribution of noise to a real image. Unfortunately, their practical deployment is limited by slow inference speed, high memory usage, and the computational demands of the noise estimation process. Post-training quantization (PTQ) emerges as a promising solution to accelerate sampling and reduce memory overhead for diffusion models. Existing PTQ methods for diffusion models typically apply uniform weights to calibration samples across timesteps, which is sub-optimal since data at different timesteps may contribute differently to the diffusion process. Additionally, due to varying activation distributions and gradients across timesteps, a uniform quantization approach is sub-optimal. Each timestep requires a different gradient direction for optimal quantization, and treating them equally can lead to conflicting gradients that degrade performance. In this paper, we propose a novel PTQ method that addresses these challenges by assigning appropriate weights to calibration samples. Specifically, our approach learns to assign optimal weights to calibration samples to align the quantized model's gradients across timesteps, facilitating the quantization process. Extensive experiments on CIFAR-10, LSUN-Bedrooms, and ImageNet demonstrate the superiority of our method compared to other PTQ methods for diffusion models.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel post-training quantization (PTQ) method for diffusion models that optimizes calibration sample weights across timesteps by aligning gradients, leading to improved quantization performance. This is achieved without needing to retrain the diffusion model.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于扩散模型的新型训练后量化 (PTQ) 方法，该方法通过对齐梯度来优化跨时间步的校准样本权重，从而提高量化性能。这是在不需要重新训练扩散模型的情况下实现的。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了LD-SLRO，一种基于潜在扩散模型的结构光方法，用于恢复高反射物体的三维重建中的条纹图案，与现有技术相比，精度更高。</p>
             
 
             
@@ -763,18 +670,18 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.01289v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.05434v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Dung Anh Hoang, Cuong Pham anh Trung Le, Jianfei Cai, Toan Do</p>
+            <p class="paper-authors">Authors: Sanghoon Jeon, Gihyun Jung, Suhyeon Ka, Jae-Sang Hyun</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2026-02-06 03:28:54 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2026-02-06 03:31:43 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
