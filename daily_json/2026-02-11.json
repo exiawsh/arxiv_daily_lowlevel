@@ -1,0 +1,155 @@
+[
+    {
+        "title": "Robust Depth Super-Resolution via Adaptive Diffusion Sampling",
+        "summary": "We propose AdaDS, a generalizable framework for depth super-resolution that robustly recovers high-resolution depth maps from arbitrarily degraded low-resolution inputs. Unlike conventional approaches that directly regress depth values and often exhibit artifacts under severe or unknown degradation, AdaDS capitalizes on the contraction property of Gaussian smoothing: as noise accumulates in the forward process, distributional discrepancies between degraded inputs and their pristine high-quality counterparts diminish, ultimately converging to isotropic Gaussian prior. Leveraging this, AdaDS adaptively selects a starting timestep in the reverse diffusion trajectory based on estimated refinement uncertainty, and subsequently injects tailored noise to position the intermediate sample within the high-probability region of the target posterior distribution. This strategy ensures inherent robustness, enabling generative prior of a pre-trained diffusion model to dominate recovery even when upstream estimations are imperfect. Extensive experiments on real-world and synthetic benchmarks demonstrate AdaDS's superior zero-shot generalization and resilience to diverse degradation patterns compared to state-of-the-art methods.",
+        "url": "http://arxiv.org/abs/2602.09510v1",
+        "published_date": "2026-02-10T08:10:02+00:00",
+        "updated_date": "2026-02-10T08:10:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kun Wang",
+            "Yun Zhu",
+            "Pan Zhou",
+            "Na Zhao"
+        ],
+        "tldr": "The paper introduces AdaDS, a depth super-resolution framework that utilizes adaptive diffusion sampling to robustly recover high-resolution depth maps from degraded low-resolution inputs, demonstrating superior generalization and resilience compared to existing methods.",
+        "tldr_zh": "该论文介绍了一种名为AdaDS的深度超分辨率框架，它利用自适应扩散采样从退化的低分辨率输入中稳健地恢复高分辨率深度图，与现有方法相比，表现出更强的泛化能力和鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Look-Ahead and Look-Back Flows: Training-Free Image Generation with Trajectory Smoothing",
+        "summary": "Recent advances have reformulated diffusion models as deterministic ordinary differential equations (ODEs) through the framework of flow matching, providing a unified formulation for the noise-to-data generative process. Various training-free flow matching approaches have been developed to improve image generation through flow velocity field adjustment, eliminating the need for costly retraining. However, Modifying the velocity field $v$ introduces errors that propagate through the full generation path, whereas adjustments to the latent trajectory $z$ are naturally corrected by the pretrained velocity network, reducing error accumulation. In this paper, we propose two complementary training-free latent-trajectory adjustment approaches based on future and past velocity $v$ and latent trajectory $z$ information that refine the generative path directly in latent space. We propose two training-free trajectory smoothing schemes: \\emph{Look-Ahead}, which averages the current and next-step latents using a curvature-gated weight, and \\emph{Look-Back}, which smoothes latents using an exponential moving average with decay. We demonstrate through extensive experiments and comprehensive evaluation metrics that the proposed training-free trajectory smoothing models substantially outperform various state-of-the-art models across multiple datasets including COCO17, CUB-200, and Flickr30K.",
+        "url": "http://arxiv.org/abs/2602.09449v1",
+        "published_date": "2026-02-10T06:34:47+00:00",
+        "updated_date": "2026-02-10T06:34:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yan Luo",
+            "Henry Huang",
+            "Todd Y. Zhou",
+            "Mengyu Wang"
+        ],
+        "tldr": "This paper introduces two training-free methods, Look-Ahead and Look-Back, for smoothing latent trajectories in flow matching-based image generation, achieving state-of-the-art performance without retraining.",
+        "tldr_zh": "本文提出了两种无需训练的方法，Look-Ahead 和 Look-Back，用于平滑基于流匹配的图像生成中的潜在轨迹，在无需重新训练的情况下实现了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Rethinking Global Text Conditioning in Diffusion Transformers",
+        "summary": "Diffusion transformers typically incorporate textual information via attention layers and a modulation mechanism using a pooled text embedding. Nevertheless, recent approaches discard modulation-based text conditioning and rely exclusively on attention. In this paper, we address whether modulation-based text conditioning is necessary and whether it can provide any performance advantage. Our analysis shows that, in its conventional usage, the pooled embedding contributes little to overall performance, suggesting that attention alone is generally sufficient for faithfully propagating prompt information. However, we reveal that the pooled embedding can provide significant gains when used from a different perspective-serving as guidance and enabling controllable shifts toward more desirable properties. This approach is training-free, simple to implement, incurs negligible runtime overhead, and can be applied to various diffusion models, bringing improvements across diverse tasks, including text-to-image/video generation and image editing.",
+        "url": "http://arxiv.org/abs/2602.09268v1",
+        "published_date": "2026-02-09T23:06:58+00:00",
+        "updated_date": "2026-02-09T23:06:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Nikita Starodubcev",
+            "Daniil Pakhomov",
+            "Zongze Wu",
+            "Ilya Drobyshevskiy",
+            "Yuchen Liu",
+            "Zhonghao Wang",
+            "Yuqian Zhou",
+            "Zhe Lin",
+            "Dmitry Baranchuk"
+        ],
+        "tldr": "This paper investigates the necessity of modulation-based text conditioning in diffusion transformers, finding it redundant in its original form but beneficial as a guidance mechanism for controllable generation and editing.",
+        "tldr_zh": "本文研究了扩散Transformer中基于调制的文本条件作用的必要性，发现其原始形式是冗余的，但作为一种指导机制，有利于可控的生成和编辑。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Autoregressive Image Generation with Masked Bit Modeling",
+        "summary": "This paper challenges the dominance of continuous pipelines in visual generation. We systematically investigate the performance gap between discrete and continuous methods. Contrary to the belief that discrete tokenizers are intrinsically inferior, we demonstrate that the disparity arises primarily from the total number of bits allocated in the latent space (i.e., the compression ratio). We show that scaling up the codebook size effectively bridges this gap, allowing discrete tokenizers to match or surpass their continuous counterparts. However, existing discrete generation methods struggle to capitalize on this insight, suffering from performance degradation or prohibitive training costs with scaled codebook. To address this, we propose masked Bit AutoRegressive modeling (BAR), a scalable framework that supports arbitrary codebook sizes. By equipping an autoregressive transformer with a masked bit modeling head, BAR predicts discrete tokens through progressively generating their constituent bits. BAR achieves a new state-of-the-art gFID of 0.99 on ImageNet-256, outperforming leading methods across both continuous and discrete paradigms, while significantly reducing sampling costs and converging faster than prior continuous approaches. Project page is available at https://bar-gen.github.io/",
+        "url": "http://arxiv.org/abs/2602.09024v1",
+        "published_date": "2026-02-09T18:59:58+00:00",
+        "updated_date": "2026-02-09T18:59:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qihang Yu",
+            "Qihao Liu",
+            "Ju He",
+            "Xinyang Zhang",
+            "Yang Liu",
+            "Liang-Chieh Chen",
+            "Xi Chen"
+        ],
+        "tldr": "The paper introduces a novel discrete image generation framework, BAR, that leverages masked bit autoregressive modeling to achieve state-of-the-art performance on ImageNet-256 with improved efficiency compared to both continuous and discrete methods.",
+        "tldr_zh": "该论文介绍了一种新的离散图像生成框架BAR，它利用掩码比特自回归建模在ImageNet-256上实现了最先进的性能，并且与连续和离散方法相比，提高了效率。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AdaTSQ: Pushing the Pareto Frontier of Diffusion Transformers via Temporal-Sensitivity Quantization",
+        "summary": "Diffusion Transformers (DiTs) have emerged as the state-of-the-art backbone for high-fidelity image and video generation. However, their massive computational cost and memory footprint hinder deployment on edge devices. While post-training quantization (PTQ) has proven effective for large language models (LLMs), directly applying existing methods to DiTs yields suboptimal results due to the neglect of the unique temporal dynamics inherent in diffusion processes. In this paper, we propose AdaTSQ, a novel PTQ framework that pushes the Pareto frontier of efficiency and quality by exploiting the temporal sensitivity of DiTs. First, we propose a Pareto-aware timestep-dynamic bit-width allocation strategy. We model the quantization policy search as a constrained pathfinding problem. We utilize a beam search algorithm guided by end-to-end reconstruction error to dynamically assign layer-wise bit-widths across different timesteps. Second, we propose a Fisher-guided temporal calibration mechanism. It leverages temporal Fisher information to prioritize calibration data from highly sensitive timesteps, seamlessly integrating with Hessian-based weight optimization. Extensive experiments on four advanced DiTs (e.g., Flux-Dev, Flux-Schnell, Z-Image, and Wan2.1) demonstrate that AdaTSQ significantly outperforms state-of-the-art methods like SVDQuant and ViDiT-Q. Our code will be released at https://github.com/Qiushao-E/AdaTSQ.",
+        "url": "http://arxiv.org/abs/2602.09883v1",
+        "published_date": "2026-02-10T15:23:18+00:00",
+        "updated_date": "2026-02-10T15:23:18+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shaoqiu Zhang",
+            "Zizhong Ding",
+            "Kaicheng Yang",
+            "Junyi Wu",
+            "Xianglong Yan",
+            "Xi Li",
+            "Bingnan Duan",
+            "Jianping Fang",
+            "Yulun Zhang"
+        ],
+        "tldr": "The paper introduces AdaTSQ, a post-training quantization framework for Diffusion Transformers (DiTs) that optimizes for efficiency and quality by dynamically adjusting bit-widths based on temporal sensitivity and using Fisher information for temporal calibration.",
+        "tldr_zh": "该论文介绍了AdaTSQ，一个用于扩散Transformer（DiT）的训练后量化框架，通过基于时间敏感性动态调整位宽以及使用Fisher信息进行时间校准，从而优化效率和质量。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Hand2World: Autoregressive Egocentric Interaction Generation via Free-Space Hand Gestures",
+        "summary": "Egocentric interactive world models are essential for augmented reality and embodied AI, where visual generation must respond to user input with low latency, geometric consistency, and long-term stability. We study egocentric interaction generation from a single scene image under free-space hand gestures, aiming to synthesize photorealistic videos in which hands enter the scene, interact with objects, and induce plausible world dynamics under head motion. This setting introduces fundamental challenges, including distribution shift between free-space gestures and contact-heavy training data, ambiguity between hand motion and camera motion in monocular views, and the need for arbitrary-length video generation. We present Hand2World, a unified autoregressive framework that addresses these challenges through occlusion-invariant hand conditioning based on projected 3D hand meshes, allowing visibility and occlusion to be inferred from scene context rather than encoded in the control signal. To stabilize egocentric viewpoint changes, we inject explicit camera geometry via per-pixel Plücker-ray embeddings, disentangling camera motion from hand motion and preventing background drift. We further develop a fully automated monocular annotation pipeline and distill a bidirectional diffusion model into a causal generator, enabling arbitrary-length synthesis. Experiments on three egocentric interaction benchmarks show substantial improvements in perceptual quality and 3D consistency while supporting camera control and long-horizon interactive generation.",
+        "url": "http://arxiv.org/abs/2602.09600v1",
+        "published_date": "2026-02-10T09:51:07+00:00",
+        "updated_date": "2026-02-10T09:51:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuxi Wang",
+            "Wenqi Ouyang",
+            "Tianyi Wei",
+            "Yi Dong",
+            "Zhiqi Shen",
+            "Xingang Pan"
+        ],
+        "tldr": "This paper introduces Hand2World, an autoregressive framework for generating egocentric interactive videos with free-space hand gestures, addressing challenges like distribution shift, camera motion ambiguity, and long-term stability using techniques like occlusion-invariant hand conditioning and Plücker-ray embeddings.",
+        "tldr_zh": "本文介绍了Hand2World，一个自回归框架，用于生成带有自由空间手势的以自我为中心的交互视频。它通过遮挡不变的手部条件和Plücker射线嵌入等技术，解决了分布偏移、相机运动模糊和长期稳定性等挑战。",
+        "relevance_score": 5,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 6
+    }
+]
