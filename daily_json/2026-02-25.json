@@ -1,0 +1,102 @@
+[
+    {
+        "title": "LESA: Learnable Stage-Aware Predictors for Diffusion Model Acceleration",
+        "summary": "Diffusion models have achieved remarkable success in image and video generation tasks. However, the high computational demands of Diffusion Transformers (DiTs) pose a significant challenge to their practical deployment. While feature caching is a promising acceleration strategy, existing methods based on simple reusing or training-free forecasting struggle to adapt to the complex, stage-dependent dynamics of the diffusion process, often resulting in quality degradation and failing to maintain consistency with the standard denoising process. To address this, we propose a LEarnable Stage-Aware (LESA) predictor framework based on two-stage training. Our approach leverages a Kolmogorov-Arnold Network (KAN) to accurately learn temporal feature mappings from data. We further introduce a multi-stage, multi-expert architecture that assigns specialized predictors to different noise-level stages, enabling more precise and robust feature forecasting. Extensive experiments show our method achieves significant acceleration while maintaining high-fidelity generation. Experiments demonstrate 5.00x acceleration on FLUX.1-dev with minimal quality degradation (1.0% drop), 6.25x speedup on Qwen-Image with a 20.2% quality improvement over the previous SOTA (TaylorSeer), and 5.00x acceleration on HunyuanVideo with a 24.7% PSNR improvement over TaylorSeer. State-of-the-art performance on both text-to-image and text-to-video synthesis validates the effectiveness and generalization capability of our training-based framework across different models. Our code is included in the supplementary materials and will be released on GitHub.",
+        "url": "http://arxiv.org/abs/2602.20497v1",
+        "published_date": "2026-02-24T02:53:28+00:00",
+        "updated_date": "2026-02-24T02:53:28+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Peiliang Cai",
+            "Jiacheng Liu",
+            "Haowen Xu",
+            "Xinyu Wang",
+            "Chang Zou",
+            "Linfeng Zhang"
+        ],
+        "tldr": "This paper introduces LESA, a learnable stage-aware predictor framework for accelerating diffusion models (specifically Diffusion Transformers) by improving feature caching using Kolmogorov-Arnold Networks and a multi-stage, multi-expert architecture. It achieves significant speedups with minimal or even improved generation quality across various models.",
+        "tldr_zh": "本文提出了一种可学习的阶段感知预测器框架LESA，通过使用Kolmogorov-Arnold网络和多阶段、多专家架构来改进特征缓存，从而加速扩散模型（特别是Diffusion Transformers）。该方法在各种模型上实现了显著的加速，同时保持了最小的质量下降，甚至提高了生成质量。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "gQIR: Generative Quanta Image Reconstruction",
+        "summary": "Capturing high-quality images from only a few detected photons is a fundamental challenge in computational imaging. Single-photon avalanche diode (SPAD) sensors promise high-quality imaging in regimes where conventional cameras fail, but raw \\emph{quanta frames} contain only sparse, noisy, binary photon detections. Recovering a coherent image from a burst of such frames requires handling alignment, denoising, and demosaicing (for color) under noise statistics far outside those assumed by standard restoration pipelines or modern generative models. We present an approach that adapts large text-to-image latent diffusion models to the photon-limited domain of quanta burst imaging. Our method leverages the structural and semantic priors of internet-scale diffusion models while introducing mechanisms to handle Bernoulli photon statistics. By integrating latent-space restoration with burst-level spatio-temporal reasoning, our approach produces reconstructions that are both photometrically faithful and perceptually pleasing, even under high-speed motion. We evaluate the method on synthetic benchmarks and new real-world datasets, including the first color SPAD burst dataset and a challenging \\textit{Deforming (XD)} video benchmark. Across all settings, the approach substantially improves perceptual quality over classical and modern learning-based baselines, demonstrating the promise of adapting large generative priors to extreme photon-limited sensing. Code at \\href{https://github.com/Aryan-Garg/gQIR}{https://github.com/Aryan-Garg/gQIR}.",
+        "url": "http://arxiv.org/abs/2602.20417v1",
+        "published_date": "2026-02-23T23:33:00+00:00",
+        "updated_date": "2026-02-23T23:33:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Aryan Garg",
+            "Sizhuo Ma",
+            "Mohit Gupta"
+        ],
+        "tldr": "The paper introduces gQIR, a method that adapts large text-to-image latent diffusion models to reconstruct high-quality images from sparse and noisy single-photon avalanche diode (SPAD) sensor data, addressing alignment, denoising, and demosaicing challenges under extreme photon-limited conditions.",
+        "tldr_zh": "该论文介绍了一种名为gQIR的方法，它将大型文本到图像的潜在扩散模型应用于从稀疏且嘈杂的单光子雪崩二极管(SPAD)传感器数据重建高质量图像，解决了在极端光子限制条件下的对齐、去噪和去马赛克挑战。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GSNR: Graph Smooth Null-Space Representation for Inverse Problems",
+        "summary": "Inverse problems in imaging are ill-posed, leading to infinitely many solutions consistent with the measurements due to the non-trivial null-space of the sensing matrix. Common image priors promote solutions on the general image manifold, such as sparsity, smoothness, or score function. However, as these priors do not constrain the null-space component, they can bias the reconstruction. Thus, we aim to incorporate meaningful null-space information in the reconstruction framework. Inspired by smooth image representation on graphs, we propose Graph-Smooth Null-Space Representation (GSNR), a mechanism that imposes structure only into the invisible component. Particularly, given a graph Laplacian, we construct a null-restricted Laplacian that encodes similarity between neighboring pixels in the null-space signal, and we design a low-dimensional projection matrix from the $p$-smoothest spectral graph modes (lowest graph frequencies). This approach has strong theoretical and practical implications: i) improved convergence via a null-only graph regularizer, ii) better coverage, how much null-space variance is captured by $p$ modes, and iii) high predictability, how well these modes can be inferred from the measurements. GSNR is incorporated into well-known inverse problem solvers, e.g., PnP, DIP, and diffusion solvers, in four scenarios: image deblurring, compressed sensing, demosaicing, and image super-resolution, providing consistent improvement of up to 4.3 dB over baseline formulations and up to 1 dB compared with end-to-end learned models in terms of PSNR.",
+        "url": "http://arxiv.org/abs/2602.20328v1",
+        "published_date": "2026-02-23T20:24:00+00:00",
+        "updated_date": "2026-02-23T20:24:00+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV",
+            "math.OC"
+        ],
+        "authors": [
+            "Romario Gualdrón-Hurtado",
+            "Roman Jacome",
+            "Rafael S. Suarez",
+            "Henry Arguello"
+        ],
+        "tldr": "This paper introduces Graph-Smooth Null-Space Representation (GSNR), a novel method to incorporate null-space information into image reconstruction by using a graph Laplacian to constrain the invisible components, demonstrating improvements in image deblurring, compressed sensing, demosaicing, and super-resolution tasks.",
+        "tldr_zh": "本文介绍了一种名为图平滑零空间表示 (GSNR) 的新方法，该方法通过使用图拉普拉斯算子来约束不可见分量，从而将零空间信息融入到图像重建中，并在图像去模糊、压缩感知、去马赛克和超分辨率任务中取得了改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GA-Drive: Geometry-Appearance Decoupled Modeling for Free-viewpoint Driving Scene Generatio",
+        "summary": "A free-viewpoint, editable, and high-fidelity driving simulator is crucial for training and evaluating end-to-end autonomous driving systems. In this paper, we present GA-Drive, a novel simulation framework capable of generating camera views along user-specified novel trajectories through Geometry-Appearance Decoupling and Diffusion-Based Generation. Given a set of images captured along a recorded trajectory and the corresponding scene geometry, GA-Drive synthesizes novel pseudo-views using geometry information. These pseudo-views are then transformed into photorealistic views using a trained video diffusion model. In this way, we decouple the geometry and appearance of scenes. An advantage of such decoupling is its support for appearance editing via state-of-the-art video-to-video editing techniques, while preserving the underlying geometry, enabling consistent edits across both original and novel trajectories. Extensive experiments demonstrate that GA-Drive substantially outperforms existing methods in terms of NTA-IoU, NTL-IoU, and FID scores.",
+        "url": "http://arxiv.org/abs/2602.20673v1",
+        "published_date": "2026-02-24T08:22:42+00:00",
+        "updated_date": "2026-02-24T08:22:42+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hao Zhang",
+            "Lue Fan",
+            "Qitai Wang",
+            "Wenbo Li",
+            "Zehuan Wu",
+            "Lewei Lu",
+            "Zhaoxiang Zhang",
+            "Hongsheng Li"
+        ],
+        "tldr": "GA-Drive is a novel driving simulation framework that decouples geometry and appearance using diffusion models to generate free-viewpoint, editable, and high-fidelity driving scene videos from a limited set of input images.",
+        "tldr_zh": "GA-Drive是一个新颖的驾驶模拟框架，它使用扩散模型解耦几何和外观，从而从有限的输入图像生成自由视点、可编辑和高保真的驾驶场景视频。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
