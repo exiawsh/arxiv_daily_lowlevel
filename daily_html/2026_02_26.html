@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - February 24, 2026</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - February 26, 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>February 24, 2026</p>
+            <p>February 26, 2026</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">RL-RIG: A Generative Spatial Reasoner via Intrinsic Reflection</h2>
+            <h2 class="paper-title">Scan Clusters, Not Pixels: A Cluster-Centric Paradigm for Efficient Ultra-high-definition Image Restoration</h2>
             
-            <p class="paper-summary">Recent advancements in image generation have achieved impressive results in producing high-quality images. However, existing image generation models still generally struggle with a spatial reasoning dilemma, lacking the ability to accurately capture fine-grained spatial relationships from the prompt and correctly generate scenes with structural integrity. To mitigate this dilemma, we propose RL-RIG, a Reinforcement Learning framework for Reflection-based Image Generation. Our architecture comprises four primary components: Diffuser, Checker, Actor, and Inverse Diffuser, following a Generate-Reflect-Edit paradigm to spark the Chain of Thought reasoning ability in image generation for addressing the dilemma. To equip the model with better intuition over generation trajectories, we further develop Reflection-GRPO to train the VLM Actor for edit prompts and the Image Editor for better image quality under a given prompt, respectively. Unlike traditional approaches that solely produce visually stunning yet structurally unreasonable content, our evaluation metrics prioritize spatial accuracy, utilizing Scene Graph IoU and employing a VLM-as-a-Judge strategy to assess the spatial consistency of generated images on LAION-SG dataset. Experimental results show that RL-RIG outperforms existing state-of-the-art open-source models by up to 11% in terms of controllable and precise spatial reasoning in image generation.</p>
+            <p class="paper-summary">Ultra-High-Definition (UHD) image restoration is trapped in a scalability crisis: existing models, bound to pixel-wise operations, demand unsustainable computation. While state space models (SSMs) like Mamba promise linear complexity, their pixel-serial scanning remains a fundamental bottleneck for the millions of pixels in UHD content. We ask: must we process every pixel to understand the image? This paper introduces C$^2$SSM, a visual state space model that breaks this taboo by shifting from pixel-serial to cluster-serial scanning. Our core discovery is that the rich feature distribution of a UHD image can be distilled into a sparse set of semantic centroids via a neural-parameterized mixture model. C$^2$SSM leverages this to reformulate global modeling into a novel dual-path process: it scans and reasons over a handful of cluster centers, then diffuses the global context back to all pixels through a principled similarity distribution, all while a lightweight modulator preserves fine details. This cluster-centric paradigm achieves a decisive leap in efficiency, slashing computational costs while establishing new state-of-the-art results across five UHD restoration tasks. More than a solution, C$^2$SSM charts a new course for efficient large-scale vision: scan clusters, not pixels.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces RL-RIG, a reinforcement learning framework for image generation that focuses on improving spatial reasoning and structural integrity by using a Generate-Reflect-Edit paradigm and reflection-guided policy optimization.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces C$^2$SSM, a cluster-centric visual state space model for efficient UHD image restoration, achieving state-of-the-art results with significantly reduced computational costs by scanning clusters instead of individual pixels.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 RL-RIG，一个用于图像生成的强化学习框架，专注于通过使用生成-反思-编辑范式和反思引导的策略优化来提高空间推理和结构完整性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了C$^2$SSM，一种以聚类为中心的视觉状态空间模型，用于高效的超高清图像修复。通过扫描聚类而非单个像素，该模型在显著降低计算成本的同时，实现了最先进的修复效果。</p>
             
 
             
@@ -232,21 +232,13 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
@@ -254,10 +246,18 @@
                 
                 
                 <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -286,18 +286,18 @@
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.19974v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.21917v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Tianyu Wang, Zhiyuan Ma, Qian Wang, Xinyi Zhang, Xinwei Long, Bowen Zhou</p>
+            <p class="paper-authors">Authors: Chen Wu, Ling Wang, Zhuoran Zheng, Yuning Cui, Zhixiong Yang, Xiangyu Chen, Yue Zhang, Weidong Jiang, Jingyuan Xia</p>
             
         </motion.div>
         
@@ -309,14 +309,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">InfScene-SR: Spatially Continuous Inference for Arbitrary-Size Image Super-Resolution</h2>
+            <h2 class="paper-title">FlowFixer: Towards Detail-Preserving Subject-Driven Generation</h2>
             
-            <p class="paper-summary">Image Super-Resolution (SR) aims to recover high-resolution (HR) details from low-resolution (LR) inputs, a task where Denoising Diffusion Probabilistic Models (DDPMs) have recently shown superior performance compared to Generative Adversarial Networks (GANs) based approaches. However, standard diffusion-based SR models, such as SR3, are typically trained on fixed-size patches and struggle to scale to arbitrary-sized images due to memory constraints. Applying these models via independent patch processing leads to visible seams and inconsistent textures across boundaries. In this paper, we propose InfScene-SR, a framework enabling spatially continuous super-resolution for large, arbitrary scenes. We adapt the iterative refinement process of diffusion models with a novel guided and variance-corrected fusion mechanism, allowing for the seamless generation of large-scale high-resolution imagery without retraining. We validate our approach on remote sensing datasets, demonstrating that InfScene-SR not only reconstructs fine details with high perceptual quality but also eliminates boundary artifacts, benefiting downstream tasks such as semantic segmentation.</p>
+            <p class="paper-summary">We present FlowFixer, a refinement framework for subject-driven generation (SDG) that restores fine details lost during generation caused by changes in scale and perspective of a subject. FlowFixer proposes direct image-to-image translation from visual references, avoiding ambiguities in language prompts. To enable image-to-image training, we introduce a one-step denoising scheme to generate self-supervised training data, which automatically removes high-frequency details while preserving global structure, effectively simulating real-world SDG errors. We further propose a keypoint matching-based metric to properly assess fidelity in details beyond semantic similarities usually measured by CLIP or DINO. Experimental results demonstrate that FlowFixer outperforms state-of-the-art SDG methods in both qualitative and quantitative evaluations, setting a new benchmark for high-fidelity subject-driven generation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces InfScene-SR, a diffusion-based super-resolution framework that enables spatially continuous SR for arbitrary-sized images by addressing the limitations of patch-based methods with a novel guided fusion mechanism.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: FlowFixer is a refinement framework for subject-driven generation that uses image-to-image translation and a novel self-supervised training scheme to restore fine details often lost due to scale and perspective changes. It outperforms existing methods and establishes a new benchmark for fidelity.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了InfScene-SR，一个基于扩散模型的超分辨率框架，它通过一种新颖的引导融合机制解决了基于图像块的方法的局限性，从而实现了对任意大小图像的空间连续超分辨率。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: FlowFixer是一个主体驱动生成(SDG)的精细化框架，它使用图像到图像的转换和一种新的自监督训练方案，来恢复由于尺度和视角变化而经常丢失的精细细节。它优于现有的方法，并为保真度建立了一个新的基准。</p>
             
 
             
@@ -380,18 +380,18 @@
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.19736v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.21402v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Shoukun Sun, Zhe Wang, Xiang Que, Jiyin Zhang, Xiaogang Ma</p>
+            <p class="paper-authors">Authors: Jinyoung Jun, Won-Dong Jang, Wenbin Ouyang, Raghudeep Gadde, Jungbeom Lee</p>
             
         </motion.div>
         
@@ -403,14 +403,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Laplacian Multi-scale Flow Matching for Generative Modeling</h2>
+            <h2 class="paper-title">CoLoGen: Progressive Learning of Concept`-`Localization Duality for Unified Image Generation</h2>
             
-            <p class="paper-summary">In this paper, we present Laplacian multiscale flow matching (LapFlow), a novel framework that enhances flow matching by leveraging multi-scale representations for image generative modeling. Our approach decomposes images into Laplacian pyramid residuals and processes different scales in parallel through a mixture-of-transformers (MoT) architecture with causal attention mechanisms. Unlike previous cascaded approaches that require explicit renoising between scales, our model generates multi-scale representations in parallel, eliminating the need for bridging processes. The proposed multi-scale architecture not only improves generation quality but also accelerates the sampling process and promotes scaling flow matching methods. Through extensive experimentation on CelebA-HQ and ImageNet, we demonstrate that our method achieves superior sample quality with fewer GFLOPs and faster inference compared to single-scale and multi-scale flow matching baselines. The proposed model scales effectively to high-resolution generation (up to 1024$\times$1024) while maintaining lower computational overhead.</p>
+            <p class="paper-summary">Unified conditional image generation remains difficult because different tasks depend on fundamentally different internal representations. Some require conceptual understanding for semantic synthesis, while others rely on localization cues for spatial precision. Forcing these heterogeneous tasks to share a single representation leads to concept`-`localization representational conflict. To address this issue, we propose CoLoGen, a unified diffusion framework that progressively learns and reconciles this concept`-`localization duality. CoLoGen uses a staged curriculum that first builds core conceptual and localization abilities, then adapts them to diverse visual conditions, and finally refines their synergy for complex instruction`-`driven tasks. Central to this process is the Progressive Representation Weaving (PRW) module, which dynamically routes features to specialized experts and stably integrates their outputs across stages. Experiments on editing, controllable generation, and customized generation show that CoLoGen achieves competitive or superior performance, offering a principled representational perspective for unified image generation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces LapFlow, a novel flow matching framework using Laplacian pyramid decomposition and a mixture-of-transformers architecture for parallel multi-scale image generation, achieving improved quality and speed with lower computational cost compared to existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: CoLoGen is a unified diffusion framework that addresses the concept-localization conflict in conditional image generation by progressively learning and reconciling these dual representations using a staged curriculum and a Progressive Representation Weaving module.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为LapFlow的新型流匹配框架，它使用拉普拉斯金字塔分解和混合Transformer架构进行并行的多尺度图像生成，与现有方法相比，实现了更高的质量和速度，同时降低了计算成本。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: CoLoGen是一个统一的扩散框架，它通过使用分阶段的课程和渐进式表示编织模块，逐步学习和协调这些双重表示，从而解决条件图像生成中的概念-定位冲突。</p>
             
 
             
@@ -420,24 +420,24 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -481,11 +481,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.19461v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.22150v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zelin Zhao, Petr Molodyk, Haotian Xue, Yongxin Chen</p>
+            <p class="paper-authors">Authors: YuXin Song, Yu Lu, Haoyuan Sun, Huanjin Yao, Fanglong Liu, Yifan Sun, Haocheng Feng, Hang Zhou, Jingdong Wang</p>
             
         </motion.div>
         
@@ -497,14 +497,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MultiDiffSense: Diffusion-Based Multi-Modal Visuo-Tactile Image Generation Conditioned on Object Shape and Contact Pose</h2>
+            <h2 class="paper-title">SkyReels-V4: Multi-modal Video-Audio Generation, Inpainting and Editing model</h2>
             
-            <p class="paper-summary">Acquiring aligned visuo-tactile datasets is slow and costly, requiring specialised hardware and large-scale data collection. Synthetic generation is promising, but prior methods are typically single-modality, limiting cross-modal learning. We present MultiDiffSense, a unified diffusion model that synthesises images for multiple vision-based tactile sensors (ViTac, TacTip, ViTacTip) within a single architecture. Our approach uses dual conditioning on CAD-derived, pose-aligned depth maps and structured prompts that encode sensor type and 4-DoF contact pose, enabling controllable, physically consistent multi-modal synthesis. Evaluating on 8 objects (5 seen, 3 novel) and unseen poses, MultiDiffSense outperforms a Pix2Pix cGAN baseline in SSIM by +36.3% (ViTac), +134.6% (ViTacTip), and +64.7% (TacTip). For downstream 3-DoF pose estimation, mixing 50% synthetic with 50% real halves the required real data while maintaining competitive performance. MultiDiffSense alleviates the data-collection bottleneck in tactile sensing and enables scalable, controllable multi-modal dataset generation for robotic applications.</p>
+            <p class="paper-summary">SkyReels V4 is a unified multi modal video foundation model for joint video audio generation, inpainting, and editing. The model adopts a dual stream Multimodal Diffusion Transformer (MMDiT) architecture, where one branch synthesizes video and the other generates temporally aligned audio, while sharing a powerful text encoder based on the Multimodal Large Language Models (MMLM). SkyReels V4 accepts rich multi modal instructions, including text, images, video clips, masks, and audio references. By combining the MMLMs multi modal instruction following capability with in context learning in the video branch MMDiT, the model can inject fine grained visual guidance under complex conditioning, while the audio branch MMDiT simultaneously leverages audio references to guide sound generation. On the video side, we adopt a channel concatenation formulation that unifies a wide range of inpainting style tasks, such as image to video, video extension, and video editing under a single interface, and naturally extends to vision referenced inpainting and editing via multi modal prompts. SkyReels V4 supports up to 1080p resolution, 32 FPS, and 15 second duration, enabling high fidelity, multi shot, cinema level video generation with synchronized audio. To make such high resolution, long-duration generation computationally feasible, we introduce an efficiency strategy: Joint generation of low resolution full sequences and high-resolution keyframes, followed by dedicated super-resolution and frame interpolation models. To our knowledge, SkyReels V4 is the first video foundation model that simultaneously supports multi-modal input, joint video audio generation, and a unified treatment of generation, inpainting, and editing, while maintaining strong efficiency and quality at cinematic resolutions and durations.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MultiDiffSense, a diffusion model for generating multi-modal visuo-tactile sensor images conditioned on object shape and contact pose, addressing the data scarcity issue in tactile sensing.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SkyReels-V4 is a multi-modal video foundation model for joint video-audio generation, inpainting, and editing, achieving high-resolution, long-duration cinematic videos with synchronized audio through a novel dual-stream architecture and efficient generation strategies.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了MultiDiffSense，一种扩散模型，用于生成以物体形状和接触姿势为条件的，多模态视觉触觉传感器图像，从而解决触觉传感中的数据稀缺问题。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SkyReels-V4是一个用于联合视频音频生成、修复和编辑的多模态视频基础模型，通过新颖的双流架构和高效的生成策略，实现了高分辨率、长时间的电影级视频和同步音频。</p>
             
 
             
@@ -516,6 +516,100 @@
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2602.21818v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Guibin Chen, Dixuan Lin, Jiangping Yang, Youqiang Zhang, Zhengcong Fei, Debang Li, Sheng Chen, Chaofeng Ao, Nuo Pang, Yiming Wang, Yikun Dou, Zheng Chen, Mingyuan Fan, Tuanhui Li, Mingshan Chang, Hao Zhang, Xiaopeng Sun, Jingtao Xu, Yuqiang Xie, Jiahua Wang, Zhiheng Xu, Weiming Xiong, Yuzhe Jin, Baoxuan Gu, Binjie Mao, Yunjie Yu, Jujie He, Yuhao Feng, Shiwen Tu, Chaojie Wang, Rui Yan, Wei Shen, Jingchen Wu, Peng Zhao, Xuanyue Zhong, Zhuangzhuang Liu, Kaifei Wang, Fuxiang Zhang, Weikai Xu, Wenyan Liu, Binglu Zhang, Yu Shen, Tianhui Xiong, Bin Peng, Liang Zeng, Xuchen Song, Haoxiang Guo, Peiyu Wang, Yahui Zhou</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Perceptual Quality Optimization of Image Super-Resolution</h2>
+            
+            <p class="paper-summary">Single-image super-resolution (SR) has achieved remarkable progress with deep learning, yet most approaches rely on distortion-oriented losses or heuristic perceptual priors, which often lead to a trade-off between fidelity and visual quality. To address this issue, we propose an \textit{Efficient Perceptual Bi-directional Attention Network (Efficient-PBAN)} that explicitly optimizes SR towards human-preferred quality. Unlike patch-based quality models, Efficient-PBAN avoids extensive patch sampling and enables efficient image-level perception. The proposed framework is trained on our self-constructed SR quality dataset that covers a wide range of state-of-the-art SR methods with corresponding human opinion scores. Using this dataset, Efficient-PBAN learns to predict perceptual quality in a way that correlates strongly with subjective judgments. The learned metric is further integrated into SR training as a differentiable perceptual loss, enabling closed-loop alignment between reconstruction and perceptual assessment. Extensive experiments demonstrate that our approach delivers superior perceptual quality. Code is publicly available at https://github.com/Lighting-YXLI/Efficient-PBAN.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Efficient-PBAN, a new super-resolution method that explicitly optimizes for human-perceived image quality using a self-constructed dataset and a differentiable perceptual loss integrated into training, leading to superior visual results.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新的超分辨率方法Efficient-PBAN，它使用自构建的数据集和集成到训练中的可微感知损失，显式地优化人类感知的图像质量，从而产生卓越的视觉效果。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -575,105 +669,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.19348v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.21482v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Sirine Bhouri, Lan Wei, Jian-Qing Zheng, Dandan Zhang</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">ChimeraLoRA: Multi-Head LoRA-Guided Synthetic Datasets</h2>
-            
-            <p class="paper-summary">Beyond general recognition tasks, specialized domains including privacy-constrained medical applications and fine-grained settings often encounter data scarcity, especially for tail classes. To obtain less biased and more reliable models under such scarcity, practitioners leverage diffusion models to supplement underrepresented regions of real data. Specifically, recent studies fine-tune pretrained diffusion models with LoRA on few-shot real sets to synthesize additional images. While an image-wise LoRA trained on a single image captures fine-grained details yet offers limited diversity, a class-wise LoRA trained over all shots produces diverse images as it encodes class priors yet tends to overlook fine details. To combine both benefits, we separate the adapter into a class-shared LoRA~$A$ for class priors and per-image LoRAs~$\mathcal{B}$ for image-specific characteristics. To expose coherent class semantics in the shared LoRA~$A$, we propose a semantic boosting by preserving class bounding boxes during training. For generation, we compose $A$ with a mixture of $\mathcal{B}$ using coefficients drawn from a Dirichlet distribution. Across diverse datasets, our synthesized images are both diverse and detail-rich while closely aligning with the few-shot real distribution, yielding robust gains in downstream classification accuracy.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ChimeraLoRA, a method combining class-shared and image-specific LoRAs for diffusion models to generate diverse and detailed synthetic images for few-shot learning, addressing data scarcity in specialized domains.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了ChimeraLoRA，一种结合了类共享和图像特定LoRA的方法，用于扩散模型，以生成多样且细节丰富的合成图像，用于少样本学习，解决了专业领域中的数据稀缺问题。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2602.19708v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Hoyoung Kim, Minwoo Jang, Jabin Koo, Sangdoo Yun, Jungseul Ok</p>
+            <p class="paper-authors">Authors: Wei Zhou, Yixiao Li, Hadi Amirpour, Xiaoshuai Hao, Jiang Liu, Peng Wang, Hantao Liu</p>
             
         </motion.div>
         
@@ -685,108 +685,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">A Green Learning Approach to LDCT Image Restoration</h2>
+            <h2 class="paper-title">Geometry-as-context: Modulating Explicit 3D in Scene-consistent Video Generation to Geometry Context</h2>
             
-            <p class="paper-summary">This work proposes a green learning (GL) approach to restore medical images. Without loss of generality, we use low-dose computed tomography (LDCT) images as examples. LDCT images are susceptible to noise and artifacts, where the imaging process introduces distortion. LDCT image restoration is an important preprocessing step for further medical analysis. Deep learning (DL) methods have been developed to solve this problem. We examine an alternative solution using the Green Learning (GL) methodology. The new restoration method is characterized by mathematical transparency, computational and memory efficiency, and high performance. Experiments show that our GL method offers state-of-the-art restoration performance at a smaller model size and with lower inference complexity.</p>
+            <p class="paper-summary">Scene-consistent video generation aims to create videos that explore 3D scenes based on a camera trajectory. Previous methods rely on video generation models with external memory for consistency, or iterative 3D reconstruction and inpainting, which accumulate errors during inference due to incorrect intermediary outputs, non-differentiable processes, and separate models. To overcome these limitations, we introduce ``geometry-as-context". It iteratively completes the following steps using an autoregressive camera-controlled video generation model: (1) estimates the geometry of the current view necessary for 3D reconstruction, and (2) simulates and restores novel view images rendered by the 3D scene. Under this multi-task framework, we develop the camera gated attention module to enhance the model's capability to effectively leverage camera poses. During the training phase, text contexts are utilized to ascertain whether geometric or RGB images should be generated. To ensure that the model can generate RGB-only outputs during inference, the geometry context is randomly dropped from the interleaved text-image-geometry training sequence. The method has been tested on scene video generation with one-direction and forth-and-back trajectories. The results show its superiority over previous approaches in maintaining scene consistency and camera control.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a Green Learning (GL) approach for LDCT image restoration, claiming state-of-the-art performance with smaller model size and lower inference complexity compared to deep learning methods.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于低剂量CT图像恢复的绿色学习（GL）方法，声称与深度学习方法相比，该方法以更小的模型尺寸和更低的推理复杂度实现了最先进的性能。</p>
-            
-
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel "geometry-as-context" method for scene-consistent video generation, using an autoregressive model that iteratively estimates geometry and renders novel views, improving scene consistency and camera control.</p>
             
             
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2602.19540v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Wei Wang, Yixing Wu, C. -C. Jay Kuo</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">MICON-Bench: Benchmarking and Enhancing Multi-Image Context Image Generation in Unified Multimodal Models</h2>
-            
-            <p class="paper-summary">Recent advancements in Unified Multimodal Models (UMMs) have enabled remarkable image understanding and generation capabilities. However, while models like Gemini-2.5-Flash-Image show emerging abilities to reason over multiple related images, existing benchmarks rarely address the challenges of multi-image context generation, focusing mainly on text-to-image or single-image editing tasks. In this work, we introduce \textbf{MICON-Bench}, a comprehensive benchmark covering six tasks that evaluate cross-image composition, contextual reasoning, and identity preservation. We further propose an MLLM-driven Evaluation-by-Checkpoint framework for automatic verification of semantic and visual consistency, where multimodal large language model (MLLM) serves as a verifier. Additionally, we present \textbf{Dynamic Attention Rebalancing (DAR)}, a training-free, plug-and-play mechanism that dynamically adjusts attention during inference to enhance coherence and reduce hallucinations. Extensive experiments on various state-of-the-art open-source models demonstrate both the rigor of MICON-Bench in exposing multi-image reasoning challenges and the efficacy of DAR in improving generation quality and cross-image coherence. Github: https://github.com/Angusliuuu/MICON-Bench.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MICON-Bench, a new benchmark for evaluating multi-image context image generation in unified multimodal models, and proposes Dynamic Attention Rebalancing (DAR) to improve generation quality and coherence.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了MICON-Bench，一个新的用于评估统一多模态模型中多图像上下文图像生成的基准，并提出了动态注意力重平衡（DAR）以提高生成质量和连贯性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种名为“几何作为上下文”的新颖场景一致视频生成方法，该方法使用自回归模型迭代估计几何并渲染新视角，从而提高场景一致性和相机控制。</p>
             
 
             
@@ -857,11 +763,105 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.19497v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.21929v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Mingrui Wu, Hang Liu, Jiayi Ji, Xiaoshuai Sun, Rongrong Ji</p>
+            <p class="paper-authors">Authors: JiaKui Hu, Jialun Liu, Liying Yang, Xinliang Zhang, Kaiwen Li, Shuang Zeng, Yuanwei Li, Haibin Huang, Chi Zhang, Yanye Lu</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Learning spatially adaptive sparsity level maps for arbitrary convolutional dictionaries</h2>
+            
+            <p class="paper-summary">State-of-the-art learned reconstruction methods often rely on black-box modules that, despite their strong performance, raise questions about their interpretability and robustness. Here, we build on a recently proposed image reconstruction method, which is based on embedding data-driven information into a model-based convolutional dictionary regularization via neural network-inferred spatially adaptive sparsity level maps. By means of improved network design and dedicated training strategies, we extend the method to achieve filter-permutation invariance as well as the possibility to change the convolutional dictionary at inference time. We apply our method to low-field MRI and compare it to several other recent deep learning-based methods, also on in vivo data, in which the benefit for the use of a different dictionary is showcased. We further assess the method's robustness when tested on in- and out-of-distribution data. When tested on the latter, the proposed method suffers less from the data distribution shift compared to the other learned methods, which we attribute to its reduced reliance on training data due to its underlying model-based reconstruction component.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper enhances a convolutional dictionary-based image reconstruction method by using neural networks to infer spatially adaptive sparsity level maps, improving filter-permutation invariance and allowing dictionary changes at inference, showing robustness in low-field MRI reconstruction.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文通过使用神经网络推断空间自适应稀疏度水平图，增强了一种基于卷积字典的图像重建方法，从而提高了滤波器置换不变性，并允许在推理时更改字典，在低场 MRI 重建中显示出鲁棒性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2602.21707v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Joshua Schulz, David Schote, Christoph Kolbitsch, Kostas Papafitsoros, Andreas Kofler</p>
             
         </motion.div>
         
@@ -873,14 +873,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">IPv2: An Improved Image Purification Strategy for Real-World Ultra-Low-Dose Lung CT Denoising</h2>
+            <h2 class="paper-title">CADC: Content Adaptive Diffusion-Based Generative Image Compression</h2>
             
-            <p class="paper-summary">The image purification strategy constructs an intermediate distribution with aligned anatomical structures, which effectively corrects the spatial misalignment between real-world ultra-low-dose CT and normal-dose CT images and significantly enhances the structural preservation ability of denoising models. However, this strategy exhibits two inherent limitations. First, it suppresses noise only in the chest wall and bone regions while leaving the image background untreated. Second, it lacks a dedicated mechanism for denoising the lung parenchyma. To address these issues, we systematically redesign the original image purification strategy and propose an improved version termed IPv2. The proposed strategy introduces three core modules, namely Remove Background, Add noise, and Remove noise. These modules endow the model with denoising capability in both background and lung tissue regions during training data construction and provide a more reasonable evaluation protocol through refined label construction at the testing stage. Extensive experiments on our previously established real-world patient lung CT dataset acquired at 2% radiation dose demonstrate that IPv2 consistently improves background suppression and lung parenchyma restoration across multiple mainstream denoising models. The code is publicly available at https://github.com/MonkeyDadLufy/Image-Purification-Strategy-v2.</p>
+            <p class="paper-summary">Diffusion-based generative image compression has demonstrated remarkable potential for achieving realistic reconstruction at ultra-low bitrates. The key to unlocking this potential lies in making the entire compression process content-adaptive, ensuring that the encoder's representation and the decoder's generative prior are dynamically aligned with the semantic and structural characteristics of the input image. However, existing methods suffer from three critical limitations that prevent effective content adaptation. First, isotropic quantization applies a uniform quantization step, failing to adapt to the spatially varying complexity of image content and creating a misalignment with the diffusion model's noise-dependent prior. Second, the information concentration bottleneck -- arising from the dimensional mismatch between the high-dimensional noisy latent and the diffusion decoder's fixed input -- prevents the model from adaptively preserving essential semantic information in the primary channels. Third, existing textual conditioning strategies either need significant textual bitrate overhead or rely on generic, content-agnostic textual prompts, thereby failing to provide adaptive semantic guidance efficiently. To overcome these limitations, we propose a content-adaptive diffusion-based image codec with three technical innovations: 1) an Uncertainty-Guided Adaptive Quantization method that learns spatial uncertainty maps to adaptively align quantization distortion with content characteristics; 2) an Auxiliary Decoder-Guided Information Concentration method that uses a lightweight auxiliary decoder to enforce content-aware information preservation in the primary latent channels; and 3) a Bitrate-Free Adaptive Textual Conditioning method that derives content-aware textual descriptions from the auxiliary reconstructed image, enabling semantic guidance without bitrate cost.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces IPv2, an improved image purification strategy for ultra-low-dose lung CT denoising, which addresses limitations of the original method by enhancing background suppression and lung parenchyma restoration.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a content-adaptive diffusion-based image compression codec (CADC) addressing limitations in existing methods through uncertainty-guided quantization, auxiliary decoder-guided information concentration, and bitrate-free adaptive textual conditioning, leading to improved compression performance at ultra-low bitrates.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种改进的图像净化策略 IPv2，用于超低剂量肺部 CT 去噪，通过增强背景抑制和肺实质恢复，解决了原始方法的局限性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种内容自适应的基于扩散模型的图像压缩编解码器（CADC），通过不确定性引导的量化、辅助解码器引导的信息集中和无比特率自适应文本条件化来解决现有方法的局限性，从而在超低比特率下提高压缩性能。</p>
             
 
             
@@ -898,16 +898,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -951,18 +951,112 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.19314v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.21591v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Guoliang Gong, Man Yu</p>
+            <p class="paper-authors">Authors: Xihua Sheng, Lingyu Zhu, Tianyu Zhang, Dong Liu, Shiqi Wang, Jing Wang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.4, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">RelA-Diffusion: Relativistic Adversarial Diffusion for Multi-Tracer PET Synthesis from Multi-Sequence MRI</h2>
+            
+            <p class="paper-summary">Multi-tracer positron emission tomography (PET) provides critical insights into diverse neuropathological processes such as tau accumulation, neuroinflammation, and $β$-amyloid deposition in the brain, making it indispensable for comprehensive neurological assessment. However, routine acquisition of multi-tracer PET is limited by high costs, radiation exposure, and restricted tracer availability. Recent efforts have explored deep learning approaches for synthesizing PET images from structural MRI. While some methods rely solely on T1-weighted MRI, others incorporate additional sequences such as T2-FLAIR to improve pathological sensitivity. However, existing methods often struggle to capture fine-grained anatomical and pathological details, resulting in artifacts and unrealistic outputs. To this end, we propose RelA-Diffusion, a Relativistic Adversarial Diffusion framework for multi-tracer PET synthesis from multi-sequence MRI. By leveraging both T1-weighted and T2-FLAIR scans as complementary inputs, RelA-Diffusion captures richer structural information to guide image generation. To improve synthesis fidelity, we introduce a gradient-penalized relativistic adversarial loss to the intermediate clean predictions of the diffusion model. This loss compares real and generated images in a relative manner, encouraging the synthesis of more realistic local structures. Both the relativistic formulation and the gradient penalty contribute to stabilizing the training, while adversarial feedback at each diffusion timestep enables consistent refinement throughout the generation process. Extensive experiments on two datasets demonstrate that RelA-Diffusion outperforms existing methods in both visual fidelity and quantitative metrics, highlighting its potential for accurate synthesis of multi-tracer PET.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces RelA-Diffusion, a relativistic adversarial diffusion framework for synthesizing multi-tracer PET images from multi-sequence MRI, demonstrating improved visual fidelity and quantitative metrics compared to existing methods.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了RelA-Diffusion，一个用于从多序列MRI合成多示踪剂PET图像的相对论对抗扩散框架，与现有方法相比，在视觉保真度和定量指标方面均有所提高。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2602.21345v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Minhui Yu, Yongheng Sun, David S. Lalush, Jason P Mihalik, Pew-Thian Yap, Mingxia Liu</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2026-02-26 03:31:01 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2026-02-26 03:34:55 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
