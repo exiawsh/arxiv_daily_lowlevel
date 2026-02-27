@@ -1,0 +1,203 @@
+[
+    {
+        "title": "CASR: A Robust Cyclic Framework for Arbitrary Large-Scale Super-Resolution with Distribution Alignment and Self-Similarity Awareness",
+        "summary": "Arbitrary-Scale SR (ASISR) remains fundamentally limited by cross-scale distribution shift: once the inference scale leaves the training range, noise, blur, and artifacts accumulate sharply. We revisit this challenge from a cross-scale distribution transition perspective and propose CASR, a simple yet highly efficient cyclic SR framework that reformulates ultra-magnification as a sequence of in-distribution scale transitions. This design ensures stable inference at arbitrary scales while requiring only a single model. CASR tackles two major bottlenecks: distribution drift across iterations and patch-wise diffusion inconsistencies. The proposed SDAM module aligns structural distributions via superpixel aggregation, preventing error accumulation, while SARM module restores high-frequency textures by enforcing autocorrelation and embedding LR self-similarity priors. Despite using only a single model, our approach significantly reduces distribution drift, preserves long-range texture consistency, and achieves superior generalization even at extreme magnification.",
+        "url": "http://arxiv.org/abs/2602.22159v1",
+        "published_date": "2026-02-25T18:05:51+00:00",
+        "updated_date": "2026-02-25T18:05:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wenhao Guo",
+            "Zhaoran Zhao",
+            "Peng Lu",
+            "Sheng Li",
+            "Qian Qiao",
+            "RuiDe Li"
+        ],
+        "tldr": "The paper introduces CASR, a cyclic super-resolution framework that addresses distribution shift issues in arbitrary-scale SR by using sequential in-distribution scale transitions and novel modules for distribution alignment and self-similarity awareness, achieving superior generalization at extreme magnification with a single model.",
+        "tldr_zh": "该论文介绍了CASR，一个循环超分辨率框架，通过使用连续的分布内尺度转换，并结合用于分布对齐和自相似感知的模块，解决了任意尺度超分辨率中的分布偏移问题。该方法仅用一个模型即可在极端放大倍数下实现卓越的泛化能力。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Decomposing Private Image Generation via Coarse-to-Fine Wavelet Modeling",
+        "summary": "Generative models trained on sensitive image datasets risk memorizing and reproducing individual training examples, making strong privacy guarantees essential. While differential privacy (DP) provides a principled framework for such guarantees, standard DP finetuning (e.g., with DP-SGD) often results in severe degradation of image quality, particularly in high-frequency textures, due to the indiscriminate addition of noise across all model parameters. In this work, we propose a spectral DP framework based on the hypothesis that the most privacy-sensitive portions of an image are often low-frequency components in the wavelet space (e.g., facial features and object shapes) while high-frequency components are largely generic and public. Based on this hypothesis, we propose the following two-stage framework for DP image generation with coarse image intermediaries: (1) DP finetune an autoregressive spectral image tokenizer model on the low-resolution wavelet coefficients of the sensitive images, and (2) perform high-resolution upsampling using a publicly pretrained super-resolution model. By restricting the privacy budget to the global structures of the image in the first stage, and leveraging the post-processing property of DP for detail refinement, we achieve promising trade-offs between privacy and utility. Experiments on the MS-COCO and MM-CelebA-HQ datasets show that our method generates images with improved quality and style capture relative to other leading DP image frameworks.",
+        "url": "http://arxiv.org/abs/2602.23262v1",
+        "published_date": "2026-02-26T17:36:48+00:00",
+        "updated_date": "2026-02-26T17:36:48+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.CR"
+        ],
+        "authors": [
+            "Jasmine Bayrooti",
+            "Weiwei Kong",
+            "Natalia Ponomareva",
+            "Carlos Esteves",
+            "Ameesh Makadia",
+            "Amanda Prorok"
+        ],
+        "tldr": "This paper proposes a novel two-stage differentially private (DP) image generation framework that leverages wavelet decomposition and spectral DP to improve the privacy-utility trade-off by applying the privacy budget primarily to low-frequency components. The method demonstrates improved image quality compared to existing DP image generation techniques.",
+        "tldr_zh": "本文提出了一种新的两阶段差分隐私 (DP) 图像生成框架，该框架利用小波分解和谱 DP，通过主要对低频分量应用隐私预算来改善隐私-效用之间的权衡。该方法展示了相比现有 DP 图像生成技术而言改进的图像质量。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ColoDiff: Integrating Dynamic Consistency With Content Awareness for Colonoscopy Video Generation",
+        "summary": "Colonoscopy video generation delivers dynamic, information-rich data critical for diagnosing intestinal diseases, particularly in data-scarce scenarios. High-quality video generation demands temporal consistency and precise control over clinical attributes, but faces challenges from irregular intestinal structures, diverse disease representations, and various imaging modalities. To this end, we propose ColoDiff, a diffusion-based framework that generates dynamic-consistent and content-aware colonoscopy videos, aiming to alleviate data shortage and assist clinical analysis. At the inter-frame level, our TimeStream module decouples temporal dependency from video sequences through a cross-frame tokenization mechanism, enabling intricate dynamic modeling despite irregular intestinal structures. At the intra-frame level, our Content-Aware module incorporates noise-injected embeddings and learnable prototypes to realize precise control over clinical attributes, breaking through the coarse guidance of diffusion models. Additionally, ColoDiff employs a non-Markovian sampling strategy that cuts steps by over 90% for real-time generation. ColoDiff is evaluated across three public datasets and one hospital database, based on both generation metrics and downstream tasks including disease diagnosis, modality discrimination, bowel preparation scoring, and lesion segmentation. Extensive experiments show ColoDiff generates videos with smooth transitions and rich dynamics. ColoDiff presents an effort in controllable colonoscopy video generation, revealing the potential of synthetic videos in complementing authentic representation and mitigating data scarcity in clinical settings.",
+        "url": "http://arxiv.org/abs/2602.23203v1",
+        "published_date": "2026-02-26T16:51:24+00:00",
+        "updated_date": "2026-02-26T16:51:24+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Junhu Fu",
+            "Shuyu Liang",
+            "Wutong Li",
+            "Chen Ma",
+            "Peng Huang",
+            "Kehao Wang",
+            "Ke Chen",
+            "Shengli Lin",
+            "Pinghong Zhou",
+            "Zeju Li",
+            "Yuanyuan Wang",
+            "Yi Guo"
+        ],
+        "tldr": "The paper introduces ColoDiff, a diffusion-based framework for generating dynamic-consistent and content-aware colonoscopy videos, addressing data scarcity and aiding clinical analysis through temporal and content-aware modules and a non-Markovian sampling strategy.",
+        "tldr_zh": "该论文介绍了ColoDiff，一个基于扩散模型的框架，用于生成动态一致且内容感知的结肠镜视频。它通过时间流模块和内容感知模块，以及非马尔可夫采样策略，旨在解决数据稀缺问题并辅助临床分析。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning Continuous Wasserstein Barycenter Space for Generalized All-in-One Image Restoration",
+        "summary": "Despite substantial advances in all-in-one image restoration for addressing diverse degradations within a unified model, existing methods remain vulnerable to out-of-distribution degradations, thereby limiting their generalization in real-world scenarios. To tackle the challenge, this work is motivated by the intuition that multisource degraded feature distributions are induced by different degradation-specific shifts from an underlying degradation-agnostic distribution, and recovering such a shared distribution is thus crucial for achieving generalization across degradations. With this insight, we propose BaryIR, a representation learning framework that aligns multisource degraded features in the Wasserstein barycenter (WB) space, which models a degradation-agnostic distribution by minimizing the average of Wasserstein distances to multisource degraded distributions. We further introduce residual subspaces, whose embeddings are mutually contrasted while remaining orthogonal to the WB embeddings. Consequently, BaryIR explicitly decouples two orthogonal spaces: a WB space that encodes the degradation-agnostic invariant contents shared across degradations, and residual subspaces that adaptively preserve the degradation-specific knowledge. This disentanglement mitigates overfitting to in-distribution degradations and enables adaptive restoration grounded on the degradation-agnostic shared invariance. Extensive experiments demonstrate that BaryIR performs competitively against state-of-the-art all-in-one methods. Notably, BaryIR generalizes well to unseen degradations (\\textit{e.g.,} types and levels) and shows remarkable robustness in learning generalized features, even when trained on limited degradation types and evaluated on real-world data with mixed degradations.",
+        "url": "http://arxiv.org/abs/2602.23169v1",
+        "published_date": "2026-02-26T16:31:27+00:00",
+        "updated_date": "2026-02-26T16:31:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaole Tang",
+            "Xiaoyi He",
+            "Jiayi Xu",
+            "Xiang Gu",
+            "Jian Sun"
+        ],
+        "tldr": "The paper introduces BaryIR, a novel all-in-one image restoration framework that aligns multisource degraded features in a learned Wasserstein barycenter space to improve generalization to unseen degradations.",
+        "tldr_zh": "该论文介绍了BaryIR，一种新颖的一体化图像修复框架，通过在学习到的Wasserstein重心空间中对齐多源退化特征，从而提高对未见过的退化的泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GSTurb: Gaussian Splatting for Atmospheric Turbulence Mitigation",
+        "summary": "Atmospheric turbulence causes significant image degradation due to pixel displacement (tilt) and blur, particularly in long-range imaging applications. In this paper, we propose a novel framework for atmospheric turbulence mitigation, GSTurb, which integrates optical flow-guided tilt correction and Gaussian splatting for modeling non-isoplanatic blur. The framework employs Gaussian parameters to represent tilt and blur, and optimizes them across multiple frames to enhance restoration. Experimental results on the ATSyn-static dataset demonstrate the effectiveness of our method, achieving a peak PSNR of 27.67 dB and SSIM of 0.8735. Compared to the state-of-the-art method, GSTurb improves PSNR by 1.3 dB (a 4.5% increase) and SSIM by 0.048 (a 5.8% increase). Additionally, on real datasets, including the TSRWGAN Real-World and CLEAR datasets, GSTurb outperforms existing methods, showing significant improvements in both qualitative and quantitative performance. These results highlight that combining optical flow-guided tilt correction with Gaussian splatting effectively enhances image restoration under both synthetic and real-world turbulence conditions. The code for this method will be available at https://github.com/DuhlLiamz/3DGS_turbulence/tree/main.",
+        "url": "http://arxiv.org/abs/2602.22800v1",
+        "published_date": "2026-02-26T09:37:27+00:00",
+        "updated_date": "2026-02-26T09:37:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hanliang Du",
+            "Zhangji Lu",
+            "Zewei Cai",
+            "Qijian Tang",
+            "Qifeng Yu",
+            "Xiaoli Liu"
+        ],
+        "tldr": "The paper introduces GSTurb, a novel framework using optical flow-guided tilt correction and Gaussian splatting for mitigating atmospheric turbulence in images, demonstrating improved performance on both synthetic and real datasets.",
+        "tldr_zh": "该论文介绍了GSTurb，一种新颖的框架，它使用光流引导的倾斜校正和高斯溅射来减轻图像中的大气湍流，并在合成和真实数据集上表现出改进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ToProVAR: Efficient Visual Autoregressive Modeling via Tri-Dimensional Entropy-Aware Semantic Analysis and Sparsity Optimization",
+        "summary": "Visual Autoregressive(VAR) models enhance generation quality but face a critical efficiency bottleneck in later stages. In this paper, we present a novel optimization framework for VAR models that fundamentally differs from prior approaches such as FastVAR and SkipVAR. Instead of relying on heuristic skipping strategies, our method leverages attention entropy to characterize the semantic projections across different dimensions of the model architecture. This enables precise identification of parameter dynamics under varying token granularity levels, semantic scopes, and generation scales. Building on this analysis, we further uncover sparsity patterns along three critical dimensions-token, layer, and scale-and propose a set of fine-grained optimization strategies tailored to these patterns. Extensive evaluation demonstrates that our approach achieves aggressive acceleration of the generation process while significantly preserving semantic fidelity and fine details, outperforming traditional methods in both efficiency and quality. Experiments on Infinity-2B and Infinity-8B models demonstrate that ToProVAR achieves up to 3.4x acceleration with minimal quality loss, effectively mitigating the issues found in prior work. Our code will be made publicly available.",
+        "url": "http://arxiv.org/abs/2602.22948v1",
+        "published_date": "2026-02-26T12:36:56+00:00",
+        "updated_date": "2026-02-26T12:36:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiayu Chen",
+            "Ruoyu Lin",
+            "Zihao Zheng",
+            "Jingxin Li",
+            "Maoliang Li",
+            "Guojie Luo",
+            "Xiang chen"
+        ],
+        "tldr": "The paper introduces ToProVAR, a novel optimization framework for Visual Autoregressive models that leverages attention entropy and sparsity patterns to achieve significant acceleration in the generation process while preserving semantic fidelity and fine details.",
+        "tldr_zh": "该论文介绍了ToProVAR，一种新颖的视觉自回归模型优化框架，它利用注意力熵和稀疏模式来实现生成过程的显著加速，同时保持语义保真度和精细细节。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Beyond Detection: Multi-Scale Hidden-Code for Natural Image Deepfake Recovery and Factual Retrieval",
+        "summary": "Recent advances in image authenticity have primarily focused on deepfake detection and localization, leaving recovery of tampered contents for factual retrieval relatively underexplored. We propose a unified hidden-code recovery framework that enables both retrieval and restoration from post-hoc and in-generation watermarking paradigms. Our method encodes semantic and perceptual information into a compact hidden-code representation, refined through multi-scale vector quantization, and enhances contextual reasoning via conditional Transformer modules. To enable systematic evaluation for natural images, we construct ImageNet-S, a benchmark that provides paired image-label factual retrieval tasks. Extensive experiments on ImageNet-S demonstrate that our method exhibits promising retrieval and reconstruction performance while remaining fully compatible with diverse watermarking pipelines. This framework establishes a foundation for general-purpose image recovery beyond detection and localization.",
+        "url": "http://arxiv.org/abs/2602.22759v1",
+        "published_date": "2026-02-26T08:47:48+00:00",
+        "updated_date": "2026-02-26T08:47:48+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuan-Chih Chen",
+            "Chun-Shien Lu"
+        ],
+        "tldr": "This paper introduces a hidden-code recovery framework for natural images that enables both retrieval and restoration from deepfakes using multi-scale vector quantization and conditional Transformers, along with a new benchmark dataset ImageNet-S.",
+        "tldr_zh": "本文介绍了一种用于自然图像的隐藏代码恢复框架，该框架能够使用多尺度矢量量化和条件Transformer从深度伪造中进行检索和恢复，并提出了一个新的基准数据集ImageNet-S。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "IRSDE-Despeckle: A Physics-Grounded Diffusion Model for Generalizable Ultrasound Despeckling",
+        "summary": "Ultrasound imaging is widely used for real-time, noninvasive diagnosis, but speckle and related artifacts reduce image quality and can hinder interpretation. We present a diffusion-based ultrasound despeckling method built on the Image Restoration Stochastic Differential Equations framework. To enable supervised training, we curate large paired datasets by simulating ultrasound images from speckle-free magnetic resonance images using the Matlab UltraSound Toolbox. The proposed model reconstructs speckle-suppressed images while preserving anatomically meaningful edges and contrast. On a held-out simulated test set, our approach consistently outperforms classical filters and recent learning-based despeckling baselines. We quantify prediction uncertainty via cross-model variance and show that higher uncertainty correlates with higher reconstruction error, providing a practical indicator of difficult or failure-prone regions. Finally, we evaluate sensitivity to simulation probe settings and observe domain shift, motivating diversified training and adaptation for robust clinical deployment.",
+        "url": "http://arxiv.org/abs/2602.22717v1",
+        "published_date": "2026-02-26T07:42:25+00:00",
+        "updated_date": "2026-02-26T07:42:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuoqi Chen",
+            "Yujia Wu",
+            "Geoffrey P. Luke"
+        ],
+        "tldr": "This paper introduces a diffusion-based ultrasound despeckling method (IRSDE-Despeckle) trained on simulated data to reduce speckle noise while preserving image quality and providing uncertainty estimates.",
+        "tldr_zh": "本文介绍了一种基于扩散的超声散斑抑制方法 (IRSDE-Despeckle)，该方法在模拟数据上进行训练，以减少散斑噪声，同时保持图像质量并提供不确定性估计。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
