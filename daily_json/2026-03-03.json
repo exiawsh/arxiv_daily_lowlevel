@@ -1,0 +1,55 @@
+[
+    {
+        "title": "DiffusionXRay: A Diffusion and GAN-Based Approach for Enhancing Digitally Reconstructed Chest Radiographs",
+        "summary": "Deep learning-based automated diagnosis of lung cancer has emerged as a crucial advancement that enables healthcare professionals to detect and initiate treatment earlier. However, these models require extensive training datasets with diverse case-specific properties. High-quality annotated data is particularly challenging to obtain, especially for cases with subtle pulmonary nodules that are difficult to detect even for experienced radiologists. This scarcity of well-labeled datasets can limit model performance and generalization across different patient populations. Digitally reconstructed radiographs (DRR) using CT-Scan to generate synthetic frontal chest X-rays with artificially inserted lung nodules offers one potential solution. However, this approach suffers from significant image quality degradation, particularly in the form of blurred anatomical features and loss of fine lung field structures. To overcome this, we introduce DiffusionXRay, a novel image restoration pipeline for Chest X-ray images that synergistically leverages denoising diffusion probabilistic models (DDPMs) and generative adversarial networks (GANs). DiffusionXRay incorporates a unique two-stage training process: First, we investigate two independent approaches, DDPM-LQ and GAN-based MUNIT-LQ, to generate low-quality CXRs, addressing the challenge of training data scarcity, posing this as a style transfer problem. Subsequently, we train a DDPM-based model on paired low-quality and high-quality images, enabling it to learn the nuances of X-ray image restoration. Our method demonstrates promising results in enhancing image clarity, contrast, and overall diagnostic value of chest X-rays while preserving subtle yet clinically significant artifacts, validated by both quantitative metrics and expert radiological assessment.",
+        "url": "http://arxiv.org/abs/2603.01686v1",
+        "published_date": "2026-03-02T10:14:50+00:00",
+        "updated_date": "2026-03-02T10:14:50+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Aryan Goyal",
+            "Ashish Mittal",
+            "Pranav Rao",
+            "Manoj Tadepalli",
+            "Preetham Putha"
+        ]
+    },
+    {
+        "title": "Adaptive Spectral Feature Forecasting for Diffusion Sampling Acceleration",
+        "summary": "Diffusion models have become the dominant tool for high-fidelity image and video generation, yet are critically bottlenecked by their inference speed due to the numerous iterative passes of Diffusion Transformers. To reduce the exhaustive compute, recent works resort to the feature caching and reusing scheme that skips network evaluations at selected diffusion steps by using cached features in previous steps. However, their preliminary design solely relies on local approximation, causing errors to grow rapidly with large skips and leading to degraded sample quality at high speedups. In this work, we propose spectral diffusion feature forecaster (Spectrum), a training-free approach that enables global, long-range feature reuse with tightly controlled error. In particular, we view the latent features of the denoiser as functions over time and approximate them with Chebyshev polynomials. Specifically, we fit the coefficient for each basis via ridge regression, which is then leveraged to forecast features at multiple future diffusion steps. We theoretically reveal that our approach admits more favorable long-horizon behavior and yields an error bound that does not compound with the step size. Extensive experiments on various state-of-the-art image and video diffusion models consistently verify the superiority of our approach. Notably, we achieve up to 4.79$\\times$ speedup on FLUX.1 and 4.67$\\times$ speedup on Wan2.1-14B, while maintaining much higher sample quality compared with the baselines.",
+        "url": "http://arxiv.org/abs/2603.01623v1",
+        "published_date": "2026-03-02T08:59:11+00:00",
+        "updated_date": "2026-03-02T08:59:11+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Jiaqi Han",
+            "Juntong Shi",
+            "Puheng Li",
+            "Haotian Ye",
+            "Qiushan Guo",
+            "Stefano Ermon"
+        ]
+    },
+    {
+        "title": "Continuous Exposure-Time Modeling for Realistic Atmospheric Turbulence Synthesis",
+        "summary": "Atmospheric turbulence significantly degrades long-range imaging by introducing geometric warping and exposure-time-dependent blur, which adversely affects both visual quality and the performance of high-level vision tasks. Existing methods for synthesizing turbulence effects often oversimplify the relationship between blur and exposure-time, typically assuming fixed or binary exposure settings. This leads to unrealistic synthetic data and limited generalization capability of trained models. To address this gap, we revisit the modulation transfer function (MTF) formulation and propose a novel Exposure-Time-dependent MTF (ET-MTF) that models blur as a continuous function of exposure-time. For blur synthesis, we derive a tilt-invariant point spread function (PSF) from the ET-MTF, which, when integrated with a spatially varying blur-width field, provides a comprehensive and physically accurate characterization of turbulence-induced blur. Building on this synthesis pipeline, we construct ET-Turb, a large-scale synthetic turbulence dataset that explicitly incorporates continuous exposure-time modeling across diverse optical and atmospheric conditions. The dataset comprises 5,083 videos (2,005,835 frames), partitioned into 3,988 training and 1,095 test videos. Extensive experiments demonstrate that models trained on ET-Turb produce more realistic restorations and achieve superior generalization on real-world turbulence data compared to those trained on other datasets. The dataset is publicly available at: github.com/Jun-Wei-Zeng/ET-Turb.",
+        "url": "http://arxiv.org/abs/2603.01398v1",
+        "published_date": "2026-03-02T02:58:44+00:00",
+        "updated_date": "2026-03-02T02:58:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Junwei Zeng",
+            "Dong Liang",
+            "Sheng-Jun Huang",
+            "Kun Zhan",
+            "Songcan Chen"
+        ]
+    }
+]
