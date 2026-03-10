@@ -1,0 +1,155 @@
+[
+    {
+        "title": "Disentangled Textual Priors for Diffusion-based Image Super-Resolution",
+        "summary": "Image Super-Resolution (SR) aims to reconstruct high-resolution images from degraded low-resolution inputs. While diffusion-based SR methods offer powerful generative capabilities, their performance heavily depends on how semantic priors are structured and integrated into the generation process. Existing approaches often rely on entangled or coarse-grained priors that mix global layout with local details, or conflate structural and textural cues, thereby limiting semantic controllability and interpretability. In this work, we propose DTPSR, a novel diffusion-based SR framework that introduces disentangled textual priors along two complementary dimensions: spatial hierarchy (global vs. local) and frequency semantics (low- vs. high-frequency). By explicitly separating these priors, DTPSR enables the model to simultaneously capture scene-level structure and object-specific details with frequency-aware semantic guidance. The corresponding embeddings are injected via specialized cross-attention modules, forming a progressive generation pipeline that reflects the semantic granularity of visual content, from global layout to fine-grained textures. To support this paradigm, we construct DisText-SR, a large-scale dataset containing approximately 95,000 image-text pairs with carefully disentangled global, low-frequency, and high-frequency descriptions. To further enhance controllability and consistency, we adopt a multi-branch classifier-free guidance strategy with frequency-aware negative prompts to suppress hallucinations and semantic drift. Extensive experiments on synthetic and real-world benchmarks show that DTPSR achieves high perceptual quality, competitive fidelity, and strong generalization across diverse degradation scenarios.",
+        "url": "http://arxiv.org/abs/2603.07430v1",
+        "published_date": "2026-03-08T03:02:55+00:00",
+        "updated_date": "2026-03-08T03:02:55+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Lei Jiang",
+            "Xin Liu",
+            "Xinze Tong",
+            "Zhiliang Li",
+            "Jie Liu",
+            "Jie Tang",
+            "Gangshan Wu"
+        ],
+        "tldr": "This paper proposes a novel diffusion-based super-resolution framework, DTPSR, that uses disentangled textual priors along spatial hierarchy and frequency semantics dimensions, achieving high perceptual quality and generalization.",
+        "tldr_zh": "该论文提出了一种新颖的基于扩散的超分辨率框架DTPSR，它使用空间层次和频率语义维度上解耦的文本先验，实现了高感知质量和泛化能力。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Compressed-Domain-Aware Online Video Super-Resolution",
+        "summary": "In bandwidth-limited online video streaming, videos are usually downsampled and compressed. Although recent online video super-resolution (online VSR) approaches achieve promising results, they are still compute-intensive and fall short of real-time processing at higher resolutions, due to complex motion estimation for alignment and redundant processing of consecutive frames. To address these issues, we propose a compressed-domain-aware network (CDA-VSR) for online VSR, which utilizes compressed-domain information, including motion vectors, residual maps, and frame types to balance quality and efficiency. Specifically, we propose a motion-vector-guided deformable alignment module that uses motion vectors for coarse warping and learns only local residual offsets for fine-tuned adjustments, thereby maintaining accuracy while reducing computation. Then, we utilize a residual map gated fusion module to derive spatial weights from residual maps, suppressing mismatched regions and emphasizing reliable details. Further, we design a frame-type-aware reconstruction module for adaptive compute allocation across frame types, balancing accuracy and efficiency. On the REDS4 dataset, our CDA-VSR surpasses the state-of-the-art method TMP, with a maximum PSNR improvement of 0.13 dB while delivering more than double the inference speed. The code will be released at https://github.com/sspBIT/CDA-VSR.",
+        "url": "http://arxiv.org/abs/2603.07694v1",
+        "published_date": "2026-03-08T15:52:48+00:00",
+        "updated_date": "2026-03-08T15:52:48+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yuhang Wang",
+            "Hai Li",
+            "Shujuan Hou",
+            "Zhetao Dong",
+            "Xiaoyao Yang"
+        ],
+        "tldr": "The paper proposes a compressed-domain-aware online video super-resolution network (CDA-VSR) that leverages compressed-domain information to improve speed and performance compared to existing methods.",
+        "tldr_zh": "该论文提出了一种压缩域感知的在线视频超分辨率网络 (CDA-VSR)，该网络利用压缩域信息来提高速度和性能，优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Looking Into the Water by Unsupervised Learning of the Surface Shape",
+        "summary": "We address the problem of looking into the water from the air, where we seek to remove image distortions caused by refractions at the water surface. Our approach is based on modeling the different water surface structures at various points in time, assuming the underlying image is constant. To this end, we propose a model that consists of two neural-field networks. The first network predicts the height of the water surface at each spatial position and time, and the second network predicts the image color at each position. Using both networks, we reconstruct the observed sequence of images and can therefore use unsupervised training. We show that using implicit neural representations with periodic activation functions (SIREN) leads to effective modeling of the surface height spatio-temporal signal and its derivative, as required for image reconstruction. Using both simulated and real data we show that our method outperforms the latest unsupervised image restoration approach. In addition, it provides an estimate of the water surface.",
+        "url": "http://arxiv.org/abs/2603.07614v1",
+        "published_date": "2026-03-08T12:54:41+00:00",
+        "updated_date": "2026-03-08T12:54:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ori Lifschitz",
+            "Tali Treibitz",
+            "Dan Rosenbaum"
+        ],
+        "tldr": "This paper presents an unsupervised learning approach using neural fields to remove distortions in underwater images caused by water surface refractions, effectively estimating the water surface shape and restoring the underlying image.",
+        "tldr_zh": "本文提出了一种基于神经场的无监督学习方法，旨在消除水面折射引起的水下图像失真，从而有效估计水面形状并恢复底层图像。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RobustSCI: Beyond Reconstruction to Restoration for Snapshot Compressive Imaging under Real-World Degradations",
+        "summary": "Deep learning algorithms for video Snapshot Compressive Imaging (SCI) have achieved great success, yet they predominantly focus on reconstructing from clean measurements. This overlooks a critical real-world challenge: the captured signal itself is often severely degraded by motion blur and low light. Consequently, existing models falter in practical applications. To break this limitation, we pioneer the first study on robust video SCI restoration, shifting the goal from \"reconstruction\" to \"restoration\"--recovering the underlying pristine scene from a degraded measurement. To facilitate this new task, we first construct a large-scale benchmark by simulating realistic, continuous degradations on the DAVIS 2017 dataset. Second, we propose RobustSCI, a network that enhances a strong encoder-decoder backbone with a novel RobustCFormer block. This block introduces two parallel branches--a multi-scale deblur branch and a frequency enhancement branch--to explicitly disentangle and remove degradations during the recovery process. Furthermore, we introduce RobustSCI-C (RobustSCI-Cascade), which integrates a pre-trained Lightweight Post-processing Deblurring Network to significantly boost restoration performance with minimal overhead. Extensive experiments demonstrate that our methods outperform all SOTA models on the new degraded testbeds, with additional validation on real-world degraded SCI data confirming their practical effectiveness, elevating SCI from merely reconstructing what is captured to restoring what truly happened.",
+        "url": "http://arxiv.org/abs/2603.07489v1",
+        "published_date": "2026-03-08T06:22:23+00:00",
+        "updated_date": "2026-03-08T06:22:23+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hao Wang",
+            "Yuanfan Li",
+            "Qi Zhou",
+            "Zhankuo Xu",
+            "Jiong Ni",
+            "Xin Yuan"
+        ],
+        "tldr": "This paper introduces RobustSCI, a novel deep learning approach for restoring degraded snapshot compressive imaging (SCI) data by explicitly addressing motion blur and low light conditions, along with a new benchmark dataset for training and evaluation.",
+        "tldr_zh": "本文介绍了RobustSCI，一种新颖的深度学习方法，用于恢复退化的快照压缩成像（SCI）数据，通过明确解决运动模糊和低光照条件，并提供一个新的基准数据集用于训练和评估。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UnSCAR: Universal, Scalable, Controllable, and Adaptable Image Restoration",
+        "summary": "Universal image restoration aims to recover clean images from arbitrary real-world degradations using a single inference model. Despite significant progress, existing all-in-one restoration networks do not scale to multiple degradations. As the number of degradations increases, training becomes unstable, models grow excessively large, and performance drops across both seen and unseen domains. In this work, we show that scaling universal restoration is fundamentally limited by interference across degradations during joint learning, leading to catastrophic task forgetting. To address this challenge, we introduce a unified inference pipeline with a multi-branch mixture-of-experts architecture that decomposes restoration knowledge across specialized task-adaptable experts. Our approach enables scalable learning (over sixteen degradations), adapts and generalizes robustly to unseen domains, and supports user-controllable restoration across degradations. Beyond achieving superior performance across benchmarks, this work establishes a new design paradigm for scalable and controllable universal image restoration.",
+        "url": "http://arxiv.org/abs/2603.07406v1",
+        "published_date": "2026-03-08T01:35:54+00:00",
+        "updated_date": "2026-03-08T01:35:54+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Debabrata Mandal",
+            "Soumitri Chattopadhyay",
+            "Yujie Wang",
+            "Marc Niethammer",
+            "Praneeth Chakravarthula"
+        ],
+        "tldr": "This paper proposes a novel multi-branch mixture-of-experts architecture, UnSCAR, for universal image restoration that addresses the limitations of existing methods in scaling to multiple degradations and enabling controllable restoration.",
+        "tldr_zh": "本文提出了一种新的多分支混合专家架构UnSCAR，用于通用图像修复，旨在解决现有方法在扩展到多个退化以及实现可控修复方面的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "How Long Can Unified Multimodal Models Generate Images Reliably? Taming Long-Horizon Interleaved Image Generation via Context Curation",
+        "summary": "Unified multimodal models hold the promise of generating extensive, interleaved narratives, weaving text and imagery into coherent long-form stories. However, current systems suffer from a critical reliability gap: as sequences grow, generation quality rapidly collapses. In this work, we investigate the mechanism behind this failure and argue that it is distinct from standard long-context challenges. We reveal that in generation, accumulated visual history acts as a source of active pollution, a decay governed specifically by the number of image events rather than raw token count. We identify a structural vulnerability where dense visual tokens overwhelm the attention mechanism, creating noise that distorts future synthesis. Guided by these mechanistic insights, we propose UniLongGen, a training-free inference strategy that prioritizes safe conditioning over total recall. Instead of retaining all history, UniLongGen dynamically curates the model's memory, identifying and discarding interfering visual signals based on the model's own internal relevance rankings. Extensive experiments demonstrate that this active forgetting approach is essential for stability: UniLongGen significantly outperforms baselines in long-horizon fidelity and consistency, while simultaneously reducing memory footprint and inference time.",
+        "url": "http://arxiv.org/abs/2603.07540v1",
+        "published_date": "2026-03-08T09:01:20+00:00",
+        "updated_date": "2026-03-08T09:01:20+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Haoyu Chen",
+            "Qing Liu",
+            "Yuqian Zhou",
+            "He Zhang",
+            "Zhaowen Wang",
+            "Mengwei Ren",
+            "Jingjing Ren",
+            "Xiang Wang",
+            "Zhe Lin",
+            "Lei Zhu"
+        ],
+        "tldr": "The paper identifies a 'visual pollution' problem in long-horizon interleaved text-image generation where accumulated visual history degrades performance, and proposes a training-free inference strategy, UniLongGen, which selectively curates the model's memory to improve stability and reduce resource consumption.",
+        "tldr_zh": "该论文发现，在长程交错文本图像生成中存在“视觉污染”问题，即积累的视觉历史会降低性能。论文提出了一种无需训练的推理策略 UniLongGen，通过选择性地管理模型的记忆来提高稳定性和降低资源消耗。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
