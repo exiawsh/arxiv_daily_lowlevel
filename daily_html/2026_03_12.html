@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArXiv CS.CV Papers (Visual Language Model) - March 12, 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
+    <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            /* New Palette: Light, Clean, Futuristic with Teal/Aqua accents */
+            --bg-color: #f8fafc; /* Tailwind slate-50 (Very Light Gray) */
+            --card-bg-color: #ffffff; /* White */
+            --text-color: #1e293b; /* Tailwind slate-800 (Dark Gray-Blue) */
+            --text-muted-color: #64748b; /* Tailwind slate-500 (Medium Gray-Blue) */
+            --header-color: #0f172a; /* Tailwind slate-900 (Very Dark Blue) */
+            --highlight-primary: #14b8a6; /* Tailwind teal-500 */
+            --highlight-secondary: #67e8f9; /* Tailwind cyan-300 */
+            --border-color: #e2e8f0; /* Tailwind slate-200 (Light Gray) */
+            --shadow-color: rgba(15, 23, 42, 0.08); /* Subtle shadow based on slate-900 */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            line-height: 1.6;
+        }
+
+        .bento-grid {
+            display: grid;
+            gap: 1.5rem; /* Tailwind gap-6 */
+            grid-template-columns: 1fr; /* Force single column */
+            padding-bottom: 4rem; /* Add padding at the bottom */
+        }
+
+        .bento-item {
+            /* Apply semi-transparent white background and blur */
+            background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+            backdrop-filter: blur(10px); /* Apply blur effect */
+            -webkit-backdrop-filter: blur(10px); /* Safari prefix */
+            border-radius: 1rem; /* Slightly larger radius */
+            padding: 1.75rem; /* Slightly more padding */
+            border: 1px solid rgba(226, 232, 240, 0.5); /* Lighter border with transparency */
+            box-shadow: 0 4px 12px var(--shadow-color);
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+            overflow: hidden; /* Ensure content doesn't overflow */
+            position: relative; /* For potential pseudo-elements */
+        }
+
+        /* Removed ::before pseudo-element for a cleaner look */
+
+
+        .bento-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px var(--shadow-color), 0 4px 8px rgba(15, 23, 42, 0.06); /* Adjusted hover shadow */
+        }
+
+        .paper-title {
+            font-size: 1.125rem; /* Tailwind text-lg */
+            font-weight: 600; /* Tailwind font-semibold */
+            color: var(--highlight-primary); /* Use new primary highlight */
+            margin-bottom: 0.75rem; /* Tailwind mb-3 */
+            line-height: 1.4;
+        }
+
+        .paper-summary {
+            font-size: 0.875rem; /* Tailwind text-sm */
+            color: var(--text-muted-color);
+            margin-bottom: 1.25rem; /* Tailwind mb-5 */
+            line-height: 1.6;
+        }
+
+        .paper-link {
+            display: inline-flex; /* Use flex for icon alignment */
+            align-items: center;
+            font-size: 0.875rem; /* Tailwind text-sm */
+            font-weight: 600;
+            color: var(--highlight-primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem; /* Add padding */
+            border-radius: 0.5rem; /* Slightly rounder */
+            background-color: rgba(20, 184, 166, 0.08); /* Subtle teal background */
+            border: 1px solid rgba(20, 184, 166, 0.2);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        .paper-link i {
+            margin-right: 0.5rem; /* Tailwind mr-2 */
+            transition: transform 0.3s ease;
+        }
+
+        .paper-link:hover {
+            background-color: rgba(20, 184, 166, 0.15);
+            color: #0d9488; /* Darker teal on hover */
+            transform: translateY(-1px);
+        }
+        .paper-link:hover i {
+             transform: translateX(2px);
+        }
+
+        .paper-authors {
+            font-size: 0.75rem; /* Tailwind text-xs */
+            color: var(--text-muted-color);
+            margin-top: 1rem; /* Tailwind mt-4 */
+            font-style: italic;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem; /* Tailwind mb-12 */
+            padding-top: 3rem; /* Tailwind pt-12 */
+        }
+
+        .header h1 {
+            font-size: 2.5rem; /* Tailwind text-4xl or 5xl */
+            font-weight: 700; /* Tailwind font-bold */
+            color: var(--header-color);
+            letter-spacing: -0.025em; /* Tailwind tracking-tight */
+            margin-bottom: 0.5rem;
+            /* Optional: Add a subtle text gradient */
+            /* background: linear-gradient(90deg, var(--highlight-primary), var(--highlight-secondary)); */
+            /* -webkit-background-clip: text; */
+            /* -webkit-text-fill-color: transparent; */
+        }
+
+        .header p {
+            font-size: 1.125rem; /* Tailwind text-lg */
+            color: var(--text-muted-color);
+            margin-top: 0.5rem; /* Tailwind mt-2 */
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer {
+            text-align: center;
+            color: var(--text-muted-color);
+            font-size: 0.875rem; /* Tailwind text-sm */
+            padding-top: 2rem;
+            padding-bottom: 2rem; /* Tailwind py-8 */
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        /* Simple line graphic element (optional) */
+        .line-graphic {
+            height: 1px; /* Thinner line */
+            background: linear-gradient(90deg, rgba(20, 184, 166, 0), var(--highlight-primary), rgba(20, 184, 166, 0));
+            opacity: 0.6;
+            margin: 1.5rem 0; /* Adjust margin */
+        }
+
+        /* Framer Motion requires the script, styles enhance appearance */
+        [data-motion-element] {
+             /* Base styles for elements animated by Framer Motion */
+        }
+
+        .paper-tldr {
+            font-size: 0.95rem; /* Slightly bigger than summary */
+            color: #475569; /* Changed to Tailwind slate-600 (slightly darker than summary) */
+            margin-top: 0.75rem; /* Tailwind mt-3 */
+            margin-bottom: 0.75rem; /* Tailwind mb-2 */
+            /* font-style: italic; */
+            font-weight: bold;
+        }
+
+        .paper-rating {
+            margin-top: 1rem; /* Tailwind mt-4 */
+            margin-bottom: 1rem; /* Tailwind mb-4 */
+            color: #f59e0b; /* Tailwind amber-500 */
+        }
+
+        .paper-rating i {
+            margin-right: 0.125rem; /* Tailwind mr-0.5 */
+        }
+
+        /* Apply consistent star color to sub-ratings */
+        .paper-sub-ratings .rating-item i {
+            color: #f59e0b; /* Match overall rating star color (amber-500) */
+            margin-right: 0.125rem; /* Consistent spacing */
+        }
+
+    </style>
+</head>
+<body class="container mx-auto px-4 antialiased">
+
+    <motion.div
+        initial="{ opacity: 0, y: -30 }"
+        animate="{ opacity: 1, y: 0 }"
+        transition="{ duration: 0.6, ease: 'easeOut' }"
+        class="header"
+        data-motion-element
+    >
+        <h1>Low-level/Image generation Daily Papers</h1>
+        <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
+        
+            <p>March 12, 2026</p>
+        
+        <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
+    </motion.div>
+
+    <div class="bento-grid" id="paper-grid">
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.0, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Just-in-Time: Training-Free Spatial Acceleration for Diffusion Transformers</h2>
+            
+            <p class="paper-summary">Diffusion Transformers have established a new state-of-the-art in image synthesis, but the high computational cost of iterative sampling severely hampers their practical deployment. While existing acceleration methods often focus on the temporal domain, they overlook the substantial spatial redundancy inherent in the generative process, where global structures emerge long before fine-grained details are formed. The uniform computational treatment of all spatial regions represents a critical inefficiency. In this paper, we introduce Just-in-Time (JiT), a novel training-free framework that addresses this challenge by acceleration in the spatial domain. JiT formulates a spatially approximated generative ordinary differential equation (ODE) that drives the full latent state evolution based on computations from a dynamically selected, sparse subset of anchor tokens. To ensure seamless transitions as new tokens are incorporated to expand the dimensions of the latent state, we propose a deterministic micro-flow, a simple and effective finite-time ODE that maintains both structural coherence and statistical correctness. Extensive experiments on the state-of-the-art FLUX.1-dev model demonstrate that JiT achieves up to a 7x speedup with nearly lossless performance, significantly outperforming existing acceleration methods and establishing a new and superior trade-off between inference speed and generation fidelity.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a training-free spatial acceleration method, Just-in-Time (JiT), for Diffusion Transformers, achieving significant speedups with minimal performance loss by selectively computing on a sparse subset of anchor tokens.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种针对Diffusion Transformer的无需训练的空间加速方法，Just-in-Time (JiT)。通过选择性地计算稀疏的锚定tokens子集，在性能损失最小的情况下实现了显著的加速。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2603.10744v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Wenhao Sun, Ji Li, Zhaoqiang Liu</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Geometric Autoencoder for Diffusion Models</h2>
+            
+            <p class="paper-summary">Latent diffusion models have established a new state-of-the-art in high-resolution visual generation. Integrating Vision Foundation Model priors improves generative efficiency, yet existing latent designs remain largely heuristic. These approaches often struggle to unify semantic discriminability, reconstruction fidelity, and latent compactness. In this paper, we propose Geometric Autoencoder (GAE), a principled framework that systematically addresses these challenges. By analyzing various alignment paradigms, GAE constructs an optimized low-dimensional semantic supervision target from VFMs to provide guidance for the autoencoder. Furthermore, we leverage latent normalization that replaces the restrictive KL-divergence of standard VAEs, enabling a more stable latent manifold specifically optimized for diffusion learning. To ensure robust reconstruction under high-intensity noise, GAE incorporates a dynamic noise sampling mechanism. Empirically, GAE achieves compelling performance on the ImageNet-1K $256 \times 256$ benchmark, reaching a gFID of 1.82 at only 80 epochs and 1.31 at 800 epochs without Classifier-Free Guidance, significantly surpassing existing state-of-the-art methods. Beyond generative quality, GAE establishes a superior equilibrium between compression, semantic depth and robust reconstruction stability. These results validate our design considerations, offering a promising paradigm for latent diffusion modeling. Code and models are publicly available at https://github.com/freezing-index/Geometric-Autoencoder-for-Diffusion-Models.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Geometric Autoencoder (GAE), a new autoencoder framework designed to improve latent diffusion models by unifying semantic discriminability, reconstruction fidelity, and latent compactness, achieving state-of-the-art results on ImageNet-1K.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了几何自编码器（GAE），一个新的自编码器框架，旨在通过统一语义区分性、重建保真度和潜在紧凑性来改进潜在扩散模型，并在 ImageNet-1K 上实现了最先进的结果。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2603.10365v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Hangyu Liu, Jianyong Wang, Yutao Sun</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.1, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Bioinspired CNNs for border completion in occluded images</h2>
+            
+            <p class="paper-summary">We exploit the mathematical modeling of the border completion problem in the visual cortex to design convolutional neural network (CNN) filters that enhance robustness to image occlusions. We evaluate our CNN architecture, BorderNet, on three occluded datasets (MNIST, Fashion-MNIST, and EMNIST) under two types of occlusions: stripes and grids. In all cases, BorderNet demonstrates improved performance, with gains varying depending on the severity of the occlusions and the dataset.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes a bio-inspired CNN (BorderNet) for border completion in occluded images, showing improved performance on MNIST, Fashion-MNIST, and EMNIST datasets under striped and grid occlusions.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种受生物启发的卷积神经网络（BorderNet），用于遮挡图像中的边界补全，在条纹和网格遮挡下，在MNIST、Fashion-MNIST和EMNIST数据集上表现出改进的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(5/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2603.10694v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Catarina P. Coutinho, Aneeqa Merhab, Janko Petkovic, Ferdinando Zanchetta, Rita Fioresi</p>
+            
+        </motion.div>
+        
+    </div>
+
+    <footer class="footer">
+        Generated on 2026-03-12 03:55:57 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+    </footer>
+
+</body>
+</html>
