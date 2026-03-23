@@ -1,0 +1,149 @@
+[
+    {
+        "title": "Generalizable NGP-SR: Generalizable Neural Radiance Fields Super-Resolution via Neural Graph Primitives",
+        "summary": "Neural Radiance Fields (NeRF) achieve photorealistic novel view synthesis but become costly when high-resolution (HR) rendering is required, as HR outputs demand dense sampling and higher-capacity models. Moreover, naively super-resolving per-view renderings in 2D often breaks multi-view consistency. We propose Generalizable NGP-SR, a 3D-aware super-resolution framework that reconstructs an HR radiance field directly from low-resolution (LR) posed images. Built on Neural Graphics Primitives (NGP), NGP-SR conditions radiance prediction on 3D coordinates and learned local texture tokens, enabling recovery of high-frequency details within the radiance field and producing view-consistent HR novel views without external HR references or post-hoc 2D upsampling. Importantly, our model is generalizable: once trained, it can be applied to unseen scenes and rendered from novel viewpoints without per-scene optimization. Experiments on multiple datasets show that NGP-SR consistently improves both reconstruction quality and runtime efficiency over prior NeRF-based super-resolution methods, offering a practical solution for scalable high-resolution novel view synthesis.",
+        "url": "http://arxiv.org/abs/2603.20128v1",
+        "published_date": "2026-03-20T16:50:16+00:00",
+        "updated_date": "2026-03-20T16:50:16+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wanqi Yuan",
+            "Omkar Sharad Mayekar",
+            "Connor Pennington",
+            "Nianyi Li"
+        ],
+        "tldr": "Generalizable NGP-SR is a 3D-aware super-resolution framework for Neural Radiance Fields (NeRF) that reconstructs high-resolution radiance fields directly from low-resolution posed images. It aims to improve rendering quality and efficiency for high-resolution novel view synthesis without per-scene optimization and is generalizable to unseen scenes.",
+        "tldr_zh": "Generalizable NGP-SR 是一种用于神经辐射场（NeRF）的 3D 感知超分辨率框架，可以直接从低分辨率的带位姿图像中重建高分辨率辐射场。它旨在提高高分辨率新视角合成的渲染质量和效率，无需每场景优化，并且可以泛化到未见过的场景。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "NEC-Diff: Noise-Robust Event-RAW Complementary Diffusion for Seeing Motion in Extreme Darkness",
+        "summary": "High-quality imaging of dynamic scenes in extremely low-light conditions is highly challenging. Photon scarcity induces severe noise and texture loss, causing significant image degradation. Event cameras, featuring a high dynamic range (120 dB) and high sensitivity to motion, serve as powerful complements to conventional cameras by offering crucial cues for preserving subtle textures. However, most existing approaches emphasize texture recovery from events, while paying little attention to image noise or the intrinsic noise of events themselves, which ultimately hinders accurate pixel reconstruction under photon-starved conditions. In this work, we propose NEC-Diff, a novel diffusion-based event-RAW hybrid imaging framework that extracts reliable information from heavily noisy signals to reconstruct fine scene structures. The framework is driven by two key insights: (1) combining the linear light-response property of RAW images with the brightness-change nature of events to establish a physics-driven constraint for robust dual-modal denoising; and (2) dynamically estimating the SNR of both modalities based on denoising results to guide adaptive feature fusion, thereby injecting reliable cues into the diffusion process for high-fidelity visual reconstruction. Furthermore, we construct the REAL (Raw and Event Acquired in Low-light) dataset which provides 47,800 pixel-aligned low-light RAW images, events, and high-quality references under 0.001-0.8 lux illumination. Extensive experiments demonstrate the superiority of NEC-Diff under extreme darkness. The project are available at: https://github.com/jinghan-xu/NEC-Diff.",
+        "url": "http://arxiv.org/abs/2603.20005v1",
+        "published_date": "2026-03-20T14:51:24+00:00",
+        "updated_date": "2026-03-20T14:51:24+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haoyue Liu",
+            "Jinghan Xu",
+            "Luxin Feng",
+            "Hanyu Zhou",
+            "Haozhi Zhao",
+            "Yi Chang",
+            "Luxin Yan"
+        ],
+        "tldr": "This paper introduces NEC-Diff, a novel diffusion-based framework that fuses event camera data with noisy RAW images to reconstruct high-quality dynamic scenes in extreme darkness. It leverages dual-modal denoising constraints and adaptive feature fusion guided by estimated signal-to-noise ratios.",
+        "tldr_zh": "本文提出了一种名为NEC-Diff的新型扩散模型框架，该框架融合了事件相机数据和有噪声的RAW图像，用于在极暗环境下重建高质量的动态场景。它利用了双模态去噪约束和由信噪比估计引导的自适应特征融合。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Timestep-Aware Block Masking for Efficient Diffusion Model Inference",
+        "summary": "Diffusion Probabilistic Models (DPMs) have achieved great success in image generation but suffer from high inference latency due to their iterative denoising nature. Motivated by the evolving feature dynamics across the denoising trajectory, we propose a novel framework to optimize the computational graph of pre-trained DPMs on a per-timestep basis. By learning timestep-specific masks, our method dynamically determines which blocks to execute or bypass through feature reuse at each inference stage. Unlike global optimization methods that incur prohibitive memory costs via full-chain backpropagation, our method optimizes masks for each timestep independently, ensuring a memory-efficient training process. To guide this process, we introduce a timestep-aware loss scaling mechanism that prioritizes feature fidelity during sensitive denoising phases, complemented by a knowledge-guided mask rectification strategy to prune redundant spatial-temporal dependencies. Our approach is architecture-agnostic and demonstrates significant efficiency gains across a broad spectrum of models, including DDPM, LDM, DiT, and PixArt. Experimental results show that by treating the denoising process as a sequence of optimized computational paths, our method achieves a superior balance between sampling speed and generative quality. Our code will be released.",
+        "url": "http://arxiv.org/abs/2603.19939v1",
+        "published_date": "2026-03-20T13:35:03+00:00",
+        "updated_date": "2026-03-20T13:35:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haodong He",
+            "Yuan Gao",
+            "Weizhong Zhang",
+            "Gui-Song Xia"
+        ],
+        "tldr": "This paper proposes a novel timestep-aware block masking framework for Diffusion Probabilistic Models (DPMs) to accelerate inference by dynamically bypassing redundant computation blocks at each denoising step. This method is memory-efficient and architecture-agnostic, demonstrating significant speedups across various DPM architectures without compromising generative quality.",
+        "tldr_zh": "本文提出了一种新颖的时步感知块掩码框架，用于加速扩散概率模型（DPMs）的推理，通过在每个去噪步骤动态地绕过冗余计算块来实现。该方法内存效率高且与模型架构无关，在不影响生成质量的情况下，在多种DPM架构上实现了显著的速度提升。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Diffusion-Based Makeup Transfer with Facial Region-Aware Makeup Features",
+        "summary": "Current diffusion-based makeup transfer methods commonly use the makeup information encoded by off-the-shelf foundation models (e.g., CLIP) as condition to preserve the makeup style of reference image in the generation. Although effective, these works mainly have two limitations: (1) foundation models pre-trained for generic tasks struggle to capture makeup styles; (2) the makeup features of reference image are injected to the diffusion denoising model as a whole for global makeup transfer, overlooking the facial region-aware makeup features (i.e., eyes, mouth, etc) and limiting the regional controllability for region-specific makeup transfer. To address these, in this work, we propose Facial Region-Aware Makeup features (FRAM), which has two stages: (1) makeup CLIP fine-tuning; (2) identity and facial region-aware makeup injection. For makeup CLIP fine-tuning, unlike prior works using off-the-shelf CLIP, we synthesize annotated makeup style data using GPT-o3 and text-driven image editing model, and then use the data to train a makeup CLIP encoder through self-supervised and image-text contrastive learning. For identity and facial region-aware makeup injection, we construct before-and-after makeup image pairs from the edited images in stage 1 and then use them to learn to inject identity of source image and makeup of reference image to the diffusion denoising model for makeup transfer. Specifically, we use learnable tokens to query the makeup CLIP encoder to extract facial region-aware makeup features for makeup injection, which is learned via an attention loss to enable regional control. As for identity injection, we use a ControlNet Union to encode source image and its 3D mesh simultaneously. The experimental results verify the superiority of our regional controllability and our makeup transfer performance.",
+        "url": "http://arxiv.org/abs/2603.20012v1",
+        "published_date": "2026-03-20T14:54:39+00:00",
+        "updated_date": "2026-03-20T14:54:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zheng Gao",
+            "Debin Meng",
+            "Yunqi Miao",
+            "Zhensong Zhang",
+            "Songcen Xu",
+            "Ioannis Patras",
+            "Jifei Song"
+        ],
+        "tldr": "This paper proposes a new diffusion-based makeup transfer method that addresses limitations in existing approaches by fine-tuning a CLIP encoder for makeup styles and introducing a facial region-aware injection mechanism. This allows for better control and transfer of makeup styles to specific facial regions.",
+        "tldr_zh": "本文提出一种基于扩散的妆容迁移新方法，通过微调CLIP编码器以适应妆容风格，并引入面部区域感知注入机制，克服了现有方法的局限性。这使得妆容风格能够更好地控制并迁移到特定面部区域。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Plausibility to Verifiability: Risk-Controlled Generative OCR for Vision-Language Models",
+        "summary": "Modern vision-language models (VLMs) can act as generative OCR engines, yet open-ended decoding can expose rare but consequential failures. We identify a core deployment misalignment in generative OCR. Autoregressive decoding favors semantic plausibility, whereas OCR requires outputs that are visually grounded and geometrically verifiable. This mismatch produces severe errors, especially over-generation and unsupported substitutions, creating deployment risk even when benchmark accuracy remains high. We therefore formulate frozen VLM OCR as a selective accept/abstain problem and propose a model-agnostic Geometric Risk Controller. The controller probes multiple structured views of the same input, applies lightweight structural screening, and accepts a transcription only when cross-view consensus and stability satisfy predefined criteria, yielding a small family of operating points. Experiments on frozen VLM backbones and standard OCR benchmarks show consistent reductions in extreme-error risk and catastrophic over-generation at predictable coverage costs. Reliable deployment of generative OCR with frozen VLMs benefits from explicit system-level risk control rather than unconstrained generation.",
+        "url": "http://arxiv.org/abs/2603.19790v1",
+        "published_date": "2026-03-20T09:28:09+00:00",
+        "updated_date": "2026-03-20T09:28:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Weile Gong",
+            "Yiping Zuo",
+            "Zijian Lu",
+            "Xin He",
+            "Weibei Fan",
+            "Chen Dai"
+        ],
+        "tldr": "This paper addresses the reliability issues of generative OCR in Vision-Language Models (VLMs) by proposing a Geometric Risk Controller. This controller ensures verifiable geometric consistency across multiple views of an input, thereby reducing consequential failures like over-generation and unsupported substitutions, even when benchmark accuracy is high. The approach allows for controlled trade-offs between error reduction and coverage for reliable deployment of frozen VLMs in OCR tasks.",
+        "tldr_zh": "本文提出了一种几何风险控制器来解决视觉语言模型（VLMs）中生成式OCR的可靠性问题。该控制器通过确保输入的多视图几何一致性来减少诸如过度生成和不支持的替换等严重错误，即使在基准准确率很高的情况下也是如此。该方法允许在减少错误和覆盖率之间进行可控的权衡，从而实现冻结VLMs在OCR任务中的可靠部署。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OrbitNVS: Harnessing Video Diffusion Priors for Novel View Synthesis",
+        "summary": "Novel View Synthesis (NVS) aims to generate unseen views of a 3D object given a limited number of known views. Existing methods often struggle to synthesize plausible views for unobserved regions, particularly under single-view input, and still face challenges in maintaining geometry- and appearance-consistency. To address these issues, we propose OrbitNVS, which reformulates NVS as an orbit video generation task. Through tailored model design and training strategies, we adapt a pre-trained video generation model to the NVS task, leveraging its rich visual priors to achieve high-quality view synthesis. Specifically, we incorporate camera adapters into the video model to enable accurate camera control. To enhance two key properties of 3D objects, geometry and appearance, we design a normal map generation branch and use normal map features to guide the synthesis of the target views via attention mechanism, thereby improving geometric consistency. Moreover, we apply a pixel-space supervision to alleviate blurry appearance caused by spatial compression in the latent space. Extensive experiments show that OrbitNVS significantly outperforms previous methods on the GSO and OmniObject3D benchmarks, especially in the challenging single-view setting (\\eg, +2.9 dB and +2.4 dB PSNR).",
+        "url": "http://arxiv.org/abs/2603.19613v1",
+        "published_date": "2026-03-20T03:40:36+00:00",
+        "updated_date": "2026-03-20T03:40:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jinglin Liang",
+            "Zijian Zhou",
+            "Rui Huang",
+            "Shuangping Huang",
+            "Yichen Gong"
+        ],
+        "tldr": "OrbitNVS reformulates Novel View Synthesis (NVS) as an orbit video generation task, leveraging pre-trained video diffusion models with camera adapters and a normal map generation branch to improve geometry and appearance consistency, outperforming existing methods especially in single-view settings.",
+        "tldr_zh": "OrbitNVS将新视角合成（NVS）重新定义为轨道视频生成任务，利用带有相机适配器和法线图生成分支的预训练视频扩散模型，以提高几何和外观一致性，并在单视图设置中优于现有方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
