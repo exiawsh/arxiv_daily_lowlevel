@@ -1,0 +1,213 @@
+[
+    {
+        "title": "ScrollScape: Unlocking 32K Image Generation With Video Diffusion Priors",
+        "summary": "While diffusion models excel at generating images with conventional dimensions, pushing them to synthesize ultra-high-resolution imagery at extreme aspect ratios (EAR) often triggers catastrophic structural failures, such as object repetition and spatial fragmentation.This limitation fundamentally stems from a lack of robust spatial priors, as static text-to-image models are primarily trained on image distributions with conventional dimensions.To overcome this bottleneck, we present ScrollScape, a novel framework that reformulates EAR image synthesis into a continuous video generation process through two core innovations.By mapping the spatial expansion of a massive canvas to the temporal evolution of video frames, ScrollScape leverages the inherent temporal consistency of video models as a powerful global constraint to ensure long-range structural integrity.Specifically, Scanning Positional Encoding (ScanPE) distributes global coordinates across frames to act as a flexible moving camera, while Scrolling Super-Resolution (ScrollSR) leverages video super-resolution priors to circumvent memory bottlenecks, efficiently scaling outputs to an unprecedented 32K resolution. Fine-tuned on a curated 3K multi-ratio image dataset, ScrollScape effectively aligns pre-trained video priors with the EAR generation task. Extensive evaluations demonstrate that it significantly outperforms existing image-diffusion baselines by eliminating severe localized artifacts. Consequently, our method overcomes inherent structural bottlenecks to ensure exceptional global coherence and visual fidelity across diverse domains at extreme scales.",
+        "url": "http://arxiv.org/abs/2603.24270v1",
+        "published_date": "2026-03-25T13:03:02+00:00",
+        "updated_date": "2026-03-25T13:03:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haodong Yu",
+            "Yabo Zhang",
+            "Donglin Di",
+            "Ruyi Zhang",
+            "Wangmeng Zuo"
+        ],
+        "tldr": "ScrollScape is a novel framework that generates ultra-high-resolution images (up to 32K) at extreme aspect ratios by treating the process as a continuous video generation task. It leverages temporal consistency from video diffusion models with innovations like Scanning Positional Encoding and Scrolling Super-Resolution to overcome structural failures common in static diffusion models.",
+        "tldr_zh": "ScrollScape 是一个新颖的框架，它将超高分辨率（最高 32K）的极端宽高比图像生成视为一个连续的视频生成过程。该框架利用视频扩散模型的时序一致性，并通过扫描位置编码（ScanPE）和滚动超分辨率（ScrollSR）等创新技术，克服了静态扩散模型在生成此类图像时常见的结构性失败。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "InstanceRSR: Real-World Super-Resolution via Instance-Aware Representation Alignment",
+        "summary": "Existing real-world super-resolution (RSR) methods based on generative priors have achieved remarkable progress in producing high-quality and globally consistent reconstructions. However, they often struggle to recover fine-grained details of diverse object instances in complex real-world scenes. This limitation primarily arises because commonly adopted denoising losses (e.g., MSE) inherently favor global consistency while neglecting instance-level perception and restoration. To address this issue, we propose InstanceRSR, a novel RSR framework that jointly models semantic information and introduces instance-level feature alignment. Specifically, we employ low-resolution (LR) images as global consistency guidance while jointly modeling image data and semantic segmentation maps to enforce semantic relevance during sampling. Moreover, we design an instance representation learning module to align the diffusion latent space with the instance latent space, enabling instance-aware feature alignment, and further incorporate a scale alignment mechanism to enhance fine-grained perception and detail recovery. Benefiting from these designs, our approach not only generates photorealistic details but also preserves semantic consistency at the instance level. Extensive experiments on multiple real-world benchmarks demonstrate that InstanceRSR significantly outperforms existing methods in both quantitative metrics and visual quality, achieving new state-of-the-art (SOTA) performance.",
+        "url": "http://arxiv.org/abs/2603.24240v1",
+        "published_date": "2026-03-25T12:27:58+00:00",
+        "updated_date": "2026-03-25T12:27:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zixin Guo",
+            "Kai Zhao",
+            "Luyan Zhang"
+        ],
+        "tldr": "InstanceRSR is a new real-world super-resolution framework that addresses the limitation of existing methods in recovering fine-grained instance details by incorporating instance-level feature alignment and semantic information.",
+        "tldr_zh": "InstanceRSR 是一个新颖的真实世界超分辨率框架，通过引入实例级特征对齐和语义信息，解决了现有方法在恢复精细实例细节方面的局限性。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "RefReward-SR: LR-Conditioned Reward Modeling for Preference-Aligned Super-Resolution",
+        "summary": "Recent advances in generative super-resolution (SR) have greatly improved visual realism, yet existing evaluation and optimization frameworks remain misaligned with human perception. Full-Reference and No-Reference metrics often fail to reflect perceptual preference, either penalizing semantically plausible details due to pixel misalignment or favoring visually sharp but inconsistent artifacts. Moreover, most SR methods rely on ground-truth (GT)-dependent distribution matching, which does not necessarily correspond to human judgments. In this work, we propose RefReward-SR, a low-resolution (LR) reference-aware reward model for preference-aligned SR. Instead of relying on GT supervision or NR evaluation, RefReward-SR assesses high-resolution (HR) reconstructions conditioned on their LR inputs, treating the LR image as a semantic anchor. Leveraging the visual-linguistic priors of a Multimodal Large Language Models (MLLM), it evaluates semantic consistency and plausibility in a reasoning-aware manner. To support this paradigm, we construct RefSR-18K, the first large-scale LR-conditioned preference dataset for SR, providing pairwise rankings based on LR-HR consistency and HR naturalness. We fine-tune the MLLM with Group Relative Policy Optimization (GRPO) using LR-conditioned ranking rewards, and further integrate GRPO into SR model training with RefReward-SR as the core reward signal for preference-aligned generation. Extensive experiments show that our framework achieves substantially better alignment with human judgments, producing reconstructions that preserve semantic consistency while enhancing perceptual plausibility and visual naturalness. Code, models, and datasets will be released upon paper acceptance.",
+        "url": "http://arxiv.org/abs/2603.24198v1",
+        "published_date": "2026-03-25T11:20:51+00:00",
+        "updated_date": "2026-03-25T11:20:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yushuai Song",
+            "Weize Quan",
+            "Weining Wang",
+            "Jiahui Sun",
+            "Jing Liu",
+            "Meng Li",
+            "Pengbin Yu",
+            "Zhentao Chen",
+            "Wei Shen",
+            "Lunxi Yuan",
+            "Dong-ming Yan"
+        ],
+        "tldr": "This paper introduces RefReward-SR, a novel reward modeling framework for super-resolution that aligns generated images with human preferences by conditioning on low-resolution inputs and leveraging MLLM for semantic consistency and plausibility. It also presents a new large-scale dataset and uses GRPO for training.",
+        "tldr_zh": "本文提出了一种新颖的超分辨率奖励建模框架RefReward-SR，通过以低分辨率输入为条件，并利用多模态大语言模型（MLLM）来评估语义一致性和合理性，从而使生成的图像与人类偏好保持一致。该工作还提出了一个新的大规模数据集，并使用GRPO进行训练。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "3D-LLDM: Label-Guided 3D Latent Diffusion Model for Improving High-Resolution Synthetic MR Imaging in Hepatic Structure Segmentation",
+        "summary": "Deep learning and generative models are advancing rapidly, with synthetic data increasingly being integrated into training pipelines for downstream analysis tasks. However, in medical imaging, their adoption remains constrained by the scarcity of reliable annotated datasets. To address this limitation, we propose 3D-LLDM, a label-guided 3D latent diffusion model that generates high-quality synthetic magnetic resonance (MR) volumes with corresponding anatomical segmentation masks. Our approach uses hepatobiliary phase MR images enhanced with the Gd-EOB-DTPA contrast agent to derive structural masks for the liver, portal vein, hepatic vein, and hepatocellular carcinoma, which then guide volumetric synthesis through a ControlNet-based architecture. Trained on 720 real clinical hepatobiliary phase MR scans from Samsung Medical Center, 3D-LLDM achieves a Fréchet Inception Distance (FID) of 28.31, improving over GANs by 70.9% and over state-of-the-art diffusion baselines by 26.7%. When used for data augmentation, the synthetic volumes improve hepatocellular carcinoma segmentation by up to 11.153% Dice score across five CNN architectures.",
+        "url": "http://arxiv.org/abs/2603.23845v1",
+        "published_date": "2026-03-25T02:03:10+00:00",
+        "updated_date": "2026-03-25T02:03:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kyeonghun Kim",
+            "Jaehyeok Bae",
+            "Youngung Han",
+            "Joo Young Bae",
+            "Seoyoung Ju",
+            "Junsu Lim",
+            "Gyeongmin Kim",
+            "Nam-Joon Kim",
+            "Woo Kyoung Jeong",
+            "Ken Ying-Kai Liao",
+            "Won Jae Lee",
+            "Pa Hong",
+            "Hyuk-Jae Lee"
+        ],
+        "tldr": "This paper introduces 3D-LLDM, a label-guided 3D latent diffusion model for generating high-quality synthetic MR images with anatomical segmentation masks. The model improves downstream segmentation tasks, particularly for hepatocellular carcinoma, by addressing the scarcity of annotated medical data.",
+        "tldr_zh": "本文提出了3D-LLDM，一个标签引导的3D潜在扩散模型，用于生成高质量的合成MR图像及对应的解剖分割掩模。该模型通过解决带标注医学数据稀缺的问题，改进了下游的分割任务，特别是在肝细胞癌方面。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "LGTM: Training-Free Light-Guided Text-to-Image Diffusion Model via Initial Noise Manipulation",
+        "summary": "Diffusion models have demonstrated high-quality performance in conditional text-to-image generation, particularly with structural cues such as edges, layouts, and depth. However, lighting conditions have received limited attention and remain difficult to control within the generative process. Existing methods handle lighting through a two-stage pipeline that relights images after generation, which is inefficient. Moreover, they rely on fine-tuning with large datasets and heavy computation, limiting their adaptability to new models and tasks. To address this, we propose a novel Training-Free Light-Guided Text-to-Image Diffusion Model via Initial Noise Manipulation (LGTM), which manipulates the initial latent noise of the diffusion process to guide image generation with text prompts and user-specified light directions. Through a channel-wise analysis of the latent space, we find that selectively manipulating latent channels enables fine-grained lighting control without fine-tuning or modifying the pre-trained model. Extensive experiments show that our method surpasses prompt-based baselines in lighting consistency, while preserving image quality and text alignment. This approach introduces new possibilities for dynamic, user-guided light control. Furthermore, it integrates seamlessly with models like ControlNet, demonstrating adaptability across diverse scenarios.",
+        "url": "http://arxiv.org/abs/2603.24086v1",
+        "published_date": "2026-03-25T08:46:31+00:00",
+        "updated_date": "2026-03-25T08:46:31+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.GR"
+        ],
+        "authors": [
+            "Ryugo Morita",
+            "Stanislav Frolov",
+            "Brian Bernhard Moser",
+            "Ko Watanabe",
+            "Riku Takahashi",
+            "Andreas Dengel"
+        ],
+        "tldr": "This paper introduces LGTM, a novel training-free method for text-to-image diffusion models that manipulates initial latent noise to control lighting conditions without fine-tuning. It achieves better lighting consistency and text alignment compared to prompt-based methods and integrates with models like ControlNet.",
+        "tldr_zh": "本文提出了一种名为LGTM的新型无需训练的方法，用于文本到图像扩散模型。该方法通过操纵初始潜在噪声来控制图像的照明条件，无需进行微调。与基于提示的方法相比，LGTM在照明一致性和文本对齐方面表现更优，并可与ControlNet等模型集成。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "HAM: A Training-Free Style Transfer Approach via Heterogeneous Attention Modulation for Diffusion Models",
+        "summary": "Diffusion models have demonstrated remarkable performance in image generation, particularly within the domain of style transfer. Prevailing style transfer approaches typically leverage pre-trained diffusion models' robust feature extraction capabilities alongside external modular control pathways to explicitly impose style guidance signals. However, these methods often fail to capture complex style reference or retain the identity of user-provided content images, thus falling into the trap of style-content balance. Thus, we propose a training-free style transfer approach via $\\textbf{h}$eterogeneous $\\textbf{a}$ttention $\\textbf{m}$odulation ($\\textbf{HAM}$) to protect identity information during image/text-guided style reference transfer, thereby addressing the style-content trade-off challenge. Specifically, we first introduces style noise initialization to initialize latent noise for diffusion. Then, during the diffusion process, it innovatively employs HAM for different attention mechanisms, including Global Attention Regulation (GAR) and Local Attention Transplantation (LAT), which better preserving the details of the content image while capturing complex style references. Our approach is validated through a series of qualitative and quantitative experiments, achieving state-of-the-art performance on multiple quantitative metrics.",
+        "url": "http://arxiv.org/abs/2603.24043v1",
+        "published_date": "2026-03-25T07:52:30+00:00",
+        "updated_date": "2026-03-25T07:52:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yeqi He",
+            "Liang Li",
+            "Zhiwen Yang",
+            "Xichun Sheng",
+            "Zhidong Zhao",
+            "Chenggang Yan"
+        ],
+        "tldr": "This paper proposes HAM, a training-free style transfer method for diffusion models that uses heterogeneous attention modulation to better preserve content identity while transferring complex styles. It introduces style noise initialization and a novel attention mechanism (GAR and LAT) to address the style-content balance problem.",
+        "tldr_zh": "本文提出了一种名为HAM的无训练风格迁移方法，用于扩散模型。该方法通过异构注意力调制来更好地保留内容身份，同时迁移复杂的风格。它引入了风格噪声初始化以及新颖的注意力机制（GAR和LAT），以解决风格-内容平衡问题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DepthArb: Training-Free Depth-Arbitrated Generation for Occlusion-Robust Image Synthesis",
+        "summary": "Text-to-image diffusion models frequently exhibit deficiencies in synthesizing accurate occlusion relationships of multiple objects, particularly within dense overlapping regions. Existing training-free layout-guided methods predominantly rely on rigid spatial priors that remain agnostic to depth order, often resulting in concept mixing or illogical occlusion. To address these limitations, we propose DepthArb, a training-free framework that resolves occlusion ambiguities by arbitrating attention competition between interacting objects. Specifically, DepthArb employs two core mechanisms: Attention Arbitration Modulation (AAM), which enforces depth-ordered visibility by suppressing background activations in overlapping regions, and Spatial Compactness Control (SCC), which preserves structural integrity by curbing attention divergence. These mechanisms enable robust occlusion generation without model retraining. To systematically evaluate this capability, we propose OcclBench, a comprehensive benchmark designed to evaluate diverse occlusion scenarios. Extensive evaluations demonstrate that DepthArb consistently outperforms state-of-the-art baselines in both occlusion accuracy and visual fidelity. As a plug-and-play method, DepthArb seamlessly enhances the compositional capabilities of diffusion backbones, offering a novel perspective on spatial layering within generative models.",
+        "url": "http://arxiv.org/abs/2603.23924v1",
+        "published_date": "2026-03-25T04:28:17+00:00",
+        "updated_date": "2026-03-25T04:28:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hongjin Niu",
+            "Jiahao Wang",
+            "Xirui Hu",
+            "Weizhan Zhang",
+            "Lan Ma",
+            "Yuan Gao"
+        ],
+        "tldr": "DepthArb is a training-free framework that improves occlusion robustness in text-to-image generation by arbitrating attention competition between objects, using mechanisms to enforce depth order and spatial integrity. It also introduces OcclBench for evaluating occlusion capabilities.",
+        "tldr_zh": "DepthArb是一个无需训练的框架，通过仲裁对象间的注意力竞争，来提升文本到图像生成中的遮挡鲁棒性，使用强制深度顺序和空间完整性的机制。它还引入了OcclBench来评估遮挡能力。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Latent Bias Alignment for High-Fidelity Diffusion Inversion in Real-World Image Reconstruction and Manipulation",
+        "summary": "Recent research has shown that text-to-image diffusion models are capable of generating high-quality images guided by text prompts. But can they be used to generate or approximate real-world images from the seed noise? This is known as the diffusion inversion problem, which serves as a fundamental building block for bridging diffusion models and real-world scenarios. However, existing diffusion inversion methods often suffer from low reconstruction quality or weak robustness. Two major challenges need to be carefully addressed: (1) the misalignment between the inversion and generation trajectories during the diffusion process, and (2) the mismatch between the diffusion inversion process and the VQ autoencoder (VQAE) reconstruction. To address these challenges, we introduce a latent bias vector at each inversion step, which is learned to reduce the misalignment between inversion and generation trajectories. We refer to this strategy as Latent Bias Optimization (LBO). Furthermore, we perform an approximate joint optimization of the diffusion inversion and VQAE reconstruction processes by learning to adjust the image latent representation, which serves as the connecting interface between them. We refer to this technique as Image Latent Boosting (ILB). Extensive experimental results demonstrate that the proposed method significantly improves the image reconstruction quality of the diffusion model, as well as the performance of downstream tasks, including image editing and rare concept generation.",
+        "url": "http://arxiv.org/abs/2603.23903v1",
+        "published_date": "2026-03-25T03:44:21+00:00",
+        "updated_date": "2026-03-25T03:44:21+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Weiming Chen",
+            "Qifan Liu",
+            "Siyi Liu",
+            "Yushun Tang",
+            "Yijia Wang",
+            "Zhihan Zhu",
+            "Zhihai He"
+        ],
+        "tldr": "This paper proposes Latent Bias Optimization (LBO) and Image Latent Boosting (ILB) to address the challenges in diffusion inversion for real-world image reconstruction and manipulation. LBO aligns inversion and generation trajectories, while ILB jointly optimizes diffusion inversion and VQAE reconstruction, leading to improved image quality and downstream task performance.",
+        "tldr_zh": "本文提出了一种名为潜在偏置优化（LBO）和图像潜在增强（ILB）的方法，以解决现实世界图像重建和操纵中扩散反演的挑战。LBO对齐了反演和生成轨迹，而ILB则联合优化了扩散反演和VQAE重建，从而提高了图像质量和下游任务的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Visual Language Model) - March 19, 2026</title>
+    <title>ArXiv CS.CV Papers (Visual Language Model) - March 26, 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>Low-level/Image generation Daily Papers</h1>
         <p>Daily papers related to Image Restoration, Image Super-resolution, Image Generation from cs.CV</p>
         
-            <p>March 19, 2026</p>
+            <p>March 26, 2026</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">ChopGrad: Pixel-Wise Losses for Latent Video Diffusion via Truncated Backpropagation</h2>
+            <h2 class="paper-title">ScrollScape: Unlocking 32K Image Generation With Video Diffusion Priors</h2>
             
-            <p class="paper-summary">Recent video diffusion models achieve high-quality generation through recurrent frame processing where each frame generation depends on previous frames. However, this recurrent mechanism means that training such models in the pixel domain incurs prohibitive memory costs, as activations accumulate across the entire video sequence. This fundamental limitation also makes fine-tuning these models with pixel-wise losses computationally intractable for long or high-resolution videos. This paper introduces ChopGrad, a truncated backpropagation scheme for video decoding, limiting gradient computation to local frame windows while maintaining global consistency. We provide a theoretical analysis of this approximation and show that it enables efficient fine-tuning with frame-wise losses. ChopGrad reduces training memory from scaling linearly with the number of video frames (full backpropagation) to constant memory, and compares favorably to existing state-of-the-art video diffusion models across a suite of conditional video generation tasks with pixel-wise losses, including video super-resolution, video inpainting, video enhancement of neural-rendered scenes, and controlled driving video generation.</p>
+            <p class="paper-summary">While diffusion models excel at generating images with conventional dimensions, pushing them to synthesize ultra-high-resolution imagery at extreme aspect ratios (EAR) often triggers catastrophic structural failures, such as object repetition and spatial fragmentation.This limitation fundamentally stems from a lack of robust spatial priors, as static text-to-image models are primarily trained on image distributions with conventional dimensions.To overcome this bottleneck, we present ScrollScape, a novel framework that reformulates EAR image synthesis into a continuous video generation process through two core innovations.By mapping the spatial expansion of a massive canvas to the temporal evolution of video frames, ScrollScape leverages the inherent temporal consistency of video models as a powerful global constraint to ensure long-range structural integrity.Specifically, Scanning Positional Encoding (ScanPE) distributes global coordinates across frames to act as a flexible moving camera, while Scrolling Super-Resolution (ScrollSR) leverages video super-resolution priors to circumvent memory bottlenecks, efficiently scaling outputs to an unprecedented 32K resolution. Fine-tuned on a curated 3K multi-ratio image dataset, ScrollScape effectively aligns pre-trained video priors with the EAR generation task. Extensive evaluations demonstrate that it significantly outperforms existing image-diffusion baselines by eliminating severe localized artifacts. Consequently, our method overcomes inherent structural bottlenecks to ensure exceptional global coherence and visual fidelity across diverse domains at extreme scales.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: ChopGrad is a novel truncated backpropagation technique that significantly reduces memory costs for training video diffusion models by limiting gradient computation to local frame windows, enabling efficient fine-tuning with pixel-wise losses for various video generation tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ScrollScape is a novel framework that generates ultra-high-resolution images (up to 32K) at extreme aspect ratios by treating the process as a continuous video generation task. It leverages temporal consistency from video diffusion models with innovations like Scanning Positional Encoding and Scrolling Super-Resolution to overcome structural failures common in static diffusion models.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: ChopGrad 是一种新颖的截断反向传播技术，通过将梯度计算限制在局部帧窗口内，显著降低了训练视频扩散模型的内存成本，从而能够有效地进行像素级损失的微调，适用于各种视频生成任务。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ScrollScape 是一个新颖的框架，它将超高分辨率（最高 32K）的极端宽高比图像生成视为一个连续的视频生成过程。该框架利用视频扩散模型的时序一致性，并通过扫描位置编码（ScanPE）和滚动超分辨率（ScrollSR）等创新技术，克服了静态扩散模型在生成此类图像时常见的结构性失败。</p>
             
 
             
@@ -240,16 +240,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -293,11 +293,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2603.17812v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2603.24270v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Dmitriy Rivkin, Parker Ewen, Lili Gao, Julian Ost, Stefanie Walz, Rasika Kangutkar, Mario Bijelic, Felix Heide</p>
+            <p class="paper-authors">Authors: Haodong Yu, Yabo Zhang, Donglin Di, Ruyi Zhang, Wangmeng Zuo</p>
             
         </motion.div>
         
@@ -309,16 +309,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Joint Degradation-Aware Arbitrary-Scale Super-Resolution for Variable-Rate Extreme Image Compression</h2>
+            <h2 class="paper-title">InstanceRSR: Real-World Super-Resolution via Instance-Aware Representation Alignment</h2>
             
-            <p class="paper-summary">Recent diffusion-based extreme image compression methods have demonstrated remarkable performance at ultra-low bitrates. However, most approaches require training separate diffusion models for each target bitrate, resulting in substantial computational overhead and hindering practical deployment. Meanwhile, recent studies have shown that joint super-resolution can serve as an effective approach for enhancing low-bitrate reconstruction. However, when moving toward ultra-low bitrate regimes, these methods struggle due to severe information loss, and their reliance on fixed super-resolution scales prevents flexible adaptation across diverse bitrates.
-  To address these limitations, we propose ASSR-EIC, a novel image compression framework that leverages arbitrary-scale super-resolution (ASSR) to support variable-rate extreme image compression (EIC). An arbitrary-scale downsampling module is introduced at the encoder side to provide controllable rate reduction, while a diffusion-based, joint degradation-aware ASSR decoder enables rate-adaptive reconstruction within a single model. We exploit the compression- and rescaling-aware diffusion prior to guide the reconstruction, yielding high fidelity and high realism restoration across diverse compression and rescaling settings. Specifically, we design a global compression-rescaling adaptor that offers holistic guidance for rate adaptation, and a local compression-rescaling modulator that dynamically balances generative and fidelity-oriented behaviors to achieve fine-grained, bitrate-adaptive detail restoration. To further enhance reconstruction quality, we introduce a dual semantic-enhanced design.
-  Extensive experiments demonstrate that ASSR-EIC delivers state-of-the-art performance in extreme image compression while simultaneously supporting flexible bitrate control and adaptive rate-dependent reconstruction.</p>
+            <p class="paper-summary">Existing real-world super-resolution (RSR) methods based on generative priors have achieved remarkable progress in producing high-quality and globally consistent reconstructions. However, they often struggle to recover fine-grained details of diverse object instances in complex real-world scenes. This limitation primarily arises because commonly adopted denoising losses (e.g., MSE) inherently favor global consistency while neglecting instance-level perception and restoration. To address this issue, we propose InstanceRSR, a novel RSR framework that jointly models semantic information and introduces instance-level feature alignment. Specifically, we employ low-resolution (LR) images as global consistency guidance while jointly modeling image data and semantic segmentation maps to enforce semantic relevance during sampling. Moreover, we design an instance representation learning module to align the diffusion latent space with the instance latent space, enabling instance-aware feature alignment, and further incorporate a scale alignment mechanism to enhance fine-grained perception and detail recovery. Benefiting from these designs, our approach not only generates photorealistic details but also preserves semantic consistency at the instance level. Extensive experiments on multiple real-world benchmarks demonstrate that InstanceRSR significantly outperforms existing methods in both quantitative metrics and visual quality, achieving new state-of-the-art (SOTA) performance.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes ASSR-EIC, a novel framework for arbitrary-scale super-resolution that enables variable-rate extreme image compression within a single diffusion model. It uses a controllable downsampling encoder and a degradation-aware, rate-adaptive diffusion decoder to achieve high-fidelity reconstruction across diverse compression and rescaling settings.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: InstanceRSR is a new real-world super-resolution framework that addresses the limitation of existing methods in recovering fine-grained instance details by incorporating instance-level feature alignment and semantic information.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新颖的任意尺度超分辨率（ASSR）框架，实现了变量比特率的极端图像压缩（EIC）。该框架在一个单一的扩散模型内完成，通过一个可控的下采样编码器和一个具备感知压缩和重缩放退化的扩散解码器，在各种压缩和重缩放场景下实现高保真重建。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: InstanceRSR 是一个新颖的真实世界超分辨率框架，通过引入实例级特征对齐和语义信息，解决了现有方法在恢复精细实例细节方面的局限性。</p>
             
 
             
@@ -352,8 +350,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -389,11 +387,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2603.17408v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2603.24240v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xinning Chai, Zhengxue Cheng, Xin Li, Rong Xie, Li Song</p>
+            <p class="paper-authors">Authors: Zixin Guo, Kai Zhao, Luyan Zhang</p>
             
         </motion.div>
         
@@ -405,14 +403,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">VisionNVS: Self-Supervised Inpainting for Novel View Synthesis under the Virtual-Shift Paradigm</h2>
+            <h2 class="paper-title">RefReward-SR: LR-Conditioned Reward Modeling for Preference-Aligned Super-Resolution</h2>
             
-            <p class="paper-summary">A fundamental bottleneck in Novel View Synthesis (NVS) for autonomous driving is the inherent supervision gap on novel trajectories: models are tasked with synthesizing unseen views during inference, yet lack ground truth images for these shifted poses during training. In this paper, we propose VisionNVS, a camera-only framework that fundamentally reformulates view synthesis from an ill-posed extrapolation problem into a self-supervised inpainting task. By introducing a ``Virtual-Shift'' strategy, we use monocular depth proxies to simulate occlusion patterns and map them onto the original view. This paradigm shift allows the use of raw, recorded images as pixel-perfect supervision, effectively eliminating the domain gap inherent in previous approaches. Furthermore, we address spatial consistency through a Pseudo-3D Seam Synthesis strategy, which integrates visual data from adjacent cameras during training to explicitly model real-world photometric discrepancies and calibration errors. Experiments demonstrate that VisionNVS achieves superior geometric fidelity and visual quality compared to LiDAR-dependent baselines, offering a robust solution for scalable driving simulation.</p>
+            <p class="paper-summary">Recent advances in generative super-resolution (SR) have greatly improved visual realism, yet existing evaluation and optimization frameworks remain misaligned with human perception. Full-Reference and No-Reference metrics often fail to reflect perceptual preference, either penalizing semantically plausible details due to pixel misalignment or favoring visually sharp but inconsistent artifacts. Moreover, most SR methods rely on ground-truth (GT)-dependent distribution matching, which does not necessarily correspond to human judgments. In this work, we propose RefReward-SR, a low-resolution (LR) reference-aware reward model for preference-aligned SR. Instead of relying on GT supervision or NR evaluation, RefReward-SR assesses high-resolution (HR) reconstructions conditioned on their LR inputs, treating the LR image as a semantic anchor. Leveraging the visual-linguistic priors of a Multimodal Large Language Models (MLLM), it evaluates semantic consistency and plausibility in a reasoning-aware manner. To support this paradigm, we construct RefSR-18K, the first large-scale LR-conditioned preference dataset for SR, providing pairwise rankings based on LR-HR consistency and HR naturalness. We fine-tune the MLLM with Group Relative Policy Optimization (GRPO) using LR-conditioned ranking rewards, and further integrate GRPO into SR model training with RefReward-SR as the core reward signal for preference-aligned generation. Extensive experiments show that our framework achieves substantially better alignment with human judgments, producing reconstructions that preserve semantic consistency while enhancing perceptual plausibility and visual naturalness. Code, models, and datasets will be released upon paper acceptance.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: VisionNVS reformulates Novel View Synthesis (NVS) as a self-supervised inpainting task using a novel 'Virtual-Shift' strategy to overcome supervision gaps in autonomous driving. It achieves this by simulating occlusions from depth proxies and using raw images for pixel-perfect supervision, further enhancing spatial consistency with a 'Pseudo-3D Seam Synthesis' approach, outperforming LiDAR-dependent methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces RefReward-SR, a novel reward modeling framework for super-resolution that aligns generated images with human preferences by conditioning on low-resolution inputs and leveraging MLLM for semantic consistency and plausibility. It also presents a new large-scale dataset and uses GRPO for training.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: VisionNVS 将新视角合成 (NVS) 重构为一项自监督修复任务，采用新颖的“虚拟偏移”策略来克服自动驾驶中的监督鸿沟。它通过模拟深度代理的遮挡，并使用原始图像进行像素级精确监督来实现这一点，并结合“伪 3D 接缝合成”方法增强空间一致性，其性能优于依赖 LiDAR 的方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新颖的超分辨率奖励建模框架RefReward-SR，通过以低分辨率输入为条件，并利用多模态大语言模型（MLLM）来评估语义一致性和合理性，从而使生成的图像与人类偏好保持一致。该工作还提出了一个新的大规模数据集，并使用GRPO进行训练。</p>
             
 
             
@@ -422,16 +420,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -483,11 +481,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2603.17382v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2603.24198v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Hongbo Lu, Liang Yao, Chenghao He, Fan Liu, Wenlong Liao, Tao He, Pai Peng</p>
+            <p class="paper-authors">Authors: Yushuai Song, Weize Quan, Weining Wang, Jiahui Sun, Jing Liu, Meng Li, Pengbin Yu, Zhentao Chen, Wei Shen, Lunxi Yuan, Dong-ming Yan</p>
             
         </motion.div>
         
@@ -499,14 +497,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">PaAgent: Portrait-Aware Image Restoration Agent via Subjective-Objective Reinforcement Learning</h2>
+            <h2 class="paper-title">3D-LLDM: Label-Guided 3D Latent Diffusion Model for Improving High-Resolution Synthetic MR Imaging in Hepatic Structure Segmentation</h2>
             
-            <p class="paper-summary">Image Restoration (IR) agents, leveraging multimodal large language models to perceive degradation and invoke restoration tools, have shown promise in automating IR tasks. However, existing IR agents typically lack an insight summarization mechanism for past interactions, which results in an exhaustive search for the optimal IR tool. To address this limitation, we propose a portrait-aware IR agent, dubbed PaAgent, which incorporates a self-evolving portrait bank for IR tools and Retrieval-Augmented Generation (RAG) to select a suitable IR tool for input. Specifically, to construct and evolve the portrait bank, the PaAgent continuously enriches it by summarizing the characteristics of various IR tools with restored images, selected IR tools, and degraded images. In addition, the RAG is employed to select the optimal IR tool for the input image by retrieving relevant insights from the portrait bank. Furthermore, to enhance PaAgent's ability to perceive degradation in complex scenes, we propose a subjective-objective reinforcement learning strategy that considers both image quality scores and semantic insights in reward generation, which accurately provides the degradation information even under partial and non-uniform degradation. Extensive experiments across 8 IR benchmarks, covering six single-degradation and eight mixed-degradation scenarios, validate PaAgent's superiority in addressing complex IR tasks. Our project page is \href{https://wyjgr.github.io/PaAgent.html}{PaAgent}.</p>
+            <p class="paper-summary">Deep learning and generative models are advancing rapidly, with synthetic data increasingly being integrated into training pipelines for downstream analysis tasks. However, in medical imaging, their adoption remains constrained by the scarcity of reliable annotated datasets. To address this limitation, we propose 3D-LLDM, a label-guided 3D latent diffusion model that generates high-quality synthetic magnetic resonance (MR) volumes with corresponding anatomical segmentation masks. Our approach uses hepatobiliary phase MR images enhanced with the Gd-EOB-DTPA contrast agent to derive structural masks for the liver, portal vein, hepatic vein, and hepatocellular carcinoma, which then guide volumetric synthesis through a ControlNet-based architecture. Trained on 720 real clinical hepatobiliary phase MR scans from Samsung Medical Center, 3D-LLDM achieves a Fréchet Inception Distance (FID) of 28.31, improving over GANs by 70.9% and over state-of-the-art diffusion baselines by 26.7%. When used for data augmentation, the synthetic volumes improve hepatocellular carcinoma segmentation by up to 11.153% Dice score across five CNN architectures.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: PaAgent is a portrait-aware image restoration agent that uses a self-evolving portrait bank and Retrieval-Augmented Generation (RAG) to select optimal restoration tools. It also incorporates a subjective-objective reinforcement learning strategy to better perceive degradation, demonstrating superiority in complex image restoration tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces 3D-LLDM, a label-guided 3D latent diffusion model for generating high-quality synthetic MR images with anatomical segmentation masks. The model improves downstream segmentation tasks, particularly for hepatocellular carcinoma, by addressing the scarcity of annotated medical data.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: PaAgent是一个注重人像的图像恢复代理，它使用一个自我演进的人像库和检索增强生成（RAG）来选择最佳恢复工具。它还采用主观-客观强化学习策略来更好地感知图像退化，在复杂的图像恢复任务中表现出优越性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了3D-LLDM，一个标签引导的3D潜在扩散模型，用于生成高质量的合成MR图像及对应的解剖分割掩模。该模型通过解决带标注医学数据稀缺的问题，改进了下游的分割任务，特别是在肝细胞癌方面。</p>
             
 
             
@@ -540,8 +538,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -577,11 +575,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2603.17055v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2603.23845v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yijian Wang, Qingsen Yan, Jiantao Zhou, Duwei Dai, Wei Dong</p>
+            <p class="paper-authors">Authors: Kyeonghun Kim, Jaehyeok Bae, Youngung Han, Joo Young Bae, Seoyoung Ju, Junsu Lim, Gyeongmin Kim, Nam-Joon Kim, Woo Kyoung Jeong, Ken Ying-Kai Liao, Won Jae Lee, Pa Hong, Hyuk-Jae Lee</p>
             
         </motion.div>
         
@@ -593,14 +591,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">The Unreasonable Effectiveness of Text Embedding Interpolation for Continuous Image Steering</h2>
+            <h2 class="paper-title">LGTM: Training-Free Light-Guided Text-to-Image Diffusion Model via Initial Noise Manipulation</h2>
             
-            <p class="paper-summary">We present a training-free framework for continuous and controllable image editing at test time for text-conditioned generative models. In contrast to prior approaches that rely on additional training or manual user intervention, we find that a simple steering in the text-embedding space is sufficient to produce smooth edit control. Given a target concept (e.g., enhancing photorealism or changing facial expression), we use a large language model to automatically construct a small set of debiased contrastive prompt pairs, from which we compute a steering vector in the generator's text-encoder space. We then add this vector directly to the input prompt representation to control generation along the desired semantic axis. To obtain a continuous control, we propose an elastic range search procedure that automatically identifies an effective interval of steering magnitudes, avoiding both under-steering (no-edit) and over-steering (changing other attributes). Adding the scaled versions of the same vector within this interval yields smooth and continuous edits. Since our method modifies only textual representations, it naturally generalizes across text-conditioned modalities, including image and video generation. To quantify the steering continuity, we introduce a new evaluation metric that measures the uniformity of semantic change across edit strengths. We compare the continuous editing behavior across methods and find that, despite its simplicity and lightweight design, our approach is comparable to training-based alternatives, outperforming other training-free methods.</p>
+            <p class="paper-summary">Diffusion models have demonstrated high-quality performance in conditional text-to-image generation, particularly with structural cues such as edges, layouts, and depth. However, lighting conditions have received limited attention and remain difficult to control within the generative process. Existing methods handle lighting through a two-stage pipeline that relights images after generation, which is inefficient. Moreover, they rely on fine-tuning with large datasets and heavy computation, limiting their adaptability to new models and tasks. To address this, we propose a novel Training-Free Light-Guided Text-to-Image Diffusion Model via Initial Noise Manipulation (LGTM), which manipulates the initial latent noise of the diffusion process to guide image generation with text prompts and user-specified light directions. Through a channel-wise analysis of the latent space, we find that selectively manipulating latent channels enables fine-grained lighting control without fine-tuning or modifying the pre-trained model. Extensive experiments show that our method surpasses prompt-based baselines in lighting consistency, while preserving image quality and text alignment. This approach introduces new possibilities for dynamic, user-guided light control. Furthermore, it integrates seamlessly with models like ControlNet, demonstrating adaptability across diverse scenarios.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a training-free method for continuous and controllable image editing by interpolating text embeddings. It achieves smooth edits by constructing steering vectors from prompt pairs and applying an elastic range search, generalizing across modalities like image and video generation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces LGTM, a novel training-free method for text-to-image diffusion models that manipulates initial latent noise to control lighting conditions without fine-tuning. It achieves better lighting consistency and text alignment compared to prompt-based methods and integrates with models like ControlNet.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种无需训练即可在文本嵌入空间进行插值，从而实现连续可控图像编辑的方法。通过构建提示对的引导向量并应用弹性范围搜索，实现平滑编辑，并可推广到图像和视频生成等多种模态。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种名为LGTM的新型无需训练的方法，用于文本到图像扩散模型。该方法通过操纵初始潜在噪声来控制图像的照明条件，无需进行微调。与基于提示的方法相比，LGTM在照明一致性和文本对齐方面表现更优，并可与ControlNet等模型集成。</p>
             
 
             
@@ -610,8 +608,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -626,16 +624,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -671,11 +669,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2603.17998v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2603.24086v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yigit Ekin, Yossi Gandelsman</p>
+            <p class="paper-authors">Authors: Ryugo Morita, Stanislav Frolov, Brian Bernhard Moser, Ko Watanabe, Riku Takahashi, Andreas Dengel</p>
             
         </motion.div>
         
@@ -687,14 +685,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Motion-Adaptive Temporal Attention for Lightweight Video Generation with Stable Diffusion</h2>
+            <h2 class="paper-title">HAM: A Training-Free Style Transfer Approach via Heterogeneous Attention Modulation for Diffusion Models</h2>
             
-            <p class="paper-summary">We present a motion-adaptive temporal attention mechanism for parameter-efficient video generation built upon frozen Stable Diffusion models. Rather than treating all video content uniformly, our method dynamically adjusts temporal attention receptive fields based on estimated motion content: high-motion sequences attend locally across frames to preserve rapidly changing details, while low-motion sequences attend globally to enforce scene consistency. We inject lightweight temporal attention modules into all UNet transformer blocks via a cascaded strategy -- global attention in down-sampling and middle blocks for semantic stabilization, motion-adaptive attention in up-sampling blocks for fine-grained refinement. Combined with temporally correlated noise initialization and motion-aware gating, the system adds only 25.8M trainable parameters (2.9\% of the base UNet) while achieving competitive results on WebVid validation when trained on 100K videos. We demonstrate that the standard denoising objective alone provides sufficient implicit temporal regularization, outperforming approaches that add explicit temporal consistency losses. Our ablation studies reveal a clear trade-off between noise correlation and motion amplitude, providing a practical inference-time control for diverse generation behaviors.</p>
+            <p class="paper-summary">Diffusion models have demonstrated remarkable performance in image generation, particularly within the domain of style transfer. Prevailing style transfer approaches typically leverage pre-trained diffusion models' robust feature extraction capabilities alongside external modular control pathways to explicitly impose style guidance signals. However, these methods often fail to capture complex style reference or retain the identity of user-provided content images, thus falling into the trap of style-content balance. Thus, we propose a training-free style transfer approach via $\textbf{h}$eterogeneous $\textbf{a}$ttention $\textbf{m}$odulation ($\textbf{HAM}$) to protect identity information during image/text-guided style reference transfer, thereby addressing the style-content trade-off challenge. Specifically, we first introduces style noise initialization to initialize latent noise for diffusion. Then, during the diffusion process, it innovatively employs HAM for different attention mechanisms, including Global Attention Regulation (GAR) and Local Attention Transplantation (LAT), which better preserving the details of the content image while capturing complex style references. Our approach is validated through a series of qualitative and quantitative experiments, achieving state-of-the-art performance on multiple quantitative metrics.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a parameter-efficient motion-adaptive temporal attention mechanism for video generation using Stable Diffusion. It dynamically adjusts attention based on motion to preserve details and ensure consistency, achieving competitive results with minimal added parameters and demonstrating that standard denoising objectives are sufficient for temporal regularization.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes HAM, a training-free style transfer method for diffusion models that uses heterogeneous attention modulation to better preserve content identity while transferring complex styles. It introduces style noise initialization and a novel attention mechanism (GAR and LAT) to address the style-content balance problem.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种参数高效的运动自适应时间注意力机制，用于基于 Stable Diffusion 的视频生成。该机制根据运动动态调整注意力，以保留细节并确保一致性，仅需少量新增参数即可获得有竞争力的结果，并证明标准去噪目标足以实现时间正则化。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种名为HAM的无训练风格迁移方法，用于扩散模型。该方法通过异构注意力调制来更好地保留内容身份，同时迁移复杂的风格。它引入了风格噪声初始化以及新颖的注意力机制（GAR和LAT），以解决风格-内容平衡问题。</p>
             
 
             
@@ -765,11 +763,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2603.17398v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2603.24043v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Rui Hong, Shuxue Quan</p>
+            <p class="paper-authors">Authors: Yeqi He, Liang Li, Zhiwen Yang, Xichun Sheng, Zhidong Zhao, Chenggang Yan</p>
             
         </motion.div>
         
@@ -781,14 +779,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Stereo World Model: Camera-Guided Stereo Video Generation</h2>
+            <h2 class="paper-title">DepthArb: Training-Free Depth-Arbitrated Generation for Occlusion-Robust Image Synthesis</h2>
             
-            <p class="paper-summary">We present StereoWorld, a camera-conditioned stereo world model that jointly learns appearance and binocular geometry for end-to-end stereo video generation.Unlike monocular RGB or RGBD approaches, StereoWorld operates exclusively within the RGB modality, while simultaneously grounding geometry directly from disparity. To efficiently achieve consistent stereo generation, our approach introduces two key designs: (1) a unified camera-frame RoPE that augments latent tokens with camera-aware rotary positional encoding, enabling relative, view- and time-consistent conditioning while preserving pretrained video priors via a stable attention initialization; and (2) a stereo-aware attention decomposition that factors full 4D attention into 3D intra-view attention plus horizontal row attention, leveraging the epipolar prior to capture disparity-aligned correspondences with substantially lower compute. Across benchmarks, StereoWorld improves stereo consistency, disparity accuracy, and camera-motion fidelity over strong monocular-then-convert pipelines, achieving more than 3x faster generation with an additional 5% gain in viewpoint consistency. Beyond benchmarks, StereoWorld enables end-to-end binocular VR rendering without depth estimation or inpainting, enhances embodied policy learning through metric-scale depth grounding, and is compatible with long-video distillation for extended interactive stereo synthesis.</p>
+            <p class="paper-summary">Text-to-image diffusion models frequently exhibit deficiencies in synthesizing accurate occlusion relationships of multiple objects, particularly within dense overlapping regions. Existing training-free layout-guided methods predominantly rely on rigid spatial priors that remain agnostic to depth order, often resulting in concept mixing or illogical occlusion. To address these limitations, we propose DepthArb, a training-free framework that resolves occlusion ambiguities by arbitrating attention competition between interacting objects. Specifically, DepthArb employs two core mechanisms: Attention Arbitration Modulation (AAM), which enforces depth-ordered visibility by suppressing background activations in overlapping regions, and Spatial Compactness Control (SCC), which preserves structural integrity by curbing attention divergence. These mechanisms enable robust occlusion generation without model retraining. To systematically evaluate this capability, we propose OcclBench, a comprehensive benchmark designed to evaluate diverse occlusion scenarios. Extensive evaluations demonstrate that DepthArb consistently outperforms state-of-the-art baselines in both occlusion accuracy and visual fidelity. As a plug-and-play method, DepthArb seamlessly enhances the compositional capabilities of diffusion backbones, offering a novel perspective on spatial layering within generative models.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: StereoWorld is a camera-conditioned world model for end-to-end stereo video generation, which jointly learns appearance and binocular geometry from RGB input. It achieves this with novel camera-frame RoPE and stereo-aware attention decomposition, improving stereo consistency, disparity accuracy, and camera-motion fidelity significantly faster than existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: DepthArb is a training-free framework that improves occlusion robustness in text-to-image generation by arbitrating attention competition between objects, using mechanisms to enforce depth order and spatial integrity. It also introduces OcclBench for evaluating occlusion capabilities.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: StereoWorld 是一个面向端到端立体视频生成的、由相机条件约束的世界模型，它从 RGB 输入中联合学习外观和双目几何。它通过新颖的相机帧 RoPE 和立体感知注意力分解来实现这一点，在立体一致性、视差准确性和相机运动保真度方面取得了显著的改进，并且速度比现有方法快得多。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: DepthArb是一个无需训练的框架，通过仲裁对象间的注意力竞争，来提升文本到图像生成中的遮挡鲁棒性，使用强制深度顺序和空间完整性的机制。它还引入了OcclBench来评估遮挡能力。</p>
             
 
             
@@ -806,24 +804,24 @@
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -859,11 +857,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2603.17375v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2603.23924v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yang-Tian Sun, Zehuan Huang, Yifan Niu, Lin Ma, Yan-Pei Cao, Yuewen Ma, Xiaojuan Qi</p>
+            <p class="paper-authors">Authors: Hongjin Niu, Jiahao Wang, Xirui Hu, Weizhan Zhang, Lan Ma, Yuan Gao</p>
             
         </motion.div>
         
@@ -875,14 +873,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">AR-CoPO: Align Autoregressive Video Generation with Contrastive Policy Optimization</h2>
+            <h2 class="paper-title">Latent Bias Alignment for High-Fidelity Diffusion Inversion in Real-World Image Reconstruction and Manipulation</h2>
             
-            <p class="paper-summary">Streaming autoregressive (AR) video generators combined with few-step distillation achieve low-latency, high-quality synthesis, yet remain difficult to align via reinforcement learning from human feedback (RLHF). Existing SDE-based GRPO methods face challenges in this setting: few-step ODEs and consistency model samplers deviate from standard flow-matching ODEs, and their short, low-stochasticity trajectories are highly sensitive to initialization noise, rendering intermediate SDE exploration ineffective. We propose AR-CoPO (AutoRegressive Contrastive Policy Optimization), a framework that adapts the Neighbor GRPO contrastive perspective to streaming AR generation. AR-CoPO introduces chunk-level alignment via a forking mechanism that constructs neighborhood candidates at a randomly selected chunk, assigns sequence-level rewards, and performs localized GRPO updates. We further propose a semi-on-policy training strategy that complements on-policy exploration with exploitation over a replay buffer of reference rollouts, improving generation quality across domains. Experiments on Self-Forcing demonstrate that AR-CoPO improves both out-of-domain generalization and in-domain human preference alignment over the baseline, providing evidence of genuine alignment rather than reward hacking.</p>
+            <p class="paper-summary">Recent research has shown that text-to-image diffusion models are capable of generating high-quality images guided by text prompts. But can they be used to generate or approximate real-world images from the seed noise? This is known as the diffusion inversion problem, which serves as a fundamental building block for bridging diffusion models and real-world scenarios. However, existing diffusion inversion methods often suffer from low reconstruction quality or weak robustness. Two major challenges need to be carefully addressed: (1) the misalignment between the inversion and generation trajectories during the diffusion process, and (2) the mismatch between the diffusion inversion process and the VQ autoencoder (VQAE) reconstruction. To address these challenges, we introduce a latent bias vector at each inversion step, which is learned to reduce the misalignment between inversion and generation trajectories. We refer to this strategy as Latent Bias Optimization (LBO). Furthermore, we perform an approximate joint optimization of the diffusion inversion and VQAE reconstruction processes by learning to adjust the image latent representation, which serves as the connecting interface between them. We refer to this technique as Image Latent Boosting (ILB). Extensive experimental results demonstrate that the proposed method significantly improves the image reconstruction quality of the diffusion model, as well as the performance of downstream tasks, including image editing and rare concept generation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: AR-CoPO is a new reinforcement learning framework for aligning autoregressive video generation with human feedback by using chunk-level contrastive policy optimization and a semi-on-policy training strategy. It demonstrates improved out-of-domain generalization and human preference alignment compared to existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes Latent Bias Optimization (LBO) and Image Latent Boosting (ILB) to address the challenges in diffusion inversion for real-world image reconstruction and manipulation. LBO aligns inversion and generation trajectories, while ILB jointly optimizes diffusion inversion and VQAE reconstruction, leading to improved image quality and downstream task performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: AR-CoPO 是一个新颖的强化学习框架，通过采用分块级对比策略优化和半在线训练策略，将自回归视频生成与人类反馈进行对齐。实验结果表明，与现有方法相比，AR-CoPO 在域外泛化和领域内人类偏好对齐方面均有所提升。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种名为潜在偏置优化（LBO）和图像潜在增强（ILB）的方法，以解决现实世界图像重建和操纵中扩散反演的挑战。LBO对齐了反演和生成轨迹，而ILB则联合优化了扩散反演和VQAE重建，从而提高了图像质量和下游任务的性能。</p>
             
 
             
@@ -892,8 +890,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(5/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -908,16 +906,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -942,29 +940,29 @@
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2603.17461v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2603.23903v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Dailan He, Guanlin Feng, Xingtong Ge, Yi Zhang, Bingqi Ma, Guanglu Song, Yu Liu, Hongsheng Li</p>
+            <p class="paper-authors">Authors: Weiming Chen, Qifan Liu, Siyi Liu, Yushun Tang, Yijia Wang, Zhihan Zhu, Zhihai He</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2026-03-26 03:45:25 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2026-03-26 03:50:16 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
