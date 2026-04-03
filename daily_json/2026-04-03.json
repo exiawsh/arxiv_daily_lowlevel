@@ -1,0 +1,168 @@
+[
+    {
+        "title": "Modular Energy Steering for Safe Text-to-Image Generation with Foundation Models",
+        "summary": "Controlling the behavior of text-to-image generative models is critical for safe and practical deployment. Existing safety approaches typically rely on model fine-tuning or curated datasets, which can degrade generation quality or limit scalability. We propose an inference-time steering framework that leverages gradient feedback from frozen pretrained foundation models to guide the generation process without modifying the underlying generator. Our key observation is that vision-language foundation models encode rich semantic representations that can be repurposed as off-the-shelf supervisory signals during generation. By injecting such feedback through clean latent estimates at each sampling step, our method formulates safety steering as an energy-based sampling problem. This design enables modular, training-free safety control that is compatible with both diffusion and flow-matching models and can generalize across diverse visual concepts. Experiments demonstrate state-of-the-art robustness against NSFW red-teaming benchmarks and effective multi-target steering, while preserving high generation quality on benign non-targeted prompts. Our framework provides a principled approach for utilizing foundation models as semantic energy estimators, enabling reliable and scalable safety control for text-to-image generation.",
+        "url": "http://arxiv.org/abs/2604.02265v1",
+        "published_date": "2026-04-02T16:59:28+00:00",
+        "updated_date": "2026-04-02T16:59:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yaoteng Tan",
+            "Zikui Cai",
+            "M. Salman Asif"
+        ],
+        "tldr": "This paper proposes a novel inference-time framework called \"Modular Energy Steering\" that uses pre-trained vision-language foundation models as semantic energy estimators to guide text-to-image generation, ensuring safety without modifying the generator. It's a training-free, modular approach compatible with various generation models and demonstrates state-of-the-art robustness and multi-target steering while maintaining generation quality.",
+        "tldr_zh": "本文提出了一种名为“模块化能量引导”的推理时框架，该框架利用预训练的视觉语言基础模型作为语义能量估计器，来指导文本到图像的生成，从而在不修改生成器的情况下确保安全性。这是一种无需训练、模块化的方法，兼容各种生成模型，并在保持生成质量的同时，展示了在防御NSFW红队测试和多目标引导方面的领先性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Generative World Renderer",
+        "summary": "Scaling generative inverse and forward rendering to real-world scenarios is bottlenecked by the limited realism and temporal coherence of existing synthetic datasets. To bridge this persistent domain gap, we introduce a large-scale, dynamic dataset curated from visually complex AAA games. Using a novel dual-screen stitched capture method, we extracted 4M continuous frames (720p/30 FPS) of synchronized RGB and five G-buffer channels across diverse scenes, visual effects, and environments, including adverse weather and motion-blur variants. This dataset uniquely advances bidirectional rendering: enabling robust in-the-wild geometry and material decomposition, and facilitating high-fidelity G-buffer-guided video generation. Furthermore, to evaluate the real-world performance of inverse rendering without ground truth, we propose a novel VLM-based assessment protocol measuring semantic, spatial, and temporal consistency. Experiments demonstrate that inverse renderers fine-tuned on our data achieve superior cross-dataset generalization and controllable generation, while our VLM evaluation strongly correlates with human judgment. Combined with our toolkit, our forward renderer enables users to edit styles of AAA games from G-buffers using text prompts.",
+        "url": "http://arxiv.org/abs/2604.02329v1",
+        "published_date": "2026-04-02T17:59:53+00:00",
+        "updated_date": "2026-04-02T17:59:53+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zheng-Hui Huang",
+            "Zhixiang Wang",
+            "Jiaming Tan",
+            "Ruihan Yu",
+            "Yidan Zhang",
+            "Bo Zheng",
+            "Yu-Lun Liu",
+            "Yung-Yu Chuang",
+            "Kaipeng Zhang"
+        ],
+        "tldr": "This paper introduces a large-scale synthetic dataset from AAA games to improve generative inverse and forward rendering. They propose a novel capture method and evaluation protocol, demonstrating improved generalization and controllable generation, and enabling text-guided style editing of game visuals.",
+        "tldr_zh": "本文引入了一个来自AAA游戏的大规模合成数据集，以改进生成式逆向和前向渲染。他们提出了一种新颖的采集方法和评估协议，展示了改进的泛化能力和可控生成，并实现了文本引导的游戏视觉风格编辑。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Omni123: Exploring 3D Native Foundation Models with Limited 3D Data by Unifying Text to 2D and 3D Generation",
+        "summary": "Recent multimodal large language models have achieved strong performance in unified text and image understanding and generation, yet extending such native capability to 3D remains challenging due to limited data. Compared to abundant 2D imagery, high-quality 3D assets are scarce, making 3D synthesis under-constrained. Existing methods often rely on indirect pipelines that edit in 2D and lift results into 3D via optimization, sacrificing geometric consistency. We present Omni123, a 3D-native foundation model that unifies text-to-2D and text-to-3D generation within a single autoregressive framework. Our key insight is that cross-modal consistency between images and 3D can serve as an implicit structural constraint. By representing text, images, and 3D as discrete tokens in a shared sequence space, the model leverages abundant 2D data as a geometric prior to improve 3D representations. We introduce an interleaved X-to-X training paradigm that coordinates diverse cross-modal tasks over heterogeneous paired datasets without requiring fully aligned text-image-3D triplets. By traversing semantic-visual-geometric cycles (e.g., text to image to 3D to image) within autoregressive sequences, the model jointly enforces semantic alignment, appearance fidelity, and multi-view geometric consistency. Experiments show that Omni123 significantly improves text-guided 3D generation and editing, demonstrating a scalable path toward multimodal 3D world models.",
+        "url": "http://arxiv.org/abs/2604.02289v1",
+        "published_date": "2026-04-02T17:29:38+00:00",
+        "updated_date": "2026-04-02T17:29:38+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Chongjie Ye",
+            "Cheng Cao",
+            "Chuanyu Pan",
+            "Yiming Hao",
+            "Yihao Zhi",
+            "Yuanming Hu",
+            "Xiaoguang Han"
+        ],
+        "tldr": "Omni123 is a 3D-native foundation model that unifies text-to-2D and text-to-3D generation by treating text, images, and 3D as discrete tokens in a shared sequence space. It leverages 2D data as a geometric prior and employs an interleaved training paradigm to improve 3D representations and geometric consistency, addressing the scarcity of 3D data.",
+        "tldr_zh": "Omni123 是一个 3D 原生基础模型，通过将文本、图像和 3D 表示为共享序列空间中的离散标记，统一了文本到 2D 和文本到 3D 的生成。它利用 2D 数据作为几何先验，并采用交织训练范式来改善 3D 表示和几何一致性，从而解决了 3D 数据稀缺的问题。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ProDiG: Progressive Diffusion-Guided Gaussian Splatting for Aerial to Ground Reconstruction",
+        "summary": "Generating ground-level views and coherent 3D site models from aerial-only imagery is challenging due to extreme viewpoint changes, missing intermediate observations, and large scale variations. Existing methods either refine renderings post-hoc, often producing geometrically inconsistent results, or rely on multi-altitude ground-truth, which is rarely available. Gaussian Splatting and diffusion-based refinements improve fidelity under small variations but fail under wide aerial-to-ground gaps. To address these limitations, we introduce ProDiG (Progressive Altitude Gaussian Splatting), a diffusion-guided framework that progressively transforms aerial 3D representations toward ground-level fidelity. ProDiG synthesizes intermediate-altitude views and refines the Gaussian representation at each stage using a geometry-aware causal attention module that injects epipolar structure into reference-view diffusion. A distance-adaptive Gaussian module dynamically adjusts Gaussian scale and opacity based on camera distance, ensuring stable reconstruction across large viewpoint gaps. Together, these components enable progressive, geometrically grounded refinement without requiring additional ground-truth viewpoints. Extensive experiments on synthetic and real-world datasets demonstrate that ProDiG produces visually realistic ground-level renderings and coherent 3D geometry, significantly outperforming existing approaches in terms of visual quality, geometric consistency, and robustness to extreme viewpoint changes.",
+        "url": "http://arxiv.org/abs/2604.02003v1",
+        "published_date": "2026-04-02T13:09:05+00:00",
+        "updated_date": "2026-04-02T13:09:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sirshapan Mitra",
+            "Yogesh S. Rawat"
+        ],
+        "tldr": "ProDiG is a novel diffusion-guided framework that progressively reconstructs ground-level 3D models from aerial-only imagery by synthesizing intermediate views and refining Gaussian splatting representations. It addresses challenges of extreme viewpoint changes and scale variations without requiring ground-truth data.",
+        "tldr_zh": "ProDiG是一个新颖的、由扩散模型引导的框架，通过合成中间视图并优化高斯体表示，从仅有的航空影像逐步重建地面3D模型。它解决了极端视角变化和尺度变化带来的挑战，且无需地面真实数据。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MAR-MAER: Metric-Aware and Ambiguity-Adaptive Autoregressive Image Generation",
+        "summary": "Autoregressive (AR) models have demonstrated significant success in the realm of text-to-image generation. However, they usually face two major challenges. Firstly, the generated images may not always meet the quality standards expected by humans. Furthermore, these models face difficulty when dealing with ambiguous prompts that could be interpreted in several valid ways. To address these issues, we introduce MAR-MAER, an innovative hierarchical autoregressive framework. It combines two main components. It is a metric-aware embedding regularization method. The other one is a probabilistic latent model used for handling ambiguous semantics. Our method utilizes a lightweight projection head, which is trained with an adaptive kernel regression loss function. This aligns the model's internal representations with human-preferred quality metrics, such as CLIPScore and HPSv2. As a result, the embedding space that is learned more accurately reflects human judgment. We are also introducing a conditional variational module. This approach incorporates an aspect of controlled randomness within the hierarchical token generation process. This capability allows the model to produce a diverse array of coherent images based on ambiguous or open-ended prompts. We conducted extensive experiments using COCO and a newly developed Ambiguous-Prompt Benchmark. The results show that MAR-MAER achieves excellent performance in both metric consistency and semantic flexibility. It exceeds the baseline Hi-MAR model's performance, showing an improvement of +1.6 in CLIPScore and +5.3 in HPSv2. For unclear inputs, it produces a notably wider range of outputs. These findings have been confirmed through both human evaluation and automated metrics.",
+        "url": "http://arxiv.org/abs/2604.01864v1",
+        "published_date": "2026-04-02T10:19:46+00:00",
+        "updated_date": "2026-04-02T10:19:46+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kai Dong",
+            "Tingting Bai"
+        ],
+        "tldr": "MAR-MAER is a new autoregressive image generation framework that uses metric-aware embedding regularization and a probabilistic latent model to improve image quality and handle ambiguous prompts, outperforming existing methods.",
+        "tldr_zh": "MAR-MAER 是一个新颖的自回归图像生成框架，它使用度量感知嵌入正则化和概率潜在模型来提高图像质量并处理模糊提示，性能优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SafeRoPE: Risk-specific Head-wise Embedding Rotation for Safe Generation in Rectified Flow Transformers",
+        "summary": "Recent Text-to-Image (T2I) models based on rectified-flow transformers (e.g., SD3, FLUX) achieve high generative fidelity but remain vulnerable to unsafe semantics, especially when triggered by multi-token interactions. Existing mitigation methods largely rely on fine-tuning or attention modulation for concept unlearning; however, their expensive computational overhead and design tailored to U-Net-based denoisers hinder direct adaptation to transformer-based diffusion models (e.g., MMDiT). In this paper, we conduct an in-depth analysis of the attention mechanism in MMDiT and find that unsafe semantics concentrate within interpretable, low-dimensional subspaces at head level, where a finite set of safety-critical heads is responsible for unsafe feature extraction. We further observe that perturbing the Rotary Positional Embedding (RoPE) applied to the query and key vectors can effectively modify some specific concepts in the generated images. Motivated by these insights, we propose SafeRoPE, a lightweight and fine-grained safe generation framework for MMDiT. Specifically, SafeRoPE first constructs head-wise unsafe subspaces by decomposing unsafe embeddings within safety-critical heads, and computes a Latent Risk Score (LRS) for each input vector via projection onto these subspaces. We then introduce head-wise RoPE perturbations that can suppress unsafe semantics without degrading benign content or image quality. SafeRoPE combines both head-wise LRS and RoPE perturbations to perform risk-specific head-wise rotation on query and key vector embeddings, enabling precise suppression of unsafe outputs while maintaining generation fidelity. Extensive experiments demonstrate that SafeRoPE achieves SOTA performance in balancing effective harmful content mitigation and utility preservation for safe generation of MMDiT. Codes are available at https://github.com/deng12yx/SafeRoPE.",
+        "url": "http://arxiv.org/abs/2604.01826v1",
+        "published_date": "2026-04-02T09:37:32+00:00",
+        "updated_date": "2026-04-02T09:37:32+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiang Yang",
+            "Feifei Li",
+            "Mi Zhang",
+            "Geng Hong",
+            "Xiaoyu You",
+            "Min Yang"
+        ],
+        "tldr": "This paper introduces SafeRoPE, a lightweight framework for safe text-to-image generation in rectified flow transformers (like MMDiT). It identifies safety-critical attention heads, quantifies risk using a Latent Risk Score, and applies targeted perturbations to Rotary Positional Embeddings (RoPE) to suppress unsafe content without compromising image quality.",
+        "tldr_zh": "本文提出了一种名为 SafeRoPE 的轻量级框架，用于在重定向流变换器（如 MMDiT）中实现安全的文本到图像生成。该框架识别出对安全至关重要的注意力头，利用潜在风险得分（LRS）量化风险，并通过对旋转位置嵌入（RoPE）进行有针对性的扰动来抑制不安全内容，同时不影响图像质量。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "IGLOSS: Image Generation for Lidar Open-vocabulary Semantic Segmentation",
+        "summary": "This paper presents a new method for the zero-shot open-vocabulary semantic segmentation (OVSS) of 3D automotive lidar data. To circumvent the recognized image-text modality gap that is intrinsic to approaches based on Vision Language Models (VLMs) such as CLIP, our method relies instead on image generation from text, to create prototype images. Given a 3D network distilled from a 2D Vision Foundation Model (VFM), we then label a point cloud by matching 3D point features with 2D image features of these prototypes. Our method is state-of-the-art for OVSS on nuScenes and SemanticKITTI. Code, pre-trained models, and generated images are available at https://github.com/valeoai/IGLOSS.",
+        "url": "http://arxiv.org/abs/2604.01361v1",
+        "published_date": "2026-04-01T20:19:52+00:00",
+        "updated_date": "2026-04-01T20:19:52+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Nermin Samet",
+            "Gilles Puy",
+            "Renaud Marlet"
+        ],
+        "tldr": "IGLOSS is a novel method for open-vocabulary semantic segmentation of 3D lidar data that overcomes the image-text modality gap by using text-to-image generation for prototype creation. It achieves state-of-the-art results on prominent datasets.",
+        "tldr_zh": "IGLOSS 提出了一种用于 3D 激光雷达数据的开放词汇语义分割新方法，通过利用文本到图像生成创建原型图像来弥合图像-文本的模态差异，并在知名数据集上取得了最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]
